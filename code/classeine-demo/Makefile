@@ -1,0 +1,21 @@
+
+CXX = g++
+CXXFLAGS = -O0 -g3
+ALLFILES = Main.cpp
+OUTPUT = -o
+OUTPUTFILES = ../../bin/debug/Main
+RM = rm -Rf
+
+CLASSEINELIBPATH = ../classeine-lib
+
+INCLUDEDIRCMD = -I
+INCLUDEDIRS = $(INCLUDEDIRCMD)$(CLASSEINELIBPATH)
+
+all:
+	$(CXX) $(CXXFLAGS) $(ALLFILES) $(INCLUDEDIRS) $(OUTPUT) $(OUTPUTFILES)
+
+clean:
+	$(RM) $(OUTPUTFILES)
+
+run: all
+	$(OUTPUTFILES)
