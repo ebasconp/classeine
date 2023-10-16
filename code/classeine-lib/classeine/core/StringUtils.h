@@ -5,18 +5,6 @@
 
 namespace classeine::core::StringUtils
 {
-    namespace detail
-    {
-        void innerBuildString(std::string&) { }
-
-        template <typename T, typename... Args>
-        void innerBuildString(std::string& str, const T& value, const Args&... args)
-        {
-            str += std::to_string(value);
-            innerBuildString(str, args...);
-        }
-    }
-
     template <typename OutputStream>
     void buildStream(OutputStream&)
     {
