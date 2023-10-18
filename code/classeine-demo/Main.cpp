@@ -1,14 +1,20 @@
 #include <iostream>
 #include <string>
 
-#include "classeine/core/StringUtils.h"
+#include "clsn/core/StringUtils.h"
+
+#include "clsn/ui/MainWindow.h"
 
 
 int main()
 {
-    auto s = classeine::core::StringUtils::buildString("Hello", " ", "world ", 2023);
+    clsn::core::StringUtils::buildStream(std::cout, "Hello", " Classeine ", "world ", 2023, "\n");
 
-    std::cout << s << std::endl;
+    clsn::ui::MainWindow<int> mw;
+    mw.setTitle("Hello Claseine World");
 
+    std::cout << mw.getTitle() << std::endl;
+
+    clsn::core::StringUtils::buildStream(std::cout, "Bye Classeine world\n");
     return 0;
 }

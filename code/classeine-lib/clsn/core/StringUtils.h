@@ -3,25 +3,25 @@
 #include <string>
 #include <sstream>
 
-namespace classeine::core::StringUtils
+namespace clsn::core::StringUtils
 {
     template <typename OutputStream>
-    void buildStream(OutputStream&)
+    OutputStream& buildStream(OutputStream& os)
     {
+        return os;
     }
 
     template <typename OutputStream, typename T, typename... Args>
-    void buildStream(OutputStream& os, const T& value, const Args&... args)
+    OutputStream& buildStream(OutputStream& os, const T& value, const Args&... args)
     {
         os << value;
-        buildStream(os, args...);
+        return buildStream(os, args...);
     }
 
     template <typename... Args>
     std::string buildString(const Args& ... args)
     {
         std::stringstream ss;
-        buildStream(ss, args...);
-        return ss.str();
+        return buildStream(ss, args...).str();
     }
 }
