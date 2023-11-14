@@ -15,6 +15,13 @@ int main()
 
     std::cout << mw.getTitle() << std::endl;
 
+    mw.addTitleValueChangedEventListener([](auto& oldValue, auto& newValue)
+    {
+        clsn::core::StringUtils::buildStream(std::cout, "Title changed from [", oldValue, "] to [", newValue, "]\n");
+    });
+
+    mw.setTitle("Hello my friends");
+
     clsn::core::StringUtils::buildStream(std::cout, "Bye Classeine world\n");
     return 0;
 }

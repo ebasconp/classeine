@@ -1,11 +1,18 @@
 #pragma once
 
+#include <clsn/core/events/EventListenerList.h>
+#include <clsn/core/events/ValueChangedEventListener.h>
 
 namespace clsn::core
 {
     template <typename T>
     class Property final
     {
+        std::string m_name;
+        T m_value;
+
+        events::EventListenerList<events::ValueChangedEventListener<T>> m_valueChangedListeners;
+
     public:
         template <typename TString, typename TValue>
         Property(TString&& name, TValue&& initialValue)
@@ -31,13 +38,21 @@ namespace clsn::core
         }
 
         template <typename TValue>
-        void set(TValue&& value)
+        bool set(TValue&& value)
         {
+			if (m_value == value)
+				return false;
+
+            T oldValue = std::move(m_value);
             m_value = std::forward<TValue>(value);
+
+            m_valueChangedListeners(oldValue, m_value);
+			return true;
         }
 
-    private:
-        std::string m_name;
-        T m_value;
+        events::EventListenerHandle addValueChangedEventListener(const events::ValueChangedEventListener<T>& listener)
+        {
+            return m_valueChangedListeners.add(listener);
+        }
     };
 }

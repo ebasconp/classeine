@@ -26,5 +26,10 @@ namespace clsn::ui
         {
             m_title.set(title);
         }
+
+        events::EventListenerHandle addTitleValueChangedEventListener(const events::ValueChangedEventListener<std::string>& listener)
+        {
+            return m_title.addValueChangedEventListener(listener);
+        }
     };
 }
