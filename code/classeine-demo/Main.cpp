@@ -15,9 +15,9 @@ int main()
 
     std::cout << mw.getTitle() << std::endl;
 
-    mw.addTitleValueChangedEventListener([](auto& oldValue, auto& newValue)
+    mw.addTitleValueChangedEventListener([](auto& propertyName, auto& oldValue, auto& newValue)
     {
-        clsn::core::StringUtils::buildStream(std::cout, "Title changed from [", oldValue, "] to [", newValue, "]\n");
+        clsn::core::StringUtils::buildStream(std::cout, propertyName, " changed from [", oldValue, "] to [", newValue, "]\n");
     });
 
     mw.setTitle("Hello my friends");

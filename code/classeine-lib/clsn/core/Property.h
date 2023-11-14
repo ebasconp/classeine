@@ -46,7 +46,7 @@ namespace clsn::core
             T oldValue = std::move(m_value);
             m_value = std::forward<TValue>(value);
 
-            m_valueChangedListeners(oldValue, m_value);
+            m_valueChangedListeners(m_name, oldValue, m_value);
 			return true;
         }
 
