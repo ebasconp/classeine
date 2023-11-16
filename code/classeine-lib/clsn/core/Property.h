@@ -56,3 +56,17 @@ namespace clsn::core
         }
     };
 }
+
+#define CLSN_PROPERTY_BODY(type, name) \
+    public: void set##name(const type& value) { m_##name.set(value); }  \
+    public: const type& get##name() const { return m_##name.get(); } \
+    public: clsn::core::events::EventListenerHandle add##name##ChangedListener(const clsn::core::events::ValueChangedEventListener<type> & listener) { return m_##name.addValueChangedEventListener(listener); }
+
+#define CLSN_PROPERTY(type, name) \
+    private: clsn::core::Property<type> m_##name { #name }; \
+    CLSN_PROPERTY_BODY(type, name)
+
+#define CLSN_PROPERTY_VAL(type, name, initialValue) \
+    private: clsn::core::Property<type> m_##name { #name, initialValue }; \
+    CLSN_PROPERTY_BODY(type, name)
+
