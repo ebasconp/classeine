@@ -5,10 +5,11 @@ namespace clsn::draw
     class Dimension final
     {
     public:
-        Dimension(int width = 0, int height = 0);
+        Dimension();
+        Dimension(int width, int height);
 
-        int getWidth() const noexcept;
-        int getHeight() const noexcept;
+        [[nodiscard]] int getWidth() const noexcept;
+        [[nodiscard]] int getHeight() const noexcept;
 
         bool operator==(const Dimension& other) const noexcept;
 

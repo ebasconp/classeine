@@ -2,12 +2,12 @@
 
 namespace clsn::draw
 {
-    constexpr Color::Color(int r, int g, int b)
+    Color::Color(int r, int g, int b)
     : Color(r, g, b, 0xFF)
     {
     }
 
-    constexpr Color::Color(int r, int g, int b, int a)
+    Color::Color(int r, int g, int b, int a)
     : r{static_cast<unsigned char>(r)}
     , g{static_cast<unsigned char>(g)}
     , b{static_cast<unsigned char>(b)}
@@ -15,7 +15,7 @@ namespace clsn::draw
     {
     }
 
-    constexpr Color::Color(int hexaCode)
+    Color::Color(int hexaCode)
     : Color((hexaCode & 0x00FF0000) >> 16,
             (hexaCode & 0x0000FF00) >> 8,
             (hexaCode & 0x000000FF),

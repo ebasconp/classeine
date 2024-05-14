@@ -37,7 +37,7 @@ namespace clsn::core
 
         template <bool B = HasValueChangedEventListener,
                   typename std::enable_if<B, int>::type = 0>
-        EventListenerHandle addValueChangedListener(
+        int addValueChangedListener(
             EventListener<ValueChangedEvent<T>> listener)
         {
             return m_valueChangedListeners.add(std::move(listener));
@@ -71,7 +71,7 @@ public:                                                                       \
     const type& get##name() const noexcept { return m_##name.get(); }         \
                                                                               \
 public:                                                                       \
-    clsn::core::EventListenerHandle add##name##ChangedListener(               \
+    int add##name##ChangedListener(               \
         const clsn::core::EventListener<clsn::core::ValueChangedEvent<type>>& \
             listener)                                                         \
     {                                                                         \

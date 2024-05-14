@@ -1,7 +1,6 @@
 #pragma once
 
 #include "EventListener.h"
-#include "EventListenerHandle.h"
 
 #include <vector>
 
@@ -19,7 +18,7 @@ namespace clsn::core
         std::vector<EventListenerContainer> m_listeners;
 
     public:
-        EventListenerHandle add(EventListener<EventType> callback)
+        int add(EventListener<EventType> callback)
         {
             m_listeners.emplace_back(callback, true);
 
@@ -40,9 +39,9 @@ namespace clsn::core
             }
         }
 
-        void setEnabled(EventListenerHandle eventHandle, bool enabled)
+        void setEnabled(int index, bool enabled)
         {
-            m_listeners[eventHandle].enabled = enabled;
+            m_listeners[index].enabled = enabled;
         }
 
         void clear() { m_listeners.clear(); }

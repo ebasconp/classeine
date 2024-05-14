@@ -9,8 +9,10 @@ namespace clsn::ui::renderers
     class WindowRenderer
     {
     public:
-        void paint(Graphics& graphics)
+        template <typename ControlType>
+        void paint(Graphics& graphics, const ControlType& window)
         {
+            window.getControl().paint(graphics);
         }
     };
 };

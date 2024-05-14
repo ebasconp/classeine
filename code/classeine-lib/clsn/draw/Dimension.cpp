@@ -2,6 +2,10 @@
 
 namespace clsn::draw
 {
+    Dimension::Dimension()
+    : Dimension(0, 0)
+    {
+    }
 
     Dimension::Dimension(int width, int height)
     : m_width{width}

@@ -10,14 +10,14 @@ namespace clsn::draw
         unsigned char a;
 
     public:
-        constexpr Color(int r, int g, int b);
-        constexpr Color(int r, int g, int b, int a);
-        explicit constexpr Color(int hexaCode);
+        Color(int r, int g, int b);
+        Color(int r, int g, int b, int a);
+        explicit Color(int hexaCode);
 
-        int getColor() const noexcept;
-        int getRed() const noexcept;
-        int getGreen() const noexcept;
-        int getBlue() const noexcept;
-        int getAlpha() const noexcept;
+        [[nodiscard]] int getColor() const noexcept;
+        [[nodiscard]] int getRed() const noexcept;
+        [[nodiscard]] int getGreen() const noexcept;
+        [[nodiscard]] int getBlue() const noexcept;
+        [[nodiscard]] int getAlpha() const noexcept;
     };
 }

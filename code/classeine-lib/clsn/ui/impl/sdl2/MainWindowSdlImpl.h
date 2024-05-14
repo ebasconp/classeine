@@ -117,7 +117,7 @@ namespace clsn::ui::impl::sdl2
                 }
 
                 graphics.clear();
-                m_parentWindow.paint(graphics);
+                m_parentWindow.getControl().paint(graphics);
                 graphics.apply();
             }
         }

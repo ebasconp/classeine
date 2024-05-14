@@ -2,7 +2,7 @@
 
 #include "clsn/core/Panic.h"
 
-#include "clsn/ui/BorderLayoutContainer.h"
+#include "clsn/ui/Button.h"
 #include "clsn/ui/MainWindow.h"
 
 #include "clsn/core/EventListenerList.h"
@@ -37,8 +37,15 @@ int main()
     using namespace clsn::core;
     using namespace clsn::ui;
 
-    MainWindow<BorderLayoutContainer> mw;
+    MainWindow<Button> mw;
     mw.setSize(Dimension{400, 300});
+
+    mw.getControl().getEventManager().addActionListener([](auto& )
+    {
+        std::cout << "CLICK" <<  std::endl;
+    });
+
+
     //
     //    auto textArea= mw.makeAndAdd<TextArea>(BorderLayoutConsts::CENTER);
     //

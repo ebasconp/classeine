@@ -2,7 +2,7 @@
 
 namespace clsn::core
 {
-    class Empty final
+    class Empty
     {
     };
 }

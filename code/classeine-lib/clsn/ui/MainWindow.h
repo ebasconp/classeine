@@ -23,7 +23,7 @@ namespace clsn::ui
     class MainWindow final : public Control<WindowModel, WindowEventManager, WindowRenderer>
     {
         clsn::ui::impl::MainWindowImpl<MainWindow<ControlType>> m_impl;
-        ControlType control;
+        ControlType m_control;
 
     public:
         MainWindow()
@@ -31,6 +31,16 @@ namespace clsn::ui
         {
             initVisibility();
             initSize();
+        }
+
+        [[nodiscard]] ControlType& getControl() noexcept
+        {
+            return m_control;
+        }
+
+        [[nodiscard]] const ControlType& getControl() const noexcept
+        {
+            return m_control;
         }
 
 
