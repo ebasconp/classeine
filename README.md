@@ -5,7 +5,7 @@ the creation of rich user interfaces in modern C++.
 
 ## Features
 * Written in modern C++.
-* Built on top of the standard library
+* Built on top of the standard library and SDL2
 * No exceptions.
 * emscripten friendly
 
@@ -17,4 +17,5 @@ the creation of rich user interfaces in modern C++.
 * **clsn::ui** - library providing componentable UI controls
   * Button
   * MainWindow
+  * UIManager
 

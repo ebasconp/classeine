@@ -23,7 +23,10 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/Graphics.h
         code/classeine-lib/clsn/ui/impl/GraphicsImpl.h
         code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.h
-        code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.cpp)
+        code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.cpp
+        code/classeine-lib/clsn/core/Configuration.h
+        code/classeine-lib/clsn/ui/UIManager.h
+        code/classeine-lib/clsn/ui/UIManager.cpp)
 
 target_include_directories(classeine PUBLIC code/classeine-lib)
 
