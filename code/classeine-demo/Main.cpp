@@ -45,6 +45,8 @@ int main()
         std::cout << "CLICK" <<  std::endl;
     });
 
+    mw.getControl().setBackgroundColor(Colors::RED);
+
 
     //
     //    auto textArea= mw.makeAndAdd<TextArea>(BorderLayoutConsts::CENTER);

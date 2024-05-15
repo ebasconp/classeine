@@ -1,7 +1,15 @@
 #include "Color.h"
 
+#include <tuple>
+
 namespace clsn::draw
 {
+    Color::Color()
+    : Color(0x000000)
+    {
+
+    }
+
     Color::Color(int r, int g, int b)
     : Color(r, g, b, 0xFF)
     {
@@ -35,4 +43,9 @@ namespace clsn::draw
     int Color::getBlue() const noexcept { return b; }
 
     int Color::getAlpha() const noexcept { return a; }
+
+    bool Color::operator==(const Color& p) const noexcept
+    {
+        return std::tie(r, g, b, a) == std::tie(p.r, p.g, p.b, p.a);
+    }
 }

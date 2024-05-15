@@ -14,7 +14,7 @@ namespace clsn::ui::renderers
         template <typename Control>
         void paint(Graphics& graphics, const Control& model)
         {
-            graphics.setDrawColor(Colors::GREEN);
+            graphics.setDrawColor(model.getBackgroundColor());
         }
     };
 }
