@@ -17,7 +17,7 @@ namespace clsn::core
         {
         }
 
-        bool isConsumed() const noexcept { return m_consumed; }
+        [[nodiscard]] bool isConsumed() const noexcept { return m_consumed; }
 
         void consume() { m_consumed = true; }
     };

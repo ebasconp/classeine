@@ -1,9 +1,12 @@
 #pragma once
 
 #include "clsn/ui/Graphics.h"
+#include "clsn/ui/UIManager.h"
 
 #include "clsn/draw/Color.h"
+#include "clsn/draw/Colors.h"
 #include "clsn/draw/Dimension.h"
+#include "clsn/draw/Region.h"
 
 #include "clsn/core/Property.h"
 
@@ -11,8 +14,7 @@ namespace clsn::ui
 {
     using namespace clsn::draw;
 
-
-    template <typename Model, typename EventManager, typename Renderer>
+    template <typename Model, typename Renderer, typename Controller>
     class Control
     {
         CLSN_PROPERTY_VAL(Dimension, true, Size, (Dimension{600, 400}));
@@ -21,18 +23,35 @@ namespace clsn::ui
         CLSN_PROPERTY(Color, true, ForegroundColor);
 
         Model m_model;
-        EventManager m_eventManager;
         Renderer m_renderer;
+        Controller m_controller;
 
     public:
-        Control() = default;
-
-        void paint(Graphics& graphics)
+        Control()
         {
-            m_renderer.paint(graphics, *this);
+            auto& uiManager = UIManager::getInstance();
+
+            auto sectionName = getDefaultSectionName();
+
+            setBackgroundColor(uiManager.getDefault(
+                sectionName, "backgroundColor", Colors::RED));
+
+            setForegroundColor(uiManager.getDefault(
+                sectionName, "foregroundColor", Colors::WHITE));
         }
 
-        EventManager& getEventManager() { return m_eventManager; }
-        const EventManager& getEventManager() const { return m_eventManager; }
+
+        std::string_view getDefaultSectionName() const
+        {
+            return m_controller.getDefaultSectionName();
+        }
+
+        void paint(Graphics& graphics, const Region& region)
+        {
+            m_renderer.paint(graphics, region, *this);
+        }
+
+        Controller& getController() { return m_controller; }
+        const Controller& getController() const { return m_controller; }
     };
 }

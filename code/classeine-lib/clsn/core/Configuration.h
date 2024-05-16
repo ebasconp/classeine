@@ -1,18 +1,21 @@
 #pragma once
 
+#include <functional>
+#include <optional>
 #include <string>
+#include <string_view>
 #include <unordered_map>
 #include <variant>
 
 namespace clsn::core
 {
-    using ConfigurationValueTypes =
-        std::variant<bool, int, double, std::string>;
-
-    using SectionMap = std::unordered_map<std::string, ConfigurationValueTypes>;
-
+    template <typename... ConfigurationValueTypes>
     class Configuration final
     {
+        using SectionMap =
+            std::unordered_map<std::string,
+                               std::variant<ConfigurationValueTypes...>>;
+
     public:
         Configuration() = default;
         ~Configuration() = default;
@@ -22,29 +25,33 @@ namespace clsn::core
 
     public:
         template <typename ValueType>
-        void set(const std::string& sectionName, const std::string& key,
+        void set(std::string_view sectionName,
+                 std::string_view key,
                  ValueType&& value)
         {
-            m_sections[sectionName][key] = std::forward<ValueType>(value);
+            m_sections[std::string{sectionName}][std::string{key}] =
+                std::forward<ValueType>(value);
         }
 
         template <typename ValueType>
-        const ValueType& getOrDefault(
-                    const std::string& sectionName,
-                    const std::string& key,
-                    const ValueType& defaultValue)
+        std::optional<std::reference_wrapper<const ValueType>> get(
+            std::string_view sectionName,
+            std::string_view key) const
         {
-            auto sectionIt = m_sections.find(sectionName);
+            const auto sectionIt = m_sections.find(std::string{sectionName});
             if (sectionIt == m_sections.end())
-                return defaultValue;
+                return std::nullopt;
 
             auto& sectionMap = sectionIt->second;
-            auto it = sectionMap.find(key);
+            const auto it = sectionMap.find(std::string{key});
             if (it == sectionMap.end())
-                return defaultValue;
+                return std::nullopt;
 
-            const auto* value = std::get_if<ValueType>(it->second);
-            return value ? *value : defaultValue;
+            const auto* value = std::get_if<ValueType>(&(it->second));
+            if (!value)
+                return std::nullopt;
+
+            return std::cref(*value);
         }
     };
 }

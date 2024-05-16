@@ -31,9 +31,12 @@ namespace clsn::core
         {
         }
 
-        const std::string& getName() const noexcept { return m_name; }
+        [[nodiscard]] const std::string& getName() const noexcept
+        {
+            return m_name;
+        }
 
-        const T& get() const noexcept { return m_value; }
+        [[nodiscard]] const T& get() const noexcept { return m_value; }
 
         template <bool B = HasValueChangedEventListener,
                   typename std::enable_if<B, int>::type = 0>
@@ -71,7 +74,7 @@ public:                                                                       \
     const type& get##name() const noexcept { return m_##name.get(); }         \
                                                                               \
 public:                                                                       \
-    int add##name##ChangedListener(               \
+    int add##name##ChangedListener(                                           \
         const clsn::core::EventListener<clsn::core::ValueChangedEvent<type>>& \
             listener)                                                         \
     {                                                                         \

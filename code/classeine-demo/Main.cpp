@@ -40,12 +40,10 @@ int main()
     MainWindow<Button> mw;
     mw.setSize(Dimension{400, 300});
 
-    mw.getControl().getEventManager().addActionListener([](auto& )
+    mw.getControl().getController().addActionListener([](auto& )
     {
         std::cout << "CLICK" <<  std::endl;
     });
-
-    mw.getControl().setBackgroundColor(Colors::RED);
 
 
     //

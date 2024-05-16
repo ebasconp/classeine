@@ -8,19 +8,19 @@
 
 #include "clsn/draw/Dimension.h"
 
-#include "events/WindowEventManager.h"
+#include "controllers/MainWindowController.h"
 #include "models/WindowModel.h"
-#include "renderers/WindowRenderer.h"
+#include "renderers/MainWindowRenderer.h"
 
 namespace clsn::ui
 {
     using namespace clsn::draw;
-    using namespace clsn::ui::events;
+    using namespace clsn::ui::controllers;
     using namespace clsn::ui::models;
     using namespace clsn::ui::renderers;
 
     template <typename ControlType>
-    class MainWindow final : public Control<WindowModel, WindowEventManager, WindowRenderer>
+    class MainWindow final : public Control<WindowModel, MainWindowRenderer, MainWindowController>
     {
         clsn::ui::impl::MainWindowImpl<MainWindow<ControlType>> m_impl;
         ControlType m_control;

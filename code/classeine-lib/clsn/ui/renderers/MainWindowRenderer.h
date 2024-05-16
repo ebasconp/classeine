@@ -6,7 +6,7 @@
 
 namespace clsn::ui::renderers
 {
-    class WindowRenderer
+    class MainWindowRenderer
     {
     public:
         template <typename ControlType>
@@ -15,4 +15,4 @@ namespace clsn::ui::renderers
             window.getControl().paint(graphics);
         }
     };
-};
+}

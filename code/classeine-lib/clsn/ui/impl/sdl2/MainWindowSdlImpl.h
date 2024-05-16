@@ -116,8 +116,11 @@ namespace clsn::ui::impl::sdl2
                     return;
                 }
 
+                graphics.setDrawColor(Colors::RED);
                 graphics.clear();
-                m_parentWindow.getControl().paint(graphics);
+
+                const Region region{Point{0, 0}, m_parentWindow.getSize()};
+                m_parentWindow.getControl().paint(graphics, region);
                 graphics.apply();
             }
         }
