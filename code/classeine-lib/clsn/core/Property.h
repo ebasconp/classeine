@@ -92,3 +92,30 @@ private:                                                                      \
         #name, initialValue};                                                 \
     CLSN_PROPERTY_BODY(type, name)
 }
+
+#define CLSN_BOOL_PROPERTY_BODY(name)                                        \
+public:                                                                       \
+    void set##name(bool value) noexcept { m_##name.set(value); }       \
+                                                                              \
+public:                                                                       \
+    bool is##name() const noexcept { return m_##name.get(); }         \
+                                                                              \
+public:                                                                       \
+    int add##name##ChangedListener(                                           \
+        const clsn::core::EventListener<clsn::core::ValueChangedEvent<bool>>& \
+            listener)                                                         \
+    {                                                                         \
+        return m_##name.addValueChangedListener(listener);                    \
+    }
+
+
+#define CLSN_BOOL_PROPERTY(withValueChangedListener, name)               \
+private:                                                                  \
+    clsn::core::Property<bool, withValueChangedListener> m_##name{#name}; \
+    CLSN_BOOL_PROPERTY_BODY(name)
+
+#define CLSN_BOOL_PROPERTY_VAL(withValueChangedListener, name, initialValue) \
+private:                                                                      \
+    clsn::core::Property<bool, withValueChangedListener> m_##name{            \
+        #name, initialValue};                                                 \
+    CLSN_BOOL_PROPERTY_BODY(name)

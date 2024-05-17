@@ -43,7 +43,7 @@ namespace clsn::ui
             return m_control;
         }
 
-        CLSN_PROPERTY_VAL(bool, true, Visible, false);
+        CLSN_BOOL_PROPERTY_VAL(true, Visible, false);
         CLSN_PROPERTY_VAL(Dimension, true, Size, (Dimension{0, 0}));
 
         void processMouseClickEvent(events::MouseClickEvent& e)

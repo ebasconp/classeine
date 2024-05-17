@@ -23,7 +23,7 @@ namespace clsn::ui
     class Control
     {
         CLSN_PROPERTY_VAL(Dimension, true, Size, (Dimension{600, 400}));
-        CLSN_PROPERTY_VAL(bool, true, Visible, true);
+        CLSN_BOOL_PROPERTY_VAL(true, Visible, true);
         CLSN_PROPERTY(Color, true, BackgroundColor);
         CLSN_PROPERTY(Color, true, ForegroundColor);
 
