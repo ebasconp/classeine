@@ -46,6 +46,7 @@ int main()
         std::cout << "CLICKED " << (++n) << " times" << std::endl;
     });
 
+    mw.getControl().getModel().setText("Click me");
 
     //
     //    auto textArea= mw.makeAndAdd<TextArea>(BorderLayoutConsts::CENTER);

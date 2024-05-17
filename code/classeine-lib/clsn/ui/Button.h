@@ -9,8 +9,8 @@
 namespace clsn::ui
 {
     using Button = Control<
-                        models::ButtonModel,
-                        renderers::ButtonRenderer,
+                        models::DefaultButtonModel,
+                        renderers::DefaultButtonRenderer,
                         controllers::ButtonController
                         >;
 }

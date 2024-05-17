@@ -2,6 +2,7 @@
 
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Colors.h"
+#include "clsn/draw/Font.h"
 
 namespace clsn::ui::defaults::ThemeDefaults
 {
@@ -13,6 +14,8 @@ namespace clsn::ui::defaults::ThemeDefaults
         defaults.set("Theme", "bevelDownColor", Color{0x50, 0x58, 0x5F});
         defaults.set("Theme", "backgroundColor", Color{0x70, 0x78, 0x7F});
         defaults.set("Theme", "foregroundColor", Colors::WHITE);
+
+        defaults.set("Theme", "controlFont", Font("Arial", 12));
 
     }
 }

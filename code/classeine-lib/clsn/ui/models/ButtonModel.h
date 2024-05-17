@@ -4,14 +4,8 @@
 
 namespace clsn::ui::models
 {
-    class ButtonModel
+    class DefaultButtonModel
     {
         CLSN_PROPERTY(std::string, true, Text);
-
-    public:
-        ButtonModel()
-        {
-            //addTextChangedListener()
-        }
     };
 }

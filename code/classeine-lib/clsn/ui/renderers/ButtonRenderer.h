@@ -6,13 +6,17 @@
 #include "clsn/draw/Region.h"
 
 #include "BorderRenderer.h"
+#include "LabelRenderer.h"
 
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
 
+    template <typename LabelRendererType>
     class ButtonRenderer
     {
+        LabelRendererType m_labelRenderer;
+
     public:
         template <typename Control>
         void paint(Graphics& graphics,
@@ -30,21 +34,36 @@ namespace clsn::ui::renderers
             auto& bevelDown = UIManager::getInstance().getDefault<Color>(
                 sectionName, "bevelDownColor");
 
-            constexpr int depth = 4;
+            constexpr int depth = 2;
 
             const bool pressed = control.getController().isPressed();
 
             borderRenderer.drawBeveledBorder(
-                graphics, region, bevelUp, bevelDown, 8, !pressed);
+                graphics, region, bevelUp, bevelDown, depth, !pressed);
 
             constexpr int depth2 = depth * 2;
 
-            Region innerRect{region.getX() + depth,
+            const Region innerRect{region.getX() + depth,
                              region.getY() + depth,
                              region.getWidth() - depth2,
                              region.getHeight() - depth2};
             graphics.setDrawColor(control.getBackgroundColor());
             graphics.drawFillRectangle(innerRect);
+
+            if (pressed)
+            {
+                const Region innerRectShifted{innerRect.getX() + depth,
+                                        innerRect.getY() + depth,
+                                        innerRect.getWidth() - depth,
+                                        innerRect.getHeight() - depth};
+                m_labelRenderer.paint(graphics, innerRectShifted, control);
+            }
+            else
+            {
+                m_labelRenderer.paint(graphics, innerRect, control);
+            }
         }
     };
+
+    using DefaultButtonRenderer = ButtonRenderer<DefaultLabelRenderer>;
 }

@@ -55,6 +55,10 @@ namespace clsn::ui
             return m_controller.getDefaultSectionName();
         }
 
+        Model& getModel() noexcept { return m_model; }
+        const Model& getModel() const noexcept { return m_model; }
+
+
         void paint(Graphics& graphics, const Region& region)
         {
             m_renderer.paint(graphics, region, *this);

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GraphicsSdl2Impl.h"
+#include "Sdl2Helpers.h"
 
 #include "clsn/ui/events/MouseClickEvent.h"
 
@@ -9,6 +10,7 @@
 #include "clsn/core/Panic.h"
 
 #include <SDL2/SDL.h>
+#include <SDL_ttf.h>
 
 namespace clsn::ui::impl::sdl2
 {
@@ -34,7 +36,10 @@ namespace clsn::ui::impl::sdl2
             hide();
 
             if (m_sdlInitialized)
+            {
+                TTF_Quit();
                 SDL_Quit();
+            }
         }
 
         void show()
@@ -51,6 +56,7 @@ namespace clsn::ui::impl::sdl2
                     return;
                 }
 
+                TTF_Init();
                 m_sdlInitialized = true;
             }
 
