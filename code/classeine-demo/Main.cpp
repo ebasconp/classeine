@@ -42,7 +42,8 @@ int main()
 
     mw.getControl().getController().addActionListener([](auto& )
     {
-        std::cout << "CLICK" <<  std::endl;
+        static int n = 0;
+        std::cout << "CLICKED " << (++n) << " times" << std::endl;
     });
 
 

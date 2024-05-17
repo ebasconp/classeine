@@ -33,7 +33,6 @@ namespace clsn::ui::renderers
             constexpr int depth = 4;
 
             const bool pressed = control.getController().isPressed();
-            std::cout << "PRESSED: " << pressed << std::endl;
 
             borderRenderer.drawBeveledBorder(
                 graphics, region, bevelUp, bevelDown, 8, !pressed);

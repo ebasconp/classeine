@@ -45,7 +45,12 @@ namespace clsn::ui::controllers
                     return;
 
                 m_pressed = pressedNow;
-                // control.repaint(); //ETOTODO
+
+                if (!m_pressed) // Button has been released, then Action
+                {
+                    EmptyEvent actionEvent;
+                    notifyActionEvent(actionEvent);
+                }
             });
         }
     };

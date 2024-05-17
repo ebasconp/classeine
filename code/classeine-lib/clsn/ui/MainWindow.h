@@ -48,11 +48,6 @@ namespace clsn::ui
 
         void processMouseClickEvent(events::MouseClickEvent& e)
         {
-            if (e.getStatus() == clsn::ui::events::MouseClickStatus::pressed)
-                std::cout << "Window Mouse pressed" << std::endl;
-            else
-                std::cout << "Window Mouse released" << std::endl;
-
             m_control.processMouseClickEvent(e);
         }
 
