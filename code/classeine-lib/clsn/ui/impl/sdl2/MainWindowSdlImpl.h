@@ -2,6 +2,8 @@
 
 #include "GraphicsSdl2Impl.h"
 
+#include "clsn/ui/events/MouseClickEvent.h"
+
 #include "clsn/draw/Dimension.h"
 
 #include "clsn/core/Panic.h"
@@ -23,16 +25,16 @@ namespace clsn::ui::impl::sdl2
 
     public:
         MainWindowSdlImpl(WindowType& parentWindow)
-            : m_parentWindow{parentWindow}
+        : m_parentWindow{parentWindow}
         {
-
         }
 
         ~MainWindowSdlImpl()
         {
             hide();
 
-            if (m_sdlInitialized) SDL_Quit();
+            if (m_sdlInitialized)
+                SDL_Quit();
         }
 
         void show()
@@ -66,9 +68,10 @@ namespace clsn::ui::impl::sdl2
                 return;
             }
 
-            m_renderer = SDL_CreateRenderer(
-                m_window, -1, SDL_RENDERER_ACCELERATED |
-                                  SDL_RENDERER_PRESENTVSYNC);
+            m_renderer = SDL_CreateRenderer(m_window,
+                                            -1,
+                                            SDL_RENDERER_ACCELERATED |
+                                                SDL_RENDERER_PRESENTVSYNC);
             if (m_renderer == nullptr)
             {
                 SDL_Log("Error while creating renderer: %s", SDL_GetError());
@@ -111,9 +114,14 @@ namespace clsn::ui::impl::sdl2
             SDL_Event event;
             while (SDL_WaitEvent(&event))
             {
-                if (event.type == SDL_QUIT)
+                switch (event.type)
                 {
-                    return;
+                    case SDL_QUIT: return;
+
+                    case SDL_MOUSEBUTTONUP:
+                    case SDL_MOUSEBUTTONDOWN:
+                        processMouseClickEvent(event, event.type);
+                        break;
                 }
 
                 graphics.setDrawColor(Colors::RED);
@@ -125,5 +133,14 @@ namespace clsn::ui::impl::sdl2
             }
         }
 
+        void processMouseClickEvent(SDL_Event& event, Uint32 type)
+        {
+            clsn::ui::events::MouseClickEvent mouseClickEvent{
+                type == SDL_MOUSEBUTTONDOWN
+                    ? clsn::ui::events::MouseClickStatus::pressed
+                    : clsn::ui::events::MouseClickStatus::released};
+
+            m_parentWindow.processMouseClickEvent(mouseClickEvent);
+        }
     };
 }

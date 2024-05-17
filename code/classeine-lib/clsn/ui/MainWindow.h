@@ -20,7 +20,7 @@ namespace clsn::ui
     using namespace clsn::ui::renderers;
 
     template <typename ControlType>
-    class MainWindow final : public Control<WindowModel, MainWindowRenderer, MainWindowController>
+    class MainWindow final
     {
         clsn::ui::impl::MainWindowImpl<MainWindow<ControlType>> m_impl;
         ControlType m_control;
@@ -43,6 +43,18 @@ namespace clsn::ui
             return m_control;
         }
 
+        CLSN_PROPERTY_VAL(bool, true, Visible, false);
+        CLSN_PROPERTY_VAL(Dimension, true, Size, (Dimension{0, 0}));
+
+        void processMouseClickEvent(events::MouseClickEvent& e)
+        {
+            if (e.getStatus() == clsn::ui::events::MouseClickStatus::pressed)
+                std::cout << "Window Mouse pressed" << std::endl;
+            else
+                std::cout << "Window Mouse released" << std::endl;
+
+            m_control.processMouseClickEvent(e);
+        }
 
     private:
         void initVisibility()

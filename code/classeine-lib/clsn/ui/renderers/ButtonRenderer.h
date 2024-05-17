@@ -31,12 +31,19 @@ namespace clsn::ui::renderers
                 sectionName, "bevelDownColor");
 
             constexpr int depth = 4;
+
+            const bool pressed = control.getController().isPressed();
+            std::cout << "PRESSED: " << pressed << std::endl;
+
             borderRenderer.drawBeveledBorder(
-                graphics, region, bevelUp, bevelDown, 8, true);
+                graphics, region, bevelUp, bevelDown, 8, !pressed);
 
             constexpr int depth2 = depth * 2;
 
-            Region innerRect{region.getX() + depth, region.getY() + depth, region.getWidth() - depth2, region.getHeight() - depth2 };
+            Region innerRect{region.getX() + depth,
+                             region.getY() + depth,
+                             region.getWidth() - depth2,
+                             region.getHeight() - depth2};
             graphics.setDrawColor(control.getBackgroundColor());
             graphics.drawFillRectangle(innerRect);
         }
