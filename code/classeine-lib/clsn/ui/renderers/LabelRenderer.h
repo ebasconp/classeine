@@ -19,7 +19,10 @@ namespace clsn::ui::renderers
                    const Region& region,
                    const Control& control)
         {
-            graphics.drawText(region, control.getModel().getText());
+            graphics.drawText(region,
+                              control.getFont(),
+                              control.getForegroundColor(),
+                              control.getModel().getText());
         }
     };
 }

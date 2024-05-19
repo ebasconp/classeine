@@ -2,7 +2,10 @@
 
 #include "UIManagerDefaults.h"
 
+#include <string>
 #include <string_view>
+
+#include "clsn/draw/FontInfo.h"
 
 namespace clsn::ui
 {
@@ -11,6 +14,7 @@ namespace clsn::ui
     class UIManager final
     {
         UIManagerDefaults m_defaults;
+        std::unordered_map<FontInfo, std::string> m_pathsByFontInfo;
 
     public:
         UIManager(const UIManager&) = delete;
@@ -41,9 +45,13 @@ namespace clsn::ui
             return value->get();
         }
 
+        void addFontMapping(const FontInfo& fontInfo, std::string_view path);
+        std::string_view getPathByFontInfo(const FontInfo&) const noexcept;
+
     private:
         UIManager();
 
         void populateDefaults();
+        void populateFontMappings();
     };
 }

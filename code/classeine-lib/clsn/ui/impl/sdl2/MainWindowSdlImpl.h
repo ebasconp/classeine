@@ -2,10 +2,12 @@
 
 #include "GraphicsSdl2Impl.h"
 #include "Sdl2Helpers.h"
+#include "Sdl2FontCache.h"
 
 #include "clsn/ui/events/MouseClickEvent.h"
 
 #include "clsn/draw/Dimension.h"
+#include "clsn/draw/FontInfo.h"
 
 #include "clsn/core/Panic.h"
 
@@ -26,7 +28,7 @@ namespace clsn::ui::impl::sdl2
         bool m_sdlInitialized = false;
 
     public:
-        MainWindowSdlImpl(WindowType& parentWindow)
+        explicit MainWindowSdlImpl(WindowType& parentWindow)
         : m_parentWindow{parentWindow}
         {
         }
@@ -113,9 +115,18 @@ namespace clsn::ui::impl::sdl2
         }
 
     private:
+        void populateFontManager(GraphicsSdl2Impl& graphics)
+        {
+//            auto& fm = graphics.getFontManager();
+//            fm.addMapping(
+//                FontInfo{"Nimbus", FontStyle::REGULAR},
+//                "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf");
+        }
+
         void runEventLoop()
         {
             GraphicsSdl2Impl graphics{*m_renderer};
+            populateFontManager(graphics);
 
             SDL_Event event;
             while (SDL_WaitEvent(&event))
@@ -139,7 +150,7 @@ namespace clsn::ui::impl::sdl2
             }
         }
 
-        void processMouseClickEvent(SDL_Event& event, Uint32 type)
+        void processMouseClickEvent(SDL_Event& , Uint32 type)
         {
             clsn::ui::events::MouseClickEvent mouseClickEvent{
                 type == SDL_MOUSEBUTTONDOWN

@@ -2,7 +2,10 @@
 
 #include "Sdl2Helpers.h"
 
+#include "clsn/ui/UIManager.h"
+
 #include "clsn/draw/Color.h"
+#include "clsn/draw/Font.h"
 #include "clsn/draw/Point.h"
 #include "clsn/draw/Region.h"
 
@@ -17,19 +20,23 @@ namespace clsn::ui::impl::sdl2
 
     GraphicsSdl2Impl::GraphicsSdl2Impl(SDL_Renderer& renderer)
     : m_renderer{renderer}
-    , m_currentFont{"", 0}
     {
+    }
+
+    Sdl2FontCache& GraphicsSdl2Impl::getFontCache() noexcept
+    {
+        return m_fontCache;
+    }
+
+    const Sdl2FontCache& GraphicsSdl2Impl::getFontCache() const noexcept
+    {
+        return m_fontCache;
     }
 
     void GraphicsSdl2Impl::setDrawColor(const Color& c)
     {
         SDL_SetRenderDrawColor(
             &m_renderer, c.getRed(), c.getGreen(), c.getBlue(), c.getAlpha());
-    }
-
-    void GraphicsSdl2Impl::setFont(const Font& font)
-    {
-        m_currentFont = font;
     }
 
     void GraphicsSdl2Impl::clear() { SDL_RenderClear(&m_renderer); }
@@ -49,22 +56,25 @@ namespace clsn::ui::impl::sdl2
     }
 
     void GraphicsSdl2Impl::drawText(const Region& r,
+                                    const Font& font,
+                                    const Color& color,
                                     std::string_view text) const
     {
-        TTF_Font* f = TTF_OpenFont("/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf", 24);
-        if (!f)
+        auto optionalRefFont = m_fontCache.getFont(font);
+        if (!optionalRefFont.has_value())
         {
             clsn::core::Panic("Font not found");
             return;
         }
 
-        SDL_Color textColor = { 255, 255, 255 };
-        SDL_Surface* surface = TTF_RenderText_Solid(f, text.data(), textColor);
+        auto ttfFont = &optionalRefFont.value().get();
+        SDL_Color textColor = Sdl2Helpers::toSDL(color);
+        SDL_Surface* surface = TTF_RenderText_Blended(ttfFont, text.data(), textColor);
         SDL_Texture* texture = SDL_CreateTextureFromSurface(&m_renderer, surface);
         SDL_FreeSurface(surface);
 
         int actualTextWidth, actualTextHeight;
-        TTF_SizeText(f, text.data(), &actualTextWidth, &actualTextHeight);
+        TTF_SizeText(ttfFont, text.data(), &actualTextWidth, &actualTextHeight);
 
         SDL_Rect textRect;
         textRect.w = actualTextWidth;

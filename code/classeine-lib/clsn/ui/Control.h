@@ -26,6 +26,7 @@ namespace clsn::ui
         CLSN_BOOL_PROPERTY_VAL(true, Visible, true);
         CLSN_PROPERTY(Color, true, BackgroundColor);
         CLSN_PROPERTY(Color, true, ForegroundColor);
+        CLSN_PROPERTY(Font, true, Font);
 
         Model m_model;
         Renderer m_renderer;
@@ -45,6 +46,8 @@ namespace clsn::ui
 
             setForegroundColor(uiManager.getDefault(
                 sectionName, "foregroundColor", Colors::WHITE));
+
+            setFont(uiManager.getDefault(sectionName, "font", Font{}));
 
             initEvents();
         }
