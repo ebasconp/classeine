@@ -155,12 +155,15 @@ namespace clsn::ui::impl::sdl2
             }
         }
 
-        void processMouseClickEvent(SDL_Event&, Uint32 type)
+        void processMouseClickEvent(SDL_Event& e, Uint32 type)
         {
-            clsn::ui::events::MouseClickEvent mouseClickEvent{
+            const auto status =
                 type == SDL_MOUSEBUTTONDOWN
                     ? clsn::ui::events::MouseClickStatus::pressed
-                    : clsn::ui::events::MouseClickStatus::released};
+                    : clsn::ui::events::MouseClickStatus::released;
+
+            clsn::ui::events::MouseClickEvent mouseClickEvent{
+                status, e.button.x, e.button.y};
 
             m_parentWindow.processMouseClickEvent(mouseClickEvent);
         }

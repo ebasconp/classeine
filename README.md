@@ -23,6 +23,8 @@ the creation of rich user interfaces in modern C++.
   * Region
 * **clsn::ui** - library providing componentable UI controls
   * Button
+  * HBoxContainer
   * MainWindow
   * UIManager
+  * VBoxContainer
 
