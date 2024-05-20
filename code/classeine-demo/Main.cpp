@@ -38,7 +38,6 @@ int main()
     using namespace clsn::ui;
 
     MainWindow<Button> mw;
-    mw.setSize(Dimension{400, 300});
 
     mw.getControl().getController().addActionListener([](auto& )
     {

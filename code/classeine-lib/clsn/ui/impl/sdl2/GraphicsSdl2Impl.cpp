@@ -69,8 +69,13 @@ namespace clsn::ui::impl::sdl2
 
         auto ttfFont = &optionalRefFont.value().get();
         SDL_Color textColor = Sdl2Helpers::toSDL(color);
-        SDL_Surface* surface = TTF_RenderText_Blended(ttfFont, text.data(), textColor);
-        SDL_Texture* texture = SDL_CreateTextureFromSurface(&m_renderer, surface);
+
+        SDL_Surface* surface =
+            TTF_RenderText_Blended(ttfFont, text.data(), textColor);
+
+        SDL_Texture* texture =
+            SDL_CreateTextureFromSurface(&m_renderer, surface);
+
         SDL_FreeSurface(surface);
 
         int actualTextWidth, actualTextHeight;

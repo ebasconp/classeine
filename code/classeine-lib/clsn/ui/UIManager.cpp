@@ -1,6 +1,7 @@
 #include "UIManager.h"
 
 #include "defaults/ButtonDefaults.h"
+#include "defaults/MainWindowDefaults.h"
 #include "defaults/ThemeDefaults.h"
 
 #include <iostream> //ETOTODO: Remove
@@ -37,7 +38,9 @@ namespace clsn::ui
     void UIManager::populateDefaults()
     {
         defaults::ThemeDefaults::populateDefaults(m_defaults);
+
         defaults::ButtonDefaults::populateDefaults(m_defaults);
+        defaults::MainWindowDefaults::populateDefaults(m_defaults);
     }
 
     std::string_view UIManager::getPathByFontInfo(

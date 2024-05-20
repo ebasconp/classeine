@@ -3,6 +3,7 @@
 #include "clsn/ui/Graphics.h"
 #include "clsn/ui/UIManager.h"
 
+#include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
 
 #include "clsn/draw/Color.h"
@@ -33,6 +34,7 @@ namespace clsn::ui
         Controller m_controller;
 
         EventListenerList<MouseClickEvent> m_mouseClickListeners;
+        EventListenerList<ControlResizedEvent> m_controlResizedListeners;
 
     public:
         Control()
@@ -78,6 +80,18 @@ namespace clsn::ui
         void addMouseClickListener(EventListener<MouseClickEvent> event)
         {
             m_mouseClickListeners.add(std::move(event));
+        }
+
+        void processControlResizedEvent(events::ControlResizedEvent& e)
+        {
+            m_Size.set(Dimension{e.getWidth(), e.getHeight()});
+
+            m_controlResizedListeners.notify(e);
+        }
+
+        void addControlResizedListener(EventListener<ControlResizedEvent> event)
+        {
+            m_controlResizedListeners.add(std::move(event));
         }
 
     private:

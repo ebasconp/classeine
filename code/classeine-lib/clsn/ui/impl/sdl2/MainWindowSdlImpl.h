@@ -1,9 +1,10 @@
 #pragma once
 
 #include "GraphicsSdl2Impl.h"
-#include "Sdl2Helpers.h"
 #include "Sdl2FontCache.h"
+#include "Sdl2Helpers.h"
 
+#include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
 
 #include "clsn/draw/Dimension.h"
@@ -62,12 +63,15 @@ namespace clsn::ui::impl::sdl2
                 m_sdlInitialized = true;
             }
 
+            const int resizable =
+                m_parentWindow.isResizable() ? SDL_WINDOW_RESIZABLE : 0;
+
             m_window = SDL_CreateWindow("CLASSEINE",
                                         SDL_WINDOWPOS_CENTERED,
                                         SDL_WINDOWPOS_CENTERED,
                                         m_parentWindow.getSize().getWidth(),
                                         m_parentWindow.getSize().getHeight(),
-                                        SDL_WINDOW_SHOWN);
+                                        SDL_WINDOW_SHOWN | resizable);
             if (m_window == nullptr)
             {
                 SDL_Log("Error while creating window: %s", SDL_GetError());
@@ -88,6 +92,10 @@ namespace clsn::ui::impl::sdl2
                 Panic("Error while creating renderer: "s + SDL_GetError());
                 return;
             }
+
+            auto& minimumSize = m_parentWindow.getMinimumSize();
+            SDL_SetWindowMinimumSize(
+                m_window, minimumSize.getWidth(), minimumSize.getHeight());
 
             runEventLoop();
         }
@@ -115,18 +123,9 @@ namespace clsn::ui::impl::sdl2
         }
 
     private:
-        void populateFontManager(GraphicsSdl2Impl& graphics)
-        {
-//            auto& fm = graphics.getFontManager();
-//            fm.addMapping(
-//                FontInfo{"Nimbus", FontStyle::REGULAR},
-//                "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf");
-        }
-
         void runEventLoop()
         {
             GraphicsSdl2Impl graphics{*m_renderer};
-            populateFontManager(graphics);
 
             SDL_Event event;
             while (SDL_WaitEvent(&event))
@@ -134,6 +133,12 @@ namespace clsn::ui::impl::sdl2
                 switch (event.type)
                 {
                     case SDL_QUIT: return;
+
+                    case SDL_WINDOWEVENT:
+                        if (event.window.event == SDL_WINDOWEVENT_RESIZED)
+                            processControlResizedEvent(event);
+
+                        break;
 
                     case SDL_MOUSEBUTTONUP:
                     case SDL_MOUSEBUTTONDOWN:
@@ -150,7 +155,7 @@ namespace clsn::ui::impl::sdl2
             }
         }
 
-        void processMouseClickEvent(SDL_Event& , Uint32 type)
+        void processMouseClickEvent(SDL_Event&, Uint32 type)
         {
             clsn::ui::events::MouseClickEvent mouseClickEvent{
                 type == SDL_MOUSEBUTTONDOWN
@@ -158,6 +163,14 @@ namespace clsn::ui::impl::sdl2
                     : clsn::ui::events::MouseClickStatus::released};
 
             m_parentWindow.processMouseClickEvent(mouseClickEvent);
+        }
+
+        void processControlResizedEvent(SDL_Event& e)
+        {
+            const int newWidth = e.window.data1;
+            const int newHeight = e.window.data2;
+
+            m_parentWindow.setSize(Dimension{newWidth, newHeight});
         }
     };
 }

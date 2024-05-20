@@ -31,12 +31,11 @@ namespace clsn::ui
         {
             initVisibility();
             initSize();
+
+            initDefaults();
         }
 
-        [[nodiscard]] ControlType& getControl() noexcept
-        {
-            return m_control;
-        }
+        [[nodiscard]] ControlType& getControl() noexcept { return m_control; }
 
         [[nodiscard]] const ControlType& getControl() const noexcept
         {
@@ -44,7 +43,10 @@ namespace clsn::ui
         }
 
         CLSN_BOOL_PROPERTY_VAL(true, Visible, false);
-        CLSN_PROPERTY_VAL(Dimension, true, Size, (Dimension{0, 0}));
+        CLSN_BOOL_PROPERTY_VAL(true, Resizable, true);
+
+        CLSN_PROPERTY(Dimension, true, Size);
+        CLSN_PROPERTY(Dimension, true, MinimumSize)
 
         void processMouseClickEvent(events::MouseClickEvent& e)
         {
@@ -52,6 +54,15 @@ namespace clsn::ui
         }
 
     private:
+        void initDefaults()
+        {
+            setMinimumSize(UIManager::getInstance().getDefault(
+                "MainWindow", "minimumSize", Dimension{50, 50}));
+
+            setSize(UIManager::getInstance().getDefault(
+                "MainWindow", "size", Dimension{300, 200}));
+        }
+
         void initVisibility()
         {
             setVisible(false);
@@ -72,10 +83,13 @@ namespace clsn::ui
 
         void initSize()
         {
-            addSizeChangedListener([this](auto&)
-                                   {
-                                       m_impl.repaint();
-                                   });
+            addSizeChangedListener(
+                [this](clsn::core::ValueChangedEvent<Dimension>& e)
+                {
+                    auto& newValue = e.getNewValue();
+                    m_control.setSize(newValue);
+                    m_impl.repaint();
+                });
         }
     };
 }
