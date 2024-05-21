@@ -27,6 +27,19 @@ namespace clsn::ui::controllers
                 clsn::ui::events::MouseClickEvent mce{e.getStatus(), e.getX(), y % controlHeight};
                 container.getModel()[controlIndex].processMouseClickEvent(mce);
             });
+
+            container.addSizeChangedListener([this, &container](auto& e)
+            {
+                const auto count = container.getModel().getCount();
+                if (count == 0)
+                    return;
+
+                const int controlHeight = container.getSize().getHeight() / count;
+                container.getModel().iterate([&container, &controlHeight](auto& control)
+                {
+                    control.setSize(Dimension{container.getSize().getWidth(), controlHeight});
+                });
+            });
         }
     };
 }

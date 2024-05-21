@@ -45,17 +45,5 @@ namespace clsn::ui
         {
             m_mouseClickListeners.add(std::move(event));
         }
-
-        void processControlResizedEvent(events::ControlResizedEvent& e)
-        {
-            this->setSize(Dimension{e.getWidth(), e.getHeight()});
-
-            m_controlResizedListeners.notify(e);
-        }
-
-        void addControlResizedListener(EventListener<ControlResizedEvent> event)
-        {
-            m_controlResizedListeners.add(std::move(event));
-        }
     };
 }

@@ -34,5 +34,13 @@ namespace clsn::ui::models
         {
             return static_cast<int>(m_controls.size());
         }
+
+        template <typename Proc>
+        void iterate(Proc proc)
+        {
+            const auto count = getCount();
+            for (auto i = 0; i < count; i++)
+                proc(*m_controls[i]);
+        }
     };
 }
