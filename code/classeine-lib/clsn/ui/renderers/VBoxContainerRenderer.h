@@ -17,19 +17,25 @@ namespace clsn::ui::renderers
                    const Region& region,
                    ContainerType& container)
         {
-            graphics.setDrawColor(container.getBackgroundColor());
-            graphics.drawFillRectangle(region);
-
             const auto count = container.getModel().getCount();
             if (count == 0)
+            {
+                graphics.setDrawColor(container.getBackgroundColor());
+                graphics.drawFillRectangle(region);
                 return;
+            }
 
             auto& model = container.getModel();
             const auto regionHeight = region.getHeight() / count;
             for (int i = 0; i < count; i++)
             {
                 Region controlRegion{region.getX(), i * regionHeight, region.getWidth(), regionHeight};
-                 model[i].paint(graphics, controlRegion);
+
+                if (model[i].isInvalidated())
+                {
+                    model[i].paint(graphics, controlRegion);
+                    model[i].setInvalidated(false);
+                }
             }
         }
     };

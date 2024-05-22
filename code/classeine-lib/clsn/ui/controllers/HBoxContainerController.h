@@ -54,6 +54,18 @@ namespace clsn::ui::controllers
                                 controlWidth, container.getSize().getHeight()});
                         });
                 });
+
+            container.addInvalidatedChangedListener([&container](auto& e)
+            {
+                const bool isInvalidated = e.getNewValue();
+                if (!isInvalidated)
+                    return;
+
+                container.getModel().iterate([&isInvalidated](auto& control)
+                {
+                    control.setInvalidated(isInvalidated);
+                });
+            });
         }
     };
 }

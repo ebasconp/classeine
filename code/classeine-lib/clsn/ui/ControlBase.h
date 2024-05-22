@@ -25,6 +25,8 @@ namespace clsn::ui
         EventListenerList<MouseClickEvent> m_mouseClickListeners;
         EventListenerList<ControlResizedEvent> m_controlResizedListeners;
 
+        CLSN_BOOL_PROPERTY_VAL(true, Invalidated, false)
+
     public:
         virtual ~ControlBase() = default;
 

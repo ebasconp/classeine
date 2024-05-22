@@ -123,8 +123,17 @@ namespace clsn::ui::impl::sdl2
         }
 
     private:
+        void repaintAll(GraphicsSdl2Impl& graphics)
+        {
+            const Region region{Point{0, 0}, m_parentWindow.getSize()};
+            m_parentWindow.getControl().paint(graphics, region);
+            graphics.apply();
+        }
+
         void runEventLoop()
         {
+            m_parentWindow.getControl().setInvalidated(true);
+
             GraphicsSdl2Impl graphics{*m_renderer};
 
             SDL_Event event;
@@ -136,7 +145,10 @@ namespace clsn::ui::impl::sdl2
 
                     case SDL_WINDOWEVENT:
                         if (event.window.event == SDL_WINDOWEVENT_RESIZED)
+                        {
                             processControlResizedEvent(event);
+                            repaintAll(graphics);
+                        }
 
                         break;
 
@@ -145,9 +157,6 @@ namespace clsn::ui::impl::sdl2
                         processMouseClickEvent(event, event.type);
                         break;
                 }
-
-                graphics.setDrawColor(Colors::RED);
-                graphics.clear();
 
                 const Region region{Point{0, 0}, m_parentWindow.getSize()};
                 m_parentWindow.getControl().paint(graphics, region);

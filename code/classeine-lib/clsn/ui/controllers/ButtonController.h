@@ -45,12 +45,18 @@ namespace clsn::ui::controllers
                     return;
 
                 m_pressed = pressedNow;
+                control.setInvalidated(true);
 
                 if (!m_pressed) // Button has been released, then Action
                 {
                     EmptyEvent actionEvent;
                     notifyActionEvent(actionEvent);
                 }
+            });
+
+            control.getModel().addTextChangedListener([&control](auto& )
+            {
+                control.setInvalidated(true);
             });
         }
     };

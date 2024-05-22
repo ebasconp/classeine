@@ -21,8 +21,10 @@ namespace clsn::ui::renderers
         template <typename Control>
         void paint(Graphics& graphics,
                    const Region& region,
-                   const Control& control)
+                   Control& control)
         {
+            std::cout << "Control: Button; Text: " << control.getModel().getText() << std::endl;
+
             graphics.setDrawColor(control.getBackgroundColor());
 
             BorderRenderer borderRenderer;
