@@ -14,6 +14,8 @@ namespace clsn::ui::defaults::ThemeDefaults
         defaults.set("Theme", "bevelDownColor", Color{0x50, 0x58, 0x5F});
         defaults.set("Theme", "backgroundColor", Color{0x70, 0x78, 0x7F});
         defaults.set("Theme", "foregroundColor", Colors::BLACK);
+        defaults.set("Theme", "disabledBackgroundColor", Color{0x60, 0x68, 0x6F});
+        defaults.set("Theme", "disabledForegroundColor", Color{0x40, 0x48, 0x4F});
 
         defaults.set(
             "Theme", "font", Font("Nimbus", FontStyle::REGULAR, 16));

@@ -23,5 +23,9 @@ namespace clsn::draw
 
         int getWidth() const noexcept;
         int getHeight() const noexcept;
+
+        Region operator+(const Point& p) const noexcept;
+        Region operator+(const Dimension& d) const noexcept;
+        Region operator+(const Region& r) const noexcept;
     };
 }

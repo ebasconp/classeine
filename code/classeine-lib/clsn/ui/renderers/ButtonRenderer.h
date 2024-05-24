@@ -19,13 +19,10 @@ namespace clsn::ui::renderers
 
     public:
         template <typename Control>
-        void paint(Graphics& graphics,
-                   const Region& region,
-                   Control& control)
+        void paint(Graphics& graphics, const Region& region, Control& control)
         {
-            std::cout << "Control: Button; Text: " << control.getModel().getText() << std::endl;
-
-            graphics.setDrawColor(control.getBackgroundColor());
+            std::cout << "Control: Button; Text: "
+                      << control.getModel().getText() << std::endl;
 
             BorderRenderer borderRenderer;
 
@@ -46,18 +43,23 @@ namespace clsn::ui::renderers
             constexpr int depth2 = depth * 2;
 
             const Region innerRect{region.getX() + depth,
-                             region.getY() + depth,
-                             region.getWidth() - depth2,
-                             region.getHeight() - depth2};
-            graphics.setDrawColor(control.getBackgroundColor());
+                                   region.getY() + depth,
+                                   region.getWidth() - depth2,
+                                   region.getHeight() - depth2};
+
+            const Color& bc = control.isEnabled()
+                                  ? control.getBackgroundColor()
+                                  : UIManager::getInstance().getDefault<Color>(
+                                        "Theme", "disabledBackgroundColor");
+            graphics.setDrawColor(bc);
             graphics.drawFillRectangle(innerRect);
 
             if (pressed)
             {
                 const Region innerRectShifted{innerRect.getX() + depth,
-                                        innerRect.getY() + depth,
-                                        innerRect.getWidth() - depth,
-                                        innerRect.getHeight() - depth};
+                                              innerRect.getY() + depth,
+                                              innerRect.getWidth() - depth,
+                                              innerRect.getHeight() - depth};
                 m_labelRenderer.paint(graphics, innerRectShifted, control);
             }
             else

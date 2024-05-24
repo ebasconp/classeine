@@ -24,8 +24,12 @@ namespace clsn::ui::controllers
                 const int controlHeight = container.getSize().getHeight() / count;
                 const int controlIndex = y / controlHeight;
 
+                auto& control = container.getModel()[controlIndex];
+                if (!control.isEnabled())
+                    return;
+
                 clsn::ui::events::MouseClickEvent mce{e.getStatus(), e.getX(), y % controlHeight};
-                container.getModel()[controlIndex].processMouseClickEvent(mce);
+                control.processMouseClickEvent(mce);
             });
 
             container.addSizeChangedListener([this, &container](auto& e)

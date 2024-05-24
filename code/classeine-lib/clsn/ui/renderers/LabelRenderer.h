@@ -21,7 +21,10 @@ namespace clsn::ui::renderers
         {
             graphics.drawText(region,
                               control.getFont(),
-                              control.getForegroundColor(),
+                              control.isEnabled()
+                                  ? control.getForegroundColor()
+                                  : UIManager::getInstance().getDefault<Color>(
+                                        "Theme", "disabledForegroundColor"),
                               control.getModel().getText());
         }
     };

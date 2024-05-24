@@ -32,6 +32,7 @@ namespace clsn::ui
 
         CLSN_PROPERTY_VAL(Dimension, true, Size, (Dimension{600, 400}));
         CLSN_BOOL_PROPERTY_VAL(true, Visible, true);
+        CLSN_BOOL_PROPERTY_VAL(true, Enabled, true);
         CLSN_PROPERTY(Color, true, BackgroundColor);
         CLSN_PROPERTY(Color, true, ForegroundColor);
         CLSN_PROPERTY(Font, true, Font);

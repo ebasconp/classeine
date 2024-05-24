@@ -111,6 +111,8 @@ int main()
                 std::string{"Click me (0)"});
         });
 
+    b3->setEnabled(false);
+
     b4->getController().addActionListener([&b4](auto& e)
     {
         auto color = b4->getForegroundColor();

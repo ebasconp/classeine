@@ -32,10 +32,13 @@ namespace clsn::ui::controllers
                         container.getSize().getWidth() / count;
                     const int controlIndex = x / controlWidth;
 
+                    auto& control = container.getModel()[controlIndex];
+                    if (!control.isEnabled())
+                        return;
+
                     clsn::ui::events::MouseClickEvent mce{
                         e.getStatus(), x % controlWidth, e.getY()};
-                    container.getModel()[controlIndex].processMouseClickEvent(
-                        mce);
+                    control.processMouseClickEvent(mce);
                 });
 
             container.addSizeChangedListener(
