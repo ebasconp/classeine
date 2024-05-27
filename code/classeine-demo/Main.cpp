@@ -97,10 +97,12 @@ int main()
         });
 
     b2->getController().addActionListener(
-        [&b4](auto& e)
+        [&b4, &b1](auto& e)
         {
             b4->getModel().setText(
                 std::string{"Click me (" + std::to_string(--n) + ")"});
+
+            b1->setVisible(!b1->isVisible());
         });
 
     b3->getController().addActionListener(

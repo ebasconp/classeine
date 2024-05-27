@@ -17,7 +17,7 @@ namespace clsn::ui::renderers
                    const Region& region,
                    ContainerType& container)
         {
-            const auto count = container.getModel().getCount();
+            const auto count = container.getModel().getVisibleCount();
             if (count == 0)
             {
                 graphics.setDrawColor(container.getBackgroundColor());

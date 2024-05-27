@@ -13,22 +13,10 @@ namespace clsn::ui
 
     public:
         Control()
+        : ControlBase(getDefaultSectionName())
         {
-            auto& uiManager = UIManager::getInstance();
-
-            auto sectionName = getDefaultSectionName();
-
-            setBackgroundColor(uiManager.getDefault(
-                sectionName, "backgroundColor", Colors::RED));
-
-            setForegroundColor(uiManager.getDefault(
-                sectionName, "foregroundColor", Colors::WHITE));
-
-            setFont(uiManager.getDefault(sectionName, "font", Font{}));
-
             initEvents();
         }
-
 
         std::string_view getDefaultSectionName() const
         {
@@ -37,7 +25,6 @@ namespace clsn::ui
 
         Model& getModel() noexcept { return m_model; }
         const Model& getModel() const noexcept { return m_model; }
-
 
         void paint(Graphics& graphics, const Region& region) override
         {

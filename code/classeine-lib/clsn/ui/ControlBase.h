@@ -14,6 +14,8 @@
 #include "clsn/core/EventListenerList.h"
 #include "clsn/core/Property.h"
 
+#include <string_view>
+
 namespace clsn::ui
 {
     using namespace clsn::core;
@@ -28,6 +30,8 @@ namespace clsn::ui
         CLSN_BOOL_PROPERTY_VAL(true, Invalidated, false)
 
     public:
+        explicit ControlBase(std::string_view sectionName);
+
         virtual ~ControlBase() = default;
 
         CLSN_PROPERTY_VAL(Dimension, true, Size, (Dimension{600, 400}));

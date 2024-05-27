@@ -15,7 +15,7 @@ namespace clsn::ui::controllers
         {
             container.addMouseClickListener([this, &container](auto& e)
             {
-                const auto count = container.getModel().getCount();
+                const auto count = container.getModel().getVisibleCount();
                 if (count == 0)
                     return;
 

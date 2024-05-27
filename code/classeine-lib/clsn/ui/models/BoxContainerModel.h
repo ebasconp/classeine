@@ -35,8 +35,28 @@ namespace clsn::ui::models
             return static_cast<int>(m_controls.size());
         }
 
+        int getVisibleCount() const noexcept
+        {
+            auto count = 0;
+
+            this->iterate([this, &count](auto& control)
+            {
+               count += control.isVisible() ? 1 : 0;
+            });
+
+            return count;
+        }
+
         template <typename Proc>
         void iterate(Proc proc)
+        {
+            const auto count = getCount();
+            for (auto i = 0; i < count; i++)
+                proc(*m_controls[i]);
+        }
+
+        template <typename Proc>
+        void iterate(Proc proc) const
         {
             const auto count = getCount();
             for (auto i = 0; i < count; i++)
