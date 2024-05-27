@@ -5,15 +5,18 @@
 namespace clsn::ui
 {
     template <typename Model, typename Renderer, typename Controller>
-    class Control final : public ControlBase
+    class Control : public ControlBase
     {
         Model m_model;
         Renderer m_renderer;
         Controller m_controller;
 
     public:
-        Control()
+        Control(Model model =  {}, Renderer renderer = {}, Controller controller = {})
         : ControlBase(getDefaultSectionName())
+        , m_model{model}
+        , m_renderer{renderer}
+        , m_controller{controller}
         {
             initEvents();
         }

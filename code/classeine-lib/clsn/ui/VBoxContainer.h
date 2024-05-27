@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Control.h"
+#include "Container.h"
 
 #include "controllers/VBoxContainerController.h"
 #include "models/BoxContainerModel.h"
@@ -11,7 +11,7 @@ namespace clsn::ui
     template <typename Model = models::BoxContainerModel,
               typename Renderer = renderers::VBoxContainerRenderer,
               typename Controller = controllers::VBoxContainerController>
-    using VBoxContainer = Control<Model, Renderer, Controller>;
+    using VBoxContainer = Container<Model, Renderer, Controller>;
 
     using DefaultVBoxContainer = VBoxContainer<>;
 }
