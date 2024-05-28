@@ -61,22 +61,22 @@ int main()
     //    });
     //
 
-    MainWindow<DefaultVBoxContainer> mw;
-    auto b1 = mw.getControl().getModel().createAndAdd<DefaultButton>();
+    MainWindow<VBoxContainer> mw;
+    auto b1 = mw.getControl().getModel().createAndAdd<Button>();
     b1->getModel().setText("Click me");
 
-    auto b2 = mw.getControl().getModel().createAndAdd<DefaultButton>();
+    auto b2 = mw.getControl().getModel().createAndAdd<Button>();
     b2->getModel().setText("Click me again");
 
-    auto b3 = mw.getControl().getModel().createAndAdd<DefaultButton>();
+    auto b3 = mw.getControl().getModel().createAndAdd<Button>();
     b3->getModel().setText("Click me three");
 
-    auto b4 = mw.getControl().getModel().createAndAdd<DefaultButton>();
+    auto b4 = mw.getControl().getModel().createAndAdd<Button>();
     b4->getModel().setText("Click me");
 
-    auto hbc = mw.getControl().getModel().createAndAdd<DefaultHBoxContainer>();
-    auto b5 = hbc->getModel().createAndAdd<DefaultButton>();
-    auto b6 = hbc->getModel().createAndAdd<DefaultButton>();
+    auto hbc = mw.getControl().getModel().createAndAdd<HBoxContainer>();
+    auto b5 = hbc->getModel().createAndAdd<Button>();
+    auto b6 = hbc->getModel().createAndAdd<Button>();
 
     b5->getModel().setText("B5");
     b6->getModel().setText("B6");
