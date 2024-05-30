@@ -126,13 +126,13 @@ namespace clsn::ui::impl::sdl2
         void repaintAll(GraphicsSdl2Impl& graphics)
         {
             const Region region{Point{0, 0}, m_parentWindow.getSize()};
-            m_parentWindow.getControl().paint(graphics, region);
+            m_parentWindow().paint(graphics, region);
             graphics.apply();
         }
 
         void runEventLoop()
         {
-            m_parentWindow.getControl().setInvalidated(true);
+            m_parentWindow().setInvalidated(true);
 
             GraphicsSdl2Impl graphics{*m_renderer};
 
@@ -159,7 +159,7 @@ namespace clsn::ui::impl::sdl2
                 }
 
                 const Region region{Point{0, 0}, m_parentWindow.getSize()};
-                m_parentWindow.getControl().paint(graphics, region);
+                m_parentWindow().paint(graphics, region);
                 graphics.apply();
             }
         }

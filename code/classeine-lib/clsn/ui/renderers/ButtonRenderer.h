@@ -1,28 +1,33 @@
 #pragma once
 
+#include "clsn/ui/Button.h"
 #include "clsn/ui/Graphics.h"
 
 #include "clsn/draw/Colors.h"
 #include "clsn/draw/Region.h"
 
+#include "IRenderer.h"
 #include "BorderRenderer.h"
-#include "LabelRenderer.h"
+
+#include <iostream>
 
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
+    using namespace clsn::ui;
 
     template <typename LabelRendererType>
-    class ButtonRenderer
+    class ButtonRenderer : public IRenderer
     {
         LabelRendererType m_labelRenderer;
 
     public:
-        template <typename Control>
-        void paint(Graphics& graphics, const Region& region, Control& control)
+        void paint(Graphics& graphics, const Region& region, Control& baseControl) override
         {
+            auto& control = static_cast<clsn::ui::Button&>(baseControl);
+
             std::cout << "Control: Button; Text: "
-                      << control.getModel().getText() << std::endl;
+                      << control.getText() << std::endl;
 
             BorderRenderer borderRenderer;
 
@@ -35,7 +40,7 @@ namespace clsn::ui::renderers
 
             constexpr int depth = 2;
 
-            const bool pressed = control.getController().isPressed();
+            const bool pressed = control.isPressed();
 
             borderRenderer.drawBeveledBorder(
                 graphics, region, bevelUp, bevelDown, depth, !pressed);
@@ -68,6 +73,4 @@ namespace clsn::ui::renderers
             }
         }
     };
-
-    using DefaultButtonRenderer = ButtonRenderer<DefaultLabelRenderer>;
 }

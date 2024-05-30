@@ -21,7 +21,8 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/draw/Point.cpp
         code/classeine-lib/clsn/draw/Region.cpp
         code/classeine-lib/clsn/ui/UIManager.cpp
-        code/classeine-lib/clsn/ui/ControlBase.cpp
+        code/classeine-lib/clsn/ui/Button.cpp
+        code/classeine-lib/clsn/ui/Control.cpp
         code/classeine-lib/clsn/ui/defaults/ButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/MainWindowDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/ThemeDefaults.cpp

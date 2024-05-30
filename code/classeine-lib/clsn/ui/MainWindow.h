@@ -9,14 +9,12 @@
 #include "clsn/draw/Dimension.h"
 
 #include "controllers/MainWindowController.h"
-#include "models/WindowModel.h"
 #include "renderers/MainWindowRenderer.h"
 
 namespace clsn::ui
 {
     using namespace clsn::draw;
     using namespace clsn::ui::controllers;
-    using namespace clsn::ui::models;
     using namespace clsn::ui::renderers;
 
     template <typename ControlType>
@@ -35,18 +33,18 @@ namespace clsn::ui
             initDefaults();
         }
 
-        [[nodiscard]] ControlType& getControl() noexcept { return m_control; }
+        [[nodiscard]] ControlType& operator()() noexcept { return m_control; }
 
-        [[nodiscard]] const ControlType& getControl() const noexcept
+        [[nodiscard]] const ControlType& operator()() const noexcept
         {
             return m_control;
         }
 
-        CLSN_BOOL_PROPERTY_VAL(true, Visible, false);
-        CLSN_BOOL_PROPERTY_VAL(true, Resizable, true);
+        CLSN_BOOL_PROPERTY_VAL(Visible, true, false);
+        CLSN_BOOL_PROPERTY_VAL(Resizable, true, true);
 
-        CLSN_PROPERTY(Dimension, true, Size);
-        CLSN_PROPERTY(Dimension, true, MinimumSize)
+        CLSN_PROPERTY(Size, Dimension, true);
+        CLSN_PROPERTY(MinimumSize, Dimension, true)
 
         void processMouseClickEvent(events::MouseClickEvent& e)
         {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/ui/ControlBase.h"
+#include "clsn/ui/Control.h"
 
 #include <memory>
 #include <vector>

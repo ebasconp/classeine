@@ -25,7 +25,7 @@ namespace clsn::ui::renderers
                                   ? control.getForegroundColor()
                                   : UIManager::getInstance().getDefault<Color>(
                                         "Theme", "disabledForegroundColor"),
-                              control.getModel().getText());
+                              control.getText());
         }
     };
 }
