@@ -22,6 +22,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/draw/Region.cpp
         code/classeine-lib/clsn/ui/UIManager.cpp
         code/classeine-lib/clsn/ui/Button.cpp
+        code/classeine-lib/clsn/ui/ClickableControl.cpp
         code/classeine-lib/clsn/ui/Control.cpp
         code/classeine-lib/clsn/ui/HBoxContainer.cpp
         code/classeine-lib/clsn/ui/VBoxContainer.cpp

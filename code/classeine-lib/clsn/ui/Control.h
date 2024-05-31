@@ -27,7 +27,7 @@ namespace clsn::ui
     using namespace clsn::draw;
     using namespace clsn::ui::events;
 
-    class Control
+    class Control : public IEntity
     {
         EventListenerList<MouseClickEvent> m_mouseClickListeners;
         EventListenerList<ControlResizedEvent> m_controlResizedListeners;

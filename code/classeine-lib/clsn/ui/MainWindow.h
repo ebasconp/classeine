@@ -27,7 +27,6 @@ namespace clsn::ui
         {
             initVisibility();
             initSize();
-
             initDefaults();
         }
 
