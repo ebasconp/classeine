@@ -1,12 +1,13 @@
 #pragma once
 
 #include "clsn/ui/Graphics.h"
+#include "clsn/ui/IRenderer.h"
 #include "clsn/ui/UIManager.h"
 
 #include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
 
-#include "clsn/ui/renderers/IRenderer.h"
+#include "IRenderer.h"
 
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Colors.h"
@@ -25,7 +26,6 @@ namespace clsn::ui
     using namespace clsn::core;
     using namespace clsn::draw;
     using namespace clsn::ui::events;
-    using namespace clsn::ui::renderers;
 
     class Control
     {

@@ -34,6 +34,9 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2FontCache.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2Helpers.cpp
         code/classeine-lib/clsn/ui/renderers/BorderRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/HBoxContainerRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/LabelRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/VBoxContainerRenderer.cpp
 )
 
 target_include_directories(classeine PUBLIC code/classeine-lib)

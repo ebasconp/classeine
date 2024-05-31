@@ -13,6 +13,6 @@ namespace clsn::ui::defaults::ButtonDefaults
 
     void populateDefaults(clsn::ui::UIManagerDefaults& defaults)
     {
-        defaults.set("Button", "renderer", std::make_shared<ButtonRenderer<DefaultLabelRenderer>>());
+        defaults.set("Button", "renderer", std::make_shared<ButtonRenderer<LabelRenderer>>());
     }
 }

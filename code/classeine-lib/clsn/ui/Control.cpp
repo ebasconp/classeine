@@ -4,6 +4,8 @@
 
 namespace clsn::ui
 {
+    using clsn::ui::renderers::NullRenderer;
+
     Control::Control(std::string_view sectionName)
     : m_defaultSectionName{sectionName}
     {

@@ -6,8 +6,8 @@
 #include "clsn/draw/Colors.h"
 #include "clsn/draw/Region.h"
 
-#include "IRenderer.h"
 #include "BorderRenderer.h"
+#include "clsn/ui/IRenderer.h"
 
 #include <iostream>
 

@@ -6,13 +6,13 @@
 #include "clsn/draw/Dimension.h"
 #include "clsn/draw/Font.h"
 
-#include "clsn/ui/renderers/IRenderer.h"
+#include "clsn/ui/IRenderer.h"
 
 #include <memory>
 
 namespace clsn::ui
 {
-    using clsn::ui::renderers::IRenderer;
+    using clsn::ui::IRenderer;
 
     using UIManagerDefaults = clsn::core::Configuration<clsn::draw::Color,
                                                         clsn::draw::Dimension,

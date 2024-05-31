@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IRenderer.h"
+#include "clsn/ui/IRenderer.h"
 
 namespace clsn::ui::renderers
 {

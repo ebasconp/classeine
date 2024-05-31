@@ -12,10 +12,9 @@ namespace clsn::ui
     class Control;
 }
 
-namespace clsn::ui::renderers
+namespace clsn::ui
 {
     using namespace clsn::draw;
-    using namespace clsn::ui;
 
     class IRenderer
     {
