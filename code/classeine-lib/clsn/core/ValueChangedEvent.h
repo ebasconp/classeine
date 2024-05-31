@@ -18,8 +18,8 @@ namespace clsn::core
         {
         }
 
-        const T& getOldValue() const noexcept { return m_oldValue; }
-        const T& getNewValue() const noexcept { return m_newValue; }
+        auto getOldValue() const noexcept -> const T& { return m_oldValue; }
+        auto getNewValue() const noexcept -> const T& { return m_newValue; }
     };
 
     template <typename T>

@@ -13,11 +13,11 @@ namespace clsn::draw
     {
     }
 
-    int Dimension::getWidth() const noexcept { return m_width; }
+    auto Dimension::getWidth() const noexcept -> int { return m_width; }
 
-    int Dimension::getHeight() const noexcept { return m_height; }
+    auto Dimension::getHeight() const noexcept -> int { return m_height; }
 
-    bool Dimension::operator==(const Dimension& other) const noexcept
+    auto Dimension::operator==(const Dimension& other) const noexcept -> bool
     {
         return m_width == other.m_width && m_height == other.m_height;
     }

@@ -17,7 +17,7 @@ namespace clsn::core
         {
         }
 
-        const Type& get() const noexcept { return m_value; }
-        Type& get() noexcept { return m_value; }
+        auto get() const noexcept -> const Type& { return m_value; }
+        auto get() noexcept -> Type& { return m_value; }
     };
 }

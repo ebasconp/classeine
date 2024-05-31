@@ -31,20 +31,20 @@ namespace clsn::draw
     {
     }
 
-    int Color::getColor() const noexcept
+    auto Color::getColor() const noexcept -> int
     {
         return a << 24 | r << 16 | g << 8 | b;
     }
 
-    int Color::getRed() const noexcept { return r; }
+    auto Color::getRed() const noexcept -> int { return r; }
 
-    int Color::getGreen() const noexcept { return g; }
+    auto Color::getGreen() const noexcept -> int { return g; }
 
-    int Color::getBlue() const noexcept { return b; }
+    auto Color::getBlue() const noexcept -> int { return b; }
 
     int Color::getAlpha() const noexcept { return a; }
 
-    bool Color::operator==(const Color& p) const noexcept
+    auto Color::operator==(const Color& p) const noexcept -> bool
     {
         return std::tie(r, g, b, a) == std::tie(p.r, p.g, p.b, p.a);
     }

@@ -14,18 +14,18 @@ namespace clsn::draw
         Region(int x, int y, int width, int height);
         Region(const Point& position, const Dimension& size);
 
-        const Point& getPosition() const noexcept;
+        [[nodiscard]] auto getPosition() const noexcept -> const Point&;
 
-        const Dimension& getSize() const noexcept;
+        [[nodiscard]] auto getSize() const noexcept -> const Dimension&;
 
-        int getX() const noexcept;
-        int getY() const noexcept;
+        [[nodiscard]] auto getX() const noexcept -> int;
+        [[nodiscard]] auto getY() const noexcept -> int;
 
-        int getWidth() const noexcept;
-        int getHeight() const noexcept;
+        [[nodiscard]] auto getWidth() const noexcept -> int;
+        [[nodiscard]] auto getHeight() const noexcept -> int;
 
-        Region operator+(const Point& p) const noexcept;
-        Region operator+(const Dimension& d) const noexcept;
-        Region operator+(const Region& r) const noexcept;
+        [[nodiscard]] auto operator+(const Point& p) const noexcept -> Region;
+        [[nodiscard]] auto operator+(const Dimension& d) const noexcept -> Region;
+        [[nodiscard]] auto operator+(const Region& r) const noexcept -> Region;
     };
 }

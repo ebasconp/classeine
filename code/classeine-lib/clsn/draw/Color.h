@@ -15,12 +15,12 @@ namespace clsn::draw
         Color(int r, int g, int b, int a);
         explicit Color(int hexaCode);
 
-        [[nodiscard]] int getColor() const noexcept;
-        [[nodiscard]] int getRed() const noexcept;
-        [[nodiscard]] int getGreen() const noexcept;
-        [[nodiscard]] int getBlue() const noexcept;
-        [[nodiscard]] int getAlpha() const noexcept;
+        [[nodiscard]] auto getColor() const noexcept -> int;
+        [[nodiscard]] auto getRed() const noexcept -> int;
+        [[nodiscard]] auto getGreen() const noexcept -> int;
+        [[nodiscard]] auto getBlue() const noexcept -> int;
+        [[nodiscard]] auto getAlpha() const noexcept -> int;
 
-        bool operator==(const Color& ) const noexcept;
+        auto operator==(const Color& ) const noexcept -> bool;
     };
 }

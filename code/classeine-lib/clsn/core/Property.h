@@ -31,23 +31,23 @@ namespace clsn::core
         {
         }
 
-        [[nodiscard]] const std::string& getName() const noexcept
+        [[nodiscard]] auto getName() const noexcept -> const std::string&
         {
             return m_name;
         }
 
-        [[nodiscard]] const T& get() const noexcept { return m_value; }
+        [[nodiscard]] auto get() const noexcept -> const T& { return m_value; }
 
         template <bool B = HasValueChangedEventListener,
                   typename std::enable_if<B, int>::type = 0>
-        int addValueChangedListener(
-            EventListener<ValueChangedEvent<T>> listener)
+        auto addValueChangedListener(
+            EventListener<ValueChangedEvent<T>> listener) -> int
         {
             return m_valueChangedListeners.add(std::move(listener));
         }
 
         template <typename ValueType>
-        bool set(ValueType&& newValue)
+        auto set(ValueType&& newValue) -> bool
         {
             if (m_value == newValue)
                 return false;
@@ -71,12 +71,12 @@ public:                                                                       \
     void set##name(const type& value) noexcept { m_##name.set(value); }       \
                                                                               \
 public:                                                                       \
-    const type& get##name() const noexcept { return m_##name.get(); }         \
+    auto get##name() const noexcept -> const type&{ return m_##name.get(); }  \
                                                                               \
 public:                                                                       \
-    int add##name##ChangedListener(                                           \
+    auto add##name##ChangedListener(                                           \
         const clsn::core::EventListener<clsn::core::ValueChangedEvent<type>>& \
-            listener)                                                         \
+            listener) -> int                                                  \
     {                                                                         \
         return m_##name.addValueChangedListener(listener);                    \
     }
@@ -98,12 +98,12 @@ public:                                                                       \
     void set##name(bool value) noexcept { m_##name.set(value); }       \
                                                                               \
 public:                                                                       \
-    bool is##name() const noexcept { return m_##name.get(); }         \
+    auto is##name() const noexcept -> bool { return m_##name.get(); }         \
                                                                               \
 public:                                                                       \
-    int add##name##ChangedListener(                                           \
+    auto add##name##ChangedListener(                                          \
         const clsn::core::EventListener<clsn::core::ValueChangedEvent<bool>>& \
-            listener)                                                         \
+            listener) -> int                                                  \
     {                                                                         \
         return m_##name.addValueChangedListener(listener);                    \
     }

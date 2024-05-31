@@ -43,7 +43,7 @@ namespace clsn::ui
                   return;
 
                 m_pressed = pressedNow;
-                this->setInvalidated(true);
+                this->invalidate();
 
                 if (!m_pressed) // Button has been released, then Action
                 {
@@ -54,7 +54,7 @@ namespace clsn::ui
 
             addTextChangedListener([this](auto& )
             {
-                this->setInvalidated(true);
+                invalidate();
             });
         }
     };

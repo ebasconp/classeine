@@ -12,7 +12,7 @@ namespace clsn::ui
         std::vector<ControlAndConstraint> m_controls;
 
     public:
-        ListContainer(std::string_view sectionName)
+        explicit ListContainer(std::string_view sectionName)
         : Control{sectionName}
         {
         }
@@ -22,6 +22,7 @@ namespace clsn::ui
         {
             auto ptr = std::make_shared<ControlType>();
             m_controls.emplace_back(ptr, Constraint{std::forward<Args>(args)...});
+            initEvents(*ptr);
             return ptr;
         }
 
@@ -62,22 +63,38 @@ namespace clsn::ui
                 proc(*(p.first));
             }
         }
+
+        void invalidate() const noexcept override
+        {
+            int count = getCount();
+            for (int i = 0; i < count; i++)
+                m_controls[i].first->invalidate();
+        }
+
+        void validate() const noexcept override
+        {
+            int count = getCount();
+            for (int i = 0; i < count; i++)
+                m_controls[i].first->validate();
+        }
+
+        auto isInvalidated() const noexcept -> bool override
+        {
+            int count = getCount();
+            for (int i = 0; i < count; i++)
+                if (m_controls[i].first->isInvalidated())
+                    return true;
+
+            return false;
+        }
+
+    private:
+        void initEvents(Control& control)
+        {
+            control.addVisibleChangedListener([this](auto&)
+            {
+                invalidate();
+            });
+        }
     };
 }
-
-//
-//#include "Container.h"
-//
-//#include "controllers/VBoxContainerController.h"
-//#include "models/BoxContainerModel.h"
-//#include "renderers/VBoxContainerRenderer.h"
-//
-//namespace clsn::ui
-//{
-//    template <typename Model = models::BoxContainerModel,
-//              typename Renderer = renderers::VBoxContainerRenderer,
-//              typename Controller = controllers::VBoxContainerController>
-//    using BasicVBoxContainer = Container<Model, Renderer, Controller>;
-//
-//    using VBoxContainer = BasicVBoxContainer<>;
-//}

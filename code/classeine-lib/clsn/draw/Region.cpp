@@ -13,27 +13,27 @@ namespace clsn::draw
     {
     }
 
-    const Point& Region::getPosition() const noexcept { return m_position; }
+    auto Region::getPosition() const noexcept -> const Point& { return m_position; }
 
-    const Dimension& Region::getSize() const noexcept { return m_size; }
+    auto Region::getSize() const noexcept -> const Dimension& { return m_size; }
 
-    int Region::getX() const noexcept { return m_position.getX(); }
-    int Region::getY() const noexcept { return m_position.getY(); }
+    auto Region::getX() const noexcept -> int { return m_position.getX(); }
+    auto Region::getY() const noexcept -> int { return m_position.getY(); }
 
     int Region::getWidth() const noexcept { return m_size.getWidth(); }
     int Region::getHeight() const noexcept { return m_size.getHeight(); }
 
-    Region Region::operator+(const Point& p) const noexcept
+    auto Region::operator+(const Point& p) const noexcept -> Region
     {
         return operator+(Region{p, Dimension{0, 0}});
     }
 
-    Region Region::operator+(const Dimension& d) const noexcept
+    auto Region::operator+(const Dimension& d) const noexcept -> Region
     {
         return operator+(Region{Point{0, 0}, d});
     }
 
-    Region Region::operator+(const Region& r) const noexcept
+    auto Region::operator+(const Region& r) const noexcept -> Region
     {
         return {getX() + r.getX(),
                 getY() + r.getY(),

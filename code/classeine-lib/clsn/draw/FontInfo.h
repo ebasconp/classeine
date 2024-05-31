@@ -16,10 +16,10 @@ namespace clsn::draw
     public:
         FontInfo(std::string_view name, FontStyle style);
 
-        bool operator==(const FontInfo& oth) const;
+        auto operator==(const FontInfo& oth) const -> bool;
 
-        FontStyle getStyle() const noexcept;
-        const std::string& getName() const noexcept;
+        auto getStyle() const noexcept -> FontStyle;
+        auto getName() const noexcept -> const std::string&;
     };
 }
 

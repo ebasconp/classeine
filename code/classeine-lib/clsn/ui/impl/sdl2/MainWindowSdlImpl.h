@@ -132,7 +132,7 @@ namespace clsn::ui::impl::sdl2
 
         void runEventLoop()
         {
-            m_parentWindow().setInvalidated(true);
+            m_parentWindow().invalidate();
 
             GraphicsSdl2Impl graphics{*m_renderer};
 

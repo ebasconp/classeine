@@ -22,12 +22,14 @@ namespace clsn::ui::renderers
         LabelRendererType m_labelRenderer;
 
     public:
-        void paint(Graphics& graphics, const Region& region, Control& baseControl) override
+        void paint(Graphics& graphics,
+                   const Region& region,
+                   const Control& baseControl) const override
         {
-            auto& control = static_cast<clsn::ui::Button&>(baseControl);
+            auto& control = static_cast<const clsn::ui::Button&>(baseControl);
 
-            std::cout << "Control: Button; Text: "
-                      << control.getText() << std::endl;
+            std::cout << "Control: Button; Text: " << control.getText()
+                      << std::endl;
 
             BorderRenderer borderRenderer;
 

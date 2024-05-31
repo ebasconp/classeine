@@ -4,17 +4,16 @@ namespace clsn::draw
 {
     class Dimension final
     {
+        int m_width;
+        int m_height;
+
     public:
         Dimension();
         Dimension(int width, int height);
 
-        [[nodiscard]] int getWidth() const noexcept;
-        [[nodiscard]] int getHeight() const noexcept;
+        [[nodiscard]] auto getWidth() const noexcept -> int;
+        [[nodiscard]] auto getHeight() const noexcept -> int;
 
-        bool operator==(const Dimension& other) const noexcept;
-
-    private:
-        int m_width;
-        int m_height;
+        auto operator==(const Dimension& other) const noexcept -> bool;
     };
 }

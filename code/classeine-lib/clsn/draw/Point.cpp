@@ -8,7 +8,7 @@ namespace clsn::draw
     {
     }
 
-    int Point::getX() const noexcept { return m_x; }
+    auto Point::getX() const noexcept -> int { return m_x; }
 
-    int Point::getY() const noexcept { return m_y; }
+    auto Point::getY() const noexcept -> int { return m_y; }
 }

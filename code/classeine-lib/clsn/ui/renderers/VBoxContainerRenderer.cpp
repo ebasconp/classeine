@@ -9,9 +9,9 @@ namespace clsn::ui::renderers
 {
     void VBoxContainerRenderer::paint(Graphics& graphics,
                const Region& region,
-               Control& baseControl)
+               const Control& baseControl) const
     {
-        auto& container = static_cast<VBoxContainer&>(baseControl);
+        auto& container = static_cast<const VBoxContainer&>(baseControl);
 
         const auto count = container.getVisibleCount();
         if (count == 0)
@@ -29,7 +29,7 @@ namespace clsn::ui::renderers
             if (container[i].isInvalidated())
             {
                 container[i].paint(graphics, controlRegion);
-                container[i].setInvalidated(false);
+                container[i].validate();
             }
         }
     }

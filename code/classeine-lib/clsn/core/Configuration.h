@@ -34,9 +34,9 @@ namespace clsn::core
         }
 
         template <typename ValueType>
-        std::optional<std::reference_wrapper<const ValueType>> get(
+        auto get(
             std::string_view sectionName,
-            std::string_view key) const
+            std::string_view key) const -> std::optional<std::reference_wrapper<const ValueType>>
         {
             const auto sectionIt = m_sections.find(std::string{sectionName});
             if (sectionIt == m_sections.end())

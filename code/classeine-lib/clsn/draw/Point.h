@@ -11,7 +11,7 @@ namespace clsn::draw
     public:
         Point(int x, int y);
 
-        int getX() const noexcept;
-        int getY() const noexcept;
+        auto getX() const noexcept -> int;
+        auto getY() const noexcept -> int;
     };
 }

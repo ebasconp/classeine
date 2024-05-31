@@ -6,14 +6,16 @@ namespace clsn::draw
     : m_name{name}
     , m_style{style}
     {
-
     }
 
-    const std::string& FontInfo::getName() const noexcept { return m_name; }
+    auto FontInfo::getName() const noexcept -> const std::string&
+    {
+        return m_name;
+    }
 
-    FontStyle FontInfo::getStyle() const noexcept { return m_style; }
+    auto FontInfo::getStyle() const noexcept -> FontStyle { return m_style; }
 
-    bool FontInfo::operator==(const clsn::draw::FontInfo& oth) const
+    auto FontInfo::operator==(const clsn::draw::FontInfo& oth) const -> bool
     {
         if (this == &oth)
             return true;

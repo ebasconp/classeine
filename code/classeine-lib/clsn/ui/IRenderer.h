@@ -21,6 +21,8 @@ namespace clsn::ui
     public:
         virtual ~IRenderer() = default;
 
-        virtual void paint(Graphics& graphics, const Region& region, Control& baseControl) = 0;
+        virtual void paint(Graphics& graphics,
+                           const Region& region,
+                           const Control& baseControl) const = 0;
     };
 }

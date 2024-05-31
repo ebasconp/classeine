@@ -24,9 +24,9 @@ namespace clsn::draw
         {
         }
 
-        const std::string& getName() const noexcept;
-        int getSize() const noexcept;
-        FontStyle getStyle() const noexcept;
+        auto getName() const noexcept -> const std::string&;
+        auto getSize() const noexcept -> int;
+        auto getStyle() const noexcept -> FontStyle;
 
         bool operator==(const Font& font) const noexcept;
     };
@@ -37,7 +37,7 @@ namespace std
     template <>
     struct hash<clsn::draw::Font>
     {
-        int operator()(const clsn::draw::Font& font) const
+        auto operator()(const clsn::draw::Font& font) const -> int
         {
             return std::hash<std::string>{}(font.getName()) * 31 +
                    static_cast<int>(font.getStyle()) * 31 + font.getSize();

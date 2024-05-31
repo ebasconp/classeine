@@ -8,6 +8,7 @@ namespace clsn::ui
 
     Control::Control(std::string_view sectionName)
     : m_defaultSectionName{sectionName}
+    , m_invalidated{true}
     {
         auto& uiManager = UIManager::getInstance();
 
@@ -21,9 +22,11 @@ namespace clsn::ui
             sectionName, "foregroundColor", Colors::WHITE));
 
         setFont(uiManager.getDefault(sectionName, "font", Font{}));
+
+        initEvents();
     }
 
-    void Control::paint(Graphics& graphics, const Region& region)
+    void Control::paint(Graphics& graphics, const Region& region) const
     {
         m_renderer->paint(graphics, region, *this);
     }
@@ -38,7 +41,7 @@ namespace clsn::ui
         m_mouseClickListeners.add(std::move(event));
     }
 
-    std::string_view Control::getDefaultSectionName() const
+    auto Control::getDefaultSectionName() const -> std::string_view
     {
         return m_defaultSectionName;
     }
@@ -46,5 +49,23 @@ namespace clsn::ui
     void Control::setRenderer(const std::shared_ptr<IRenderer>& renderer)
     {
         m_renderer = renderer;
+    }
+
+    void Control::invalidate() const noexcept { m_invalidated = true; }
+
+    void Control::validate() const noexcept { m_invalidated = false; }
+
+    auto Control::isInvalidated() const noexcept -> bool
+    {
+        return m_invalidated;
+    }
+
+
+    void Control::initEvents()
+    {
+        addVisibleChangedListener([this](auto&)
+        {
+            invalidate();
+        });
     }
 }

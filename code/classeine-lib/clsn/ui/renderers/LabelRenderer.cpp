@@ -7,7 +7,7 @@ namespace clsn::ui::renderers
 {
     void LabelRenderer::paint(Graphics& graphics,
                               const Region& region,
-                              Control& control)
+                              const Control& control) const
     {
         graphics.drawText(region,
                           control.getFont(),

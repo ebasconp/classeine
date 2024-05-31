@@ -35,37 +35,38 @@ namespace clsn::ui
         std::shared_ptr<IEntity> m_tag;
         std::shared_ptr<IRenderer> m_renderer;
 
-        CLSN_BOOL_PROPERTY_VAL  (Invalidated, true, false)
+        std::string m_defaultSectionName;
+
+        mutable bool m_invalidated;
 
     public:
         explicit Control(std::string_view sectionName);
 
         virtual ~Control() = default;
 
-        CLSN_PROPERTY           (BackgroundColor, Color, true);
-        CLSN_BOOL_PROPERTY_VAL  (Enabled, true, true);
-        CLSN_PROPERTY           (Font, Font, true);
-        CLSN_PROPERTY           (ForegroundColor, Color, true);
-        CLSN_PROPERTY_VAL       (Size, Dimension, true, (Dimension{600, 400}));
-        CLSN_PROPERTY           (Text, std::string, true);
-        CLSN_BOOL_PROPERTY_VAL  (Visible, true, true);
-
-        std::string m_defaultSectionName;
+        CLSN_PROPERTY(BackgroundColor, Color, true);
+        CLSN_BOOL_PROPERTY_VAL(Enabled, true, true);
+        CLSN_PROPERTY(Font, Font, true);
+        CLSN_PROPERTY(ForegroundColor, Color, true);
+        CLSN_PROPERTY_VAL(Size, Dimension, true, (Dimension{600, 400}));
+        CLSN_PROPERTY(Text, std::string, true);
+        CLSN_BOOL_PROPERTY_VAL(Visible, true, true);
 
         void addMouseClickListener(EventListener<MouseClickEvent> event);
-        void paint(Graphics& graphics, const Region& region);
+        void paint(Graphics& graphics, const Region& region) const;
         void processMouseClickEvent(events::MouseClickEvent& e);
 
-        std::string_view getDefaultSectionName() const;
+        auto getDefaultSectionName() const -> std::string_view;
 
         template <typename TagType, typename... Args>
         void makeTag(Args&... args)
         {
-            m_tag = std::make_unique<Entity<TagType>>(std::forward<Args>(args)...);
+            m_tag =
+                std::make_unique<Entity<TagType>>(std::forward<Args>(args)...);
         }
 
         template <typename TagType>
-        const TagType& getTagOrDefault(const TagType& defValue) const
+        auto getTagOrDefault(const TagType& defValue) const -> const TagType&
         {
             if (m_tag == nullptr)
                 return defValue;
@@ -74,5 +75,12 @@ namespace clsn::ui
         }
 
         void setRenderer(const std::shared_ptr<IRenderer>& renderer);
+
+        virtual void invalidate() const noexcept;
+        virtual void validate() const noexcept;
+        virtual auto isInvalidated() const noexcept -> bool;
+
+    private:
+        void initEvents();
     };
 }

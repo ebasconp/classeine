@@ -31,9 +31,12 @@ namespace clsn::ui
             initDefaults();
         }
 
-        [[nodiscard]] ControlType& operator()() noexcept { return m_control; }
+        [[nodiscard]] auto operator()() noexcept -> ControlType&
+        {
+            return m_control;
+        }
 
-        [[nodiscard]] const ControlType& operator()() const noexcept
+        [[nodiscard]] auto operator()() const noexcept -> const ControlType&
         {
             return m_control;
         }
@@ -55,8 +58,10 @@ namespace clsn::ui
             setMinimumSize(UIManager::getInstance().getDefault(
                 "MainWindow", "minimumSize", Dimension{50, 50}));
 
-            setSize(UIManager::getInstance().getDefault(
-                "MainWindow", "size", Dimension{300, 200}));
+            auto& dimension = UIManager::getInstance().getDefault(
+                "MainWindow", "size", Dimension{300, 200});
+            setSize(dimension);
+            m_control.setSize(dimension);
         }
 
         void initVisibility()
@@ -84,7 +89,7 @@ namespace clsn::ui
                 {
                     auto& newValue = e.getNewValue();
                     m_control.setSize(newValue);
-                    m_impl.repaint();
+                    m_control.invalidate();
                 });
         }
     };

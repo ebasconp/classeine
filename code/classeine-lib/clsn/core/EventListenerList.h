@@ -18,7 +18,7 @@ namespace clsn::core
         std::vector<EventListenerContainer> m_listeners;
 
     public:
-        int add(EventListener<EventType> callback)
+        auto add(EventListener<EventType> callback) -> int
         {
             m_listeners.emplace_back(callback, true);
 
