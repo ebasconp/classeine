@@ -1,8 +1,10 @@
 #include "UIManager.h"
 
 #include "defaults/ButtonDefaults.h"
+#include "defaults/HBoxContainerDefaults.h"
 #include "defaults/MainWindowDefaults.h"
 #include "defaults/ThemeDefaults.h"
+#include "defaults/VBoxContainerDefaults.h"
 
 #include <iostream> //ETOTODO: Remove
 
@@ -40,7 +42,9 @@ namespace clsn::ui
         defaults::ThemeDefaults::populateDefaults(m_defaults);
 
         defaults::ButtonDefaults::populateDefaults(m_defaults);
+        defaults::HBoxContainerDefaults::populateDefaults(m_defaults);
         defaults::MainWindowDefaults::populateDefaults(m_defaults);
+        defaults::VBoxContainerDefaults::populateDefaults(m_defaults);
     }
 
     std::string_view UIManager::getPathByFontInfo(

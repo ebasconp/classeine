@@ -1,17 +1,17 @@
 #pragma once
 
-#include "Container.h"
-
-#include "controllers/HBoxContainerController.h"
-#include "models/BoxContainerModel.h"
-#include "renderers/HBoxContainerRenderer.h"
+#include "ListContainer.h"
 
 namespace clsn::ui
 {
-    template <typename Model = models::BoxContainerModel,
-              typename Renderer = renderers::HBoxContainerRenderer,
-              typename Controller = controllers::HBoxContainerController>
-    using BasicHBoxContainer = Container<Model, Renderer, Controller>;
+    using clsn::core::Empty;
 
-    using HBoxContainer = BasicHBoxContainer<>;
+    class HBoxContainer : public ListContainer<Empty>
+    {
+    public:
+        HBoxContainer();
+
+    private:
+        void initEvents();
+    };
 }

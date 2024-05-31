@@ -8,13 +8,11 @@
 
 #include "clsn/draw/Dimension.h"
 
-#include "controllers/MainWindowController.h"
 #include "renderers/MainWindowRenderer.h"
 
 namespace clsn::ui
 {
     using namespace clsn::draw;
-    using namespace clsn::ui::controllers;
     using namespace clsn::ui::renderers;
 
     template <typename ControlType>
