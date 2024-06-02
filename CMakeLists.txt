@@ -12,7 +12,10 @@ find_package(SDL2_ttf REQUIRED)
 
 include_directories(${SDL2_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS})
 
+add_compile_definitions(_CLSN_DEBUG_)
+
 add_executable(classeine code/classeine-demo/Main.cpp
+        code/classeine-lib/clsn/core/Entity.cpp
         code/classeine-lib/clsn/core/Panic.cpp
         code/classeine-lib/clsn/draw/Color.cpp
         code/classeine-lib/clsn/draw/Dimension.cpp

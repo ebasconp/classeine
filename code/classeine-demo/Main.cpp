@@ -107,7 +107,7 @@ int main()
 {
     test();
 
-    clsn::core::IEntity::dump();
+    clsn::core::Entity::dump();
 
     return 0;
 }

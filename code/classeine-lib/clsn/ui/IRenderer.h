@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/core/IEntity.h"
+#include "clsn/core/Entity.h"
 
 #include "clsn/ui/Graphics.h"
 
@@ -19,7 +19,7 @@ namespace clsn::ui
     using namespace clsn::core;
     using namespace clsn::draw;
 
-    class IRenderer : public IEntity
+    class IRenderer : public Entity
     {
     public:
         virtual ~IRenderer() = default;

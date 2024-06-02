@@ -1,23 +1,23 @@
 #pragma once
 
-#include "IEntity.h"
-
-#include <utility>
+#include <atomic>
+#include <iostream>
+#include <unordered_set>
 
 namespace clsn::core
 {
-    template <typename Type>
-    class Entity : public IEntity
+    // Base class for polymorphic containers
+    class Entity
     {
-        Type m_value;
-
+#ifdef _CLSN_DEBUG_
+        static std::atomic<int> m_instancesCreated;
+        static std::atomic<int> m_instancesDestroyed;
+        static std::unordered_set<Entity*> m_livingEntities;
+#endif
     public:
-        Entity(Type value)
-        : m_value{std::move(value)}
-        {
-        }
+        Entity();
+        virtual ~Entity();
 
-        auto get() const noexcept -> const Type& { return m_value; }
-        auto get() noexcept -> Type& { return m_value; }
+        static void dump();
     };
 }

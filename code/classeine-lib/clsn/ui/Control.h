@@ -14,7 +14,7 @@
 #include "clsn/draw/Dimension.h"
 #include "clsn/draw/Region.h"
 
-#include "clsn/core/Entity.h"
+#include "clsn/core/EntityWrapper.h"
 #include "clsn/core/EventListenerList.h"
 #include "clsn/core/Property.h"
 
@@ -27,12 +27,12 @@ namespace clsn::ui
     using namespace clsn::draw;
     using namespace clsn::ui::events;
 
-    class Control : public IEntity
+    class Control : public Entity
     {
         EventListenerList<MouseClickEvent> m_mouseClickListeners;
         EventListenerList<ControlResizedEvent> m_controlResizedListeners;
 
-        std::shared_ptr<IEntity> m_tag;
+        std::shared_ptr<Entity> m_tag;
         std::shared_ptr<IRenderer> m_renderer;
 
         std::string m_defaultSectionName;
@@ -62,7 +62,7 @@ namespace clsn::ui
         void makeTag(Args&... args)
         {
             m_tag =
-                std::make_unique<Entity<TagType>>(std::forward<Args>(args)...);
+                std::make_unique<EntityWrapper<TagType>>(std::forward<Args>(args)...);
         }
 
         template <typename TagType>
@@ -71,7 +71,7 @@ namespace clsn::ui
             if (m_tag == nullptr)
                 return defValue;
 
-            return static_cast<Entity<TagType>&>(*m_tag).get();
+            return static_cast<EntityWrapper<TagType>&>(*m_tag).get();
         }
 
         void setRenderer(const std::shared_ptr<IRenderer>& renderer);

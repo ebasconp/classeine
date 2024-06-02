@@ -2,16 +2,18 @@
 
 #include "UIManagerDefaults.h"
 
+#include "clsn/draw/FontInfo.h"
+
+#include "clsn/core/Entity.h"
+
 #include <string>
 #include <string_view>
-
-#include "clsn/draw/FontInfo.h"
 
 namespace clsn::ui
 {
     using namespace clsn::draw;
 
-    class UIManager final
+    class UIManager final : public Entity
     {
         UIManagerDefaults m_defaults;
         std::unordered_map<FontInfo, std::string> m_pathsByFontInfo;

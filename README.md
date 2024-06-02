@@ -18,21 +18,24 @@ the creation of rich user interfaces in modern C++.
   * Event management
   * Properties
   * Configuration by sections
-  * IEntity polymorphic base class
+  * `Entity` polymorphic base class: Adds some memory profiling tools
+    * `EntityWrapper<T>`: Wrapper for any `T`, inheriting from `Entity`
+    
   
 * **clsn::draw** - library providing drawing primitives
-  * Color
-  * Dimension
-  * Font
-  * Point
-  * Region
+  * `Color`
+  * `Dimension`
+  * `Font`
+  * `Point`
+  * `Region`
+  
 * **clsn::ui** - library providing componentable UI controls
-  * Control
-    * ListContainer<Constraint>
-      * HBoxContainer
-      * VBoxContainer
-    * ClickableControl
-      * Button
-  * Graphics - abstraction to rendering backend
-  * MainWindow
-  * UIManager
+  * `Control`
+    * `ListContainer<Constraint>`
+      * `HBoxContainer`
+      * `VBoxContainer`
+    * `ClickableControl`
+      * `Button`
+  * `Graphics` - abstraction to rendering backend
+  * `MainWindow`
+  * `UIManager`
