@@ -6,6 +6,7 @@
 
 #include "clsn/core/Entity.h"
 
+#include <memory>
 #include <string>
 #include <string_view>
 
@@ -18,6 +19,8 @@ namespace clsn::ui
         UIManagerDefaults m_defaults;
         std::unordered_map<FontInfo, std::string> m_pathsByFontInfo;
 
+        static std::unique_ptr<UIManager> m_singleton;
+
     public:
         UIManager(const UIManager&) = delete;
         UIManager(UIManager&&) = delete;
@@ -28,6 +31,8 @@ namespace clsn::ui
         ~UIManager() = default;
 
         static UIManager& getInstance();
+        static void init();
+        static void finalize();
 
         template <typename T>
         const T& getDefault(std::string_view sectionName,

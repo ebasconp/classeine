@@ -27,13 +27,21 @@ namespace clsn::core
     void Entity::dump()
     {
 #ifdef _CLSN_DEBUG_
-        std::cout << "Classeine number of instances created:   " << m_instancesCreated << std::endl;
-        std::cout << "Classeine number of instances destroyed: " << m_instancesDestroyed << std::endl;
-        std::cout << "************************************************************************\n";
-        std::cout << "Living entities:\n";
-        for (auto p : m_livingEntities)
+        auto instancesLeftCount = m_instancesCreated - m_instancesDestroyed;
+        std::cout
+            << "*********************************************************\n"
+            << "Classeine number of instances left:   "
+            << instancesLeftCount << std::endl
+            << "*********************************************************\n";
+
+        if (instancesLeftCount != 0)
         {
-            std::cout << "* (" << typeid(*p).name() << ")\n";
+            std::cout << "Living entities:\n";
+
+            for (auto p : m_livingEntities)
+            {
+                std::cout << "* (" << typeid(*p).name() << ")\n";
+            }
         }
 #endif
     }

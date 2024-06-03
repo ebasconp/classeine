@@ -1,5 +1,7 @@
 #include "UIManager.h"
 
+#include "clsn/core/Panic.h"
+
 #include "defaults/ButtonDefaults.h"
 #include "defaults/HBoxContainerDefaults.h"
 #include "defaults/MainWindowDefaults.h"
@@ -10,10 +12,26 @@
 
 namespace clsn::ui
 {
+    std::unique_ptr<UIManager> UIManager::m_singleton;
+
     UIManager& UIManager::getInstance()
     {
-        static UIManager instance;
-        return instance;
+        if (m_singleton == nullptr)
+            clsn::core::Panic(
+                "UIManager is not initialized. Run UIManager::init() at the "
+                "beginning of your application");
+
+        return *m_singleton;
+    }
+
+    void UIManager::init()
+    {
+        m_singleton = std::unique_ptr<UIManager>(new UIManager());
+    }
+
+    void UIManager::finalize()
+    {
+        m_singleton.reset();
     }
 
     void UIManager::addFontMapping(const FontInfo& fontInfo,

@@ -26,7 +26,7 @@ namespace clsn::ui::renderers
         for (int i = 0; i < count; i++)
         {
             Region controlRegion{region.getX(),
-                                 static_cast<int>(i * regionHeight),
+                                 static_cast<int>(i * regionHeight) + region.getY(),
                                  region.getWidth(),
                                  static_cast<int>(regionHeight)};
 

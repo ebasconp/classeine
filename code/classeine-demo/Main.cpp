@@ -100,21 +100,26 @@ void test()
 //                              b4->setForegroundColor(color);
 //                          });
 
-    MainWindow<HBoxContainer> mw;
+    MainWindow<VBoxContainer> mw;
     mw.setSize({1000, 400});
 
-    auto b1 = mw().makeAndAdd<Button>();
-    auto b2 = mw().makeAndAdd<Button>();
-    auto b3 = mw().makeAndAdd<Button>();
-    auto b4 = mw().makeAndAdd<Button>();
+    auto c0 = mw().makeAndAdd<Button>();
+    auto c1 = mw().makeAndAdd<Button>();
 
-    auto container = mw().makeAndAdd<VBoxContainer>();
+    auto c2 = mw().makeAndAdd<HBoxContainer>();
+
+    auto b1 = c2->makeAndAdd<Button>();
+    auto b2 = c2->makeAndAdd<Button>();
+    auto b3 = c2->makeAndAdd<Button>();
+    auto b4 = c2->makeAndAdd<Button>();
+
+    auto container = c2->makeAndAdd<VBoxContainer>();
     auto b6 = container->makeAndAdd<Button>();
     auto b7 = container->makeAndAdd<Button>();
 
-    auto b5 = mw().makeAndAdd<Button>();
+    auto b5 = c2->makeAndAdd<Button>();
 
-    auto container2 = mw().makeAndAdd<VBoxContainer>();
+    auto container2 = c2->makeAndAdd<VBoxContainer>();
     auto b8 = container2->makeAndAdd<Button>();
     auto b9 = container2->makeAndAdd<Button>();
 
@@ -124,7 +129,11 @@ void test()
 
 int main()
 {
+    clsn::ui::UIManager::init();
+
     test();
+
+    clsn::ui::UIManager::finalize();
 
     clsn::core::Entity::dump();
 
