@@ -28,9 +28,11 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/ClickableControl.cpp
         code/classeine-lib/clsn/ui/Control.cpp
         code/classeine-lib/clsn/ui/HBoxContainer.cpp
+        code/classeine-lib/clsn/ui/Label.cpp
         code/classeine-lib/clsn/ui/VBoxContainer.cpp
         code/classeine-lib/clsn/ui/defaults/ButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/HBoxContainerDefaults.cpp
+        code/classeine-lib/clsn/ui/defaults/LabelDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/MainWindowDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/ThemeDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/VBoxContainerDefaults.cpp

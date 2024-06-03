@@ -4,6 +4,7 @@
 
 #include "clsn/ui/Button.h"
 #include "clsn/ui/HBoxContainer.h"
+#include "clsn/ui/Label.h"
 #include "clsn/ui/MainWindow.h"
 #include "clsn/ui/VBoxContainer.h"
 //
@@ -104,7 +105,10 @@ void test()
     mw.setSize({1000, 400});
 
     auto c0 = mw().makeAndAdd<Button>();
-    auto c1 = mw().makeAndAdd<Button>();
+    c0->setText("Button");
+
+    auto c1 = mw().makeAndAdd<Label>();
+    c1->setText("Hello world");
 
     auto c2 = mw().makeAndAdd<HBoxContainer>();
 

@@ -4,6 +4,7 @@
 
 #include "defaults/ButtonDefaults.h"
 #include "defaults/HBoxContainerDefaults.h"
+#include "defaults/LabelDefaults.h"
 #include "defaults/MainWindowDefaults.h"
 #include "defaults/ThemeDefaults.h"
 #include "defaults/VBoxContainerDefaults.h"
@@ -61,6 +62,7 @@ namespace clsn::ui
 
         defaults::ButtonDefaults::populateDefaults(m_defaults);
         defaults::HBoxContainerDefaults::populateDefaults(m_defaults);
+        defaults::LabelDefaults::populateDefaults(m_defaults);
         defaults::MainWindowDefaults::populateDefaults(m_defaults);
         defaults::VBoxContainerDefaults::populateDefaults(m_defaults);
     }

@@ -54,13 +54,6 @@ namespace clsn::ui::renderers
                                    region.getWidth() - depth2,
                                    region.getHeight() - depth2};
 
-            const Color& bc = control.isEnabled()
-                                  ? control.getBackgroundColor()
-                                  : UIManager::getInstance().getDefault<Color>(
-                                        "Theme", "disabledBackgroundColor");
-            graphics.setDrawColor(bc);
-            graphics.drawFillRectangle(innerRect);
-
             if (pressed)
             {
                 const Region innerRectShifted{innerRect.getX() + depth,

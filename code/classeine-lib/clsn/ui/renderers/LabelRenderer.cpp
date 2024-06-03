@@ -9,6 +9,13 @@ namespace clsn::ui::renderers
                               const Region& region,
                               const Control& control) const
     {
+        const Color& bc = control.isEnabled()
+                              ? control.getBackgroundColor()
+                              : UIManager::getInstance().getDefault<Color>(
+                                    "Theme", "disabledBackgroundColor");
+        graphics.setDrawColor(bc);
+        graphics.drawFillRectangle(region);
+
         graphics.drawText(region,
                           control.getFont(),
                           control.isEnabled()

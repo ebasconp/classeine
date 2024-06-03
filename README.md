@@ -37,5 +37,6 @@ the creation of rich user interfaces in modern C++.
     * `ClickableControl`
       * `Button`
   * `Graphics` - abstraction to rendering backend
+  * `Label`
   * `MainWindow`
   * `UIManager`
