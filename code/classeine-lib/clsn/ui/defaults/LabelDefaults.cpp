@@ -12,6 +12,6 @@ namespace clsn::ui::defaults::LabelDefaults
 
     void populateDefaults(clsn::ui::UIManagerDefaults& defaults)
     {
-        defaults.set("Label", "renderer", std::make_shared<LabelRenderer>());
+        defaults.set("Label", "renderer", makeLazyRenderer<LabelRenderer>());
     }
 }

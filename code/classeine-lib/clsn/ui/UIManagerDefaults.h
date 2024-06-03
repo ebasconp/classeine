@@ -1,6 +1,7 @@
 #pragma once
 
 #include "clsn/core/Configuration.h"
+#include "clsn/core/Lazy.h"
 
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
@@ -14,8 +15,19 @@ namespace clsn::ui
 {
     using clsn::ui::IRenderer;
 
+    using LazyRenderer = Lazy<std::shared_ptr<IRenderer>>;
+
+    template <typename RendererType>
+    LazyRenderer makeLazyRenderer()
+    {
+        return LazyRenderer
+        {
+            []() { return std::make_shared<RendererType>(); }
+        };
+    }
+
     using UIManagerDefaults = clsn::core::Configuration<clsn::draw::Color,
                                                         clsn::draw::Dimension,
                                                         clsn::draw::Font,
-                                                        std::shared_ptr<IRenderer>>;
+                                                        LazyRenderer>;
 }

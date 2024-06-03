@@ -29,8 +29,8 @@ namespace clsn::core
                  std::string_view key,
                  ValueType&& value)
         {
-            m_sections[std::string{sectionName}][std::string{key}] =
-                std::forward<ValueType>(value);
+            m_sections[std::string{sectionName}].insert(
+                { std::string{key}, std::forward<ValueType>(value)});
         }
 
         template <typename ValueType>

@@ -16,6 +16,22 @@ namespace clsn::core
 #endif
     }
 
+    Entity::Entity(const Entity&)
+    {
+#ifdef _CLSN_DEBUG_
+        m_instancesCreated++;
+        m_livingEntities.insert(this);
+#endif
+    }
+
+    Entity::Entity(Entity&&) noexcept
+    {
+#ifdef _CLSN_DEBUG_
+        m_instancesCreated++;
+        m_livingEntities.insert(this);
+#endif
+    }
+
     Entity::~Entity()
     {
 #ifdef _CLSN_DEBUG_
@@ -38,7 +54,7 @@ namespace clsn::core
         {
             std::cout << "Living entities:\n";
 
-            for (auto p : m_livingEntities)
+            for (auto& p : m_livingEntities)
             {
                 std::cout << "* (" << typeid(*p).name() << ")\n";
             }

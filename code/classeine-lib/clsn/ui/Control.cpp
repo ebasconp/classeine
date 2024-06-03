@@ -12,8 +12,8 @@ namespace clsn::ui
     {
         auto& uiManager = UIManager::getInstance();
 
-        m_renderer = uiManager.getDefault<std::shared_ptr<IRenderer>>(
-            sectionName, "renderer", std::make_shared<NullRenderer>());
+        m_renderer = uiManager.getDefault<LazyRenderer>(
+            sectionName, "renderer", makeLazyRenderer<NullRenderer>()).get();
 
         setBackgroundColor(
             uiManager.getDefault(sectionName, "backgroundColor", Colors::RED));

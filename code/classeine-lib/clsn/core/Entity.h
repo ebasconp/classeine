@@ -16,6 +16,9 @@ namespace clsn::core
 #endif
     public:
         Entity();
+        Entity(const Entity&);
+        Entity(Entity&&) noexcept;
+
         virtual ~Entity();
 
         static void dump();

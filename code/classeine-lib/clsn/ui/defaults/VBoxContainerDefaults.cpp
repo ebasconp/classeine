@@ -12,6 +12,6 @@ namespace clsn::ui::defaults::VBoxContainerDefaults
 
     void populateDefaults(clsn::ui::UIManagerDefaults& defaults)
     {
-        defaults.set("VBoxContainer", "renderer", std::make_shared<VBoxContainerRenderer>());
+        defaults.set("VBoxContainer", "renderer", makeLazyRenderer<VBoxContainerRenderer>());
     }
 }

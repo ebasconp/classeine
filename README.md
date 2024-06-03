@@ -20,7 +20,7 @@ the creation of rich user interfaces in modern C++.
   * Configuration by sections
   * `Entity` polymorphic base class: Adds some memory profiling tools
     * `EntityWrapper<T>`: Wrapper for any `T`, inheriting from `Entity`
-    
+  * `Lazy<T>`: Object T is constructed the first time this instance is accessed.
   
 * **clsn::draw** - library providing drawing primitives
   * `Color`

@@ -12,6 +12,6 @@ namespace clsn::ui::defaults::HBoxContainerDefaults
 
     void populateDefaults(clsn::ui::UIManagerDefaults& defaults)
     {
-        defaults.set("HBoxContainer", "renderer", std::make_shared<HBoxContainerRenderer>());
+        defaults.set("HBoxContainer", "renderer", makeLazyRenderer<HBoxContainerRenderer>());
     }
 }
