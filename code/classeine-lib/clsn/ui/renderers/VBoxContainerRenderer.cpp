@@ -8,8 +8,8 @@
 namespace clsn::ui::renderers
 {
     void VBoxContainerRenderer::paint(Graphics& graphics,
-               const Region& region,
-               const Control& baseControl) const
+                                      const Region& region,
+                                      const Control& baseControl) const
     {
         auto& container = static_cast<const VBoxContainer&>(baseControl);
 
@@ -21,10 +21,14 @@ namespace clsn::ui::renderers
             return;
         }
 
-        const auto regionHeight = region.getHeight() / count;
+        const auto regionHeight =
+            region.getHeight() / static_cast<double>(count);
         for (int i = 0; i < count; i++)
         {
-            Region controlRegion{region.getX(), i * regionHeight, region.getWidth(), regionHeight};
+            Region controlRegion{region.getX(),
+                                 static_cast<int>(i * regionHeight),
+                                 region.getWidth(),
+                                 static_cast<int>(regionHeight)};
 
             if (container[i].isInvalidated())
             {

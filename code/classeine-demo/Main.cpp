@@ -30,77 +30,96 @@ void test()
     //        mw().setText("Clicked " + std::to_string(++n) + " times");
     //    });
 
-    MainWindow<VBoxContainer> mw;
+//    MainWindow<VBoxContainer> mw;
+
+//    auto b1 = mw().makeAndAdd<Button>();
+//    b1->setText("Click me");
+//
+//    auto b2 = mw().makeAndAdd<Button>();
+//    b2->setText("Click me again");
+//
+//    auto b3 = mw().makeAndAdd<Button>();
+//    b3->setText("Click me three");
+//
+//    auto b4 = mw().makeAndAdd<Button>();
+//    b4->setText("Click me");
+//
+//    auto hbc = mw().makeAndAdd<HBoxContainer>();
+//    auto b5 = hbc->makeAndAdd<Button>();
+//    auto b6 = hbc->makeAndAdd<Button>();
+//
+//    b5->setText("B5");
+//    b6->setText("B6");
+//
+//    b5->addActionListener([](auto& e)
+//                          {
+//                              std::cout << "B5" << std::endl; }
+//    );
+//    b6->addActionListener([](auto& ) { std::cout << "B6" << std::endl; });
+//
+//    static int n = 0;
+//
+//    b1->addActionListener(
+//        [&b4](auto& e)
+//        {
+//            b4->setText(
+//                std::string{"Click me (" + std::to_string(++n) + ")"});
+//        });
+//
+//    b2->addActionListener(
+//        [&b4, &b1](auto& e)
+//        {
+//            b4->setText(
+//                std::string{"Click me (" + std::to_string(--n) + ")"});
+//
+//            b1->setVisible(!b1->isVisible());
+//        });
+//
+//    b3->addActionListener(
+//        [&b4](auto& e)
+//        {
+//            n = 0;
+//            b4->setText(
+//                std::string{"Click me (0)"});
+//        });
+//
+//    b3->setEnabled(false);
+//
+//    b4->addActionListener([&b4](auto& e)
+//                          {
+//                              auto color = b4->getForegroundColor();
+//                              if (color == Colors::BLACK)
+//                                  color = Colors::RED;
+//                              else if (color == Colors::RED)
+//                                  color = Colors::GREEN;
+//                              else if (color == Colors::GREEN)
+//                                  color = Colors::BLUE;
+//                              else
+//                                  color = Colors::BLACK;
+//
+//                              b4->setForegroundColor(color);
+//                          });
+
+    MainWindow<HBoxContainer> mw;
+    mw.setSize({1000, 400});
 
     auto b1 = mw().makeAndAdd<Button>();
-    b1->setText("Click me");
-
     auto b2 = mw().makeAndAdd<Button>();
-    b2->setText("Click me again");
-
     auto b3 = mw().makeAndAdd<Button>();
-    b3->setText("Click me three");
-
     auto b4 = mw().makeAndAdd<Button>();
-    b4->setText("Click me");
 
-    auto hbc = mw().makeAndAdd<HBoxContainer>();
-    auto b5 = hbc->makeAndAdd<Button>();
-    auto b6 = hbc->makeAndAdd<Button>();
+    auto container = mw().makeAndAdd<VBoxContainer>();
+    auto b6 = container->makeAndAdd<Button>();
+    auto b7 = container->makeAndAdd<Button>();
 
-    b5->setText("B5");
-    b6->setText("B6");
+    auto b5 = mw().makeAndAdd<Button>();
 
-    b5->addActionListener([](auto& e)
-                          {
-                              std::cout << "B5" << std::endl; }
-    );
-    b6->addActionListener([](auto& ) { std::cout << "B6" << std::endl; });
-
-    static int n = 0;
-
-    b1->addActionListener(
-        [&b4](auto& e)
-        {
-            b4->setText(
-                std::string{"Click me (" + std::to_string(++n) + ")"});
-        });
-
-    b2->addActionListener(
-        [&b4, &b1](auto& e)
-        {
-            b4->setText(
-                std::string{"Click me (" + std::to_string(--n) + ")"});
-
-            b1->setVisible(!b1->isVisible());
-        });
-
-    b3->addActionListener(
-        [&b4](auto& e)
-        {
-            n = 0;
-            b4->setText(
-                std::string{"Click me (0)"});
-        });
-
-    b3->setEnabled(false);
-
-    b4->addActionListener([&b4](auto& e)
-                          {
-                              auto color = b4->getForegroundColor();
-                              if (color == Colors::BLACK)
-                                  color = Colors::RED;
-                              else if (color == Colors::RED)
-                                  color = Colors::GREEN;
-                              else if (color == Colors::GREEN)
-                                  color = Colors::BLUE;
-                              else
-                                  color = Colors::BLACK;
-
-                              b4->setForegroundColor(color);
-                          });
+    auto container2 = mw().makeAndAdd<VBoxContainer>();
+    auto b8 = container2->makeAndAdd<Button>();
+    auto b9 = container2->makeAndAdd<Button>();
 
     mw.setVisible(true);
+
 }
 
 int main()

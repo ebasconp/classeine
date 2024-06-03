@@ -21,13 +21,14 @@ namespace clsn::ui::renderers
             return;
         }
 
-        const auto regionWidth = region.getWidth() / count;
+        const auto regionWidth = region.getWidth() / static_cast<double>(count);
         for (int i = 0; i < count; i++)
         {
-            Region controlRegion{(i * regionWidth) + region.getX(),
-                                 region.getY(),
-                                 regionWidth,
-                                 region.getHeight()};
+            Region controlRegion{
+                static_cast<int>((i * regionWidth) + region.getX()),
+                region.getY(),
+                static_cast<int>(regionWidth),
+                region.getHeight()};
             if (container[i].isInvalidated())
             {
                 container[i].paint(graphics, controlRegion);
