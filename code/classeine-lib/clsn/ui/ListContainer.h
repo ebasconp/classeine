@@ -21,6 +21,7 @@ namespace clsn::ui
         std::shared_ptr<ControlType> makeAndAdd(Args&&... args)
         {
             auto ptr = std::make_shared<ControlType>();
+            ptr->setParentWindow(getParentWindow());
             m_controls.emplace_back(ptr, Constraint{std::forward<Args>(args)...});
             initEvents(*ptr);
             return ptr;

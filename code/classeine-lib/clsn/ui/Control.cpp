@@ -1,4 +1,5 @@
 #include "Control.h"
+#include "Window.h"
 
 #include "clsn/ui/renderers/NullRenderer.h"
 
@@ -12,8 +13,11 @@ namespace clsn::ui
     {
         auto& uiManager = UIManager::getInstance();
 
-        m_renderer = uiManager.getDefault<LazyRenderer>(
-            sectionName, "renderer", makeLazyRenderer<NullRenderer>()).get();
+        m_renderer =
+            uiManager
+                .getDefault<LazyRenderer>(
+                    sectionName, "renderer", makeLazyRenderer<NullRenderer>())
+                .get();
 
         setBackgroundColor(
             uiManager.getDefault(sectionName, "backgroundColor", Colors::RED));
@@ -60,12 +64,25 @@ namespace clsn::ui
         return m_invalidated;
     }
 
-
     void Control::initEvents()
     {
-        addVisibleChangedListener([this](auto&)
-        {
-            invalidate();
-        });
+        addVisibleChangedListener([this](auto&) { invalidate(); });
+    }
+
+    void Control::setParentWindow(
+        std::optional<std::reference_wrapper<Window>> parentWindow)
+    {
+        m_parentWindow = parentWindow;
+    }
+
+    std::optional<std::reference_wrapper<Window>> Control::getParentWindow()
+    {
+        return m_parentWindow;
+    }
+
+    std::optional<std::reference_wrapper<const Window>>
+        Control::getParentWindow() const
+    {
+        return m_parentWindow;
     }
 }

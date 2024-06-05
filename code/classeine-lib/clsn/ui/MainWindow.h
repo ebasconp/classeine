@@ -1,33 +1,29 @@
 #pragma once
 
-#include "Control.h"
+#include "Window.h"
 
 #include "impl/MainWindowImpl.h"
-
-#include "clsn/core/Property.h"
-
-#include "clsn/draw/Dimension.h"
-
-#include "renderers/MainWindowRenderer.h"
 
 namespace clsn::ui
 {
     using namespace clsn::draw;
-    using namespace clsn::ui::renderers;
 
     template <typename ControlType>
-    class MainWindow final
+    class MainWindow final : public Window
     {
         clsn::ui::impl::MainWindowImpl<MainWindow<ControlType>> m_impl;
         ControlType m_control;
 
     public:
         MainWindow()
-        : m_impl{*this}
+        : Window("MainWindow")
+        , m_impl{*this}
         {
             initVisibility();
             initSize();
             initDefaults();
+
+            m_control.setParentWindow(*this);
         }
 
         [[nodiscard]] auto operator()() noexcept -> ControlType&
@@ -40,12 +36,6 @@ namespace clsn::ui
             return m_control;
         }
 
-        CLSN_BOOL_PROPERTY_VAL(Visible, true, false);
-        CLSN_BOOL_PROPERTY_VAL(Resizable, true, true);
-
-        CLSN_PROPERTY(Size, Dimension, true);
-        CLSN_PROPERTY(MinimumSize, Dimension, true)
-
         void processMouseClickEvent(events::MouseClickEvent& e)
         {
             m_control.processMouseClickEvent(e);
@@ -54,19 +44,13 @@ namespace clsn::ui
     private:
         void initDefaults()
         {
-            setMinimumSize(UIManager::getInstance().getDefault(
-                "MainWindow", "minimumSize", Dimension{50, 50}));
-
             auto& dimension = UIManager::getInstance().getDefault(
                 "MainWindow", "size", Dimension{300, 200});
-            setSize(dimension);
             m_control.setSize(dimension);
         }
 
         void initVisibility()
         {
-            setVisible(false);
-
             addVisibleChangedListener(
                 [this](auto& e)
                 {

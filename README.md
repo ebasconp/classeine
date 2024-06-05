@@ -31,12 +31,14 @@ the creation of rich user interfaces in modern C++.
   
 * **clsn::ui** - library providing componentable UI controls
   * `Control`
+    * `ClickableControl`
+      * `Button` 
+    * `Label` 
     * `ListContainer<Constraint>`
       * `HBoxContainer`
       * `VBoxContainer`
-    * `ClickableControl`
-      * `Button`
+    * `UIManager`
+    * `Window`
+      * `MainWindow`
   * `Graphics` - abstraction to rendering backend
-  * `Label`
-  * `MainWindow`
-  * `UIManager`
+

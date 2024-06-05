@@ -27,6 +27,8 @@ namespace clsn::ui
     using namespace clsn::draw;
     using namespace clsn::ui::events;
 
+    class Window;
+
     class Control : public Entity
     {
         EventListenerList<MouseClickEvent> m_mouseClickListeners;
@@ -39,16 +41,16 @@ namespace clsn::ui
 
         mutable bool m_invalidated;
 
+        std::optional<std::reference_wrapper<Window>> m_parentWindow;
+
     public:
         explicit Control(std::string_view sectionName);
-
-        virtual ~Control() = default;
 
         CLSN_PROPERTY(BackgroundColor, Color, true);
         CLSN_BOOL_PROPERTY_VAL(Enabled, true, true);
         CLSN_PROPERTY(Font, Font, true);
         CLSN_PROPERTY(ForegroundColor, Color, true);
-        CLSN_PROPERTY_VAL(Size, Dimension, true, (Dimension{600, 400}));
+        CLSN_PROPERTY(Size, Dimension, true);
         CLSN_PROPERTY(Text, std::string, true);
         CLSN_BOOL_PROPERTY_VAL(Visible, true, true);
 
@@ -61,8 +63,8 @@ namespace clsn::ui
         template <typename TagType, typename... Args>
         void makeTag(Args&... args)
         {
-            m_tag =
-                std::make_unique<EntityWrapper<TagType>>(std::forward<Args>(args)...);
+            m_tag = std::make_unique<EntityWrapper<TagType>>(
+                std::forward<Args>(args)...);
         }
 
         template <typename TagType>
@@ -79,6 +81,11 @@ namespace clsn::ui
         virtual void invalidate() const noexcept;
         virtual void validate() const noexcept;
         virtual auto isInvalidated() const noexcept -> bool;
+
+        void setParentWindow(std::optional<std::reference_wrapper<Window>>);
+        std::optional<std::reference_wrapper<Window>> getParentWindow();
+        std::optional<std::reference_wrapper<const Window>> getParentWindow()
+            const;
 
     private:
         void initEvents();
