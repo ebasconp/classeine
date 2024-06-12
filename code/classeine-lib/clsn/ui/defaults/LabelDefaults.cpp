@@ -2,8 +2,6 @@
 
 #include "clsn/ui/renderers/LabelRenderer.h"
 
-#include <memory>
-
 namespace clsn::ui::defaults::LabelDefaults
 {
     using namespace clsn::draw;

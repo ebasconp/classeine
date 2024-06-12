@@ -1,6 +1,8 @@
 #include "Control.h"
 #include "Window.h"
 
+#include "clsn/draw/Colors.h"
+
 #include "clsn/ui/renderers/NullRenderer.h"
 
 namespace clsn::ui

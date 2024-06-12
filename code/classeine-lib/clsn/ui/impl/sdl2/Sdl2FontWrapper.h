@@ -9,7 +9,7 @@ namespace clsn::ui::impl::sdl2
 {
     struct TTF_FontDeleter final
     {
-        void operator()(TTF_Font* font)
+        void operator()(TTF_Font* font) const
         {
             TTF_CloseFont(font);
         }

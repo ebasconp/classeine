@@ -2,8 +2,6 @@
 
 #include "clsn/ui/renderers/VBoxContainerRenderer.h"
 
-#include <memory>
-
 namespace clsn::ui::defaults::VBoxContainerDefaults
 {
     using namespace clsn::draw;

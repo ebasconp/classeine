@@ -1,11 +1,10 @@
 #pragma once
 
-#include "clsn/draw/Color.h"
-
 #include "clsn/ui/Graphics.h"
 
 namespace clsn::draw
 {
+    class Color;
     class Region;
 }
 
@@ -16,7 +15,7 @@ namespace clsn::ui::renderers
     class BorderRenderer
     {
     public:
-        void drawBeveledBorder(Graphics& gr,
+        static void drawBeveledBorder(Graphics& gr,
                                const Region& region,
                                const Color& a,
                                const Color& b,

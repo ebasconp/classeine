@@ -1,14 +1,13 @@
 #pragma once
 
 #include "GraphicsSdl2Impl.h"
-#include "Sdl2FontCache.h"
-#include "Sdl2Helpers.h"
 
 #include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
 
 #include "clsn/draw/Dimension.h"
-#include "clsn/draw/FontInfo.h"
+#include "clsn/draw/Point.h"
+#include "clsn/draw/Region.h"
 
 #include "clsn/core/Panic.h"
 
@@ -178,7 +177,7 @@ namespace clsn::ui::impl::sdl2
             m_parentWindow.processMouseClickEvent(mouseClickEvent);
         }
 
-        void processControlResizedEvent(SDL_Event& e)
+        void processControlResizedEvent(const SDL_Event& e)
         {
             const int newWidth = e.window.data1;
             const int newHeight = e.window.data2;

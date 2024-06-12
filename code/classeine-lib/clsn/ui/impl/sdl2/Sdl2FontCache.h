@@ -3,14 +3,11 @@
 #include "Sdl2FontWrapper.h"
 
 #include "clsn/draw/Font.h"
-#include "clsn/draw/FontInfo.h"
 
 #include <SDL_ttf.h>
 
 #include <optional>
-#include <string>
 #include <unordered_map>
-#include <utility>
 
 namespace clsn::ui::impl::sdl2
 {

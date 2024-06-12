@@ -18,17 +18,17 @@ namespace clsn::ui::events
         int m_y;
 
     public:
-        explicit MouseClickData(MouseClickStatus status, int x, int y)
+        MouseClickData(MouseClickStatus status, int x, int y)
         : m_status{status}
         , m_x{x}
         , m_y{y}
         {
         }
 
-        MouseClickStatus getStatus() const noexcept { return m_status; }
+        auto getStatus() const noexcept -> MouseClickStatus { return m_status; }
 
-        int getX() const noexcept { return m_x; }
-        int getY() const noexcept { return m_y; }
+        auto getX() const noexcept -> int { return m_x; }
+        auto getY() const noexcept -> int { return m_y; }
     };
 
     using MouseClickEvent = clsn::core::Event<MouseClickData>;

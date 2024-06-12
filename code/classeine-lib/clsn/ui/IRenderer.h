@@ -22,7 +22,7 @@ namespace clsn::ui
     class IRenderer : public Entity
     {
     public:
-        virtual ~IRenderer() = default;
+        ~IRenderer() override = default;
 
         virtual void paint(Graphics& graphics,
                            const Region& region,

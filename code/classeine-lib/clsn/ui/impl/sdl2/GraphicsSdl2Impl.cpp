@@ -33,15 +33,15 @@ namespace clsn::ui::impl::sdl2
         return m_fontCache;
     }
 
-    void GraphicsSdl2Impl::setDrawColor(const Color& c)
+    void GraphicsSdl2Impl::setDrawColor(const Color& c) const
     {
         SDL_SetRenderDrawColor(
             &m_renderer, c.getRed(), c.getGreen(), c.getBlue(), c.getAlpha());
     }
 
-    void GraphicsSdl2Impl::clear() { SDL_RenderClear(&m_renderer); }
+    void GraphicsSdl2Impl::clear() const { SDL_RenderClear(&m_renderer); }
 
-    void GraphicsSdl2Impl::apply() { SDL_RenderPresent(&m_renderer); }
+    void GraphicsSdl2Impl::apply() const { SDL_RenderPresent(&m_renderer); }
 
     void GraphicsSdl2Impl::drawLine(const Point& p1, const Point& p2) const
     {

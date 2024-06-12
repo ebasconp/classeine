@@ -13,9 +13,9 @@ namespace clsn::core
     {
         std::string m_name;
         T m_value;
-        std::conditional<HasValueChangedEventListener,
+        std::conditional_t<HasValueChangedEventListener,
                          EventListenerList<ValueChangedEvent<T>>,
-                         Empty>::type m_valueChangedListeners;
+                         Empty> m_valueChangedListeners;
 
     public:
         template <typename StringType>
@@ -39,7 +39,7 @@ namespace clsn::core
         [[nodiscard]] auto get() const noexcept -> const T& { return m_value; }
 
         template <bool B = HasValueChangedEventListener,
-                  typename std::enable_if<B, int>::type = 0>
+                  std::enable_if_t<B, int> = 0>
         auto addValueChangedListener(
             EventListener<ValueChangedEvent<T>> listener) -> int
         {

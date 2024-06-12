@@ -5,7 +5,6 @@
 #include "clsn/core/EmptyEvent.h"
 #include "clsn/core/EventListenerList.h"
 
-
 namespace clsn::ui
 {
     class ClickableControl : public Control

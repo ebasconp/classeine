@@ -28,7 +28,7 @@ namespace clsn::ui::impl::sdl2
         Sdl2FontCache& getFontCache() noexcept;
         const Sdl2FontCache& getFontCache() const noexcept;
 
-        void setDrawColor(const Color& c);
+        void setDrawColor(const Color& c) const;
 
         void drawLine(const Point& p1, const Point& p2) const;
         void drawFillRectangle(const Region& r) const;
@@ -37,7 +37,7 @@ namespace clsn::ui::impl::sdl2
                       const Color& c,
                       std::string_view text) const;
 
-        void clear();
-        void apply();
+        void clear() const;
+        void apply() const;
     };
 }

@@ -17,8 +17,8 @@ namespace clsn::ui::events
         {
         }
 
-        int getWidth() const noexcept { return m_width; }
-        int getHeight() const noexcept { return m_height; }
+        auto getWidth() const noexcept -> int { return m_width; }
+        auto getHeight() const noexcept -> int { return m_height; }
     };
 
     using ControlResizedEvent = clsn::core::Event<ControlResizedData>;

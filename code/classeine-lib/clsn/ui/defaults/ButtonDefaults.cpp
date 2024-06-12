@@ -3,8 +3,6 @@
 #include "clsn/ui/renderers/ButtonRenderer.h"
 #include "clsn/ui/renderers/LabelRenderer.h"
 
-#include <memory>
-
 namespace clsn::ui::defaults::ButtonDefaults
 {
     using namespace clsn::draw;

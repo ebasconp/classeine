@@ -1,5 +1,7 @@
 #include "Entity.h"
 
+#include <iostream>
+
 namespace clsn::core
 {
 #ifdef _CLSN_DEBUG_
@@ -11,7 +13,7 @@ namespace clsn::core
     Entity::Entity()
     {
 #ifdef _CLSN_DEBUG_
-        m_instancesCreated++;
+        ++m_instancesCreated;
         m_livingEntities.insert(this);
 #endif
     }
@@ -19,7 +21,7 @@ namespace clsn::core
     Entity::Entity(const Entity&)
     {
 #ifdef _CLSN_DEBUG_
-        m_instancesCreated++;
+        ++m_instancesCreated;
         m_livingEntities.insert(this);
 #endif
     }
@@ -27,7 +29,7 @@ namespace clsn::core
     Entity::Entity(Entity&&) noexcept
     {
 #ifdef _CLSN_DEBUG_
-        m_instancesCreated++;
+        ++m_instancesCreated;
         m_livingEntities.insert(this);
 #endif
     }
@@ -35,7 +37,7 @@ namespace clsn::core
     Entity::~Entity()
     {
 #ifdef _CLSN_DEBUG_
-        m_instancesDestroyed++;
+        ++m_instancesDestroyed;
         m_livingEntities.erase(this);
 #endif
     }

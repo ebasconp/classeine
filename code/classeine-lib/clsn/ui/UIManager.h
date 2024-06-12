@@ -28,7 +28,7 @@ namespace clsn::ui
         UIManager& operator=(const UIManager&) = delete;
         UIManager& operator=(UIManager&&) = delete;
 
-        ~UIManager() = default;
+        ~UIManager() override = default;
 
         static UIManager& getInstance();
         static void init();

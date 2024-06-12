@@ -19,17 +19,6 @@ namespace clsn::core
         {
         }
 
-        // C++23
-        /*template <typename Self>
-        auto& get(this Self&& self)
-        {
-            auto& t = std::forward<Self>(self);
-            if (!t.m_instance.has_value())
-                t.m_instance = t.m_factory();
-
-            return t.m_instance.value();
-        }*/
-
         const auto& get() const
         {
             if (!m_instance.has_value())

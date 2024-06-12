@@ -4,7 +4,6 @@
 
 #include <string>
 #include <string_view>
-#include <unordered_map>
 
 namespace clsn::draw
 {
@@ -23,15 +22,12 @@ namespace clsn::draw
     };
 }
 
-namespace std
+template <>
+struct std::hash<clsn::draw::FontInfo>
 {
-    template <>
-    struct hash<clsn::draw::FontInfo>
+    auto operator()(const clsn::draw::FontInfo& fontInfo) const noexcept -> int
     {
-        int operator()(const clsn::draw::FontInfo& fontInfo) const
-        {
-            return std::hash<std::string>{}(fontInfo.getName()) * 31 +
-                   static_cast<int>(fontInfo.getStyle());
-        }
-    };
-}
+        return std::hash<std::string>{}(fontInfo.getName()) * 31 +
+               static_cast<int>(fontInfo.getStyle());
+    }
+};

@@ -68,7 +68,7 @@ namespace clsn::ui
         void initSize()
         {
             addSizeChangedListener(
-                [this](clsn::core::ValueChangedEvent<Dimension>& e)
+                [this](const clsn::core::ValueChangedEvent<Dimension>& e)
                 {
                     auto& newValue = e.getNewValue();
                     m_control.setSize(newValue);

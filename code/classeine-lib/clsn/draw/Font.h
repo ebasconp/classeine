@@ -32,15 +32,12 @@ namespace clsn::draw
     };
 }
 
-namespace std
+template <>
+struct std::hash<clsn::draw::Font>
 {
-    template <>
-    struct hash<clsn::draw::Font>
+    auto operator()(const clsn::draw::Font& font) const noexcept -> int
     {
-        auto operator()(const clsn::draw::Font& font) const -> int
-        {
-            return std::hash<std::string>{}(font.getName()) * 31 +
-                   static_cast<int>(font.getStyle()) * 31 + font.getSize();
-        }
-    };
-}
+        return std::hash<std::string>{}(font.getName()) * 31 +
+               static_cast<int>(font.getStyle()) * 31 + font.getSize();
+    }
+};

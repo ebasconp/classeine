@@ -2,8 +2,6 @@
 
 #include "clsn/ui/renderers/HBoxContainerRenderer.h"
 
-#include <memory>
-
 namespace clsn::ui::defaults::HBoxContainerDefaults
 {
     using namespace clsn::draw;

@@ -7,12 +7,8 @@
 #include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
 
-#include "IRenderer.h"
-
 #include "clsn/draw/Color.h"
-#include "clsn/draw/Colors.h"
 #include "clsn/draw/Dimension.h"
-#include "clsn/draw/Region.h"
 
 #include "clsn/core/EntityWrapper.h"
 #include "clsn/core/EventListenerList.h"

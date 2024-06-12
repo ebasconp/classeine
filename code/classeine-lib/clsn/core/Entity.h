@@ -1,7 +1,6 @@
 #pragma once
 
 #include <atomic>
-#include <iostream>
 #include <unordered_set>
 
 namespace clsn::core
