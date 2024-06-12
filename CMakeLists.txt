@@ -12,7 +12,9 @@ find_package(SDL2_ttf REQUIRED)
 
 include_directories(${SDL2_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS})
 
-add_compile_definitions(_CLSN_DEBUG_)
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_definitions(_CLSN_DEBUG_)
+endif()
 
 add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/core/Entity.cpp
