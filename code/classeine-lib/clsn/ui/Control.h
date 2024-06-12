@@ -78,6 +78,7 @@ namespace clsn::ui
 
         void setRenderer(const std::shared_ptr<IRenderer>& renderer);
 
+        virtual void doLayout() noexcept;
         virtual void invalidate() const noexcept;
         virtual void validate() const noexcept;
         virtual auto isInvalidated() const noexcept -> bool;

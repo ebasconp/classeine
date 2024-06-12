@@ -115,6 +115,8 @@ void test()
     auto b1 = c2->makeAndAdd<Button>();
     auto b2 = c2->makeAndAdd<Button>();
     auto b3 = c2->makeAndAdd<Button>();
+    b3->setText("b3");
+
     auto b4 = c2->makeAndAdd<Button>();
 
     auto container = c2->makeAndAdd<VBoxContainer>();
@@ -126,6 +128,12 @@ void test()
     auto container2 = c2->makeAndAdd<VBoxContainer>();
     auto b8 = container2->makeAndAdd<Button>();
     auto b9 = container2->makeAndAdd<Button>();
+
+    c0->addActionListener([&b3](auto& )
+    {
+        b3->setVisible(!b3->isVisible());
+        std::cout << "B3 visible: " << b3->isVisible() << std::endl;
+    });
 
     mw.setVisible(true);
 

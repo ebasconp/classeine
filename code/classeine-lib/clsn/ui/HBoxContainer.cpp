@@ -22,7 +22,7 @@ namespace clsn::ui
                 const int controlWidth = getSize().getWidth() / count;
                 const int controlIndex = x / controlWidth;
 
-                auto& control = (*this)[controlIndex];
+                auto& control = *(getVisibleControls()[controlIndex]);
                 if (!control.isEnabled())
                     return;
 
@@ -34,17 +34,28 @@ namespace clsn::ui
         addSizeChangedListener(
             [this](auto& e)
             {
-                const auto count = getCount();
-                if (count == 0)
-                    return;
-
-                const int controlWidth = getSize().getWidth() / count;
-                iterate(
-                    [&controlWidth, this](auto& control)
-                    {
-                        control.setSize(clsn::draw::Dimension{
-                            controlWidth, getSize().getHeight()});
-                    });
+                doLayout();
             });
     }
+
+    void HBoxContainer::doLayout() noexcept
+    {
+        const auto visibleCount = this->getVisibleCount();
+        if (visibleCount == 0)
+            return;
+
+        const auto width = getSize().getWidth() / visibleCount;
+        const auto height = getSize().getHeight();
+
+        const auto count = this->getCount();
+        for (int i = 0; i < count; i++)
+        {
+            auto& control = (*this)[i];
+            if (!control.isVisible())
+                continue;
+
+            control.setSize({width, height});
+        }
+    }
+
 }

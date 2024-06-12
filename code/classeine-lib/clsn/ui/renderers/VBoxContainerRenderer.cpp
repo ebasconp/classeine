@@ -13,8 +13,8 @@ namespace clsn::ui::renderers
     {
         auto& container = static_cast<const VBoxContainer&>(baseControl);
 
-        const auto count = container.getVisibleCount();
-        if (count == 0)
+        const auto visibleCount = container.getVisibleCount();
+        if (visibleCount == 0)
         {
             graphics.setDrawColor(container.getBackgroundColor());
             graphics.drawFillRectangle(region);
@@ -22,9 +22,14 @@ namespace clsn::ui::renderers
         }
 
         const auto regionHeight =
-            region.getHeight() / static_cast<double>(count);
+            region.getHeight() / static_cast<double>(visibleCount);
+
+        const auto count = container.getCount();
         for (int i = 0; i < count; i++)
         {
+            if (!container[i].isVisible())
+                continue;
+
             Region controlRegion{region.getX(),
                                  static_cast<int>(i * regionHeight) + region.getY(),
                                  region.getWidth(),

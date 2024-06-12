@@ -132,6 +132,7 @@ namespace clsn::ui::impl::sdl2
 
         void runEventLoop()
         {
+            m_parentWindow().doLayout();
             m_parentWindow().invalidate();
 
             GraphicsSdl2Impl graphics{*m_renderer};

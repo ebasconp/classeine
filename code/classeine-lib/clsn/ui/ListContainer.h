@@ -32,18 +32,48 @@ namespace clsn::ui
             return static_cast<int>(m_controls.size());
         }
 
-        int getVisibleCount() const noexcept
+        auto getVisibleControls() -> std::vector<std::shared_ptr<Control>>
         {
-            auto n = 0;
+            std::vector<std::shared_ptr<Control>> controls;
 
-            int count = getCount();
-            for (auto i = 0; i < count; i++)
+            for (auto& c : m_controls)
             {
-                if (m_controls[i].first->isVisible())
-                    n++;
+                auto& control = c.first;
+                if (!control->isVisible())
+                    continue;
+
+                controls.push_back(control);
             }
 
-            return n;
+            return controls;
+        }
+
+        auto getVisibleCount() const -> int
+        {
+            auto count = 0;
+            iterate([&count](auto& c)
+            {
+               if (c.isVisible())
+                   count++;
+            });
+
+            return count;
+        }
+
+        auto getVisibleControls() const -> std::vector<std::shared_ptr<const Control>>
+        {
+            std::vector<std::shared_ptr<const Control>> controls;
+
+            for (auto& c : m_controls)
+            {
+                auto& control = c.first;
+                if (!control->isVisible())
+                    continue;
+
+                controls.push_back(control);
+            }
+
+            return controls;
         }
 
         auto& operator[](int index)
@@ -58,6 +88,15 @@ namespace clsn::ui
 
         template <typename Proc>
         void iterate(Proc proc)
+        {
+            for (auto& p : m_controls)
+            {
+                proc(*(p.first));
+            }
+        }
+
+        template <typename Proc>
+        void iterate(Proc proc) const
         {
             for (auto& p : m_controls)
             {
@@ -94,6 +133,7 @@ namespace clsn::ui
         {
             control.addVisibleChangedListener([this](auto&)
             {
+                doLayout();
                 invalidate();
             });
         }

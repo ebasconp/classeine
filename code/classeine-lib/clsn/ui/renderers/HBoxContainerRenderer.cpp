@@ -13,26 +13,29 @@ namespace clsn::ui::renderers
     {
         auto& container = static_cast<const HBoxContainer&>(baseControl);
 
-        const auto count = container.getCount();
-        if (count == 0)
+        const auto controls = container.getVisibleControls();
+        const auto visibleCount = container.getVisibleCount();
+        if (visibleCount == 0)
         {
             graphics.setDrawColor(container.getBackgroundColor());
             graphics.drawFillRectangle(region);
             return;
         }
 
-        const auto regionWidth = region.getWidth() / static_cast<double>(count);
-        for (int i = 0; i < count; i++)
+        const auto regionWidth = region.getWidth() / static_cast<double>(visibleCount);
+        for (int i = 0; i < visibleCount; i++)
         {
             Region controlRegion{
                 static_cast<int>((i * regionWidth) + region.getX()),
                 region.getY(),
                 static_cast<int>(regionWidth),
                 region.getHeight()};
-            if (container[i].isInvalidated())
+
+            auto& control = *(controls[i]);
+            if (control.isInvalidated())
             {
-                container[i].paint(graphics, controlRegion);
-                container[i].validate();
+                control.paint(graphics, controlRegion);
+                control.validate();
             }
         }
     }

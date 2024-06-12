@@ -22,7 +22,7 @@ namespace clsn::ui
                 const int controlHeight = getSize().getHeight() / count;
                 const int controlIndex = y / controlHeight;
 
-                auto& control = (*this)[controlIndex];
+                auto& control = *(getVisibleControls()[controlIndex]);
                 if (!control.isEnabled())
                     return;
 
@@ -34,16 +34,27 @@ namespace clsn::ui
         addSizeChangedListener(
             [this](auto& e)
             {
-                const auto count = getCount();
-                if (count == 0)
-                    return;
-
-                const int controlHeight = getSize().getHeight() / count;
-                iterate(
-                    [this, &controlHeight](auto& control) {
-                        control.setSize(
-                            Dimension{getSize().getWidth(), controlHeight});
-                    });
+                doLayout();
             });
+    }
+
+    void VBoxContainer::doLayout() noexcept
+    {
+        const auto visibleCount = this->getVisibleCount();
+        if (visibleCount == 0)
+            return;
+
+        const auto width = getSize().getWidth();
+        const auto height = getSize().getHeight() / visibleCount;
+
+        const auto count = this->getCount();
+        for (int i = 0; i < count; i++)
+        {
+            auto& control = (*this)[i];
+            if (!control.isVisible())
+                continue;
+
+            control.setSize({width, height});
+        }
     }
 }

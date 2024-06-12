@@ -3,13 +3,10 @@
 #include "clsn/ui/Button.h"
 #include "clsn/ui/Graphics.h"
 
-#include "clsn/draw/Colors.h"
 #include "clsn/draw/Region.h"
 
 #include "BorderRenderer.h"
 #include "clsn/ui/IRenderer.h"
-
-#include <iostream>
 
 namespace clsn::ui::renderers
 {
@@ -27,9 +24,6 @@ namespace clsn::ui::renderers
                    const Control& baseControl) const override
         {
             auto& control = static_cast<const clsn::ui::Button&>(baseControl);
-
-            std::cout << "Control: Button; Text: " << control.getText()
-                      << std::endl;
 
             BorderRenderer borderRenderer;
 
