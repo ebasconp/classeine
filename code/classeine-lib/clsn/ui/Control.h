@@ -79,10 +79,20 @@ namespace clsn::ui
         virtual void validate() const noexcept;
         virtual auto isInvalidated() const noexcept -> bool;
 
+        virtual void releaseMouse();
+
         void setParentWindow(std::optional<std::reference_wrapper<Window>>);
-        std::optional<std::reference_wrapper<Window>> getParentWindow();
-        std::optional<std::reference_wrapper<const Window>> getParentWindow()
-            const;
+        auto getParentWindow() -> std::optional<std::reference_wrapper<Window>>;
+        auto getParentWindow() const -> std::optional<std::reference_wrapper<const Window>>;
+
+        template <typename Proc>
+        void invokeInParentWindow(Proc proc)
+        {
+            if (!m_parentWindow.has_value())
+                return;
+
+            proc(m_parentWindow.value().get());
+        }
 
     private:
         void initEvents();

@@ -1,4 +1,6 @@
 #include "ClickableControl.h"
+#include "Window.h"
+
 
 namespace clsn::ui
 {
@@ -23,6 +25,12 @@ namespace clsn::ui
         m_actionListeners.notify(e);
     }
 
+    void ClickableControl::releaseMouse()
+    {
+        m_pressed = false;
+        invalidate();
+    }
+
     void ClickableControl::initEvents()
     {
         addMouseClickListener(
@@ -30,8 +38,6 @@ namespace clsn::ui
             {
                 auto pressedNow = e.getStatus() ==
                                   clsn::ui::events::MouseClickStatus::pressed;
-                if (m_pressed == pressedNow)
-                    return;
 
                 m_pressed = pressedNow;
                 this->invalidate();
@@ -40,6 +46,13 @@ namespace clsn::ui
                 {
                     EmptyEvent actionEvent;
                     notifyActionEvent(actionEvent);
+                }
+                else
+                {
+                    invokeInParentWindow([this](auto& parentWindow)
+                    {
+                        parentWindow.grabMouse(*this);
+                    });
                 }
             });
 

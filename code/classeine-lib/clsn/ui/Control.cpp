@@ -39,6 +39,11 @@ namespace clsn::ui
 
     void Control::processMouseClickEvent(events::MouseClickEvent& e)
     {
+        if (e.getStatus() == MouseClickStatus::released)
+        {
+            invokeInParentWindow([](auto& w) { w.releaseMouse(); });
+        }
+
         m_mouseClickListeners.notify(e);
     }
 
@@ -66,6 +71,11 @@ namespace clsn::ui
     auto Control::isInvalidated() const noexcept -> bool
     {
         return m_invalidated;
+    }
+
+    void Control::releaseMouse()
+    {
+        // Nothing to do here
     }
 
     void Control::initEvents()

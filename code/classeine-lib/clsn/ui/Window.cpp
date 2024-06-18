@@ -24,4 +24,18 @@ namespace clsn::ui
     {
         setVisible(false);
     }
+
+    void Window::grabMouse(Control& control)
+    {
+        m_mouseGrabberControl = std::ref(control);
+    }
+
+    void Window::releaseMouse()
+    {
+        if (m_mouseGrabberControl.has_value())
+        {
+            m_mouseGrabberControl.value().get().releaseMouse();
+            m_mouseGrabberControl = std::nullopt;
+        }
+    }
 }

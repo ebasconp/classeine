@@ -20,6 +20,8 @@ namespace clsn::ui
         void addActionListener(EventListener<EmptyEvent> event);
         void notifyActionEvent(EmptyEvent& e);
 
+        void releaseMouse() override;
+
     private:
         void initEvents();
     };
