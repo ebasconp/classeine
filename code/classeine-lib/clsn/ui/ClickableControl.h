@@ -13,7 +13,7 @@ namespace clsn::ui
         EventListenerList<EmptyEvent> m_actionListeners;
 
     public:
-        ClickableControl(std::string_view sectionName);
+        explicit ClickableControl(std::string_view sectionName);
 
         [[nodiscard]] auto isPressed() const noexcept -> bool;
 

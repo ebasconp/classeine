@@ -31,6 +31,8 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/Control.cpp
         code/classeine-lib/clsn/ui/HBoxContainer.cpp
         code/classeine-lib/clsn/ui/Label.cpp
+        code/classeine-lib/clsn/ui/ToggleButton.cpp
+        code/classeine-lib/clsn/ui/ToggleControl.cpp
         code/classeine-lib/clsn/ui/VBoxContainer.cpp
         code/classeine-lib/clsn/ui/Window.cpp
         code/classeine-lib/clsn/ui/defaults/ButtonDefaults.cpp
@@ -38,6 +40,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/defaults/LabelDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/MainWindowDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/ThemeDefaults.cpp
+        code/classeine-lib/clsn/ui/defaults/ToggleButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/VBoxContainerDefaults.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2FontCache.cpp
@@ -46,6 +49,10 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/HBoxContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/LabelRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/VBoxContainerRenderer.cpp
+        code/classeine-lib/clsn/ui/ToggleControl.h
+        code/classeine-lib/clsn/ui/ToggleControl.cpp
+        code/classeine-lib/clsn/ui/ToggleButton.h
+        code/classeine-lib/clsn/ui/ToggleButton.cpp
 )
 
 target_include_directories(classeine PUBLIC code/classeine-lib)

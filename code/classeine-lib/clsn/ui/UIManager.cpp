@@ -7,6 +7,7 @@
 #include "defaults/LabelDefaults.h"
 #include "defaults/MainWindowDefaults.h"
 #include "defaults/ThemeDefaults.h"
+#include "defaults/ToggleButtonDefaults.h"
 #include "defaults/VBoxContainerDefaults.h"
 
 #include <iostream> //ETOTODO: Remove
@@ -64,6 +65,7 @@ namespace clsn::ui
         defaults::HBoxContainerDefaults::populateDefaults(m_defaults);
         defaults::LabelDefaults::populateDefaults(m_defaults);
         defaults::MainWindowDefaults::populateDefaults(m_defaults);
+        defaults::ToggleButtonDefaults::populateDefaults(m_defaults);
         defaults::VBoxContainerDefaults::populateDefaults(m_defaults);
     }
 

@@ -33,6 +33,8 @@ the creation of rich user interfaces in modern C++.
   * `Control`
     * `ClickableControl`
       * `Button` 
+      * `ToggleControl`
+        * `ToggleButton`
     * `Label` 
     * `ListContainer<Constraint>`
       * `HBoxContainer`

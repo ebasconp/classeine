@@ -6,6 +6,7 @@
 #include "clsn/ui/HBoxContainer.h"
 #include "clsn/ui/Label.h"
 #include "clsn/ui/MainWindow.h"
+#include "clsn/ui/ToggleButton.h"
 #include "clsn/ui/VBoxContainer.h"
 //
 //#include "clsn/core/EventListenerList.h"
@@ -127,7 +128,8 @@ void test()
 
     auto container2 = c2->makeAndAdd<VBoxContainer>();
     auto b8 = container2->makeAndAdd<Button>();
-    auto b9 = container2->makeAndAdd<Button>();
+    auto b9 = container2->makeAndAdd<ToggleButton>();
+    b9->setText("Toggle");
 
     c0->addActionListener([&b3](auto& )
     {

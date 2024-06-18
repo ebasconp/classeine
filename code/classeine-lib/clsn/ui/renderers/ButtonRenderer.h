@@ -19,6 +19,11 @@ namespace clsn::ui::renderers
         LabelRendererType m_labelRenderer;
 
     public:
+        [[nodiscard]] virtual auto paintAsPressed(const ClickableControl& button) const -> bool
+        {
+            return button.isPressed();
+        }
+
         void paint(Graphics& graphics,
                    const Region& region,
                    const Control& baseControl) const override
@@ -36,7 +41,7 @@ namespace clsn::ui::renderers
 
             constexpr int depth = 2;
 
-            const bool pressed = control.isPressed();
+            const bool pressed = paintAsPressed(control);
 
             borderRenderer.drawBeveledBorder(
                 graphics, region, bevelUp, bevelDown, depth, !pressed);
