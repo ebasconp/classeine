@@ -28,6 +28,9 @@ namespace clsn::ui::renderers
                    const Region& region,
                    const Control& baseControl) const override
         {
+            if (!baseControl.isInvalidated())
+                return;
+
             auto& control = static_cast<const clsn::ui::Button&>(baseControl);
 
             BorderRenderer borderRenderer;

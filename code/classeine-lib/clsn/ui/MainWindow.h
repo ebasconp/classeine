@@ -38,6 +38,9 @@ namespace clsn::ui
 
         void processMouseClickEvent(events::MouseClickEvent& e)
         {
+            if (e.getStatus() == MouseClickStatus::released)
+                std::cout << "HI\n";
+
             m_control.processMouseClickEvent(e);
         }
 

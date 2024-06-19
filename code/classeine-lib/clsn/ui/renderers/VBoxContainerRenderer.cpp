@@ -30,13 +30,13 @@ namespace clsn::ui::renderers
             if (!container[i].isVisible())
                 continue;
 
-            Region controlRegion{region.getX(),
-                                 static_cast<int>(i * regionHeight) + region.getY(),
-                                 region.getWidth(),
-                                 static_cast<int>(regionHeight)};
-
             if (container[i].isInvalidated())
             {
+                Region controlRegion{region.getX(),
+                     static_cast<int>(i * regionHeight) + region.getY(),
+                     region.getWidth(),
+                     static_cast<int>(regionHeight)};
+
                 container[i].paint(graphics, controlRegion);
                 container[i].validate();
             }

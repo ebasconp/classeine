@@ -22,6 +22,12 @@ namespace clsn::ui
                 const int controlWidth = getSize().getWidth() / count;
                 const int controlIndex = x / controlWidth;
 
+                if (controlIndex >= count)
+                {
+                    e.consume();
+                    return;
+                }
+
                 auto& control = *(getVisibleControls()[controlIndex]);
                 if (!control.isEnabled())
                     return;

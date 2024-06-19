@@ -25,15 +25,15 @@ namespace clsn::ui::renderers
         const auto regionWidth = region.getWidth() / static_cast<double>(visibleCount);
         for (int i = 0; i < visibleCount; i++)
         {
-            Region controlRegion{
-                static_cast<int>((i * regionWidth) + region.getX()),
-                region.getY(),
-                static_cast<int>(regionWidth),
-                region.getHeight()};
-
             auto& control = *(controls[i]);
             if (control.isInvalidated())
             {
+                Region controlRegion{
+                    static_cast<int>((i * regionWidth) + region.getX()),
+                    region.getY(),
+                    static_cast<int>(regionWidth),
+                    region.getHeight()};
+
                 control.paint(graphics, controlRegion);
                 control.validate();
             }

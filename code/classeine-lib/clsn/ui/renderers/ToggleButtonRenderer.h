@@ -21,7 +21,7 @@ namespace clsn::ui::renderers
     public:
         [[nodiscard]] virtual auto paintAsPressed(const ClickableControl& button) const -> bool
         {
-            return static_cast<const ToggleButton&>(button).isChecked();
+            return static_cast<const ToggleButton&>(button).isChecked() || button.isPressed();
         }
     };
 }

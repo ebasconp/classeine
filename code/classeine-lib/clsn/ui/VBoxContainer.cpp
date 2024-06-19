@@ -22,6 +22,12 @@ namespace clsn::ui
                 const int controlHeight = getSize().getHeight() / count;
                 const int controlIndex = y / controlHeight;
 
+                if (controlIndex >= count)
+                {
+                    e.consume();
+                    return;
+                }
+
                 auto& control = *(getVisibleControls()[controlIndex]);
                 if (!control.isEnabled())
                     return;

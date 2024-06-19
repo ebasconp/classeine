@@ -9,6 +9,9 @@ namespace clsn::ui::renderers
                               const Region& region,
                               const Control& control) const
     {
+        if (!control.isInvalidated())
+            return;
+
         const Color& bc = control.isEnabled()
                               ? control.getBackgroundColor()
                               : UIManager::getInstance().getDefault<Color>(
