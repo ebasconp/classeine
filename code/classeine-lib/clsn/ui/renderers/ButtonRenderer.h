@@ -24,6 +24,11 @@ namespace clsn::ui::renderers
             return button.isPressed();
         }
 
+        void doLayout(Control&) const override
+        {
+            // Do nothing
+        }
+
         void paint(Graphics& graphics,
                    const Region& region,
                    const Control& baseControl) const override

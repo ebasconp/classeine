@@ -38,29 +38,9 @@ namespace clsn::ui
             });
 
         addSizeChangedListener(
-            [this](auto& e)
+            [this](auto& )
             {
                 doLayout();
             });
-    }
-
-    void VBoxContainer::doLayout() noexcept
-    {
-        const auto visibleCount = this->getVisibleCount();
-        if (visibleCount == 0)
-            return;
-
-        const auto width = getSize().getWidth();
-        const auto height = getSize().getHeight() / visibleCount;
-
-        const auto count = this->getCount();
-        for (int i = 0; i < count; i++)
-        {
-            auto& control = (*this)[i];
-            if (!control.isVisible())
-                continue;
-
-            control.setSize({width, height});
-        }
     }
 }

@@ -11,8 +11,6 @@ namespace clsn::ui
     public:
         VBoxContainer();
 
-        void doLayout() noexcept override;
-
     private:
         void initEvents();
     };

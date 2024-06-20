@@ -6,13 +6,11 @@ namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
 
-    class LabelRenderer : public IRenderer
+    class ContainerRenderer : public IRenderer
     {
     public:
         void paint(Graphics& graphics,
                    const Region& region,
-                   const Control& control) const override;
-
-        void doLayout(Control &control) const override;
+                   const Control& baseControl) const override;
     };
 }

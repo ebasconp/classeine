@@ -1,43 +1,34 @@
 #include "HBoxContainerRenderer.h"
 
-#include "clsn/ui/Graphics.h"
 #include "clsn/ui/HBoxContainer.h"
 
 #include "clsn/draw/Region.h"
 
 namespace clsn::ui::renderers
 {
-    void HBoxContainerRenderer::paint(Graphics& graphics,
-                                      const Region& region,
-                                      const Control& baseControl) const
+    void HBoxContainerRenderer::doLayout(Control& baseControl) const
     {
-        auto& container = static_cast<const HBoxContainer&>(baseControl);
+        auto& container = static_cast<HBoxContainer&>(baseControl);
 
-        const auto controls = container.getVisibleControls();
         const auto visibleCount = container.getVisibleCount();
         if (visibleCount == 0)
-        {
-            graphics.setDrawColor(container.getBackgroundColor());
-            graphics.drawFillRectangle(region);
             return;
-        }
 
-        const auto regionWidth = region.getWidth() / static_cast<double>(visibleCount);
-        for (int i = 0; i < visibleCount; i++)
+        const auto width = container.getSize().getWidth() / static_cast<double>(visibleCount);
+        const auto height = container.getSize().getHeight();
+
+        const auto location = container.getLocation();
+
+        const auto count = container.getCount();
+        for (int i = 0, visibleSlot = 0; i < count; i++)
         {
-            auto& control = *(controls[i]);
-            if (control.isInvalidated())
-            {
-                Region controlRegion{
-                    static_cast<int>((i * regionWidth) + region.getX()),
-                    region.getY(),
-                    static_cast<int>(regionWidth),
-                    region.getHeight()};
+            auto& control = container[i];
+            if (!control.isVisible())
+                continue;
 
-                control.paint(graphics, controlRegion);
-                control.validate();
-            }
+            control.setLocation({static_cast<int>((visibleSlot * width) + location.getX()), location.getY()});
+            control.setSize({static_cast<int>(width), height});
+            visibleSlot++;
         }
     }
-
 }

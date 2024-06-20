@@ -1,45 +1,34 @@
 #include "VBoxContainerRenderer.h"
 
-#include "clsn/ui/Graphics.h"
 #include "clsn/ui/VBoxContainer.h"
 
 #include "clsn/draw/Region.h"
 
 namespace clsn::ui::renderers
 {
-    void VBoxContainerRenderer::paint(Graphics& graphics,
-                                      const Region& region,
-                                      const Control& baseControl) const
+    void VBoxContainerRenderer::doLayout(Control& baseControl) const
     {
-        auto& container = static_cast<const VBoxContainer&>(baseControl);
+        auto& container = static_cast<VBoxContainer&>(baseControl);
 
         const auto visibleCount = container.getVisibleCount();
         if (visibleCount == 0)
-        {
-            graphics.setDrawColor(container.getBackgroundColor());
-            graphics.drawFillRectangle(region);
             return;
-        }
 
-        const auto regionHeight =
-            region.getHeight() / static_cast<double>(visibleCount);
+        const auto width = container.getSize().getWidth();
+        const auto height = container.getSize().getHeight() / static_cast<double>(visibleCount);
+
+        const auto location = container.getLocation();
 
         const auto count = container.getCount();
-        for (int i = 0; i < count; i++)
+        for (int i = 0, visibleSlot = 0; i < count; i++)
         {
-            if (!container[i].isVisible())
+            auto& control = container[i];
+            if (!control.isVisible())
                 continue;
 
-            if (container[i].isInvalidated())
-            {
-                Region controlRegion{region.getX(),
-                     static_cast<int>(i * regionHeight) + region.getY(),
-                     region.getWidth(),
-                     static_cast<int>(regionHeight)};
-
-                container[i].paint(graphics, controlRegion);
-                container[i].validate();
-            }
+            control.setLocation({location.getX(), static_cast<int>(visibleSlot * height) + location.getY()});
+            control.setSize({width, static_cast<int>(height)});
+            visibleSlot++;
         }
     }
 }

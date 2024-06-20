@@ -1,16 +1,14 @@
 #pragma once
 
-#include "clsn/ui/IRenderer.h"
+#include "clsn/ui/renderers/ContainerRenderer.h"
 
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
 
-    class VBoxContainerRenderer final : public IRenderer
+    class VBoxContainerRenderer final : public ContainerRenderer
     {
     public:
-        void paint(Graphics& graphics,
-                   const Region& region,
-                   const Control& baseControl) const override;
+        void doLayout(Control& control) const override;
     };
 }

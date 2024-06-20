@@ -9,9 +9,12 @@ namespace clsn::draw
         int m_y;
 
     public:
+        Point();
         Point(int x, int y);
 
-        auto getX() const noexcept -> int;
-        auto getY() const noexcept -> int;
+        [[nodiscard]] auto getX() const noexcept -> int;
+        [[nodiscard]] auto getY() const noexcept -> int;
+
+        auto operator==(const Point& other) const -> bool;
     };
 }

@@ -9,6 +9,7 @@
 
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
+#include "clsn/draw/Point.h"
 
 #include "clsn/core/EntityWrapper.h"
 #include "clsn/core/EventListenerList.h"
@@ -46,6 +47,7 @@ namespace clsn::ui
         CLSN_BOOL_PROPERTY_VAL(Enabled, true, true);
         CLSN_PROPERTY(Font, Font, true);
         CLSN_PROPERTY(ForegroundColor, Color, true);
+        CLSN_PROPERTY(Location, Point, true);
         CLSN_PROPERTY(Size, Dimension, true);
         CLSN_PROPERTY(Text, std::string, true);
         CLSN_BOOL_PROPERTY_VAL(Visible, true, true);
@@ -74,7 +76,8 @@ namespace clsn::ui
 
         void setRenderer(const std::shared_ptr<IRenderer>& renderer);
 
-        virtual void doLayout() noexcept;
+        void doLayout() noexcept;
+
         virtual void invalidate() const noexcept;
         virtual void validate() const noexcept;
         virtual auto isInvalidated() const noexcept -> bool;

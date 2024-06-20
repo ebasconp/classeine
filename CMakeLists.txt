@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.27)
 project(classeine)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # using FindSDL2* files from https://github.com/aminosbh/sdl2-cmake-modules
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../sdl2-cmake-modules")
@@ -14,6 +15,7 @@ include_directories(${SDL2_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS})
 
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_compile_definitions(_CLSN_DEBUG_)
+    add_compile_options(-Wall -Werror -Wunused-parameter -pedantic)
 endif()
 
 add_executable(classeine code/classeine-demo/Main.cpp
@@ -46,6 +48,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2FontCache.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2Helpers.cpp
         code/classeine-lib/clsn/ui/renderers/BorderRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/ContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/HBoxContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/LabelRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/VBoxContainerRenderer.cpp
@@ -53,6 +56,8 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/ToggleControl.cpp
         code/classeine-lib/clsn/ui/ToggleButton.h
         code/classeine-lib/clsn/ui/ToggleButton.cpp
+        code/classeine-lib/clsn/ui/renderers/ContainerRenderer.h
+        code/classeine-lib/clsn/ui/renderers/ContainerRenderer.cpp
 )
 
 target_include_directories(classeine PUBLIC code/classeine-lib)
