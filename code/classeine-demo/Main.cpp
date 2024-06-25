@@ -3,6 +3,7 @@
 #include "clsn/core/Panic.h"
 
 #include "clsn/ui/Button.h"
+#include "clsn/ui/CheckBox.h"
 #include "clsn/ui/HBoxContainer.h"
 #include "clsn/ui/Label.h"
 #include "clsn/ui/MainWindow.h"
@@ -118,7 +119,8 @@ void test()
     auto b3 = c2->makeAndAdd<Button>();
     b3->setText("b3");
 
-    auto b4 = c2->makeAndAdd<Button>();
+    auto b4 = c2->makeAndAdd<CheckBox>();
+    b4->setText("Check me");
 
     auto container = c2->makeAndAdd<VBoxContainer>();
     auto b6 = container->makeAndAdd<Button>();

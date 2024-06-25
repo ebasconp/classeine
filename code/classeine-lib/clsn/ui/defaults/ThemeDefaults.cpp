@@ -18,6 +18,6 @@ namespace clsn::ui::defaults::ThemeDefaults
         defaults.set("Theme", "disabledForegroundColor", Color{0x40, 0x48, 0x4F});
 
         defaults.set(
-            "Theme", "font", Font("Nimbus", FontStyle::REGULAR, 16));
+            "Theme", "font", Font("Nimbus", FontStyle::REGULAR, 14));
     }
 }

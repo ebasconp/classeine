@@ -2,7 +2,11 @@
 
 #include <string_view>
 
+#include "clsn/draw/Dimension.h"
+
 #include "Sdl2FontCache.h"
+
+
 
 struct SDL_Renderer;
 
@@ -31,11 +35,14 @@ namespace clsn::ui::impl::sdl2
         void setDrawColor(const Color& c) const;
 
         void drawLine(const Point& p1, const Point& p2) const;
+        void drawRectangle(const Region& r) const;
         void drawFillRectangle(const Region& r) const;
         void drawText(const Region& r,
                       const Font& f,
                       const Color& c,
                       std::string_view text) const;
+
+        auto getTextSize(const Font& f, std::string_view text) const -> Dimension;
 
         void clear() const;
         void apply() const;

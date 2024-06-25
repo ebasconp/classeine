@@ -1,5 +1,7 @@
 # CHANGELOG #
 
+* 20240625 Added CheckBox rendering
+* 20240624 Starting CheckBox implementation
 * 20240620 Implementing ContainerRenderer base class
 * 20240620 Using doLayout to calculate position and size
 * 20240619 Fixed crash when out of range

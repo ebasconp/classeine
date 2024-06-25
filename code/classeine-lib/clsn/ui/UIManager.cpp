@@ -3,6 +3,7 @@
 #include "clsn/core/Panic.h"
 
 #include "defaults/ButtonDefaults.h"
+#include "defaults/CheckBoxDefaults.h"
 #include "defaults/HBoxContainerDefaults.h"
 #include "defaults/LabelDefaults.h"
 #include "defaults/MainWindowDefaults.h"
@@ -62,6 +63,7 @@ namespace clsn::ui
         defaults::ThemeDefaults::populateDefaults(m_defaults);
 
         defaults::ButtonDefaults::populateDefaults(m_defaults);
+        defaults::CheckBoxDefaults::populateDefaults(m_defaults);
         defaults::HBoxContainerDefaults::populateDefaults(m_defaults);
         defaults::LabelDefaults::populateDefaults(m_defaults);
         defaults::MainWindowDefaults::populateDefaults(m_defaults);
