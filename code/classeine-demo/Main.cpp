@@ -7,6 +7,8 @@
 #include "clsn/ui/HBoxContainer.h"
 #include "clsn/ui/Label.h"
 #include "clsn/ui/MainWindow.h"
+#include "clsn/ui/RadioButton.h"
+#include "clsn/ui/RadioButtonGroup.h"
 #include "clsn/ui/ToggleButton.h"
 #include "clsn/ui/VBoxContainer.h"
 //
@@ -110,17 +112,32 @@ void test()
     c0->setText("Button");
 
     auto c1 = mw().makeAndAdd<Label>();
-    c1->setText("Hello world");
+    c1->setText("Label");
 
     auto c2 = mw().makeAndAdd<HBoxContainer>();
 
     auto b1 = c2->makeAndAdd<Button>();
-    auto b2 = c2->makeAndAdd<Button>();
+    auto b2 = c2->makeAndAdd<VBoxContainer>();
+
+    auto rb1 = b2->makeAndAdd<RadioButton>();
+    rb1->setText("RadioButton 1");
+
+    auto rb2 = b2->makeAndAdd<RadioButton>();
+    rb2->setText("RadioButton 2");
+
+    auto rb3 = b2->makeAndAdd<RadioButton>();
+    rb3->setText("RadioButton 3");
+
+    RadioButtonGroup group;
+    group.add(rb1);
+    group.add(rb2);
+    group.add(rb3);
+
     auto b3 = c2->makeAndAdd<Button>();
     b3->setText("b3");
 
     auto b4 = c2->makeAndAdd<CheckBox>();
-    b4->setText("Check me");
+    b4->setText("CheckBox");
 
     auto container = c2->makeAndAdd<VBoxContainer>();
     auto b6 = container->makeAndAdd<Button>();
@@ -131,7 +148,7 @@ void test()
     auto container2 = c2->makeAndAdd<VBoxContainer>();
     auto b8 = container2->makeAndAdd<Button>();
     auto b9 = container2->makeAndAdd<ToggleButton>();
-    b9->setText("Toggle");
+    b9->setText("ToggleButton");
 
     c0->addActionListener([&b3](auto& )
     {

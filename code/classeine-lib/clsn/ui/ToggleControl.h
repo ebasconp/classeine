@@ -11,7 +11,7 @@ namespace clsn::ui
 
         CLSN_BOOL_PROPERTY_VAL(Checked, true, false);
 
-        void toggle();
+        virtual void toggle();
 
     private:
         void initEvents();

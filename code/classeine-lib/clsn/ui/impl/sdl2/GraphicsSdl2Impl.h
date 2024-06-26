@@ -34,6 +34,7 @@ namespace clsn::ui::impl::sdl2
 
         void setDrawColor(const Color& c) const;
 
+        void drawCircle(const Point& p, int diameter) const;
         void drawLine(const Point& p1, const Point& p2) const;
         void drawRectangle(const Region& r) const;
         void drawFillRectangle(const Region& r) const;

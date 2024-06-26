@@ -8,6 +8,7 @@
 #include "defaults/LabelDefaults.h"
 #include "defaults/MainWindowDefaults.h"
 #include "defaults/ThemeDefaults.h"
+#include "defaults/RadioButtonDefaults.h"
 #include "defaults/ToggleButtonDefaults.h"
 #include "defaults/VBoxContainerDefaults.h"
 
@@ -67,6 +68,7 @@ namespace clsn::ui
         defaults::HBoxContainerDefaults::populateDefaults(m_defaults);
         defaults::LabelDefaults::populateDefaults(m_defaults);
         defaults::MainWindowDefaults::populateDefaults(m_defaults);
+        defaults::RadioButtonDefaults::populateDefaults(m_defaults);
         defaults::ToggleButtonDefaults::populateDefaults(m_defaults);
         defaults::VBoxContainerDefaults::populateDefaults(m_defaults);
     }

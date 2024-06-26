@@ -44,6 +44,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/defaults/LabelDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/MainWindowDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/ThemeDefaults.cpp
+        code/classeine-lib/clsn/ui/defaults/RadioButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/ToggleButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/VBoxContainerDefaults.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.cpp
@@ -54,12 +55,12 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/ContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/HBoxContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/LabelRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/RadioButtonRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/VBoxContainerRenderer.cpp
-        code/classeine-lib/clsn/ui/ToggleControl.h
+        code/classeine-lib/clsn/ui/RadioButton.cpp
+        code/classeine-lib/clsn/ui/RadioButtonGroup.cpp
         code/classeine-lib/clsn/ui/ToggleControl.cpp
-        code/classeine-lib/clsn/ui/ToggleButton.h
         code/classeine-lib/clsn/ui/ToggleButton.cpp
-        code/classeine-lib/clsn/ui/renderers/ContainerRenderer.h
         code/classeine-lib/clsn/ui/renderers/ContainerRenderer.cpp
 )
 

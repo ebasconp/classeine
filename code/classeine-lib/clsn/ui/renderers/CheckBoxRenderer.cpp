@@ -28,7 +28,7 @@ namespace clsn::ui::renderers
         const auto y = mid - 1;
 
         graphics.setDrawColor(Color{0, 0, 255});
-        graphics.drawRectangle({x, mid - 1, size, size});
+        graphics.drawRectangle({x, y, size, size});
 
         const auto backgroundColor = checkBox.isPressed() ? Color{224, 224, 224} : Color{255, 255, 255};
         graphics.setDrawColor(backgroundColor);

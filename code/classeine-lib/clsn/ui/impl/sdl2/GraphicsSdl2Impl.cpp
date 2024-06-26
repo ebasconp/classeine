@@ -81,6 +81,41 @@ namespace clsn::ui::impl::sdl2
         SDL_RenderDrawRect(&m_renderer, &rect);
     }
 
+    void GraphicsSdl2Impl::drawCircle(const Point& p, int diameter) const
+    {
+        // Circle test
+        int circle_x = p.getX() + (diameter / 2);
+        int circle_y = p.getY() + (diameter / 2);
+        int circle_radius = diameter / 2;
+
+        int point_x = 0;
+        int point_y = circle_radius;
+        int decision = 1 - circle_radius;
+
+        while (point_y >= point_x)
+        {
+            // Symmetric points
+            SDL_RenderDrawPoint(&m_renderer, circle_x + point_x, circle_y + point_y);
+            SDL_RenderDrawPoint(&m_renderer, circle_x + point_y, circle_y + point_x);
+            SDL_RenderDrawPoint(&m_renderer, circle_x - point_x, circle_y + point_y);
+            SDL_RenderDrawPoint(&m_renderer, circle_x - point_y, circle_y + point_x);
+            SDL_RenderDrawPoint(&m_renderer, circle_x + point_x, circle_y - point_y);
+            SDL_RenderDrawPoint(&m_renderer, circle_x + point_y, circle_y - point_x);
+            SDL_RenderDrawPoint(&m_renderer, circle_x - point_x, circle_y - point_y);
+            SDL_RenderDrawPoint(&m_renderer, circle_x - point_y, circle_y - point_x);
+
+            point_x++;
+
+            if (decision < 0)
+                decision += 2 * point_x + 1;
+            else
+            {
+                point_y--;
+                decision += 2 * (point_x - point_y) + 1;
+            }
+        }
+    }
+
     void GraphicsSdl2Impl::drawFillRectangle(const Region& r) const
     {
         SDL_Rect rect = Sdl2Helpers::toSDL(r);

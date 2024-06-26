@@ -35,6 +35,7 @@ the creation of rich user interfaces in modern C++.
       * `Button` 
       * `ToggleControl`
         * `CheckBox` 
+        * `RadioButton`
         * `ToggleButton`
     * `Label` 
     * `ListContainer<Constraint>`
