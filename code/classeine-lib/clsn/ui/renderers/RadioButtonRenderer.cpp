@@ -28,20 +28,20 @@ namespace clsn::ui::renderers
         const auto y = mid - 1;
 
         graphics.setDrawColor(Color{0, 0, 255});
-        graphics.drawCircle({x, y}, size);
+        graphics.drawFillCircle({x, y, size, size});
+        graphics.drawFillCircle({x + 1, y + 1, size - 2, size - 2});
 
         const auto backgroundColor = radioButton.isPressed() ? Color{224, 224, 224} : Color{255, 255, 255};
         graphics.setDrawColor(backgroundColor);
-        graphics.drawCircle({x + 1, mid}, size - 2);
 
         Color white{255, 255, 255};
         graphics.setDrawColor(radioButton.isChecked() ? Color{0, 0, 128} : white); // Black color
-        graphics.drawCircle({x + 2, y + 2}, size - 4);
+        graphics.drawFillCircle({x + 2, y + 2, size - 4, size - 4});
 
         graphics.setDrawColor(radioButton.isChecked() ? Color{0, 0, 192} : white); // Black color
-        graphics.drawCircle({x + 3, y + 3}, size - 6);
+        graphics.drawFillCircle({x + 3, y + 3, size - 6, size - 6});
 
-        graphics.setDrawColor(radioButton.isChecked() ? Color{0, 0, 224} : white); // Black color
-        graphics.drawCircle({x + 4, y + 4}, size - 8);
+        graphics.setDrawColor(radioButton.isChecked() ? Color{128, 255, 128} : white); // Black color
+        graphics.drawFillCircle({x + 4, y + 4, size - 8, size - 8});
     }
 }

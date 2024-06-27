@@ -10,8 +10,9 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../sdl2-cmake-modules
 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)
+find_package(SDL2_gfx REQUIRED)
 
-include_directories(${SDL2_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS})
+include_directories(${SDL2_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS} ${SDL2_GFX_INCLUDE_DIRS})
 
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_compile_definitions(_CLSN_DEBUG_)
@@ -66,4 +67,4 @@ add_executable(classeine code/classeine-demo/Main.cpp
 
 target_include_directories(classeine PUBLIC code/classeine-lib)
 
-target_link_libraries(classeine ${SDL2_LIBRARIES} ${SDL2_TTF_LIBRARIES})
+target_link_libraries(classeine ${SDL2_LIBRARIES} ${SDL2_TTF_LIBRARIES} ${SDL2_GFX_LIBRARIES})

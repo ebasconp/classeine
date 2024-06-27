@@ -4,7 +4,6 @@
 
 #include "clsn/ui/UIManager.h"
 
-#include "clsn/draw/Color.h"
 #include "clsn/draw/Font.h"
 #include "clsn/draw/Point.h"
 #include "clsn/draw/Region.h"
@@ -12,6 +11,8 @@
 #include "clsn/core/Panic.h"
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL2_gfxPrimitives.h>
+
 #include <SDL_ttf.h>
 
 namespace
@@ -46,6 +47,7 @@ namespace clsn::ui::impl::sdl2
 
     GraphicsSdl2Impl::GraphicsSdl2Impl(SDL_Renderer& renderer)
     : m_renderer{renderer}
+    , m_drawColor{255, 255, 255}
     {
     }
 
@@ -61,6 +63,8 @@ namespace clsn::ui::impl::sdl2
 
     void GraphicsSdl2Impl::setDrawColor(const Color& c) const
     {
+        m_drawColor = c;
+
         SDL_SetRenderDrawColor(
             &m_renderer, c.getRed(), c.getGreen(), c.getBlue(), c.getAlpha());
     }
@@ -81,39 +85,14 @@ namespace clsn::ui::impl::sdl2
         SDL_RenderDrawRect(&m_renderer, &rect);
     }
 
-    void GraphicsSdl2Impl::drawCircle(const Point& p, int diameter) const
+    void GraphicsSdl2Impl::drawFillCircle(const Region& r) const
     {
-        // Circle test
-        int circle_x = p.getX() + (diameter / 2);
-        int circle_y = p.getY() + (diameter / 2);
-        int circle_radius = diameter / 2;
+        auto cx = static_cast<const short>(r.getX() + r.getWidth() / 2);
+        auto cy = static_cast<const short>(r.getY() + r.getHeight() / 2);
+        auto rx = static_cast<const short>(r.getWidth() / 2);
+        auto ry = static_cast<const short>(r.getHeight() / 2);
 
-        int point_x = 0;
-        int point_y = circle_radius;
-        int decision = 1 - circle_radius;
-
-        while (point_y >= point_x)
-        {
-            // Symmetric points
-            SDL_RenderDrawPoint(&m_renderer, circle_x + point_x, circle_y + point_y);
-            SDL_RenderDrawPoint(&m_renderer, circle_x + point_y, circle_y + point_x);
-            SDL_RenderDrawPoint(&m_renderer, circle_x - point_x, circle_y + point_y);
-            SDL_RenderDrawPoint(&m_renderer, circle_x - point_y, circle_y + point_x);
-            SDL_RenderDrawPoint(&m_renderer, circle_x + point_x, circle_y - point_y);
-            SDL_RenderDrawPoint(&m_renderer, circle_x + point_y, circle_y - point_x);
-            SDL_RenderDrawPoint(&m_renderer, circle_x - point_x, circle_y - point_y);
-            SDL_RenderDrawPoint(&m_renderer, circle_x - point_y, circle_y - point_x);
-
-            point_x++;
-
-            if (decision < 0)
-                decision += 2 * point_x + 1;
-            else
-            {
-                point_y--;
-                decision += 2 * (point_x - point_y) + 1;
-            }
-        }
+        filledEllipseRGBA(&m_renderer, cx, cy, rx, ry, m_drawColor.getRed(), m_drawColor.getGreen(), m_drawColor.getBlue(), 255);
     }
 
     void GraphicsSdl2Impl::drawFillRectangle(const Region& r) const
@@ -146,10 +125,14 @@ namespace clsn::ui::impl::sdl2
         textRect.x = r.getX() + (r.getWidth() - textSize.getWidth()) / 2;
         textRect.y = r.getY() + (r.getHeight() - textSize.getHeight()) / 2;
 
+        auto sdlrect = Sdl2Helpers::toSDL(r);
+        SDL_RenderSetClipRect(&m_renderer, &sdlrect);
+
         SDL_QueryTexture(texture, nullptr, nullptr, &textRect.w, &textRect.h);
 
         SDL_RenderCopy(&m_renderer, texture, nullptr, &textRect);
         SDL_DestroyTexture(texture);
+        SDL_RenderSetClipRect(&m_renderer, nullptr);
     }
 
     auto GraphicsSdl2Impl::getTextSize(const Font& f,

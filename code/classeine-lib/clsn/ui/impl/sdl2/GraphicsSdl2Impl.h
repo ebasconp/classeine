@@ -2,6 +2,7 @@
 
 #include <string_view>
 
+#include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
 
 #include "Sdl2FontCache.h"
@@ -12,7 +13,6 @@ struct SDL_Renderer;
 
 namespace clsn::draw
 {
-    class Color;
     class Font;
     class Point;
     class Region;
@@ -27,6 +27,8 @@ namespace clsn::ui::impl::sdl2
         SDL_Renderer& m_renderer;
         Sdl2FontCache m_fontCache;
 
+        mutable Color m_drawColor;
+
     public:
         explicit GraphicsSdl2Impl(SDL_Renderer& renderer);
         Sdl2FontCache& getFontCache() noexcept;
@@ -34,7 +36,7 @@ namespace clsn::ui::impl::sdl2
 
         void setDrawColor(const Color& c) const;
 
-        void drawCircle(const Point& p, int diameter) const;
+        void drawFillCircle(const Region& r) const;
         void drawLine(const Point& p1, const Point& p2) const;
         void drawRectangle(const Region& r) const;
         void drawFillRectangle(const Region& r) const;

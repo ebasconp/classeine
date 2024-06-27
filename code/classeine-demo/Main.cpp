@@ -124,6 +124,7 @@ void test()
 
     auto rb2 = b2->makeAndAdd<RadioButton>();
     rb2->setText("RadioButton 2");
+    rb2->setEnabled(false);
 
     auto rb3 = b2->makeAndAdd<RadioButton>();
     rb3->setText("RadioButton 3");

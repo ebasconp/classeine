@@ -9,6 +9,7 @@ the creation of rich user interfaces in modern C++.
 * Built on top of the standard library and:
   * SDL2
   * SDL2_ttf
+  * SDL2_gfx
   * https://github.com/aminosbh/sdl2-cmake-modules
 * No exceptions
 

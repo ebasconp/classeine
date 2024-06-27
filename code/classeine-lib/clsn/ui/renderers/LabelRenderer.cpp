@@ -1,5 +1,7 @@
 #include "LabelRenderer.h"
 
+#include "clsn/draw/Region.h"
+
 #include "clsn/ui/Control.h"
 #include "clsn/ui/UIManager.h"
 
@@ -23,6 +25,14 @@ namespace clsn::ui::renderers
                                     "Theme", "disabledBackgroundColor");
         graphics.setDrawColor(bc);
         graphics.drawFillRectangle(region);
+
+        if (!control.isEnabled())
+        {
+            graphics.drawText(region + Point{1, 1},
+                              control.getFont(),
+                              Color{192, 192, 192},
+                              control.getText());
+        }
 
         graphics.drawText(region,
                           control.getFont(),
