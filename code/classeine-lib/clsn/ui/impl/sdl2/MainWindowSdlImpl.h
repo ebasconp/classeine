@@ -124,7 +124,7 @@ namespace clsn::ui::impl::sdl2
     private:
         void repaintAll(GraphicsSdl2Impl& graphics)
         {
-            const Region region{Point{0, 0}, m_parentWindow.getSize()};
+            const Region region{Point{0, 0}, m_parentWindow.getActualSize()};
             m_parentWindow().paint(graphics, region);
             graphics.apply();
         }
@@ -156,9 +156,12 @@ namespace clsn::ui::impl::sdl2
                     case SDL_MOUSEBUTTONDOWN:
                         processMouseClickEvent(event, event.type);
                         break;
+
+                    default:
+                        break;
                 }
 
-                const Region region{Point{0, 0}, m_parentWindow.getSize()};
+                const Region region{Point{0, 0}, m_parentWindow.getActualSize()};
                 m_parentWindow().paint(graphics, region);
                 graphics.apply();
             }
@@ -172,7 +175,7 @@ namespace clsn::ui::impl::sdl2
                     : clsn::ui::events::MouseClickStatus::released;
 
             clsn::ui::events::MouseClickEvent mouseClickEvent{
-                status, e.button.x, e.button.y};
+                status, Point{e.button.x, e.button.y}};
 
             m_parentWindow.processMouseClickEvent(mouseClickEvent);
         }
@@ -182,7 +185,7 @@ namespace clsn::ui::impl::sdl2
             const int newWidth = e.window.data1;
             const int newHeight = e.window.data2;
 
-            m_parentWindow.setSize(Dimension{newWidth, newHeight});
+            m_parentWindow.setActualSize(Dimension{newWidth, newHeight});
         }
     };
 }

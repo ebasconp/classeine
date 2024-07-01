@@ -24,6 +24,9 @@ namespace clsn::draw
         [[nodiscard]] auto getWidth() const noexcept -> int;
         [[nodiscard]] auto getHeight() const noexcept -> int;
 
+        [[nodiscard]] auto containsPoint(const Point& p) const noexcept -> bool;
+
+
         [[nodiscard]] auto operator+(const Point& p) const noexcept -> Region;
         [[nodiscard]] auto operator+(const Dimension& d) const noexcept -> Region;
         [[nodiscard]] auto operator+(const Region& r) const noexcept -> Region;

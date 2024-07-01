@@ -50,14 +50,15 @@ namespace clsn::ui
 
         auto getVisibleCount() const -> int
         {
-            auto count = 0;
-            iterate([&count](auto& c)
+            int count = getCount();
+            int visibleCount = 0;
+            for (int i = 0; i < count; i++)
             {
-               if (c.isVisible())
-                   count++;
-            });
+                if (m_controls[i].first->isVisible())
+                    visibleCount++;
+            }
 
-            return count;
+            return visibleCount;
         }
 
         auto getVisibleControls() const -> std::vector<std::shared_ptr<const Control>>
@@ -91,7 +92,7 @@ namespace clsn::ui
         {
             for (auto& p : m_controls)
             {
-                proc(*(p.first));
+                proc(*(p.first), p.second);
             }
         }
 
@@ -100,7 +101,7 @@ namespace clsn::ui
         {
             for (auto& p : m_controls)
             {
-                proc(*(p.first));
+                proc(*(p.first), p.second);
             }
         }
 

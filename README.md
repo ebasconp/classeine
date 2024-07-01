@@ -42,6 +42,7 @@ the creation of rich user interfaces in modern C++.
     * `ListContainer<Constraint>`
       * `HBoxContainer`
       * `VBoxContainer`
+      * `XYContainer`
     * `UIManager`
     * `Window`
       * `MainWindow`

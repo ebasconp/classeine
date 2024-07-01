@@ -35,10 +35,14 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/Control.cpp
         code/classeine-lib/clsn/ui/HBoxContainer.cpp
         code/classeine-lib/clsn/ui/Label.cpp
+        code/classeine-lib/clsn/ui/RadioButton.cpp
+        code/classeine-lib/clsn/ui/RadioButtonGroup.cpp
         code/classeine-lib/clsn/ui/ToggleButton.cpp
         code/classeine-lib/clsn/ui/ToggleControl.cpp
         code/classeine-lib/clsn/ui/VBoxContainer.cpp
         code/classeine-lib/clsn/ui/Window.cpp
+        code/classeine-lib/clsn/ui/XYContainer.cpp
+
         code/classeine-lib/clsn/ui/defaults/ButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/CheckBoxDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/HBoxContainerDefaults.cpp
@@ -48,21 +52,19 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/defaults/RadioButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/ToggleButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/VBoxContainerDefaults.cpp
+        code/classeine-lib/clsn/ui/defaults/XYContainerDefaults.cpp
+
         code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2FontCache.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2Helpers.cpp
+
         code/classeine-lib/clsn/ui/renderers/BorderRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/CheckBoxRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/ContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/HBoxContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/LabelRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/RadioButtonRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/VBoxContainerRenderer.cpp
-        code/classeine-lib/clsn/ui/RadioButton.cpp
-        code/classeine-lib/clsn/ui/RadioButtonGroup.cpp
-        code/classeine-lib/clsn/ui/ToggleControl.cpp
-        code/classeine-lib/clsn/ui/ToggleButton.cpp
-        code/classeine-lib/clsn/ui/renderers/ContainerRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/XYContainerRenderer.cpp
 )
 
 target_include_directories(classeine PUBLIC code/classeine-lib)

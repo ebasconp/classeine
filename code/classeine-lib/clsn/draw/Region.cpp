@@ -40,4 +40,13 @@ namespace clsn::draw
                 getWidth() + r.getWidth(),
                 getHeight() + r.getHeight()};
     }
+
+    auto Region::containsPoint(const Point& p) const noexcept -> bool
+    {
+        auto px = p.getX();
+        auto py = p.getY();
+
+        return px > getX() && px < getX() + getWidth()
+            && py > getY() && py < getY() + getHeight();
+    }
 }

@@ -104,4 +104,9 @@ namespace clsn::ui
     {
         return m_parentWindow;
     }
+
+    auto Control::containsPoint(const Point& point) const -> bool
+    {
+        return Region{m_ActualPosition.get(), m_ActualSize.get()}.containsPoint(point);
+    }
 }

@@ -17,7 +17,7 @@ namespace clsn::ui
         auto& dimension = UIManager::getInstance().getDefault(
             getDefaultSectionName(), "size", Dimension{300, 200});
 
-        setSize(dimension);
+        setActualSize(dimension);
     }
 
     void Window::initVisibility()

@@ -11,10 +11,8 @@
 #include "clsn/ui/RadioButtonGroup.h"
 #include "clsn/ui/ToggleButton.h"
 #include "clsn/ui/VBoxContainer.h"
-//
-//#include "clsn/core/EventListenerList.h"
-//#include "clsn/core/Property.h"
-//#include "clsn/core/ValueChangedEvent.h"
+#include "clsn/ui/XYContainer.h"
+
 
 #include "clsn/ui/renderers/NullRenderer.h"
 
@@ -106,7 +104,7 @@ void test()
 //                          });
 
     MainWindow<VBoxContainer> mw;
-    mw.setSize({1000, 400});
+    mw.setSize({1000, 400}); //ETOTODO
 
     auto c0 = mw().makeAndAdd<Button>();
     c0->setText("Button");
@@ -156,6 +154,14 @@ void test()
         b3->setVisible(!b3->isVisible());
         std::cout << "B3 visible: " << b3->isVisible() << std::endl;
     });
+
+    auto xy =  mw().makeAndAdd<XYContainer>();
+
+    auto b1xy = xy->makeAndAdd<Button>(Region{10, 10, 80, 24});
+    b1xy->setText("Button 1");
+
+    auto b2xy = xy->makeAndAdd<Button>(Region{200, 10, 80, 24});
+    b2xy->setText("Button 2");
 
     mw.setVisible(true);
 

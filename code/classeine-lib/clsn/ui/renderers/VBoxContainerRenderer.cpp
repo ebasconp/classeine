@@ -1,9 +1,5 @@
 #include "VBoxContainerRenderer.h"
 
-#include "clsn/ui/VBoxContainer.h"
-
-#include "clsn/draw/Region.h"
-
 namespace clsn::ui::renderers
 {
     void VBoxContainerRenderer::doLayout(Control& baseControl) const
@@ -14,10 +10,11 @@ namespace clsn::ui::renderers
         if (visibleCount == 0)
             return;
 
-        const auto width = container.getSize().getWidth();
-        const auto height = container.getSize().getHeight() / static_cast<double>(visibleCount);
+        const auto width = container.getActualSize().getWidth();
+        const auto height = container.getActualSize().getHeight() /
+                            static_cast<double>(visibleCount);
 
-        const auto location = container.getLocation();
+        const auto position = container.getActualPosition();
 
         const auto count = container.getCount();
         for (int i = 0, visibleSlot = 0; i < count; i++)
@@ -26,8 +23,10 @@ namespace clsn::ui::renderers
             if (!control.isVisible())
                 continue;
 
-            control.setLocation({location.getX(), static_cast<int>(visibleSlot * height) + location.getY()});
-            control.setSize({width, static_cast<int>(height)});
+            control.setActualPosition(
+                {position.getX(),
+                 static_cast<int>(visibleSlot * height) + position.getY()});
+            control.setActualSize({width, static_cast<int>(height)});
             visibleSlot++;
         }
     }

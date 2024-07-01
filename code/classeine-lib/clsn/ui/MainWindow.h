@@ -46,7 +46,7 @@ namespace clsn::ui
         {
             auto& dimension = UIManager::getInstance().getDefault(
                 "MainWindow", "size", Dimension{300, 200});
-            m_control.setSize(dimension);
+            m_control.setActualSize(dimension);
         }
 
         void initVisibility()
@@ -67,13 +67,19 @@ namespace clsn::ui
 
         void initSize()
         {
-            addSizeChangedListener(
-                [this](const clsn::core::ValueChangedEvent<Dimension>& e)
-                {
-                    auto& newValue = e.getNewValue();
-                    m_control.setSize(newValue);
-                    m_control.invalidate();
-                });
+            addSizeChangedListener([this](auto& e)
+            {
+                auto& newValue = e.getNewValue();
+                m_control.setActualSize(newValue);
+                m_control.invalidate();
+            });
+
+            addActualSizeChangedListener([this](auto& e)
+            {
+                auto& newValue = e.getNewValue();
+                m_control.setActualSize(newValue);
+                m_control.invalidate();
+            });
         }
     };
 }

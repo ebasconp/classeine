@@ -21,10 +21,10 @@ namespace clsn::ui::renderers
 
         auto textSize = graphics.getTextSize(checkBox.getFont(), checkBox.getText());
 
-        const auto mid = checkBox.getLocation().getY() + (region.getHeight() - textSize.getHeight()) / 2;
+        const auto mid = checkBox.getActualPosition().getY() + (region.getHeight() - textSize.getHeight()) / 2;
         const auto size = textSize.getHeight();
 
-        const auto x = 8 + checkBox.getLocation().getX();
+        const auto x = 8 + checkBox.getActualPosition().getX();
         const auto y = mid - 1;
 
         graphics.setDrawColor(Color{0, 0, 255});

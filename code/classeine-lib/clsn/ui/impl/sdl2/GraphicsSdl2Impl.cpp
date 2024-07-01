@@ -133,6 +133,7 @@ namespace clsn::ui::impl::sdl2
         SDL_RenderCopy(&m_renderer, texture, nullptr, &textRect);
         SDL_DestroyTexture(texture);
         SDL_RenderSetClipRect(&m_renderer, nullptr);
+
     }
 
     auto GraphicsSdl2Impl::getTextSize(const Font& f,

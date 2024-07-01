@@ -21,10 +21,10 @@ namespace clsn::ui::renderers
 
         auto textSize = graphics.getTextSize(radioButton.getFont(), radioButton.getText());
 
-        const auto mid = radioButton.getLocation().getY() + (region.getHeight() - textSize.getHeight()) / 2;
+        const auto mid = radioButton.getActualPosition().getY() + (region.getHeight() - textSize.getHeight()) / 2;
         const auto size = textSize.getHeight();
 
-        const auto x = 8 + radioButton.getLocation().getX();
+        const auto x = 8 + radioButton.getActualPosition().getX();
         const auto y = mid - 1;
 
         graphics.setDrawColor(Color{0, 0, 255});

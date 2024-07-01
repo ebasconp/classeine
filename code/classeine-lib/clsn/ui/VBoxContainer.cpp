@@ -17,9 +17,9 @@ namespace clsn::ui
                 if (count == 0)
                     return;
 
-                const auto y = e.getY();
+                const auto y = e.getPoint().getY();
 
-                const int controlHeight = getSize().getHeight() / count;
+                const int controlHeight = getActualSize().getHeight() / count;
                 const int controlIndex = y / controlHeight;
 
                 if (controlIndex >= count)
@@ -33,11 +33,11 @@ namespace clsn::ui
                     return;
 
                 clsn::ui::events::MouseClickEvent mce{
-                    e.getStatus(), e.getX(), y % controlHeight};
+                    e.getStatus(), Point{e.getPoint().getX(), y % controlHeight}};
                 control.processMouseClickEvent(mce);
             });
 
-        addSizeChangedListener(
+        addActualSizeChangedListener(
             [this](auto& )
             {
                 doLayout();

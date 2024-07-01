@@ -10,6 +10,7 @@
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
 #include "clsn/draw/Point.h"
+#include "clsn/draw/Region.h"
 
 #include "clsn/core/EntityWrapper.h"
 #include "clsn/core/EventListenerList.h"
@@ -43,12 +44,12 @@ namespace clsn::ui
     public:
         explicit Control(std::string_view sectionName);
 
+        CLSN_PROPERTY(ActualPosition, Point, true);
+        CLSN_PROPERTY(ActualSize, Dimension, true);
         CLSN_PROPERTY(BackgroundColor, Color, true);
         CLSN_BOOL_PROPERTY_VAL(Enabled, true, true);
         CLSN_PROPERTY(Font, Font, true);
         CLSN_PROPERTY(ForegroundColor, Color, true);
-        CLSN_PROPERTY(Location, Point, true);
-        CLSN_PROPERTY(Size, Dimension, true);
         CLSN_PROPERTY(Text, std::string, true);
         CLSN_BOOL_PROPERTY_VAL(Visible, true, true);
 
@@ -87,6 +88,11 @@ namespace clsn::ui
         void setParentWindow(std::optional<std::reference_wrapper<Window>>);
         auto getParentWindow() -> std::optional<std::reference_wrapper<Window>>;
         auto getParentWindow() const -> std::optional<std::reference_wrapper<const Window>>;
+
+        void setBounds(const Region& bounds);
+        auto getBounds() const -> Region;
+
+        auto containsPoint(const Point& point) const -> bool;
 
         template <typename Proc>
         void invokeInParentWindow(Proc proc)
