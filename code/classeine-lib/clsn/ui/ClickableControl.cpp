@@ -33,29 +33,29 @@ namespace clsn::ui
 
     void ClickableControl::initEvents()
     {
-        addMouseClickListener(
-            [this](auto& e)
-            {
-                auto pressedNow = e.getStatus() ==
-                                  clsn::ui::events::MouseClickStatus::pressed;
-
-                m_pressed = pressedNow;
-                this->invalidate();
-
-                if (!m_pressed) // Button has been released, then Action
-                {
-                    EmptyEvent actionEvent;
-                    notifyActionEvent(actionEvent);
-                }
-                else
-                {
-                    invokeInParentWindow([this](auto& parentWindow)
-                    {
-                        parentWindow.grabMouse(*this);
-                    });
-                }
-            });
-
         addTextChangedListener([this](auto&) { invalidate(); });
+    }
+
+    void ClickableControl::processMouseClickEvent(events::MouseClickEvent& e)
+    {
+        auto pressedNow = e.getStatus() == clsn::ui::events::MouseClickStatus::pressed;
+
+        m_pressed = pressedNow;
+        this->invalidate();
+
+        if (!m_pressed) // Button has been released, then Action
+        {
+            EmptyEvent actionEvent;
+            notifyActionEvent(actionEvent);
+        }
+        else
+        {
+            invokeInParentWindow([this](auto& parentWindow)
+            {
+                parentWindow.grabMouse(*this);
+            });
+        }
+
+        Control::processMouseClickEvent(e);
     }
 }

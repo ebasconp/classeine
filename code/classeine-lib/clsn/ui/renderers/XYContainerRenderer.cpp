@@ -27,7 +27,7 @@ namespace clsn::ui::renderers
                                   const Region& region,
                                   const Control& baseControl) const
     {
-        graphics.setDrawColor(baseControl.getBackgroundColor());
+        graphics.setDrawColor(Color{0xFFFF00});
         graphics.drawFillRectangle(region);
 
         ContainerRenderer::paint(graphics, region, baseControl);

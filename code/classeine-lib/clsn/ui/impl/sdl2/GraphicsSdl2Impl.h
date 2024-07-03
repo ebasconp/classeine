@@ -29,6 +29,8 @@ namespace clsn::ui::impl::sdl2
 
         mutable Color m_drawColor;
 
+        mutable bool m_needToApply;
+
     public:
         explicit GraphicsSdl2Impl(SDL_Renderer& renderer);
         Sdl2FontCache& getFontCache() noexcept;

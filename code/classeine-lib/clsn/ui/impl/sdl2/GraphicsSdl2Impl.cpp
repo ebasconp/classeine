@@ -48,6 +48,7 @@ namespace clsn::ui::impl::sdl2
     GraphicsSdl2Impl::GraphicsSdl2Impl(SDL_Renderer& renderer)
     : m_renderer{renderer}
     , m_drawColor{255, 255, 255}
+    , m_needToApply{false}
     {
     }
 
@@ -69,20 +70,34 @@ namespace clsn::ui::impl::sdl2
             &m_renderer, c.getRed(), c.getGreen(), c.getBlue(), c.getAlpha());
     }
 
-    void GraphicsSdl2Impl::clear() const { SDL_RenderClear(&m_renderer); }
+    void GraphicsSdl2Impl::clear() const
+    {
+        SDL_RenderClear(&m_renderer);
+    }
 
-    void GraphicsSdl2Impl::apply() const { SDL_RenderPresent(&m_renderer); }
+    void GraphicsSdl2Impl::apply() const
+    {
+        if (m_needToApply)
+        {
+            SDL_RenderPresent(&m_renderer);
+            m_needToApply = false;
+        }
+    }
 
     void GraphicsSdl2Impl::drawLine(const Point& p1, const Point& p2) const
     {
         SDL_RenderDrawLine(
             &m_renderer, p1.getX(), p1.getY(), p2.getX(), p2.getY());
+
+        m_needToApply = true;
     }
 
     void GraphicsSdl2Impl::drawRectangle(const Region& r) const
     {
         SDL_Rect rect = Sdl2Helpers::toSDL(r);
         SDL_RenderDrawRect(&m_renderer, &rect);
+
+        m_needToApply = true;
     }
 
     void GraphicsSdl2Impl::drawFillCircle(const Region& r) const
@@ -93,12 +108,16 @@ namespace clsn::ui::impl::sdl2
         auto ry = static_cast<const short>(r.getHeight() / 2);
 
         filledEllipseRGBA(&m_renderer, cx, cy, rx, ry, m_drawColor.getRed(), m_drawColor.getGreen(), m_drawColor.getBlue(), 255);
+
+        m_needToApply = true;
     }
 
     void GraphicsSdl2Impl::drawFillRectangle(const Region& r) const
     {
         SDL_Rect rect = Sdl2Helpers::toSDL(r);
         SDL_RenderFillRect(&m_renderer, &rect);
+
+        m_needToApply = true;
     }
 
     void GraphicsSdl2Impl::drawText(const Region& r,
@@ -134,6 +153,7 @@ namespace clsn::ui::impl::sdl2
         SDL_DestroyTexture(texture);
         SDL_RenderSetClipRect(&m_renderer, nullptr);
 
+        m_needToApply = true;
     }
 
     auto GraphicsSdl2Impl::getTextSize(const Font& f,

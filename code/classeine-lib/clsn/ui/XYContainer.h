@@ -11,6 +11,8 @@ namespace clsn::ui
     class XYContainer : public ListContainer<Region>
     {
     public:
+        using BaseContainer = ListContainer<Region>;
+
         XYContainer();
 
     private:

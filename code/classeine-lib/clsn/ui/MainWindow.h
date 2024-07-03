@@ -38,7 +38,7 @@ namespace clsn::ui
 
         void processMouseClickEvent(events::MouseClickEvent& e)
         {
-            m_control.processMouseClickEvent(e);
+            m_control.notifyMouseClickEvent(e);
         }
 
     private:

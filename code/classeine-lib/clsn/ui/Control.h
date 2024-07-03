@@ -54,8 +54,9 @@ namespace clsn::ui
         CLSN_BOOL_PROPERTY_VAL(Visible, true, true);
 
         void addMouseClickListener(EventListener<MouseClickEvent> event);
+        void notifyMouseClickEvent(MouseClickEvent& e);
+
         void paint(Graphics& graphics, const Region& region) const;
-        void processMouseClickEvent(events::MouseClickEvent& e);
 
         auto getDefaultSectionName() const -> std::string_view;
 
@@ -102,6 +103,9 @@ namespace clsn::ui
 
             proc(m_parentWindow.value().get());
         }
+
+    protected:
+        virtual void processMouseClickEvent(events::MouseClickEvent& e);
 
     private:
         void initEvents();

@@ -22,6 +22,9 @@ namespace clsn::ui
 
         void releaseMouse() override;
 
+    protected:
+        void processMouseClickEvent(events::MouseClickEvent& e) override;
+
     private:
         void initEvents();
     };

@@ -38,6 +38,11 @@ namespace clsn::ui
         m_renderer->paint(graphics, region, *this);
     }
 
+    void Control::notifyMouseClickEvent(MouseClickEvent& e)
+    {
+        processMouseClickEvent(e);
+    }
+
     void Control::processMouseClickEvent(events::MouseClickEvent& e)
     {
         if (e.getStatus() == MouseClickStatus::released)

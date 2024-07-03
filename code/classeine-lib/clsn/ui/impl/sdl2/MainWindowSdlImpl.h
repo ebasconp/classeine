@@ -154,7 +154,7 @@ namespace clsn::ui::impl::sdl2
 
                     case SDL_MOUSEBUTTONUP:
                     case SDL_MOUSEBUTTONDOWN:
-                        processMouseClickEvent(event, event.type);
+                        triggerMouseClickEvent(event, event.type);
                         break;
 
                     default:
@@ -167,7 +167,7 @@ namespace clsn::ui::impl::sdl2
             }
         }
 
-        void processMouseClickEvent(SDL_Event& e, Uint32 type)
+        void triggerMouseClickEvent(SDL_Event& e, Uint32 type)
         {
             const auto status =
                 type == SDL_MOUSEBUTTONDOWN

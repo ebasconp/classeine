@@ -32,22 +32,6 @@ namespace clsn::ui
             return static_cast<int>(m_controls.size());
         }
 
-        auto getVisibleControls() -> std::vector<std::shared_ptr<Control>>
-        {
-            std::vector<std::shared_ptr<Control>> controls;
-
-            for (auto& c : m_controls)
-            {
-                auto& control = c.first;
-                if (!control->isVisible())
-                    continue;
-
-                controls.push_back(control);
-            }
-
-            return controls;
-        }
-
         auto getVisibleCount() const -> int
         {
             int count = getCount();
@@ -127,6 +111,25 @@ namespace clsn::ui
                     return true;
 
             return false;
+        }
+
+    protected:
+        void processMouseClickEvent(events::MouseClickEvent& e) override
+        {
+            const auto count = getCount();
+            for (int i = 0; i < count; i++)
+            {
+                auto& control = (*this)[i];
+                if (!control.isVisible())
+                    continue;
+
+                if (control.containsPoint(e.getPoint()))
+                {
+                    control.notifyMouseClickEvent(e);
+                }
+            }
+
+            Control::processMouseClickEvent(e);
         }
 
     private:
