@@ -122,11 +122,10 @@ namespace clsn::ui::impl::sdl2
 
     void GraphicsSdl2Impl::drawText(const Region& r,
                                     const Font& font,
-                                    const Color& color,
                                     std::string_view text) const
     {
         auto ttfFont = getFontFromCache(font, m_fontCache);
-        SDL_Color textColor = Sdl2Helpers::toSDL(color);
+        SDL_Color textColor = Sdl2Helpers::toSDL(m_drawColor);
 
         SDL_Surface* surface =
             TTF_RenderText_Blended(ttfFont, text.data(), textColor);

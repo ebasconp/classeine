@@ -44,7 +44,6 @@ namespace clsn::ui::impl::sdl2
         void drawFillRectangle(const Region& r) const;
         void drawText(const Region& r,
                       const Font& f,
-                      const Color& c,
                       std::string_view text) const;
 
         auto getTextSize(const Font& f, std::string_view text) const -> Dimension;

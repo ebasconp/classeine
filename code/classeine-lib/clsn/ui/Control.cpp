@@ -45,6 +45,9 @@ namespace clsn::ui
 
     void Control::processMouseClickEvent(events::MouseClickEvent& e)
     {
+        if (!isEnabled())
+            return;
+
         if (e.getStatus() == MouseClickStatus::released)
         {
             invokeInParentWindow([](auto& w) { w.releaseMouse(); });

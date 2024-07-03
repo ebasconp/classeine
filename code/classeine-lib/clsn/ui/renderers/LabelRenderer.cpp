@@ -28,18 +28,20 @@ namespace clsn::ui::renderers
 
         if (!control.isEnabled())
         {
+            graphics.setDrawColor({192, 192, 192});
             graphics.drawText(region + Point{1, 1},
                               control.getFont(),
-                              Color{192, 192, 192},
                               control.getText());
         }
 
-        graphics.drawText(region,
-                          control.getFont(),
-                          control.isEnabled()
+        graphics.setDrawColor(control.isEnabled()
                               ? control.getForegroundColor()
                               : UIManager::getInstance().getDefault<Color>(
-                                    "Theme", "disabledForegroundColor"),
+                                    "Theme", "disabledForegroundColor")
+                          );
+
+        graphics.drawText(region,
+                          control.getFont(),
                           control.getText());
     }
 }

@@ -10,11 +10,12 @@ namespace clsn::ui
         using ControlAndConstraint = std::pair<std::shared_ptr<Control>, Constraint>;
 
         std::vector<ControlAndConstraint> m_controls;
+        mutable bool m_needsToPaintTheContainer;
 
     public:
         explicit ListContainer(std::string_view sectionName)
         : Control{sectionName}
-        {
+        , m_needsToPaintTheContainer{false}        {
         }
 
         template <typename ControlType, typename... Args>
@@ -91,6 +92,8 @@ namespace clsn::ui
 
         void invalidate() const noexcept override
         {
+            m_needsToPaintTheContainer = true;
+
             int count = getCount();
             for (int i = 0; i < count; i++)
                 m_controls[i].first->invalidate();
@@ -98,9 +101,16 @@ namespace clsn::ui
 
         void validate() const noexcept override
         {
+            m_needsToPaintTheContainer = false;
+
             int count = getCount();
             for (int i = 0; i < count; i++)
                 m_controls[i].first->validate();
+        }
+
+        auto needsToPaintTheContainer() const noexcept -> bool
+        {
+            return m_needsToPaintTheContainer;
         }
 
         auto isInvalidated() const noexcept -> bool override
@@ -120,7 +130,7 @@ namespace clsn::ui
             for (int i = 0; i < count; i++)
             {
                 auto& control = (*this)[i];
-                if (!control.isVisible())
+                if (!control.isVisible() || !control.isEnabled())
                     continue;
 
                 if (control.containsPoint(e.getPoint()))

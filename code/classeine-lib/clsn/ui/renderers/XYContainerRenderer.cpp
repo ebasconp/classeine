@@ -1,6 +1,5 @@
 #include "XYContainerRenderer.h"
 
-
 namespace clsn::ui::renderers
 {
     void XYContainerRenderer::doLayout(Control& baseControl) const
@@ -27,8 +26,13 @@ namespace clsn::ui::renderers
                                   const Region& region,
                                   const Control& baseControl) const
     {
-        graphics.setDrawColor(Color{0xFFFF00});
-        graphics.drawFillRectangle(region);
+        auto& container = static_cast<const XYContainer&>(baseControl);
+
+        if (container.needsToPaintTheContainer())
+        {
+            graphics.setDrawColor(baseControl.getBackgroundColor());
+            graphics.drawFillRectangle(region);
+        }
 
         ContainerRenderer::paint(graphics, region, baseControl);
     }
