@@ -4,12 +4,12 @@
 
 namespace clsn::draw::Colors
 {
-    static Color RED{0xFF0000};
-    static Color GREEN{0x00FF00};
-    static Color BLUE{0x0000FF};
-    static Color YELLOW{0xFFFF00};
-    static Color PURPLE{0xFF00FF};
-    static Color CYAN{0x00FFFF};
-    static Color WHITE(0xFFFFFF);
-    static Color BLACK(0x000000);
+    [[nodiscard]] auto makeRed() -> clsn::draw::Color;
+    [[nodiscard]] auto makeGreen() -> clsn::draw::Color;
+    [[nodiscard]] auto makeBlue() -> clsn::draw::Color;
+    [[nodiscard]] auto makeWhite() -> clsn::draw::Color;
+    [[nodiscard]] auto makeBlack() -> clsn::draw::Color;
+    [[nodiscard]] auto makeYellow() -> clsn::draw::Color;
+    [[nodiscard]] auto makePurple() -> clsn::draw::Color;
+    [[nodiscard]] auto makeCyan() -> clsn::draw::Color;
 }

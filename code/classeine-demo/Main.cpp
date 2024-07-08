@@ -137,6 +137,7 @@ void test()
 
     auto b4 = c2->makeAndAdd<CheckBox>();
     b4->setText("CheckBox");
+    b4->setEnabled(false);
 
     auto container = c2->makeAndAdd<VBoxContainer>();
     auto b6 = container->makeAndAdd<Button>();

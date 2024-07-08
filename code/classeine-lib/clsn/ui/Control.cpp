@@ -22,10 +22,10 @@ namespace clsn::ui
                 .get();
 
         setBackgroundColor(
-            uiManager.getDefault(sectionName, "backgroundColor", Colors::RED));
+            uiManager.getDefault(sectionName, "controlBackgroundColor", clsn::draw::Colors::makeRed()));
 
         setForegroundColor(uiManager.getDefault(
-            sectionName, "foregroundColor", Colors::WHITE));
+            sectionName, "controlForegroundColor", Colors::makeWhite()));
 
         setFont(uiManager.getDefault(sectionName, "font", Font{}));
 

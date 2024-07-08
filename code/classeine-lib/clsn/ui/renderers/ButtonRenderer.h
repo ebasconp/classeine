@@ -51,7 +51,7 @@ namespace clsn::ui::renderers
 
             const bool pressed = paintAsPressed(control);
 
-            borderRenderer.drawBeveledBorder(
+            borderRenderer.drawFlatBorder(
                 graphics, region, bevelUp, bevelDown, depth, !pressed);
 
             constexpr int depth2 = depth * 2;

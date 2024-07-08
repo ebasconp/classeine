@@ -21,5 +21,12 @@ namespace clsn::ui::renderers
                                const Color& b,
                                int depth,
                                bool up);
+
+        static void drawFlatBorder(Graphics& gr,
+                       const Region& region,
+                       const Color& a,
+                       const Color& b,
+                       int depth,
+                       bool up);
     };
 }

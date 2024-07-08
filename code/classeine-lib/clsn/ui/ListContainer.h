@@ -1,5 +1,7 @@
 #pragma once
 
+#include "clsn/draw/Colors.h"
+
 #include "Control.h"
 
 namespace clsn::ui
@@ -7,7 +9,8 @@ namespace clsn::ui
     template <typename Constraint>
     class ListContainer : public Control
     {
-        using ControlAndConstraint = std::pair<std::shared_ptr<Control>, Constraint>;
+        using ControlAndConstraint =
+            std::pair<std::shared_ptr<Control>, Constraint>;
 
         std::vector<ControlAndConstraint> m_controls;
         mutable bool m_needsToPaintTheContainer;
@@ -15,7 +18,15 @@ namespace clsn::ui
     public:
         explicit ListContainer(std::string_view sectionName)
         : Control{sectionName}
-        , m_needsToPaintTheContainer{false}        {
+        , m_needsToPaintTheContainer{false}
+        {
+            auto& uiManager = clsn::ui::UIManager::getInstance();
+
+            setBackgroundColor(uiManager.getDefault(
+                sectionName, "containerBackgroundColor", Colors::makeRed()));
+
+            setForegroundColor(uiManager.getDefault(
+                sectionName, "containerForegroundColor", Colors::makeWhite()));
         }
 
         template <typename ControlType, typename... Args>
@@ -23,7 +34,8 @@ namespace clsn::ui
         {
             auto ptr = std::make_shared<ControlType>();
             ptr->setParentWindow(getParentWindow());
-            m_controls.emplace_back(ptr, Constraint{std::forward<Args>(args)...});
+            m_controls.emplace_back(ptr,
+                                    Constraint{std::forward<Args>(args)...});
             initEvents(*ptr);
             return ptr;
         }
@@ -46,7 +58,8 @@ namespace clsn::ui
             return visibleCount;
         }
 
-        auto getVisibleControls() const -> std::vector<std::shared_ptr<const Control>>
+        auto getVisibleControls() const
+            -> std::vector<std::shared_ptr<const Control>>
         {
             std::vector<std::shared_ptr<const Control>> controls;
 
@@ -62,10 +75,7 @@ namespace clsn::ui
             return controls;
         }
 
-        auto& operator[](int index)
-        {
-            return *(m_controls[index].first);
-        }
+        auto& operator[](int index) { return *(m_controls[index].first); }
 
         const auto& operator[](int index) const noexcept
         {
@@ -145,11 +155,22 @@ namespace clsn::ui
     private:
         void initEvents(Control& control)
         {
-            control.addVisibleChangedListener([this](auto&)
+            addEnabledChangedListener([this](auto& e)
             {
-                doLayout();
-                invalidate();
+                const auto count = getCount();
+                for (int i = 0; i < count; i++)
+                {
+                    auto& control = (*this)[i];
+                    control.setEnabled(e.getNewValue());
+                }
             });
+
+            control.addVisibleChangedListener(
+                [this](auto&)
+                {
+                    doLayout();
+                    invalidate();
+                });
         }
     };
 }

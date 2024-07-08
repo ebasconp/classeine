@@ -22,12 +22,15 @@ endif()
 add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/core/Entity.cpp
         code/classeine-lib/clsn/core/Panic.cpp
+
         code/classeine-lib/clsn/draw/Color.cpp
+        code/classeine-lib/clsn/draw/Colors.cpp
         code/classeine-lib/clsn/draw/Dimension.cpp
         code/classeine-lib/clsn/draw/Font.cpp
         code/classeine-lib/clsn/draw/FontInfo.cpp
         code/classeine-lib/clsn/draw/Point.cpp
         code/classeine-lib/clsn/draw/Region.cpp
+
         code/classeine-lib/clsn/ui/UIManager.cpp
         code/classeine-lib/clsn/ui/Button.cpp
         code/classeine-lib/clsn/ui/CheckBox.cpp
