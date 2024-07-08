@@ -19,13 +19,6 @@ namespace clsn::ui::renderers
         if (!control.isInvalidated())
             return;
 
-        const Color& bc = control.isEnabled()
-                              ? control.getBackgroundColor()
-                              : UIManager::getInstance().getDefault<Color>(
-                                    "Theme", "disabledBackgroundColor");
-        graphics.setDrawColor(bc);
-        graphics.drawFillRectangle(region);
-
         if (!control.isEnabled())
         {
             graphics.setDrawColor({192, 192, 192});

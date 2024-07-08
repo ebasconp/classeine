@@ -17,6 +17,15 @@ namespace clsn::ui::renderers
     {
         auto& radioButton = static_cast<const RadioButton&>(baseControl);
 
+        auto sectionName = radioButton.getDefaultSectionName();
+
+        auto buttonColor = radioButton.isPressed()
+            ? Color{192, 192, 192}
+        : UIManager::getInstance().getDefault<Color>(sectionName, "controlBackgroundColor");
+
+        graphics.setDrawColor(buttonColor);
+        graphics.drawFillRectangle(region);
+
         m_labelRenderer.paint(graphics, region, radioButton);
 
         auto textSize = graphics.getTextSize(radioButton.getFont(), radioButton.getText());

@@ -61,6 +61,12 @@ namespace clsn::ui::renderers
                                    region.getWidth() - depth2,
                                    region.getHeight() - depth2};
 
+            auto buttonColor = pressed
+                ? Color{192, 192, 192}
+                : UIManager::getInstance().getDefault<Color>(sectionName, "controlBackgroundColor");
+
+            graphics.setDrawColor(buttonColor);
+            graphics.drawFillRectangle(innerRect);
             if (pressed)
             {
                 const Region innerRectShifted{innerRect.getX() + depth,

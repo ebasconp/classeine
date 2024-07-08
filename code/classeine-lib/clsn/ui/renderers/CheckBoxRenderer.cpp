@@ -16,6 +16,14 @@ namespace clsn::ui::renderers
                    const Control& baseControl) const
     {
         auto& checkBox = static_cast<const CheckBox&>(baseControl);
+        auto sectionName = checkBox.getDefaultSectionName();
+
+        auto buttonColor = checkBox.isPressed()
+            ? Color{192, 192, 192}
+            : UIManager::getInstance().getDefault<Color>(sectionName, "controlBackgroundColor");
+
+        graphics.setDrawColor(buttonColor);
+        graphics.drawFillRectangle(region);
 
         m_labelRenderer.paint(graphics, region, checkBox);
 
