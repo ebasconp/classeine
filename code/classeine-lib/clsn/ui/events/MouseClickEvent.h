@@ -6,6 +6,8 @@
 
 namespace clsn::ui::events
 {
+    using namespace clsn::draw;
+
     enum class MouseClickStatus
     {
         released,

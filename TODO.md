@@ -1,7 +1,9 @@
 # TODO #
 
 * XY anchors
-* Improve default look and feel
+* Improve Skin support
+* Add Themes
+* Create Dark theme
 * Add hover support
 * Add button hover rendering
 * Add support for Light/Dark themes
@@ -11,8 +13,7 @@
 * Set disabled controls Black&White
 * Focus management
 * HiDPI drawing support
-* Make UIManager defaults easier to extend to create new sets of defaults.
-* Make skinnable defaults
+* Make UIManager defaults easier to extend to create new sets of defaults
 
 ## Mid-term
 * Menus

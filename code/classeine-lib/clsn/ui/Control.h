@@ -1,8 +1,6 @@
 #pragma once
 
 #include "clsn/ui/Graphics.h"
-#include "clsn/ui/IRenderer.h"
-#include "clsn/ui/UIManager.h"
 
 #include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
@@ -25,6 +23,7 @@ namespace clsn::ui
     using namespace clsn::draw;
     using namespace clsn::ui::events;
 
+    class IRenderer;
     class Window;
 
     class Control : public Entity
@@ -33,7 +32,7 @@ namespace clsn::ui
         EventListenerList<ControlResizedEvent> m_controlResizedListeners;
 
         std::shared_ptr<Entity> m_tag;
-        std::shared_ptr<IRenderer> m_renderer;
+        mutable std::shared_ptr<IRenderer> m_renderer;
 
         std::string m_defaultSectionName;
 
@@ -77,6 +76,9 @@ namespace clsn::ui
         }
 
         void setRenderer(const std::shared_ptr<IRenderer>& renderer);
+
+        auto getRenderer() const -> const IRenderer&;
+        auto getRenderer() -> IRenderer&;
 
         void doLayout() noexcept;
 

@@ -1,6 +1,7 @@
 #include "CheckBoxRenderer.h"
 
 #include "clsn/ui/CheckBox.h"
+#include "clsn/ui/UIManager.h"
 
 #include "clsn/draw/Region.h"
 

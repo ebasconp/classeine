@@ -1,6 +1,7 @@
 #pragma once
 
 #include "UIManagerDefaults.h"
+#include "UISkin.h"
 
 #include "clsn/draw/FontInfo.h"
 
@@ -16,6 +17,8 @@ namespace clsn::ui
 
     class UIManager final : public Entity
     {
+        std::unique_ptr<UISkin> m_skin;
+
         UIManagerDefaults m_defaults;
         std::unordered_map<FontInfo, std::string> m_pathsByFontInfo;
 
@@ -51,6 +54,14 @@ namespace clsn::ui
 
             return value->get();
         }
+
+        template <typename SkinType>
+        void makeAndLoadSkin()
+        {
+            m_skin = std::make_unique<SkinType>();
+        }
+
+        std::shared_ptr<IRenderer> getRendererByControl(const Control& ctrl) const;
 
         void addFontMapping(const FontInfo& fontInfo, std::string_view path);
         std::string_view getPathByFontInfo(const FontInfo&) const noexcept;

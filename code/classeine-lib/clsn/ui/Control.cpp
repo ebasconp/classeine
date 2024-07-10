@@ -1,9 +1,8 @@
 #include "Control.h"
+#include "UIManager.h"
 #include "Window.h"
 
 #include "clsn/draw/Colors.h"
-
-#include "clsn/ui/renderers/NullRenderer.h"
 
 namespace clsn::ui
 {
@@ -14,12 +13,6 @@ namespace clsn::ui
     , m_invalidated{true}
     {
         auto& uiManager = UIManager::getInstance();
-
-        m_renderer =
-            uiManager
-                .getDefault<LazyRenderer>(
-                    sectionName, "renderer", makeLazyRenderer<NullRenderer>())
-                .get();
 
         setBackgroundColor(
             uiManager.getDefault(sectionName, "controlBackgroundColor", clsn::draw::Colors::makeRed()));
@@ -35,7 +28,7 @@ namespace clsn::ui
     void Control::paint(Graphics& graphics, const Region& region) const
     {
         debug_count("paint");
-        m_renderer->paint(graphics, region, *this);
+        getRenderer().paint(graphics, region, *this);
     }
 
     void Control::notifyMouseClickEvent(MouseClickEvent& e)
@@ -74,7 +67,7 @@ namespace clsn::ui
     void Control::doLayout() noexcept
     {
         debug_count("doLayout");
-        m_renderer->doLayout(*this);
+        getRenderer().doLayout(*this);
     }
 
     void Control::invalidate() const noexcept { m_invalidated = true; }
@@ -116,5 +109,21 @@ namespace clsn::ui
     auto Control::containsPoint(const Point& point) const -> bool
     {
         return Region{m_ActualPosition.get(), m_ActualSize.get()}.containsPoint(point);
+    }
+
+    auto Control::getRenderer() -> IRenderer&
+    {
+        if (m_renderer == nullptr)
+            m_renderer = UIManager::getInstance().getRendererByControl(*this);
+
+        return *m_renderer.get();
+    }
+
+    auto Control::getRenderer() const -> const IRenderer&
+    {
+        if (m_renderer == nullptr)
+            m_renderer = UIManager::getInstance().getRendererByControl(*this);
+
+        return *m_renderer.get();
     }
 }

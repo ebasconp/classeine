@@ -3,6 +3,7 @@
 #include "clsn/draw/Colors.h"
 
 #include "Control.h"
+#include "UIManager.h"
 
 namespace clsn::ui
 {

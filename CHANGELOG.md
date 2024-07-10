@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20240710 Added UISkin and DefaultUISkin
 * 20240710 Improved label rendering
 * 20240701 Added XYContainer
 * 20240627 Improved RadioButton renderer

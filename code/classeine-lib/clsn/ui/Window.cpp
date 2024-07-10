@@ -1,5 +1,7 @@
 #include "Window.h"
 
+#include "UIManager.h"
+
 namespace clsn::ui
 {
     Window::Window(std::string_view sectionName)

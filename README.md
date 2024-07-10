@@ -40,10 +40,11 @@ the creation of rich user interfaces in modern C++.
         * `ToggleButton`
     * `Label` 
     * `ListContainer<Constraint>`
-      * `HBoxContainer`
-      * `VBoxContainer`
-      * `XYContainer`
+      * `HBoxContainer` - Container where the controls are rendered horizontally
+      * `VBoxContainer` - Container where the controls are rendered vertically
+      * `XYContainer` - Container where the controls are placed in specific coordinates in the given region.
     * `UIManager`
+      * `UISkin` - Loadable set of renderers, themes and defaults for the UI controls.
     * `Window`
       * `MainWindow`
   * `Graphics` - abstraction to rendering backend

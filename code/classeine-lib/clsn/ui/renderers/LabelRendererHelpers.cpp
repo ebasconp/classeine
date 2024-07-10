@@ -4,6 +4,8 @@
 #include "clsn/draw/Region.h"
 
 #include "clsn/ui/Control.h"
+#include "clsn/ui/UIManager.h"
+
 
 namespace clsn::ui::renderers::LabelRendererHelpers
 {

@@ -4,6 +4,7 @@
 
 #include "defaults/ButtonDefaults.h"
 #include "defaults/CheckBoxDefaults.h"
+#include "defaults/DefaultUISkin.h"
 #include "defaults/HBoxContainerDefaults.h"
 #include "defaults/LabelDefaults.h"
 #include "defaults/MainWindowDefaults.h"
@@ -62,6 +63,10 @@ namespace clsn::ui
 
     void UIManager::populateDefaults()
     {
+        using namespace clsn::ui::defaults;
+
+        makeAndLoadSkin<DefaultUISkin>();
+
         defaults::ThemeDefaults::populateDefaults(m_defaults);
 
         defaults::ButtonDefaults::populateDefaults(m_defaults);
@@ -83,5 +88,10 @@ namespace clsn::ui
             return "";
 
         return it->second;
+    }
+
+    std::shared_ptr<IRenderer> UIManager::getRendererByControl(const Control& ctrl) const
+    {
+        return m_skin->getRendererByControl(ctrl);
     }
 }

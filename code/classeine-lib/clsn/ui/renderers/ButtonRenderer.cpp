@@ -2,6 +2,7 @@
 
 #include "clsn/ui/Button.h"
 #include "clsn/ui/Graphics.h"
+#include "clsn/ui/UIManager.h"
 
 #include "clsn/draw/Region.h"
 

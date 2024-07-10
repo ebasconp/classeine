@@ -48,6 +48,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
 
         code/classeine-lib/clsn/ui/defaults/ButtonDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/CheckBoxDefaults.cpp
+        code/classeine-lib/clsn/ui/defaults/DefaultUISkin.cpp
         code/classeine-lib/clsn/ui/defaults/HBoxContainerDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/LabelDefaults.cpp
         code/classeine-lib/clsn/ui/defaults/MainWindowDefaults.cpp
