@@ -1,7 +1,6 @@
 #include "ToggleButtonDefaults.h"
 
 #include "clsn/ui/renderers/ToggleButtonRenderer.h"
-#include "clsn/ui/renderers/LabelRenderer.h"
 
 namespace clsn::ui::defaults::ToggleButtonDefaults
 {
@@ -11,6 +10,6 @@ namespace clsn::ui::defaults::ToggleButtonDefaults
 
     void populateDefaults(clsn::ui::UIManagerDefaults& defaults)
     {
-        defaults.set("ToggleButton", "renderer", makeLazyRenderer<ToggleButtonRenderer<LabelRenderer>>());
+        defaults.set("ToggleButton", "renderer", makeLazyRenderer<ToggleButtonRenderer>());
     }
 }

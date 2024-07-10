@@ -1,6 +1,6 @@
 #include "LabelRenderer.h"
 
-#include "clsn/draw/Region.h"
+#include "LabelRendererHelpers.h"
 
 #include "clsn/ui/Control.h"
 #include "clsn/ui/UIManager.h"
@@ -19,22 +19,13 @@ namespace clsn::ui::renderers
         if (!control.isInvalidated())
             return;
 
-        if (!control.isEnabled())
-        {
-            graphics.setDrawColor({192, 192, 192});
-            graphics.drawText(region + Point{1, 1},
-                              control.getFont(),
-                              control.getText());
-        }
+        auto sectionName = control.getDefaultSectionName();
 
-        graphics.setDrawColor(control.isEnabled()
-                              ? control.getForegroundColor()
-                              : UIManager::getInstance().getDefault<Color>(
-                                    "Theme", "disabledForegroundColor")
-                          );
+        auto bc = UIManager::getInstance().getDefault<Color>(sectionName, "containerBackgroundColor");
 
-        graphics.drawText(region,
-                          control.getFont(),
-                          control.getText());
+        graphics.setDrawColor(bc);
+        graphics.drawFillRectangle(region);
+
+        LabelRendererHelpers::drawControlText(graphics, control, region);
     }
 }

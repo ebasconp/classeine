@@ -1,7 +1,6 @@
 #include "ButtonDefaults.h"
 
 #include "clsn/ui/renderers/ButtonRenderer.h"
-#include "clsn/ui/renderers/LabelRenderer.h"
 
 namespace clsn::ui::defaults::ButtonDefaults
 {
@@ -11,6 +10,6 @@ namespace clsn::ui::defaults::ButtonDefaults
 
     void populateDefaults(clsn::ui::UIManagerDefaults& defaults)
     {
-        defaults.set("Button", "renderer", makeLazyRenderer<ButtonRenderer<LabelRenderer>>());
+        defaults.set("Button", "renderer", makeLazyRenderer<ButtonRenderer>());
     }
 }

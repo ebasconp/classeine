@@ -1,17 +1,17 @@
-#include "BorderRenderer.h"
+#include "BorderRendererHelpers.h"
 
 #include "clsn/draw/Region.h"
 
-namespace clsn::ui::renderers
+namespace clsn::ui::renderers::BorderRendererHelpers
 {
     using namespace clsn::draw;
 
-    void BorderRenderer::drawFlatBorder(Graphics& graphics,
-                                           const Region& region,
-                                           const Color& colorUp,
-                                           const Color& colorDown,
-                                           int depth,
-                                           bool up)
+    void drawFlatBorder(Graphics& graphics,
+                        const Region& region,
+                        const Color& colorUp,
+                        const Color& colorDown,
+                        int depth,
+                        bool up)
     {
         const auto& actualColor = up ? colorUp : colorDown;
 
@@ -49,12 +49,12 @@ namespace clsn::ui::renderers
         }
     }
 
-    void BorderRenderer::drawBeveledBorder(Graphics& graphics,
-                                           const Region& region,
-                                           const Color& colorUp,
-                                           const Color& colorDown,
-                                           int depth,
-                                           bool up)
+    void drawBeveledBorder(Graphics& graphics,
+                           const Region& region,
+                           const Color& colorUp,
+                           const Color& colorDown,
+                           int depth,
+                           bool up)
     {
         const auto& actualUp = up ? colorUp : colorDown;
         const auto& actualDown = up ? colorDown : colorUp;
