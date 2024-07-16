@@ -59,6 +59,8 @@ namespace clsn::ui
         std::string_view getPathByFontInfo(const FontInfo&) const noexcept;
 
         auto installTheme(const std::string& themeName) -> bool;
+        auto addThemeChangedListener(EventListener<EmptyEvent> listener) -> int;
+        auto getCurrentThemeName() const -> const std::string&;
 
     private:
         UIManager();

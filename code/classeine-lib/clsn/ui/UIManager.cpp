@@ -81,4 +81,14 @@ namespace clsn::ui
     {
         return m_skin->installThemeByName(themeName);
     }
+
+    auto UIManager::addThemeChangedListener(EventListener<EmptyEvent> listener) -> int
+    {
+        return m_skin->addThemeChangedListener(listener);
+    }
+
+    auto UIManager::getCurrentThemeName() const -> const std::string&
+    {
+        return m_skin->getCurrentThemeName();
+    }
 }

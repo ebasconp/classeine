@@ -162,6 +162,13 @@ void test()
 
     auto b1xy = xy->makeAndAdd<Button>(Region{10, 10, 80, 24});
     b1xy->setText("Button 1");
+    b1xy->addActionListener([](auto& )
+    {
+        auto& themeName = UIManager::getInstance().getCurrentThemeName();
+
+        auto newThemeName = themeName == "dark" ? "light" : "dark";
+        UIManager::getInstance().installTheme(newThemeName);
+    });
 
     auto b2xy = xy->makeAndAdd<Button>(Region{200, 10, 80, 24});
     b2xy->setText("Button 2");

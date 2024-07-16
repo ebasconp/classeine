@@ -1,5 +1,6 @@
 #pragma once
 
+#include "clsn/core/EmptyEvent.h"
 #include "clsn/core/Factory.h"
 #include "clsn/core/Lazy.h"
 
@@ -34,7 +35,10 @@ namespace clsn::ui
         std::unordered_map<std::type_index, LazyRenderer> m_renderersByControlType;
         std::unordered_map<std::string, Factory<UITheme>> m_themeFactoriesByName;
 
-        std::unique_ptr<UITheme> m_currentTheme;
+        std::pair<std::string, std::unique_ptr<UITheme>> m_currentTheme;
+
+        EventListenerList<EmptyEvent> m_themeChangedListeners;
+
 
     public:
         virtual ~UISkin() = default;
@@ -53,28 +57,10 @@ namespace clsn::ui
                 makeFactory<UITheme, UIThemeConcreteType>());
         }
 
-        auto installThemeByName(const std::string& name) -> bool
-        {
-            auto it = m_themeFactoriesByName.find(name);
-            if (it == m_themeFactoriesByName.end())
-                return false;
-
-            m_currentTheme = std::move(it->second());
-            return true;
-        }
-
-        auto getColor(std::string_view sectionName, std::string_view name) -> const Color&
-        {
-            return m_currentTheme->getColor(sectionName, name);
-        }
-
-        auto getRendererByControl(const clsn::ui::Control& ctrl) const -> std::shared_ptr<IRenderer>
-        {
-            auto it = m_renderersByControlType.find(std::type_index(typeid(ctrl)));
-            if (it == nullptr)
-                return std::make_shared<NullRenderer>();
-
-            return it->second.get();
-        }
+        auto installThemeByName(const std::string& name) -> bool;
+        auto getColor(std::string_view sectionName, std::string_view name) -> const Color&;
+        auto getRendererByControl(const clsn::ui::Control& ctrl) const -> std::shared_ptr<IRenderer>;
+        auto addThemeChangedListener(EventListener<EmptyEvent> listener) -> int;
+        auto getCurrentThemeName() const -> const std::string&;
     };
 }

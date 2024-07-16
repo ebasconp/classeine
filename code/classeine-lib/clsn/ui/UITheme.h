@@ -19,6 +19,5 @@ namespace clsn::ui
     public:
         void addColor(std::string_view section_name, std::string_view name, Color color);
         auto getColor(std::string_view section_name, std::string_view name, const Color& errorColor = Color{255, 0, 0}) const -> const Color&;
-
     };
 }

@@ -42,6 +42,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/ToggleButton.cpp
         code/classeine-lib/clsn/ui/ToggleControl.cpp
         code/classeine-lib/clsn/ui/UIManager.cpp
+        code/classeine-lib/clsn/ui/UISkin.cpp
         code/classeine-lib/clsn/ui/UITheme.cpp
         code/classeine-lib/clsn/ui/VBoxContainer.cpp
         code/classeine-lib/clsn/ui/Window.cpp

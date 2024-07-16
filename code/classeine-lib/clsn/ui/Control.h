@@ -106,10 +106,13 @@ namespace clsn::ui
             proc(m_parentWindow.value().get());
         }
 
+        virtual void loadDefaults();
+
     protected:
         virtual void processMouseClickEvent(events::MouseClickEvent& e);
 
     private:
         void initEvents();
+        void loadControlDefaults();
     };
 }

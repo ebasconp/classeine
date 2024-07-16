@@ -21,13 +21,7 @@ namespace clsn::ui
         : Control{sectionName}
         , m_needsToPaintTheContainer{false}
         {
-            auto& uiManager = clsn::ui::UIManager::getInstance();
-
-            setBackgroundColor(uiManager.getColor(
-                sectionName, "containerBackgroundColor"));
-
-            setForegroundColor(uiManager.getColor(
-                sectionName, "containerForegroundColor"));
+            loadContainerDefaults();
         }
 
         template <typename ControlType, typename... Args>
@@ -134,6 +128,18 @@ namespace clsn::ui
             return false;
         }
 
+        void loadDefaults() override
+        {
+            Control::loadDefaults();
+
+            loadContainerDefaults();
+
+            for (auto& e : m_controls)
+            {
+                e.first->loadDefaults();
+            }
+        }
+
     protected:
         void processMouseClickEvent(events::MouseClickEvent& e) override
         {
@@ -154,6 +160,19 @@ namespace clsn::ui
         }
 
     private:
+        void loadContainerDefaults()
+        {
+            auto& uiManager = clsn::ui::UIManager::getInstance();
+            auto sectionName = getDefaultSectionName();
+
+            setBackgroundColor(uiManager.getColor(
+                sectionName, "containerBackgroundColor"));
+
+            setForegroundColor(uiManager.getColor(
+                sectionName, "containerForegroundColor"));
+        }
+
+
         void initEvents(Control& control)
         {
             addEnabledChangedListener([this](auto& e)

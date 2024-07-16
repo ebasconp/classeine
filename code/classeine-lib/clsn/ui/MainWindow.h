@@ -21,7 +21,12 @@ namespace clsn::ui
         {
             initVisibility();
             initSize();
-            initDefaults();
+            loadWindowDefaults();
+
+            UIManager::getInstance().addThemeChangedListener([this](auto&)
+            {
+                updateTheme();
+            });
 
             m_control.setParentWindow(*this);
         }
@@ -42,14 +47,20 @@ namespace clsn::ui
         }
 
     private:
-        void initDefaults()
+        void loadWindowDefaults()
         {
-            //auto& dimension = UIManager::getInstance().getDefault(
-//                "MainWindow", "size", Dimension{300, 200});
-            //ETOTODO: MOVE THIS TO THE THEME
 
-            m_control.setActualSize(Dimension{800, 600});
         }
+
+        void updateTheme()
+        {
+            loadWindowDefaults();
+            loadDefaults();
+
+            m_control.loadDefaults();
+            m_control.invalidate();
+        }
+
 
         void initVisibility()
         {
@@ -69,6 +80,12 @@ namespace clsn::ui
 
         void initSize()
         {
+            //auto& dimension = UIManager::getInstance().getDefault(
+            //                "MainWindow", "size", Dimension{300, 200});
+            //ETOTODO: MOVE THIS TO THE THEME
+
+            m_control.setActualSize(Dimension{800, 600});
+
             addSizeChangedListener([this](auto& e)
             {
                 auto& newValue = e.getNewValue();

@@ -12,13 +12,7 @@ namespace clsn::ui
     : m_defaultSectionName{sectionName}
     , m_invalidated{true}
     {
-        auto& uiManager = UIManager::getInstance();
-
-        setBackgroundColor(uiManager.getColor(sectionName, "controlBackgroundColor"));
-
-        setForegroundColor(uiManager.getColor(sectionName, "controlForegroundColor"));
-
-        setFont(uiManager.getDefaultFont());
+        loadControlDefaults();
 
         initEvents();
     }
@@ -123,5 +117,20 @@ namespace clsn::ui
             m_renderer = UIManager::getInstance().getRendererByControl(*this);
 
         return *m_renderer.get();
+    }
+
+    void Control::loadControlDefaults()
+    {
+        auto sectionName = getDefaultSectionName();
+
+        auto& uiManager = UIManager::getInstance();
+        setBackgroundColor(uiManager.getColor(sectionName, "controlBackgroundColor"));
+        setForegroundColor(uiManager.getColor(sectionName, "controlForegroundColor"));
+        setFont(uiManager.getDefaultFont());
+    }
+
+    void Control::loadDefaults()
+    {
+        loadControlDefaults();
     }
 }
