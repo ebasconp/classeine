@@ -1,5 +1,7 @@
 # TODO #
 
+* Create DefaultUITheme interface
+* Replace default colors to 4 default tones
 * XY anchors
 * Add hover support
 * Add button hover rendering

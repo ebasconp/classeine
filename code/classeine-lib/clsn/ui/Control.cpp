@@ -126,7 +126,7 @@ namespace clsn::ui
         auto& uiManager = UIManager::getInstance();
         setBackgroundColor(uiManager.getColor(sectionName, "controlBackgroundColor"));
         setForegroundColor(uiManager.getColor(sectionName, "controlForegroundColor"));
-        setFont(uiManager.getDefaultFont());
+        setFont(uiManager.getFont(sectionName, "font"));
     }
 
     void Control::loadDefaults()

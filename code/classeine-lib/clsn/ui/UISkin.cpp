@@ -21,6 +21,11 @@ namespace clsn::ui
         return m_currentTheme.second->getColor(sectionName, name);
     }
 
+    auto UISkin::getFont(std::string_view sectionName, std::string_view name) -> const Font&
+    {
+        return m_currentTheme.second->getFont(sectionName, name);
+    }
+
     auto UISkin::getRendererByControl(const clsn::ui::Control& ctrl) const -> std::shared_ptr<IRenderer>
     {
         auto it = m_renderersByControlType.find(std::type_index(typeid(ctrl)));

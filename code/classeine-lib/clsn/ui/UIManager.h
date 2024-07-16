@@ -33,7 +33,7 @@ namespace clsn::ui
 
         ~UIManager() override = default;
 
-        static UIManager& getInstance();
+        static auto getInstance() -> UIManager&;
         static void init();
         static void finalize();
 
@@ -43,20 +43,13 @@ namespace clsn::ui
             m_skin = std::make_unique<SkinType>();
         }
 
-        std::shared_ptr<IRenderer> getRendererByControl(const Control& ctrl) const;
+        auto getRendererByControl(const Control& ctrl) const -> std::shared_ptr<IRenderer>;
 
-        const Color& getColor(std::string_view sectionName, std::string_view name) const;
-
-        // ETOTODO: MOVE THIS TO THE THEME
-        const Font& getDefaultFont() const
-        {
-            static Font font{"Nimbus", FontStyle::REGULAR, 14};
-
-            return font;
-        }
+        auto getColor(std::string_view sectionName, std::string_view name) const -> const Color&;
+        auto getFont(std::string_view sectionName, std::string_view name) const -> const Font&;
 
         void addFontMapping(const FontInfo& fontInfo, std::string_view path);
-        std::string_view getPathByFontInfo(const FontInfo&) const noexcept;
+        auto getPathByFontInfo(const FontInfo&) const noexcept -> std::string_view;
 
         auto installTheme(const std::string& themeName) -> bool;
         auto addThemeChangedListener(EventListener<EmptyEvent> listener) -> int;

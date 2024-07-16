@@ -59,6 +59,7 @@ namespace clsn::ui
 
         auto installThemeByName(const std::string& name) -> bool;
         auto getColor(std::string_view sectionName, std::string_view name) -> const Color&;
+        auto getFont(std::string_view sectionName, std::string_view name) -> const Font&;
         auto getRendererByControl(const clsn::ui::Control& ctrl) const -> std::shared_ptr<IRenderer>;
         auto addThemeChangedListener(EventListener<EmptyEvent> listener) -> int;
         auto getCurrentThemeName() const -> const std::string&;

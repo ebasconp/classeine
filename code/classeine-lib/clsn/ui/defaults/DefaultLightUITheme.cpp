@@ -6,15 +6,17 @@ namespace clsn::ui::defaults
 {
     DefaultLightUITheme::DefaultLightUITheme()
     {
-        addColor("", "bevelUpColor", Color{0, 92, 155 });
-        addColor("", "bevelDownColor", Color{0, 49, 83 });
-        addColor("", "containerBackgroundColor", Colors::makeWhite());
-        addColor("", "containerForegroundColor", Colors::makeBlack());
-        addColor("", "controlBackgroundColor", Color{0xE0, 0xE0, 0xE0});
-        addColor("", "controlForegroundColor", Color{0, 49, 83});
-        addColor("", "disabledBackgroundColor", Color{0x60, 0x60, 0x60});
-        addColor("", "disabledForegroundColor", Color{160, 160, 160});
+        add("", "bevelUpColor", Color{0, 92, 155 });
+        add("", "bevelDownColor", Color{0, 49, 83 });
+        add("", "containerBackgroundColor", Colors::makeWhite());
+        add("", "containerForegroundColor", Colors::makeBlack());
+        add("", "controlBackgroundColor", Color{0xE0, 0xE0, 0xE0});
+        add("", "controlForegroundColor", Color{0, 49, 83});
+        add("", "disabledBackgroundColor", Color{0x60, 0x60, 0x60});
+        add("", "disabledForegroundColor", Color{160, 160, 160});
 
-        addColor("button", "pressedBackgroundColor", Color{192, 192, 192});
+        add("", "font", Font{"Nimbus", FontStyle::REGULAR, 14});
+
+        add("button", "pressedBackgroundColor", Color{192, 192, 192});
     }
 }
