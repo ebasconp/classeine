@@ -2,17 +2,7 @@
 
 #include "clsn/core/Panic.h"
 
-#include "defaults/ButtonDefaults.h"
-#include "defaults/CheckBoxDefaults.h"
 #include "defaults/DefaultUISkin.h"
-#include "defaults/HBoxContainerDefaults.h"
-#include "defaults/LabelDefaults.h"
-#include "defaults/MainWindowDefaults.h"
-#include "defaults/ThemeDefaults.h"
-#include "defaults/RadioButtonDefaults.h"
-#include "defaults/ToggleButtonDefaults.h"
-#include "defaults/VBoxContainerDefaults.h"
-#include "defaults/XYContainerDefaults.h"
 
 #include <iostream> //ETOTODO: Remove
 
@@ -66,22 +56,9 @@ namespace clsn::ui
         using namespace clsn::ui::defaults;
 
         makeAndLoadSkin<DefaultUISkin>();
-
-        defaults::ThemeDefaults::populateDefaults(m_defaults);
-
-        defaults::ButtonDefaults::populateDefaults(m_defaults);
-        defaults::CheckBoxDefaults::populateDefaults(m_defaults);
-        defaults::HBoxContainerDefaults::populateDefaults(m_defaults);
-        defaults::LabelDefaults::populateDefaults(m_defaults);
-        defaults::MainWindowDefaults::populateDefaults(m_defaults);
-        defaults::RadioButtonDefaults::populateDefaults(m_defaults);
-        defaults::ToggleButtonDefaults::populateDefaults(m_defaults);
-        defaults::VBoxContainerDefaults::populateDefaults(m_defaults);
-        defaults::XYContainerDefaults::populateDefaults(m_defaults);
     }
 
-    std::string_view UIManager::getPathByFontInfo(
-        const FontInfo& fontInfo) const noexcept
+    auto UIManager::getPathByFontInfo(const FontInfo& fontInfo) const noexcept -> std::string_view
     {
         auto it = m_pathsByFontInfo.find(fontInfo);
         if (it == m_pathsByFontInfo.end())
@@ -90,8 +67,18 @@ namespace clsn::ui
         return it->second;
     }
 
-    std::shared_ptr<IRenderer> UIManager::getRendererByControl(const Control& ctrl) const
+    auto UIManager::getRendererByControl(const Control& ctrl) const -> std::shared_ptr<IRenderer>
     {
         return m_skin->getRendererByControl(ctrl);
+    }
+
+    auto UIManager::getColor(std::string_view sectionName, std::string_view name) const -> const Color&
+    {
+        return m_skin->getColor(sectionName, name);
+    }
+
+    auto UIManager::installTheme(const std::string& themeName) -> bool
+    {
+        return m_skin->installThemeByName(themeName);
     }
 }

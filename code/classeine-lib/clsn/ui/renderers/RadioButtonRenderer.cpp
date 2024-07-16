@@ -23,7 +23,7 @@ namespace clsn::ui::renderers
 
         auto buttonColor = radioButton.isPressed()
             ? Color{192, 192, 192}
-        : UIManager::getInstance().getDefault<Color>(sectionName, "controlBackgroundColor");
+        : UIManager::getInstance().getColor(sectionName, "controlBackgroundColor");
 
         graphics.setDrawColor(buttonColor);
         graphics.drawFillRectangle(region);

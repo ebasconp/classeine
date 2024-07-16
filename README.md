@@ -21,6 +21,7 @@ the creation of rich user interfaces in modern C++.
   * Configuration by sections
   * `Entity` polymorphic base class: Adds some memory profiling tools
     * `EntityWrapper<T>`: Wrapper for any `T`, inheriting from `Entity`
+  * `Factory<T>`: Factory that returns an instance of a base class T when invoked.
   * `Lazy<T>`: Object T is constructed the first time this instance is accessed.
   
 * **clsn::draw** - library providing drawing primitives
@@ -45,6 +46,7 @@ the creation of rich user interfaces in modern C++.
       * `XYContainer` - Container where the controls are placed in specific coordinates in the given region.
     * `UIManager`
       * `UISkin` - Loadable set of renderers, themes and defaults for the UI controls.
+      * `UITheme` - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.
     * `Window`
       * `MainWindow`
   * `Graphics` - abstraction to rendering backend

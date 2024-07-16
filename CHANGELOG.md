@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20240715 Added UITheme and implemented Light and Dark themes
 * 20240710 Added UISkin and DefaultUISkin
 * 20240710 Improved label rendering
 * 20240701 Added XYContainer

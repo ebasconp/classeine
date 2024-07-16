@@ -13,13 +13,17 @@ namespace clsn::ui
 
     void Window::initDefaults()
     {
-        setMinimumSize(UIManager::getInstance().getDefault(
+        //ETOTODO: MOVE THIS TO THE tHEME
+/*        setMinimumSize(UIManager::getInstance().getDefault(
             getDefaultSectionName(), "minimumSize", Dimension{50, 50}));
 
         auto& dimension = UIManager::getInstance().getDefault(
             getDefaultSectionName(), "size", Dimension{300, 200});
 
-        setActualSize(dimension);
+        setActualSize(dimension);*/
+
+        setMinimumSize({50, 50});
+        setActualPosition({300, 200});
     }
 
     void Window::initVisibility()

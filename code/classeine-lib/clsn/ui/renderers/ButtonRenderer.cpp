@@ -35,9 +35,9 @@ namespace clsn::ui::renderers
 
         auto sectionName = control.getDefaultSectionName();
 
-        auto& bevelUp = UIManager::getInstance().getDefault<Color>(
+        auto& bevelUp = UIManager::getInstance().getColor(
             sectionName, "bevelUpColor");
-        auto& bevelDown = UIManager::getInstance().getDefault<Color>(
+        auto& bevelDown = UIManager::getInstance().getColor(
             sectionName, "bevelDownColor");
 
         constexpr int depth = 2;
@@ -55,8 +55,8 @@ namespace clsn::ui::renderers
                                region.getHeight() - depth2};
 
         auto buttonColor = pressed
-            ? Color{192, 192, 192}
-            : UIManager::getInstance().getDefault<Color>(sectionName, "controlBackgroundColor");
+            ? UIManager::getInstance().getColor("button", "pressedBackgroundColor")
+            : UIManager::getInstance().getColor(sectionName, "controlBackgroundColor");
 
         graphics.setDrawColor(buttonColor);
         graphics.drawFillRectangle(innerRect);

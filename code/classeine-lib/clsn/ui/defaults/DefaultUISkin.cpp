@@ -1,5 +1,8 @@
 #include "clsn/ui/defaults/DefaultUISkin.h"
 
+#include "clsn/ui/defaults/DefaultDarkUITheme.h"
+#include "clsn/ui/defaults/DefaultLightUITheme.h"
+
 #include "clsn/ui/Button.h"
 #include "clsn/ui/CheckBox.h"
 #include "clsn/ui/HBoxContainer.h"
@@ -18,6 +21,30 @@
 #include "clsn/ui/renderers/VBoxContainerRenderer.h"
 #include "clsn/ui/renderers/XYContainerRenderer.h"
 
+namespace
+{
+    using namespace clsn::ui;
+
+    void loadRenderers(defaults::DefaultUISkin& skin)
+    {
+        skin.makeRendererAndAdd<Button, ButtonRenderer>();
+        skin.makeRendererAndAdd<CheckBox, CheckBoxRenderer>();
+        skin.makeRendererAndAdd<HBoxContainer, HBoxContainerRenderer>();
+        skin.makeRendererAndAdd<Label, LabelRenderer>();
+        skin.makeRendererAndAdd<RadioButton, RadioButtonRenderer>();
+        skin.makeRendererAndAdd<ToggleButton, ToggleButtonRenderer>();
+        skin.makeRendererAndAdd<VBoxContainer, VBoxContainerRenderer>();
+        skin.makeRendererAndAdd<XYContainer, XYContainerRenderer>();
+    }
+
+    void loadThemes(defaults::DefaultUISkin& skin)
+    {
+        skin.makeThemeAndAdd<defaults::DefaultLightUITheme>("light");
+        skin.makeThemeAndAdd<defaults::DefaultDarkUITheme>("dark");
+
+        skin.installThemeByName("dark");
+    }
+}
 
 namespace clsn::ui::defaults
 {
@@ -26,13 +53,7 @@ namespace clsn::ui::defaults
         using namespace clsn::ui;
         using namespace clsn::ui::renderers;
 
-        makeAndAdd<Button, ButtonRenderer>();
-        makeAndAdd<CheckBox, CheckBoxRenderer>();
-        makeAndAdd<HBoxContainer, HBoxContainerRenderer>();
-        makeAndAdd<Label, LabelRenderer>();
-        makeAndAdd<RadioButton, RadioButtonRenderer>();
-        makeAndAdd<ToggleButton, ToggleButtonRenderer>();
-        makeAndAdd<VBoxContainer, VBoxContainerRenderer>();
-        makeAndAdd<XYContainer, XYContainerRenderer>();
+        loadRenderers(*this);
+        loadThemes(*this);
     }
 }

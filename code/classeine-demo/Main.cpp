@@ -103,6 +103,8 @@ void test()
 //                              b4->setForegroundColor(color);
 //                          });
 
+    UIManager::getInstance().installTheme("dark");
+
     MainWindow<VBoxContainer> mw;
     mw.setSize({1000, 400}); //ETOTODO
 

@@ -21,7 +21,7 @@ namespace clsn::ui::renderers
 
         auto sectionName = control.getDefaultSectionName();
 
-        auto bc = UIManager::getInstance().getDefault<Color>(sectionName, "containerBackgroundColor");
+        auto bc = UIManager::getInstance().getColor(sectionName, "containerBackgroundColor");
 
         graphics.setDrawColor(bc);
         graphics.drawFillRectangle(region);

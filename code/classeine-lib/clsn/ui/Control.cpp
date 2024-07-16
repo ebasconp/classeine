@@ -14,13 +14,11 @@ namespace clsn::ui
     {
         auto& uiManager = UIManager::getInstance();
 
-        setBackgroundColor(
-            uiManager.getDefault(sectionName, "controlBackgroundColor", clsn::draw::Colors::makeRed()));
+        setBackgroundColor(uiManager.getColor(sectionName, "controlBackgroundColor"));
 
-        setForegroundColor(uiManager.getDefault(
-            sectionName, "controlForegroundColor", Colors::makeWhite()));
+        setForegroundColor(uiManager.getColor(sectionName, "controlForegroundColor"));
 
-        setFont(uiManager.getDefault(sectionName, "font", Font{}));
+        setFont(uiManager.getDefaultFont());
 
         initEvents();
     }

@@ -31,7 +31,6 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/draw/Point.cpp
         code/classeine-lib/clsn/draw/Region.cpp
 
-        code/classeine-lib/clsn/ui/UIManager.cpp
         code/classeine-lib/clsn/ui/Button.cpp
         code/classeine-lib/clsn/ui/CheckBox.cpp
         code/classeine-lib/clsn/ui/ClickableControl.cpp
@@ -42,21 +41,15 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/RadioButtonGroup.cpp
         code/classeine-lib/clsn/ui/ToggleButton.cpp
         code/classeine-lib/clsn/ui/ToggleControl.cpp
+        code/classeine-lib/clsn/ui/UIManager.cpp
+        code/classeine-lib/clsn/ui/UITheme.cpp
         code/classeine-lib/clsn/ui/VBoxContainer.cpp
         code/classeine-lib/clsn/ui/Window.cpp
         code/classeine-lib/clsn/ui/XYContainer.cpp
 
-        code/classeine-lib/clsn/ui/defaults/ButtonDefaults.cpp
-        code/classeine-lib/clsn/ui/defaults/CheckBoxDefaults.cpp
+        code/classeine-lib/clsn/ui/defaults/DefaultDarkUITheme.cpp
+        code/classeine-lib/clsn/ui/defaults/DefaultLightUITheme.cpp
         code/classeine-lib/clsn/ui/defaults/DefaultUISkin.cpp
-        code/classeine-lib/clsn/ui/defaults/HBoxContainerDefaults.cpp
-        code/classeine-lib/clsn/ui/defaults/LabelDefaults.cpp
-        code/classeine-lib/clsn/ui/defaults/MainWindowDefaults.cpp
-        code/classeine-lib/clsn/ui/defaults/ThemeDefaults.cpp
-        code/classeine-lib/clsn/ui/defaults/RadioButtonDefaults.cpp
-        code/classeine-lib/clsn/ui/defaults/ToggleButtonDefaults.cpp
-        code/classeine-lib/clsn/ui/defaults/VBoxContainerDefaults.cpp
-        code/classeine-lib/clsn/ui/defaults/XYContainerDefaults.cpp
 
         code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2FontCache.cpp

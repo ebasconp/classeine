@@ -23,11 +23,11 @@ namespace clsn::ui
         {
             auto& uiManager = clsn::ui::UIManager::getInstance();
 
-            setBackgroundColor(uiManager.getDefault(
-                sectionName, "containerBackgroundColor", Colors::makeRed()));
+            setBackgroundColor(uiManager.getColor(
+                sectionName, "containerBackgroundColor"));
 
-            setForegroundColor(uiManager.getDefault(
-                sectionName, "containerForegroundColor", Colors::makeWhite()));
+            setForegroundColor(uiManager.getColor(
+                sectionName, "containerForegroundColor"));
         }
 
         template <typename ControlType, typename... Args>

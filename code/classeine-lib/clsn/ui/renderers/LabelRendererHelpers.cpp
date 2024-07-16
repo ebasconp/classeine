@@ -23,7 +23,7 @@ namespace clsn::ui::renderers::LabelRendererHelpers
 
         graphics.setDrawColor(control.isEnabled()
                               ? control.getForegroundColor()
-                              : UIManager::getInstance().getDefault<Color>(
+                              : UIManager::getInstance().getColor(
                                     "Theme", "disabledForegroundColor")
                           );
 

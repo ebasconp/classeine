@@ -44,9 +44,11 @@ namespace clsn::ui
     private:
         void initDefaults()
         {
-            auto& dimension = UIManager::getInstance().getDefault(
-                "MainWindow", "size", Dimension{300, 200});
-            m_control.setActualSize(dimension);
+            //auto& dimension = UIManager::getInstance().getDefault(
+//                "MainWindow", "size", Dimension{300, 200});
+            //ETOTODO: MOVE THIS TO THE THEME
+
+            m_control.setActualSize(Dimension{800, 600});
         }
 
         void initVisibility()

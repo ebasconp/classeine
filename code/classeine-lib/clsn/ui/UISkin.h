@@ -1,8 +1,11 @@
 #pragma once
 
+#include "clsn/core/Factory.h"
 #include "clsn/core/Lazy.h"
 
 #include "clsn/ui/Control.h" //FORWARD
+#include "clsn/ui/UITheme.h"
+
 #include "clsn/ui/IRenderer.h"
 
 #include "clsn/ui/renderers/NullRenderer.h"
@@ -18,7 +21,7 @@ namespace clsn::ui
     using LazyRenderer = Lazy<std::shared_ptr<IRenderer>>;
 
     template <typename RendererType>
-    LazyRenderer makeLazyRendererX()
+    LazyRenderer makeLazyRenderer()
     {
         return LazyRenderer
         {
@@ -29,17 +32,43 @@ namespace clsn::ui
     class UISkin
     {
         std::unordered_map<std::type_index, LazyRenderer> m_renderersByControlType;
+        std::unordered_map<std::string, Factory<UITheme>> m_themeFactoriesByName;
+
+        std::unique_ptr<UITheme> m_currentTheme;
 
     public:
         virtual ~UISkin() = default;
 
         template <typename ControlType, typename RendererType>
-        void makeAndAdd()
+        void makeRendererAndAdd()
         {
-            m_renderersByControlType.emplace(std::type_index(typeid(ControlType)), makeLazyRendererX<RendererType>());
+            m_renderersByControlType.emplace(std::type_index(typeid(ControlType)), makeLazyRenderer<RendererType>());
         }
 
-        std::shared_ptr<IRenderer> getRendererByControl(const clsn::ui::Control& ctrl) const
+        template <typename UIThemeConcreteType>
+        void makeThemeAndAdd(std::string name)
+        {
+            m_themeFactoriesByName.emplace(
+                name,
+                makeFactory<UITheme, UIThemeConcreteType>());
+        }
+
+        auto installThemeByName(const std::string& name) -> bool
+        {
+            auto it = m_themeFactoriesByName.find(name);
+            if (it == m_themeFactoriesByName.end())
+                return false;
+
+            m_currentTheme = std::move(it->second());
+            return true;
+        }
+
+        auto getColor(std::string_view sectionName, std::string_view name) -> const Color&
+        {
+            return m_currentTheme->getColor(sectionName, name);
+        }
+
+        auto getRendererByControl(const clsn::ui::Control& ctrl) const -> std::shared_ptr<IRenderer>
         {
             auto it = m_renderersByControlType.find(std::type_index(typeid(ctrl)));
             if (it == nullptr)

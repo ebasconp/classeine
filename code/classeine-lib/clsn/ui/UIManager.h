@@ -37,24 +37,6 @@ namespace clsn::ui
         static void init();
         static void finalize();
 
-        template <typename T>
-        const T& getDefault(std::string_view sectionName,
-                        std::string_view key,
-                        const T& altValue = {}) const
-        {
-            const auto value = m_defaults.get<T>(sectionName, key);
-            if (!value.has_value())
-            {
-                const auto themeValue = m_defaults.get<T>("Theme", key);
-                if (themeValue.has_value())
-                    return themeValue->get();
-
-                return altValue;
-            }
-
-            return value->get();
-        }
-
         template <typename SkinType>
         void makeAndLoadSkin()
         {
@@ -63,8 +45,20 @@ namespace clsn::ui
 
         std::shared_ptr<IRenderer> getRendererByControl(const Control& ctrl) const;
 
+        const Color& getColor(std::string_view sectionName, std::string_view name) const;
+
+        // ETOTODO: MOVE THIS TO THE THEME
+        const Font& getDefaultFont() const
+        {
+            static Font font{"Nimbus", FontStyle::REGULAR, 14};
+
+            return font;
+        }
+
         void addFontMapping(const FontInfo& fontInfo, std::string_view path);
         std::string_view getPathByFontInfo(const FontInfo&) const noexcept;
+
+        auto installTheme(const std::string& themeName) -> bool;
 
     private:
         UIManager();
