@@ -1,6 +1,7 @@
 #pragma once
 
 #include "clsn/core/EmptyEvent.h"
+#include "clsn/core/Entity.h"
 #include "clsn/core/Factory.h"
 #include "clsn/core/Lazy.h"
 
@@ -30,7 +31,7 @@ namespace clsn::ui
         };
     }
 
-    class UISkin
+    class UISkin : public Entity
     {
         std::unordered_map<std::type_index, LazyRenderer> m_renderersByControlType;
         std::unordered_map<std::string, Factory<UITheme>> m_themeFactoriesByName;

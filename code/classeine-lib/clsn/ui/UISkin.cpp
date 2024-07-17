@@ -9,6 +9,7 @@ namespace clsn::ui
             return false;
 
         m_currentTheme = std::make_pair(name, it->second());
+        m_currentTheme.second->populateDefaults();
 
         EmptyEvent e;
         m_themeChangedListeners.notify(e);

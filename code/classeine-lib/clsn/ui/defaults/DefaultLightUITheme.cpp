@@ -4,7 +4,7 @@
 
 namespace clsn::ui::defaults
 {
-    DefaultLightUITheme::DefaultLightUITheme()
+    void DefaultLightUITheme::populateDefaults()
     {
         add("", "bevelUpColor", Color{0, 92, 155 });
         add("", "bevelDownColor", Color{0, 49, 83 });

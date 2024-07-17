@@ -18,6 +18,8 @@ namespace clsn::ui
         UIThemeDefaults m_defaultsByName;
 
     public:
+        virtual void populateDefaults() = 0;
+
         template <typename Type>
         void add(std::string_view sectionName, std::string_view name, Type&& value)
         {

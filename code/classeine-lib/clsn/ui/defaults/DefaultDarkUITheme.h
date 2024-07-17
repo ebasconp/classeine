@@ -7,6 +7,8 @@ namespace clsn::ui::defaults
     class DefaultDarkUITheme final : public UITheme
     {
     public:
-        DefaultDarkUITheme();
+        DefaultDarkUITheme() = default;
+
+        void populateDefaults() override;
     };
 }

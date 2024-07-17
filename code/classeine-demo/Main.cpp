@@ -103,7 +103,7 @@ void test()
 //                              b4->setForegroundColor(color);
 //                          });
 
-    UIManager::getInstance().installTheme("dark");
+    UIManager::getInstance().installTheme("light");
 
     MainWindow<VBoxContainer> mw;
     mw.setSize({1000, 400}); //ETOTODO
@@ -161,11 +161,13 @@ void test()
     auto xy =  mw().makeAndAdd<XYContainer>();
 
     auto b1xy = xy->makeAndAdd<Button>(Region{10, 10, 80, 24});
-    b1xy->setText("Button 1");
-    b1xy->addActionListener([](auto& )
+    b1xy->setText("Theme");
+    b1xy->setBackgroundColor(Colors::makeRed());
+    b1xy->addActionListener([&b1xy](auto& )
     {
         auto& themeName = UIManager::getInstance().getCurrentThemeName();
 
+        b1xy->setText(themeName);
         auto newThemeName = themeName == "dark" ? "light" : "dark";
         UIManager::getInstance().installTheme(newThemeName);
     });

@@ -56,7 +56,7 @@ namespace clsn::ui::renderers
 
         auto buttonColor = pressed
             ? UIManager::getInstance().getColor("button", "pressedBackgroundColor")
-            : UIManager::getInstance().getColor(sectionName, "controlBackgroundColor");
+            : control.getBackgroundColor();
 
         graphics.setDrawColor(buttonColor);
         graphics.drawFillRectangle(innerRect);

@@ -4,7 +4,7 @@
 
 namespace clsn::ui::defaults
 {
-    DefaultDarkUITheme::DefaultDarkUITheme()
+    void DefaultDarkUITheme::populateDefaults()
     {
         add("", "bevelUpColor", Color{0, 92, 155 });
         add("", "bevelDownColor", Color{0, 49, 83 });

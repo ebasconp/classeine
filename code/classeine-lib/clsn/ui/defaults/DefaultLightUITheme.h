@@ -7,6 +7,8 @@ namespace clsn::ui::defaults
     class DefaultLightUITheme final : public UITheme
     {
     public:
-        DefaultLightUITheme();
+        DefaultLightUITheme() = default;
+
+        void populateDefaults() override;
     };
 }
