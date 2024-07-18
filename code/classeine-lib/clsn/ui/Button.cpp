@@ -5,6 +5,5 @@ namespace clsn::ui
     Button::Button()
     : ClickableControl("Button")
     {
-
     }
 }

@@ -17,6 +17,7 @@ namespace clsn::ui::defaults
 
         add("", "font", Font{"Nimbus", FontStyle::REGULAR, 14});
 
-        add("button", "pressedBackgroundColor", Color{192, 192, 192});
+        add("Button", "pressedBackgroundColor", Color{192, 192, 192});
+        add("Button", "preferredSize", Dimension{96, 32});
     }
 }

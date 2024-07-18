@@ -160,7 +160,7 @@ void test()
 
     auto xy =  mw().makeAndAdd<XYContainer>();
 
-    auto b1xy = xy->makeAndAdd<Button>(Region{10, 10, 80, 24});
+    auto b1xy = xy->makeAndAdd<Button>(Point{10, 10});
     b1xy->setText("Theme");
     b1xy->setBackgroundColor(Colors::makeRed());
     b1xy->addActionListener([&b1xy](auto& )
@@ -172,7 +172,7 @@ void test()
         UIManager::getInstance().installTheme(newThemeName);
     });
 
-    auto b2xy = xy->makeAndAdd<Button>(Region{200, 10, 80, 24});
+    auto b2xy = xy->makeAndAdd<Button>(Point{200, 10});
     b2xy->setText("Button 2");
 
     mw.setVisible(true);

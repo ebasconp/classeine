@@ -2,16 +2,16 @@
 
 #include "ListContainer.h"
 
-#include "clsn/draw/Region.h"
+#include "clsn/draw/Point.h"
 
 namespace clsn::ui
 {
     using clsn::core::Empty;
 
-    class XYContainer : public ListContainer<Region>
+    class XYContainer : public ListContainer<Point>
     {
     public:
-        using BaseContainer = ListContainer<Region>;
+        using BaseContainer = ListContainer<Point>;
 
         XYContainer();
 

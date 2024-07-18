@@ -18,7 +18,7 @@ namespace clsn::ui::renderers
                 return;
 
             control.setActualPosition({position.getX() + constraint.getX(), position.getY() + constraint.getY()});
-            control.setActualSize(constraint.getSize());
+            control.setActualSize(control.getActualPreferredSize());
         });
     }
 
