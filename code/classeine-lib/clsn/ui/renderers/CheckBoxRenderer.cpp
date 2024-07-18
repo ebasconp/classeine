@@ -28,7 +28,7 @@ namespace clsn::ui::renderers
 
         m_labelRenderer.paint(graphics, region, checkBox);
 
-        auto textSize = graphics.getTextSize(checkBox.getFont(), checkBox.getText());
+        auto textSize = graphics.getTextSize(checkBox.getActualFont(), checkBox.getText());
 
         const auto mid = checkBox.getActualPosition().getY() + (region.getHeight() - textSize.getHeight()) / 2;
         const auto size = textSize.getHeight();

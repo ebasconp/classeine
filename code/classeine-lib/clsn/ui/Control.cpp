@@ -12,8 +12,6 @@ namespace clsn::ui
     : m_defaultSectionName{sectionName}
     , m_invalidated{true}
     {
-        loadControlDefaults();
-
         initEvents();
     }
 
@@ -119,18 +117,37 @@ namespace clsn::ui
         return *m_renderer.get();
     }
 
-    void Control::loadControlDefaults()
-    {
-        auto sectionName = getDefaultSectionName();
-
-        auto& uiManager = UIManager::getInstance();
-        setBackgroundColor(uiManager.getColor(sectionName, "controlBackgroundColor"));
-        setForegroundColor(uiManager.getColor(sectionName, "controlForegroundColor"));
-        setFont(uiManager.getFont(sectionName, "font"));
-    }
-
     void Control::loadDefaults()
     {
-        loadControlDefaults();
     }
+
+    auto Control::getActualBackgroundColor() const -> const Color&
+    {
+        const auto& color = getBackgroundColor();
+        if (color.has_value())
+            return color.value();
+
+        return UIManager::getInstance().getColor(
+                    m_defaultSectionName, "controlBackgroundColor");
+    }
+
+    auto Control::getActualForegroundColor() const -> const Color&
+    {
+        const auto& color = getForegroundColor();
+        if (color.has_value())
+            return color.value();
+
+        return UIManager::getInstance().getColor(
+                    m_defaultSectionName, "controlForegroundColor");
+    }
+
+    auto Control::getActualFont() const -> const Font&
+    {
+        const auto& font = getFont();
+        if (font.has_value())
+            return font.value();
+
+        return UIManager::getInstance().getFont(m_defaultSectionName, "font");
+    }
+
 }

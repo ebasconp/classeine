@@ -30,7 +30,7 @@ namespace clsn::ui::renderers
 
         m_labelRenderer.paint(graphics, region, radioButton);
 
-        auto textSize = graphics.getTextSize(radioButton.getFont(), radioButton.getText());
+        auto textSize = graphics.getTextSize(radioButton.getActualFont(), radioButton.getText());
 
         const auto mid = radioButton.getActualPosition().getY() + (region.getHeight() - textSize.getHeight()) / 2;
         const auto size = textSize.getHeight();

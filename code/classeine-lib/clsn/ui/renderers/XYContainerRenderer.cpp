@@ -30,7 +30,7 @@ namespace clsn::ui::renderers
 
         if (container.needsToPaintTheContainer())
         {
-            graphics.setDrawColor(baseControl.getBackgroundColor());
+            graphics.setDrawColor(baseControl.getActualBackgroundColor());
             graphics.drawFillRectangle(region);
         }
 

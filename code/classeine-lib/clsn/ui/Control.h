@@ -45,12 +45,16 @@ namespace clsn::ui
 
         CLSN_PROPERTY(ActualPosition, Point, true);
         CLSN_PROPERTY(ActualSize, Dimension, true);
-        CLSN_PROPERTY(BackgroundColor, Color, true);
+        CLSN_PROPERTY(BackgroundColor, std::optional<Color>, true);
         CLSN_BOOL_PROPERTY_VAL(Enabled, true, true);
-        CLSN_PROPERTY(Font, Font, true);
-        CLSN_PROPERTY(ForegroundColor, Color, true);
+        CLSN_PROPERTY(Font, std::optional<Font>, true);
+        CLSN_PROPERTY(ForegroundColor, std::optional<Color>, true);
         CLSN_PROPERTY(Text, std::string, true);
         CLSN_BOOL_PROPERTY_VAL(Visible, true, true);
+
+        auto getActualBackgroundColor() const -> const Color&;
+        auto getActualForegroundColor() const -> const Color&;
+        auto getActualFont() const -> const Font&;
 
         void addMouseClickListener(EventListener<MouseClickEvent> event);
         void notifyMouseClickEvent(MouseClickEvent& e);
@@ -113,6 +117,5 @@ namespace clsn::ui
 
     private:
         void initEvents();
-        void loadControlDefaults();
     };
 }

@@ -17,18 +17,18 @@ namespace clsn::ui::renderers::LabelRendererHelpers
         {
             graphics.setDrawColor({192, 192, 192});
             graphics.drawText(region + Point{1, 1},
-                              control.getFont(),
+                              control.getActualFont(),
                               control.getText());
         }
 
         graphics.setDrawColor(control.isEnabled()
-                              ? control.getForegroundColor()
+                              ? control.getActualForegroundColor()
                               : UIManager::getInstance().getColor(
                                     "Theme", "disabledForegroundColor")
                           );
 
         graphics.drawText(region,
-                          control.getFont(),
+                          control.getActualFont(),
                           control.getText());
     }
 }
