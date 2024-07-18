@@ -150,4 +150,13 @@ namespace clsn::ui
         return UIManager::getInstance().getFont(m_defaultSectionName, "font");
     }
 
+    auto Control::getActualPreferredSize() const -> const Dimension&
+    {
+        const auto& size = getPreferredSize();
+        if (size.has_value())
+            return size.value();
+
+        return UIManager::getInstance().getDimension(m_defaultSectionName, "preferredSize");
+    }
+
 }

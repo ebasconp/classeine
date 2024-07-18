@@ -77,6 +77,11 @@ namespace clsn::ui
         return m_skin->getColor(sectionName, name);
     }
 
+    auto UIManager::getDimension(std::string_view sectionName, std::string_view name) const -> const Dimension&
+    {
+        return m_skin->getDimension(sectionName, name);
+    }
+
     auto UIManager::getFont(std::string_view sectionName, std::string_view name) const -> const Font&
     {
         return m_skin->getFont(sectionName, name);

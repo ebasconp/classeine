@@ -22,6 +22,11 @@ namespace clsn::ui
         return m_currentTheme.second->getColor(sectionName, name);
     }
 
+    auto UISkin::getDimension(std::string_view sectionName, std::string_view name) -> const Dimension&
+    {
+        return m_currentTheme.second->getDimension(sectionName, name);
+    }
+
     auto UISkin::getFont(std::string_view sectionName, std::string_view name) -> const Font&
     {
         return m_currentTheme.second->getFont(sectionName, name);

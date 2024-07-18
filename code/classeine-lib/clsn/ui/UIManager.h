@@ -46,6 +46,7 @@ namespace clsn::ui
         auto getRendererByControl(const Control& ctrl) const -> std::shared_ptr<IRenderer>;
 
         auto getColor(std::string_view sectionName, std::string_view name) const -> const Color&;
+        auto getDimension(std::string_view sectionName, std::string_view name) const -> const Dimension&;
         auto getFont(std::string_view sectionName, std::string_view name) const -> const Font&;
 
         void addFontMapping(const FontInfo& fontInfo, std::string_view path);

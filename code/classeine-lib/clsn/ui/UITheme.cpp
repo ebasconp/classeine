@@ -26,6 +26,11 @@ namespace clsn::ui
         return getFromDefaults<Color>(m_defaultsByName, sectionName, name, errorValue);
     }
 
+    auto UITheme::getDimension(std::string_view sectionName, std::string_view name, const Dimension& errorValue) const -> const Dimension&
+    {
+        return getFromDefaults<Dimension>(m_defaultsByName, sectionName, name, errorValue);
+    }
+
     auto UITheme::getFont(std::string_view sectionName, std::string_view name, const Font& errorValue) const -> const Font&
     {
         return getFromDefaults<Font>(m_defaultsByName, sectionName, name, errorValue);

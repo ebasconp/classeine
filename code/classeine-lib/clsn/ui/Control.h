@@ -49,12 +49,14 @@ namespace clsn::ui
         CLSN_BOOL_PROPERTY_VAL(Enabled, true, true);
         CLSN_PROPERTY(Font, std::optional<Font>, true);
         CLSN_PROPERTY(ForegroundColor, std::optional<Color>, true);
+        CLSN_PROPERTY(PreferredSize, std::optional<Dimension>, true);
         CLSN_PROPERTY(Text, std::string, true);
         CLSN_BOOL_PROPERTY_VAL(Visible, true, true);
 
         auto getActualBackgroundColor() const -> const Color&;
         auto getActualForegroundColor() const -> const Color&;
         auto getActualFont() const -> const Font&;
+        auto getActualPreferredSize() const -> const Dimension&;
 
         void addMouseClickListener(EventListener<MouseClickEvent> event);
         void notifyMouseClickEvent(MouseClickEvent& e);
