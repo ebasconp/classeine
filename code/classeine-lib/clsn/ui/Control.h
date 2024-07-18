@@ -96,9 +96,6 @@ namespace clsn::ui
         auto getParentWindow() -> std::optional<std::reference_wrapper<Window>>;
         auto getParentWindow() const -> std::optional<std::reference_wrapper<const Window>>;
 
-        void setBounds(const Region& bounds);
-        auto getBounds() const -> Region;
-
         auto containsPoint(const Point& point) const -> bool;
 
         template <typename Proc>
