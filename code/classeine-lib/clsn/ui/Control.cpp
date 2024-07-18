@@ -147,7 +147,7 @@ namespace clsn::ui
         if (font.has_value())
             return font.value();
 
-        return UIManager::getInstance().getFont(m_defaultSectionName, "font");
+        return UIManager::getInstance().getFont(m_defaultSectionName, "defaultFont");
     }
 
     auto Control::getActualPreferredSize() const -> const Dimension&

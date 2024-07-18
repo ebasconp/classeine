@@ -51,6 +51,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/defaults/DefaultDarkUITheme.cpp
         code/classeine-lib/clsn/ui/defaults/DefaultLightUITheme.cpp
         code/classeine-lib/clsn/ui/defaults/DefaultUISkin.cpp
+        code/classeine-lib/clsn/ui/defaults/DefaultUITheme.cpp
 
         code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/Sdl2FontCache.cpp
