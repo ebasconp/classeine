@@ -65,7 +65,7 @@ namespace clsn::ui::impl::sdl2
             const int resizable =
                 m_parentWindow.isResizable() ? SDL_WINDOW_RESIZABLE : 0;
 
-            m_window = SDL_CreateWindow("CLASSEINE",
+            m_window = SDL_CreateWindow(m_parentWindow.getText().c_str(),
                                         SDL_WINDOWPOS_CENTERED,
                                         SDL_WINDOWPOS_CENTERED,
                                         m_parentWindow.getSize().getWidth(),

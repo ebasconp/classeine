@@ -106,6 +106,7 @@ void test()
     UIManager::getInstance().installTheme("light");
 
     MainWindow<VBoxContainer> mw;
+    mw.setText("Welcome to Classeine");
     mw.setSize({1000, 400}); //ETOTODO
 
     auto c0 = mw().makeAndAdd<Button>();
