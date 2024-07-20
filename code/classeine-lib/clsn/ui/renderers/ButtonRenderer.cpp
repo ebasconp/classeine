@@ -55,7 +55,7 @@ namespace clsn::ui::renderers
                                region.getHeight() - depth2};
 
         const auto& buttonColor = pressed
-            ? UIManager::getInstance().getColor("button", "pressedBackgroundColor")
+            ? UIManager::getInstance().getColor("Button", "pressedBackgroundColor")
             : control.getActualBackgroundColor();
 
         graphics.setDrawColor(buttonColor);
