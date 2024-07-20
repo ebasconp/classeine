@@ -1,13 +1,13 @@
 #pragma once
 
-#include "clsn/ui/defaults/DefaultUITheme.h"
+#include "clsn/ui/amatista/AmatistaUITheme.h"
 
-namespace clsn::ui::defaults
+namespace clsn::ui::amatista
 {
-    class DefaultLightUITheme final : public DefaultUITheme
+    class LightAmatistaUITheme final : public AmatistaUITheme
     {
     public:
-        DefaultLightUITheme() = default;
+        LightAmatistaUITheme() = default;
 
     protected:
         auto getBevelUpColor() const -> Color override;

@@ -2,7 +2,7 @@
 
 #include "clsn/core/Panic.h"
 
-#include "defaults/DefaultUISkin.h"
+#include "amatista/AmatistaUISkin.h"
 
 #include <iostream> //ETOTODO: Remove
 
@@ -53,9 +53,9 @@ namespace clsn::ui
 
     void UIManager::populateDefaults()
     {
-        using namespace clsn::ui::defaults;
+        using namespace clsn::ui::amatista;
 
-        makeAndLoadSkin<DefaultUISkin>();
+        makeAndLoadSkin<AmatistaUISkin>();
     }
 
     auto UIManager::getPathByFontInfo(const FontInfo& fontInfo) const noexcept -> std::string_view

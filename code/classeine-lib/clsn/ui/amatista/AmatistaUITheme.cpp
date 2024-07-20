@@ -1,10 +1,10 @@
-#include "DefaultUITheme.h"
+#include "AmatistaUITheme.h"
 
 #include "clsn/draw/Colors.h"
 
-namespace clsn::ui::defaults
+namespace clsn::ui::amatista
 {
-    void DefaultUITheme::populateDefaults()
+    void AmatistaUITheme::populateDefaults()
     {
         add("", "bevelUpColor", getBevelUpColor());
         add("", "bevelDownColor", getBevelDownColor());
@@ -21,12 +21,12 @@ namespace clsn::ui::defaults
         add("Button", "preferredSize", getButtonPreferredSize());
     }
 
-    auto DefaultUITheme::getDefaultFont() const -> Font
+    auto AmatistaUITheme::getDefaultFont() const -> Font
     {
         return Font{"Nimbus", FontStyle::REGULAR, 14};
     }
 
-    auto DefaultUITheme::getButtonPreferredSize() const -> Dimension
+    auto AmatistaUITheme::getButtonPreferredSize() const -> Dimension
     {
         return Dimension{96, 32};
     }

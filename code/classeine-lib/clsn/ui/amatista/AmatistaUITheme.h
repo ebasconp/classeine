@@ -2,12 +2,12 @@
 
 #include "clsn/ui/UITheme.h"
 
-namespace clsn::ui::defaults
+namespace clsn::ui::amatista
 {
-    class DefaultUITheme : public UITheme
+    class AmatistaUITheme : public UITheme
     {
     public:
-        DefaultUITheme() = default;
+        AmatistaUITheme() = default;
 
         void populateDefaults() final;
         

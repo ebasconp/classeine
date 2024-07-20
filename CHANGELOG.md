@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20240720 Renamed default skin to Amatista
 * 20240718 Created base DefaultUITheme
 * 20240716 Added support for dynamically change theme
 * 20240715 Added UITheme and implemented Light and Dark themes

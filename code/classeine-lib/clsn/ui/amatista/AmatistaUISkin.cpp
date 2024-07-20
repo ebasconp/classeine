@@ -1,7 +1,7 @@
-#include "clsn/ui/defaults/DefaultUISkin.h"
+#include "clsn/ui/amatista/AmatistaUISkin.h"
 
-#include "clsn/ui/defaults/DefaultDarkUITheme.h"
-#include "clsn/ui/defaults/DefaultLightUITheme.h"
+#include "clsn/ui/amatista/DarkAmatistaUITheme.h"
+#include "clsn/ui/amatista/LightAmatistaUITheme.h"
 
 #include "clsn/ui/Button.h"
 #include "clsn/ui/CheckBox.h"
@@ -25,7 +25,7 @@ namespace
 {
     using namespace clsn::ui;
 
-    void loadRenderers(defaults::DefaultUISkin& skin)
+    void loadRenderers(amatista::AmatistaUISkin& skin)
     {
         skin.makeRendererAndAdd<Button, ButtonRenderer>();
         skin.makeRendererAndAdd<CheckBox, CheckBoxRenderer>();
@@ -37,18 +37,18 @@ namespace
         skin.makeRendererAndAdd<XYContainer, XYContainerRenderer>();
     }
 
-    void loadThemes(defaults::DefaultUISkin& skin)
+    void loadThemes(amatista::AmatistaUISkin& skin)
     {
-        skin.makeThemeAndAdd<defaults::DefaultLightUITheme>("light");
-        skin.makeThemeAndAdd<defaults::DefaultDarkUITheme>("dark");
+        skin.makeThemeAndAdd<amatista::LightAmatistaUITheme>("light");
+        skin.makeThemeAndAdd<amatista::DarkAmatistaUITheme>("dark");
 
         skin.installThemeByName("dark");
     }
 }
 
-namespace clsn::ui::defaults
+namespace clsn::ui::amatista
 {
-    DefaultUISkin::DefaultUISkin()
+    AmatistaUISkin::AmatistaUISkin()
     {
         using namespace clsn::ui;
         using namespace clsn::ui::renderers;

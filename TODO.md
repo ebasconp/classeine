@@ -1,6 +1,6 @@
 # TODO #
 
-* Create DefaultUITheme interface
+* Create AmatistaUITheme interface
 * Replace default colors to 4 default tones
 * XY anchors
 * Add hover support
