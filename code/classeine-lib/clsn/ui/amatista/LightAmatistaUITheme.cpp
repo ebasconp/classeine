@@ -34,6 +34,11 @@ namespace clsn::ui::amatista
         return Color{0, 49, 83};
     }
 
+    auto LightAmatistaUITheme::getControlHoveredBackgroundColor() const -> Color
+    {
+        return Color{0xF0, 0xF0, 0xF0};
+    }
+
     auto LightAmatistaUITheme::getDisabledBackgroundColor() const -> Color
     {
         return Color{0x60, 0x60, 0x60};

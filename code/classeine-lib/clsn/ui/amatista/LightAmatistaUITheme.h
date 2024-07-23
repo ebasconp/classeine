@@ -16,6 +16,7 @@ namespace clsn::ui::amatista
         auto getContainerForegroundColor() const -> Color override;
         auto getControlBackgroundColor() const -> Color override;
         auto getControlForegroundColor() const -> Color override;
+        auto getControlHoveredBackgroundColor() const -> Color override;
         auto getDisabledBackgroundColor() const -> Color override;
         auto getDisabledForegroundColor() const -> Color override;
 

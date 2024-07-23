@@ -72,7 +72,6 @@ namespace clsn::ui
             if (m_hoveredControl.has_value())
             {
                 m_hoveredControl.value().get().invalidate();
-                std::cout << "HOVER ENDS: " << typeid(m_hoveredControl.value().get()).name() << std::endl; //ETOTODO REMOVE
             }
 
             m_hoveredControl = currentlyHovered;
@@ -80,7 +79,6 @@ namespace clsn::ui
             if (m_hoveredControl.has_value())
             {
                 m_hoveredControl.value().get().invalidate();
-                std::cout << "HOVER STARTSS: " << typeid(m_hoveredControl.value().get()).name() << std::endl; //ETOTODO REMOVE
             }
 
         }

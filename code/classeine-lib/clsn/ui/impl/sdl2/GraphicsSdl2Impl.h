@@ -25,6 +25,8 @@ namespace clsn::ui::impl::sdl2
     class GraphicsSdl2Impl final
     {
         SDL_Renderer& m_renderer;
+        SDL_Texture& m_texture;
+
         Sdl2FontCache m_fontCache;
 
         mutable Color m_drawColor;
@@ -32,7 +34,7 @@ namespace clsn::ui::impl::sdl2
         mutable bool m_needToApply;
 
     public:
-        explicit GraphicsSdl2Impl(SDL_Renderer& renderer);
+        explicit GraphicsSdl2Impl(SDL_Renderer& renderer, SDL_Texture& texture);
         Sdl2FontCache& getFontCache() noexcept;
         const Sdl2FontCache& getFontCache() const noexcept;
 

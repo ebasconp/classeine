@@ -15,14 +15,11 @@ namespace
 {
     using namespace clsn::ui;
 
-    Color getUltimateBackgroundColor(const Button& button)
+    Color getUltimateBackgroundColor(const Button& button, bool isHovered)
     {
-        if (button.getParentWindow().has_value())
+        if (isHovered)
         {
-            if (button.getParentWindow().value().get().isHovered(button))
-            {
-                return Color{255, 255, 0};
-            }
+            return UIManager::getInstance().getColor(button.getDefaultSectionName(), "controlHoveredBackgroundColor");
         }
 
         return button.getActualBackgroundColor();
@@ -53,12 +50,17 @@ namespace clsn::ui::renderers
 
         auto& control = static_cast<const clsn::ui::Button&>(baseControl);
 
-        auto sectionName = control.getDefaultSectionName();
+        const auto sectionName = control.getDefaultSectionName();
+        const auto isHovered = control.isHovered();
 
-        auto& bevelUp = UIManager::getInstance().getColor(
-            sectionName, "bevelUpColor");
-        auto& bevelDown = UIManager::getInstance().getColor(
-            sectionName, "bevelDownColor");
+        auto& unhoveredColor =
+            UIManager::getInstance().getColor(
+                control.getDefaultSectionName(), "controlBackgroundColor");
+
+        auto& bevelUp = isHovered ? UIManager::getInstance().getColor(
+            sectionName, "bevelUpColor") : unhoveredColor;
+        auto& bevelDown = isHovered ? UIManager::getInstance().getColor(
+            sectionName, "bevelDownColor") : unhoveredColor;
 
         constexpr int depth = 2;
 
@@ -76,7 +78,7 @@ namespace clsn::ui::renderers
 
         const auto& buttonColor = pressed
             ? UIManager::getInstance().getColor("Button", "pressedBackgroundColor")
-            : getUltimateBackgroundColor(control);
+            : getUltimateBackgroundColor(control, isHovered);
 
         graphics.setDrawColor(buttonColor);
         graphics.drawFillRectangle(innerRect);

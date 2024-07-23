@@ -21,6 +21,7 @@ namespace clsn::ui::amatista
         virtual auto getContainerForegroundColor() const -> Color = 0;
         virtual auto getControlBackgroundColor() const -> Color = 0;
         virtual auto getControlForegroundColor() const -> Color = 0;
+        virtual auto getControlHoveredBackgroundColor() const -> Color = 0;
         virtual auto getDisabledBackgroundColor() const -> Color = 0;
         virtual auto getDisabledForegroundColor() const -> Color = 0;
 

@@ -143,6 +143,14 @@ namespace clsn::ui
         return std::nullopt;
     }
 
+    auto Control::isHovered() const -> bool
+    {
+        if (!m_parentWindow.has_value())
+            return false;
+
+        return m_parentWindow.value().get().isHovered(*this);
+    }
+
 
     auto Control::getRenderer() -> IRenderer&
     {

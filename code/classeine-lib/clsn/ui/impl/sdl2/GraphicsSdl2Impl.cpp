@@ -45,11 +45,15 @@ namespace clsn::ui::impl::sdl2
 {
     using namespace clsn::draw;
 
-    GraphicsSdl2Impl::GraphicsSdl2Impl(SDL_Renderer& renderer)
+    GraphicsSdl2Impl::GraphicsSdl2Impl(
+            SDL_Renderer& renderer,
+            SDL_Texture& texture)
     : m_renderer{renderer}
+    , m_texture{texture}
     , m_drawColor{255, 255, 255}
     , m_needToApply{false}
     {
+        SDL_SetRenderTarget(&m_renderer, &m_texture);
     }
 
     Sdl2FontCache& GraphicsSdl2Impl::getFontCache() noexcept
@@ -79,7 +83,12 @@ namespace clsn::ui::impl::sdl2
     {
         if (m_needToApply)
         {
+            SDL_SetRenderTarget(&m_renderer, nullptr);
+            SDL_RenderClear(&m_renderer);
+            SDL_RenderCopy(&m_renderer, &m_texture, nullptr, nullptr);
             SDL_RenderPresent(&m_renderer);
+
+            SDL_SetRenderTarget(&m_renderer, &m_texture);
             m_needToApply = false;
         }
     }

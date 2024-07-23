@@ -101,8 +101,6 @@ namespace clsn::ui
         {
             m_needsToPaintTheContainer = true;
 
-            std::cout << "INVALIDATING CONTAINER" << std::endl; //ETOTODO REMOVE
-
             int count = getCount();
             for (int i = 0; i < count; i++)
                 m_controls[i].first->invalidate();

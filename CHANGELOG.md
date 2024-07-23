@@ -1,5 +1,7 @@
 # CHANGELOG #
 
+* 20240723 Painting on a texture instead of default surface
+* 20240722 Support for hovering
 * 20240720 Renamed default skin to Amatista
 * 20240718 Created base DefaultUITheme
 * 20240716 Added support for dynamically change theme

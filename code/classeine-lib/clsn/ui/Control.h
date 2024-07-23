@@ -113,6 +113,8 @@ namespace clsn::ui
         auto getParentWindow() -> std::optional<std::reference_wrapper<Window>>;
         auto getParentWindow() const -> std::optional<std::reference_wrapper<const Window>>;
 
+        auto isHovered() const -> bool;
+
         auto containsPoint(const Point& point) const -> bool;
         virtual auto getControlByPosition(const Point& point) const ->
                 std::optional<std::reference_wrapper<const Control>>;
