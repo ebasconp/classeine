@@ -13,7 +13,8 @@ namespace clsn::ui
 
     class Window : public Control
     {
-        std::optional<std::reference_wrapper<Control>> m_mouseGrabberControl;
+        ControlOptionalReference m_mouseGrabberControl;
+        ConstControlOptionalReference m_hoveredControl;
 
     public:
         explicit Window(std::string_view sectionName);
@@ -25,6 +26,14 @@ namespace clsn::ui
 
         void grabMouse(Control& control);
         void releaseMouse();
+
+        auto isHovered(const Control& control) const -> bool;
+
+        virtual auto getControlByPosition(const Point& point) const ->
+                            ConstControlOptionalReference = 0;
+
+    protected:
+        void processMouseMovedEvent(events::MouseMovedEvent &e) override;
 
     private:
         void initDefaults();

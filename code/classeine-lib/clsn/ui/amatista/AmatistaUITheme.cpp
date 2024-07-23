@@ -12,6 +12,7 @@ namespace clsn::ui::amatista
         add("", "containerForegroundColor", getContainerForegroundColor());
         add("", "controlBackgroundColor", getControlBackgroundColor());
         add("", "controlForegroundColor", getControlForegroundColor());
+        add("", "controlHoveredBackgroundColor", getControlHoveredBackgroundColor());
         add("", "disabledBackgroundColor", getDisabledBackgroundColor());
         add("", "disabledForegroundColor", getDisabledForegroundColor());
 

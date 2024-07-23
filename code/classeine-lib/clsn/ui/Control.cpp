@@ -2,7 +2,9 @@
 #include "UIManager.h"
 #include "Window.h"
 
-#include "clsn/draw/Colors.h"
+#include "clsn/draw/Region.h"
+
+#include <iostream> //ETOTODO REMOVE THIS
 
 namespace clsn::ui
 {
@@ -18,12 +20,23 @@ namespace clsn::ui
     void Control::paint(Graphics& graphics, const Region& region) const
     {
         debug_count("paint");
+
         getRenderer().paint(graphics, region, *this);
     }
 
     void Control::notifyMouseClickEvent(MouseClickEvent& e)
     {
         processMouseClickEvent(e);
+    }
+
+    void Control::addMouseMovedListener(EventListener<MouseMovedEvent> event)
+    {
+        m_mouseMovedListeners.add(std::move(event));
+    }
+
+    void Control::notifyMouseMovedEvent(MouseMovedEvent& e)
+    {
+        processMouseMovedEvent(e);
     }
 
     void Control::processMouseClickEvent(events::MouseClickEvent& e)
@@ -37,6 +50,14 @@ namespace clsn::ui
         }
 
         m_mouseClickListeners.notify(e);
+    }
+
+    void Control::processMouseMovedEvent(events::MouseMovedEvent& e)
+    {
+        if (!isEnabled())
+            return;
+
+        m_mouseMovedListeners.notify(e);
     }
 
     void Control::addMouseClickListener(EventListener<MouseClickEvent> event)
@@ -74,6 +95,18 @@ namespace clsn::ui
         // Nothing to do here
     }
 
+    auto Control::operator==(const Control& other) const -> bool
+    {
+        return this == &other;
+    }
+
+
+    auto Control::operator!=(const Control& other) const -> bool
+    {
+        return this != &other;
+    }
+
+
     void Control::initEvents()
     {
         addVisibleChangedListener([this](auto&) { invalidate(); });
@@ -101,6 +134,24 @@ namespace clsn::ui
         return Region{m_ActualPosition.get(), m_ActualSize.get()}.containsPoint(point);
     }
 
+    auto Control::getControlByPosition(const Point& point) const
+        -> std::optional<std::reference_wrapper<const Control>>
+    {
+        if (this->containsPoint(point))
+            return *this;
+
+        return std::nullopt;
+    }
+
+    auto Control::isHovered() const -> bool
+    {
+        if (!m_parentWindow.has_value())
+            return false;
+
+        return m_parentWindow.value().get().isHovered(*this);
+    }
+
+
     auto Control::getRenderer() -> IRenderer&
     {
         if (m_renderer == nullptr)
@@ -119,6 +170,7 @@ namespace clsn::ui
 
     void Control::loadDefaults()
     {
+        // Do nothing here
     }
 
     auto Control::getActualBackgroundColor() const -> const Color&

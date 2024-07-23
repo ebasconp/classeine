@@ -1,9 +1,11 @@
 #pragma once
 
-#include "clsn/draw/Colors.h"
-
 #include "Control.h"
 #include "UIManager.h"
+
+#include "Window.h"
+
+#include <iostream> //ETOTODO: REMOVE
 
 namespace clsn::ui
 {
@@ -140,6 +142,24 @@ namespace clsn::ui
             }
         }
 
+        auto getControlByPosition(const Point &point) const
+    -> std::optional<std::reference_wrapper<const Control>> override
+        {
+            const auto count = getCount();
+            for (int i = 0; i < count; i++)
+            {
+                auto& control = (*this)[i];
+                if (!control.isVisible() || !control.isEnabled())
+                    continue;
+
+                auto result = control.getControlByPosition(point);
+                if (result.has_value())
+                    return result;
+            }
+
+            return std::nullopt;
+        }
+
     protected:
         void processMouseClickEvent(events::MouseClickEvent& e) override
         {
@@ -157,6 +177,24 @@ namespace clsn::ui
             }
 
             Control::processMouseClickEvent(e);
+        }
+
+        void processMouseMovedEvent(events::MouseMovedEvent& e) override
+        {
+            Control::processMouseMovedEvent(e);
+
+            const auto count = getCount();
+            for (int i = 0; i < count; i++)
+            {
+                auto& control = (*this)[i];
+                if (!control.isVisible() || !control.isEnabled())
+                    continue;
+
+                if (control.containsPoint(e.position))
+                {
+                    control.notifyMouseMovedEvent(e);
+                }
+            }
         }
 
     private:
