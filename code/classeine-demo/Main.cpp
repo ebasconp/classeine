@@ -2,6 +2,8 @@
 
 #include "clsn/core/Panic.h"
 
+#include "clsn/draw/Colors.h"
+
 #include "clsn/ui/Button.h"
 #include "clsn/ui/CheckBox.h"
 #include "clsn/ui/HBoxContainer.h"

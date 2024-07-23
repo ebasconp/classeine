@@ -46,6 +46,18 @@ namespace clsn::ui
             m_control.notifyMouseClickEvent(e);
         }
 
+        void processMouseMovedEvent(events::MouseMovedEvent& e)
+        {
+            Window::processMouseMovedEvent(e);
+            m_control.notifyMouseMovedEvent(e);
+        }
+
+        auto getControlByPosition(const Point& point) const ->
+            std::optional<std::reference_wrapper<const Control>> override
+        {
+            return m_control.getControlByPosition(point);
+        }
+
     private:
         void loadWindowDefaults()
         {

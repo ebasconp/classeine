@@ -4,17 +4,19 @@
 
 #include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
+#include "clsn/ui/events/MouseMovedEvent.h"
 
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
 #include "clsn/draw/Point.h"
-#include "clsn/draw/Region.h"
 
 #include "clsn/core/EntityWrapper.h"
 #include "clsn/core/EventListenerList.h"
 #include "clsn/core/Property.h"
 
+#include <functional>
 #include <memory>
+#include <optional>
 #include <string_view>
 
 namespace clsn::ui
@@ -28,8 +30,9 @@ namespace clsn::ui
 
     class Control : public Entity
     {
-        EventListenerList<MouseClickEvent> m_mouseClickListeners;
         EventListenerList<ControlResizedEvent> m_controlResizedListeners;
+        EventListenerList<MouseClickEvent> m_mouseClickListeners;
+        EventListenerList<MouseMovedEvent> m_mouseMovedListeners;
 
         std::shared_ptr<Entity> m_tag;
         mutable std::shared_ptr<IRenderer> m_renderer;
@@ -42,6 +45,12 @@ namespace clsn::ui
 
     public:
         explicit Control(std::string_view sectionName);
+
+        Control(const Control&) = delete;
+        Control(Control&&) = delete;
+
+        Control& operator=(const Control&) = delete;
+        Control& operator=(Control&&) = delete;
 
         CLSN_PROPERTY(ActualPosition, Point, true);
         CLSN_PROPERTY(ActualSize, Dimension, true);
@@ -58,8 +67,14 @@ namespace clsn::ui
         auto getActualFont() const -> const Font&;
         auto getActualPreferredSize() const -> const Dimension&;
 
+        auto operator==(const Control&) const -> bool;
+        auto operator!=(const Control&) const -> bool;
+
         void addMouseClickListener(EventListener<MouseClickEvent> event);
         void notifyMouseClickEvent(MouseClickEvent& e);
+
+        void addMouseMovedListener(EventListener<MouseMovedEvent> event);
+        void notifyMouseMovedEvent(MouseMovedEvent& e);
 
         void paint(Graphics& graphics, const Region& region) const;
 
@@ -99,6 +114,8 @@ namespace clsn::ui
         auto getParentWindow() const -> std::optional<std::reference_wrapper<const Window>>;
 
         auto containsPoint(const Point& point) const -> bool;
+        virtual auto getControlByPosition(const Point& point) const ->
+                std::optional<std::reference_wrapper<const Control>>;
 
         template <typename Proc>
         void invokeInParentWindow(Proc proc)
@@ -113,8 +130,16 @@ namespace clsn::ui
 
     protected:
         virtual void processMouseClickEvent(events::MouseClickEvent& e);
+        virtual void processMouseMovedEvent(events::MouseMovedEvent& e);
 
     private:
         void initEvents();
     };
+
+    using ConstControlOptionalReference =
+            std::optional<std::reference_wrapper<const Control>>;
+
+    using ControlOptionalReference =
+        std::optional<std::reference_wrapper<Control>>;
+
 }

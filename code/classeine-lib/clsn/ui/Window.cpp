@@ -2,6 +2,25 @@
 
 #include "UIManager.h"
 
+#include <iostream> //ETOTODO: REMOVE THIS
+
+namespace
+{
+    using namespace clsn::ui;
+
+    auto areEqual(
+            const ConstControlOptionalReference& a,
+            const ConstControlOptionalReference& b) -> bool
+    {
+        if (a.has_value() != b.has_value())
+            return false;
+
+        if (!a.has_value())
+            return true;
+
+        return a.value().get() == b.value().get();
+    }
+}
 namespace clsn::ui
 {
     Window::Window(std::string_view sectionName)
@@ -44,4 +63,35 @@ namespace clsn::ui
             m_mouseGrabberControl = std::nullopt;
         }
     }
+
+    void Window::processMouseMovedEvent(events::MouseMovedEvent &e)
+    {
+        auto currentlyHovered = getControlByPosition(e.position);
+        if (!areEqual(m_hoveredControl, currentlyHovered))
+        {
+            if (m_hoveredControl.has_value())
+            {
+                m_hoveredControl.value().get().invalidate();
+                std::cout << "HOVER ENDS: " << typeid(m_hoveredControl.value().get()).name() << std::endl; //ETOTODO REMOVE
+            }
+
+            m_hoveredControl = currentlyHovered;
+
+            if (m_hoveredControl.has_value())
+            {
+                m_hoveredControl.value().get().invalidate();
+                std::cout << "HOVER STARTSS: " << typeid(m_hoveredControl.value().get()).name() << std::endl; //ETOTODO REMOVE
+            }
+
+        }
+    }
+
+    auto Window::isHovered(const Control& control) const -> bool
+    {
+        if (!m_hoveredControl.has_value())
+            return false;
+
+        return control == m_hoveredControl.value().get();
+    }
+
 }

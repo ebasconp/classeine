@@ -4,6 +4,7 @@
 
 #include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
+#include "clsn/ui/events/MouseMovedEvent.h"
 
 #include "clsn/draw/Dimension.h"
 #include "clsn/draw/Point.h"
@@ -157,6 +158,10 @@ namespace clsn::ui::impl::sdl2
                         triggerMouseClickEvent(event, event.type);
                         break;
 
+                    case SDL_MOUSEMOTION:
+                        triggerMouseMovedEvent(event);
+                        break;
+
                     default:
                         break;
                 }
@@ -178,6 +183,12 @@ namespace clsn::ui::impl::sdl2
                 status, Point{e.button.x, e.button.y}};
 
             m_parentWindow.processMouseClickEvent(mouseClickEvent);
+        }
+
+        void triggerMouseMovedEvent(SDL_Event& e)
+        {
+            clsn::ui::events::MouseMovedEvent mouseMovedEvent{Point{e.motion.x, e.motion.y}};
+            m_parentWindow.processMouseMovedEvent(mouseMovedEvent);
         }
 
         void processControlResizedEvent(const SDL_Event& e)

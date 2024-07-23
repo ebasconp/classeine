@@ -9,6 +9,26 @@
 #include "BorderRendererHelpers.h"
 #include "LabelRendererHelpers.h"
 
+#include <clsn/ui/Window.h>
+
+namespace
+{
+    using namespace clsn::ui;
+
+    Color getUltimateBackgroundColor(const Button& button)
+    {
+        if (button.getParentWindow().has_value())
+        {
+            if (button.getParentWindow().value().get().isHovered(button))
+            {
+                return Color{255, 255, 0};
+            }
+        }
+
+        return button.getActualBackgroundColor();
+    }
+}
+
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
@@ -56,7 +76,7 @@ namespace clsn::ui::renderers
 
         const auto& buttonColor = pressed
             ? UIManager::getInstance().getColor("Button", "pressedBackgroundColor")
-            : control.getActualBackgroundColor();
+            : getUltimateBackgroundColor(control);
 
         graphics.setDrawColor(buttonColor);
         graphics.drawFillRectangle(innerRect);
