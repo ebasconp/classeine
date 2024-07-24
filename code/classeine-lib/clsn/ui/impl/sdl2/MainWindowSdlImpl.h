@@ -26,7 +26,6 @@ namespace clsn::ui::impl::sdl2
 
         SDL_Window* m_window = nullptr;
         SDL_Renderer* m_renderer = nullptr;
-        SDL_Texture* m_texture = nullptr;
 
         bool m_sdlInitialized = false;
 
@@ -95,21 +94,6 @@ namespace clsn::ui::impl::sdl2
                 return;
             }
 
-            m_texture = SDL_CreateTexture(
-                m_renderer,
-                SDL_PIXELFORMAT_RGBA8888,
-                SDL_TEXTUREACCESS_TARGET,
-                m_parentWindow.getSize().getWidth(),
-                m_parentWindow.getSize().getHeight());
-            if (m_texture == nullptr)
-            {
-                SDL_Log("Error while creating texture: %s", SDL_GetError());
-                SDL_DestroyRenderer(m_renderer);
-                SDL_DestroyWindow(m_window);
-                Panic("Error while creating texture: "s + SDL_GetError());
-                return;
-            }
-
             auto& minimumSize = m_parentWindow.getMinimumSize();
             SDL_SetWindowMinimumSize(
                 m_window, minimumSize.getWidth(), minimumSize.getHeight());
@@ -119,12 +103,6 @@ namespace clsn::ui::impl::sdl2
 
         void hide()
         {
-            if (m_texture != nullptr)
-            {
-                SDL_DestroyTexture(m_texture);
-                m_texture = nullptr;
-            }
-
             if (m_renderer != nullptr)
             {
                 SDL_DestroyRenderer(m_renderer);
@@ -158,7 +136,7 @@ namespace clsn::ui::impl::sdl2
             m_parentWindow().doLayout();
             m_parentWindow().invalidate();
 
-            GraphicsSdl2Impl graphics{*m_renderer, *m_texture};
+            GraphicsSdl2Impl graphics{*m_renderer, m_parentWindow.getSize()};
 
             SDL_Event event;
             while (SDL_WaitEvent(&event))
