@@ -15,6 +15,8 @@
 
 #include <SDL_ttf.h>
 
+#include <iostream> //ETOTODO: TO REMOVE
+
 namespace
 {
     auto getFontFromCache(const clsn::draw::Font& font,
@@ -47,13 +49,17 @@ namespace clsn::ui::impl::sdl2
 
     GraphicsSdl2Impl::GraphicsSdl2Impl(
             SDL_Renderer& renderer,
-            SDL_Texture& texture)
+            const Dimension& size)
     : m_renderer{renderer}
-    , m_texture{texture}
     , m_drawColor{255, 255, 255}
     , m_needToApply{false}
     {
-        SDL_SetRenderTarget(&m_renderer, &m_texture);
+        createTexture(size);
+    }
+
+    GraphicsSdl2Impl::~GraphicsSdl2Impl()
+    {
+        destroyTexture();
     }
 
     Sdl2FontCache& GraphicsSdl2Impl::getFontCache() noexcept
@@ -64,6 +70,42 @@ namespace clsn::ui::impl::sdl2
     const Sdl2FontCache& GraphicsSdl2Impl::getFontCache() const noexcept
     {
         return m_fontCache;
+    }
+
+    void GraphicsSdl2Impl::resize(const Dimension& newSize)
+    {
+        destroyTexture();
+        createTexture(newSize);
+    }
+
+    void GraphicsSdl2Impl::destroyTexture()
+    {
+        if (m_texture != nullptr)
+        {
+            SDL_DestroyTexture(m_texture);
+        }
+    }
+
+    void GraphicsSdl2Impl::createTexture(const Dimension& newSize)
+    {
+        using namespace std::string_literals;
+
+        m_texture = SDL_CreateTexture(
+            &m_renderer,
+            SDL_PIXELFORMAT_RGBA8888,
+            SDL_TEXTUREACCESS_TARGET,
+            newSize.getWidth(),
+            newSize.getHeight());
+
+        if (m_texture == nullptr)
+        {
+            SDL_Log("Error while creating texture: %s", SDL_GetError());
+            SDL_DestroyRenderer(&m_renderer);
+            Panic("Error while creating texture: "s + SDL_GetError());
+            return;
+        }
+
+        SDL_SetRenderTarget(&m_renderer, m_texture);
     }
 
     void GraphicsSdl2Impl::setDrawColor(const Color& c) const
@@ -85,10 +127,11 @@ namespace clsn::ui::impl::sdl2
         {
             SDL_SetRenderTarget(&m_renderer, nullptr);
             SDL_RenderClear(&m_renderer);
-            SDL_RenderCopy(&m_renderer, &m_texture, nullptr, nullptr);
+            SDL_RenderCopy(&m_renderer, m_texture, nullptr, nullptr);
             SDL_RenderPresent(&m_renderer);
 
-            SDL_SetRenderTarget(&m_renderer, &m_texture);
+            SDL_SetRenderTarget(&m_renderer, m_texture);
+
             m_needToApply = false;
         }
     }

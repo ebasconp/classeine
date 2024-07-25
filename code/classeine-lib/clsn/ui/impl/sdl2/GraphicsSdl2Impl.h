@@ -2,6 +2,8 @@
 
 #include <string_view>
 
+#include "clsn/core/Entity.h"
+
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
 
@@ -22,10 +24,10 @@ namespace clsn::ui::impl::sdl2
 {
     using namespace clsn::draw;
 
-    class GraphicsSdl2Impl final
+    class GraphicsSdl2Impl final : public clsn::core::Entity
     {
         SDL_Renderer& m_renderer;
-        SDL_Texture& m_texture;
+        SDL_Texture* m_texture;
 
         Sdl2FontCache m_fontCache;
 
@@ -34,9 +36,13 @@ namespace clsn::ui::impl::sdl2
         mutable bool m_needToApply;
 
     public:
-        explicit GraphicsSdl2Impl(SDL_Renderer& renderer, SDL_Texture& texture);
+        explicit GraphicsSdl2Impl(SDL_Renderer& renderer, const Dimension& size);
+        ~GraphicsSdl2Impl();
+
         Sdl2FontCache& getFontCache() noexcept;
         const Sdl2FontCache& getFontCache() const noexcept;
+
+        void resize(const Dimension& newSize);
 
         void setDrawColor(const Color& c) const;
 
@@ -52,5 +58,9 @@ namespace clsn::ui::impl::sdl2
 
         void clear() const;
         void apply() const;
+
+    private:
+        void destroyTexture();
+        void createTexture(const Dimension& newSize);
     };
 }

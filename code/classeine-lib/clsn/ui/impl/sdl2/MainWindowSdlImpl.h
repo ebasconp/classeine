@@ -26,7 +26,6 @@ namespace clsn::ui::impl::sdl2
 
         SDL_Window* m_window = nullptr;
         SDL_Renderer* m_renderer = nullptr;
-        SDL_Texture* m_texture = nullptr;
 
         bool m_sdlInitialized = false;
 
@@ -95,21 +94,6 @@ namespace clsn::ui::impl::sdl2
                 return;
             }
 
-            m_texture = SDL_CreateTexture(
-                m_renderer,
-                SDL_PIXELFORMAT_RGBA8888,
-                SDL_TEXTUREACCESS_TARGET,
-                m_parentWindow.getSize().getWidth(),
-                m_parentWindow.getSize().getHeight());
-            if (m_texture == nullptr)
-            {
-                SDL_Log("Error while creating texture: %s", SDL_GetError());
-                SDL_DestroyRenderer(m_renderer);
-                SDL_DestroyWindow(m_window);
-                Panic("Error while creating texture: "s + SDL_GetError());
-                return;
-            }
-
             auto& minimumSize = m_parentWindow.getMinimumSize();
             SDL_SetWindowMinimumSize(
                 m_window, minimumSize.getWidth(), minimumSize.getHeight());
@@ -119,12 +103,6 @@ namespace clsn::ui::impl::sdl2
 
         void hide()
         {
-            if (m_texture != nullptr)
-            {
-                SDL_DestroyTexture(m_texture);
-                m_texture = nullptr;
-            }
-
             if (m_renderer != nullptr)
             {
                 SDL_DestroyRenderer(m_renderer);
@@ -146,6 +124,11 @@ namespace clsn::ui::impl::sdl2
         }
 
     private:
+        void resizeGraphics(GraphicsSdl2Impl& graphics, const Dimension& newSize)
+        {
+            graphics.resize(newSize);
+        }
+
         void repaintAll(GraphicsSdl2Impl& graphics)
         {
             const Region region{Point{0, 0}, m_parentWindow.getActualSize()};
@@ -158,7 +141,7 @@ namespace clsn::ui::impl::sdl2
             m_parentWindow().doLayout();
             m_parentWindow().invalidate();
 
-            GraphicsSdl2Impl graphics{*m_renderer, *m_texture};
+            GraphicsSdl2Impl graphics{*m_renderer, m_parentWindow.getSize()};
 
             SDL_Event event;
             while (SDL_WaitEvent(&event))
@@ -170,7 +153,10 @@ namespace clsn::ui::impl::sdl2
                     case SDL_WINDOWEVENT:
                         if (event.window.event == SDL_WINDOWEVENT_RESIZED)
                         {
-                            processControlResizedEvent(event);
+                            const Dimension newSize{event.window.data1, event.window.data2};
+
+                            resizeGraphics(graphics, newSize);
+                            processControlResizedEvent(newSize);
                             repaintAll(graphics);
                         }
 
@@ -214,12 +200,9 @@ namespace clsn::ui::impl::sdl2
             m_parentWindow.processMouseMovedEvent(mouseMovedEvent);
         }
 
-        void processControlResizedEvent(const SDL_Event& e)
+        void processControlResizedEvent(const Dimension& newSize)
         {
-            const int newWidth = e.window.data1;
-            const int newHeight = e.window.data2;
-
-            m_parentWindow.setActualSize(Dimension{newWidth, newHeight});
+            m_parentWindow.setActualSize(newSize);
         }
     };
 }
