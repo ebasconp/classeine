@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20240724 Moved texture to Graphics
 * 20240723 Painting on a texture instead of default surface
 * 20240722 Support for hovering
 * 20240720 Renamed default skin to Amatista

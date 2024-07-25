@@ -40,6 +40,8 @@ namespace clsn::ui::impl::sdl2
         Sdl2FontCache& getFontCache() noexcept;
         const Sdl2FontCache& getFontCache() const noexcept;
 
+        void resize(const Dimension& newSize);
+
         void setDrawColor(const Color& c) const;
 
         void drawFillCircle(const Region& r) const;
@@ -54,5 +56,9 @@ namespace clsn::ui::impl::sdl2
 
         void clear() const;
         void apply() const;
+
+    private:
+        void destroyTexture();
+        void createTexture(const Dimension& newSize);
     };
 }

@@ -15,6 +15,8 @@
 
 #include <SDL_ttf.h>
 
+#include <iostream> //ETOTODO: TO REMOVE
+
 namespace
 {
     auto getFontFromCache(const clsn::draw::Font& font,
@@ -52,32 +54,12 @@ namespace clsn::ui::impl::sdl2
     , m_drawColor{255, 255, 255}
     , m_needToApply{false}
     {
-        using namespace std::string_literals;
-
-        m_texture = SDL_CreateTexture(
-            &m_renderer,
-            SDL_PIXELFORMAT_RGBA8888,
-            SDL_TEXTUREACCESS_TARGET,
-            size.getWidth(),
-            size.getHeight());
-
-        if (m_texture == nullptr)
-        {
-            SDL_Log("Error while creating texture: %s", SDL_GetError());
-            SDL_DestroyRenderer(&m_renderer);
-            Panic("Error while creating texture: "s + SDL_GetError());
-            return;
-        }
-
-        SDL_SetRenderTarget(&m_renderer, m_texture);
+        createTexture(size);
     }
 
     GraphicsSdl2Impl::~GraphicsSdl2Impl()
     {
-        if (m_texture != nullptr)
-        {
-            SDL_DestroyTexture(m_texture);
-        }
+        destroyTexture();
     }
 
     Sdl2FontCache& GraphicsSdl2Impl::getFontCache() noexcept
@@ -88,6 +70,42 @@ namespace clsn::ui::impl::sdl2
     const Sdl2FontCache& GraphicsSdl2Impl::getFontCache() const noexcept
     {
         return m_fontCache;
+    }
+
+    void GraphicsSdl2Impl::resize(const Dimension& newSize)
+    {
+        destroyTexture();
+        createTexture(newSize);
+    }
+
+    void GraphicsSdl2Impl::destroyTexture()
+    {
+        if (m_texture != nullptr)
+        {
+            SDL_DestroyTexture(m_texture);
+        }
+    }
+
+    void GraphicsSdl2Impl::createTexture(const Dimension& newSize)
+    {
+        using namespace std::string_literals;
+
+        m_texture = SDL_CreateTexture(
+            &m_renderer,
+            SDL_PIXELFORMAT_RGBA8888,
+            SDL_TEXTUREACCESS_TARGET,
+            newSize.getWidth(),
+            newSize.getHeight());
+
+        if (m_texture == nullptr)
+        {
+            SDL_Log("Error while creating texture: %s", SDL_GetError());
+            SDL_DestroyRenderer(&m_renderer);
+            Panic("Error while creating texture: "s + SDL_GetError());
+            return;
+        }
+
+        SDL_SetRenderTarget(&m_renderer, m_texture);
     }
 
     void GraphicsSdl2Impl::setDrawColor(const Color& c) const

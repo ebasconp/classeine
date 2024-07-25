@@ -124,6 +124,11 @@ namespace clsn::ui::impl::sdl2
         }
 
     private:
+        void resizeGraphics(GraphicsSdl2Impl& graphics, const Dimension& newSize)
+        {
+            graphics.resize(newSize);
+        }
+
         void repaintAll(GraphicsSdl2Impl& graphics)
         {
             const Region region{Point{0, 0}, m_parentWindow.getActualSize()};
@@ -148,7 +153,10 @@ namespace clsn::ui::impl::sdl2
                     case SDL_WINDOWEVENT:
                         if (event.window.event == SDL_WINDOWEVENT_RESIZED)
                         {
-                            processControlResizedEvent(event);
+                            const Dimension newSize{event.window.data1, event.window.data2};
+
+                            resizeGraphics(graphics, newSize);
+                            processControlResizedEvent(newSize);
                             repaintAll(graphics);
                         }
 
@@ -192,12 +200,9 @@ namespace clsn::ui::impl::sdl2
             m_parentWindow.processMouseMovedEvent(mouseMovedEvent);
         }
 
-        void processControlResizedEvent(const SDL_Event& e)
+        void processControlResizedEvent(const Dimension& newSize)
         {
-            const int newWidth = e.window.data1;
-            const int newHeight = e.window.data2;
-
-            m_parentWindow.setActualSize(Dimension{newWidth, newHeight});
+            m_parentWindow.setActualSize(newSize);
         }
     };
 }
