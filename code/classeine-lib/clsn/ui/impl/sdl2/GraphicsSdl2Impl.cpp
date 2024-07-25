@@ -131,6 +131,7 @@ namespace clsn::ui::impl::sdl2
             SDL_RenderPresent(&m_renderer);
 
             SDL_SetRenderTarget(&m_renderer, m_texture);
+
             m_needToApply = false;
         }
     }

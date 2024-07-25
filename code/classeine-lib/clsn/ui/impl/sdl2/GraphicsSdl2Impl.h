@@ -2,6 +2,8 @@
 
 #include <string_view>
 
+#include "clsn/core/Entity.h"
+
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
 
@@ -22,7 +24,7 @@ namespace clsn::ui::impl::sdl2
 {
     using namespace clsn::draw;
 
-    class GraphicsSdl2Impl final
+    class GraphicsSdl2Impl final : public clsn::core::Entity
     {
         SDL_Renderer& m_renderer;
         SDL_Texture* m_texture;
