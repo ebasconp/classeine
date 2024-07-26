@@ -14,8 +14,5 @@ namespace clsn::ui
         using BaseContainer = ListContainer<Point>;
 
         XYContainer();
-
-    private:
-        void initEvents();
     };
 }

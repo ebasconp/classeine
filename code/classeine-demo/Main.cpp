@@ -6,6 +6,7 @@
 
 #include "clsn/ui/Button.h"
 #include "clsn/ui/CheckBox.h"
+#include "clsn/ui/DualContainer.h"
 #include "clsn/ui/HBoxContainer.h"
 #include "clsn/ui/Label.h"
 #include "clsn/ui/MainWindow.h"
@@ -177,6 +178,10 @@ void test()
 
     auto b2xy = xy->makeAndAdd<Button>(Point{200, 10});
     b2xy->setText("Button 2");
+
+    auto dc = mw().makeAndAdd<DualContainer>();
+    auto cb1 = dc->makeAndAdd<CheckBox>(false);
+    auto tb1 = dc->makeAndAdd<ToggleButton>(true);
 
     mw.setVisible(true);
 

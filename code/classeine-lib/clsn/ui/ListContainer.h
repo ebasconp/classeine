@@ -24,15 +24,18 @@ namespace clsn::ui
         , m_needsToPaintTheContainer{false}
         {
             loadContainerDefaults();
+            initListContainerEvents();
         }
 
         template <typename ControlType, typename... Args>
         std::shared_ptr<ControlType> makeAndAdd(Args&&... args)
         {
+            Constraint constraint{std::forward<Args>(args)...};
+            checkIfValid(constraint);
+
             auto ptr = std::make_shared<ControlType>();
             ptr->setParentWindow(getParentWindow());
-            m_controls.emplace_back(ptr,
-                                    Constraint{std::forward<Args>(args)...});
+            m_controls.emplace_back(ptr, std::move(constraint));
             initEvents(*ptr);
             return ptr;
         }
@@ -77,6 +80,11 @@ namespace clsn::ui
         const auto& operator[](int index) const noexcept
         {
             return *(m_controls[index].first);
+        }
+
+        auto getConstraintAt(int index) const -> const Constraint&
+        {
+            return m_controls[index].second;
         }
 
         template <typename Proc>
@@ -161,6 +169,11 @@ namespace clsn::ui
         }
 
     protected:
+        virtual void checkIfValid(const Constraint&) const
+        {
+            // Do nothing here
+        }
+
         void processMouseClickEvent(events::MouseClickEvent& e) override
         {
             const auto count = getCount();
@@ -198,6 +211,16 @@ namespace clsn::ui
         }
 
     private:
+        void initListContainerEvents()
+        {
+            addActualSizeChangedListener(
+                [this](auto& )
+                {
+                    doLayout();
+                });
+        }
+
+
         void loadContainerDefaults()
         {
             auto& uiManager = clsn::ui::UIManager::getInstance();

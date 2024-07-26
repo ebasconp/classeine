@@ -10,8 +10,5 @@ namespace clsn::ui
     {
     public:
         HBoxContainer();
-
-    private:
-        void initEvents();
     };
 }

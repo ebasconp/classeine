@@ -10,8 +10,5 @@ namespace clsn::ui
     {
     public:
         VBoxContainer();
-
-    private:
-        void initEvents();
     };
 }
