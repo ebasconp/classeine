@@ -10,5 +10,7 @@ namespace clsn::ui
     {
     public:
         VBoxContainer();
+
+        void doLayout() override;
     };
 }

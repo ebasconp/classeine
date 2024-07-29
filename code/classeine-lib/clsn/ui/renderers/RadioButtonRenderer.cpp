@@ -8,11 +8,6 @@
 
 namespace clsn::ui::renderers
 {
-    void RadioButtonRenderer::doLayout(Control& ) const
-    {
-        // Do nothing
-    }
-
     void RadioButtonRenderer::paint(Graphics& graphics,
                    const Region& region,
                    const Control& baseControl) const

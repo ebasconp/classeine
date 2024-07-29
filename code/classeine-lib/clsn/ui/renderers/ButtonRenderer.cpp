@@ -36,11 +36,6 @@ namespace clsn::ui::renderers
         return button.isPressed();
     }
 
-    void ButtonRenderer::doLayout(Control&) const
-    {
-        // Do nothing
-    }
-
     void ButtonRenderer::paint(Graphics& graphics,
                const Region& region,
                const Control& baseControl) const

@@ -14,7 +14,5 @@ namespace clsn::ui::renderers
         void paint(Graphics& graphics,
                    const Region& region,
                    const Control& baseControl) const override;
-
-        void doLayout(Control& control) const override;
     };
 }

@@ -11,10 +11,5 @@ namespace clsn::ui::renderers
         {
             // Nothing to do here
         }
-
-        void doLayout(Control&) const override
-        {
-            // Nothing to do here
-        }
     };
 }

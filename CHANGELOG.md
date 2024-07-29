@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20240729 Moved doLayout() from IRenderer to Control
 * 20240726 Added isValidControl() in ListContainer
 * 20240724 Moved texture to Graphics
 * 20240723 Painting on a texture instead of default surface

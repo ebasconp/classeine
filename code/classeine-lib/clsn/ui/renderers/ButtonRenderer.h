@@ -17,8 +17,6 @@ namespace clsn::ui::renderers
     public:
         [[nodiscard]] virtual auto paintAsPressed(const ClickableControl& button) const -> bool;
 
-        void doLayout(Control&) const override;
-
         void paint(Graphics& graphics,
                    const Region& region,
                    const Control& baseControl) const override;

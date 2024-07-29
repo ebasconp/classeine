@@ -11,8 +11,8 @@ namespace clsn::ui
     class XYContainer : public ListContainer<Point>
     {
     public:
-        using BaseContainer = ListContainer<Point>;
-
         XYContainer();
+
+        void doLayout() override;
     };
 }

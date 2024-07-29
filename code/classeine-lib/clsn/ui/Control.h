@@ -101,7 +101,7 @@ namespace clsn::ui
         auto getRenderer() const -> const IRenderer&;
         auto getRenderer() -> IRenderer&;
 
-        void doLayout() noexcept;
+        virtual void doLayout();
 
         virtual void invalidate() const noexcept;
         virtual void validate() const noexcept;

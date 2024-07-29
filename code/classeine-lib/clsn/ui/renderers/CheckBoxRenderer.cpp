@@ -7,11 +7,6 @@
 
 namespace clsn::ui::renderers
 {
-    void CheckBoxRenderer::doLayout(Control& ) const
-    {
-        // Do nothing
-    }
-
     void CheckBoxRenderer::paint(Graphics& graphics,
                    const Region& region,
                    const Control& baseControl) const

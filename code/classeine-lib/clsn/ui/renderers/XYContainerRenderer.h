@@ -11,7 +11,6 @@ namespace clsn::ui::renderers
     class XYContainerRenderer final : public ContainerRenderer<XYContainer>
     {
     public:
-        void doLayout(Control& control) const override;
         void paint(Graphics& graphics, const Region& region,
                    const Control& baseControl) const override;
     };

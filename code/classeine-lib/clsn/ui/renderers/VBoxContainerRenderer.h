@@ -11,6 +11,5 @@ namespace clsn::ui::renderers
     class VBoxContainerRenderer final : public ContainerRenderer<VBoxContainer>
     {
     public:
-        void doLayout(Control& control) const override;
     };
 }

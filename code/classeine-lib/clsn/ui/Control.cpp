@@ -75,10 +75,9 @@ namespace clsn::ui
         m_renderer = renderer;
     }
 
-    void Control::doLayout() noexcept
+    void Control::doLayout()
     {
         debug_count("doLayout");
-        getRenderer().doLayout(*this);
     }
 
     void Control::invalidate() const noexcept { m_invalidated = true; }

@@ -11,6 +11,5 @@ namespace clsn::ui::renderers
     class HBoxContainerRenderer final : public ContainerRenderer<HBoxContainer>
     {
     public:
-        void doLayout(Control& baseControl) const override;
     };
 }

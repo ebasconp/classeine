@@ -7,11 +7,6 @@
 
 namespace clsn::ui::renderers
 {
-    void LabelRenderer::doLayout(Control&) const
-    {
-        // Do nothing
-    }
-
     void LabelRenderer::paint(Graphics& graphics,
                               const Region& region,
                               const Control& control) const

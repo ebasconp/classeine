@@ -27,7 +27,5 @@ namespace clsn::ui
         virtual void paint(Graphics& graphics,
                            const Region& region,
                            const Control& baseControl) const = 0;
-
-        virtual void doLayout(Control& control) const = 0;
     };
 }
