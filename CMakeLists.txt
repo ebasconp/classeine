@@ -61,6 +61,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/BorderRendererHelpers.cpp
         code/classeine-lib/clsn/ui/renderers/ButtonRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/CheckBoxRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/DualContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/HBoxContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/LabelRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/LabelRendererHelpers.cpp

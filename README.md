@@ -41,6 +41,8 @@ the creation of rich user interfaces in modern C++.
         * `ToggleButton`
     * `Label` 
     * `ListContainer<Constraint>`
+      * `DualContainer` - Container that stores only two elements, one occupying only its preferred size and the other one occupying
+        the remaining space
       * `HBoxContainer` - Container where the controls are rendered horizontally
       * `VBoxContainer` - Container where the controls are rendered vertically
       * `XYContainer` - Container where the controls are placed in specific coordinates in the given region.

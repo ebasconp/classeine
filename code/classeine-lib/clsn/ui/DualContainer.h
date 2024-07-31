@@ -4,18 +4,31 @@
 
 namespace clsn::ui
 {
-    class DualContainer : public ListContainer<bool>
+    enum DualContainerOrientation
     {
-        bool m_horizontal;
+        horizontal,
+        vertical
+    };
+
+    enum DualContainerConstraint
+    {
+        use_preferred_size,
+        use_all_available_space
+    };
+
+    class DualContainer : public ListContainer<DualContainerConstraint>
+    {
+        DualContainerOrientation m_orientation;
 
     public:
         DualContainer();
 
-        auto isHorizontal() const -> bool;
-        void setHorizontal(bool horizontal);
+        auto getOrientation() const -> DualContainerOrientation;
+        void setOrientation(DualContainerOrientation orientation);
 
+        void doLayout() override;
 
     protected:
-        void checkIfValid(const bool& fill) const override;
+        void checkIfValidBeforeAdding(const DualContainerConstraint& fill) const override;
     };
 }

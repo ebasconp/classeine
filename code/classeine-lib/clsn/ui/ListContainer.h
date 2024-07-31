@@ -12,9 +12,14 @@ namespace clsn::ui
     template <typename Constraint>
     class ListContainer : public Control
     {
-        using ControlAndConstraint =
-            std::pair<std::shared_ptr<Control>, Constraint>;
+    public:
+        struct ControlAndConstraint
+        {
+            std::shared_ptr<Control> control;
+            Constraint constraint;
+        };
 
+    private:
         std::vector<ControlAndConstraint> m_controls;
         mutable bool m_needsToPaintTheContainer;
 
@@ -31,7 +36,7 @@ namespace clsn::ui
         std::shared_ptr<ControlType> makeAndAdd(Args&&... args)
         {
             Constraint constraint{std::forward<Args>(args)...};
-            checkIfValid(constraint);
+            checkIfValidBeforeAdding(constraint);
 
             auto ptr = std::make_shared<ControlType>();
             ptr->setParentWindow(getParentWindow());
@@ -45,13 +50,23 @@ namespace clsn::ui
             return static_cast<int>(m_controls.size());
         }
 
+        auto getControlAndConstraintAt(int index) -> ControlAndConstraint&
+        {
+            return m_controls[index];
+        }
+
+        auto getControlAndConstraintAt(int index) const -> const ControlAndConstraint&
+        {
+            return m_controls[index];
+        }
+
         auto getVisibleCount() const -> int
         {
             int count = getCount();
             int visibleCount = 0;
             for (int i = 0; i < count; i++)
             {
-                if (m_controls[i].first->isVisible())
+                if (m_controls[i].control->isVisible())
                     visibleCount++;
             }
 
@@ -75,16 +90,16 @@ namespace clsn::ui
             return controls;
         }
 
-        auto& operator[](int index) { return *(m_controls[index].first); }
+        auto& operator[](int index) { return *(m_controls[index].control); }
 
         const auto& operator[](int index) const noexcept
         {
-            return *(m_controls[index].first);
+            return *(m_controls[index].control);
         }
 
         auto getConstraintAt(int index) const -> const Constraint&
         {
-            return m_controls[index].second;
+            return m_controls[index].constraint;
         }
 
         template <typename Proc>
@@ -92,7 +107,7 @@ namespace clsn::ui
         {
             for (auto& p : m_controls)
             {
-                proc(*(p.first), p.second);
+                proc(*(p.control), p.constraint);
             }
         }
 
@@ -101,7 +116,7 @@ namespace clsn::ui
         {
             for (auto& p : m_controls)
             {
-                proc(*(p.first), p.second);
+                proc(*(p.control), p.constraint);
             }
         }
 
@@ -111,7 +126,7 @@ namespace clsn::ui
 
             int count = getCount();
             for (int i = 0; i < count; i++)
-                m_controls[i].first->invalidate();
+                m_controls[i].control->invalidate();
         }
 
         void validate() const noexcept override
@@ -120,7 +135,7 @@ namespace clsn::ui
 
             int count = getCount();
             for (int i = 0; i < count; i++)
-                m_controls[i].first->validate();
+                m_controls[i].control->validate();
         }
 
         auto needsToPaintTheContainer() const noexcept -> bool
@@ -132,7 +147,7 @@ namespace clsn::ui
         {
             int count = getCount();
             for (int i = 0; i < count; i++)
-                if (m_controls[i].first->isInvalidated())
+                if (m_controls[i].control->isInvalidated())
                     return true;
 
             return false;
@@ -146,7 +161,7 @@ namespace clsn::ui
 
             for (auto& e : m_controls)
             {
-                e.first->loadDefaults();
+                e.control->loadDefaults();
             }
         }
 
@@ -169,7 +184,7 @@ namespace clsn::ui
         }
 
     protected:
-        virtual void checkIfValid(const Constraint&) const
+        virtual void checkIfValidBeforeAdding(const Constraint&) const
         {
             // Do nothing here
         }

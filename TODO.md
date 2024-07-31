@@ -3,8 +3,6 @@
 * Create AmatistaUITheme interface
 * Replace default colors to 4 default tones
 * XY anchors
-* Add hover support
-* Add button hover rendering
 * Add support for padding in Label
 * Add support for icons in Label
 * Add BorderContainer
