@@ -30,5 +30,9 @@ namespace clsn::ui
 
     protected:
         void checkIfValidBeforeAdding(const DualContainerConstraint& fill) const override;
+
+    private:
+        void doLayoutVertical(const Point& position, const Dimension& size);
+        void doLayoutHorizontal(const Point& position, const Dimension& size);
     };
 }

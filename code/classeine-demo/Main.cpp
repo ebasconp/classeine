@@ -180,10 +180,11 @@ void test()
     b2xy->setText("Button 2");
 
     auto dc = mw().makeAndAdd<DualContainer>();
+    dc->setOrientation(DualContainerOrientation::horizontal);
     auto cb1 = dc->makeAndAdd<CheckBox>(DualContainerConstraint::use_all_available_space);
-    cb1->setText("This is a dual container");
-    auto tb1 = dc->makeAndAdd<ToggleButton>(DualContainerConstraint::use_preferred_size);
-    tb1->setText("Dual container toggle button");
+    cb1->setText("All available");
+    auto tb1 = dc->makeAndAdd<Button>(DualContainerConstraint::use_preferred_size);
+    tb1->setText("Preferred");
 
     mw.setVisible(true);
 
