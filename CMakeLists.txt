@@ -36,6 +36,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/ClickableControl.cpp
         code/classeine-lib/clsn/ui/Control.cpp
         code/classeine-lib/clsn/ui/DualContainer.cpp
+        code/classeine-lib/clsn/ui/FlowContainer.cpp
         code/classeine-lib/clsn/ui/HBoxContainer.cpp
         code/classeine-lib/clsn/ui/Label.cpp
         code/classeine-lib/clsn/ui/RadioButton.cpp
@@ -62,6 +63,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/ButtonRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/CheckBoxRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/DualContainerRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/FlowContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/HBoxContainerRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/LabelRenderer.cpp
         code/classeine-lib/clsn/ui/renderers/LabelRendererHelpers.cpp
