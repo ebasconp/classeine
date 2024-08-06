@@ -5,6 +5,7 @@
 
 #include "clsn/ui/Button.h"
 #include "clsn/ui/CheckBox.h"
+#include "clsn/ui/FlowContainer.h"
 #include "clsn/ui/HBoxContainer.h"
 #include "clsn/ui/Label.h"
 #include "clsn/ui/RadioButton.h"
@@ -15,6 +16,7 @@
 #include "clsn/ui/renderers/ButtonRenderer.h"
 #include "clsn/ui/renderers/CheckBoxRenderer.h"
 #include "clsn/ui/renderers/DualContainerRenderer.h"
+#include "clsn/ui/renderers/FlowContainerRenderer.h"
 #include "clsn/ui/renderers/HBoxContainerRenderer.h"
 #include "clsn/ui/renderers/LabelRenderer.h"
 #include "clsn/ui/renderers/RadioButtonRenderer.h"
@@ -31,6 +33,7 @@ namespace
         skin.makeRendererAndAdd<Button, ButtonRenderer>();
         skin.makeRendererAndAdd<CheckBox, CheckBoxRenderer>();
         skin.makeRendererAndAdd<DualContainer, DualContainerRenderer>();
+        skin.makeRendererAndAdd<FlowContainer, FlowContainerRenderer>();
         skin.makeRendererAndAdd<HBoxContainer, HBoxContainerRenderer>();
         skin.makeRendererAndAdd<Label, LabelRenderer>();
         skin.makeRendererAndAdd<RadioButton, RadioButtonRenderer>();
