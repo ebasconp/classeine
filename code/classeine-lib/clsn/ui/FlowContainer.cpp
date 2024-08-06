@@ -18,9 +18,10 @@ namespace clsn::ui
 
         const auto position = getActualPosition();
         int currentx = position.getX();
-        [[maybe_unused]] int currenty = position.getY();
+        int currenty = position.getY();
 
         int maxx = currentx + width;
+        int maxy = 0;
 
         iterate([&](auto& control, auto& )
         {
@@ -29,8 +30,24 @@ namespace clsn::ui
 
             if (currentx + controlWidth < maxx)
             {
+                const auto& preferredSize = control.getActualPreferredSize();
+                if (maxy < preferredSize.getHeight())
+                    maxy = preferredSize.getHeight();
+
                 control.setActualPosition({currentx, currenty});
-                control.setActualSize(control.getActualPreferredSize());
+                control.setActualSize(preferredSize);
+            }
+            else
+            {
+                currentx = 0;
+                currenty += maxy;
+
+                const auto& preferredSize = control.getActualPreferredSize();
+                if (maxy < preferredSize.getHeight())
+                    maxy = preferredSize.getHeight();
+
+                control.setActualPosition({currentx, currenty});
+                control.setActualSize(preferredSize);
             }
 
             currentx += controlWidth;

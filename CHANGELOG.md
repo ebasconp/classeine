@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20240806 FlowContainer
 * 20240731 Created DualContainer
 * 20240729 Moved doLayout() from IRenderer to Control
 * 20240726 Added isValidControl() in ListContainer
