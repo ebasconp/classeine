@@ -54,7 +54,7 @@ namespace clsn::ui
         }
     }
 
-    void DualContainer::doLayoutVertical(const Point& position, const Dimension& size)
+    void DualContainer::doLayoutVertical(const point& position, const dimension& size)
     {
         const auto count = getCount();
         if (count == 1)
@@ -62,10 +62,10 @@ namespace clsn::ui
             auto& cc = getControlAndConstraintAt(0);
 
             auto ch = cc.constraint == DualContainerConstraint::use_all_available_space
-                ? size.getHeight()
-                : cc.control->getActualPreferredSize().getHeight();
+                ? size.get_height()
+                : cc.control->getActualPreferredSize().get_height();
 
-            cc.control->set_actual_size({size.getWidth(), ch});
+            cc.control->set_actual_size({size.get_width(), ch});
             cc.control->set_actual_position(position);
             return;
         }
@@ -76,21 +76,21 @@ namespace clsn::ui
             auto& cc1 = getControlAndConstraintAt(1);
 
             auto c0h = cc0.constraint == DualContainerConstraint::use_all_available_space
-                            ? size.getHeight() - cc1.control->getActualPreferredSize().getHeight()
-                            : cc0.control->getActualPreferredSize().getHeight();
+                            ? size.get_height() - cc1.control->getActualPreferredSize().get_height()
+                            : cc0.control->getActualPreferredSize().get_height();
 
-            auto c1h = size.getHeight() - c0h;
+            auto c1h = size.get_height() - c0h;
 
-            cc0.control->set_actual_size({size.getWidth(), c0h});
-            cc1.control->set_actual_size({size.getWidth(), c1h});
+            cc0.control->set_actual_size({size.get_width(), c0h});
+            cc1.control->set_actual_size({size.get_width(), c1h});
 
             cc0.control->set_actual_position(position);
-            cc1.control->set_actual_position({position.getX(), position.getY() + c0h});
+            cc1.control->set_actual_position({position.get_x(), position.get_y() + c0h});
         }
     }
 
 
-    void DualContainer::doLayoutHorizontal(const Point& position, const Dimension& size)
+    void DualContainer::doLayoutHorizontal(const point& position, const dimension& size)
     {
         const auto count = getCount();
         if (count == 1)
@@ -98,10 +98,10 @@ namespace clsn::ui
             auto& cc = getControlAndConstraintAt(0);
 
             auto cw = cc.constraint == DualContainerConstraint::use_all_available_space
-                ? size.getWidth()
-                : cc.control->getActualPreferredSize().getWidth();
+                ? size.get_width()
+                : cc.control->getActualPreferredSize().get_width();
 
-            cc.control->set_actual_size({cw, size.getHeight()});
+            cc.control->set_actual_size({cw, size.get_height()});
             cc.control->set_actual_position(position);
             return;
         }
@@ -112,16 +112,16 @@ namespace clsn::ui
             auto& cc1 = getControlAndConstraintAt(1);
 
             auto c0w = cc0.constraint == DualContainerConstraint::use_all_available_space
-                            ? size.getWidth() - cc1.control->getActualPreferredSize().getWidth()
-                            : cc0.control->getActualPreferredSize().getWidth();
+                            ? size.get_width() - cc1.control->getActualPreferredSize().get_width()
+                            : cc0.control->getActualPreferredSize().get_width();
 
-            auto c1w = size.getWidth() - c0w;
+            auto c1w = size.get_width() - c0w;
 
-            cc0.control->set_actual_size({c0w, size.getHeight()});
-            cc1.control->set_actual_size({c1w, size.getHeight()});
+            cc0.control->set_actual_size({c0w, size.get_height()});
+            cc1.control->set_actual_size({c1w, size.get_height()});
 
             cc0.control->set_actual_position(position);
-            cc1.control->set_actual_position({position.getX() + c0w, position.getY()});
+            cc1.control->set_actual_position({position.get_x() + c0w, position.get_y()});
         }
     }
 }

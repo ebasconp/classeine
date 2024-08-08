@@ -13,9 +13,9 @@ namespace clsn::ui
         if (visibleCount == 0)
             return;
 
-        const auto width = get_actual_size().getWidth() /
+        const auto width = get_actual_size().get_width() /
                            static_cast<double>(visibleCount);
-        const auto height = get_actual_size().getHeight();
+        const auto height = get_actual_size().get_height();
 
         const auto position = get_actual_position();
 
@@ -27,8 +27,8 @@ namespace clsn::ui
                 continue;
 
             control.set_actual_position(
-                {static_cast<int>((visibleSlot * width) + position.getX()),
-                 position.getY()});
+                {static_cast<int>((visibleSlot * width) + position.get_x()),
+                 position.get_y()});
             control.set_actual_size({static_cast<int>(width), height});
             visibleSlot++;
         }

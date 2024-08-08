@@ -3,7 +3,7 @@
 namespace clsn::ui::renderers
 {
     void XYContainerRenderer::paint(Graphics& graphics,
-                                  const Region& region,
+                                  const region& region,
                                   const Control& baseControl) const
     {
         auto& container = static_cast<const XYContainer&>(baseControl);

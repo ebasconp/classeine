@@ -34,10 +34,10 @@ namespace clsn::ui
     {
         //ETOTODO: MOVE THIS TO THE tHEME
 /*        setMinimumSize(UIManager::getInstance().getDefault(
-            getDefaultSectionName(), "minimumSize", Dimension{50, 50}));
+            getDefaultSectionName(), "minimumSize", dimension{50, 50}));
 
         auto& dimension = UIManager::getInstance().getDefault(
-            getDefaultSectionName(), "size", Dimension{300, 200});
+            getDefaultSectionName(), "size", dimension{300, 200});
 
         set_actual_size(dimension);*/
 

@@ -6,8 +6,8 @@
 #include "clsn/ui/events/MouseClickEvent.h"
 #include "clsn/ui/events/MouseMovedEvent.h"
 
-#include "clsn/draw/Color.h"
-#include "clsn/draw/Dimension.h"
+#include "clsn/draw/color.h"
+#include "clsn/draw/dimension.h"
 
 #include "clsn/core/entity_wrapper.h"
 #include "clsn/core/event_listener_list.h"
@@ -51,20 +51,20 @@ namespace clsn::ui
         Control& operator=(const Control&) = delete;
         Control& operator=(Control&&) = delete;
 
-        CLSN_PROPERTY(actual_position, Point, true);
-        CLSN_PROPERTY(actual_size, Dimension, true);
-        CLSN_PROPERTY(background_color, std::optional<Color>, true);
+        CLSN_PROPERTY(actual_position, point, true);
+        CLSN_PROPERTY(actual_size, dimension, true);
+        CLSN_PROPERTY(background_color, std::optional<color>, true);
         CLSN_BOOL_PROPERTY_VAL(enabled, true, true);
-        CLSN_PROPERTY(font, std::optional<Font>, true);
-        CLSN_PROPERTY(foreground_color, std::optional<Color>, true);
-        CLSN_PROPERTY(preferred_size, std::optional<Dimension>, true);
+        CLSN_PROPERTY(font, std::optional<font>, true);
+        CLSN_PROPERTY(foreground_color, std::optional<color>, true);
+        CLSN_PROPERTY(preferred_size, std::optional<dimension>, true);
         CLSN_PROPERTY(text, std::string, true);
         CLSN_BOOL_PROPERTY_VAL(visible, true, true);
 
-        auto getActualBackgroundColor() const -> const Color&;
-        auto getActualForegroundColor() const -> const Color&;
-        auto getActualFont() const -> const Font&;
-        auto getActualPreferredSize() const -> const Dimension&;
+        auto getActualBackgroundColor() const -> const color&;
+        auto getActualForegroundColor() const -> const color&;
+        auto getActualFont() const -> const font&;
+        auto getActualPreferredSize() const -> const dimension&;
 
         auto operator==(const Control&) const -> bool;
         auto operator!=(const Control&) const -> bool;
@@ -75,7 +75,7 @@ namespace clsn::ui
         void addMouseMovedListener(event_listener<MouseMovedEvent> event);
         void notifyMouseMovedEvent(MouseMovedEvent& e);
 
-        void paint(Graphics& graphics, const Region& region) const;
+        void paint(Graphics& graphics, const region& region) const;
 
         auto getDefaultSectionName() const -> std::string_view;
 
@@ -114,8 +114,8 @@ namespace clsn::ui
 
         auto isHovered() const -> bool;
 
-        auto containsPoint(const Point& point) const -> bool;
-        virtual auto getControlByPosition(const Point& point) const ->
+        auto contains_point(const point& point) const -> bool;
+        virtual auto getControlByPosition(const point& point) const ->
                 std::optional<std::reference_wrapper<const Control>>;
 
         template <typename Proc>

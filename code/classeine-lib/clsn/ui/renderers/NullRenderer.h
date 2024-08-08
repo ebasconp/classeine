@@ -7,7 +7,7 @@ namespace clsn::ui::renderers
     class NullRenderer : public IRenderer
     {
     public:
-        void paint(Graphics&, const Region&, const Control&) const override
+        void paint(Graphics&, const region&, const Control&) const override
         {
             // Nothing to do here
         }

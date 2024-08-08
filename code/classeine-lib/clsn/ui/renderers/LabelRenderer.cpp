@@ -8,7 +8,7 @@
 namespace clsn::ui::renderers
 {
     void LabelRenderer::paint(Graphics& graphics,
-                              const Region& region,
+                              const region& region,
                               const Control& control) const
     {
         if (!control.isInvalidated())

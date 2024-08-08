@@ -12,20 +12,20 @@ namespace clsn::ui::amatista
         void populateDefaults() final;
         
     protected:
-        virtual auto getDefaultFont() const -> Font;
-        virtual auto getButtonPreferredSize() const -> Dimension;
+        virtual auto getDefaultFont() const -> font;
+        virtual auto getButtonPreferredSize() const -> dimension;
 
-        virtual auto getBevelUpColor() const -> Color = 0;
-        virtual auto getBevelDownColor() const -> Color = 0;
-        virtual auto getContainerBackgroundColor() const -> Color = 0;
-        virtual auto getContainerForegroundColor() const -> Color = 0;
-        virtual auto getControlBackgroundColor() const -> Color = 0;
-        virtual auto getControlForegroundColor() const -> Color = 0;
-        virtual auto getControlHoveredBackgroundColor() const -> Color = 0;
-        virtual auto getDisabledBackgroundColor() const -> Color = 0;
-        virtual auto getDisabledForegroundColor() const -> Color = 0;
+        virtual auto getBevelUpColor() const -> color = 0;
+        virtual auto getBevelDownColor() const -> color = 0;
+        virtual auto getContainerBackgroundColor() const -> color = 0;
+        virtual auto getContainerForegroundColor() const -> color = 0;
+        virtual auto getControlBackgroundColor() const -> color = 0;
+        virtual auto getControlForegroundColor() const -> color = 0;
+        virtual auto getControlHoveredBackgroundColor() const -> color = 0;
+        virtual auto getDisabledBackgroundColor() const -> color = 0;
+        virtual auto getDisabledForegroundColor() const -> color = 0;
 
-        virtual auto getButtonPressedBackgroundColor() const -> Color = 0;
+        virtual auto getButtonPressedBackgroundColor() const -> color = 0;
 
     };
 }

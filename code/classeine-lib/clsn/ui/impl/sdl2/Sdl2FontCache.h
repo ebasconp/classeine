@@ -2,7 +2,7 @@
 
 #include "Sdl2FontWrapper.h"
 
-#include "clsn/draw/Font.h"
+#include "clsn/draw/font.h"
 
 #include <SDL_ttf.h>
 
@@ -17,9 +17,9 @@ namespace clsn::ui::impl::sdl2
 
     class Sdl2FontCache final
     {
-        mutable std::unordered_map<Font, Sdl2FontWrapper> m_fonts;
+        mutable std::unordered_map<font, Sdl2FontWrapper> m_fonts;
 
     public:
-        OptionalTTFFontRef get_font(const Font& font) const;
+        OptionalTTFFontRef get_font(const font& font) const;
     };
 }

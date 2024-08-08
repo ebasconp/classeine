@@ -4,14 +4,14 @@
 
 namespace clsn::draw
 {
-    class Color;
-    class Region;
+    class color;
+    class region;
 }
 
 namespace clsn::ui::impl::sdl2::Sdl2Helpers
 {
     using namespace clsn::draw;
 
-    SDL_Rect toSDL(const Region&);
-    SDL_Color toSDL(const Color&);
+    SDL_Rect toSDL(const region&);
+    SDL_Color toSDL(const color&);
 }

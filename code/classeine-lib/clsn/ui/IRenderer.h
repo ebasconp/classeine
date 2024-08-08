@@ -6,7 +6,7 @@
 
 namespace clsn::draw
 {
-    class Region;
+    class region;
 }
 
 namespace clsn::ui
@@ -25,7 +25,7 @@ namespace clsn::ui
         ~IRenderer() override = default;
 
         virtual void paint(Graphics& graphics,
-                           const Region& region,
+                           const region& region,
                            const Control& baseControl) const = 0;
     };
 }

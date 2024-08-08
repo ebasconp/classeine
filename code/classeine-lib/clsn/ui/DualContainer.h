@@ -32,7 +32,7 @@ namespace clsn::ui
         void checkIfValidBeforeAdding(const DualContainerConstraint& fill) const override;
 
     private:
-        void doLayoutVertical(const Point& position, const Dimension& size);
-        void doLayoutHorizontal(const Point& position, const Dimension& size);
+        void doLayoutVertical(const point& position, const dimension& size);
+        void doLayoutHorizontal(const point& position, const dimension& size);
     };
 }

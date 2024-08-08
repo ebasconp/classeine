@@ -30,7 +30,7 @@ namespace clsn::ui
         m_singleton.reset();
     }
 
-    void UIManager::addFontMapping(const FontInfo& fontInfo,
+    void UIManager::addFontMapping(const font_info& fontInfo,
                                    std::string_view path)
     {
         m_pathsByFontInfo.insert(std::make_pair(fontInfo, std::string{path}));
@@ -47,7 +47,7 @@ namespace clsn::ui
     void UIManager::populateFontMappings()
     {
         addFontMapping(
-            FontInfo{"Nimbus", FontStyle::REGULAR},
+            font_info{"Nimbus", font_style::regular},
             "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf");
     }
 
@@ -58,7 +58,7 @@ namespace clsn::ui
         makeAndLoadSkin<AmatistaUISkin>();
     }
 
-    auto UIManager::getPathByFontInfo(const FontInfo& fontInfo) const noexcept -> std::string_view
+    auto UIManager::getPathByFontInfo(const font_info& fontInfo) const noexcept -> std::string_view
     {
         auto it = m_pathsByFontInfo.find(fontInfo);
         if (it == m_pathsByFontInfo.end())
@@ -72,17 +72,17 @@ namespace clsn::ui
         return m_skin->getRendererByControl(ctrl);
     }
 
-    auto UIManager::getColor(std::string_view section_name, std::string_view name) const -> const Color&
+    auto UIManager::getColor(std::string_view section_name, std::string_view name) const -> const color&
     {
         return m_skin->getColor(section_name, name);
     }
 
-    auto UIManager::getDimension(std::string_view section_name, std::string_view name) const -> const Dimension&
+    auto UIManager::getDimension(std::string_view section_name, std::string_view name) const -> const dimension&
     {
         return m_skin->getDimension(section_name, name);
     }
 
-    auto UIManager::get_font(std::string_view section_name, std::string_view name) const -> const Font&
+    auto UIManager::get_font(std::string_view section_name, std::string_view name) const -> const font&
     {
         return m_skin->get_font(section_name, name);
     }

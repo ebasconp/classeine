@@ -1,56 +1,56 @@
 #include "DarkAmatistaUITheme.h"
 
-#include "clsn/draw/Colors.h"
+#include "clsn/draw/colors.h"
 
 namespace clsn::ui::amatista
 {
-    auto DarkAmatistaUITheme::getBevelUpColor() const -> Color
+    auto DarkAmatistaUITheme::getBevelUpColor() const -> color
     {
-        return Color{0, 92, 155 };
+        return color{0, 92, 155 };
     }
 
-    auto DarkAmatistaUITheme::getBevelDownColor() const -> Color
+    auto DarkAmatistaUITheme::getBevelDownColor() const -> color
     {
-        return Color{0, 49, 83 };
+        return color{0, 49, 83 };
     }
 
-    auto DarkAmatistaUITheme::getContainerBackgroundColor() const -> Color
+    auto DarkAmatistaUITheme::getContainerBackgroundColor() const -> color
     {
-        return Color{0, 25, 42};
+        return color{0, 25, 42};
     }
 
-    auto DarkAmatistaUITheme::getContainerForegroundColor() const -> Color
+    auto DarkAmatistaUITheme::getContainerForegroundColor() const -> color
     {
-        return Colors::makeWhite();
+        return colors::make_white();
     }
 
-    auto DarkAmatistaUITheme::getControlBackgroundColor() const -> Color
+    auto DarkAmatistaUITheme::getControlBackgroundColor() const -> color
     {
-        return Color{0, 49, 83};
+        return color{0, 49, 83};
     }
 
-    auto DarkAmatistaUITheme::getControlForegroundColor() const -> Color
+    auto DarkAmatistaUITheme::getControlForegroundColor() const -> color
     {
-        return Color{240, 240, 250};
+        return color{240, 240, 250};
     }
 
-    auto DarkAmatistaUITheme::getControlHoveredBackgroundColor() const -> Color
+    auto DarkAmatistaUITheme::getControlHoveredBackgroundColor() const -> color
     {
-        return Color{0, 30, 60};
+        return color{0, 30, 60};
     }
 
-    auto DarkAmatistaUITheme::getDisabledBackgroundColor() const -> Color
+    auto DarkAmatistaUITheme::getDisabledBackgroundColor() const -> color
     {
-        return Color{0x60, 0x60, 0x60};
+        return color{0x60, 0x60, 0x60};
     }
 
-    auto DarkAmatistaUITheme::getDisabledForegroundColor() const -> Color
+    auto DarkAmatistaUITheme::getDisabledForegroundColor() const -> color
     {
-        return Color{0, 25, 42};
+        return color{0, 25, 42};
     }
 
-    auto DarkAmatistaUITheme::getButtonPressedBackgroundColor() const -> Color
+    auto DarkAmatistaUITheme::getButtonPressedBackgroundColor() const -> color
     {
-        return Color{0, 35, 60};
+        return color{0, 35, 60};
     }
 }

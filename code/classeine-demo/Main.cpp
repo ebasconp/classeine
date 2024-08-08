@@ -3,7 +3,7 @@
 #include "clsn/core/console.h"
 #include "clsn/core/system.h"
 
-#include "clsn/draw/Colors.h"
+#include "clsn/draw/colors.h"
 
 #include "clsn/ui/Button.h"
 #include "clsn/ui/CheckBox.h"
@@ -122,9 +122,9 @@ void test()
 
     auto xy =  mw().makeAndAdd<XYContainer>();
 
-    auto b1xy = xy->makeAndAdd<Button>(Point{10, 10});
+    auto b1xy = xy->makeAndAdd<Button>(point{10, 10});
     b1xy->set_text("Theme");
-    b1xy->set_background_color(Colors::makeRed());
+    b1xy->set_background_color(colors::make_red());
     b1xy->add_action_listener([&b1xy](auto& )
     {
         auto& themeName = UIManager::getInstance().getCurrentThemeName();
@@ -134,7 +134,7 @@ void test()
         UIManager::getInstance().installTheme(newThemeName);
     });
 
-    auto b2xy = xy->makeAndAdd<Button>(Point{200, 10});
+    auto b2xy = xy->makeAndAdd<Button>(point{200, 10});
     b2xy->set_text("Button 2");
 
     auto dc = mw().makeAndAdd<DualContainer>();

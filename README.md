@@ -25,11 +25,11 @@ the creation of rich user interfaces in modern C++.
   * `Lazy<T>`: Object T is constructed the first time this instance is accessed.
   
 * **clsn::draw** - library providing drawing primitives
-  * `Color`
-  * `Dimension`
-  * `Font`
-  * `Point`
-  * `Region`
+  * `color`
+  * `dimension`
+  * `font`
+  * `point`
+  * `region`
   
 * **clsn::ui** - library providing componentable UI controls
   * `Control`

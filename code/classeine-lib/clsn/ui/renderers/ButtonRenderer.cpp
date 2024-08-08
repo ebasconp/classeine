@@ -4,7 +4,7 @@
 #include "clsn/ui/Graphics.h"
 #include "clsn/ui/UIManager.h"
 
-#include "clsn/draw/Region.h"
+#include "clsn/draw/region.h"
 
 #include "BorderRendererHelpers.h"
 #include "LabelRendererHelpers.h"
@@ -15,7 +15,7 @@ namespace
 {
     using namespace clsn::ui;
 
-    Color getUltimateBackgroundColor(const Button& button, bool isHovered)
+    color getUltimateBackgroundColor(const Button& button, bool isHovered)
     {
         if (isHovered)
         {
@@ -37,7 +37,7 @@ namespace clsn::ui::renderers
     }
 
     void ButtonRenderer::paint(Graphics& graphics,
-               const Region& region,
+               const region& a_region,
                const Control& baseControl) const
     {
         if (!baseControl.isInvalidated())
@@ -62,14 +62,14 @@ namespace clsn::ui::renderers
         const bool pressed = paintAsPressed(control);
 
         BorderRendererHelpers::drawFlatBorder(
-            graphics, region, bevelUp, bevelDown, depth, !pressed);
+            graphics, a_region, bevelUp, bevelDown, depth, !pressed);
 
         constexpr int depth2 = depth * 2;
 
-        const Region innerRect{region.getX() + depth,
-                               region.getY() + depth,
-                               region.getWidth() - depth2,
-                               region.getHeight() - depth2};
+        const region innerRect{a_region.get_x() + depth,
+                               a_region.get_y() + depth,
+                               a_region.get_width() - depth2,
+                               a_region.get_height() - depth2};
 
         const auto& buttonColor = pressed
             ? UIManager::getInstance().getColor("Button", "pressedBackgroundColor")
@@ -79,10 +79,10 @@ namespace clsn::ui::renderers
         graphics.drawFillRectangle(innerRect);
         if (pressed)
         {
-            const Region innerRectShifted{innerRect.getX() + depth,
-                                          innerRect.getY() + depth,
-                                          innerRect.getWidth() - depth,
-                                          innerRect.getHeight() - depth};
+            const region innerRectShifted{innerRect.get_x() + depth,
+                                          innerRect.get_y() + depth,
+                                          innerRect.get_width() - depth,
+                                          innerRect.get_height() - depth};
             LabelRendererHelpers::drawControlText(graphics, baseControl, innerRectShifted);
         }
         else

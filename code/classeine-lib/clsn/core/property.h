@@ -31,7 +31,7 @@ namespace clsn::core
         {
         }
 
-        [[nodiscard]] auto getName() const noexcept -> const std::string&
+        [[nodiscard]] auto get_name() const noexcept -> const std::string&
         {
             return m_name;
         }

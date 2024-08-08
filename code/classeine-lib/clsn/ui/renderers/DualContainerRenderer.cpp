@@ -3,7 +3,7 @@
 namespace clsn::ui::renderers
 {
     void DualContainerRenderer::paint(Graphics& graphics,
-                                  const Region& region,
+                                  const region& region,
                                   const Control& baseControl) const
     {
         auto& container = static_cast<const DualContainer&>(baseControl);

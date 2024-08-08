@@ -11,7 +11,7 @@ namespace clsn::ui::renderers
     class DualContainerRenderer final : public ContainerRenderer<DualContainer>
     {
     public:
-        void paint(Graphics& graphics, const Region& region,
+        void paint(Graphics& graphics, const region& region,
                    const Control& baseControl) const override;
     };
 }

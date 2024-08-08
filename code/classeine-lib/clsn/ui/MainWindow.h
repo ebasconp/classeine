@@ -52,7 +52,7 @@ namespace clsn::ui
             m_control.notifyMouseMovedEvent(e);
         }
 
-        auto getControlByPosition(const Point& point) const ->
+        auto getControlByPosition(const point& point) const ->
             std::optional<std::reference_wrapper<const Control>> override
         {
             return m_control.getControlByPosition(point);
@@ -93,10 +93,10 @@ namespace clsn::ui
         void initSize()
         {
             //auto& dimension = UIManager::getInstance().getDefault(
-            //                "MainWindow", "size", Dimension{300, 200});
+            //                "MainWindow", "size", dimension{300, 200});
             //ETOTODO: MOVE THIS TO THE THEME
 
-            m_control.set_actual_size(Dimension{800, 600});
+            m_control.set_actual_size(dimension{800, 600});
 
             add_size_changed_listener([this](auto& e)
             {

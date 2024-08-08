@@ -4,8 +4,8 @@
 
 #include "clsn/core/property.h"
 
-#include "clsn/draw/Dimension.h"
-#include "clsn/draw/Point.h"
+#include "clsn/draw/dimension.h"
+#include "clsn/draw/point.h"
 
 namespace clsn::ui
 {
@@ -19,9 +19,9 @@ namespace clsn::ui
     public:
         explicit Window(std::string_view section_name);
 
-        CLSN_PROPERTY(position, Point, true)
-        CLSN_PROPERTY(minimum_size, Dimension, true)
-        CLSN_PROPERTY(size, Dimension, true)
+        CLSN_PROPERTY(position, point, true)
+        CLSN_PROPERTY(minimum_size, dimension, true)
+        CLSN_PROPERTY(size, dimension, true)
         CLSN_BOOL_PROPERTY_VAL(resizable, true, true);
 
         void grabMouse(Control& control);
@@ -29,7 +29,7 @@ namespace clsn::ui
 
         auto isHovered(const Control& control) const -> bool;
 
-        virtual auto getControlByPosition(const Point& point) const ->
+        virtual auto getControlByPosition(const point& point) const ->
                             ConstControlOptionalReference = 0;
 
     protected:

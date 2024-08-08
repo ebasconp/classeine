@@ -3,19 +3,19 @@
 #include "clsn/ui/CheckBox.h"
 #include "clsn/ui/UIManager.h"
 
-#include "clsn/draw/Region.h"
+#include "clsn/draw/region.h"
 
 namespace clsn::ui::renderers
 {
     void CheckBoxRenderer::paint(Graphics& graphics,
-                   const Region& region,
+                   const region& region,
                    const Control& baseControl) const
     {
         auto& checkBox = static_cast<const CheckBox&>(baseControl);
         auto section_name = checkBox.getDefaultSectionName();
 
         auto buttonColor = checkBox.isPressed()
-            ? Color{192, 192, 192}
+            ? color{192, 192, 192}
             : UIManager::getInstance().getColor(section_name, "controlBackgroundColor");
 
         graphics.setDrawColor(buttonColor);
@@ -25,16 +25,16 @@ namespace clsn::ui::renderers
 
         auto textSize = graphics.getTextSize(checkBox.getActualFont(), checkBox.get_text());
 
-        const auto mid = checkBox.get_actual_position().getY() + (region.getHeight() - textSize.getHeight()) / 2;
-        const auto size = textSize.getHeight();
+        const auto mid = checkBox.get_actual_position().get_y() + (region.get_height() - textSize.get_height()) / 2;
+        const auto size = textSize.get_height();
 
-        const auto x = 8 + checkBox.get_actual_position().getX();
+        const auto x = 8 + checkBox.get_actual_position().get_x();
         const auto y = mid - 1;
 
-        graphics.setDrawColor(Color{0, 0, 255});
+        graphics.setDrawColor(color{0, 0, 255});
         graphics.drawRectangle({x, y, size, size});
 
-        const auto backgroundColor = checkBox.isPressed() ? Color{224, 224, 224} : Color{255, 255, 255};
+        const auto backgroundColor = checkBox.isPressed() ? color{224, 224, 224} : color{255, 255, 255};
         graphics.setDrawColor(backgroundColor);
         graphics.drawFillRectangle({x + 1, mid, size - 2, size - 2});
 

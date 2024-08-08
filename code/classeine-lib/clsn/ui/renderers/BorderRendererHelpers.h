@@ -4,8 +4,8 @@
 
 namespace clsn::draw
 {
-    class Color;
-    class Region;
+    class color;
+    class region;
 }
 
 namespace clsn::ui::renderers::BorderRendererHelpers
@@ -13,16 +13,16 @@ namespace clsn::ui::renderers::BorderRendererHelpers
     using namespace clsn::draw;
 
     void drawBeveledBorder(Graphics& gr,
-                           const Region& region,
-                           const Color& a,
-                           const Color& b,
+                           const region& region,
+                           const color& a,
+                           const color& b,
                            int depth,
                            bool up);
 
     void drawFlatBorder(Graphics& gr,
-                   const Region& region,
-                   const Color& a,
-                   const Color& b,
+                   const region& region,
+                   const color& a,
+                   const color& b,
                    int depth,
                    bool up);
 }

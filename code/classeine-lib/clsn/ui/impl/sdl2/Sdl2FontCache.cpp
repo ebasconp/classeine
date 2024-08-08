@@ -2,18 +2,18 @@
 
 #include "clsn/ui/UIManager.h"
 
-#include "clsn/draw/FontInfo.h"
+#include "clsn/draw/font_info.h"
 
 namespace clsn::ui::impl::sdl2
 {
-    OptionalTTFFontRef Sdl2FontCache::get_font(const clsn::draw::Font& font) const
+    OptionalTTFFontRef Sdl2FontCache::get_font(const clsn::draw::font& font) const
     {
         auto it = m_fonts.find(font);
         if (it != m_fonts.end())
             return *it->second;
 
         auto& uim = UIManager::getInstance();
-        auto path = uim.getPathByFontInfo(FontInfo{font.getName(), font.getStyle()});
+        auto path = uim.getPathByFontInfo(font_info{font.get_name(), font.get_style()});
         if (path.empty())
             return std::nullopt;
 

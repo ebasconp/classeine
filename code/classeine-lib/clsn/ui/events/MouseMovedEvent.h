@@ -2,7 +2,7 @@
 
 #include "clsn/core/event.h"
 
-#include "clsn/draw/Point.h"
+#include "clsn/draw/point.h"
 
 namespace clsn::ui::events
 {
@@ -10,7 +10,7 @@ namespace clsn::ui::events
 
     struct PointData
     {
-        Point position;
+        point position;
     };
 
     using MouseMovedEvent = clsn::core::event<PointData>;

@@ -1,6 +1,6 @@
 #include "AmatistaUITheme.h"
 
-#include "clsn/draw/Colors.h"
+#include "clsn/draw/colors.h"
 
 namespace clsn::ui::amatista
 {
@@ -22,13 +22,13 @@ namespace clsn::ui::amatista
         add("Button", "preferredSize", getButtonPreferredSize());
     }
 
-    auto AmatistaUITheme::getDefaultFont() const -> Font
+    auto AmatistaUITheme::getDefaultFont() const -> font
     {
-        return Font{"Nimbus", FontStyle::REGULAR, 14};
+        return font{"Nimbus", font_style::regular, 14};
     }
 
-    auto AmatistaUITheme::getButtonPreferredSize() const -> Dimension
+    auto AmatistaUITheme::getButtonPreferredSize() const -> dimension
     {
-        return Dimension{96, 32};
+        return dimension{96, 32};
     }
 }

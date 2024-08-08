@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/draw/Region.h"
+#include "clsn/draw/region.h"
 
 #include "clsn/ui/IRenderer.h"
 
@@ -13,7 +13,7 @@ namespace clsn::ui::renderers
     {
     public:
         void paint(Graphics& graphics,
-                   const Region& region,
+                   const region& a_region,
                    const Control& baseControl) const override
         {
             auto& container =
@@ -23,7 +23,7 @@ namespace clsn::ui::renderers
             if (visibleCount == 0)
             {
                 graphics.setDrawColor(container.getActualBackgroundColor());
-                graphics.drawFillRectangle(region);
+                graphics.drawFillRectangle(a_region);
                 return;
             }
 
@@ -34,7 +34,7 @@ namespace clsn::ui::renderers
                 if (!control.is_visible() || !control.isInvalidated())
                     continue;
 
-                Region controlRegion{
+                region controlRegion{
                     control.get_actual_position(),
                     control.get_actual_size()}; // ETOTODOcontrol.getBounds();
 

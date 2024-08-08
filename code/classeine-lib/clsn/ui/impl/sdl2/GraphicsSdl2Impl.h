@@ -4,8 +4,8 @@
 
 #include "clsn/core/entity.h"
 
-#include "clsn/draw/Color.h"
-#include "clsn/draw/Dimension.h"
+#include "clsn/draw/color.h"
+#include "clsn/draw/dimension.h"
 
 #include "Sdl2FontCache.h"
 
@@ -15,9 +15,9 @@ struct SDL_Renderer;
 
 namespace clsn::draw
 {
-    class Font;
-    class Point;
-    class Region;
+    class font;
+    class point;
+    class region;
 }
 
 namespace clsn::ui::impl::sdl2
@@ -31,36 +31,36 @@ namespace clsn::ui::impl::sdl2
 
         Sdl2FontCache m_fontCache;
 
-        mutable Color m_drawColor;
+        mutable color m_drawColor;
 
         mutable bool m_needToApply;
 
     public:
-        explicit GraphicsSdl2Impl(SDL_Renderer& renderer, const Dimension& size);
+        explicit GraphicsSdl2Impl(SDL_Renderer& renderer, const dimension& size);
         ~GraphicsSdl2Impl();
 
         Sdl2FontCache& getFontCache() noexcept;
         const Sdl2FontCache& getFontCache() const noexcept;
 
-        void resize(const Dimension& newSize);
+        void resize(const dimension& newSize);
 
-        void setDrawColor(const Color& c) const;
+        void setDrawColor(const color& c) const;
 
-        void drawFillCircle(const Region& r) const;
-        void drawLine(const Point& p1, const Point& p2) const;
-        void drawRectangle(const Region& r) const;
-        void drawFillRectangle(const Region& r) const;
-        void drawText(const Region& r,
-                      const Font& f,
+        void drawFillCircle(const region& r) const;
+        void drawLine(const point& p1, const point& p2) const;
+        void drawRectangle(const region& r) const;
+        void drawFillRectangle(const region& r) const;
+        void drawText(const region& r,
+                      const font& f,
                       std::string_view text) const;
 
-        auto getTextSize(const Font& f, std::string_view text) const -> Dimension;
+        auto getTextSize(const font& f, std::string_view text) const -> dimension;
 
         void clear() const;
         void apply() const;
 
     private:
         void destroyTexture();
-        void createTexture(const Dimension& newSize);
+        void createTexture(const dimension& newSize);
     };
 }

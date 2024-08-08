@@ -10,16 +10,16 @@ namespace clsn::ui::amatista
         LightAmatistaUITheme() = default;
 
     protected:
-        auto getBevelUpColor() const -> Color override;
-        auto getBevelDownColor() const -> Color override;
-        auto getContainerBackgroundColor() const -> Color override;
-        auto getContainerForegroundColor() const -> Color override;
-        auto getControlBackgroundColor() const -> Color override;
-        auto getControlForegroundColor() const -> Color override;
-        auto getControlHoveredBackgroundColor() const -> Color override;
-        auto getDisabledBackgroundColor() const -> Color override;
-        auto getDisabledForegroundColor() const -> Color override;
+        auto getBevelUpColor() const -> color override;
+        auto getBevelDownColor() const -> color override;
+        auto getContainerBackgroundColor() const -> color override;
+        auto getContainerForegroundColor() const -> color override;
+        auto getControlBackgroundColor() const -> color override;
+        auto getControlForegroundColor() const -> color override;
+        auto getControlHoveredBackgroundColor() const -> color override;
+        auto getDisabledBackgroundColor() const -> color override;
+        auto getDisabledForegroundColor() const -> color override;
 
-        auto getButtonPressedBackgroundColor() const -> Color override;
+        auto getButtonPressedBackgroundColor() const -> color override;
     };
 }

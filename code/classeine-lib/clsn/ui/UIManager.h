@@ -3,7 +3,7 @@
 #include "UIManagerDefaults.h"
 #include "UISkin.h"
 
-#include "clsn/draw/FontInfo.h"
+#include "clsn/draw/font_info.h"
 
 #include "clsn/core/entity.h"
 
@@ -20,7 +20,7 @@ namespace clsn::ui
         std::unique_ptr<UISkin> m_skin;
 
         UIManagerDefaults m_defaults;
-        std::unordered_map<FontInfo, std::string> m_pathsByFontInfo;
+        std::unordered_map<font_info, std::string> m_pathsByFontInfo;
 
         static std::unique_ptr<UIManager> m_singleton;
 
@@ -45,12 +45,12 @@ namespace clsn::ui
 
         auto getRendererByControl(const Control& ctrl) const -> std::shared_ptr<IRenderer>;
 
-        auto getColor(std::string_view section_name, std::string_view name) const -> const Color&;
-        auto getDimension(std::string_view section_name, std::string_view name) const -> const Dimension&;
-        auto get_font(std::string_view section_name, std::string_view name) const -> const Font&;
+        auto getColor(std::string_view section_name, std::string_view name) const -> const color&;
+        auto getDimension(std::string_view section_name, std::string_view name) const -> const dimension&;
+        auto get_font(std::string_view section_name, std::string_view name) const -> const font&;
 
-        void addFontMapping(const FontInfo& fontInfo, std::string_view path);
-        auto getPathByFontInfo(const FontInfo&) const noexcept -> std::string_view;
+        void addFontMapping(const font_info& fontInfo, std::string_view path);
+        auto getPathByFontInfo(const font_info&) const noexcept -> std::string_view;
 
         auto installTheme(const std::string& themeName) -> bool;
         auto addThemeChangedListener(event_listener<empty_event> listener) -> int;

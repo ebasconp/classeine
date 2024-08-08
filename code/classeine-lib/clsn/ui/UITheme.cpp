@@ -21,18 +21,18 @@ namespace
 
 namespace clsn::ui
 {
-    auto UITheme::getColor(std::string_view section_name, std::string_view name, const Color& errorValue) const -> const Color&
+    auto UITheme::getColor(std::string_view section_name, std::string_view name, const color& errorValue) const -> const color&
     {
-        return getFromDefaults<Color>(m_defaultsByName, section_name, name, errorValue);
+        return getFromDefaults<color>(m_defaultsByName, section_name, name, errorValue);
     }
 
-    auto UITheme::getDimension(std::string_view section_name, std::string_view name, const Dimension& errorValue) const -> const Dimension&
+    auto UITheme::getDimension(std::string_view section_name, std::string_view name, const dimension& errorValue) const -> const dimension&
     {
-        return getFromDefaults<Dimension>(m_defaultsByName, section_name, name, errorValue);
+        return getFromDefaults<dimension>(m_defaultsByName, section_name, name, errorValue);
     }
 
-    auto UITheme::get_font(std::string_view section_name, std::string_view name, const Font& errorValue) const -> const Font&
+    auto UITheme::get_font(std::string_view section_name, std::string_view name, const font& errorValue) const -> const font&
     {
-        return getFromDefaults<Font>(m_defaultsByName, section_name, name, errorValue);
+        return getFromDefaults<font>(m_defaultsByName, section_name, name, errorValue);
     }
 }

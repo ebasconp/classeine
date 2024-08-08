@@ -3,16 +3,16 @@
 #include "clsn/core/configuration.h"
 #include "clsn/core/entity.h"
 
-#include "clsn/draw/Color.h"
-#include "clsn/draw/Dimension.h"
-#include "clsn/draw/Font.h"
+#include "clsn/draw/color.h"
+#include "clsn/draw/dimension.h"
+#include "clsn/draw/font.h"
 
 namespace clsn::ui
 {
     using namespace clsn::core;
     using namespace clsn::draw;
 
-    using UIThemeDefaults = configuration<Color, Dimension, Font>;
+    using UIThemeDefaults = configuration<color, dimension, font>;
 
     class UITheme : entity
     {
@@ -27,8 +27,8 @@ namespace clsn::ui
             m_defaultsByName.set(section_name, name, std::forward<Type>(value));
         }
 
-        auto getColor(std::string_view section_name, std::string_view name, const Color& errorValue = Color{255, 0, 0}) const -> const Color&;
-        auto getDimension(std::string_view section_name, std::string_view name, const Dimension& errorValue = Dimension{32, 32}) const -> const Dimension&;
-        auto get_font(std::string_view section_name, std::string_view name, const Font& errorValue = Font{}) const -> const Font&;
+        auto getColor(std::string_view section_name, std::string_view name, const color& errorValue = color{255, 0, 0}) const -> const color&;
+        auto getDimension(std::string_view section_name, std::string_view name, const dimension& errorValue = dimension{32, 32}) const -> const dimension&;
+        auto get_font(std::string_view section_name, std::string_view name, const font& errorValue = font{}) const -> const font&;
     };
 }

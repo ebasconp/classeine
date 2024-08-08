@@ -17,17 +17,17 @@ namespace clsn::ui
         return true;
     }
 
-    auto UISkin::getColor(std::string_view section_name, std::string_view name) -> const Color&
+    auto UISkin::getColor(std::string_view section_name, std::string_view name) -> const color&
     {
         return m_currentTheme.second->getColor(section_name, name);
     }
 
-    auto UISkin::getDimension(std::string_view section_name, std::string_view name) -> const Dimension&
+    auto UISkin::getDimension(std::string_view section_name, std::string_view name) -> const dimension&
     {
         return m_currentTheme.second->getDimension(section_name, name);
     }
 
-    auto UISkin::get_font(std::string_view section_name, std::string_view name) -> const Font&
+    auto UISkin::get_font(std::string_view section_name, std::string_view name) -> const font&
     {
         return m_currentTheme.second->get_font(section_name, name);
     }

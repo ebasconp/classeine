@@ -23,13 +23,13 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/core/entity.cpp
         code/classeine-lib/clsn/core/strings.cpp
 
-        code/classeine-lib/clsn/draw/Color.cpp
-        code/classeine-lib/clsn/draw/Colors.cpp
-        code/classeine-lib/clsn/draw/Dimension.cpp
-        code/classeine-lib/clsn/draw/Font.cpp
-        code/classeine-lib/clsn/draw/FontInfo.cpp
-        code/classeine-lib/clsn/draw/Point.cpp
-        code/classeine-lib/clsn/draw/Region.cpp
+        code/classeine-lib/clsn/draw/color.cpp
+        code/classeine-lib/clsn/draw/colors.cpp
+        code/classeine-lib/clsn/draw/dimension.cpp
+        code/classeine-lib/clsn/draw/font.cpp
+        code/classeine-lib/clsn/draw/font_info.cpp
+        code/classeine-lib/clsn/draw/point.cpp
+        code/classeine-lib/clsn/draw/region.cpp
 
         code/classeine-lib/clsn/ui/Button.cpp
         code/classeine-lib/clsn/ui/CheckBox.cpp

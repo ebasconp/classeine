@@ -1,57 +1,57 @@
 #include "LightAmatistaUITheme.h"
 
-#include "clsn/draw/Colors.h"
+#include "clsn/draw/colors.h"
 
 namespace clsn::ui::amatista
 {
-    auto LightAmatistaUITheme::getBevelUpColor() const -> Color
+    auto LightAmatistaUITheme::getBevelUpColor() const -> color
     {
-        return Color{0, 92, 155 };
+        return color{0, 92, 155 };
     }
 
-    auto LightAmatistaUITheme::getBevelDownColor() const -> Color
+    auto LightAmatistaUITheme::getBevelDownColor() const -> color
     {
-        return Color{0, 49, 83 };
+        return color{0, 49, 83 };
     }
 
-    auto LightAmatistaUITheme::getContainerBackgroundColor() const -> Color
+    auto LightAmatistaUITheme::getContainerBackgroundColor() const -> color
     {
-        return Colors::makeWhite();
+        return colors::make_white();
     }
 
-    auto LightAmatistaUITheme::getContainerForegroundColor() const -> Color
+    auto LightAmatistaUITheme::getContainerForegroundColor() const -> color
     {
-        return Colors::makeBlack();
+        return colors::make_black();
     }
 
-    auto LightAmatistaUITheme::getControlBackgroundColor() const -> Color
+    auto LightAmatistaUITheme::getControlBackgroundColor() const -> color
     {
-        return Color{0xE0, 0xE0, 0xE0};
+        return color{0xE0, 0xE0, 0xE0};
     }
 
-    auto LightAmatistaUITheme::getControlForegroundColor() const -> Color
+    auto LightAmatistaUITheme::getControlForegroundColor() const -> color
     {
-        return Color{0, 49, 83};
+        return color{0, 49, 83};
     }
 
-    auto LightAmatistaUITheme::getControlHoveredBackgroundColor() const -> Color
+    auto LightAmatistaUITheme::getControlHoveredBackgroundColor() const -> color
     {
-        return Color{0xF0, 0xF0, 0xF0};
+        return color{0xF0, 0xF0, 0xF0};
     }
 
-    auto LightAmatistaUITheme::getDisabledBackgroundColor() const -> Color
+    auto LightAmatistaUITheme::getDisabledBackgroundColor() const -> color
     {
-        return Color{0x60, 0x60, 0x60};
+        return color{0x60, 0x60, 0x60};
     }
 
-    auto LightAmatistaUITheme::getDisabledForegroundColor() const -> Color
+    auto LightAmatistaUITheme::getDisabledForegroundColor() const -> color
     {
-        ;return Color{160, 160, 160};
+        ;return color{160, 160, 160};
     }
 
-    auto LightAmatistaUITheme::getButtonPressedBackgroundColor() const -> Color
+    auto LightAmatistaUITheme::getButtonPressedBackgroundColor() const -> color
     {
-        return Color{192, 192, 192};
+        return color{192, 192, 192};
     }
 
 }

@@ -20,7 +20,7 @@ namespace clsn::ui
             if (!control.is_visible())
                 return;
 
-            control.set_actual_position({position.getX() + constraint.getX(), position.getY() + constraint.getY()});
+            control.set_actual_position({position.get_x() + constraint.get_x(), position.get_y() + constraint.get_y()});
             control.set_actual_size(control.getActualPreferredSize());
         });
     }

@@ -2,7 +2,7 @@
 #include "UIManager.h"
 #include "Window.h"
 
-#include "clsn/draw/Region.h"
+#include "clsn/draw/region.h"
 
 #include <iostream> //ETOTODO REMOVE THIS
 
@@ -17,7 +17,7 @@ namespace clsn::ui
         initEvents();
     }
 
-    void Control::paint(Graphics& graphics, const Region& region) const
+    void Control::paint(Graphics& graphics, const region& region) const
     {
         debug_count("paint");
 
@@ -128,15 +128,15 @@ namespace clsn::ui
         return m_parentWindow;
     }
 
-    auto Control::containsPoint(const Point& point) const -> bool
+    auto Control::contains_point(const point& point) const -> bool
     {
-        return Region{m_actual_position.get(), m_actual_size.get()}.containsPoint(point);
+        return region{m_actual_position.get(), m_actual_size.get()}.contains_point(point);
     }
 
-    auto Control::getControlByPosition(const Point& point) const
+    auto Control::getControlByPosition(const point& point) const
         -> std::optional<std::reference_wrapper<const Control>>
     {
-        if (this->containsPoint(point))
+        if (this->contains_point(point))
             return *this;
 
         return std::nullopt;
@@ -172,7 +172,7 @@ namespace clsn::ui
         // Do nothing here
     }
 
-    auto Control::getActualBackgroundColor() const -> const Color&
+    auto Control::getActualBackgroundColor() const -> const color&
     {
         const auto& color = get_background_color();
         if (color.has_value())
@@ -182,7 +182,7 @@ namespace clsn::ui
                     m_defaultSectionName, "controlBackgroundColor");
     }
 
-    auto Control::getActualForegroundColor() const -> const Color&
+    auto Control::getActualForegroundColor() const -> const color&
     {
         const auto& color = get_foreground_color();
         if (color.has_value())
@@ -192,7 +192,7 @@ namespace clsn::ui
                     m_defaultSectionName, "controlForegroundColor");
     }
 
-    auto Control::getActualFont() const -> const Font&
+    auto Control::getActualFont() const -> const font&
     {
         const auto& font = get_font();
         if (font.has_value())
@@ -201,7 +201,7 @@ namespace clsn::ui
         return UIManager::getInstance().get_font(m_defaultSectionName, "defaultFont");
     }
 
-    auto Control::getActualPreferredSize() const -> const Dimension&
+    auto Control::getActualPreferredSize() const -> const dimension&
     {
         const auto& size = get_preferred_size();
         if (size.has_value())

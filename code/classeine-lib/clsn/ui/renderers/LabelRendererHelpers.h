@@ -6,7 +6,7 @@
 
 namespace clsn::draw
 {
-    class Region;
+    class region;
 }
 
 namespace clsn::ui
@@ -18,5 +18,5 @@ namespace clsn::ui::renderers::LabelRendererHelpers
 {
     using namespace clsn::draw;
 
-    void drawControlText(Graphics& graphics, const Control& control, const Region& region);
+    void drawControlText(Graphics& graphics, const Control& control, const region& region);
 }

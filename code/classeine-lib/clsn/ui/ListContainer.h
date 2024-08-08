@@ -165,7 +165,7 @@ namespace clsn::ui
             }
         }
 
-        auto getControlByPosition(const Point &point) const
+        auto getControlByPosition(const point &point) const
     -> std::optional<std::reference_wrapper<const Control>> override
         {
             const auto count = getCount();
@@ -198,7 +198,7 @@ namespace clsn::ui
                 if (!control.is_visible() || !control.is_enabled())
                     continue;
 
-                if (control.containsPoint(e.getPoint()))
+                if (control.contains_point(e.getPoint()))
                 {
                     control.notifyMouseClickEvent(e);
                 }
@@ -218,7 +218,7 @@ namespace clsn::ui
                 if (!control.is_visible() || !control.is_enabled())
                     continue;
 
-                if (control.containsPoint(e.position))
+                if (control.contains_point(e.position))
                 {
                     control.notifyMouseMovedEvent(e);
                 }

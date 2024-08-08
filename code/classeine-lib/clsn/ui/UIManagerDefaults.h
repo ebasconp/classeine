@@ -2,15 +2,15 @@
 
 #include "clsn/core/configuration.h"
 
-#include "clsn/draw/Color.h"
-#include "clsn/draw/Dimension.h"
-#include "clsn/draw/Font.h"
+#include "clsn/draw/color.h"
+#include "clsn/draw/dimension.h"
+#include "clsn/draw/font.h"
 
 #include <memory>
 
 namespace clsn::ui
 {
-    using UIManagerDefaults = clsn::core::configuration<clsn::draw::Color,
-                                                        clsn::draw::Dimension,
-                                                        clsn::draw::Font>;
+    using UIManagerDefaults = clsn::core::configuration<clsn::draw::color,
+                                                        clsn::draw::dimension,
+                                                        clsn::draw::font>;
 }
