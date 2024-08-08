@@ -19,7 +19,7 @@
 #include "clsn/ui/xy_container.h"
 
 
-#include "clsn/ui/renderers/NullRenderer.h"
+#include "clsn/ui/renderers/null_renderer.h"
 
 #include <memory>
 

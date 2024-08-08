@@ -1,4 +1,4 @@
-#include "LabelRendererHelpers.h"
+#include "label_renderer_helpers.h"
 
 #include "clsn/draw/color.h"
 #include "clsn/draw/region.h"
@@ -7,11 +7,11 @@
 #include "clsn/ui/ui_manager.h"
 
 
-namespace clsn::ui::renderers::LabelRendererHelpers
+namespace clsn::ui::renderers::label_renderer_helpers
 {
     using namespace clsn::draw;
 
-    void drawControlText(graphics& graphics, const control& control, const region& region)
+    void draw_control_text(graphics& graphics, const control& control, const region& region)
     {
         if (!control.is_enabled())
         {

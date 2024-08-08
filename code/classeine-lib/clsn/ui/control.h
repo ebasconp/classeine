@@ -25,7 +25,7 @@ namespace clsn::ui
     using namespace clsn::draw;
     using namespace clsn::ui::events;
 
-    class IRenderer;
+    class renderer_base;
     class window;
 
     class control : public entity
@@ -35,7 +35,7 @@ namespace clsn::ui
         event_listener_list<MouseMovedEvent> m_mouse_moved_listeners;
 
         std::shared_ptr<entity> m_tag;
-        mutable std::shared_ptr<IRenderer> m_renderer;
+        mutable std::shared_ptr<renderer_base> m_renderer;
 
         std::string m_defaultSectionName;
 
@@ -96,10 +96,10 @@ namespace clsn::ui
             return static_cast<EntityWrapper<TagType>&>(*m_tag).get();
         }
 
-        void set_renderer(const std::shared_ptr<IRenderer>& renderer);
+        void set_renderer(const std::shared_ptr<renderer_base>& renderer);
 
-        auto get_renderer() const -> const IRenderer&;
-        auto get_renderer() -> IRenderer&;
+        auto get_renderer() const -> const renderer_base&;
+        auto get_renderer() -> renderer_base&;
 
         virtual void do_layout();
 

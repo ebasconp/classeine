@@ -2,13 +2,13 @@
 
 #include "clsn/ui/vbox_container.h"
 
-#include "clsn/ui/renderers/ContainerRenderer.h"
+#include "clsn/ui/renderers/container_renderer.h"
 
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
 
-    class VBoxContainerRenderer final : public ContainerRenderer<vbox_container>
+    class vbox_container_renderer final : public container_renderer<vbox_container>
     {
     public:
     };

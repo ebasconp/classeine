@@ -8,9 +8,9 @@
 #include "clsn/ui/control.h" //FORWARD
 #include "clsn/ui/ui_theme.h"
 
-#include "clsn/ui/IRenderer.h"
+#include "clsn/ui/renderer_base.h"
 
-#include "clsn/ui/renderers/NullRenderer.h"
+#include "clsn/ui/renderers/null_renderer.h"
 
 #include <typeindex>
 #include <unordered_map>
@@ -20,7 +20,7 @@ namespace clsn::ui
 {
     using namespace clsn::ui::renderers;
 
-    using lazy_renderer = lazy<std::shared_ptr<IRenderer>>;
+    using lazy_renderer = lazy<std::shared_ptr<renderer_base>>;
 
     template <typename RendererType>
     lazy_renderer make_lazy_renderer()
@@ -63,7 +63,7 @@ namespace clsn::ui
         auto get_dimension(std::string_view section_name, std::string_view name) -> const dimension&;
         auto get_font(std::string_view section_name, std::string_view name) -> const font&;
 
-        auto get_renderer_by_control(const clsn::ui::control& ctrl) const -> std::shared_ptr<IRenderer>;
+        auto get_renderer_by_control(const clsn::ui::control& ctrl) const -> std::shared_ptr<renderer_base>;
         auto add_theme_changed_listener(event_listener<empty_event> listener) -> int;
         auto get_current_theme_name() const -> const std::string&;
     };

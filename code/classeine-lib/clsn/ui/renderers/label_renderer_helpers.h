@@ -14,9 +14,9 @@ namespace clsn::ui
     class control;
 }
 
-namespace clsn::ui::renderers::LabelRendererHelpers
+namespace clsn::ui::renderers::label_renderer_helpers
 {
     using namespace clsn::draw;
 
-    void drawControlText(graphics& graphics, const control& control, const region& region);
+    void draw_control_text(graphics& graphics, const control& control, const region& region);
 }

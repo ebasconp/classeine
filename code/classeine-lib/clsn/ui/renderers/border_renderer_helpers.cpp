@@ -1,8 +1,8 @@
-#include "BorderRendererHelpers.h"
+#include "border_renderer_helpers.h"
 
 #include "clsn/draw/region.h"
 
-namespace clsn::ui::renderers::BorderRendererHelpers
+namespace clsn::ui::renderers::border_renderer_helpers
 {
     using namespace clsn::draw;
 

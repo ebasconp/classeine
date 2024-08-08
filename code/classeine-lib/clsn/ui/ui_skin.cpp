@@ -32,11 +32,11 @@ namespace clsn::ui
         return m_current_theme.second->get_font(section_name, name);
     }
 
-    auto ui_skin::get_renderer_by_control(const clsn::ui::control& ctrl) const -> std::shared_ptr<IRenderer>
+    auto ui_skin::get_renderer_by_control(const clsn::ui::control& ctrl) const -> std::shared_ptr<renderer_base>
     {
         auto it = m_renderers_by_control_type.find(std::type_index(typeid(ctrl)));
         if (it == nullptr)
-            return std::make_shared<NullRenderer>();
+            return std::make_shared<null_renderer>();
 
         return it->second.get();
     }

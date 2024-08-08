@@ -19,12 +19,12 @@ namespace clsn::ui
     using namespace clsn::core;
     using namespace clsn::draw;
 
-    class IRenderer : public entity
+    class renderer_base : public entity
     {
     public:
-        ~IRenderer() override = default;
+        ~renderer_base() override = default;
 
-        virtual void paint(graphics& graphics,
+        virtual void paint(graphics& a_graphics,
                            const region& region,
                            const control& baseControl) const = 0;
     };

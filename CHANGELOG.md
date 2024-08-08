@@ -2,7 +2,7 @@
 
 * 20240806 flow_container
 * 20240731 Created dual_container
-* 20240729 Moved do_layout() from IRenderer to control
+* 20240729 Moved do_layout() from renderer_base to control
 * 20240726 Added isValidControl() in list_container
 * 20240724 Moved texture to graphics
 * 20240723 Painting on a texture instead of default surface
@@ -18,7 +18,7 @@
 * 20240626 Added radio_button
 * 20240625 Added check_box rendering
 * 20240624 Starting check_box implementation
-* 20240620 Implementing ContainerRenderer base class
+* 20240620 Implementing container_renderer base class
 * 20240620 Using do_layout to calculate position and size
 * 20240619 Fixed crash when out of range
 * 20240618 Added toggle_button

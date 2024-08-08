@@ -1,14 +1,14 @@
 #pragma once
 
-#include "clsn/ui/renderers/LabelRenderer.h"
+#include "clsn/ui/renderers/label_renderer.h"
 
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
 
-    class CheckBoxRenderer : public IRenderer
+    class radio_button_renderer : public renderer_base
     {
-        LabelRenderer m_labelRenderer;
+        label_renderer m_labelRenderer;
 
     public:
         void paint(graphics& graphics,

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ButtonRenderer.h"
+#include "button_renderer.h"
 
 namespace  clsn::ui
 {
@@ -12,9 +12,9 @@ namespace clsn::ui::renderers
     using namespace clsn::draw;
     using namespace clsn::ui;
 
-    class ToggleButtonRenderer : public ButtonRenderer
+    class toggle_button_renderer : public button_renderer
     {
     public:
-        [[nodiscard]] virtual auto paintAsPressed(const clickable_control& button) const -> bool;
+        [[nodiscard]] virtual auto paint_as_pressed(const clickable_control& button) const -> bool;
     };
 }

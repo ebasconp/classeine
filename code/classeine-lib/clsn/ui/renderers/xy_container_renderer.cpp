@@ -1,12 +1,12 @@
-#include "DualContainerRenderer.h"
+#include "xy_container_renderer.h"
 
 namespace clsn::ui::renderers
 {
-    void DualContainerRenderer::paint(graphics& graphics,
+    void xy_container_renderer::paint(graphics& graphics,
                                   const region& region,
                                   const control& baseControl) const
     {
-        auto& container = static_cast<const dual_container&>(baseControl);
+        auto& container = static_cast<const xy_container&>(baseControl);
 
         if (container.needs_to_paint_the_container())
         {
@@ -14,6 +14,6 @@ namespace clsn::ui::renderers
             graphics.draw_fill_rectangle(region);
         }
 
-        ContainerRenderer::paint(graphics, region, baseControl);
+        container_renderer::paint(graphics, region, baseControl);
     }
 }

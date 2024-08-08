@@ -67,7 +67,7 @@ namespace clsn::ui
         return it->second;
     }
 
-    auto ui_manager::get_renderer_by_control(const control& ctrl) const -> std::shared_ptr<IRenderer>
+    auto ui_manager::get_renderer_by_control(const control& ctrl) const -> std::shared_ptr<renderer_base>
     {
         return m_skin->get_renderer_by_control(ctrl);
     }

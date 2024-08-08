@@ -2,14 +2,14 @@
 
 #include "clsn/draw/region.h"
 
-#include "clsn/ui/IRenderer.h"
+#include "clsn/ui/renderer_base.h"
 
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
 
     template <typename ContainerType>
-    class ContainerRenderer : public IRenderer
+    class container_renderer : public renderer_base
     {
     public:
         void paint(graphics& graphics,

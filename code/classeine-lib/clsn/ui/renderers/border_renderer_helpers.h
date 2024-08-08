@@ -8,7 +8,7 @@ namespace clsn::draw
     class region;
 }
 
-namespace clsn::ui::renderers::BorderRendererHelpers
+namespace clsn::ui::renderers::border_renderer_helpers
 {
     using namespace clsn::draw;
 

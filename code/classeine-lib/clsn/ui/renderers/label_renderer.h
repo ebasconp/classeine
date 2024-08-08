@@ -1,12 +1,12 @@
 #pragma once
 
-#include "clsn/ui/IRenderer.h"
+#include "clsn/ui/renderer_base.h"
 
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
 
-    class LabelRenderer : public IRenderer
+    class label_renderer : public renderer_base
     {
     public:
         void paint(graphics& graphics,

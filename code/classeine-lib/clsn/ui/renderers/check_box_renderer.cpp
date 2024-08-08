@@ -1,4 +1,4 @@
-#include "CheckBoxRenderer.h"
+#include "check_box_renderer.h"
 
 #include "clsn/ui/check_box.h"
 #include "clsn/ui/ui_manager.h"
@@ -7,7 +7,7 @@
 
 namespace clsn::ui::renderers
 {
-    void CheckBoxRenderer::paint(graphics& graphics,
+    void check_box_renderer::paint(graphics& graphics,
                    const region& region,
                    const control& baseControl) const
     {

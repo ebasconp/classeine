@@ -8,7 +8,7 @@
 
 namespace clsn::ui
 {
-    using clsn::ui::renderers::NullRenderer;
+    using clsn::ui::renderers::null_renderer;
 
     control::control(std::string_view section_name)
     : m_defaultSectionName{section_name}
@@ -70,7 +70,7 @@ namespace clsn::ui
         return m_defaultSectionName;
     }
 
-    void control::set_renderer(const std::shared_ptr<IRenderer>& renderer)
+    void control::set_renderer(const std::shared_ptr<renderer_base>& renderer)
     {
         m_renderer = renderer;
     }
@@ -151,7 +151,7 @@ namespace clsn::ui
     }
 
 
-    auto control::get_renderer() -> IRenderer&
+    auto control::get_renderer() -> renderer_base&
     {
         if (m_renderer == nullptr)
             m_renderer = ui_manager::get_instance().get_renderer_by_control(*this);
@@ -159,7 +159,7 @@ namespace clsn::ui
         return *m_renderer.get();
     }
 
-    auto control::get_renderer() const -> const IRenderer&
+    auto control::get_renderer() const -> const renderer_base&
     {
         if (m_renderer == nullptr)
             m_renderer = ui_manager::get_instance().get_renderer_by_control(*this);

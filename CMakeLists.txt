@@ -59,18 +59,18 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_font_cache.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_helpers.cpp
 
-        code/classeine-lib/clsn/ui/renderers/BorderRendererHelpers.cpp
-        code/classeine-lib/clsn/ui/renderers/ButtonRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/CheckBoxRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/DualContainerRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/FlowContainerRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/HBoxContainerRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/LabelRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/LabelRendererHelpers.cpp
-        code/classeine-lib/clsn/ui/renderers/RadioButtonRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/ToggleButtonRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/VBoxContainerRenderer.cpp
-        code/classeine-lib/clsn/ui/renderers/XYContainerRenderer.cpp
+        code/classeine-lib/clsn/ui/renderers/border_renderer_helpers.cpp
+        code/classeine-lib/clsn/ui/renderers/button_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/dual_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/flow_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/hbox_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/label_renderer_helpers.cpp
+        code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/vbox_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/xy_container_renderer.cpp
 )
 
 target_include_directories(classeine PUBLIC code/classeine-lib)

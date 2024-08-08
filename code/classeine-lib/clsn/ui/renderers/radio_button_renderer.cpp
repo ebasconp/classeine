@@ -1,4 +1,4 @@
-#include "RadioButtonRenderer.h"
+#include "radio_button_renderer.h"
 
 #include "clsn/ui/radio_button.h"
 #include "clsn/ui/ui_manager.h"
@@ -8,7 +8,7 @@
 
 namespace clsn::ui::renderers
 {
-    void RadioButtonRenderer::paint(graphics& graphics,
+    void radio_button_renderer::paint(graphics& graphics,
                    const region& region,
                    const control& baseControl) const
     {
