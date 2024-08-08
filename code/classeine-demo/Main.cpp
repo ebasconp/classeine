@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "clsn/core/Console.h"
 #include "clsn/core/Panic.h"
 
 #include "clsn/draw/Colors.h"
@@ -27,6 +28,24 @@ void test()
     using namespace clsn::core;
     using namespace clsn::ui;
     using namespace clsn::ui::renderers;
+
+    class A
+    {
+    public:
+        std::string toString() const { return "A.toString()"; }
+    };
+
+    std::string s = "Juan";
+    int n = 10;
+
+    std::string f1 = "Hello, my  name is {0} and I am {1} years old";
+    std::string f2 = "Hola, tengo {1} años y me llamo {0}";
+    std::string f3 = "Hallo, mein Name ist {} und Ich bin {} Jahre alte";
+
+    Console::println(f1, s, n);
+    Console::println(f2, s, n);
+    Console::debug(f3, s, n);
+    Console::println("Hello world");
 
     UIManager::getInstance().installTheme("light");
 
