@@ -21,7 +21,7 @@ endif()
 
 add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/core/Entity.cpp
-        code/classeine-lib/clsn/core/Panic.cpp
+        code/classeine-lib/clsn/core/Strings.cpp
 
         code/classeine-lib/clsn/draw/Color.cpp
         code/classeine-lib/clsn/draw/Colors.cpp
