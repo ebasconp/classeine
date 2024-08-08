@@ -33,7 +33,7 @@ namespace clsn::ui
                             const_control_optional_reference = 0;
 
     protected:
-        void process_mouse_moved_event(events::MouseMovedEvent &e) override;
+        void process_mouse_moved_event(events::mouse_moved_event &e) override;
 
     private:
         void init_defaults();

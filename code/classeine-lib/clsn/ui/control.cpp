@@ -24,27 +24,27 @@ namespace clsn::ui
         get_renderer().paint(graphics, region, *this);
     }
 
-    void control::notify_mouse_click_event(MouseClickEvent& e)
+    void control::notify_mouse_click_event(mouse_click_event& e)
     {
         process_mouse_click_event(e);
     }
 
-    void control::add_mouse_moved_listener(event_listener<MouseMovedEvent> event)
+    void control::add_mouse_moved_listener(event_listener<mouse_moved_event> event)
     {
         m_mouse_moved_listeners.add(std::move(event));
     }
 
-    void control::notify_mouse_moved_event(MouseMovedEvent& e)
+    void control::notify_mouse_moved_event(mouse_moved_event& e)
     {
         process_mouse_moved_event(e);
     }
 
-    void control::process_mouse_click_event(events::MouseClickEvent& e)
+    void control::process_mouse_click_event(events::mouse_click_event& e)
     {
         if (!is_enabled())
             return;
 
-        if (e.getStatus() == MouseClickStatus::released)
+        if (e.getStatus() == mouse_click_status::released)
         {
             invoke_in_parent_window([](auto& w) { w.release_mouse(); });
         }
@@ -52,7 +52,7 @@ namespace clsn::ui
         m_mouse_click_listeners.notify(e);
     }
 
-    void control::process_mouse_moved_event(events::MouseMovedEvent& e)
+    void control::process_mouse_moved_event(events::mouse_moved_event& e)
     {
         if (!is_enabled())
             return;
@@ -60,7 +60,7 @@ namespace clsn::ui
         m_mouse_moved_listeners.notify(e);
     }
 
-    void control::add_mouse_click_listener(event_listener<MouseClickEvent> event)
+    void control::add_mouse_click_listener(event_listener<mouse_click_event> event)
     {
         m_mouse_click_listeners.add(std::move(event));
     }

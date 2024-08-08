@@ -41,12 +41,12 @@ namespace clsn::ui
             return m_control;
         }
 
-        void process_mouse_click_event(events::MouseClickEvent& e)
+        void process_mouse_click_event(events::mouse_click_event& e)
         {
             m_control.notify_mouse_click_event(e);
         }
 
-        void process_mouse_moved_event(events::MouseMovedEvent& e)
+        void process_mouse_moved_event(events::mouse_moved_event& e)
         {
             window::process_mouse_moved_event(e);
             m_control.notify_mouse_moved_event(e);

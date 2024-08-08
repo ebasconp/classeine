@@ -2,9 +2,9 @@
 
 #include "graphics_sdl2_impl.h"
 
-#include "clsn/ui/events/ControlResizedEvent.h"
-#include "clsn/ui/events/MouseClickEvent.h"
-#include "clsn/ui/events/MouseMovedEvent.h"
+#include "clsn/ui/events/control_resized_event.h"
+#include "clsn/ui/events/mouse_click_event.h"
+#include "clsn/ui/events/mouse_moved_event.h"
 
 #include "clsn/draw/dimension.h"
 #include "clsn/draw/point.h"
@@ -189,10 +189,10 @@ namespace clsn::ui::impl::sdl2
         {
             const auto status =
                 type == SDL_MOUSEBUTTONDOWN
-                    ? clsn::ui::events::MouseClickStatus::pressed
-                    : clsn::ui::events::MouseClickStatus::released;
+                    ? clsn::ui::events::mouse_click_status::pressed
+                    : clsn::ui::events::mouse_click_status::released;
 
-            clsn::ui::events::MouseClickEvent mouseClickEvent{
+            clsn::ui::events::mouse_click_event mouseClickEvent{
                 status, point{e.button.x, e.button.y}};
 
             m_parentWindow.process_mouse_click_event(mouseClickEvent);
@@ -200,7 +200,7 @@ namespace clsn::ui::impl::sdl2
 
         void trigger_mouse_moved_event(SDL_Event& e)
         {
-            clsn::ui::events::MouseMovedEvent mouseMovedEvent{point{e.motion.x, e.motion.y}};
+            clsn::ui::events::mouse_moved_event mouseMovedEvent{point{e.motion.x, e.motion.y}};
             m_parentWindow.process_mouse_moved_event(mouseMovedEvent);
         }
 

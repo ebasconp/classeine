@@ -64,7 +64,7 @@ namespace clsn::ui
         }
     }
 
-    void window::process_mouse_moved_event(events::MouseMovedEvent &e)
+    void window::process_mouse_moved_event(events::mouse_moved_event &e)
     {
         auto currentlyHovered = get_control_by_position(e.position);
         if (!areEqual(m_hovered_control, currentlyHovered))

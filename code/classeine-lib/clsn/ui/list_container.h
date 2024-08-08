@@ -189,7 +189,7 @@ namespace clsn::ui
             // Do nothing here
         }
 
-        void process_mouse_click_event(events::MouseClickEvent& e) override
+        void process_mouse_click_event(events::mouse_click_event& e) override
         {
             const auto count = get_count();
             for (int i = 0; i < count; i++)
@@ -207,7 +207,7 @@ namespace clsn::ui
             control::process_mouse_click_event(e);
         }
 
-        void process_mouse_moved_event(events::MouseMovedEvent& e) override
+        void process_mouse_moved_event(events::mouse_moved_event& e) override
         {
             control::process_mouse_moved_event(e);
 

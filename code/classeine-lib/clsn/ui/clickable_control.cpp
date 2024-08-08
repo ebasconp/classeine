@@ -36,9 +36,9 @@ namespace clsn::ui
         add_text_changed_listener([this](auto&) { invalidate(); });
     }
 
-    void clickable_control::process_mouse_click_event(events::MouseClickEvent& e)
+    void clickable_control::process_mouse_click_event(events::mouse_click_event& e)
     {
-        auto pressedNow = e.getStatus() == clsn::ui::events::MouseClickStatus::pressed;
+        auto pressedNow = e.getStatus() == clsn::ui::events::mouse_click_status::pressed;
 
         m_pressed = pressedNow;
         this->invalidate();

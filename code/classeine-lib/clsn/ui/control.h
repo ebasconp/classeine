@@ -2,9 +2,9 @@
 
 #include "clsn/ui/graphics.h"
 
-#include "clsn/ui/events/ControlResizedEvent.h"
-#include "clsn/ui/events/MouseClickEvent.h"
-#include "clsn/ui/events/MouseMovedEvent.h"
+#include "clsn/ui/events/control_resized_event.h"
+#include "clsn/ui/events/mouse_click_event.h"
+#include "clsn/ui/events/mouse_moved_event.h"
 
 #include "clsn/draw/color.h"
 #include "clsn/draw/dimension.h"
@@ -30,9 +30,9 @@ namespace clsn::ui
 
     class control : public entity
     {
-        event_listener_list<ControlResizedEvent> m_control_resized_listeners;
-        event_listener_list<MouseClickEvent> m_mouse_click_listeners;
-        event_listener_list<MouseMovedEvent> m_mouse_moved_listeners;
+        event_listener_list<control_resized_event> m_control_resized_listeners;
+        event_listener_list<mouse_click_event> m_mouse_click_listeners;
+        event_listener_list<mouse_moved_event> m_mouse_moved_listeners;
 
         std::shared_ptr<entity> m_tag;
         mutable std::shared_ptr<renderer_base> m_renderer;
@@ -70,11 +70,11 @@ namespace clsn::ui
         auto operator==(const control&) const -> bool;
         auto operator!=(const control&) const -> bool;
 
-        void add_mouse_click_listener(event_listener<MouseClickEvent> event);
-        void notify_mouse_click_event(MouseClickEvent& e);
+        void add_mouse_click_listener(event_listener<mouse_click_event> event);
+        void notify_mouse_click_event(mouse_click_event& e);
 
-        void add_mouse_moved_listener(event_listener<MouseMovedEvent> event);
-        void notify_mouse_moved_event(MouseMovedEvent& e);
+        void add_mouse_moved_listener(event_listener<mouse_moved_event> event);
+        void notify_mouse_moved_event(mouse_moved_event& e);
 
         void paint(graphics& graphics, const region& region) const;
 
@@ -131,8 +131,8 @@ namespace clsn::ui
         virtual void load_defaults();
 
     protected:
-        virtual void process_mouse_click_event(events::MouseClickEvent& e);
-        virtual void process_mouse_moved_event(events::MouseMovedEvent& e);
+        virtual void process_mouse_click_event(events::mouse_click_event& e);
+        virtual void process_mouse_moved_event(events::mouse_moved_event& e);
 
     private:
         void init_events();

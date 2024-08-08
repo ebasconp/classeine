@@ -8,26 +8,26 @@ namespace clsn::ui::events
 {
     using namespace clsn::draw;
 
-    enum class MouseClickStatus
+    enum class mouse_click_status
     {
         released,
         pressed
     };
 
-    class MouseClickData
+    class mouse_click_data
     {
     private:
-        MouseClickStatus m_status;
+        mouse_click_status m_status;
         point m_point;
 
     public:
-        MouseClickData(MouseClickStatus status, const point& point)
+        mouse_click_data(mouse_click_status status, const point& point)
         : m_status{status}
         , m_point{point}
         {
         }
 
-        [[nodiscard]] auto getStatus() const noexcept -> MouseClickStatus
+        [[nodiscard]] auto getStatus() const noexcept -> mouse_click_status
         {
             return m_status;
         }
@@ -38,5 +38,5 @@ namespace clsn::ui::events
         }
     };
 
-    using MouseClickEvent = clsn::core::event<MouseClickData>;
+    using mouse_click_event = clsn::core::event<mouse_click_data>;
 }

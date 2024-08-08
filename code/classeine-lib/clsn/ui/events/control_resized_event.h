@@ -4,14 +4,14 @@
 
 namespace clsn::ui::events
 {
-    class ControlResizedData
+    class control_resized_data
     {
     private:
         int m_width;
         int m_height;
 
     public:
-        ControlResizedData(int width, int height)
+        control_resized_data(int width, int height)
         : m_width{width}
         , m_height{height}
         {
@@ -21,5 +21,5 @@ namespace clsn::ui::events
         auto get_height() const noexcept -> int { return m_height; }
     };
 
-    using ControlResizedEvent = clsn::core::event<ControlResizedData>;
+    using control_resized_event = clsn::core::event<control_resized_data>;
 }

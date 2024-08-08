@@ -8,10 +8,10 @@ namespace clsn::ui::events
 {
     using namespace clsn::draw;
 
-    struct PointData
+    struct point_data
     {
         point position;
     };
 
-    using MouseMovedEvent = clsn::core::event<PointData>;
+    using mouse_moved_event = clsn::core::event<point_data>;
 }
