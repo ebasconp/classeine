@@ -1,0 +1,16 @@
+#pragma once
+
+#include "list_container.h"
+
+namespace clsn::ui
+{
+    using clsn::core::empty;
+
+    class vbox_container : public list_container<empty>
+    {
+    public:
+        vbox_container();
+
+        void do_layout() override;
+    };
+}

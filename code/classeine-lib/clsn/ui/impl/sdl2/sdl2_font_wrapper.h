@@ -1,0 +1,18 @@
+#pragma once
+
+#include <SDL_ttf.h>
+
+#include <memory>
+
+namespace clsn::ui::impl::sdl2
+{
+    struct ttf_font_deleter final
+    {
+        void operator()(TTF_Font* font) const
+        {
+            TTF_CloseFont(font);
+        }
+    };
+
+    using sdl2_font_wrapper = std::unique_ptr<TTF_Font, ttf_font_deleter>;
+}
