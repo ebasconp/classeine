@@ -31,23 +31,23 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/draw/point.cpp
         code/classeine-lib/clsn/draw/region.cpp
 
-        code/classeine-lib/clsn/ui/Button.cpp
-        code/classeine-lib/clsn/ui/CheckBox.cpp
-        code/classeine-lib/clsn/ui/ClickableControl.cpp
-        code/classeine-lib/clsn/ui/Control.cpp
+        code/classeine-lib/clsn/ui/button.cpp
+        code/classeine-lib/clsn/ui/check_box.cpp
+        code/classeine-lib/clsn/ui/clickable_control.cpp
+        code/classeine-lib/clsn/ui/control.cpp
         code/classeine-lib/clsn/ui/DualContainer.cpp
         code/classeine-lib/clsn/ui/FlowContainer.cpp
         code/classeine-lib/clsn/ui/HBoxContainer.cpp
-        code/classeine-lib/clsn/ui/Label.cpp
-        code/classeine-lib/clsn/ui/RadioButton.cpp
-        code/classeine-lib/clsn/ui/RadioButtonGroup.cpp
-        code/classeine-lib/clsn/ui/ToggleButton.cpp
-        code/classeine-lib/clsn/ui/ToggleControl.cpp
+        code/classeine-lib/clsn/ui/label.cpp
+        code/classeine-lib/clsn/ui/radio_button.cpp
+        code/classeine-lib/clsn/ui/radio_button_group.cpp
+        code/classeine-lib/clsn/ui/toggle_button.cpp
+        code/classeine-lib/clsn/ui/toggle_control.cpp
         code/classeine-lib/clsn/ui/UIManager.cpp
         code/classeine-lib/clsn/ui/UISkin.cpp
         code/classeine-lib/clsn/ui/UITheme.cpp
         code/classeine-lib/clsn/ui/VBoxContainer.cpp
-        code/classeine-lib/clsn/ui/Window.cpp
+        code/classeine-lib/clsn/ui/window.cpp
         code/classeine-lib/clsn/ui/XYContainer.cpp
 
         code/classeine-lib/clsn/ui/amatista/DarkAmatistaUITheme.cpp

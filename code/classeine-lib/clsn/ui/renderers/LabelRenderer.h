@@ -9,8 +9,8 @@ namespace clsn::ui::renderers
     class LabelRenderer : public IRenderer
     {
     public:
-        void paint(Graphics& graphics,
+        void paint(graphics& graphics,
                    const region& region,
-                   const Control& control) const override;
+                   const control& control) const override;
     };
 }

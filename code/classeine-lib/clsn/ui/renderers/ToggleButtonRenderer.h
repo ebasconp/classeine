@@ -4,7 +4,7 @@
 
 namespace  clsn::ui
 {
-    class ClickableControl;
+    class clickable_control;
 }
 
 namespace clsn::ui::renderers
@@ -15,6 +15,6 @@ namespace clsn::ui::renderers
     class ToggleButtonRenderer : public ButtonRenderer
     {
     public:
-        [[nodiscard]] virtual auto paintAsPressed(const ClickableControl& button) const -> bool;
+        [[nodiscard]] virtual auto paintAsPressed(const clickable_control& button) const -> bool;
     };
 }

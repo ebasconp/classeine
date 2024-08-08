@@ -4,7 +4,7 @@
 
 namespace clsn::ui
 {
-  class ClickableControl;
+  class clickable_control;
 }
 
 namespace clsn::ui::renderers
@@ -15,10 +15,10 @@ namespace clsn::ui::renderers
     class ButtonRenderer : public IRenderer
     {
     public:
-        [[nodiscard]] virtual auto paintAsPressed(const ClickableControl& button) const -> bool;
+        [[nodiscard]] virtual auto paintAsPressed(const clickable_control& button) const -> bool;
 
-        void paint(Graphics& graphics,
+        void paint(graphics& graphics,
                    const region& region,
-                   const Control& baseControl) const override;
+                   const control& baseControl) const override;
     };
 }

@@ -142,7 +142,7 @@ namespace clsn::ui::impl::sdl2
 
         void runEventLoop()
         {
-            m_parentWindow().doLayout();
+            m_parentWindow().do_layout();
             m_parentWindow().invalidate();
 
             GraphicsSdl2Impl graphics{*m_renderer, m_parentWindow.get_size()};
@@ -195,13 +195,13 @@ namespace clsn::ui::impl::sdl2
             clsn::ui::events::MouseClickEvent mouseClickEvent{
                 status, point{e.button.x, e.button.y}};
 
-            m_parentWindow.processMouseClickEvent(mouseClickEvent);
+            m_parentWindow.process_mouse_click_event(mouseClickEvent);
         }
 
         void triggerMouseMovedEvent(SDL_Event& e)
         {
             clsn::ui::events::MouseMovedEvent mouseMovedEvent{point{e.motion.x, e.motion.y}};
-            m_parentWindow.processMouseMovedEvent(mouseMovedEvent);
+            m_parentWindow.process_mouse_moved_event(mouseMovedEvent);
         }
 
         void processControlResizedEvent(const dimension& newSize)

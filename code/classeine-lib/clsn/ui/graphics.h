@@ -4,5 +4,5 @@
 
 namespace clsn::ui
 {
-    using Graphics = impl::GraphicsImpl;
+    using graphics = impl::GraphicsImpl;
 }

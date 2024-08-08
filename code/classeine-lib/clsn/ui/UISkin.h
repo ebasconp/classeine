@@ -5,7 +5,7 @@
 #include "clsn/core/factory.h"
 #include "clsn/core/lazy.h"
 
-#include "clsn/ui/Control.h" //FORWARD
+#include "clsn/ui/control.h" //FORWARD
 #include "clsn/ui/UITheme.h"
 
 #include "clsn/ui/IRenderer.h"
@@ -64,7 +64,7 @@ namespace clsn::ui
         auto getDimension(std::string_view section_name, std::string_view name) -> const dimension&;
         auto get_font(std::string_view section_name, std::string_view name) -> const font&;
 
-        auto getRendererByControl(const clsn::ui::Control& ctrl) const -> std::shared_ptr<IRenderer>;
+        auto getRendererByControl(const clsn::ui::control& ctrl) const -> std::shared_ptr<IRenderer>;
         auto addThemeChangedListener(event_listener<empty_event> listener) -> int;
         auto getCurrentThemeName() const -> const std::string&;
     };

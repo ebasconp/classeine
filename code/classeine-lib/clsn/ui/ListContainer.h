@@ -1,22 +1,22 @@
 #pragma once
 
-#include "Control.h"
+#include "control.h"
 #include "UIManager.h"
 
-#include "Window.h"
+#include "window.h"
 
 #include <iostream> //ETOTODO: REMOVE
 
 namespace clsn::ui
 {
     template <typename Constraint>
-    class ListContainer : public Control
+    class ListContainer : public control
     {
     public:
         struct ControlAndConstraint
         {
-            std::shared_ptr<Control> control;
-            Constraint constraint;
+            std::shared_ptr<control> m_control;
+            Constraint m_constraint;
         };
 
     private:
@@ -25,7 +25,7 @@ namespace clsn::ui
 
     public:
         explicit ListContainer(std::string_view section_name)
-        : Control{section_name}
+        : control{section_name}
         , m_needsToPaintTheContainer{false}
         {
             loadContainerDefaults();
@@ -39,9 +39,9 @@ namespace clsn::ui
             checkIfValidBeforeAdding(constraint);
 
             auto ptr = std::make_shared<ControlType>();
-            ptr->setParentWindow(getParentWindow());
+            ptr->set_parent_window(get_parent_window());
             m_controls.emplace_back(ptr, std::move(constraint));
-            initEvents(*ptr);
+            init_events(*ptr);
             return ptr;
         }
 
@@ -60,13 +60,13 @@ namespace clsn::ui
             return m_controls[index];
         }
 
-        auto getVisibleCount() const -> int
+        auto get_visible_count() const -> int
         {
             int count = getCount();
             int visibleCount = 0;
             for (int i = 0; i < count; i++)
             {
-                if (m_controls[i].control->is_visible())
+                if (m_controls[i].m_control->is_visible())
                     visibleCount++;
             }
 
@@ -74,9 +74,9 @@ namespace clsn::ui
         }
 
         auto getVisibleControls() const
-            -> std::vector<std::shared_ptr<const Control>>
+            -> std::vector<std::shared_ptr<const control>>
         {
-            std::vector<std::shared_ptr<const Control>> controls;
+            std::vector<std::shared_ptr<const control>> controls;
 
             for (auto& c : m_controls)
             {
@@ -90,16 +90,16 @@ namespace clsn::ui
             return controls;
         }
 
-        auto& operator[](int index) { return *(m_controls[index].control); }
+        auto& operator[](int index) { return *(m_controls[index].m_control); }
 
         const auto& operator[](int index) const noexcept
         {
-            return *(m_controls[index].control);
+            return *(m_controls[index].m_control);
         }
 
         auto getConstraintAt(int index) const -> const Constraint&
         {
-            return m_controls[index].constraint;
+            return m_controls[index].m_constraint;
         }
 
         template <typename Proc>
@@ -107,7 +107,7 @@ namespace clsn::ui
         {
             for (auto& p : m_controls)
             {
-                proc(*(p.control), p.constraint);
+                proc(*(p.m_control), p.m_constraint);
             }
         }
 
@@ -116,7 +116,7 @@ namespace clsn::ui
         {
             for (auto& p : m_controls)
             {
-                proc(*(p.control), p.constraint);
+                proc(*(p.m_control), p.m_constraint);
             }
         }
 
@@ -126,7 +126,7 @@ namespace clsn::ui
 
             int count = getCount();
             for (int i = 0; i < count; i++)
-                m_controls[i].control->invalidate();
+                m_controls[i].m_control->invalidate();
         }
 
         void validate() const noexcept override
@@ -135,7 +135,7 @@ namespace clsn::ui
 
             int count = getCount();
             for (int i = 0; i < count; i++)
-                m_controls[i].control->validate();
+                m_controls[i].m_control->validate();
         }
 
         auto needsToPaintTheContainer() const noexcept -> bool
@@ -143,30 +143,30 @@ namespace clsn::ui
             return m_needsToPaintTheContainer;
         }
 
-        auto isInvalidated() const noexcept -> bool override
+        auto is_invalidated() const noexcept -> bool override
         {
             int count = getCount();
             for (int i = 0; i < count; i++)
-                if (m_controls[i].control->isInvalidated())
+                if (m_controls[i].m_control->is_invalidated())
                     return true;
 
             return false;
         }
 
-        void loadDefaults() override
+        void load_defaults() override
         {
-            Control::loadDefaults();
+            control::load_defaults();
 
             loadContainerDefaults();
 
             for (auto& e : m_controls)
             {
-                e.control->loadDefaults();
+                e.m_control->load_defaults();
             }
         }
 
-        auto getControlByPosition(const point &point) const
-    -> std::optional<std::reference_wrapper<const Control>> override
+        auto get_control_by_position(const point &point) const
+    -> std::optional<std::reference_wrapper<const control>> override
         {
             const auto count = getCount();
             for (int i = 0; i < count; i++)
@@ -175,7 +175,7 @@ namespace clsn::ui
                 if (!control.is_visible() || !control.is_enabled())
                     continue;
 
-                auto result = control.getControlByPosition(point);
+                auto result = control.get_control_by_position(point);
                 if (result.has_value())
                     return result;
             }
@@ -189,7 +189,7 @@ namespace clsn::ui
             // Do nothing here
         }
 
-        void processMouseClickEvent(events::MouseClickEvent& e) override
+        void process_mouse_click_event(events::MouseClickEvent& e) override
         {
             const auto count = getCount();
             for (int i = 0; i < count; i++)
@@ -200,16 +200,16 @@ namespace clsn::ui
 
                 if (control.contains_point(e.getPoint()))
                 {
-                    control.notifyMouseClickEvent(e);
+                    control.notify_mouse_click_event(e);
                 }
             }
 
-            Control::processMouseClickEvent(e);
+            control::process_mouse_click_event(e);
         }
 
-        void processMouseMovedEvent(events::MouseMovedEvent& e) override
+        void process_mouse_moved_event(events::MouseMovedEvent& e) override
         {
-            Control::processMouseMovedEvent(e);
+            control::process_mouse_moved_event(e);
 
             const auto count = getCount();
             for (int i = 0; i < count; i++)
@@ -220,7 +220,7 @@ namespace clsn::ui
 
                 if (control.contains_point(e.position))
                 {
-                    control.notifyMouseMovedEvent(e);
+                    control.notify_mouse_moved_event(e);
                 }
             }
         }
@@ -231,7 +231,7 @@ namespace clsn::ui
             add_actual_size_changed_listener(
                 [this](auto& )
                 {
-                    doLayout();
+                    do_layout();
                 });
         }
 
@@ -239,7 +239,7 @@ namespace clsn::ui
         void loadContainerDefaults()
         {
             auto& uiManager = clsn::ui::UIManager::getInstance();
-            auto section_name = getDefaultSectionName();
+            auto section_name = get_default_section_name();
 
             set_background_color(uiManager.getColor(
                 section_name, "containerBackgroundColor"));
@@ -249,7 +249,7 @@ namespace clsn::ui
         }
 
 
-        void initEvents(Control& control)
+        void init_events(control& control)
         {
             add_enabled_changed_listener([this](auto& e)
             {
@@ -264,7 +264,7 @@ namespace clsn::ui
             control.add_visible_changed_listener(
                 [this](auto&)
                 {
-                    doLayout();
+                    do_layout();
                     invalidate();
                 });
         }

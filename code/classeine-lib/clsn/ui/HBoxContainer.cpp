@@ -7,9 +7,9 @@ namespace clsn::ui
     {
     }
 
-    void HBoxContainer::doLayout()
+    void HBoxContainer::do_layout()
     {
-        const auto visibleCount = getVisibleCount();
+        const auto visibleCount = get_visible_count();
         if (visibleCount == 0)
             return;
 

@@ -7,9 +7,9 @@ namespace clsn::ui
     {
     }
 
-    void XYContainer::doLayout()
+    void XYContainer::do_layout()
     {
-        const auto visibleCount = getVisibleCount();
+        const auto visibleCount = get_visible_count();
         if (visibleCount == 0)
             return;
 
@@ -21,7 +21,7 @@ namespace clsn::ui
                 return;
 
             control.set_actual_position({position.get_x() + constraint.get_x(), position.get_y() + constraint.get_y()});
-            control.set_actual_size(control.getActualPreferredSize());
+            control.set_actual_size(control.get_actual_preferred_size());
         });
     }
 }

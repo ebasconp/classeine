@@ -6,7 +6,7 @@ namespace clsn::ui::renderers::BorderRendererHelpers
 {
     using namespace clsn::draw;
 
-    void drawFlatBorder(Graphics& graphics,
+    void drawFlatBorder(graphics& graphics,
                         const region& region,
                         const color& colorUp,
                         const color& colorDown,
@@ -49,7 +49,7 @@ namespace clsn::ui::renderers::BorderRendererHelpers
         }
     }
 
-    void drawBeveledBorder(Graphics& graphics,
+    void drawBeveledBorder(graphics& graphics,
                            const region& region,
                            const color& colorUp,
                            const color& colorDown,

@@ -1,7 +1,7 @@
 #include "ButtonRenderer.h"
 
-#include "clsn/ui/Button.h"
-#include "clsn/ui/Graphics.h"
+#include "clsn/ui/button.h"
+#include "clsn/ui/graphics.h"
 #include "clsn/ui/UIManager.h"
 
 #include "clsn/draw/region.h"
@@ -9,20 +9,20 @@
 #include "BorderRendererHelpers.h"
 #include "LabelRendererHelpers.h"
 
-#include <clsn/ui/Window.h>
+#include <clsn/ui/window.h>
 
 namespace
 {
     using namespace clsn::ui;
 
-    color getUltimateBackgroundColor(const Button& button, bool isHovered)
+    color getUltimateBackgroundColor(const button& button, bool is_hovered)
     {
-        if (isHovered)
+        if (is_hovered)
         {
-            return UIManager::getInstance().getColor(button.getDefaultSectionName(), "controlHoveredBackgroundColor");
+            return UIManager::getInstance().getColor(button.get_default_section_name(), "controlHoveredBackgroundColor");
         }
 
-        return button.getActualBackgroundColor();
+        return button.get_actual_background_color();
     }
 }
 
@@ -31,30 +31,30 @@ namespace clsn::ui::renderers
     using namespace clsn::draw;
     using namespace clsn::ui;
 
-    auto ButtonRenderer::paintAsPressed(const ClickableControl& button) const -> bool
+    auto ButtonRenderer::paintAsPressed(const clickable_control& button) const -> bool
     {
-        return button.isPressed();
+        return button.is_pressed();
     }
 
-    void ButtonRenderer::paint(Graphics& graphics,
+    void ButtonRenderer::paint(graphics& graphics,
                const region& a_region,
-               const Control& baseControl) const
+               const control& baseControl) const
     {
-        if (!baseControl.isInvalidated())
+        if (!baseControl.is_invalidated())
             return;
 
-        auto& control = static_cast<const clsn::ui::Button&>(baseControl);
+        auto& control = static_cast<const clsn::ui::button&>(baseControl);
 
-        const auto section_name = control.getDefaultSectionName();
-        const auto isHovered = control.isHovered();
+        const auto section_name = control.get_default_section_name();
+        const auto is_hovered = control.is_hovered();
 
         auto& unhoveredColor =
             UIManager::getInstance().getColor(
-                control.getDefaultSectionName(), "controlBackgroundColor");
+                control.get_default_section_name(), "controlBackgroundColor");
 
-        auto& bevelUp = isHovered ? UIManager::getInstance().getColor(
+        auto& bevelUp = is_hovered ? UIManager::getInstance().getColor(
             section_name, "bevelUpColor") : unhoveredColor;
-        auto& bevelDown = isHovered ? UIManager::getInstance().getColor(
+        auto& bevelDown = is_hovered ? UIManager::getInstance().getColor(
             section_name, "bevelDownColor") : unhoveredColor;
 
         constexpr int depth = 2;
@@ -72,8 +72,8 @@ namespace clsn::ui::renderers
                                a_region.get_height() - depth2};
 
         const auto& buttonColor = pressed
-            ? UIManager::getInstance().getColor("Button", "pressedBackgroundColor")
-            : getUltimateBackgroundColor(control, isHovered);
+            ? UIManager::getInstance().getColor("button", "pressedBackgroundColor")
+            : getUltimateBackgroundColor(control, is_hovered);
 
         graphics.setDrawColor(buttonColor);
         graphics.drawFillRectangle(innerRect);

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Window.h"
+#include "window.h"
 
 #include "impl/MainWindowImpl.h"
 
@@ -9,26 +9,26 @@ namespace clsn::ui
     using namespace clsn::draw;
 
     template <typename ControlType>
-    class MainWindow final : public Window
+    class main_window final : public window
     {
-        clsn::ui::impl::MainWindowImpl<MainWindow<ControlType>> m_impl;
+        clsn::ui::impl::MainWindowImpl<main_window<ControlType>> m_impl;
         ControlType m_control;
 
     public:
-        MainWindow()
-        : Window("MainWindow")
+        main_window()
+        : window("main_window")
         , m_impl{*this}
         {
-            initVisibility();
-            initSize();
-            loadWindowDefaults();
+            init_visibility();
+            init_size();
+            load_window_defaults();
 
             UIManager::getInstance().addThemeChangedListener([this](auto&)
             {
-                updateTheme();
+                update_theme();
             });
 
-            m_control.setParentWindow(*this);
+            m_control.set_parent_window(*this);
         }
 
         [[nodiscard]] auto operator()() noexcept -> ControlType&
@@ -41,40 +41,40 @@ namespace clsn::ui
             return m_control;
         }
 
-        void processMouseClickEvent(events::MouseClickEvent& e)
+        void process_mouse_click_event(events::MouseClickEvent& e)
         {
-            m_control.notifyMouseClickEvent(e);
+            m_control.notify_mouse_click_event(e);
         }
 
-        void processMouseMovedEvent(events::MouseMovedEvent& e)
+        void process_mouse_moved_event(events::MouseMovedEvent& e)
         {
-            Window::processMouseMovedEvent(e);
-            m_control.notifyMouseMovedEvent(e);
+            window::process_mouse_moved_event(e);
+            m_control.notify_mouse_moved_event(e);
         }
 
-        auto getControlByPosition(const point& point) const ->
-            std::optional<std::reference_wrapper<const Control>> override
+        auto get_control_by_position(const point& point) const ->
+            std::optional<std::reference_wrapper<const control>> override
         {
-            return m_control.getControlByPosition(point);
+            return m_control.get_control_by_position(point);
         }
 
     private:
-        void loadWindowDefaults()
+        void load_window_defaults()
         {
 
         }
 
-        void updateTheme()
+        void update_theme()
         {
-            loadWindowDefaults();
-            loadDefaults();
+            load_window_defaults();
+            load_defaults();
 
-            m_control.loadDefaults();
+            m_control.load_defaults();
             m_control.invalidate();
         }
 
 
-        void initVisibility()
+        void init_visibility()
         {
             add_visible_changed_listener(
                 [this](auto& e)
@@ -90,10 +90,10 @@ namespace clsn::ui
                 });
         }
 
-        void initSize()
+        void init_size()
         {
             //auto& dimension = UIManager::getInstance().getDefault(
-            //                "MainWindow", "size", dimension{300, 200});
+            //                "main_window", "size", dimension{300, 200});
             //ETOTODO: MOVE THIS TO THE THEME
 
             m_control.set_actual_size(dimension{800, 600});

@@ -13,6 +13,6 @@ namespace clsn::ui
     public:
         XYContainer();
 
-        void doLayout() override;
+        void do_layout() override;
     };
 }

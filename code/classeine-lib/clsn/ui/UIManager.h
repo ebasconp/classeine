@@ -43,7 +43,7 @@ namespace clsn::ui
             m_skin = std::make_unique<SkinType>();
         }
 
-        auto getRendererByControl(const Control& ctrl) const -> std::shared_ptr<IRenderer>;
+        auto getRendererByControl(const control& ctrl) const -> std::shared_ptr<IRenderer>;
 
         auto getColor(std::string_view section_name, std::string_view name) const -> const color&;
         auto getDimension(std::string_view section_name, std::string_view name) const -> const dimension&;

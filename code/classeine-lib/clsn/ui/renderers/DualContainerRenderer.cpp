@@ -2,15 +2,15 @@
 
 namespace clsn::ui::renderers
 {
-    void DualContainerRenderer::paint(Graphics& graphics,
+    void DualContainerRenderer::paint(graphics& graphics,
                                   const region& region,
-                                  const Control& baseControl) const
+                                  const control& baseControl) const
     {
         auto& container = static_cast<const DualContainer&>(baseControl);
 
         if (container.needsToPaintTheContainer())
         {
-            graphics.setDrawColor(baseControl.getActualBackgroundColor());
+            graphics.setDrawColor(baseControl.get_actual_background_color());
             graphics.drawFillRectangle(region);
         }
 

@@ -11,8 +11,8 @@ namespace clsn::ui::renderers
         LabelRenderer m_labelRenderer;
 
     public:
-        void paint(Graphics& graphics,
+        void paint(graphics& graphics,
                    const region& region,
-                   const Control& baseControl) const override;
+                   const control& baseControl) const override;
     };
 }

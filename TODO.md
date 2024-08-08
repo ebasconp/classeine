@@ -3,8 +3,8 @@
 * Create AmatistaUITheme interface
 * Replace default colors to 4 default tones
 * XY anchors
-* Add support for padding in Label
-* Add support for icons in Label
+* Add support for padding in label
+* Add support for icons in label
 * Add BorderContainer
 * Set disabled controls Black&White
 * Focus management

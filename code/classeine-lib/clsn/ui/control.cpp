@@ -1,6 +1,6 @@
-#include "Control.h"
+#include "control.h"
 #include "UIManager.h"
-#include "Window.h"
+#include "window.h"
 
 #include "clsn/draw/region.h"
 
@@ -10,131 +10,131 @@ namespace clsn::ui
 {
     using clsn::ui::renderers::NullRenderer;
 
-    Control::Control(std::string_view section_name)
+    control::control(std::string_view section_name)
     : m_defaultSectionName{section_name}
     , m_invalidated{true}
     {
-        initEvents();
+        init_events();
     }
 
-    void Control::paint(Graphics& graphics, const region& region) const
+    void control::paint(graphics& graphics, const region& region) const
     {
         debug_count("paint");
 
-        getRenderer().paint(graphics, region, *this);
+        get_renderer().paint(graphics, region, *this);
     }
 
-    void Control::notifyMouseClickEvent(MouseClickEvent& e)
+    void control::notify_mouse_click_event(MouseClickEvent& e)
     {
-        processMouseClickEvent(e);
+        process_mouse_click_event(e);
     }
 
-    void Control::addMouseMovedListener(event_listener<MouseMovedEvent> event)
+    void control::add_mouse_moved_listener(event_listener<MouseMovedEvent> event)
     {
-        m_mouseMovedListeners.add(std::move(event));
+        m_mouse_moved_listeners.add(std::move(event));
     }
 
-    void Control::notifyMouseMovedEvent(MouseMovedEvent& e)
+    void control::notify_mouse_moved_event(MouseMovedEvent& e)
     {
-        processMouseMovedEvent(e);
+        process_mouse_moved_event(e);
     }
 
-    void Control::processMouseClickEvent(events::MouseClickEvent& e)
+    void control::process_mouse_click_event(events::MouseClickEvent& e)
     {
         if (!is_enabled())
             return;
 
         if (e.getStatus() == MouseClickStatus::released)
         {
-            invokeInParentWindow([](auto& w) { w.releaseMouse(); });
+            invoke_in_parent_window([](auto& w) { w.release_mouse(); });
         }
 
-        m_mouseClickListeners.notify(e);
+        m_mouse_click_listeners.notify(e);
     }
 
-    void Control::processMouseMovedEvent(events::MouseMovedEvent& e)
+    void control::process_mouse_moved_event(events::MouseMovedEvent& e)
     {
         if (!is_enabled())
             return;
 
-        m_mouseMovedListeners.notify(e);
+        m_mouse_moved_listeners.notify(e);
     }
 
-    void Control::addMouseClickListener(event_listener<MouseClickEvent> event)
+    void control::add_mouse_click_listener(event_listener<MouseClickEvent> event)
     {
-        m_mouseClickListeners.add(std::move(event));
+        m_mouse_click_listeners.add(std::move(event));
     }
 
-    auto Control::getDefaultSectionName() const -> std::string_view
+    auto control::get_default_section_name() const -> std::string_view
     {
         return m_defaultSectionName;
     }
 
-    void Control::setRenderer(const std::shared_ptr<IRenderer>& renderer)
+    void control::set_renderer(const std::shared_ptr<IRenderer>& renderer)
     {
         m_renderer = renderer;
     }
 
-    void Control::doLayout()
+    void control::do_layout()
     {
-        debug_count("doLayout");
+        debug_count("do_layout");
     }
 
-    void Control::invalidate() const noexcept { m_invalidated = true; }
+    void control::invalidate() const noexcept { m_invalidated = true; }
 
-    void Control::validate() const noexcept { m_invalidated = false; }
+    void control::validate() const noexcept { m_invalidated = false; }
 
-    auto Control::isInvalidated() const noexcept -> bool
+    auto control::is_invalidated() const noexcept -> bool
     {
         return m_invalidated;
     }
 
-    void Control::releaseMouse()
+    void control::release_mouse()
     {
         // Nothing to do here
     }
 
-    auto Control::operator==(const Control& other) const -> bool
+    auto control::operator==(const control& other) const -> bool
     {
         return this == &other;
     }
 
 
-    auto Control::operator!=(const Control& other) const -> bool
+    auto control::operator!=(const control& other) const -> bool
     {
         return this != &other;
     }
 
 
-    void Control::initEvents()
+    void control::init_events()
     {
         add_visible_changed_listener([this](auto&) { invalidate(); });
     }
 
-    void Control::setParentWindow(
-        std::optional<std::reference_wrapper<Window>> parentWindow)
+    void control::set_parent_window(
+        std::optional<std::reference_wrapper<window>> parentWindow)
     {
         m_parentWindow = parentWindow;
     }
 
-    std::optional<std::reference_wrapper<Window>> Control::getParentWindow()
+    std::optional<std::reference_wrapper<window>> control::get_parent_window()
     {
         return m_parentWindow;
     }
 
-    std::optional<std::reference_wrapper<const Window>>
-        Control::getParentWindow() const
+    std::optional<std::reference_wrapper<const window>>
+        control::get_parent_window() const
     {
         return m_parentWindow;
     }
 
-    auto Control::contains_point(const point& point) const -> bool
+    auto control::contains_point(const point& point) const -> bool
     {
         return region{m_actual_position.get(), m_actual_size.get()}.contains_point(point);
     }
 
-    auto Control::getControlByPosition(const point& point) const
-        -> std::optional<std::reference_wrapper<const Control>>
+    auto control::get_control_by_position(const point& point) const
+        -> std::optional<std::reference_wrapper<const control>>
     {
         if (this->contains_point(point))
             return *this;
@@ -142,16 +142,16 @@ namespace clsn::ui
         return std::nullopt;
     }
 
-    auto Control::isHovered() const -> bool
+    auto control::is_hovered() const -> bool
     {
         if (!m_parentWindow.has_value())
             return false;
 
-        return m_parentWindow.value().get().isHovered(*this);
+        return m_parentWindow.value().get().is_hovered(*this);
     }
 
 
-    auto Control::getRenderer() -> IRenderer&
+    auto control::get_renderer() -> IRenderer&
     {
         if (m_renderer == nullptr)
             m_renderer = UIManager::getInstance().getRendererByControl(*this);
@@ -159,7 +159,7 @@ namespace clsn::ui
         return *m_renderer.get();
     }
 
-    auto Control::getRenderer() const -> const IRenderer&
+    auto control::get_renderer() const -> const IRenderer&
     {
         if (m_renderer == nullptr)
             m_renderer = UIManager::getInstance().getRendererByControl(*this);
@@ -167,12 +167,12 @@ namespace clsn::ui
         return *m_renderer.get();
     }
 
-    void Control::loadDefaults()
+    void control::load_defaults()
     {
         // Do nothing here
     }
 
-    auto Control::getActualBackgroundColor() const -> const color&
+    auto control::get_actual_background_color() const -> const color&
     {
         const auto& color = get_background_color();
         if (color.has_value())
@@ -182,7 +182,7 @@ namespace clsn::ui
                     m_defaultSectionName, "controlBackgroundColor");
     }
 
-    auto Control::getActualForegroundColor() const -> const color&
+    auto control::get_actual_foreground_color() const -> const color&
     {
         const auto& color = get_foreground_color();
         if (color.has_value())
@@ -192,7 +192,7 @@ namespace clsn::ui
                     m_defaultSectionName, "controlForegroundColor");
     }
 
-    auto Control::getActualFont() const -> const font&
+    auto control::get_actual_font() const -> const font&
     {
         const auto& font = get_font();
         if (font.has_value())
@@ -201,7 +201,7 @@ namespace clsn::ui
         return UIManager::getInstance().get_font(m_defaultSectionName, "defaultFont");
     }
 
-    auto Control::getActualPreferredSize() const -> const dimension&
+    auto control::get_actual_preferred_size() const -> const dimension&
     {
         const auto& size = get_preferred_size();
         if (size.has_value())

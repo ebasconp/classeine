@@ -2,19 +2,19 @@
 
 #include "LabelRendererHelpers.h"
 
-#include "clsn/ui/Control.h"
+#include "clsn/ui/control.h"
 #include "clsn/ui/UIManager.h"
 
 namespace clsn::ui::renderers
 {
-    void LabelRenderer::paint(Graphics& graphics,
+    void LabelRenderer::paint(graphics& graphics,
                               const region& region,
-                              const Control& control) const
+                              const control& control) const
     {
-        if (!control.isInvalidated())
+        if (!control.is_invalidated())
             return;
 
-        auto section_name = control.getDefaultSectionName();
+        auto section_name = control.get_default_section_name();
 
         auto bc = UIManager::getInstance().getColor(section_name, "containerBackgroundColor");
 

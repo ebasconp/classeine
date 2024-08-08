@@ -2,7 +2,7 @@
 
 #include "clsn/core/entity.h"
 
-#include "clsn/ui/Graphics.h"
+#include "clsn/ui/graphics.h"
 
 namespace clsn::draw
 {
@@ -11,7 +11,7 @@ namespace clsn::draw
 
 namespace clsn::ui
 {
-    class Control;
+    class control;
 }
 
 namespace clsn::ui
@@ -24,8 +24,8 @@ namespace clsn::ui
     public:
         ~IRenderer() override = default;
 
-        virtual void paint(Graphics& graphics,
+        virtual void paint(graphics& graphics,
                            const region& region,
-                           const Control& baseControl) const = 0;
+                           const control& baseControl) const = 0;
     };
 }

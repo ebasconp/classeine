@@ -18,8 +18,8 @@ namespace clsn::ui::amatista
 
         add("", "defaultFont", getDefaultFont());
 
-        add("Button", "pressedBackgroundColor", getButtonPressedBackgroundColor());
-        add("Button", "preferredSize", getButtonPreferredSize());
+        add("button", "pressedBackgroundColor", getButtonPressedBackgroundColor());
+        add("button", "preferredSize", getButtonPreferredSize());
     }
 
     auto AmatistaUITheme::getDefaultFont() const -> font

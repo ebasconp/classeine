@@ -7,9 +7,9 @@ namespace clsn::ui
     {
     }
 
-    void FlowContainer::doLayout()
+    void FlowContainer::do_layout()
     {
-        const auto visibleCount = getVisibleCount();
+        const auto visibleCount = get_visible_count();
         if (visibleCount == 0)
             return;
 
@@ -25,12 +25,12 @@ namespace clsn::ui
 
         iterate([&](auto& control, auto& )
         {
-            auto controlWidth = control.getActualPreferredSize().get_width();
-            [[maybe_unused]] auto controlHeight = control.getActualPreferredSize().get_height();
+            auto controlWidth = control.get_actual_preferred_size().get_width();
+            [[maybe_unused]] auto controlHeight = control.get_actual_preferred_size().get_height();
 
             if (currentx + controlWidth < maxx)
             {
-                const auto& preferredSize = control.getActualPreferredSize();
+                const auto& preferredSize = control.get_actual_preferred_size();
                 if (maxy < preferredSize.get_height())
                     maxy = preferredSize.get_height();
 
@@ -42,7 +42,7 @@ namespace clsn::ui
                 currentx = 0;
                 currenty += maxy;
 
-                const auto& preferredSize = control.getActualPreferredSize();
+                const auto& preferredSize = control.get_actual_preferred_size();
                 if (maxy < preferredSize.get_height())
                     maxy = preferredSize.get_height();
 

@@ -33,9 +33,9 @@ namespace clsn::ui
     }
 
 
-    void DualContainer::doLayout()
+    void DualContainer::do_layout()
     {
-        const auto visibleCount = getVisibleCount();
+        const auto visibleCount = get_visible_count();
         if (visibleCount == 0)
             return;
 
@@ -61,12 +61,12 @@ namespace clsn::ui
         {
             auto& cc = getControlAndConstraintAt(0);
 
-            auto ch = cc.constraint == DualContainerConstraint::use_all_available_space
+            auto ch = cc.m_constraint == DualContainerConstraint::use_all_available_space
                 ? size.get_height()
-                : cc.control->getActualPreferredSize().get_height();
+                : cc.m_control->get_actual_preferred_size().get_height();
 
-            cc.control->set_actual_size({size.get_width(), ch});
-            cc.control->set_actual_position(position);
+            cc.m_control->set_actual_size({size.get_width(), ch});
+            cc.m_control->set_actual_position(position);
             return;
         }
 
@@ -75,17 +75,17 @@ namespace clsn::ui
             auto& cc0 = getControlAndConstraintAt(0);
             auto& cc1 = getControlAndConstraintAt(1);
 
-            auto c0h = cc0.constraint == DualContainerConstraint::use_all_available_space
-                            ? size.get_height() - cc1.control->getActualPreferredSize().get_height()
-                            : cc0.control->getActualPreferredSize().get_height();
+            auto c0h = cc0.m_constraint == DualContainerConstraint::use_all_available_space
+                            ? size.get_height() - cc1.m_control->get_actual_preferred_size().get_height()
+                            : cc0.m_control->get_actual_preferred_size().get_height();
 
             auto c1h = size.get_height() - c0h;
 
-            cc0.control->set_actual_size({size.get_width(), c0h});
-            cc1.control->set_actual_size({size.get_width(), c1h});
+            cc0.m_control->set_actual_size({size.get_width(), c0h});
+            cc1.m_control->set_actual_size({size.get_width(), c1h});
 
-            cc0.control->set_actual_position(position);
-            cc1.control->set_actual_position({position.get_x(), position.get_y() + c0h});
+            cc0.m_control->set_actual_position(position);
+            cc1.m_control->set_actual_position({position.get_x(), position.get_y() + c0h});
         }
     }
 
@@ -97,12 +97,12 @@ namespace clsn::ui
         {
             auto& cc = getControlAndConstraintAt(0);
 
-            auto cw = cc.constraint == DualContainerConstraint::use_all_available_space
+            auto cw = cc.m_constraint == DualContainerConstraint::use_all_available_space
                 ? size.get_width()
-                : cc.control->getActualPreferredSize().get_width();
+                : cc.m_control->get_actual_preferred_size().get_width();
 
-            cc.control->set_actual_size({cw, size.get_height()});
-            cc.control->set_actual_position(position);
+            cc.m_control->set_actual_size({cw, size.get_height()});
+            cc.m_control->set_actual_position(position);
             return;
         }
 
@@ -111,17 +111,17 @@ namespace clsn::ui
             auto& cc0 = getControlAndConstraintAt(0);
             auto& cc1 = getControlAndConstraintAt(1);
 
-            auto c0w = cc0.constraint == DualContainerConstraint::use_all_available_space
-                            ? size.get_width() - cc1.control->getActualPreferredSize().get_width()
-                            : cc0.control->getActualPreferredSize().get_width();
+            auto c0w = cc0.m_constraint == DualContainerConstraint::use_all_available_space
+                            ? size.get_width() - cc1.m_control->get_actual_preferred_size().get_width()
+                            : cc0.m_control->get_actual_preferred_size().get_width();
 
             auto c1w = size.get_width() - c0w;
 
-            cc0.control->set_actual_size({c0w, size.get_height()});
-            cc1.control->set_actual_size({c1w, size.get_height()});
+            cc0.m_control->set_actual_size({c0w, size.get_height()});
+            cc1.m_control->set_actual_size({c1w, size.get_height()});
 
-            cc0.control->set_actual_position(position);
-            cc1.control->set_actual_position({position.get_x() + c0w, position.get_y()});
+            cc0.m_control->set_actual_position(position);
+            cc1.m_control->set_actual_position({position.get_x() + c0w, position.get_y()});
         }
     }
 }

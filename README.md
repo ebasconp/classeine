@@ -5,7 +5,7 @@ the creation of rich user interfaces in modern C++.
 
 ## Features
 * Written in modern C++
-* Control renderers pluggable
+* control renderers pluggable
 * Built on top of the standard library and:
   * SDL2
   * SDL2_ttf
@@ -32,14 +32,14 @@ the creation of rich user interfaces in modern C++.
   * `region`
   
 * **clsn::ui** - library providing componentable UI controls
-  * `Control`
-    * `ClickableControl`
-      * `Button` 
-      * `ToggleControl`
-        * `CheckBox` 
-        * `RadioButton`
-        * `ToggleButton`
-    * `Label` 
+  * `control`
+    * `clickable_control`
+      * `button` 
+      * `toggle_control`
+        * `check_box` 
+        * `radio_button`
+        * `toggle_button`
+    * `label` 
     * `ListContainer<Constraint>`
       * `DualContainer` - Container that stores only two elements, one occupying only its preferred size and the other one occupying
         the remaining space
@@ -53,7 +53,7 @@ the creation of rich user interfaces in modern C++.
         * `AmatistaUITheme` - Set of specific set of colors
           * `LightAmatistaUITheme` - Light theme
           * `DarkAmatistaUITheme` - Dark theme
-    * `Window`
-      * `MainWindow`
-  * `Graphics` - abstraction to rendering backend
+    * `window`
+      * `main_window`
+  * `graphics` - abstraction to rendering backend
 

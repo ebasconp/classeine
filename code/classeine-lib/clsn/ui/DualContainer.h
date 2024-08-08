@@ -26,7 +26,7 @@ namespace clsn::ui
         auto getOrientation() const -> DualContainerOrientation;
         void setOrientation(DualContainerOrientation orientation);
 
-        void doLayout() override;
+        void do_layout() override;
 
     protected:
         void checkIfValidBeforeAdding(const DualContainerConstraint& fill) const override;

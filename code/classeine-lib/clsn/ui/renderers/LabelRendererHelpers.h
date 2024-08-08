@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/ui/Graphics.h"
+#include "clsn/ui/graphics.h"
 
 #include <string_view>
 
@@ -11,12 +11,12 @@ namespace clsn::draw
 
 namespace clsn::ui
 {
-    class Control;
+    class control;
 }
 
 namespace clsn::ui::renderers::LabelRendererHelpers
 {
     using namespace clsn::draw;
 
-    void drawControlText(Graphics& graphics, const Control& control, const region& region);
+    void drawControlText(graphics& graphics, const control& control, const region& region);
 }

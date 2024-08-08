@@ -3,13 +3,13 @@
 #include "clsn/ui/amatista/DarkAmatistaUITheme.h"
 #include "clsn/ui/amatista/LightAmatistaUITheme.h"
 
-#include "clsn/ui/Button.h"
-#include "clsn/ui/CheckBox.h"
+#include "clsn/ui/button.h"
+#include "clsn/ui/check_box.h"
 #include "clsn/ui/FlowContainer.h"
 #include "clsn/ui/HBoxContainer.h"
-#include "clsn/ui/Label.h"
-#include "clsn/ui/RadioButton.h"
-#include "clsn/ui/ToggleButton.h"
+#include "clsn/ui/label.h"
+#include "clsn/ui/radio_button.h"
+#include "clsn/ui/toggle_button.h"
 #include "clsn/ui/VBoxContainer.h"
 #include "clsn/ui/XYContainer.h"
 
@@ -30,14 +30,14 @@ namespace
 
     void loadRenderers(amatista::AmatistaUISkin& skin)
     {
-        skin.makeRendererAndAdd<Button, ButtonRenderer>();
-        skin.makeRendererAndAdd<CheckBox, CheckBoxRenderer>();
+        skin.makeRendererAndAdd<button, ButtonRenderer>();
+        skin.makeRendererAndAdd<check_box, CheckBoxRenderer>();
         skin.makeRendererAndAdd<DualContainer, DualContainerRenderer>();
         skin.makeRendererAndAdd<FlowContainer, FlowContainerRenderer>();
         skin.makeRendererAndAdd<HBoxContainer, HBoxContainerRenderer>();
-        skin.makeRendererAndAdd<Label, LabelRenderer>();
-        skin.makeRendererAndAdd<RadioButton, RadioButtonRenderer>();
-        skin.makeRendererAndAdd<ToggleButton, ToggleButtonRenderer>();
+        skin.makeRendererAndAdd<label, LabelRenderer>();
+        skin.makeRendererAndAdd<radio_button, RadioButtonRenderer>();
+        skin.makeRendererAndAdd<toggle_button, ToggleButtonRenderer>();
         skin.makeRendererAndAdd<VBoxContainer, VBoxContainerRenderer>();
         skin.makeRendererAndAdd<XYContainer, XYContainerRenderer>();
     }

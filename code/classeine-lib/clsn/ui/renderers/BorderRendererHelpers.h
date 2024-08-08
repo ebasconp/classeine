@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/ui/Graphics.h"
+#include "clsn/ui/graphics.h"
 
 namespace clsn::draw
 {
@@ -12,14 +12,14 @@ namespace clsn::ui::renderers::BorderRendererHelpers
 {
     using namespace clsn::draw;
 
-    void drawBeveledBorder(Graphics& gr,
+    void drawBeveledBorder(graphics& gr,
                            const region& region,
                            const color& a,
                            const color& b,
                            int depth,
                            bool up);
 
-    void drawFlatBorder(Graphics& gr,
+    void drawFlatBorder(graphics& gr,
                    const region& region,
                    const color& a,
                    const color& b,

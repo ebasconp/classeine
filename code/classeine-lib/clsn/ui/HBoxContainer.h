@@ -11,6 +11,6 @@ namespace clsn::ui
     public:
         HBoxContainer();
 
-        void doLayout() override;
+        void do_layout() override;
     };
 }

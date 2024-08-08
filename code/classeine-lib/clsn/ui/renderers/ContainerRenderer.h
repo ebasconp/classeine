@@ -12,17 +12,17 @@ namespace clsn::ui::renderers
     class ContainerRenderer : public IRenderer
     {
     public:
-        void paint(Graphics& graphics,
+        void paint(graphics& graphics,
                    const region& a_region,
-                   const Control& baseControl) const override
+                   const control& baseControl) const override
         {
             auto& container =
                 static_cast<const ContainerType&>(baseControl);
 
-            const auto visibleCount = container.getVisibleCount();
+            const auto visibleCount = container.get_visible_count();
             if (visibleCount == 0)
             {
-                graphics.setDrawColor(container.getActualBackgroundColor());
+                graphics.setDrawColor(container.get_actual_background_color());
                 graphics.drawFillRectangle(a_region);
                 return;
             }
@@ -31,7 +31,7 @@ namespace clsn::ui::renderers
             for (int i = 0; i < count; i++)
             {
                 auto& control = container[i];
-                if (!control.is_visible() || !control.isInvalidated())
+                if (!control.is_visible() || !control.is_invalidated())
                     continue;
 
                 region controlRegion{
