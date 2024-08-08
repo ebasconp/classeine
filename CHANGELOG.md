@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20240808 Made all project snake_case
 * 20240806 flow_container
 * 20240731 Created dual_container
 * 20240729 Moved do_layout() from renderer_base to control
