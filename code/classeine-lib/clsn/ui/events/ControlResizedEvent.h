@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/core/Event.h"
+#include "clsn/core/event.h"
 
 namespace clsn::ui::events
 {
@@ -21,5 +21,5 @@ namespace clsn::ui::events
         auto getHeight() const noexcept -> int { return m_height; }
     };
 
-    using ControlResizedEvent = clsn::core::Event<ControlResizedData>;
+    using ControlResizedEvent = clsn::core::event<ControlResizedData>;
 }

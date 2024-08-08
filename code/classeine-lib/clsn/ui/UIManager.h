@@ -5,7 +5,7 @@
 
 #include "clsn/draw/FontInfo.h"
 
-#include "clsn/core/Entity.h"
+#include "clsn/core/entity.h"
 
 #include <memory>
 #include <string>
@@ -15,7 +15,7 @@ namespace clsn::ui
 {
     using namespace clsn::draw;
 
-    class UIManager final : public Entity
+    class UIManager final : public entity
     {
         std::unique_ptr<UISkin> m_skin;
 
@@ -45,15 +45,15 @@ namespace clsn::ui
 
         auto getRendererByControl(const Control& ctrl) const -> std::shared_ptr<IRenderer>;
 
-        auto getColor(std::string_view sectionName, std::string_view name) const -> const Color&;
-        auto getDimension(std::string_view sectionName, std::string_view name) const -> const Dimension&;
-        auto getFont(std::string_view sectionName, std::string_view name) const -> const Font&;
+        auto getColor(std::string_view section_name, std::string_view name) const -> const Color&;
+        auto getDimension(std::string_view section_name, std::string_view name) const -> const Dimension&;
+        auto get_font(std::string_view section_name, std::string_view name) const -> const Font&;
 
         void addFontMapping(const FontInfo& fontInfo, std::string_view path);
         auto getPathByFontInfo(const FontInfo&) const noexcept -> std::string_view;
 
         auto installTheme(const std::string& themeName) -> bool;
-        auto addThemeChangedListener(EventListener<EmptyEvent> listener) -> int;
+        auto addThemeChangedListener(event_listener<empty_event> listener) -> int;
         auto getCurrentThemeName() const -> const std::string&;
 
     private:

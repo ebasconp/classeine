@@ -1,21 +1,21 @@
 #pragma once
 
-#include "Strings.h"
+#include "strings.h"
 
 #include <iostream>
 
-namespace clsn::core::Console
+namespace clsn::core::console
 {
     template <typename... Args>
     void print_stream(std::ostream& os, std::string_view fmtspec, const Args&... args)
     {
-        Strings::format_stream(os, fmtspec, args...);
+        strings::format_stream(os, fmtspec, args...);
     }
 
     template <typename... Args>
     void println_stream(std::ostream& os, std::string_view fmtspec, const Args&... args)
     {
-        Strings::format_stream(os, fmtspec, args...);
+        strings::format_stream(os, fmtspec, args...);
         os << '\n';
     }
 

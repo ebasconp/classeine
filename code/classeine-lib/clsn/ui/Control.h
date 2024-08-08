@@ -8,11 +8,10 @@
 
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
-#include "clsn/draw/Point.h"
 
-#include "clsn/core/EntityWrapper.h"
-#include "clsn/core/EventListenerList.h"
-#include "clsn/core/Property.h"
+#include "clsn/core/entity_wrapper.h"
+#include "clsn/core/event_listener_list.h"
+#include "clsn/core/property.h"
 
 #include <functional>
 #include <memory>
@@ -28,13 +27,13 @@ namespace clsn::ui
     class IRenderer;
     class Window;
 
-    class Control : public Entity
+    class Control : public entity
     {
-        EventListenerList<ControlResizedEvent> m_controlResizedListeners;
-        EventListenerList<MouseClickEvent> m_mouseClickListeners;
-        EventListenerList<MouseMovedEvent> m_mouseMovedListeners;
+        event_listener_list<ControlResizedEvent> m_controlResizedListeners;
+        event_listener_list<MouseClickEvent> m_mouseClickListeners;
+        event_listener_list<MouseMovedEvent> m_mouseMovedListeners;
 
-        std::shared_ptr<Entity> m_tag;
+        std::shared_ptr<entity> m_tag;
         mutable std::shared_ptr<IRenderer> m_renderer;
 
         std::string m_defaultSectionName;
@@ -44,7 +43,7 @@ namespace clsn::ui
         std::optional<std::reference_wrapper<Window>> m_parentWindow;
 
     public:
-        explicit Control(std::string_view sectionName);
+        explicit Control(std::string_view section_name);
 
         Control(const Control&) = delete;
         Control(Control&&) = delete;
@@ -52,15 +51,15 @@ namespace clsn::ui
         Control& operator=(const Control&) = delete;
         Control& operator=(Control&&) = delete;
 
-        CLSN_PROPERTY(ActualPosition, Point, true);
-        CLSN_PROPERTY(ActualSize, Dimension, true);
-        CLSN_PROPERTY(BackgroundColor, std::optional<Color>, true);
-        CLSN_BOOL_PROPERTY_VAL(Enabled, true, true);
-        CLSN_PROPERTY(Font, std::optional<Font>, true);
-        CLSN_PROPERTY(ForegroundColor, std::optional<Color>, true);
-        CLSN_PROPERTY(PreferredSize, std::optional<Dimension>, true);
-        CLSN_PROPERTY(Text, std::string, true);
-        CLSN_BOOL_PROPERTY_VAL(Visible, true, true);
+        CLSN_PROPERTY(actual_position, Point, true);
+        CLSN_PROPERTY(actual_size, Dimension, true);
+        CLSN_PROPERTY(background_color, std::optional<Color>, true);
+        CLSN_BOOL_PROPERTY_VAL(enabled, true, true);
+        CLSN_PROPERTY(font, std::optional<Font>, true);
+        CLSN_PROPERTY(foreground_color, std::optional<Color>, true);
+        CLSN_PROPERTY(preferred_size, std::optional<Dimension>, true);
+        CLSN_PROPERTY(text, std::string, true);
+        CLSN_BOOL_PROPERTY_VAL(visible, true, true);
 
         auto getActualBackgroundColor() const -> const Color&;
         auto getActualForegroundColor() const -> const Color&;
@@ -70,10 +69,10 @@ namespace clsn::ui
         auto operator==(const Control&) const -> bool;
         auto operator!=(const Control&) const -> bool;
 
-        void addMouseClickListener(EventListener<MouseClickEvent> event);
+        void addMouseClickListener(event_listener<MouseClickEvent> event);
         void notifyMouseClickEvent(MouseClickEvent& e);
 
-        void addMouseMovedListener(EventListener<MouseMovedEvent> event);
+        void addMouseMovedListener(event_listener<MouseMovedEvent> event);
         void notifyMouseMovedEvent(MouseMovedEvent& e);
 
         void paint(Graphics& graphics, const Region& region) const;

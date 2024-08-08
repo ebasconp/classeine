@@ -10,41 +10,41 @@
 namespace clsn::core
 {
     template <typename... ConfigurationValueTypes>
-    class Configuration final
+    class configuration final
     {
-        using SectionMap =
+        using section_map =
             std::unordered_map<std::string,
                                std::variant<ConfigurationValueTypes...>>;
 
     public:
-        Configuration() = default;
-        ~Configuration() = default;
+        configuration() = default;
+        ~configuration() = default;
 
     private:
-        std::unordered_map<std::string, SectionMap> m_sections;
+        std::unordered_map<std::string, section_map> m_sections;
 
     public:
         template <typename ValueType>
-        void set(std::string_view sectionName,
+        void set(std::string_view section_name,
                  std::string_view key,
                  ValueType&& value)
         {
-            m_sections[std::string{sectionName}].insert(
+            m_sections[std::string{section_name}].insert(
                 { std::string{key}, std::forward<ValueType>(value)});
         }
 
         template <typename ValueType>
         auto get(
-            std::string_view sectionName,
+            std::string_view section_name,
             std::string_view key) const -> std::optional<std::reference_wrapper<const ValueType>>
         {
-            const auto sectionIt = m_sections.find(std::string{sectionName});
-            if (sectionIt == m_sections.end())
+            const auto section_it = m_sections.find(std::string{section_name});
+            if (section_it == m_sections.end())
                 return std::nullopt;
 
-            auto& sectionMap = sectionIt->second;
-            const auto it = sectionMap.find(std::string{key});
-            if (it == sectionMap.end())
+            auto& section_map = section_it->second;
+            const auto it = section_map.find(std::string{key});
+            if (it == section_map.end())
                 return std::nullopt;
 
             const auto* value = std::get_if<ValueType>(&(it->second));

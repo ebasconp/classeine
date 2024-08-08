@@ -11,25 +11,25 @@ namespace clsn::ui
         m_currentTheme = std::make_pair(name, it->second());
         m_currentTheme.second->populateDefaults();
 
-        EmptyEvent e;
+        empty_event e;
         m_themeChangedListeners.notify(e);
 
         return true;
     }
 
-    auto UISkin::getColor(std::string_view sectionName, std::string_view name) -> const Color&
+    auto UISkin::getColor(std::string_view section_name, std::string_view name) -> const Color&
     {
-        return m_currentTheme.second->getColor(sectionName, name);
+        return m_currentTheme.second->getColor(section_name, name);
     }
 
-    auto UISkin::getDimension(std::string_view sectionName, std::string_view name) -> const Dimension&
+    auto UISkin::getDimension(std::string_view section_name, std::string_view name) -> const Dimension&
     {
-        return m_currentTheme.second->getDimension(sectionName, name);
+        return m_currentTheme.second->getDimension(section_name, name);
     }
 
-    auto UISkin::getFont(std::string_view sectionName, std::string_view name) -> const Font&
+    auto UISkin::get_font(std::string_view section_name, std::string_view name) -> const Font&
     {
-        return m_currentTheme.second->getFont(sectionName, name);
+        return m_currentTheme.second->get_font(section_name, name);
     }
 
     auto UISkin::getRendererByControl(const clsn::ui::Control& ctrl) const -> std::shared_ptr<IRenderer>
@@ -41,7 +41,7 @@ namespace clsn::ui
         return it->second.get();
     }
 
-    auto UISkin::addThemeChangedListener(EventListener<EmptyEvent> listener) -> int
+    auto UISkin::addThemeChangedListener(event_listener<empty_event> listener) -> int
     {
         return m_themeChangedListeners.add(listener);
     }

@@ -45,7 +45,7 @@ namespace clsn::ui::renderers
 
         auto& control = static_cast<const clsn::ui::Button&>(baseControl);
 
-        const auto sectionName = control.getDefaultSectionName();
+        const auto section_name = control.getDefaultSectionName();
         const auto isHovered = control.isHovered();
 
         auto& unhoveredColor =
@@ -53,9 +53,9 @@ namespace clsn::ui::renderers
                 control.getDefaultSectionName(), "controlBackgroundColor");
 
         auto& bevelUp = isHovered ? UIManager::getInstance().getColor(
-            sectionName, "bevelUpColor") : unhoveredColor;
+            section_name, "bevelUpColor") : unhoveredColor;
         auto& bevelDown = isHovered ? UIManager::getInstance().getColor(
-            sectionName, "bevelDownColor") : unhoveredColor;
+            section_name, "bevelDownColor") : unhoveredColor;
 
         constexpr int depth = 2;
 

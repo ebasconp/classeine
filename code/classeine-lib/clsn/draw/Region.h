@@ -16,7 +16,7 @@ namespace clsn::draw
 
         [[nodiscard]] auto getPosition() const noexcept -> const Point&;
 
-        [[nodiscard]] auto getSize() const noexcept -> const Dimension&;
+        [[nodiscard]] auto get_size() const noexcept -> const Dimension&;
 
         [[nodiscard]] auto getX() const noexcept -> int;
         [[nodiscard]] auto getY() const noexcept -> int;

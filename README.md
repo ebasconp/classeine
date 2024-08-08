@@ -18,9 +18,9 @@ the creation of rich user interfaces in modern C++.
 * **clsn::core** - Core functionality
   * Event management
   * Properties
-  * Configuration by sections
-  * `Entity` polymorphic base class: Adds some memory profiling tools
-    * `EntityWrapper<T>`: Wrapper for any `T`, inheriting from `Entity`
+  * configuration by sections
+  * `entity` polymorphic base class: Adds some memory profiling tools
+    * `EntityWrapper<T>`: Wrapper for any `T`, inheriting from `entity`
   * `Factory<T>`: Factory that returns an instance of a base class T when invoked.
   * `Lazy<T>`: Object T is constructed the first time this instance is accessed.
   

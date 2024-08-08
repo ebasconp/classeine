@@ -4,8 +4,8 @@
 
 namespace clsn::ui
 {
-    ClickableControl::ClickableControl(std::string_view sectionName)
-    : Control{sectionName}
+    ClickableControl::ClickableControl(std::string_view section_name)
+    : Control{section_name}
     {
         initEvents();
     }
@@ -15,12 +15,12 @@ namespace clsn::ui
         return m_pressed;
     }
 
-    void ClickableControl::addActionListener(EventListener<EmptyEvent> event)
+    void ClickableControl::add_action_listener(event_listener<empty_event> event)
     {
         m_actionListeners.add(std::move(event));
     }
 
-    void ClickableControl::notifyActionEvent(EmptyEvent& e)
+    void ClickableControl::notifyActionEvent(empty_event& e)
     {
         m_actionListeners.notify(e);
     }
@@ -33,7 +33,7 @@ namespace clsn::ui
 
     void ClickableControl::initEvents()
     {
-        addTextChangedListener([this](auto&) { invalidate(); });
+        add_text_changed_listener([this](auto&) { invalidate(); });
     }
 
     void ClickableControl::processMouseClickEvent(events::MouseClickEvent& e)
@@ -45,7 +45,7 @@ namespace clsn::ui
 
         if (!m_pressed) // Button has been released, then Action
         {
-            EmptyEvent actionEvent;
+            empty_event actionEvent;
             notifyActionEvent(actionEvent);
         }
         else

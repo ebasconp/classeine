@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/core/Event.h"
+#include "clsn/core/event.h"
 
 #include "clsn/draw/Point.h"
 
@@ -13,5 +13,5 @@ namespace clsn::ui::events
         Point position;
     };
 
-    using MouseMovedEvent = clsn::core::Event<PointData>;
+    using MouseMovedEvent = clsn::core::event<PointData>;
 }

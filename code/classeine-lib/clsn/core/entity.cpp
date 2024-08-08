@@ -1,70 +1,70 @@
-#include "Entity.h"
+#include "entity.h"
 
 #include <iostream>
 
 namespace clsn::core
 {
 #ifdef _CLSN_DEBUG_
-    inline std::atomic<int> Entity::m_instancesCreated{0};
-    inline std::atomic<int> Entity::m_instancesDestroyed{0};
-    inline std::unordered_set<Entity*> Entity::m_livingEntities;
-    inline std::unordered_map<std::string, int> Entity::m_counters;
+    inline std::atomic<int> entity::m_instances_created{0};
+    inline std::atomic<int> entity::m_instances_destroyed{0};
+    inline std::unordered_set<entity*> entity::m_living_entities;
+    inline std::unordered_map<std::string, int> entity::m_counters;
 #endif
 
-    Entity::Entity()
+    entity::entity()
     {
 #ifdef _CLSN_DEBUG_
-        ++m_instancesCreated;
-        m_livingEntities.insert(this);
+        ++m_instances_created;
+        m_living_entities.insert(this);
 #endif
     }
 
-    Entity::Entity(const Entity&)
+    entity::entity(const entity&)
     {
 #ifdef _CLSN_DEBUG_
-        ++m_instancesCreated;
-        m_livingEntities.insert(this);
+        ++m_instances_created;
+        m_living_entities.insert(this);
 #endif
     }
 
-    Entity::Entity(Entity&&) noexcept
+    entity::entity(entity&&) noexcept
     {
 #ifdef _CLSN_DEBUG_
-        ++m_instancesCreated;
-        m_livingEntities.insert(this);
+        ++m_instances_created;
+        m_living_entities.insert(this);
 #endif
     }
 
-    Entity::~Entity()
+    entity::~entity()
     {
 #ifdef _CLSN_DEBUG_
-        ++m_instancesDestroyed;
-        m_livingEntities.erase(this);
+        ++m_instances_destroyed;
+        m_living_entities.erase(this);
 #endif
     }
 
-    void Entity::debug_count(std::string_view key) const
+    void entity::debug_count(std::string_view key) const
     {
 #ifdef _CLSN_DEBUG_
         m_counters[std::string{key}]++;
 #endif
     }
 
-    void Entity::dump()
+    void entity::dump()
     {
 #ifdef _CLSN_DEBUG_
-        auto instancesLeftCount = m_instancesCreated - m_instancesDestroyed;
+        auto instances_left_count = m_instances_created - m_instances_destroyed;
         std::cout
             << "*********************************************************\n"
             << "Classeine number of instances left:   "
-            << instancesLeftCount << std::endl
+            << instances_left_count << std::endl
             << "*********************************************************\n";
 
-        if (instancesLeftCount != 0)
+        if (instances_left_count != 0)
         {
             std::cout << "Living entities:\n";
 
-            for (auto& p : m_livingEntities)
+            for (auto& p : m_living_entities)
             {
                 std::cout << "* (" << typeid(*p).name() << ")\n";
             }

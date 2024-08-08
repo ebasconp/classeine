@@ -17,8 +17,8 @@ namespace clsn::ui::renderers::BorderRendererHelpers
 
         const int px = region.getPosition().getX();
         const int py = region.getPosition().getY();
-        const int pw = region.getSize().getWidth();
-        const int ph = region.getSize().getHeight();
+        const int pw = region.get_size().getWidth();
+        const int ph = region.get_size().getHeight();
 
         graphics.setDrawColor(actualColor);
         for (int i = 0; i < depth; i++)
@@ -61,8 +61,8 @@ namespace clsn::ui::renderers::BorderRendererHelpers
 
         const int px = region.getPosition().getX();
         const int py = region.getPosition().getY();
-        const int pw = region.getSize().getWidth();
-        const int ph = region.getSize().getHeight();
+        const int pw = region.get_size().getWidth();
+        const int ph = region.get_size().getHeight();
 
         graphics.setDrawColor(actualUp);
         for (int i = 0; i < depth; i++)

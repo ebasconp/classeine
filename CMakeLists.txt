@@ -20,8 +20,8 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
 endif()
 
 add_executable(classeine code/classeine-demo/Main.cpp
-        code/classeine-lib/clsn/core/Entity.cpp
-        code/classeine-lib/clsn/core/Strings.cpp
+        code/classeine-lib/clsn/core/entity.cpp
+        code/classeine-lib/clsn/core/strings.cpp
 
         code/classeine-lib/clsn/draw/Color.cpp
         code/classeine-lib/clsn/draw/Colors.cpp

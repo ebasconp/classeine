@@ -12,22 +12,22 @@
 namespace clsn::core
 {
     // Base class for polymorphic containers
-    class Entity
+    class entity
     {
 #ifdef _CLSN_DEBUG_
-        static std::atomic<int> m_instancesCreated;
-        static std::atomic<int> m_instancesDestroyed;
-        static std::unordered_set<Entity*> m_livingEntities;
+        static std::atomic<int> m_instances_created;
+        static std::atomic<int> m_instances_destroyed;
+        static std::unordered_set<entity*> m_living_entities;
         static std::unordered_map<std::string, int> m_counters;
 #endif
     public:
-        Entity();
-        Entity(const Entity&);
-        Entity(Entity&&) noexcept;
+        entity();
+        entity(const entity&);
+        entity(entity&&) noexcept;
 
         void debug_count(std::string_view key) const;
 
-        virtual ~Entity();
+        virtual ~entity();
 
         static void dump();
     };

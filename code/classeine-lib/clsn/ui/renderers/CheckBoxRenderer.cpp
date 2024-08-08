@@ -12,23 +12,23 @@ namespace clsn::ui::renderers
                    const Control& baseControl) const
     {
         auto& checkBox = static_cast<const CheckBox&>(baseControl);
-        auto sectionName = checkBox.getDefaultSectionName();
+        auto section_name = checkBox.getDefaultSectionName();
 
         auto buttonColor = checkBox.isPressed()
             ? Color{192, 192, 192}
-            : UIManager::getInstance().getColor(sectionName, "controlBackgroundColor");
+            : UIManager::getInstance().getColor(section_name, "controlBackgroundColor");
 
         graphics.setDrawColor(buttonColor);
         graphics.drawFillRectangle(region);
 
         m_labelRenderer.paint(graphics, region, checkBox);
 
-        auto textSize = graphics.getTextSize(checkBox.getActualFont(), checkBox.getText());
+        auto textSize = graphics.getTextSize(checkBox.getActualFont(), checkBox.get_text());
 
-        const auto mid = checkBox.getActualPosition().getY() + (region.getHeight() - textSize.getHeight()) / 2;
+        const auto mid = checkBox.get_actual_position().getY() + (region.getHeight() - textSize.getHeight()) / 2;
         const auto size = textSize.getHeight();
 
-        const auto x = 8 + checkBox.getActualPosition().getX();
+        const auto x = 8 + checkBox.get_actual_position().getX();
         const auto y = mid - 1;
 
         graphics.setDrawColor(Color{0, 0, 255});
@@ -38,7 +38,7 @@ namespace clsn::ui::renderers
         graphics.setDrawColor(backgroundColor);
         graphics.drawFillRectangle({x + 1, mid, size - 2, size - 2});
 
-        if (checkBox.isChecked())
+        if (checkBox.is_checked())
         {
             graphics.setDrawColor({0, 0, 128}); // Black color
             graphics.drawRectangle({x + 2, y + 2, size - 4, size - 4});

@@ -2,7 +2,7 @@
 
 #include "Control.h"
 
-#include "clsn/core/Property.h"
+#include "clsn/core/property.h"
 
 #include "clsn/draw/Dimension.h"
 #include "clsn/draw/Point.h"
@@ -17,12 +17,12 @@ namespace clsn::ui
         ConstControlOptionalReference m_hoveredControl;
 
     public:
-        explicit Window(std::string_view sectionName);
+        explicit Window(std::string_view section_name);
 
-        CLSN_PROPERTY(Position, Point, true)
-        CLSN_PROPERTY(MinimumSize, Dimension, true)
-        CLSN_PROPERTY(Size, Dimension, true)
-        CLSN_BOOL_PROPERTY_VAL(Resizable, true, true);
+        CLSN_PROPERTY(position, Point, true)
+        CLSN_PROPERTY(minimum_size, Dimension, true)
+        CLSN_PROPERTY(size, Dimension, true)
+        CLSN_BOOL_PROPERTY_VAL(resizable, true, true);
 
         void grabMouse(Control& control);
         void releaseMouse();

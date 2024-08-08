@@ -23,8 +23,8 @@ namespace
 }
 namespace clsn::ui
 {
-    Window::Window(std::string_view sectionName)
-    : Control(sectionName)
+    Window::Window(std::string_view section_name)
+    : Control(section_name)
     {
         initVisibility();
         initDefaults();
@@ -39,15 +39,15 @@ namespace clsn::ui
         auto& dimension = UIManager::getInstance().getDefault(
             getDefaultSectionName(), "size", Dimension{300, 200});
 
-        setActualSize(dimension);*/
+        set_actual_size(dimension);*/
 
-        setMinimumSize({50, 50});
-        setActualPosition({300, 200});
+        set_minimum_size({50, 50});
+        set_actual_position({300, 200});
     }
 
     void Window::initVisibility()
     {
-        setVisible(false);
+        set_visible(false);
     }
 
     void Window::grabMouse(Control& control)

@@ -4,9 +4,9 @@
 
 namespace clsn::ui
 {
-    using clsn::core::Empty;
+    using clsn::core::empty;
 
-    class FlowContainer : public ListContainer<Empty>
+    class FlowContainer : public ListContainer<empty>
     {
     public:
         FlowContainer();

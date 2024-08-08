@@ -3,9 +3,9 @@
 namespace
 {
     template <typename Type>
-    auto getFromDefaults(const clsn::ui::UIThemeDefaults& defaults, std::string_view sectionName, std::string_view name, const Type& errorValue) -> const Type&
+    auto getFromDefaults(const clsn::ui::UIThemeDefaults& defaults, std::string_view section_name, std::string_view name, const Type& errorValue) -> const Type&
     {
-        const auto value = defaults.get<Type>(sectionName, name);
+        const auto value = defaults.get<Type>(section_name, name);
         if (!value.has_value())
         {
             const auto themeValue = defaults.get<Type>("", name);
@@ -21,18 +21,18 @@ namespace
 
 namespace clsn::ui
 {
-    auto UITheme::getColor(std::string_view sectionName, std::string_view name, const Color& errorValue) const -> const Color&
+    auto UITheme::getColor(std::string_view section_name, std::string_view name, const Color& errorValue) const -> const Color&
     {
-        return getFromDefaults<Color>(m_defaultsByName, sectionName, name, errorValue);
+        return getFromDefaults<Color>(m_defaultsByName, section_name, name, errorValue);
     }
 
-    auto UITheme::getDimension(std::string_view sectionName, std::string_view name, const Dimension& errorValue) const -> const Dimension&
+    auto UITheme::getDimension(std::string_view section_name, std::string_view name, const Dimension& errorValue) const -> const Dimension&
     {
-        return getFromDefaults<Dimension>(m_defaultsByName, sectionName, name, errorValue);
+        return getFromDefaults<Dimension>(m_defaultsByName, section_name, name, errorValue);
     }
 
-    auto UITheme::getFont(std::string_view sectionName, std::string_view name, const Font& errorValue) const -> const Font&
+    auto UITheme::get_font(std::string_view section_name, std::string_view name, const Font& errorValue) const -> const Font&
     {
-        return getFromDefaults<Font>(m_defaultsByName, sectionName, name, errorValue);
+        return getFromDefaults<Font>(m_defaultsByName, section_name, name, errorValue);
     }
 }

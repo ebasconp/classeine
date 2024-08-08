@@ -4,9 +4,9 @@
 
 namespace clsn::ui
 {
-    using clsn::core::Empty;
+    using clsn::core::empty;
 
-    class HBoxContainer : public ListContainer<Empty>
+    class HBoxContainer : public ListContainer<empty>
     {
     public:
         HBoxContainer();

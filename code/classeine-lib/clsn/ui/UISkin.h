@@ -1,9 +1,9 @@
 #pragma once
 
-#include "clsn/core/EmptyEvent.h"
-#include "clsn/core/Entity.h"
-#include "clsn/core/Factory.h"
-#include "clsn/core/Lazy.h"
+#include "clsn/core/empty_event.h"
+#include "clsn/core/entity.h"
+#include "clsn/core/factory.h"
+#include "clsn/core/lazy.h"
 
 #include "clsn/ui/Control.h" //FORWARD
 #include "clsn/ui/UITheme.h"
@@ -31,14 +31,14 @@ namespace clsn::ui
         };
     }
 
-    class UISkin : public Entity
+    class UISkin : public entity
     {
         std::unordered_map<std::type_index, LazyRenderer> m_renderersByControlType;
         std::unordered_map<std::string, Factory<UITheme>> m_themeFactoriesByName;
 
         std::pair<std::string, std::unique_ptr<UITheme>> m_currentTheme;
 
-        EventListenerList<EmptyEvent> m_themeChangedListeners;
+        event_listener_list<empty_event> m_themeChangedListeners;
 
 
     public:
@@ -60,12 +60,12 @@ namespace clsn::ui
 
         auto installThemeByName(const std::string& name) -> bool;
 
-        auto getColor(std::string_view sectionName, std::string_view name) -> const Color&;
-        auto getDimension(std::string_view sectionName, std::string_view name) -> const Dimension&;
-        auto getFont(std::string_view sectionName, std::string_view name) -> const Font&;
+        auto getColor(std::string_view section_name, std::string_view name) -> const Color&;
+        auto getDimension(std::string_view section_name, std::string_view name) -> const Dimension&;
+        auto get_font(std::string_view section_name, std::string_view name) -> const Font&;
 
         auto getRendererByControl(const clsn::ui::Control& ctrl) const -> std::shared_ptr<IRenderer>;
-        auto addThemeChangedListener(EventListener<EmptyEvent> listener) -> int;
+        auto addThemeChangedListener(event_listener<empty_event> listener) -> int;
         auto getCurrentThemeName() const -> const std::string&;
     };
 }

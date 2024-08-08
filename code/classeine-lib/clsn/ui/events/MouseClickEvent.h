@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/core/Event.h"
+#include "clsn/core/event.h"
 
 #include "clsn/draw/Point.h"
 
@@ -38,5 +38,5 @@ namespace clsn::ui::events
         }
     };
 
-    using MouseClickEvent = clsn::core::Event<MouseClickData>;
+    using MouseClickEvent = clsn::core::event<MouseClickData>;
 }

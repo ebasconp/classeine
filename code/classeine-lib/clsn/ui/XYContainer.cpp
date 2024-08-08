@@ -13,15 +13,15 @@ namespace clsn::ui
         if (visibleCount == 0)
             return;
 
-        const auto position = getActualPosition();
+        const auto position = get_actual_position();
 
         iterate([&position](auto& control, auto& constraint)
         {
-            if (!control.isVisible())
+            if (!control.is_visible())
                 return;
 
-            control.setActualPosition({position.getX() + constraint.getX(), position.getY() + constraint.getY()});
-            control.setActualSize(control.getActualPreferredSize());
+            control.set_actual_position({position.getX() + constraint.getX(), position.getY() + constraint.getY()});
+            control.set_actual_size(control.getActualPreferredSize());
         });
     }
 }

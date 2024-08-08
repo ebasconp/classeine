@@ -2,20 +2,20 @@
 
 namespace clsn::ui
 {
-    ToggleControl::ToggleControl(std::string_view sectionName)
-    : ClickableControl{sectionName}
+    ToggleControl::ToggleControl(std::string_view section_name)
+    : ClickableControl{section_name}
     {
         initEvents();
     }
 
     void ToggleControl::toggle()
     {
-        setChecked(!isChecked());
+        set_checked(!is_checked());
     }
 
     void ToggleControl::initEvents()
     {
-        addActionListener([this](auto& )
+        add_action_listener([this](auto& )
         {
             toggle();
         });

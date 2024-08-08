@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Entity.h"
+#include "entity.h"
 
 #include <utility>
 
 namespace clsn::core
 {
     template <typename Type>
-    class EntityWrapper : public Entity
+    class EntityWrapper : public entity
     {
         Type m_value;
 

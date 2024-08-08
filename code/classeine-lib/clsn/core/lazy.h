@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Entity.h"
+#include "entity.h"
 
 #include <functional>
 #include <optional>
@@ -8,7 +8,7 @@
 namespace clsn::core
 {
     template <typename T>
-    class Lazy final : public Entity
+    class Lazy final : public entity
     {
         mutable std::optional<T> m_instance;
         std::function<T ()> m_factory;

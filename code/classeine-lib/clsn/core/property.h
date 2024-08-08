@@ -1,31 +1,31 @@
 #pragma once
 
-#include "Empty.h"
-#include "EventListenerList.h"
-#include "ValueChangedEvent.h"
+#include "empty.h"
+#include "event_listener_list.h"
+#include "value_changed_event.h"
 
 #include <type_traits>
 
 namespace clsn::core
 {
     template <typename T, bool HasValueChangedEventListener>
-    class Property final
+    class property final
     {
         std::string m_name;
         T m_value;
         std::conditional_t<HasValueChangedEventListener,
-                         EventListenerList<ValueChangedEvent<T>>,
-                         Empty> m_valueChangedListeners;
+                         event_listener_list<value_changed_event<T>>,
+                         empty> m_value_changed_listeners;
 
     public:
         template <typename StringType>
-        explicit Property(StringType&& name)
+        explicit property(StringType&& name)
         : m_name{std::forward<StringType>(name)}
         {
         }
 
         template <typename StringType, typename ValueType>
-        Property(StringType&& name, ValueType&& value)
+        property(StringType&& name, ValueType&& value)
         : m_name{std::forward<StringType>(name)}
         , m_value{std::forward<ValueType>(value)}
         {
@@ -40,10 +40,10 @@ namespace clsn::core
 
         template <bool B = HasValueChangedEventListener,
                   std::enable_if_t<B, int> = 0>
-        auto addValueChangedListener(
-            EventListener<ValueChangedEvent<T>> listener) -> int
+        auto add_value_changed_listener(
+            event_listener<value_changed_event<T>> listener) -> int
         {
-            return m_valueChangedListeners.add(std::move(listener));
+            return m_value_changed_listeners.add(std::move(listener));
         }
 
         template <typename ValueType>
@@ -56,8 +56,8 @@ namespace clsn::core
             {
                 auto oldValue = std::move(m_value);
                 m_value = newValue;
-                ValueChangedEvent<T> e{oldValue, m_value};
-                m_valueChangedListeners.notify(e);
+                value_changed_event<T> e{oldValue, m_value};
+                m_value_changed_listeners.notify(e);
             }
             else
                 m_value = std::forward<ValueType>(newValue);
@@ -68,54 +68,54 @@ namespace clsn::core
 
 #define CLSN_PROPERTY_BODY(name, type)                                        \
 public:                                                                       \
-    void set##name(const type& value) noexcept { m_##name.set(value); }       \
+    void set_##name(const type& value) noexcept { m_##name.set(value); }       \
                                                                               \
 public:                                                                       \
-    auto get##name() const noexcept -> const type&{ return m_##name.get(); }  \
+    auto get_##name() const noexcept -> const type&{ return m_##name.get(); }  \
                                                                               \
 public:                                                                       \
-    auto add##name##ChangedListener(                                           \
-        const clsn::core::EventListener<clsn::core::ValueChangedEvent<type>>& \
+    auto add_##name##_changed_listener(                                           \
+        const clsn::core::event_listener<clsn::core::value_changed_event<type>>& \
             listener) -> int                                                  \
     {                                                                         \
-        return m_##name.addValueChangedListener(listener);                    \
+        return m_##name.add_value_changed_listener(listener);                    \
     }
 
 #define CLSN_PROPERTY(name, type, withValueChangedListener)               \
 private:                                                                  \
-    clsn::core::Property<type, withValueChangedListener> m_##name{#name}; \
+    clsn::core::property<type, withValueChangedListener> m_##name{#name}; \
     CLSN_PROPERTY_BODY(name, type)
 
 #define CLSN_PROPERTY_VAL(name, type, withValueChangedListener, initialValue) \
 private:                                                                      \
-    clsn::core::Property<type, withValueChangedListener> m_##name{            \
+    clsn::core::property<type, withValueChangedListener> m_##name{            \
         #name, initialValue};                                                 \
     CLSN_PROPERTY_BODY(name, type)
 }
 
 #define CLSN_BOOL_PROPERTY_BODY(name)                                        \
 public:                                                                       \
-    void set##name(bool value) noexcept { m_##name.set(value); }       \
+    void set_##name(bool value) noexcept { m_##name.set(value); }       \
                                                                               \
 public:                                                                       \
-    auto is##name() const noexcept -> bool { return m_##name.get(); }         \
+    auto is_##name() const noexcept -> bool { return m_##name.get(); }         \
                                                                               \
 public:                                                                       \
-    auto add##name##ChangedListener(                                          \
-        const clsn::core::EventListener<clsn::core::ValueChangedEvent<bool>>& \
+    auto add_##name##_changed_listener(                                          \
+        const clsn::core::event_listener<clsn::core::value_changed_event<bool>>& \
             listener) -> int                                                  \
     {                                                                         \
-        return m_##name.addValueChangedListener(listener);                    \
+        return m_##name.add_value_changed_listener(listener);                 \
     }
 
 
 #define CLSN_BOOL_PROPERTY(name, withValueChangedListener)               \
 private:                                                                  \
-    clsn::core::Property<bool, withValueChangedListener> m_##name{#name}; \
+    clsn::core::property<bool, withValueChangedListener> m_##name{#name}; \
     CLSN_BOOL_PROPERTY_BODY(name)
 
 #define CLSN_BOOL_PROPERTY_VAL(name, withValueChangedListener, initialValue)  \
 private:                                                                      \
-    clsn::core::Property<bool, withValueChangedListener> m_##name{            \
+    clsn::core::property<bool, withValueChangedListener> m_##name{            \
         #name, initialValue};                                                 \
     CLSN_BOOL_PROPERTY_BODY(name)

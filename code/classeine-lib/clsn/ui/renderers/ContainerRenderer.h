@@ -31,12 +31,12 @@ namespace clsn::ui::renderers
             for (int i = 0; i < count; i++)
             {
                 auto& control = container[i];
-                if (!control.isVisible() || !control.isInvalidated())
+                if (!control.is_visible() || !control.isInvalidated())
                     continue;
 
                 Region controlRegion{
-                    control.getActualPosition(),
-                    control.getActualSize()}; // ETOTODOcontrol.getBounds();
+                    control.get_actual_position(),
+                    control.get_actual_size()}; // ETOTODOcontrol.getBounds();
 
                 control.paint(graphics, controlRegion);
                 control.validate();

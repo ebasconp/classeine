@@ -9,6 +9,6 @@ namespace clsn::ui::renderers
 
     auto ToggleButtonRenderer::paintAsPressed(const ClickableControl& button) const -> bool
     {
-        return static_cast<const ToggleButton&>(button).isChecked() || button.isPressed();
+        return static_cast<const ToggleButton&>(button).is_checked() || button.isPressed();
     }
 }

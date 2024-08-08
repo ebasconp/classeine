@@ -10,7 +10,7 @@ namespace clsn::ui
 
     void RadioButton::toggle()
     {
-        if (!isChecked())
-            setChecked(true);
+        if (!is_checked())
+            set_checked(true);
     }
 }

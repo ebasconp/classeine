@@ -10,8 +10,8 @@ namespace clsn::ui
 {
     using clsn::ui::renderers::NullRenderer;
 
-    Control::Control(std::string_view sectionName)
-    : m_defaultSectionName{sectionName}
+    Control::Control(std::string_view section_name)
+    : m_defaultSectionName{section_name}
     , m_invalidated{true}
     {
         initEvents();
@@ -29,7 +29,7 @@ namespace clsn::ui
         processMouseClickEvent(e);
     }
 
-    void Control::addMouseMovedListener(EventListener<MouseMovedEvent> event)
+    void Control::addMouseMovedListener(event_listener<MouseMovedEvent> event)
     {
         m_mouseMovedListeners.add(std::move(event));
     }
@@ -41,7 +41,7 @@ namespace clsn::ui
 
     void Control::processMouseClickEvent(events::MouseClickEvent& e)
     {
-        if (!isEnabled())
+        if (!is_enabled())
             return;
 
         if (e.getStatus() == MouseClickStatus::released)
@@ -54,13 +54,13 @@ namespace clsn::ui
 
     void Control::processMouseMovedEvent(events::MouseMovedEvent& e)
     {
-        if (!isEnabled())
+        if (!is_enabled())
             return;
 
         m_mouseMovedListeners.notify(e);
     }
 
-    void Control::addMouseClickListener(EventListener<MouseClickEvent> event)
+    void Control::addMouseClickListener(event_listener<MouseClickEvent> event)
     {
         m_mouseClickListeners.add(std::move(event));
     }
@@ -108,7 +108,7 @@ namespace clsn::ui
 
     void Control::initEvents()
     {
-        addVisibleChangedListener([this](auto&) { invalidate(); });
+        add_visible_changed_listener([this](auto&) { invalidate(); });
     }
 
     void Control::setParentWindow(
@@ -130,7 +130,7 @@ namespace clsn::ui
 
     auto Control::containsPoint(const Point& point) const -> bool
     {
-        return Region{m_ActualPosition.get(), m_ActualSize.get()}.containsPoint(point);
+        return Region{m_actual_position.get(), m_actual_size.get()}.containsPoint(point);
     }
 
     auto Control::getControlByPosition(const Point& point) const
@@ -174,7 +174,7 @@ namespace clsn::ui
 
     auto Control::getActualBackgroundColor() const -> const Color&
     {
-        const auto& color = getBackgroundColor();
+        const auto& color = get_background_color();
         if (color.has_value())
             return color.value();
 
@@ -184,7 +184,7 @@ namespace clsn::ui
 
     auto Control::getActualForegroundColor() const -> const Color&
     {
-        const auto& color = getForegroundColor();
+        const auto& color = get_foreground_color();
         if (color.has_value())
             return color.value();
 
@@ -194,16 +194,16 @@ namespace clsn::ui
 
     auto Control::getActualFont() const -> const Font&
     {
-        const auto& font = getFont();
+        const auto& font = get_font();
         if (font.has_value())
             return font.value();
 
-        return UIManager::getInstance().getFont(m_defaultSectionName, "defaultFont");
+        return UIManager::getInstance().get_font(m_defaultSectionName, "defaultFont");
     }
 
     auto Control::getActualPreferredSize() const -> const Dimension&
     {
-        const auto& size = getPreferredSize();
+        const auto& size = get_preferred_size();
         if (size.has_value())
             return size.value();
 

@@ -8,7 +8,7 @@
 #include "clsn/draw/Point.h"
 #include "clsn/draw/Region.h"
 
-#include "clsn/core/Panic.h"
+#include "clsn/core/system.h"
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL2_gfxPrimitives.h>
@@ -23,10 +23,10 @@ namespace
                           const clsn::ui::impl::sdl2::Sdl2FontCache& fontCache)
         -> TTF_Font*
     {
-        auto optionalRefFont = fontCache.getFont(font);
+        auto optionalRefFont = fontCache.get_font(font);
         if (!optionalRefFont.has_value())
         {
-            clsn::core::Panic("Font not found");
+            clsn::core::system::panic("Font not found");
             return nullptr;
         }
 
@@ -101,7 +101,7 @@ namespace clsn::ui::impl::sdl2
         {
             SDL_Log("Error while creating texture: %s", SDL_GetError());
             SDL_DestroyRenderer(&m_renderer);
-            Panic("Error while creating texture: "s + SDL_GetError());
+            system::panic("Error while creating texture: "s + SDL_GetError());
             return;
         }
 

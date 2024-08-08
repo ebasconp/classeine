@@ -13,7 +13,7 @@ namespace clsn::draw
         return m_name;
     }
 
-    auto Font::getSize() const noexcept -> int
+    auto Font::get_size() const noexcept -> int
     {
         return m_size;
     }

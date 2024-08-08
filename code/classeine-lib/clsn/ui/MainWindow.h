@@ -76,10 +76,10 @@ namespace clsn::ui
 
         void initVisibility()
         {
-            addVisibleChangedListener(
+            add_visible_changed_listener(
                 [this](auto& e)
                 {
-                    if (e.getNewValue())
+                    if (e.get_new_value())
                     {
                         m_impl.show();
                     }
@@ -96,19 +96,19 @@ namespace clsn::ui
             //                "MainWindow", "size", Dimension{300, 200});
             //ETOTODO: MOVE THIS TO THE THEME
 
-            m_control.setActualSize(Dimension{800, 600});
+            m_control.set_actual_size(Dimension{800, 600});
 
-            addSizeChangedListener([this](auto& e)
+            add_size_changed_listener([this](auto& e)
             {
-                auto& newValue = e.getNewValue();
-                m_control.setActualSize(newValue);
+                auto& newValue = e.get_new_value();
+                m_control.set_actual_size(newValue);
                 m_control.invalidate();
             });
 
-            addActualSizeChangedListener([this](auto& e)
+            add_actual_size_changed_listener([this](auto& e)
             {
-                auto& newValue = e.getNewValue();
-                m_control.setActualSize(newValue);
+                auto& newValue = e.get_new_value();
+                m_control.set_actual_size(newValue);
                 m_control.invalidate();
             });
         }

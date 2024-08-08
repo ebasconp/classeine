@@ -1,6 +1,6 @@
 #include "UIManager.h"
 
-#include "clsn/core/Panic.h"
+#include "clsn/core/system.h"
 
 #include "amatista/AmatistaUISkin.h"
 
@@ -13,7 +13,7 @@ namespace clsn::ui
     UIManager& UIManager::getInstance()
     {
         if (m_singleton == nullptr)
-            clsn::core::Panic(
+            clsn::core::system::panic(
                 "UIManager is not initialized. Run UIManager::init() at the "
                 "beginning of your application");
 
@@ -72,19 +72,19 @@ namespace clsn::ui
         return m_skin->getRendererByControl(ctrl);
     }
 
-    auto UIManager::getColor(std::string_view sectionName, std::string_view name) const -> const Color&
+    auto UIManager::getColor(std::string_view section_name, std::string_view name) const -> const Color&
     {
-        return m_skin->getColor(sectionName, name);
+        return m_skin->getColor(section_name, name);
     }
 
-    auto UIManager::getDimension(std::string_view sectionName, std::string_view name) const -> const Dimension&
+    auto UIManager::getDimension(std::string_view section_name, std::string_view name) const -> const Dimension&
     {
-        return m_skin->getDimension(sectionName, name);
+        return m_skin->getDimension(section_name, name);
     }
 
-    auto UIManager::getFont(std::string_view sectionName, std::string_view name) const -> const Font&
+    auto UIManager::get_font(std::string_view section_name, std::string_view name) const -> const Font&
     {
-        return m_skin->getFont(sectionName, name);
+        return m_skin->get_font(section_name, name);
     }
 
     auto UIManager::installTheme(const std::string& themeName) -> bool
@@ -92,7 +92,7 @@ namespace clsn::ui
         return m_skin->installThemeByName(themeName);
     }
 
-    auto UIManager::addThemeChangedListener(EventListener<EmptyEvent> listener) -> int
+    auto UIManager::addThemeChangedListener(event_listener<empty_event> listener) -> int
     {
         return m_skin->addThemeChangedListener(listener);
     }

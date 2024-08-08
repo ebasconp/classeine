@@ -14,14 +14,14 @@ namespace clsn::ui
 
     void RadioButtonGroup::initEvents(RadioButton& radioButton)
     {
-        radioButton.addActionListener([this, &radioButton](auto&)
+        radioButton.add_action_listener([this, &radioButton](auto&)
         {
             for (auto& ptr : m_radioButtons)
             {
                 if (ptr.get() == &radioButton)
                     continue;
 
-                ptr->setChecked(false);
+                ptr->set_checked(false);
                 ptr->invalidate();
             }
         });

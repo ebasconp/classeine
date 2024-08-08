@@ -1,6 +1,6 @@
 #include "DualContainer.h"
 
-#include "clsn/core/Panic.h"
+#include "clsn/core/system.h"
 
 namespace clsn::ui
 {
@@ -26,10 +26,10 @@ namespace clsn::ui
     void DualContainer::checkIfValidBeforeAdding(const DualContainerConstraint& constraint) const
     {
         if (getCount() == 2)
-            Panic("Dual container can only contain two elements");
+            system::panic("Dual container can only contain two elements");
 
         if (getCount() == 1 && constraint == getConstraintAt(0))
-            Panic("Both controls must have different constraints");
+            system::panic("Both controls must have different constraints");
     }
 
 
@@ -39,8 +39,8 @@ namespace clsn::ui
         if (visibleCount == 0)
             return;
 
-        const auto& position = getActualPosition();
-        const auto& size = getActualSize();
+        const auto& position = get_actual_position();
+        const auto& size = get_actual_size();
 
         switch (m_orientation)
         {
@@ -65,8 +65,8 @@ namespace clsn::ui
                 ? size.getHeight()
                 : cc.control->getActualPreferredSize().getHeight();
 
-            cc.control->setActualSize({size.getWidth(), ch});
-            cc.control->setActualPosition(position);
+            cc.control->set_actual_size({size.getWidth(), ch});
+            cc.control->set_actual_position(position);
             return;
         }
 
@@ -81,11 +81,11 @@ namespace clsn::ui
 
             auto c1h = size.getHeight() - c0h;
 
-            cc0.control->setActualSize({size.getWidth(), c0h});
-            cc1.control->setActualSize({size.getWidth(), c1h});
+            cc0.control->set_actual_size({size.getWidth(), c0h});
+            cc1.control->set_actual_size({size.getWidth(), c1h});
 
-            cc0.control->setActualPosition(position);
-            cc1.control->setActualPosition({position.getX(), position.getY() + c0h});
+            cc0.control->set_actual_position(position);
+            cc1.control->set_actual_position({position.getX(), position.getY() + c0h});
         }
     }
 
@@ -101,8 +101,8 @@ namespace clsn::ui
                 ? size.getWidth()
                 : cc.control->getActualPreferredSize().getWidth();
 
-            cc.control->setActualSize({cw, size.getHeight()});
-            cc.control->setActualPosition(position);
+            cc.control->set_actual_size({cw, size.getHeight()});
+            cc.control->set_actual_position(position);
             return;
         }
 
@@ -117,11 +117,11 @@ namespace clsn::ui
 
             auto c1w = size.getWidth() - c0w;
 
-            cc0.control->setActualSize({c0w, size.getHeight()});
-            cc1.control->setActualSize({c1w, size.getHeight()});
+            cc0.control->set_actual_size({c0w, size.getHeight()});
+            cc1.control->set_actual_size({c1w, size.getHeight()});
 
-            cc0.control->setActualPosition(position);
-            cc1.control->setActualPosition({position.getX() + c0w, position.getY()});
+            cc0.control->set_actual_position(position);
+            cc1.control->set_actual_position({position.getX() + c0w, position.getY()});
         }
     }
 }

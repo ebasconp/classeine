@@ -5,5 +5,5 @@
 namespace clsn::core
 {
     template <typename EventType>
-    using EventListener = std::function<void(EventType&)>;
+    using event_listener = std::function<void(EventType&)>;
 }

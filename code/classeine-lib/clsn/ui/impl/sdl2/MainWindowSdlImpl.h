@@ -10,7 +10,7 @@
 #include "clsn/draw/Point.h"
 #include "clsn/draw/Region.h"
 
-#include "clsn/core/Panic.h"
+#include "clsn/core/system.h"
 
 #include <SDL2/SDL.h>
 #include <SDL_ttf.h>
@@ -49,14 +49,16 @@ namespace clsn::ui::impl::sdl2
         void show()
         {
             using namespace std::string_literals;
-            using clsn::core::Panic;
+            using namespace clsn::core::system;
 
             if (!m_sdlInitialized)
             {
                 if (SDL_Init(SDL_INIT_VIDEO) != 0)
                 {
                     SDL_Log("Error while initializing SDL: %s", SDL_GetError());
-                    Panic("Error while initializing SDL: "s + SDL_GetError());
+
+                    //ETOTODO: Improve formatting
+                    panic("Error while initializing SDL: "s + SDL_GetError());
                     return;
                 }
 
@@ -65,19 +67,20 @@ namespace clsn::ui::impl::sdl2
             }
 
             const int resizable =
-                m_parentWindow.isResizable() ? SDL_WINDOW_RESIZABLE : 0;
+                m_parentWindow.is_resizable() ? SDL_WINDOW_RESIZABLE : 0;
 
-            m_window = SDL_CreateWindow(m_parentWindow.getText().c_str(),
+            m_window = SDL_CreateWindow(m_parentWindow.get_text().c_str(),
                                         SDL_WINDOWPOS_CENTERED,
                                         SDL_WINDOWPOS_CENTERED,
-                                        m_parentWindow.getSize().getWidth(),
-                                        m_parentWindow.getSize().getHeight(),
+                                        m_parentWindow.get_size().getWidth(),
+                                        m_parentWindow.get_size().getHeight(),
                                         SDL_WINDOW_SHOWN | resizable);
             if (m_window == nullptr)
             {
                 SDL_Log("Error while creating window: %s", SDL_GetError());
                 SDL_Quit();
-                Panic("Error while creating window: "s + SDL_GetError());
+                //ETOTODO: Improve formatting
+                panic("Error while creating window: "s + SDL_GetError());
                 return;
             }
 
@@ -90,11 +93,12 @@ namespace clsn::ui::impl::sdl2
                 SDL_Log("Error while creating renderer: %s", SDL_GetError());
                 SDL_DestroyWindow(m_window);
                 SDL_Quit();
-                Panic("Error while creating renderer: "s + SDL_GetError());
+                //ETOTODO: Improve formatting
+                panic("Error while creating renderer: "s + SDL_GetError());
                 return;
             }
 
-            auto& minimumSize = m_parentWindow.getMinimumSize();
+            auto& minimumSize = m_parentWindow.get_minimum_size();
             SDL_SetWindowMinimumSize(
                 m_window, minimumSize.getWidth(), minimumSize.getHeight());
 
@@ -131,7 +135,7 @@ namespace clsn::ui::impl::sdl2
 
         void repaintAll(GraphicsSdl2Impl& graphics)
         {
-            const Region region{Point{0, 0}, m_parentWindow.getActualSize()};
+            const Region region{Point{0, 0}, m_parentWindow.get_actual_size()};
             m_parentWindow().paint(graphics, region);
             graphics.apply();
         }
@@ -141,7 +145,7 @@ namespace clsn::ui::impl::sdl2
             m_parentWindow().doLayout();
             m_parentWindow().invalidate();
 
-            GraphicsSdl2Impl graphics{*m_renderer, m_parentWindow.getSize()};
+            GraphicsSdl2Impl graphics{*m_renderer, m_parentWindow.get_size()};
 
             SDL_Event event;
             while (SDL_WaitEvent(&event))
@@ -175,7 +179,7 @@ namespace clsn::ui::impl::sdl2
                         break;
                 }
 
-                const Region region{Point{0, 0}, m_parentWindow.getActualSize()};
+                const Region region{Point{0, 0}, m_parentWindow.get_actual_size()};
                 m_parentWindow().paint(graphics, region);
                 graphics.apply();
             }
@@ -202,7 +206,7 @@ namespace clsn::ui::impl::sdl2
 
         void processControlResizedEvent(const Dimension& newSize)
         {
-            m_parentWindow.setActualSize(newSize);
+            m_parentWindow.set_actual_size(newSize);
         }
     };
 }

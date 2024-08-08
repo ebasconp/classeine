@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "clsn/core/Console.h"
-#include "clsn/core/Panic.h"
+#include "clsn/core/console.h"
+#include "clsn/core/system.h"
 
 #include "clsn/draw/Colors.h"
 
@@ -32,7 +32,7 @@ void test()
     class A
     {
     public:
-        std::string toString() const { return "A.toString()"; }
+        std::string to_string() const { return "A.to_string()"; }
     };
 
     std::string s = "Juan";
@@ -42,39 +42,39 @@ void test()
     std::string f2 = "Hola, tengo {1} años y me llamo {0}";
     std::string f3 = "Hallo, mein Name ist {} und Ich bin {} Jahre alte";
 
-    Console::println(f1, s, n);
-    Console::println(f2, s, n);
-    Console::debug(f3, s, n);
-    Console::println("Hello world");
+    console::println(f1, s, n);
+    console::println(f2, s, n);
+    console::debug(f3, s, n);
+    console::println("Hello world");
 
     UIManager::getInstance().installTheme("light");
 
     MainWindow<VBoxContainer> mw;
 
-    mw.setText("Welcome to Classeine");
-    mw.setSize({1000, 600}); //ETOTODO
+    mw.set_text("Welcome to Classeine");
+    mw.set_size({1000, 600}); //ETOTODO
 
     auto flowc = mw().makeAndAdd<FlowContainer>();
     auto b0flowc = flowc->makeAndAdd<Button>();
-    b0flowc->setText("File");
+    b0flowc->set_text("File");
 
     auto b1flowc = flowc->makeAndAdd<Button>();
-    b1flowc->setText("Edit");
+    b1flowc->set_text("Edit");
 
     auto b2flowc = flowc->makeAndAdd<Button>();
-    b2flowc->setText("View");
+    b2flowc->set_text("View");
 
     auto b3flowc = flowc->makeAndAdd<Button>();
-    b3flowc->setText("Window");
+    b3flowc->set_text("Window");
 
     auto b4flowc = flowc->makeAndAdd<Button>();
-    b4flowc->setText("Help");
+    b4flowc->set_text("Help");
 
     auto c0 = mw().makeAndAdd<Button>();
-    c0->setText("Button");
+    c0->set_text("Button");
 
     auto c1 = mw().makeAndAdd<Label>();
-    c1->setText("Label");
+    c1->set_text("Label");
 
     auto c2 = mw().makeAndAdd<HBoxContainer>();
 
@@ -82,14 +82,14 @@ void test()
     auto b2 = c2->makeAndAdd<VBoxContainer>();
 
     auto rb1 = b2->makeAndAdd<RadioButton>();
-    rb1->setText("RadioButton 1");
+    rb1->set_text("RadioButton 1");
 
     auto rb2 = b2->makeAndAdd<RadioButton>();
-    rb2->setText("RadioButton 2");
-    rb2->setEnabled(false);
+    rb2->set_text("RadioButton 2");
+    rb2->set_enabled(false);
 
     auto rb3 = b2->makeAndAdd<RadioButton>();
-    rb3->setText("RadioButton 3");
+    rb3->set_text("RadioButton 3");
 
     RadioButtonGroup group;
     group.add(rb1);
@@ -97,11 +97,11 @@ void test()
     group.add(rb3);
 
     auto b3 = c2->makeAndAdd<Button>();
-    b3->setText("b3");
+    b3->set_text("b3");
 
     auto b4 = c2->makeAndAdd<CheckBox>();
-    b4->setText("CheckBox");
-    b4->setEnabled(false);
+    b4->set_text("CheckBox");
+    b4->set_enabled(false);
 
     auto container = c2->makeAndAdd<VBoxContainer>();
     auto b6 = container->makeAndAdd<Button>();
@@ -112,39 +112,39 @@ void test()
     auto container2 = c2->makeAndAdd<VBoxContainer>();
     auto b8 = container2->makeAndAdd<Button>();
     auto b9 = container2->makeAndAdd<ToggleButton>();
-    b9->setText("ToggleButton");
+    b9->set_text("ToggleButton");
 
-    c0->addActionListener([&b3](auto& )
+    c0->add_action_listener([&b3](auto& )
     {
-        b3->setVisible(!b3->isVisible());
-        std::cout << "B3 visible: " << b3->isVisible() << std::endl;
+        b3->set_visible(!b3->is_visible());
+        std::cout << "B3 visible: " << b3->is_visible() << std::endl;
     });
 
     auto xy =  mw().makeAndAdd<XYContainer>();
 
     auto b1xy = xy->makeAndAdd<Button>(Point{10, 10});
-    b1xy->setText("Theme");
-    b1xy->setBackgroundColor(Colors::makeRed());
-    b1xy->addActionListener([&b1xy](auto& )
+    b1xy->set_text("Theme");
+    b1xy->set_background_color(Colors::makeRed());
+    b1xy->add_action_listener([&b1xy](auto& )
     {
         auto& themeName = UIManager::getInstance().getCurrentThemeName();
 
-        b1xy->setText(themeName);
+        b1xy->set_text(themeName);
         auto newThemeName = themeName == "dark" ? "light" : "dark";
         UIManager::getInstance().installTheme(newThemeName);
     });
 
     auto b2xy = xy->makeAndAdd<Button>(Point{200, 10});
-    b2xy->setText("Button 2");
+    b2xy->set_text("Button 2");
 
     auto dc = mw().makeAndAdd<DualContainer>();
     dc->setOrientation(DualContainerOrientation::horizontal);
     auto cb1 = dc->makeAndAdd<CheckBox>(DualContainerConstraint::use_all_available_space);
-    cb1->setText("All available");
+    cb1->set_text("All available");
     auto tb1 = dc->makeAndAdd<Button>(DualContainerConstraint::use_preferred_size);
-    tb1->setText("Preferred");
+    tb1->set_text("Preferred");
 
-    mw.setVisible(true);
+    mw.set_visible(true);
 
 }
 
@@ -156,7 +156,7 @@ int main()
 
     clsn::ui::UIManager::finalize();
 
-    clsn::core::Entity::dump();
+    clsn::core::entity::dump();
 
     return 0;
 }

@@ -14,9 +14,9 @@ namespace clsn::ui::renderers
         if (!control.isInvalidated())
             return;
 
-        auto sectionName = control.getDefaultSectionName();
+        auto section_name = control.getDefaultSectionName();
 
-        auto bc = UIManager::getInstance().getColor(sectionName, "containerBackgroundColor");
+        auto bc = UIManager::getInstance().getColor(section_name, "containerBackgroundColor");
 
         graphics.setDrawColor(bc);
         graphics.drawFillRectangle(region);

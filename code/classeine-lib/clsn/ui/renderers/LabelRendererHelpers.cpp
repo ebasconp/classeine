@@ -13,15 +13,15 @@ namespace clsn::ui::renderers::LabelRendererHelpers
 
     void drawControlText(Graphics& graphics, const Control& control, const Region& region)
     {
-        if (!control.isEnabled())
+        if (!control.is_enabled())
         {
             graphics.setDrawColor({192, 192, 192});
             graphics.drawText(region + Point{1, 1},
                               control.getActualFont(),
-                              control.getText());
+                              control.get_text());
         }
 
-        graphics.setDrawColor(control.isEnabled()
+        graphics.setDrawColor(control.is_enabled()
                               ? control.getActualForegroundColor()
                               : UIManager::getInstance().getColor(
                                     "Theme", "disabledForegroundColor")
@@ -29,6 +29,6 @@ namespace clsn::ui::renderers::LabelRendererHelpers
 
         graphics.drawText(region,
                           control.getActualFont(),
-                          control.getText());
+                          control.get_text());
     }
 }

@@ -2,23 +2,23 @@
 
 #include "clsn/ui/Control.h"
 
-#include "clsn/core/EmptyEvent.h"
-#include "clsn/core/EventListenerList.h"
+#include "clsn/core/empty_event.h"
+#include "clsn/core/event_listener_list.h"
 
 namespace clsn::ui
 {
     class ClickableControl : public Control
     {
         bool m_pressed = false;
-        EventListenerList<EmptyEvent> m_actionListeners;
+        event_listener_list<empty_event> m_actionListeners;
 
     public:
-        explicit ClickableControl(std::string_view sectionName);
+        explicit ClickableControl(std::string_view section_name);
 
         [[nodiscard]] auto isPressed() const noexcept -> bool;
 
-        void addActionListener(EventListener<EmptyEvent> event);
-        void notifyActionEvent(EmptyEvent& e);
+        void add_action_listener(event_listener<empty_event> event);
+        void notifyActionEvent(empty_event& e);
 
         void releaseMouse() override;
 

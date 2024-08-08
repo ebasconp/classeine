@@ -1,6 +1,6 @@
 #pragma once
 
-#include "clsn/core/Configuration.h"
+#include "clsn/core/configuration.h"
 
 #include "clsn/draw/Color.h"
 #include "clsn/draw/Dimension.h"
@@ -10,7 +10,7 @@
 
 namespace clsn::ui
 {
-    using UIManagerDefaults = clsn::core::Configuration<clsn::draw::Color,
+    using UIManagerDefaults = clsn::core::configuration<clsn::draw::Color,
                                                         clsn::draw::Dimension,
                                                         clsn::draw::Font>;
 }

@@ -15,7 +15,7 @@ namespace clsn::draw
 
     auto Region::getPosition() const noexcept -> const Point& { return m_position; }
 
-    auto Region::getSize() const noexcept -> const Dimension& { return m_size; }
+    auto Region::get_size() const noexcept -> const Dimension& { return m_size; }
 
     auto Region::getX() const noexcept -> int { return m_position.getX(); }
     auto Region::getY() const noexcept -> int { return m_position.getY(); }

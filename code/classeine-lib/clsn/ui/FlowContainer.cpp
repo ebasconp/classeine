@@ -13,10 +13,10 @@ namespace clsn::ui
         if (visibleCount == 0)
             return;
 
-        const auto width = getActualSize().getWidth();
-        [[maybe_unused]] const auto height = getActualSize().getHeight();
+        const auto width = get_actual_size().getWidth();
+        [[maybe_unused]] const auto height = get_actual_size().getHeight();
 
-        const auto position = getActualPosition();
+        const auto position = get_actual_position();
         int currentx = position.getX();
         int currenty = position.getY();
 
@@ -34,8 +34,8 @@ namespace clsn::ui
                 if (maxy < preferredSize.getHeight())
                     maxy = preferredSize.getHeight();
 
-                control.setActualPosition({currentx, currenty});
-                control.setActualSize(preferredSize);
+                control.set_actual_position({currentx, currenty});
+                control.set_actual_size(preferredSize);
             }
             else
             {
@@ -46,8 +46,8 @@ namespace clsn::ui
                 if (maxy < preferredSize.getHeight())
                     maxy = preferredSize.getHeight();
 
-                control.setActualPosition({currentx, currenty});
-                control.setActualSize(preferredSize);
+                control.set_actual_position({currentx, currenty});
+                control.set_actual_size(preferredSize);
             }
 
             currentx += controlWidth;

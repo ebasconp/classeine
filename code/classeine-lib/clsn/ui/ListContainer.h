@@ -24,8 +24,8 @@ namespace clsn::ui
         mutable bool m_needsToPaintTheContainer;
 
     public:
-        explicit ListContainer(std::string_view sectionName)
-        : Control{sectionName}
+        explicit ListContainer(std::string_view section_name)
+        : Control{section_name}
         , m_needsToPaintTheContainer{false}
         {
             loadContainerDefaults();
@@ -66,7 +66,7 @@ namespace clsn::ui
             int visibleCount = 0;
             for (int i = 0; i < count; i++)
             {
-                if (m_controls[i].control->isVisible())
+                if (m_controls[i].control->is_visible())
                     visibleCount++;
             }
 
@@ -81,7 +81,7 @@ namespace clsn::ui
             for (auto& c : m_controls)
             {
                 auto& control = c.first;
-                if (!control->isVisible())
+                if (!control->is_visible())
                     continue;
 
                 controls.push_back(control);
@@ -172,7 +172,7 @@ namespace clsn::ui
             for (int i = 0; i < count; i++)
             {
                 auto& control = (*this)[i];
-                if (!control.isVisible() || !control.isEnabled())
+                if (!control.is_visible() || !control.is_enabled())
                     continue;
 
                 auto result = control.getControlByPosition(point);
@@ -195,7 +195,7 @@ namespace clsn::ui
             for (int i = 0; i < count; i++)
             {
                 auto& control = (*this)[i];
-                if (!control.isVisible() || !control.isEnabled())
+                if (!control.is_visible() || !control.is_enabled())
                     continue;
 
                 if (control.containsPoint(e.getPoint()))
@@ -215,7 +215,7 @@ namespace clsn::ui
             for (int i = 0; i < count; i++)
             {
                 auto& control = (*this)[i];
-                if (!control.isVisible() || !control.isEnabled())
+                if (!control.is_visible() || !control.is_enabled())
                     continue;
 
                 if (control.containsPoint(e.position))
@@ -228,7 +228,7 @@ namespace clsn::ui
     private:
         void initListContainerEvents()
         {
-            addActualSizeChangedListener(
+            add_actual_size_changed_listener(
                 [this](auto& )
                 {
                     doLayout();
@@ -239,29 +239,29 @@ namespace clsn::ui
         void loadContainerDefaults()
         {
             auto& uiManager = clsn::ui::UIManager::getInstance();
-            auto sectionName = getDefaultSectionName();
+            auto section_name = getDefaultSectionName();
 
-            setBackgroundColor(uiManager.getColor(
-                sectionName, "containerBackgroundColor"));
+            set_background_color(uiManager.getColor(
+                section_name, "containerBackgroundColor"));
 
-            setForegroundColor(uiManager.getColor(
-                sectionName, "containerForegroundColor"));
+            set_foreground_color(uiManager.getColor(
+                section_name, "containerForegroundColor"));
         }
 
 
         void initEvents(Control& control)
         {
-            addEnabledChangedListener([this](auto& e)
+            add_enabled_changed_listener([this](auto& e)
             {
                 const auto count = getCount();
                 for (int i = 0; i < count; i++)
                 {
                     auto& control = (*this)[i];
-                    control.setEnabled(e.getNewValue());
+                    control.set_enabled(e.get_new_value());
                 }
             });
 
-            control.addVisibleChangedListener(
+            control.add_visible_changed_listener(
                 [this](auto&)
                 {
                     doLayout();

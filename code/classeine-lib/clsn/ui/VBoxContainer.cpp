@@ -13,23 +13,23 @@ namespace clsn::ui
         if (visibleCount == 0)
             return;
 
-        const auto width = getActualSize().getWidth();
-        const auto height = getActualSize().getHeight() /
+        const auto width = get_actual_size().getWidth();
+        const auto height = get_actual_size().getHeight() /
                             static_cast<double>(visibleCount);
 
-        const auto position = getActualPosition();
+        const auto position = get_actual_position();
 
         const auto count = getCount();
         for (int i = 0, visibleSlot = 0; i < count; i++)
         {
             auto& control = (*this)[i];
-            if (!control.isVisible())
+            if (!control.is_visible())
                 continue;
 
-            control.setActualPosition(
+            control.set_actual_position(
                 {position.getX(),
                  static_cast<int>(visibleSlot * height) + position.getY()});
-            control.setActualSize({width, static_cast<int>(height)});
+            control.set_actual_size({width, static_cast<int>(height)});
             visibleSlot++;
         }
     }
