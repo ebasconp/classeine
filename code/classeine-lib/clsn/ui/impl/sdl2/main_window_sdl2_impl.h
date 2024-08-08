@@ -57,8 +57,7 @@ namespace clsn::ui::impl::sdl2
                 {
                     SDL_Log("Error while initializing SDL: %s", SDL_GetError());
 
-                    //ETOTODO: Improve formatting
-                    panic("Error while initializing SDL: "s + SDL_GetError());
+                    panic("Error while initializing SDL: {}", SDL_GetError());
                     return;
                 }
 
@@ -79,8 +78,8 @@ namespace clsn::ui::impl::sdl2
             {
                 SDL_Log("Error while creating window: %s", SDL_GetError());
                 SDL_Quit();
-                //ETOTODO: Improve formatting
-                panic("Error while creating window: "s + SDL_GetError());
+
+                panic("Error while creating window: {}", SDL_GetError());
                 return;
             }
 
@@ -93,8 +92,8 @@ namespace clsn::ui::impl::sdl2
                 SDL_Log("Error while creating renderer: %s", SDL_GetError());
                 SDL_DestroyWindow(m_window);
                 SDL_Quit();
-                //ETOTODO: Improve formatting
-                panic("Error while creating renderer: "s + SDL_GetError());
+
+                panic("Error while creating renderer: {}", SDL_GetError());
                 return;
             }
 
