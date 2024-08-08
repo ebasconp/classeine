@@ -1,6 +1,6 @@
-#include "GraphicsSdl2Impl.h"
+#include "graphics_sdl2_impl.h"
 
-#include "Sdl2Helpers.h"
+#include "sdl2_helpers.h"
 
 #include "clsn/ui/UIManager.h"
 
@@ -20,7 +20,7 @@
 namespace
 {
     auto getFontFromCache(const clsn::draw::font& font,
-                          const clsn::ui::impl::sdl2::Sdl2FontCache& fontCache)
+                          const clsn::ui::impl::sdl2::sdl2_font_cache& fontCache)
         -> TTF_Font*
     {
         auto optionalRefFont = fontCache.get_font(font);
@@ -47,38 +47,38 @@ namespace clsn::ui::impl::sdl2
 {
     using namespace clsn::draw;
 
-    GraphicsSdl2Impl::GraphicsSdl2Impl(
+    graphics_sdl2_impl::graphics_sdl2_impl(
             SDL_Renderer& renderer,
             const dimension& size)
     : m_renderer{renderer}
-    , m_drawColor{255, 255, 255}
-    , m_needToApply{false}
+    , m_draw_color{255, 255, 255}
+    , m_needs_to_apply{false}
     {
-        createTexture(size);
+        create_texture(size);
     }
 
-    GraphicsSdl2Impl::~GraphicsSdl2Impl()
+    graphics_sdl2_impl::~graphics_sdl2_impl()
     {
-        destroyTexture();
+        destroy_texture();
     }
 
-    Sdl2FontCache& GraphicsSdl2Impl::getFontCache() noexcept
+    sdl2_font_cache& graphics_sdl2_impl::get_font_cache() noexcept
     {
-        return m_fontCache;
+        return m_font_cache;
     }
 
-    const Sdl2FontCache& GraphicsSdl2Impl::getFontCache() const noexcept
+    const sdl2_font_cache& graphics_sdl2_impl::get_font_cache() const noexcept
     {
-        return m_fontCache;
+        return m_font_cache;
     }
 
-    void GraphicsSdl2Impl::resize(const dimension& newSize)
+    void graphics_sdl2_impl::resize(const dimension& newSize)
     {
-        destroyTexture();
-        createTexture(newSize);
+        destroy_texture();
+        create_texture(newSize);
     }
 
-    void GraphicsSdl2Impl::destroyTexture()
+    void graphics_sdl2_impl::destroy_texture()
     {
         if (m_texture != nullptr)
         {
@@ -86,7 +86,7 @@ namespace clsn::ui::impl::sdl2
         }
     }
 
-    void GraphicsSdl2Impl::createTexture(const dimension& newSize)
+    void graphics_sdl2_impl::create_texture(const dimension& newSize)
     {
         using namespace std::string_literals;
 
@@ -108,22 +108,22 @@ namespace clsn::ui::impl::sdl2
         SDL_SetRenderTarget(&m_renderer, m_texture);
     }
 
-    void GraphicsSdl2Impl::setDrawColor(const color& c) const
+    void graphics_sdl2_impl::set_draw_color(const color& c) const
     {
-        m_drawColor = c;
+        m_draw_color = c;
 
         SDL_SetRenderDrawColor(
             &m_renderer, c.get_red(), c.get_green(), c.get_blue(), c.get_alpha());
     }
 
-    void GraphicsSdl2Impl::clear() const
+    void graphics_sdl2_impl::clear() const
     {
         SDL_RenderClear(&m_renderer);
     }
 
-    void GraphicsSdl2Impl::apply() const
+    void graphics_sdl2_impl::apply() const
     {
-        if (m_needToApply)
+        if (m_needs_to_apply)
         {
             SDL_SetRenderTarget(&m_renderer, nullptr);
             SDL_RenderClear(&m_renderer);
@@ -132,27 +132,27 @@ namespace clsn::ui::impl::sdl2
 
             SDL_SetRenderTarget(&m_renderer, m_texture);
 
-            m_needToApply = false;
+            m_needs_to_apply = false;
         }
     }
 
-    void GraphicsSdl2Impl::drawLine(const point& p1, const point& p2) const
+    void graphics_sdl2_impl::draw_line(const point& p1, const point& p2) const
     {
         SDL_RenderDrawLine(
             &m_renderer, p1.get_x(), p1.get_y(), p2.get_x(), p2.get_y());
 
-        m_needToApply = true;
+        m_needs_to_apply = true;
     }
 
-    void GraphicsSdl2Impl::drawRectangle(const region& r) const
+    void graphics_sdl2_impl::draw_rectangle(const region& r) const
     {
-        SDL_Rect rect = Sdl2Helpers::toSDL(r);
+        SDL_Rect rect = sdl2_helpers::to_sdl(r);
         SDL_RenderDrawRect(&m_renderer, &rect);
 
-        m_needToApply = true;
+        m_needs_to_apply = true;
     }
 
-    void GraphicsSdl2Impl::drawFillCircle(const region& r) const
+    void graphics_sdl2_impl::draw_fill_circle(const region& r) const
     {
         auto cx = static_cast<const short>(r.get_x() + r.get_width() / 2);
         auto cy = static_cast<const short>(r.get_y() + r.get_height() / 2);
@@ -160,27 +160,27 @@ namespace clsn::ui::impl::sdl2
         auto ry = static_cast<const short>(r.get_height() / 2);
 
         filledEllipseRGBA(&m_renderer, cx, cy, rx, ry,
-            m_drawColor.get_red(),
-            m_drawColor.get_green(),
-            m_drawColor.get_blue(), 255);
+            m_draw_color.get_red(),
+            m_draw_color.get_green(),
+            m_draw_color.get_blue(), 255);
 
-        m_needToApply = true;
+        m_needs_to_apply = true;
     }
 
-    void GraphicsSdl2Impl::drawFillRectangle(const region& r) const
+    void graphics_sdl2_impl::draw_fill_rectangle(const region& r) const
     {
-        SDL_Rect rect = Sdl2Helpers::toSDL(r);
+        SDL_Rect rect = sdl2_helpers::to_sdl(r);
         SDL_RenderFillRect(&m_renderer, &rect);
 
-        m_needToApply = true;
+        m_needs_to_apply = true;
     }
 
-    void GraphicsSdl2Impl::drawText(const region& r,
+    void graphics_sdl2_impl::draw_text(const region& r,
                                     const font& font,
                                     std::string_view text) const
     {
-        auto ttfFont = getFontFromCache(font, m_fontCache);
-        SDL_Color textColor = Sdl2Helpers::toSDL(m_drawColor);
+        auto ttfFont = getFontFromCache(font, m_font_cache);
+        SDL_Color textColor = sdl2_helpers::to_sdl(m_draw_color);
 
         SDL_Surface* surface =
             TTF_RenderText_Blended(ttfFont, text.data(), textColor);
@@ -198,7 +198,7 @@ namespace clsn::ui::impl::sdl2
         textRect.x = r.get_x() + (r.get_width() - textSize.get_width()) / 2;
         textRect.y = r.get_y() + (r.get_height() - textSize.get_height()) / 2;
 
-        auto sdlrect = Sdl2Helpers::toSDL(r);
+        auto sdlrect = sdl2_helpers::to_sdl(r);
         SDL_RenderSetClipRect(&m_renderer, &sdlrect);
 
         SDL_QueryTexture(texture, nullptr, nullptr, &textRect.w, &textRect.h);
@@ -207,13 +207,13 @@ namespace clsn::ui::impl::sdl2
         SDL_DestroyTexture(texture);
         SDL_RenderSetClipRect(&m_renderer, nullptr);
 
-        m_needToApply = true;
+        m_needs_to_apply = true;
     }
 
-    auto GraphicsSdl2Impl::getTextSize(const font& f,
+    auto graphics_sdl2_impl::get_text_size(const font& f,
                                        std::string_view text) const -> dimension
     {
-        auto ttfFont = getFontFromCache(f, m_fontCache);
+        auto ttfFont = getFontFromCache(f, m_font_cache);
         return getTextSizeImpl(ttfFont, text);
     }
 

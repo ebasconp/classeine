@@ -15,19 +15,19 @@ namespace clsn::ui::renderers::LabelRendererHelpers
     {
         if (!control.is_enabled())
         {
-            graphics.setDrawColor({192, 192, 192});
-            graphics.drawText(region + point{1, 1},
+            graphics.set_draw_color({192, 192, 192});
+            graphics.draw_text(region + point{1, 1},
                               control.get_actual_font(),
                               control.get_text());
         }
 
-        graphics.setDrawColor(control.is_enabled()
+        graphics.set_draw_color(control.is_enabled()
                               ? control.get_actual_foreground_color()
                               : UIManager::getInstance().getColor(
                                     "Theme", "disabledForegroundColor")
                           );
 
-        graphics.drawText(region,
+        graphics.draw_text(region,
                           control.get_actual_font(),
                           control.get_text());
     }

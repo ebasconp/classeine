@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GraphicsSdl2Impl.h"
+#include "graphics_sdl2_impl.h"
 
 #include "clsn/ui/events/ControlResizedEvent.h"
 #include "clsn/ui/events/MouseClickEvent.h"
@@ -20,26 +20,26 @@ namespace clsn::ui::impl::sdl2
     using clsn::draw::dimension;
 
     template <typename WindowType>
-    class MainWindowSdlImpl final
+    class main_window_sdl2_impl final
     {
         WindowType& m_parentWindow;
 
         SDL_Window* m_window = nullptr;
         SDL_Renderer* m_renderer = nullptr;
 
-        bool m_sdlInitialized = false;
+        bool m_sdl_initialized = false;
 
     public:
-        explicit MainWindowSdlImpl(WindowType& parentWindow)
+        explicit main_window_sdl2_impl(WindowType& parentWindow)
         : m_parentWindow{parentWindow}
         {
         }
 
-        ~MainWindowSdlImpl()
+        ~main_window_sdl2_impl()
         {
             hide();
 
-            if (m_sdlInitialized)
+            if (m_sdl_initialized)
             {
                 TTF_Quit();
                 SDL_Quit();
@@ -51,7 +51,7 @@ namespace clsn::ui::impl::sdl2
             using namespace std::string_literals;
             using namespace clsn::core::system;
 
-            if (!m_sdlInitialized)
+            if (!m_sdl_initialized)
             {
                 if (SDL_Init(SDL_INIT_VIDEO) != 0)
                 {
@@ -63,7 +63,7 @@ namespace clsn::ui::impl::sdl2
                 }
 
                 TTF_Init();
-                m_sdlInitialized = true;
+                m_sdl_initialized = true;
             }
 
             const int resizable =
@@ -102,7 +102,7 @@ namespace clsn::ui::impl::sdl2
             SDL_SetWindowMinimumSize(
                 m_window, minimumSize.get_width(), minimumSize.get_height());
 
-            runEventLoop();
+            run_event_loop();
         }
 
         void hide()
@@ -128,24 +128,24 @@ namespace clsn::ui::impl::sdl2
         }
 
     private:
-        void resizeGraphics(GraphicsSdl2Impl& graphics, const dimension& newSize)
+        void resizeGraphics(graphics_sdl2_impl& graphics, const dimension& newSize)
         {
             graphics.resize(newSize);
         }
 
-        void repaintAll(GraphicsSdl2Impl& graphics)
+        void repaintAll(graphics_sdl2_impl& graphics)
         {
             const region region{point{0, 0}, m_parentWindow.get_actual_size()};
             m_parentWindow().paint(graphics, region);
             graphics.apply();
         }
 
-        void runEventLoop()
+        void run_event_loop()
         {
             m_parentWindow().do_layout();
             m_parentWindow().invalidate();
 
-            GraphicsSdl2Impl graphics{*m_renderer, m_parentWindow.get_size()};
+            graphics_sdl2_impl graphics{*m_renderer, m_parentWindow.get_size()};
 
             SDL_Event event;
             while (SDL_WaitEvent(&event))
@@ -160,7 +160,7 @@ namespace clsn::ui::impl::sdl2
                             const dimension newSize{event.window.data1, event.window.data2};
 
                             resizeGraphics(graphics, newSize);
-                            processControlResizedEvent(newSize);
+                            process_control_resized_event(newSize);
                             repaintAll(graphics);
                         }
 
@@ -168,11 +168,11 @@ namespace clsn::ui::impl::sdl2
 
                     case SDL_MOUSEBUTTONUP:
                     case SDL_MOUSEBUTTONDOWN:
-                        triggerMouseClickEvent(event, event.type);
+                        trigger_mouse_click_event(event, event.type);
                         break;
 
                     case SDL_MOUSEMOTION:
-                        triggerMouseMovedEvent(event);
+                        trigger_mouse_moved_event(event);
                         break;
 
                     default:
@@ -185,7 +185,7 @@ namespace clsn::ui::impl::sdl2
             }
         }
 
-        void triggerMouseClickEvent(SDL_Event& e, Uint32 type)
+        void trigger_mouse_click_event(SDL_Event& e, Uint32 type)
         {
             const auto status =
                 type == SDL_MOUSEBUTTONDOWN
@@ -198,13 +198,13 @@ namespace clsn::ui::impl::sdl2
             m_parentWindow.process_mouse_click_event(mouseClickEvent);
         }
 
-        void triggerMouseMovedEvent(SDL_Event& e)
+        void trigger_mouse_moved_event(SDL_Event& e)
         {
             clsn::ui::events::MouseMovedEvent mouseMovedEvent{point{e.motion.x, e.motion.y}};
             m_parentWindow.process_mouse_moved_event(mouseMovedEvent);
         }
 
-        void processControlResizedEvent(const dimension& newSize)
+        void process_control_resized_event(const dimension& newSize)
         {
             m_parentWindow.set_actual_size(newSize);
         }

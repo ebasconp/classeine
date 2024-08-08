@@ -22,8 +22,8 @@ namespace clsn::ui::renderers
             const auto visibleCount = container.get_visible_count();
             if (visibleCount == 0)
             {
-                graphics.setDrawColor(container.get_actual_background_color());
-                graphics.drawFillRectangle(a_region);
+                graphics.set_draw_color(container.get_actual_background_color());
+                graphics.draw_fill_rectangle(a_region);
                 return;
             }
 

@@ -18,8 +18,8 @@ namespace clsn::ui::renderers
 
         auto bc = UIManager::getInstance().getColor(section_name, "containerBackgroundColor");
 
-        graphics.setDrawColor(bc);
-        graphics.drawFillRectangle(region);
+        graphics.set_draw_color(bc);
+        graphics.draw_fill_rectangle(region);
 
         LabelRendererHelpers::drawControlText(graphics, control, region);
     }

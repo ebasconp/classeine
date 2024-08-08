@@ -1,11 +1,11 @@
-#include "Sdl2Helpers.h"
+#include "sdl2_helpers.h"
 
 #include "clsn/draw/color.h"
 #include "clsn/draw/region.h"
 
-namespace clsn::ui::impl::sdl2::Sdl2Helpers
+namespace clsn::ui::impl::sdl2::sdl2_helpers
 {
-    SDL_Rect toSDL(const region& region)
+    SDL_Rect to_sdl(const region& region)
     {
         SDL_Rect rect;
         rect.x = region.get_x();
@@ -16,7 +16,7 @@ namespace clsn::ui::impl::sdl2::Sdl2Helpers
         return rect;
     }
 
-    SDL_Color toSDL(const color& color)
+    SDL_Color to_sdl(const color& color)
     {
         SDL_Color c;
         c.a = color.get_alpha();

@@ -2,7 +2,7 @@
 
 #include "window.h"
 
-#include "impl/MainWindowImpl.h"
+#include "impl/main_window_impl.h"
 
 namespace clsn::ui
 {
@@ -11,7 +11,7 @@ namespace clsn::ui
     template <typename ControlType>
     class main_window final : public window
     {
-        clsn::ui::impl::MainWindowImpl<main_window<ControlType>> m_impl;
+        clsn::ui::impl::main_window_impl<main_window<ControlType>> m_impl;
         ControlType m_control;
 
     public:

@@ -2,12 +2,11 @@
 
 #include <SDL_ttf.h>
 
-
 #include <memory>
 
 namespace clsn::ui::impl::sdl2
 {
-    struct TTF_FontDeleter final
+    struct ttf_font_deleter final
     {
         void operator()(TTF_Font* font) const
         {
@@ -15,5 +14,5 @@ namespace clsn::ui::impl::sdl2
         }
     };
 
-    using Sdl2FontWrapper = std::unique_ptr<TTF_Font, TTF_FontDeleter>;
+    using sdl2_font_wrapper = std::unique_ptr<TTF_Font, ttf_font_deleter>;
 }

@@ -55,9 +55,9 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/amatista/AmatistaUISkin.cpp
         code/classeine-lib/clsn/ui/amatista/AmatistaUITheme.cpp
 
-        code/classeine-lib/clsn/ui/impl/sdl2/GraphicsSdl2Impl.cpp
-        code/classeine-lib/clsn/ui/impl/sdl2/Sdl2FontCache.cpp
-        code/classeine-lib/clsn/ui/impl/sdl2/Sdl2Helpers.cpp
+        code/classeine-lib/clsn/ui/impl/sdl2/graphics_sdl2_impl.cpp
+        code/classeine-lib/clsn/ui/impl/sdl2/sdl2_font_cache.cpp
+        code/classeine-lib/clsn/ui/impl/sdl2/sdl2_helpers.cpp
 
         code/classeine-lib/clsn/ui/renderers/BorderRendererHelpers.cpp
         code/classeine-lib/clsn/ui/renderers/ButtonRenderer.cpp

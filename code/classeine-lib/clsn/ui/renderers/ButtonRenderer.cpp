@@ -75,8 +75,8 @@ namespace clsn::ui::renderers
             ? UIManager::getInstance().getColor("button", "pressedBackgroundColor")
             : getUltimateBackgroundColor(control, is_hovered);
 
-        graphics.setDrawColor(buttonColor);
-        graphics.drawFillRectangle(innerRect);
+        graphics.set_draw_color(buttonColor);
+        graphics.draw_fill_rectangle(innerRect);
         if (pressed)
         {
             const region innerRectShifted{innerRect.get_x() + depth,

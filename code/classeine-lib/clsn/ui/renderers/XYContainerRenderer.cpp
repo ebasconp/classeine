@@ -10,8 +10,8 @@ namespace clsn::ui::renderers
 
         if (container.needs_to_paint_the_container())
         {
-            graphics.setDrawColor(baseControl.get_actual_background_color());
-            graphics.drawFillRectangle(region);
+            graphics.set_draw_color(baseControl.get_actual_background_color());
+            graphics.draw_fill_rectangle(region);
         }
 
         ContainerRenderer::paint(graphics, region, baseControl);

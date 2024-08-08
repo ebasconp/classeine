@@ -8,10 +8,10 @@ namespace clsn::draw
     class region;
 }
 
-namespace clsn::ui::impl::sdl2::Sdl2Helpers
+namespace clsn::ui::impl::sdl2::sdl2_helpers
 {
     using namespace clsn::draw;
 
-    SDL_Rect toSDL(const region&);
-    SDL_Color toSDL(const color&);
+    SDL_Rect to_sdl(const region&);
+    SDL_Color to_sdl(const color&);
 }

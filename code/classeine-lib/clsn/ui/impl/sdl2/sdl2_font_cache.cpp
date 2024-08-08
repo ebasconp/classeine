@@ -1,4 +1,4 @@
-#include "Sdl2FontCache.h"
+#include "sdl2_font_cache.h"
 
 #include "clsn/ui/UIManager.h"
 
@@ -6,7 +6,7 @@
 
 namespace clsn::ui::impl::sdl2
 {
-    OptionalTTFFontRef Sdl2FontCache::get_font(const clsn::draw::font& font) const
+    optional_ttf_font_ref sdl2_font_cache::get_font(const clsn::draw::font& font) const
     {
         auto it = m_fonts.find(font);
         if (it != m_fonts.end())
@@ -21,7 +21,7 @@ namespace clsn::ui::impl::sdl2
         if (actualFont == nullptr)
             return std::nullopt;
 
-        m_fonts.insert(std::make_pair(font, Sdl2FontWrapper{actualFont}));
+        m_fonts.insert(std::make_pair(font, sdl2_font_wrapper{actualFont}));
         return *actualFont;
     }
 }
