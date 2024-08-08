@@ -4,9 +4,9 @@
 
 namespace clsn::ui::amatista
 {
-    class AmatistaUISkin : public ui_skin
+    class amatista_ui_skin : public ui_skin
     {
     public:
-        AmatistaUISkin();
+        amatista_ui_skin();
     };
 }

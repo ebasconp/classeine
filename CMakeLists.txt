@@ -50,10 +50,10 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/window.cpp
         code/classeine-lib/clsn/ui/xy_container.cpp
 
-        code/classeine-lib/clsn/ui/amatista/DarkAmatistaUITheme.cpp
-        code/classeine-lib/clsn/ui/amatista/LightAmatistaUITheme.cpp
-        code/classeine-lib/clsn/ui/amatista/AmatistaUISkin.cpp
-        code/classeine-lib/clsn/ui/amatista/AmatistaUITheme.cpp
+        code/classeine-lib/clsn/ui/amatista/dark_amatista_ui_theme.cpp
+        code/classeine-lib/clsn/ui/amatista/light_amatista_ui_theme.cpp
+        code/classeine-lib/clsn/ui/amatista/amatista_ui_skin.cpp
+        code/classeine-lib/clsn/ui/amatista/amatista_ui_theme.cpp
 
         code/classeine-lib/clsn/ui/impl/sdl2/graphics_sdl2_impl.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_font_cache.cpp

@@ -2,7 +2,7 @@
 
 #include "clsn/core/system.h"
 
-#include "amatista/AmatistaUISkin.h"
+#include "amatista/amatista_ui_skin.h"
 
 #include <iostream> //ETOTODO: Remove
 
@@ -55,7 +55,7 @@ namespace clsn::ui
     {
         using namespace clsn::ui::amatista;
 
-        make_and_load_skin<AmatistaUISkin>();
+        make_and_load_skin<amatista_ui_skin>();
     }
 
     auto ui_manager::get_path_by_font_info(const font_info& fontInfo) const noexcept -> std::string_view
@@ -89,7 +89,7 @@ namespace clsn::ui
 
     auto ui_manager::install_theme(const std::string& themeName) -> bool
     {
-        return m_skin->installThemeByName(themeName);
+        return m_skin->install_theme_by_name(themeName);
     }
 
     auto ui_manager::add_theme_changed_listener(event_listener<empty_event> listener) -> int

@@ -2,7 +2,7 @@
 
 namespace clsn::ui
 {
-    auto ui_skin::installThemeByName(const std::string& name) -> bool
+    auto ui_skin::install_theme_by_name(const std::string& name) -> bool
     {
         auto it = m_theme_factories_by_name.find(name);
         if (it == m_theme_factories_by_name.end())

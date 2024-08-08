@@ -57,7 +57,7 @@ namespace clsn::ui
                 make_factory<ui_theme, UIThemeConcreteType>());
         }
 
-        auto installThemeByName(const std::string& name) -> bool;
+        auto install_theme_by_name(const std::string& name) -> bool;
 
         auto get_color(std::string_view section_name, std::string_view name) -> const color&;
         auto get_dimension(std::string_view section_name, std::string_view name) -> const dimension&;

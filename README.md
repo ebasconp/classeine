@@ -50,9 +50,9 @@ the creation of rich user interfaces in modern C++.
     * `ui_manager`
       * `ui_skin` - Loadable set of renderers, themes and defaults for the UI controls.
       * `ui_theme` - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.
-        * `AmatistaUITheme` - Set of specific set of colors
-          * `LightAmatistaUITheme` - Light theme
-          * `DarkAmatistaUITheme` - Dark theme
+        * `amatista_ui_theme` - Set of specific set of colors
+          * `light_amatista_ui_theme` - Light theme
+          * `dark_amatista_ui_theme` - Dark theme
     * `window`
       * `main_window`
   * `graphics` - abstraction to rendering backend
