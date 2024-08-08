@@ -1,9 +1,9 @@
 # CHANGELOG #
 
-* 20240806 FlowContainer
-* 20240731 Created DualContainer
+* 20240806 flow_container
+* 20240731 Created dual_container
 * 20240729 Moved do_layout() from IRenderer to control
-* 20240726 Added isValidControl() in ListContainer
+* 20240726 Added isValidControl() in list_container
 * 20240724 Moved texture to graphics
 * 20240723 Painting on a texture instead of default surface
 * 20240722 Support for hovering
@@ -13,7 +13,7 @@
 * 20240715 Added UITheme and implemented Light and Dark themes
 * 20240710 Added UISkin and DefaultUISkin
 * 20240710 Improved label rendering
-* 20240701 Added XYContainer
+* 20240701 Added xy_container
 * 20240627 Improved radio_button renderer
 * 20240626 Added radio_button
 * 20240625 Added check_box rendering

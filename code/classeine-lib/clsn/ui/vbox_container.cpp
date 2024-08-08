@@ -1,13 +1,13 @@
-#include "VBoxContainer.h"
+#include "vbox_container.h"
 
 namespace clsn::ui
 {
-    VBoxContainer::VBoxContainer()
-    : ListContainer("VBoxContainer")
+    vbox_container::vbox_container()
+    : list_container("vbox_container")
     {
     }
 
-    void VBoxContainer::do_layout()
+    void vbox_container::do_layout()
     {
         const auto visibleCount = get_visible_count();
         if (visibleCount == 0)
@@ -19,7 +19,7 @@ namespace clsn::ui
 
         const auto position = get_actual_position();
 
-        const auto count = getCount();
+        const auto count = get_count();
         for (int i = 0, visibleSlot = 0; i < count; i++)
         {
             auto& control = (*this)[i];

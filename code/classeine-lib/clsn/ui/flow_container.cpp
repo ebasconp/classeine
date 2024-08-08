@@ -1,13 +1,13 @@
-#include "FlowContainer.h"
+#include "flow_container.h"
 
 namespace clsn::ui
 {
-    FlowContainer::FlowContainer()
-    : ListContainer("FlowContainer")
+    flow_container::flow_container()
+    : list_container("flow_container")
     {
     }
 
-    void FlowContainer::do_layout()
+    void flow_container::do_layout()
     {
         const auto visibleCount = get_visible_count();
         if (visibleCount == 0)

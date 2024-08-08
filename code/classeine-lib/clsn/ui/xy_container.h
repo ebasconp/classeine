@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ListContainer.h"
+#include "list_container.h"
 
 #include "clsn/draw/point.h"
 
@@ -8,10 +8,10 @@ namespace clsn::ui
 {
     using clsn::core::empty;
 
-    class XYContainer : public ListContainer<point>
+    class xy_container : public list_container<point>
     {
     public:
-        XYContainer();
+        xy_container();
 
         void do_layout() override;
     };

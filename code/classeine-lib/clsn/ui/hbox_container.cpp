@@ -1,13 +1,13 @@
-#include "HBoxContainer.h"
+#include "hbox_container.h"
 
 namespace clsn::ui
 {
-    HBoxContainer::HBoxContainer()
-    : ListContainer("HBoxContainer")
+    hbox_container::hbox_container()
+    : list_container("hbox_container")
     {
     }
 
-    void HBoxContainer::do_layout()
+    void hbox_container::do_layout()
     {
         const auto visibleCount = get_visible_count();
         if (visibleCount == 0)
@@ -19,7 +19,7 @@ namespace clsn::ui
 
         const auto position = get_actual_position();
 
-        const auto count = getCount();
+        const auto count = get_count();
         for (int i = 0, visibleSlot = 0; i < count; i++)
         {
             auto& control = (*this)[i];

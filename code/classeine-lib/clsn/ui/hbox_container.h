@@ -1,15 +1,15 @@
 #pragma once
 
-#include "ListContainer.h"
+#include "list_container.h"
 
 namespace clsn::ui
 {
     using clsn::core::empty;
 
-    class FlowContainer : public ListContainer<empty>
+    class hbox_container : public list_container<empty>
     {
     public:
-        FlowContainer();
+        hbox_container();
 
         void do_layout() override;
     };

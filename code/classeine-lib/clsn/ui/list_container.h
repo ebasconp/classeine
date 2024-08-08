@@ -10,33 +10,33 @@
 namespace clsn::ui
 {
     template <typename Constraint>
-    class ListContainer : public control
+    class list_container : public control
     {
     public:
-        struct ControlAndConstraint
+        struct control_and_constraint
         {
             std::shared_ptr<control> m_control;
             Constraint m_constraint;
         };
 
     private:
-        std::vector<ControlAndConstraint> m_controls;
-        mutable bool m_needsToPaintTheContainer;
+        std::vector<control_and_constraint> m_controls;
+        mutable bool m_needs_to_paint_the_container;
 
     public:
-        explicit ListContainer(std::string_view section_name)
+        explicit list_container(std::string_view section_name)
         : control{section_name}
-        , m_needsToPaintTheContainer{false}
+        , m_needs_to_paint_the_container{false}
         {
-            loadContainerDefaults();
-            initListContainerEvents();
+            load_container_defaults();
+            init_list_container_events();
         }
 
         template <typename ControlType, typename... Args>
-        std::shared_ptr<ControlType> makeAndAdd(Args&&... args)
+        std::shared_ptr<ControlType> make_and_add(Args&&... args)
         {
             Constraint constraint{std::forward<Args>(args)...};
-            checkIfValidBeforeAdding(constraint);
+            check_if_valid_before_adding(constraint);
 
             auto ptr = std::make_shared<ControlType>();
             ptr->set_parent_window(get_parent_window());
@@ -45,24 +45,24 @@ namespace clsn::ui
             return ptr;
         }
 
-        int getCount() const noexcept
+        int get_count() const noexcept
         {
             return static_cast<int>(m_controls.size());
         }
 
-        auto getControlAndConstraintAt(int index) -> ControlAndConstraint&
+        auto get_control_and_constraint_at(int index) -> control_and_constraint&
         {
             return m_controls[index];
         }
 
-        auto getControlAndConstraintAt(int index) const -> const ControlAndConstraint&
+        auto get_control_and_constraint_at(int index) const -> const control_and_constraint&
         {
             return m_controls[index];
         }
 
         auto get_visible_count() const -> int
         {
-            int count = getCount();
+            int count = get_count();
             int visibleCount = 0;
             for (int i = 0; i < count; i++)
             {
@@ -73,7 +73,7 @@ namespace clsn::ui
             return visibleCount;
         }
 
-        auto getVisibleControls() const
+        auto get_visible_controls() const
             -> std::vector<std::shared_ptr<const control>>
         {
             std::vector<std::shared_ptr<const control>> controls;
@@ -97,7 +97,7 @@ namespace clsn::ui
             return *(m_controls[index].m_control);
         }
 
-        auto getConstraintAt(int index) const -> const Constraint&
+        auto get_constraint_at(int index) const -> const Constraint&
         {
             return m_controls[index].m_constraint;
         }
@@ -122,30 +122,30 @@ namespace clsn::ui
 
         void invalidate() const noexcept override
         {
-            m_needsToPaintTheContainer = true;
+            m_needs_to_paint_the_container = true;
 
-            int count = getCount();
+            int count = get_count();
             for (int i = 0; i < count; i++)
                 m_controls[i].m_control->invalidate();
         }
 
         void validate() const noexcept override
         {
-            m_needsToPaintTheContainer = false;
+            m_needs_to_paint_the_container = false;
 
-            int count = getCount();
+            int count = get_count();
             for (int i = 0; i < count; i++)
                 m_controls[i].m_control->validate();
         }
 
-        auto needsToPaintTheContainer() const noexcept -> bool
+        auto needs_to_paint_the_container() const noexcept -> bool
         {
-            return m_needsToPaintTheContainer;
+            return m_needs_to_paint_the_container;
         }
 
         auto is_invalidated() const noexcept -> bool override
         {
-            int count = getCount();
+            int count = get_count();
             for (int i = 0; i < count; i++)
                 if (m_controls[i].m_control->is_invalidated())
                     return true;
@@ -157,7 +157,7 @@ namespace clsn::ui
         {
             control::load_defaults();
 
-            loadContainerDefaults();
+            load_container_defaults();
 
             for (auto& e : m_controls)
             {
@@ -168,7 +168,7 @@ namespace clsn::ui
         auto get_control_by_position(const point &point) const
     -> std::optional<std::reference_wrapper<const control>> override
         {
-            const auto count = getCount();
+            const auto count = get_count();
             for (int i = 0; i < count; i++)
             {
                 auto& control = (*this)[i];
@@ -184,14 +184,14 @@ namespace clsn::ui
         }
 
     protected:
-        virtual void checkIfValidBeforeAdding(const Constraint&) const
+        virtual void check_if_valid_before_adding(const Constraint&) const
         {
             // Do nothing here
         }
 
         void process_mouse_click_event(events::MouseClickEvent& e) override
         {
-            const auto count = getCount();
+            const auto count = get_count();
             for (int i = 0; i < count; i++)
             {
                 auto& control = (*this)[i];
@@ -211,7 +211,7 @@ namespace clsn::ui
         {
             control::process_mouse_moved_event(e);
 
-            const auto count = getCount();
+            const auto count = get_count();
             for (int i = 0; i < count; i++)
             {
                 auto& control = (*this)[i];
@@ -226,7 +226,7 @@ namespace clsn::ui
         }
 
     private:
-        void initListContainerEvents()
+        void init_list_container_events()
         {
             add_actual_size_changed_listener(
                 [this](auto& )
@@ -236,7 +236,7 @@ namespace clsn::ui
         }
 
 
-        void loadContainerDefaults()
+        void load_container_defaults()
         {
             auto& uiManager = clsn::ui::UIManager::getInstance();
             auto section_name = get_default_section_name();
@@ -253,7 +253,7 @@ namespace clsn::ui
         {
             add_enabled_changed_listener([this](auto& e)
             {
-                const auto count = getCount();
+                const auto count = get_count();
                 for (int i = 0; i < count; i++)
                 {
                     auto& control = (*this)[i];

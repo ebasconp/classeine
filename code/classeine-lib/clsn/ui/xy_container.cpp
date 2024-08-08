@@ -1,13 +1,13 @@
-#include "XYContainer.h"
+#include "xy_container.h"
 
 namespace clsn::ui
 {
-    XYContainer::XYContainer()
-    : ListContainer("XYContainer")
+    xy_container::xy_container()
+    : list_container("xy_container")
     {
     }
 
-    void XYContainer::do_layout()
+    void xy_container::do_layout()
     {
         const auto visibleCount = get_visible_count();
         if (visibleCount == 0)

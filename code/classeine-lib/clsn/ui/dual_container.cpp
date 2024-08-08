@@ -1,39 +1,39 @@
-#include "DualContainer.h"
+#include "dual_container.h"
 
 #include "clsn/core/system.h"
 
 namespace clsn::ui
 {
-    DualContainer::DualContainer()
-    : ListContainer<DualContainerConstraint>{"DualContainer"}
-    , m_orientation{DualContainerOrientation::vertical}
+    dual_container::dual_container()
+    : list_container<dual_container_constraint>{"dual_container"}
+    , m_orientation{dual_container_orientation::vertical}
     {
     }
 
 
-    auto DualContainer::getOrientation() const -> DualContainerOrientation
+    auto dual_container::get_orientation() const -> dual_container_orientation
     {
         return m_orientation;
     }
 
 
-    void DualContainer::setOrientation(DualContainerOrientation orientation)
+    void dual_container::set_orientation(dual_container_orientation orientation)
     {
         m_orientation = orientation;
     }
 
 
-    void DualContainer::checkIfValidBeforeAdding(const DualContainerConstraint& constraint) const
+    void dual_container::check_if_valid_before_adding(const dual_container_constraint& constraint) const
     {
-        if (getCount() == 2)
+        if (get_count() == 2)
             system::panic("Dual container can only contain two elements");
 
-        if (getCount() == 1 && constraint == getConstraintAt(0))
+        if (get_count() == 1 && constraint == get_constraint_at(0))
             system::panic("Both controls must have different constraints");
     }
 
 
-    void DualContainer::do_layout()
+    void dual_container::do_layout()
     {
         const auto visibleCount = get_visible_count();
         if (visibleCount == 0)
@@ -44,24 +44,24 @@ namespace clsn::ui
 
         switch (m_orientation)
         {
-            case DualContainerOrientation::horizontal:
+            case dual_container_orientation::horizontal:
                 doLayoutHorizontal(position, size);
                 break;
 
-            case DualContainerOrientation::vertical:
+            case dual_container_orientation::vertical:
                 doLayoutVertical(position, size);
                 break;
         }
     }
 
-    void DualContainer::doLayoutVertical(const point& position, const dimension& size)
+    void dual_container::doLayoutVertical(const point& position, const dimension& size)
     {
-        const auto count = getCount();
+        const auto count = get_count();
         if (count == 1)
         {
-            auto& cc = getControlAndConstraintAt(0);
+            auto& cc = get_control_and_constraint_at(0);
 
-            auto ch = cc.m_constraint == DualContainerConstraint::use_all_available_space
+            auto ch = cc.m_constraint == dual_container_constraint::use_all_available_space
                 ? size.get_height()
                 : cc.m_control->get_actual_preferred_size().get_height();
 
@@ -72,10 +72,10 @@ namespace clsn::ui
 
         if (count == 2)
         {
-            auto& cc0 = getControlAndConstraintAt(0);
-            auto& cc1 = getControlAndConstraintAt(1);
+            auto& cc0 = get_control_and_constraint_at(0);
+            auto& cc1 = get_control_and_constraint_at(1);
 
-            auto c0h = cc0.m_constraint == DualContainerConstraint::use_all_available_space
+            auto c0h = cc0.m_constraint == dual_container_constraint::use_all_available_space
                             ? size.get_height() - cc1.m_control->get_actual_preferred_size().get_height()
                             : cc0.m_control->get_actual_preferred_size().get_height();
 
@@ -90,14 +90,14 @@ namespace clsn::ui
     }
 
 
-    void DualContainer::doLayoutHorizontal(const point& position, const dimension& size)
+    void dual_container::doLayoutHorizontal(const point& position, const dimension& size)
     {
-        const auto count = getCount();
+        const auto count = get_count();
         if (count == 1)
         {
-            auto& cc = getControlAndConstraintAt(0);
+            auto& cc = get_control_and_constraint_at(0);
 
-            auto cw = cc.m_constraint == DualContainerConstraint::use_all_available_space
+            auto cw = cc.m_constraint == dual_container_constraint::use_all_available_space
                 ? size.get_width()
                 : cc.m_control->get_actual_preferred_size().get_width();
 
@@ -108,10 +108,10 @@ namespace clsn::ui
 
         if (count == 2)
         {
-            auto& cc0 = getControlAndConstraintAt(0);
-            auto& cc1 = getControlAndConstraintAt(1);
+            auto& cc0 = get_control_and_constraint_at(0);
+            auto& cc1 = get_control_and_constraint_at(1);
 
-            auto c0w = cc0.m_constraint == DualContainerConstraint::use_all_available_space
+            auto c0w = cc0.m_constraint == dual_container_constraint::use_all_available_space
                             ? size.get_width() - cc1.m_control->get_actual_preferred_size().get_width()
                             : cc0.m_control->get_actual_preferred_size().get_width();
 

@@ -6,9 +6,9 @@ namespace clsn::ui::renderers
                                   const region& region,
                                   const control& baseControl) const
     {
-        auto& container = static_cast<const XYContainer&>(baseControl);
+        auto& container = static_cast<const xy_container&>(baseControl);
 
-        if (container.needsToPaintTheContainer())
+        if (container.needs_to_paint_the_container())
         {
             graphics.setDrawColor(baseControl.get_actual_background_color());
             graphics.drawFillRectangle(region);

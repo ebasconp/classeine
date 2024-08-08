@@ -27,7 +27,7 @@ namespace clsn::ui::renderers
                 return;
             }
 
-            const auto count = container.getCount();
+            const auto count = container.get_count();
             for (int i = 0; i < count; i++)
             {
                 auto& control = container[i];
