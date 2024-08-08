@@ -4,7 +4,7 @@
 
 namespace clsn::ui::amatista
 {
-    void AmatistaUITheme::populateDefaults()
+    void AmatistaUITheme::populate_defaults()
     {
         add("", "bevelUpColor", getBevelUpColor());
         add("", "bevelDownColor", getBevelDownColor());

@@ -8,13 +8,13 @@
 namespace clsn::core
 {
     template <typename T>
-    class Lazy final : public entity
+    class lazy final : public entity
     {
         mutable std::optional<T> m_instance;
         std::function<T ()> m_factory;
 
     public:
-        explicit Lazy(std::function<T()> factory)
+        explicit lazy(std::function<T()> factory)
         : m_factory{factory}
         {
         }

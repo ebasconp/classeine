@@ -43,9 +43,9 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/radio_button_group.cpp
         code/classeine-lib/clsn/ui/toggle_button.cpp
         code/classeine-lib/clsn/ui/toggle_control.cpp
-        code/classeine-lib/clsn/ui/UIManager.cpp
-        code/classeine-lib/clsn/ui/UISkin.cpp
-        code/classeine-lib/clsn/ui/UITheme.cpp
+        code/classeine-lib/clsn/ui/ui_manager.cpp
+        code/classeine-lib/clsn/ui/ui_skin.cpp
+        code/classeine-lib/clsn/ui/ui_theme.cpp
         code/classeine-lib/clsn/ui/vbox_container.cpp
         code/classeine-lib/clsn/ui/window.cpp
         code/classeine-lib/clsn/ui/xy_container.cpp

@@ -1,5 +1,5 @@
 #include "control.h"
-#include "UIManager.h"
+#include "ui_manager.h"
 #include "window.h"
 
 #include "clsn/draw/region.h"
@@ -154,7 +154,7 @@ namespace clsn::ui
     auto control::get_renderer() -> IRenderer&
     {
         if (m_renderer == nullptr)
-            m_renderer = UIManager::getInstance().getRendererByControl(*this);
+            m_renderer = ui_manager::get_instance().get_renderer_by_control(*this);
 
         return *m_renderer.get();
     }
@@ -162,7 +162,7 @@ namespace clsn::ui
     auto control::get_renderer() const -> const IRenderer&
     {
         if (m_renderer == nullptr)
-            m_renderer = UIManager::getInstance().getRendererByControl(*this);
+            m_renderer = ui_manager::get_instance().get_renderer_by_control(*this);
 
         return *m_renderer.get();
     }
@@ -178,7 +178,7 @@ namespace clsn::ui
         if (color.has_value())
             return color.value();
 
-        return UIManager::getInstance().getColor(
+        return ui_manager::get_instance().get_color(
                     m_defaultSectionName, "controlBackgroundColor");
     }
 
@@ -188,7 +188,7 @@ namespace clsn::ui
         if (color.has_value())
             return color.value();
 
-        return UIManager::getInstance().getColor(
+        return ui_manager::get_instance().get_color(
                     m_defaultSectionName, "controlForegroundColor");
     }
 
@@ -198,7 +198,7 @@ namespace clsn::ui
         if (font.has_value())
             return font.value();
 
-        return UIManager::getInstance().get_font(m_defaultSectionName, "defaultFont");
+        return ui_manager::get_instance().get_font(m_defaultSectionName, "defaultFont");
     }
 
     auto control::get_actual_preferred_size() const -> const dimension&
@@ -207,7 +207,7 @@ namespace clsn::ui
         if (size.has_value())
             return size.value();
 
-        return UIManager::getInstance().getDimension(m_defaultSectionName, "preferredSize");
+        return ui_manager::get_instance().get_dimension(m_defaultSectionName, "preferredSize");
     }
 
 }

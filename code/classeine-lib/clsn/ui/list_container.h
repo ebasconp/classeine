@@ -1,7 +1,7 @@
 #pragma once
 
 #include "control.h"
-#include "UIManager.h"
+#include "ui_manager.h"
 
 #include "window.h"
 
@@ -238,13 +238,13 @@ namespace clsn::ui
 
         void load_container_defaults()
         {
-            auto& uiManager = clsn::ui::UIManager::getInstance();
+            auto& uiManager = clsn::ui::ui_manager::get_instance();
             auto section_name = get_default_section_name();
 
-            set_background_color(uiManager.getColor(
+            set_background_color(uiManager.get_color(
                 section_name, "containerBackgroundColor"));
 
-            set_foreground_color(uiManager.getColor(
+            set_foreground_color(uiManager.get_color(
                 section_name, "containerForegroundColor"));
         }
 

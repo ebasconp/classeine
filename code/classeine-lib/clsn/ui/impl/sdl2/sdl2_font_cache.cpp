@@ -1,6 +1,6 @@
 #include "sdl2_font_cache.h"
 
-#include "clsn/ui/UIManager.h"
+#include "clsn/ui/ui_manager.h"
 
 #include "clsn/draw/font_info.h"
 
@@ -12,8 +12,8 @@ namespace clsn::ui::impl::sdl2
         if (it != m_fonts.end())
             return *it->second;
 
-        auto& uim = UIManager::getInstance();
-        auto path = uim.getPathByFontInfo(font_info{font.get_name(), font.get_style()});
+        auto& uim = ui_manager::get_instance();
+        auto path = uim.get_path_by_font_info(font_info{font.get_name(), font.get_style()});
         if (path.empty())
             return std::nullopt;
 

@@ -4,7 +4,7 @@
 #include "clsn/draw/region.h"
 
 #include "clsn/ui/control.h"
-#include "clsn/ui/UIManager.h"
+#include "clsn/ui/ui_manager.h"
 
 
 namespace clsn::ui::renderers::LabelRendererHelpers
@@ -23,7 +23,7 @@ namespace clsn::ui::renderers::LabelRendererHelpers
 
         graphics.set_draw_color(control.is_enabled()
                               ? control.get_actual_foreground_color()
-                              : UIManager::getInstance().getColor(
+                              : ui_manager::get_instance().get_color(
                                     "Theme", "disabledForegroundColor")
                           );
 

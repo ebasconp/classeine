@@ -1,7 +1,7 @@
 #include "CheckBoxRenderer.h"
 
 #include "clsn/ui/check_box.h"
-#include "clsn/ui/UIManager.h"
+#include "clsn/ui/ui_manager.h"
 
 #include "clsn/draw/region.h"
 
@@ -16,7 +16,7 @@ namespace clsn::ui::renderers
 
         auto buttonColor = checkBox.is_pressed()
             ? color{192, 192, 192}
-            : UIManager::getInstance().getColor(section_name, "controlBackgroundColor");
+            : ui_manager::get_instance().get_color(section_name, "controlBackgroundColor");
 
         graphics.set_draw_color(buttonColor);
         graphics.draw_fill_rectangle(region);

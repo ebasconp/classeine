@@ -3,7 +3,7 @@
 #include "LabelRendererHelpers.h"
 
 #include "clsn/ui/control.h"
-#include "clsn/ui/UIManager.h"
+#include "clsn/ui/ui_manager.h"
 
 namespace clsn::ui::renderers
 {
@@ -16,7 +16,7 @@ namespace clsn::ui::renderers
 
         auto section_name = control.get_default_section_name();
 
-        auto bc = UIManager::getInstance().getColor(section_name, "containerBackgroundColor");
+        auto bc = ui_manager::get_instance().get_color(section_name, "containerBackgroundColor");
 
         graphics.set_draw_color(bc);
         graphics.draw_fill_rectangle(region);

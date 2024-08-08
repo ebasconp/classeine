@@ -1,15 +1,15 @@
 #pragma once
 
-#include "clsn/ui/UITheme.h"
+#include "clsn/ui/ui_theme.h"
 
 namespace clsn::ui::amatista
 {
-    class AmatistaUITheme : public UITheme
+    class AmatistaUITheme : public ui_theme
     {
     public:
         AmatistaUITheme() = default;
 
-        void populateDefaults() final;
+        void populate_defaults() final;
         
     protected:
         virtual auto getDefaultFont() const -> font;

@@ -1,6 +1,6 @@
 #include "window.h"
 
-#include "UIManager.h"
+#include "ui_manager.h"
 
 #include <iostream> //ETOTODO: REMOVE THIS
 
@@ -33,10 +33,10 @@ namespace clsn::ui
     void window::init_defaults()
     {
         //ETOTODO: MOVE THIS TO THE tHEME
-/*        setMinimumSize(UIManager::getInstance().getDefault(
+/*        setMinimumSize(ui_manager::get_instance().getDefault(
             get_default_section_name(), "minimumSize", dimension{50, 50}));
 
-        auto& dimension = UIManager::getInstance().getDefault(
+        auto& dimension = ui_manager::get_instance().getDefault(
             get_default_section_name(), "size", dimension{300, 200});
 
         set_actual_size(dimension);*/

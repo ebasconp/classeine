@@ -2,7 +2,7 @@
 
 #include "clsn/ui/button.h"
 #include "clsn/ui/graphics.h"
-#include "clsn/ui/UIManager.h"
+#include "clsn/ui/ui_manager.h"
 
 #include "clsn/draw/region.h"
 
@@ -19,7 +19,7 @@ namespace
     {
         if (is_hovered)
         {
-            return UIManager::getInstance().getColor(button.get_default_section_name(), "controlHoveredBackgroundColor");
+            return ui_manager::get_instance().get_color(button.get_default_section_name(), "controlHoveredBackgroundColor");
         }
 
         return button.get_actual_background_color();
@@ -49,12 +49,12 @@ namespace clsn::ui::renderers
         const auto is_hovered = control.is_hovered();
 
         auto& unhoveredColor =
-            UIManager::getInstance().getColor(
+            ui_manager::get_instance().get_color(
                 control.get_default_section_name(), "controlBackgroundColor");
 
-        auto& bevelUp = is_hovered ? UIManager::getInstance().getColor(
+        auto& bevelUp = is_hovered ? ui_manager::get_instance().get_color(
             section_name, "bevelUpColor") : unhoveredColor;
-        auto& bevelDown = is_hovered ? UIManager::getInstance().getColor(
+        auto& bevelDown = is_hovered ? ui_manager::get_instance().get_color(
             section_name, "bevelDownColor") : unhoveredColor;
 
         constexpr int depth = 2;
@@ -72,7 +72,7 @@ namespace clsn::ui::renderers
                                a_region.get_height() - depth2};
 
         const auto& buttonColor = pressed
-            ? UIManager::getInstance().getColor("button", "pressedBackgroundColor")
+            ? ui_manager::get_instance().get_color("button", "pressedBackgroundColor")
             : getUltimateBackgroundColor(control, is_hovered);
 
         graphics.set_draw_color(buttonColor);

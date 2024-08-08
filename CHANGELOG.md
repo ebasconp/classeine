@@ -10,8 +10,8 @@
 * 20240720 Renamed default skin to Amatista
 * 20240718 Created base DefaultUITheme
 * 20240716 Added support for dynamically change theme
-* 20240715 Added UITheme and implemented Light and Dark themes
-* 20240710 Added UISkin and DefaultUISkin
+* 20240715 Added ui_theme and implemented Light and Dark themes
+* 20240710 Added ui_skin and DefaultUISkin
 * 20240710 Improved label rendering
 * 20240701 Added xy_container
 * 20240627 Improved radio_button renderer

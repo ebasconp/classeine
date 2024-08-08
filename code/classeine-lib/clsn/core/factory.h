@@ -6,13 +6,13 @@
 namespace clsn::core
 {
     template <typename BaseType>
-    class Factory
+    class factory
     {
         std::function<std::unique_ptr<BaseType>()> m_factory;
 
     public:
         template <typename DerivedType>
-        Factory& set()
+        factory& set()
         {
             m_factory = []() { return std::make_unique<DerivedType>(); };
             return *this;
@@ -26,9 +26,9 @@ namespace clsn::core
 
 
     template <typename BaseType, typename DerivedType>
-    Factory<BaseType> makeFactory()
+    factory<BaseType> make_factory()
     {
-        auto factory = Factory<BaseType>{};
-        return factory.template set<DerivedType>();
+        auto a_factory = factory<BaseType>{};
+        return a_factory.template set<DerivedType>();
     }
 }

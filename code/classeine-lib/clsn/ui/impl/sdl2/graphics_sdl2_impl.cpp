@@ -2,7 +2,7 @@
 
 #include "sdl2_helpers.h"
 
-#include "clsn/ui/UIManager.h"
+#include "clsn/ui/ui_manager.h"
 
 #include "clsn/draw/font.h"
 #include "clsn/draw/point.h"

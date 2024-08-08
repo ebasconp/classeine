@@ -23,7 +23,7 @@ namespace clsn::ui
             init_size();
             load_window_defaults();
 
-            UIManager::getInstance().addThemeChangedListener([this](auto&)
+            ui_manager::get_instance().add_theme_changed_listener([this](auto&)
             {
                 update_theme();
             });
@@ -92,7 +92,7 @@ namespace clsn::ui
 
         void init_size()
         {
-            //auto& dimension = UIManager::getInstance().getDefault(
+            //auto& dimension = ui_manager::get_instance().getDefault(
             //                "main_window", "size", dimension{300, 200});
             //ETOTODO: MOVE THIS TO THE THEME
 

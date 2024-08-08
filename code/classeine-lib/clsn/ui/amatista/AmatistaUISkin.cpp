@@ -30,22 +30,22 @@ namespace
 
     void loadRenderers(amatista::AmatistaUISkin& skin)
     {
-        skin.makeRendererAndAdd<button, ButtonRenderer>();
-        skin.makeRendererAndAdd<check_box, CheckBoxRenderer>();
-        skin.makeRendererAndAdd<dual_container, DualContainerRenderer>();
-        skin.makeRendererAndAdd<flow_container, FlowContainerRenderer>();
-        skin.makeRendererAndAdd<hbox_container, HBoxContainerRenderer>();
-        skin.makeRendererAndAdd<label, LabelRenderer>();
-        skin.makeRendererAndAdd<radio_button, RadioButtonRenderer>();
-        skin.makeRendererAndAdd<toggle_button, ToggleButtonRenderer>();
-        skin.makeRendererAndAdd<vbox_container, VBoxContainerRenderer>();
-        skin.makeRendererAndAdd<xy_container, XYContainerRenderer>();
+        skin.make_renderer_and_add<button, ButtonRenderer>();
+        skin.make_renderer_and_add<check_box, CheckBoxRenderer>();
+        skin.make_renderer_and_add<dual_container, DualContainerRenderer>();
+        skin.make_renderer_and_add<flow_container, FlowContainerRenderer>();
+        skin.make_renderer_and_add<hbox_container, HBoxContainerRenderer>();
+        skin.make_renderer_and_add<label, LabelRenderer>();
+        skin.make_renderer_and_add<radio_button, RadioButtonRenderer>();
+        skin.make_renderer_and_add<toggle_button, ToggleButtonRenderer>();
+        skin.make_renderer_and_add<vbox_container, VBoxContainerRenderer>();
+        skin.make_renderer_and_add<xy_container, XYContainerRenderer>();
     }
 
     void loadThemes(amatista::AmatistaUISkin& skin)
     {
-        skin.makeThemeAndAdd<amatista::LightAmatistaUITheme>("light");
-        skin.makeThemeAndAdd<amatista::DarkAmatistaUITheme>("dark");
+        skin.make_theme_and_add<amatista::LightAmatistaUITheme>("light");
+        skin.make_theme_and_add<amatista::DarkAmatistaUITheme>("dark");
 
         skin.installThemeByName("dark");
     }

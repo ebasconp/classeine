@@ -47,9 +47,9 @@ the creation of rich user interfaces in modern C++.
       * `hbox_container` - Container where the controls are rendered horizontally
       * `vbox_container` - Container where the controls are rendered vertically
       * `xy_container` - Container where the controls are placed in specific coordinates in the given region.
-    * `UIManager`
-      * `UISkin` - Loadable set of renderers, themes and defaults for the UI controls.
-      * `UITheme` - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.
+    * `ui_manager`
+      * `ui_skin` - Loadable set of renderers, themes and defaults for the UI controls.
+      * `ui_theme` - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.
         * `AmatistaUITheme` - Set of specific set of colors
           * `LightAmatistaUITheme` - Light theme
           * `DarkAmatistaUITheme` - Dark theme

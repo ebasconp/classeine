@@ -10,7 +10,7 @@
 
 namespace clsn::ui
 {
-    using UIManagerDefaults = clsn::core::configuration<clsn::draw::color,
+    using ui_manager_defaults = clsn::core::configuration<clsn::draw::color,
                                                         clsn::draw::dimension,
                                                         clsn::draw::font>;
 }

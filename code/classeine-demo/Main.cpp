@@ -47,7 +47,7 @@ void test()
     console::debug(f3, s, n);
     console::println("Hello world");
 
-    UIManager::getInstance().installTheme("light");
+    ui_manager::get_instance().install_theme("light");
 
     main_window<vbox_container> mw;
 
@@ -127,11 +127,11 @@ void test()
     b1xy->set_background_color(colors::make_red());
     b1xy->add_action_listener([&b1xy](auto& )
     {
-        auto& themeName = UIManager::getInstance().getCurrentThemeName();
+        auto& themeName = ui_manager::get_instance().get_current_theme_name();
 
         b1xy->set_text(themeName);
         auto newThemeName = themeName == "dark" ? "light" : "dark";
-        UIManager::getInstance().installTheme(newThemeName);
+        ui_manager::get_instance().install_theme(newThemeName);
     });
 
     auto b2xy = xy->make_and_add<button>(point{200, 10});
@@ -150,11 +150,11 @@ void test()
 
 int main()
 {
-    clsn::ui::UIManager::init();
+    clsn::ui::ui_manager::init();
 
     test();
 
-    clsn::ui::UIManager::finalize();
+    clsn::ui::ui_manager::finalize();
 
     clsn::core::entity::dump();
 
