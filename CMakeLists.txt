@@ -14,9 +14,19 @@ find_package(SDL2_gfx REQUIRED)
 
 include_directories(${SDL2_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS} ${SDL2_GFX_INCLUDE_DIRS})
 
+if (WIN32)
+    add_compile_definitions(_CLSN_DEFAULT_FONT_PATH_="c:/windows/fonts/calibri.ttf")
+else ()
+    add_compile_definitions(_CLSN_DEFAULT_FONT_PATH_="/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf")
+endif()
+
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_compile_definitions(_CLSN_DEBUG_)
-    add_compile_options(-Wall -Werror -Wunused-parameter -pedantic)
+    if (WIN32)
+        add_compile_options(/W4 /WX /permissive-)
+    else ()
+        add_compile_options(-Wall -Werror -Wunused-parameter -pedantic)
+    endif()
 endif()
 
 add_executable(classeine code/classeine-demo/Main.cpp

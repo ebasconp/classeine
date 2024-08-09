@@ -19,10 +19,10 @@ namespace clsn::ui::impl::sdl2::sdl2_helpers
     SDL_Color to_sdl(const color& color)
     {
         SDL_Color c;
-        c.a = color.get_alpha();
-        c.r = color.get_red();
-        c.g = color.get_green();
-        c.b = color.get_blue();
+        c.a = static_cast<Uint8>(color.get_alpha());
+        c.r = static_cast<Uint8>(color.get_red());
+        c.g = static_cast<Uint8>(color.get_green());
+        c.b = static_cast<Uint8>(color.get_blue());
 
         return c;
     }

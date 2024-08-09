@@ -12,7 +12,9 @@
 
 #include "clsn/core/system.h"
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
+#undef main
+
 #include <SDL_ttf.h>
 
 namespace clsn::ui::impl::sdl2
