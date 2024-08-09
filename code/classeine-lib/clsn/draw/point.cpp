@@ -1,5 +1,9 @@
 #include "point.h"
 
+#include <string>
+
+#include "clsn/core/strings.h"
+
 namespace clsn::draw
 {
     point::point()
@@ -20,5 +24,10 @@ namespace clsn::draw
     auto point::operator==(const point& other) const -> bool
     {
         return m_x == other.m_x && m_y == other.m_y;
+    }
+
+    auto point::to_string() const -> std::string
+    {
+        return clsn::core::strings::format("Point: [{}, {}]", m_x, m_y);
     }
 }

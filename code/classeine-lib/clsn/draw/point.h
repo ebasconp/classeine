@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 
 namespace clsn::draw
 {
@@ -16,5 +17,7 @@ namespace clsn::draw
         [[nodiscard]] auto get_y() const noexcept -> int;
 
         auto operator==(const point& other) const -> bool;
+
+        auto to_string() const -> std::string;
     };
 }

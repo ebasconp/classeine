@@ -52,17 +52,15 @@ namespace clsn::ui::renderers
             ui_manager::get_instance().get_color(
                 control.get_default_section_name(), "controlBackgroundColor");
 
-        auto& bevelUp = is_hovered ? ui_manager::get_instance().get_color(
+        const auto& color = is_hovered ? ui_manager::get_instance().get_color(
             section_name, "bevelUpColor") : unhoveredColor;
-        auto& bevelDown = is_hovered ? ui_manager::get_instance().get_color(
-            section_name, "bevelDownColor") : unhoveredColor;
 
         constexpr int depth = 2;
 
         const bool pressed = paint_as_pressed(control);
 
-        border_renderer_helpers::drawFlatBorder(
-            graphics, a_region, bevelUp, bevelDown, depth, !pressed);
+        border_renderer_helpers::draw_flat_border(
+            graphics, a_region, color, depth);
 
         constexpr int depth2 = depth * 2;
 

@@ -5,6 +5,7 @@
 
 #include "clsn/draw/colors.h"
 
+#include "clsn/ui/border_control.h"
 #include "clsn/ui/button.h"
 #include "clsn/ui/check_box.h"
 #include "clsn/ui/dual_container.h"
@@ -46,6 +47,7 @@ void test()
     console::println(f2, s, n);
     console::debug(f3, s, n);
     console::println("Hello world");
+    console::debug("{}", A{});
 
     ui_manager::get_instance().install_theme("light");
 
@@ -96,8 +98,14 @@ void test()
     group.add(rb2);
     group.add(rb3);
 
-    auto b3 = c2->make_and_add<button>();
-    b3->set_text("b3");
+    auto b3 = c2->make_and_add<border_control<button>>();
+    b3->get().set_text("b3");
+    b3->set_foreground_color(colors::make_cyan());
+    b3->get().add_action_listener([&b3](auto&)
+    {
+        auto new_size = (b3->get_size() + 1) % 10;
+        b3->set_size(new_size);
+    });
 
     auto b4 = c2->make_and_add<check_box>();
     b4->set_text("check_box");

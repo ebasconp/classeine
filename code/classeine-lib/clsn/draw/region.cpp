@@ -43,10 +43,16 @@ namespace clsn::draw
 
     auto region::contains_point(const point& p) const noexcept -> bool
     {
-        auto px = p.get_x();
-        auto py = p.get_y();
+        const auto px = p.get_x();
+        const auto py = p.get_y();
 
-        return px > get_x() && px < get_x() + get_width()
-            && py > get_y() && py < get_y() + get_height();
+        const auto tx = get_x();
+        const auto ty = get_y();
+
+        const auto height = get_height();
+        const auto width = get_width();
+
+        return px > tx && px < (tx + width)
+            && py > ty && py < (ty + height);
     }
 }

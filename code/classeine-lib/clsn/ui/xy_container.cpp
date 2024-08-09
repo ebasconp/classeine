@@ -22,6 +22,7 @@ namespace clsn::ui
 
             control.set_actual_position({position.get_x() + constraint.get_x(), position.get_y() + constraint.get_y()});
             control.set_actual_size(control.get_actual_preferred_size());
+            control.do_layout();
         });
     }
 }

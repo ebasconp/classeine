@@ -8,8 +8,8 @@ namespace clsn::ui::amatista
     {
         add("", "bevelUpColor", get_bevel_up_color());
         add("", "bevelDownColor", get_bevel_down_color());
-        add("", "containerBackgroundColor", get_container_background_color());
-        add("", "containerForegroundColor", get_container_foreground_color());
+        add("", "container_background_color", get_container_background_color());
+        add("", "container_foreground_color", get_container_foreground_color());
         add("", "controlBackgroundColor", get_control_background_color());
         add("", "controlForegroundColor", get_control_foreground_color());
         add("", "controlHoveredBackgroundColor", get_control_hovered_background_color());

@@ -11,5 +11,7 @@ namespace clsn::ui::renderers
     class flow_container_renderer final : public container_renderer<flow_container>
     {
     public:
+        void paint(graphics& graphics, const region& region,
+                   const control& baseControl) const override;
     };
 }

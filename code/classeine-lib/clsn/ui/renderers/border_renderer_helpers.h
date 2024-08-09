@@ -12,17 +12,15 @@ namespace clsn::ui::renderers::border_renderer_helpers
 {
     using namespace clsn::draw;
 
-    void drawBeveledBorder(graphics& gr,
+    void draw_beveled_border(graphics& gr,
                            const region& region,
                            const color& a,
                            const color& b,
                            int depth,
                            bool up);
 
-    void drawFlatBorder(graphics& gr,
+    void draw_flat_border(graphics& gr,
                    const region& region,
-                   const color& a,
                    const color& b,
-                   int depth,
-                   bool up);
+                   int depth);
 }

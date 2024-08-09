@@ -9,28 +9,31 @@ namespace clsn::ui
 
     void hbox_container::do_layout()
     {
-        const auto visibleCount = get_visible_count();
-        if (visibleCount == 0)
+        const auto visible_count = get_visible_count();
+        if (visible_count == 0)
             return;
 
-        const auto width = get_actual_size().get_width() /
-                           static_cast<double>(visibleCount);
-        const auto height = get_actual_size().get_height();
+        const auto& actual_size = get_actual_size();
+        const auto width = actual_size.get_width() / visible_count;
+        const auto height = actual_size.get_height();
 
         const auto position = get_actual_position();
 
         const auto count = get_count();
-        for (int i = 0, visibleSlot = 0; i < count; i++)
+
+        int last_x = 0;
+        for (int i = 0; i < count; i++)
         {
             auto& control = (*this)[i];
             if (!control.is_visible())
                 continue;
 
-            control.set_actual_position(
-                {static_cast<int>((visibleSlot * width) + position.get_x()),
-                 position.get_y()});
-            control.set_actual_size({static_cast<int>(width), height});
-            visibleSlot++;
+            auto actual_width = i < count - 1 ? width : actual_size.get_width() - last_x;
+            control.set_actual_position({last_x + position.get_x(), position.get_y()});
+            control.set_actual_size({actual_width, height});
+            control.do_layout();
+
+            last_x += width;
         }
     }
 }

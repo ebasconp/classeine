@@ -2,8 +2,6 @@
 
 #include "radio_button.h"
 
-#include <iostream> //ETOTODO: REMOVE THIS
-
 namespace clsn::ui
 {
     void radio_button_group::add(std::shared_ptr<radio_button> a_radio_button)
