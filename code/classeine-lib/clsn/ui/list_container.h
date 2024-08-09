@@ -241,10 +241,10 @@ namespace clsn::ui
             auto section_name = get_default_section_name();
 
             set_background_color(uiManager.get_color(
-                section_name, "containerBackgroundColor"));
+                section_name, "container_background_color"));
 
             set_foreground_color(uiManager.get_color(
-                section_name, "containerForegroundColor"));
+                section_name, "container_foreground_color"));
         }
 
 

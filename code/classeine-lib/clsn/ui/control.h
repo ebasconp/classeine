@@ -109,7 +109,7 @@ namespace clsn::ui
 
         virtual void release_mouse();
 
-        void set_parent_window(std::optional<std::reference_wrapper<window>>);
+        virtual void set_parent_window(std::optional<std::reference_wrapper<window>>);
         auto get_parent_window() -> std::optional<std::reference_wrapper<window>>;
         auto get_parent_window() const -> std::optional<std::reference_wrapper<const window>>;
 

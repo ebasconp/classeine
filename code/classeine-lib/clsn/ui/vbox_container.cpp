@@ -30,6 +30,7 @@ namespace clsn::ui
             const auto actual_height = i < count - 1 ? height : actual_size.get_height() - last_y;
             control.set_actual_position({position.get_x(), last_y + position.get_y()});
             control.set_actual_size({width, actual_height});
+            control.do_layout();
 
             last_y += height;
         }

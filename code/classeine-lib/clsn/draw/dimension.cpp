@@ -1,5 +1,7 @@
 #include "dimension.h"
 
+#include "clsn/core/strings.h"
+
 namespace clsn::draw
 {
     dimension::dimension()
@@ -20,5 +22,11 @@ namespace clsn::draw
     auto dimension::operator==(const dimension& other) const noexcept -> bool
     {
         return m_width == other.m_width && m_height == other.m_height;
+    }
+
+    auto dimension::to_string() const -> std::string
+    {
+        return clsn::core::strings::format(
+            "Dimension: [W: {}, H: {}]", m_width, m_height);
     }
 }

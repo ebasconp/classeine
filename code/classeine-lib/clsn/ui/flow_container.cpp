@@ -50,6 +50,7 @@ namespace clsn::ui
                 control.set_actual_size(preferredSize);
             }
 
+            control.do_layout();
             currentx += controlWidth;
         });
     }

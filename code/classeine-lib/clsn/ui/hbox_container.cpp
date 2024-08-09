@@ -31,6 +31,7 @@ namespace clsn::ui
             auto actual_width = i < count - 1 ? width : actual_size.get_width() - last_x;
             control.set_actual_position({last_x + position.get_x(), position.get_y()});
             control.set_actual_size({actual_width, height});
+            control.do_layout();
 
             last_x += width;
         }

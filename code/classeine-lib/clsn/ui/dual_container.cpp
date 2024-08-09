@@ -67,6 +67,7 @@ namespace clsn::ui
 
             cc.m_control->set_actual_size({size.get_width(), ch});
             cc.m_control->set_actual_position(position);
+            cc.m_control->do_layout();
             return;
         }
 
@@ -86,6 +87,9 @@ namespace clsn::ui
 
             cc0.m_control->set_actual_position(position);
             cc1.m_control->set_actual_position({position.get_x(), position.get_y() + c0h});
+
+            cc0.m_control->do_layout();
+            cc1.m_control->do_layout();
         }
     }
 
@@ -103,6 +107,7 @@ namespace clsn::ui
 
             cc.m_control->set_actual_size({cw, size.get_height()});
             cc.m_control->set_actual_position(position);
+            cc.m_control->do_layout();
             return;
         }
 
@@ -122,6 +127,9 @@ namespace clsn::ui
 
             cc0.m_control->set_actual_position(position);
             cc1.m_control->set_actual_position({position.get_x() + c0w, position.get_y()});
+
+            cc0.m_control->do_layout();
+            cc1.m_control->do_layout();
         }
     }
 }

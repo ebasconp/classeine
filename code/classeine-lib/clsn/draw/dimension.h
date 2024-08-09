@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 namespace clsn::draw
 {
     class dimension final
@@ -15,5 +17,7 @@ namespace clsn::draw
         [[nodiscard]] auto get_height() const noexcept -> int;
 
         auto operator==(const dimension& other) const noexcept -> bool;
+
+        auto to_string() const -> std::string;
     };
 }

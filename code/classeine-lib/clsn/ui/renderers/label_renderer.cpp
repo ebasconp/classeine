@@ -16,7 +16,7 @@ namespace clsn::ui::renderers
 
         auto section_name = control.get_default_section_name();
 
-        auto bc = ui_manager::get_instance().get_color(section_name, "containerBackgroundColor");
+        auto bc = ui_manager::get_instance().get_color(section_name, "container_background_color");
 
         graphics.set_draw_color(bc);
         graphics.draw_fill_rectangle(region);
