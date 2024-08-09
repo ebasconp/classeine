@@ -35,7 +35,7 @@ namespace clsn::ui
     auto ui_skin::get_renderer_by_control(const clsn::ui::control& ctrl) const -> std::shared_ptr<renderer_base>
     {
         auto it = m_renderers_by_control_type.find(std::type_index(typeid(ctrl)));
-        if (it == nullptr)
+        if (it == m_renderers_by_control_type.end())
             return std::make_shared<null_renderer>();
 
         return it->second.get();

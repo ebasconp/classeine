@@ -33,7 +33,7 @@ namespace clsn::ui
 
         void process_mouse_click_event(events::mouse_click_event& e) override
         {
-            console::debug("Point: [{}]; InnerControl: [POS: {} SIZE: {}]",
+            console::debug("[{}]; InnerControl: [POS: {} SIZE: {}]",
                 e.getPoint(),
                 m_inner_control.get_actual_position(),
                 m_inner_control.get_actual_size());
@@ -60,7 +60,6 @@ namespace clsn::ui
 
             if (m_inner_control.contains_point(e.position))
             {
-                console::debug("m_inner_control inside");
                 m_inner_control.notify_mouse_moved_event(e);
             }
         }

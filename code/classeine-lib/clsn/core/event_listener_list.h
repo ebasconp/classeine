@@ -22,7 +22,7 @@ namespace clsn::core
         {
             m_listeners.emplace_back(callback, true);
 
-            return m_listeners.size() - 1;
+            return static_cast<int>(m_listeners.size()) - 1;
         }
 
         void notify(EventType& e)

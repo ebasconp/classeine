@@ -95,7 +95,7 @@ namespace clsn::core::strings
                 system::panic("Invalid index. Index higher than number of values");
 
             os << values[*arg_index];
-            i = closing_idx;
+            i = static_cast<int>(closing_idx);
         }
     }
 }

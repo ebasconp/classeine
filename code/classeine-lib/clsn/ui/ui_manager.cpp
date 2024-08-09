@@ -47,8 +47,7 @@ namespace clsn::ui
     void ui_manager::populate_font_mappings()
     {
         add_font_mapping(
-            font_info{"Nimbus", font_style::regular},
-            "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf");
+            font_info{"Default", font_style::regular}, _CLSN_DEFAULT_FONT_PATH_);
     }
 
     void ui_manager::populate_defaults()

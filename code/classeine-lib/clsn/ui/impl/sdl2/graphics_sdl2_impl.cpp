@@ -2,16 +2,15 @@
 
 #include "sdl2_helpers.h"
 
-#include "clsn/ui/ui_manager.h"
-
 #include "clsn/draw/font.h"
 #include "clsn/draw/point.h"
 #include "clsn/draw/region.h"
 
 #include "clsn/core/system.h"
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL2_gfxPrimitives.h>
+#include <SDL.h>
+#undef main
+#include <SDL2_gfxPrimitives.h>
 
 #include <SDL_ttf.h>
 
@@ -24,7 +23,7 @@ namespace
         auto optionalRefFont = fontCache.get_font(font);
         if (!optionalRefFont.has_value())
         {
-            clsn::core::system::panic("font not found");
+            clsn::core::system::panic("Font not found: [{}]", font.get_name());
             return nullptr;
         }
 
@@ -86,6 +85,8 @@ namespace clsn::ui::impl::sdl2
 
     void graphics_sdl2_impl::create_texture(const dimension& newSize)
     {
+        using namespace clsn::core;
+
         using namespace std::string_literals;
 
         m_texture = SDL_CreateTexture(
@@ -111,7 +112,11 @@ namespace clsn::ui::impl::sdl2
         m_draw_color = c;
 
         SDL_SetRenderDrawColor(
-            &m_renderer, c.get_red(), c.get_green(), c.get_blue(), c.get_alpha());
+            &m_renderer,
+            static_cast<Uint8>(c.get_red()),
+            static_cast<Uint8>(c.get_green()),
+            static_cast<Uint8>(c.get_blue()),
+            static_cast<Uint8>(c.get_alpha()));
     }
 
     void graphics_sdl2_impl::clear() const
@@ -157,10 +162,18 @@ namespace clsn::ui::impl::sdl2
         auto rx = static_cast<const short>(r.get_width() / 2);
         auto ry = static_cast<const short>(r.get_height() / 2);
 
-        filledEllipseRGBA(&m_renderer, cx, cy, rx, ry,
-            m_draw_color.get_red(),
-            m_draw_color.get_green(),
-            m_draw_color.get_blue(), 255);
+        auto rs = filledEllipseRGBA(&m_renderer, cx, cy, rx, ry,
+            static_cast<Uint8>(m_draw_color.get_red()),
+            static_cast<Uint8>(m_draw_color.get_green()),
+            static_cast<Uint8>(m_draw_color.get_blue()),
+            255);
+
+        if (rs == -1)
+        {
+            clsn::core::console::debug(
+                "Error on graphics_sdl2_impl::draw_fill_circle: {}",
+                SDL_GetError());
+        }
 
         m_needs_to_apply = true;
     }

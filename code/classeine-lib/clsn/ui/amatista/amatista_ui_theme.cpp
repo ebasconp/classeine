@@ -24,7 +24,7 @@ namespace clsn::ui::amatista
 
     auto amatista_ui_theme::get_default_font() const -> font
     {
-        return font{"Nimbus", font_style::regular, 14};
+        return font{"Default", font_style::regular, 14};
     }
 
     auto amatista_ui_theme::get_button_preferred_size() const -> dimension

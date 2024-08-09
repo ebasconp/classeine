@@ -37,7 +37,7 @@ struct std::hash<clsn::draw::font>
 {
     auto operator()(const clsn::draw::font& font) const noexcept -> int
     {
-        return std::hash<std::string>{}(font.get_name()) * 31 +
-               static_cast<int>(font.get_style()) * 31 + font.get_size();
+        return static_cast<int>(std::hash<std::string>{}(font.get_name()) * 31 +
+               static_cast<int>(font.get_style()) * 31 + font.get_size());
     }
 };

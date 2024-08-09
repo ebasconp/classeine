@@ -34,5 +34,7 @@
 .idea/*
 cmake-build-debug/*
 cmake-build-debug-coverage/*
+cmake-build-debug-mingw/*
+cmake-build-debug-vs/*
 cmake-build-release/*
 
