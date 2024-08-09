@@ -2,7 +2,6 @@
 
 #include "ui_manager.h"
 
-#include <iostream> //ETOTODO: REMOVE THIS
 
 namespace
 {

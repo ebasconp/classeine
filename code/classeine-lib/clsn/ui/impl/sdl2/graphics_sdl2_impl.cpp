@@ -15,8 +15,6 @@
 
 #include <SDL_ttf.h>
 
-#include <iostream> //ETOTODO: TO REMOVE
-
 namespace
 {
     auto getFontFromCache(const clsn::draw::font& font,

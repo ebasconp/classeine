@@ -46,6 +46,7 @@ void test()
     console::println(f2, s, n);
     console::debug(f3, s, n);
     console::println("Hello world");
+    console::debug("{}", A{});
 
     ui_manager::get_instance().install_theme("light");
 

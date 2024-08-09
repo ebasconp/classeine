@@ -1,10 +1,10 @@
 #include "ui_manager.h"
 
+#include "clsn/core/console.h"
 #include "clsn/core/system.h"
 
 #include "amatista/amatista_ui_skin.h"
 
-#include <iostream> //ETOTODO: Remove
 
 namespace clsn::ui
 {
@@ -38,7 +38,7 @@ namespace clsn::ui
 
     ui_manager::ui_manager()
     {
-        std::cout << "ui_manager instantiated" << std::endl;
+        clsn::core::console::debug("ui_manager instantiated");
 
         populate_font_mappings();
         populate_defaults();
