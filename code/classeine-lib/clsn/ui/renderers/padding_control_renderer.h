@@ -2,8 +2,8 @@
 
 #include "border_renderer_helpers.h"
 
-#include "clsn/ui/border_control.h"
 #include "clsn/ui/graphics.h"
+#include "clsn/ui/padding_control.h"
 #include "clsn/ui/renderer_base.h"
 #include "clsn/ui/ui_manager.h"
 
@@ -12,7 +12,7 @@
 namespace clsn::ui
 {
     template <typename InnerControlType>
-    class border_control;
+    class padding_control;
 }
 
 
@@ -22,14 +22,14 @@ namespace clsn::ui::renderers
     using namespace clsn::ui;
 
     template <typename InnerControlType>
-    class border_control_renderer : public renderer_base
+    class padding_control_renderer : public renderer_base
     {
     public:
         void paint(graphics& graphics,
                const region& a_region,
                const control& base_control) const override
         {
-            auto& control = static_cast<const border_control<InnerControlType>&>(base_control);
+            auto& control = static_cast<const padding_control<InnerControlType>&>(base_control);
 
             const auto& bc = control.get_actual_foreground_color();
 

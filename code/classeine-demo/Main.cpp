@@ -5,7 +5,6 @@
 
 #include "clsn/draw/colors.h"
 
-#include "clsn/ui/border_control.h"
 #include "clsn/ui/button.h"
 #include "clsn/ui/check_box.h"
 #include "clsn/ui/dual_container.h"
@@ -13,6 +12,7 @@
 #include "clsn/ui/hbox_container.h"
 #include "clsn/ui/label.h"
 #include "clsn/ui/main_window.h"
+#include "clsn/ui/padding_control.h"
 #include "clsn/ui/radio_button.h"
 #include "clsn/ui/radio_button_group.h"
 #include "clsn/ui/toggle_button.h"
@@ -98,7 +98,7 @@ void test()
     group.add(rb2);
     group.add(rb3);
 
-    auto b3 = c2->make_and_add<border_control<button>>();
+    auto b3 = c2->make_and_add<padding_control<button>>();
     b3->get().set_text("b3");
     b3->set_foreground_color(colors::make_cyan());
     b3->get().add_action_listener([&b3](auto&)
