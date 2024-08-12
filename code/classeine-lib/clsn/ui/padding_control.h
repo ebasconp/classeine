@@ -2,23 +2,23 @@
 
 #include "control.h"
 
-#include "renderers/border_control_renderer.h"
+#include "renderers/padding_control_renderer.h"
 
 namespace clsn::ui
 {
     using namespace clsn::ui::renderers;
 
     template <typename InnerControlType>
-    class border_control : public control
+    class padding_control : public control
     {
         InnerControlType m_inner_control;
 
         CLSN_PROPERTY_VAL(size, int, true, 4)
 
     public:
-        border_control() : control("border_control")
+        padding_control() : control("padding_control")
         {
-            auto renderer = std::make_shared<border_control_renderer<InnerControlType>>();
+            auto renderer = std::make_shared<padding_control_renderer<InnerControlType>>();
             set_renderer(renderer);
         }
 
