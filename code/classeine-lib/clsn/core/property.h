@@ -2,6 +2,7 @@
 
 #include "empty.h"
 #include "event_listener_list.h"
+#include "strings.h"
 #include "value_changed_event.h"
 
 #include <type_traits>
@@ -37,6 +38,12 @@ namespace clsn::core
         }
 
         [[nodiscard]] auto get() const noexcept -> const T& { return m_value; }
+
+        auto to_string() const -> std::string
+        {
+            return strings::format("Property. Name: [{}}], Value: [{}]",
+                                   m_name, m_value);
+        }
 
         template <bool B = HasValueChangedEventListener,
                   std::enable_if_t<B, int> = 0>

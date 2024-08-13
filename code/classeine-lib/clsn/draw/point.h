@@ -16,7 +16,9 @@ namespace clsn::draw
         [[nodiscard]] auto get_x() const noexcept -> int;
         [[nodiscard]] auto get_y() const noexcept -> int;
 
-        auto operator==(const point& other) const -> bool;
+        auto operator==(const point& other) const noexcept -> bool;
+
+        auto operator+(const point& other) const noexcept -> point;
 
         auto to_string() const -> std::string;
     };

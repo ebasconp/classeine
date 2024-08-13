@@ -11,12 +11,12 @@ namespace clsn::ui::renderers::label_renderer_helpers
 {
     using namespace clsn::draw;
 
-    void draw_control_text(graphics& graphics, const control& control, const region& region)
+    void draw_control_text(graphics& graphics, const control& control, const region& reg)
     {
         if (!control.is_enabled())
         {
             graphics.set_draw_color({192, 192, 192});
-            graphics.draw_text(region + point{1, 1},
+            graphics.draw_text(reg + region{1, 1, 0, 0},
                               control.get_actual_font(),
                               control.get_text());
         }
@@ -27,7 +27,7 @@ namespace clsn::ui::renderers::label_renderer_helpers
                                     "Theme", "disabledForegroundColor")
                           );
 
-        graphics.draw_text(region,
+        graphics.draw_text(reg,
                           control.get_actual_font(),
                           control.get_text());
     }

@@ -20,12 +20,24 @@ namespace clsn::ui
         {
             auto renderer = std::make_shared<padding_control_renderer<InnerControlType>>();
             set_renderer(renderer);
+
+            init_padding_control_events();
         }
 
         void set_parent_window(std::optional<std::reference_wrapper<window>> pw) override
         {
             control::set_parent_window(pw);
             m_inner_control.set_parent_window(pw);
+        }
+
+        void do_layout() override
+        {
+            const auto size = m_size.get();
+
+            m_inner_control.set_actual_position(get_actual_position() + point{size, size});
+            m_inner_control.set_actual_size(get_actual_size() + dimension(-size * 2, -size * 2));
+
+            m_inner_control.do_layout();
         }
 
         auto get() -> InnerControlType& { return m_inner_control; }
@@ -81,27 +93,6 @@ namespace clsn::ui
             return control::is_invalidated() || m_inner_control.is_invalidated();
         }
 
-        void do_layout() override
-        {
-            if (!m_inner_control.is_visible() || !m_inner_control.is_enabled())
-                return;
-
-            const auto& position = get_actual_position();
-
-            const auto size = get_size();
-            const auto size_times_2 = size * 2;
-
-            m_inner_control.set_actual_position(
-                {position.get_x() + size, position.get_y() + size});
-
-            const auto& actual_size = get_actual_size();
-            m_inner_control.set_actual_size(
-                { actual_size.get_width() - size_times_2,
-                  actual_size.get_height() - size_times_2});
-
-            m_inner_control.do_layout();
-        }
-
         auto get_control_by_position(const point &point) const
     -> std::optional<std::reference_wrapper<const control>> override
         {
@@ -113,6 +104,16 @@ namespace clsn::ui
                 return result;
 
             return std::nullopt;
+        }
+
+    private:
+        void init_padding_control_events()
+        {
+            m_size.add_value_changed_listener([this](auto&)
+            {
+                do_layout();
+                invalidate();
+            });
         }
     };
 }

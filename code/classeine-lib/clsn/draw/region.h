@@ -26,9 +26,9 @@ namespace clsn::draw
 
         [[nodiscard]] auto contains_point(const point& p) const noexcept -> bool;
 
-
-        [[nodiscard]] auto operator+(const point& p) const noexcept -> region;
-        [[nodiscard]] auto operator+(const dimension& d) const noexcept -> region;
         [[nodiscard]] auto operator+(const region& r) const noexcept -> region;
+
+        auto to_string() noexcept -> std::string;
+
     };
 }

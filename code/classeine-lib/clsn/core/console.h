@@ -36,7 +36,8 @@ namespace clsn::core::console
     void debug(std::string_view fmtspec, const Args&... args)
     {
         print("DEBUG: ");
-        println(fmtspec, args...);
+        print(fmtspec, args...);
+        std::cout << std::endl;
     }
 #else
     inline void debug(std::string_view, ...)

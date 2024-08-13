@@ -210,4 +210,9 @@ namespace clsn::ui
         return ui_manager::get_instance().get_dimension(m_defaultSectionName, "preferredSize");
     }
 
+    auto control::get_actual_bounds() const -> region
+    {
+        return { get_actual_position(), get_actual_size() };
+    }
+
 }
