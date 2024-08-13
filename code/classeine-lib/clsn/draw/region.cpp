@@ -1,5 +1,7 @@
 #include "region.h"
 
+#include "clsn/core/strings.h"
+
 namespace clsn::draw
 {
     region::region(const point& position, const dimension& size)
@@ -23,16 +25,6 @@ namespace clsn::draw
     int region::get_width() const noexcept { return m_size.get_width(); }
     int region::get_height() const noexcept { return m_size.get_height(); }
 
-    auto region::operator+(const point& p) const noexcept -> region
-    {
-        return operator+(region{p, dimension{0, 0}});
-    }
-
-    auto region::operator+(const dimension& d) const noexcept -> region
-    {
-        return operator+(region{point{0, 0}, d});
-    }
-
     auto region::operator+(const region& r) const noexcept -> region
     {
         return {get_x() + r.get_x(),
@@ -54,5 +46,11 @@ namespace clsn::draw
 
         return px > tx && px < (tx + width)
             && py > ty && py < (ty + height);
+    }
+
+    auto region::to_string() noexcept -> std::string
+    {
+        return clsn::core::strings::format("Region. Position: [{}], Size: [{}]",
+                               m_position, m_size);
     }
 }

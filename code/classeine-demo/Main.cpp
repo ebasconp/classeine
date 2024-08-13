@@ -103,7 +103,7 @@ void test()
     b3->set_foreground_color(colors::make_cyan());
     b3->get().add_action_listener([&b3](auto&)
     {
-        auto new_size = (b3->get_size() + 1) % 10;
+        auto new_size = (b3->get_size() + 1) % 16;
         b3->set_size(new_size);
     });
 

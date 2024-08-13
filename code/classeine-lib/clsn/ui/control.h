@@ -66,6 +66,7 @@ namespace clsn::ui
         auto get_actual_foreground_color() const -> const color&;
         auto get_actual_font() const -> const font&;
         auto get_actual_preferred_size() const -> const dimension&;
+        auto get_actual_bounds() const -> region;
 
         auto operator==(const control&) const -> bool;
         auto operator!=(const control&) const -> bool;

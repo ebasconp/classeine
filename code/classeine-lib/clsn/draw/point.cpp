@@ -21,9 +21,14 @@ namespace clsn::draw
 
     auto point::get_y() const noexcept -> int { return m_y; }
 
-    auto point::operator==(const point& other) const -> bool
+    auto point::operator==(const point& other) const noexcept -> bool
     {
         return m_x == other.m_x && m_y == other.m_y;
+    }
+
+    auto point::operator+(const point& other) const noexcept -> point
+    {
+        return { m_x + other.m_x, m_y + other.m_y };
     }
 
     auto point::to_string() const -> std::string

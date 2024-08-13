@@ -18,6 +18,8 @@ namespace clsn::draw
 
         auto operator==(const dimension& other) const noexcept -> bool;
 
+        auto operator+(const dimension& other) const noexcept -> dimension;
+
         auto to_string() const -> std::string;
     };
 }
