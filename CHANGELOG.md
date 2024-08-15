@@ -1,7 +1,9 @@
 # CHANGELOG #
 
+* 20240815 Added mono_container class
+* 20240815 Added container class
 * 20240809 Added Windows support
-* 20240809 Added border_control
+* 20240809 Added padding_control
 * 20240808 Made all project snake_case
 * 20240806 flow_container
 * 20240731 Created dual_container
