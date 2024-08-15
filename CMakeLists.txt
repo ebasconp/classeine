@@ -82,6 +82,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/vbox_container_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/xy_container_renderer.cpp
+        code/classeine-lib/clsn/ui/mono_container.h
 )
 
 target_include_directories(classeine PUBLIC code/classeine-lib)

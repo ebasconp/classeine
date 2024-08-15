@@ -30,7 +30,7 @@ namespace clsn::ui
         if (get_count() == 2)
             system::panic("Dual container can only contain two elements");
 
-        if (get_count() == 1 && constraint == get_constraint_at(0))
+        if (get_count() == 1 && constraint == get_element_at(0).m_constraint)
             system::panic("Both controls must have different constraints");
     }
 
@@ -61,7 +61,7 @@ namespace clsn::ui
         const auto count = get_count();
         if (count == 1)
         {
-            auto& cc = get_control_and_constraint_at(0);
+            auto& cc = get_element_at(0);
 
             auto ch = cc.m_constraint == dual_container_constraint::use_all_available_space
                 ? size.get_height()
@@ -75,8 +75,8 @@ namespace clsn::ui
 
         if (count == 2)
         {
-            auto& cc0 = get_control_and_constraint_at(0);
-            auto& cc1 = get_control_and_constraint_at(1);
+            auto& cc0 = get_element_at(0);
+            auto& cc1 = get_element_at(1);
 
             auto c0h = cc0.m_constraint == dual_container_constraint::use_all_available_space
                             ? size.get_height() - cc1.m_control->get_actual_preferred_size().get_height()
@@ -101,7 +101,7 @@ namespace clsn::ui
         const auto count = get_count();
         if (count == 1)
         {
-            auto& cc = get_control_and_constraint_at(0);
+            auto& cc = get_element_at(0);
 
             auto cw = cc.m_constraint == dual_container_constraint::use_all_available_space
                 ? size.get_width()
@@ -115,8 +115,8 @@ namespace clsn::ui
 
         if (count == 2)
         {
-            auto& cc0 = get_control_and_constraint_at(0);
-            auto& cc1 = get_control_and_constraint_at(1);
+            auto& cc0 = get_element_at(0);
+            auto& cc1 = get_element_at(1);
 
             auto c0w = cc0.m_constraint == dual_container_constraint::use_all_available_space
                             ? size.get_width() - cc1.m_control->get_actual_preferred_size().get_width()
