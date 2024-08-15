@@ -19,7 +19,7 @@
 #include "clsn/ui/vbox_container.h"
 #include "clsn/ui/xy_container.h"
 
-
+#include "clsn/ui/renderers/customizable_renderer.h"
 #include "clsn/ui/renderers/null_renderer.h"
 
 #include <memory>
@@ -81,6 +81,16 @@ void test()
     auto c2 = mw().make_and_add<hbox_container>();
 
     auto b1 = c2->make_and_add<button>();
+
+    auto custom_renderer = std::make_unique<renderers::customizable_renderer>(
+        [](clsn::ui::graphics& gfx, auto& rgn, auto& )
+        {
+            gfx.set_draw_color(clsn::draw::colors::make_purple());
+            gfx.draw_fill_rectangle(rgn);
+        });
+
+    b1->set_renderer(std::move(custom_renderer));
+
     auto b2 = c2->make_and_add<vbox_container>();
 
     auto rb1 = b2->make_and_add<radio_button>();
