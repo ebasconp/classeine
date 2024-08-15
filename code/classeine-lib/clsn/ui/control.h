@@ -35,7 +35,7 @@ namespace clsn::ui
         event_listener_list<mouse_moved_event> m_mouse_moved_listeners;
 
         std::shared_ptr<entity> m_tag;
-        mutable std::shared_ptr<renderer_base> m_renderer;
+        mutable std::unique_ptr<renderer_base> m_renderer;
 
         std::string m_defaultSectionName;
 
@@ -51,6 +51,8 @@ namespace clsn::ui
 
         control& operator=(const control&) = delete;
         control& operator=(control&&) = delete;
+
+        ~control() override;
 
         CLSN_PROPERTY(actual_position, point, true);
         CLSN_PROPERTY(actual_size, dimension, true);
@@ -97,7 +99,7 @@ namespace clsn::ui
             return static_cast<EntityWrapper<TagType>&>(*m_tag).get();
         }
 
-        void set_renderer(const std::shared_ptr<renderer_base>& renderer);
+        void set_renderer(std::unique_ptr<renderer_base>&& renderer);
 
         auto get_renderer() const -> const renderer_base&;
         auto get_renderer() -> renderer_base&;
@@ -134,6 +136,8 @@ namespace clsn::ui
     protected:
         virtual void process_mouse_click_event(events::mouse_click_event& e);
         virtual void process_mouse_moved_event(events::mouse_moved_event& e);
+
+        virtual auto make_default_renderer() const -> std::unique_ptr<renderer_base>;
 
     private:
         void init_events();

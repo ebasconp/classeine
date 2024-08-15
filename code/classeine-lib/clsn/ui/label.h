@@ -9,5 +9,8 @@ namespace clsn::ui
     public:
         label();
 
+    protected:
+        auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
+
     };
 }

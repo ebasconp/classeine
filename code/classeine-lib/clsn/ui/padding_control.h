@@ -18,9 +18,6 @@ namespace clsn::ui
     public:
         padding_control() : control("padding_control")
         {
-            auto renderer = std::make_shared<padding_control_renderer<InnerControlType>>();
-            set_renderer(renderer);
-
             init_padding_control_events();
         }
 
@@ -40,8 +37,8 @@ namespace clsn::ui
             m_inner_control.do_layout();
         }
 
-        auto get() -> InnerControlType& { return m_inner_control; }
-        auto get() const -> const InnerControlType& { return m_inner_control; }
+        auto get_inner_control() -> InnerControlType& { return m_inner_control; }
+        auto get_inner_control() const -> const InnerControlType& { return m_inner_control; }
 
         void process_mouse_click_event(events::mouse_click_event& e) override
         {
@@ -94,7 +91,7 @@ namespace clsn::ui
         }
 
         auto get_control_by_position(const point &point) const
-    -> std::optional<std::reference_wrapper<const control>> override
+                -> std::optional<std::reference_wrapper<const control>> override
         {
             if (!m_inner_control.is_visible() || !m_inner_control.is_enabled())
                 return std::nullopt;
@@ -104,6 +101,12 @@ namespace clsn::ui
                 return result;
 
             return std::nullopt;
+        }
+
+    protected:
+        auto make_default_renderer() const -> std::unique_ptr<renderer_base> override
+        {
+            return std::make_unique<padding_control_renderer<InnerControlType>>();
         }
 
     private:
