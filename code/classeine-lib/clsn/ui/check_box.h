@@ -8,5 +8,8 @@ namespace clsn::ui
     {
     public:
         check_box();
+
+    protected:
+        auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
     };
 }

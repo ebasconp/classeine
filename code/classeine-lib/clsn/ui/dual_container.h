@@ -31,6 +31,8 @@ namespace clsn::ui
     protected:
         void check_if_valid_before_adding(const dual_container_constraint& fill) const override;
 
+        auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
+
     private:
         void doLayoutVertical(const point& position, const dimension& size);
         void doLayoutHorizontal(const point& position, const dimension& size);

@@ -1,5 +1,7 @@
 #include "dual_container.h"
 
+#include "renderers/dual_container_renderer.h"
+
 #include "clsn/core/system.h"
 
 namespace clsn::ui
@@ -131,5 +133,10 @@ namespace clsn::ui
             cc0.m_control->do_layout();
             cc1.m_control->do_layout();
         }
+    }
+
+    auto dual_container::make_default_renderer() const -> std::unique_ptr<renderer_base>
+    {
+        return std::make_unique<renderers::dual_container_renderer>();
     }
 }

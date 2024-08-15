@@ -32,15 +32,6 @@ namespace clsn::ui
         return m_current_theme.second->get_font(section_name, name);
     }
 
-    auto ui_skin::get_renderer_by_control(const clsn::ui::control& ctrl) const -> std::shared_ptr<renderer_base>
-    {
-        auto it = m_renderers_by_control_type.find(std::type_index(typeid(ctrl)));
-        if (it == m_renderers_by_control_type.end())
-            return std::make_shared<null_renderer>();
-
-        return it->second.get();
-    }
-
     auto ui_skin::add_theme_changed_listener(event_listener<empty_event> listener) -> int
     {
         return m_theme_changed_listeners.add(listener);

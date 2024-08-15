@@ -99,9 +99,9 @@ void test()
     group.add(rb3);
 
     auto b3 = c2->make_and_add<padding_control<button>>();
-    b3->get().set_text("b3");
+    b3->get_inner_control().set_text("b3");
     b3->set_foreground_color(colors::make_cyan());
-    b3->get().add_action_listener([&b3](auto&)
+    b3->get_inner_control().add_action_listener([&b3](auto&)
     {
         auto new_size = (b3->get_size() + 1) % 16;
         b3->set_size(new_size);

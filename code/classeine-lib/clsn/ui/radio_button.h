@@ -10,5 +10,8 @@ namespace clsn::ui
         radio_button();
 
         void toggle() override;
+
+    protected:
+        auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
     };
 }

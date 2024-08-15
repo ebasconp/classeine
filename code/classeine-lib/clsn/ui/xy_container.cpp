@@ -1,5 +1,7 @@
 #include "xy_container.h"
 
+#include "renderers/xy_container_renderer.h"
+
 namespace clsn::ui
 {
     xy_container::xy_container()
@@ -24,5 +26,10 @@ namespace clsn::ui
             control.set_actual_size(control.get_actual_preferred_size());
             control.do_layout();
         });
+    }
+
+    auto xy_container::make_default_renderer() const -> std::unique_ptr<renderer_base>
+    {
+        return std::make_unique<renderers::xy_container_renderer>();
     }
 }

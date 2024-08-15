@@ -41,7 +41,8 @@ namespace clsn::ui::renderers
             border_renderer_helpers::draw_flat_border(
                 graphics, a_region, bc, size);
 
-            control.get().paint(graphics, control.get().get_actual_bounds());
+            control.get_inner_control().paint(
+                graphics, control.get_inner_control().get_actual_bounds());
         }
     };
 }

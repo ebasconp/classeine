@@ -1,21 +1,23 @@
 #include "control.h"
+
+#include "renderer_base.h"
 #include "ui_manager.h"
 #include "window.h"
 
-#include "clsn/draw/region.h"
+#include "renderers/null_renderer.h"
 
-#include <iostream> //ETOTODO REMOVE THIS
+#include "clsn/draw/region.h"
 
 namespace clsn::ui
 {
-    using clsn::ui::renderers::null_renderer;
-
     control::control(std::string_view section_name)
     : m_defaultSectionName{section_name}
     , m_invalidated{true}
     {
         init_events();
     }
+
+    control::~control() = default;
 
     void control::paint(graphics& graphics, const region& region) const
     {
@@ -70,9 +72,9 @@ namespace clsn::ui
         return m_defaultSectionName;
     }
 
-    void control::set_renderer(const std::shared_ptr<renderer_base>& renderer)
+    void control::set_renderer(std::unique_ptr<renderer_base>&& renderer)
     {
-        m_renderer = renderer;
+        m_renderer = std::move(renderer);
     }
 
     void control::do_layout()
@@ -151,20 +153,25 @@ namespace clsn::ui
     }
 
 
+    auto control::make_default_renderer() const -> std::unique_ptr<renderer_base>
+    {
+        return std::make_unique<renderers::null_renderer>();
+    }
+
     auto control::get_renderer() -> renderer_base&
     {
         if (m_renderer == nullptr)
-            m_renderer = ui_manager::get_instance().get_renderer_by_control(*this);
+            m_renderer = std::move(make_default_renderer());
 
-        return *m_renderer.get();
+        return *m_renderer;
     }
 
     auto control::get_renderer() const -> const renderer_base&
     {
         if (m_renderer == nullptr)
-            m_renderer = ui_manager::get_instance().get_renderer_by_control(*this);
+            m_renderer = std::move(make_default_renderer());
 
-        return *m_renderer.get();
+        return *m_renderer;
     }
 
     void control::load_defaults()
