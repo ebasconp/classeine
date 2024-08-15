@@ -17,14 +17,17 @@ namespace clsn::ui
 
         const auto position = get_actual_position();
 
-        iterate([&position](auto& control, auto& constraint)
+        iterate_elements([&position](auto& elem)
         {
-            if (!control.is_visible())
+            auto& ctrl = *(elem.m_control);
+            auto& constraint = elem.m_constraint;
+
+            if (!ctrl.is_visible())
                 return;
 
-            control.set_actual_position({position.get_x() + constraint.get_x(), position.get_y() + constraint.get_y()});
-            control.set_actual_size(control.get_actual_preferred_size());
-            control.do_layout();
+            ctrl.set_actual_position({position.get_x() + constraint.get_x(), position.get_y() + constraint.get_y()});
+            ctrl.set_actual_size(ctrl.get_actual_preferred_size());
+            ctrl.do_layout();
         });
     }
 

@@ -26,34 +26,33 @@ namespace clsn::ui
         int maxx = currentx + width;
         int maxy = 0;
 
-        iterate([&](auto& control, auto& )
+        iterate_controls([&](control& ctrl)
         {
-            auto controlWidth = control.get_actual_preferred_size().get_width();
-            [[maybe_unused]] auto controlHeight = control.get_actual_preferred_size().get_height();
+            auto controlWidth = ctrl.get_actual_preferred_size().get_width();
 
             if (currentx + controlWidth < maxx)
             {
-                const auto& preferredSize = control.get_actual_preferred_size();
+                const auto& preferredSize = ctrl.get_actual_preferred_size();
                 if (maxy < preferredSize.get_height())
                     maxy = preferredSize.get_height();
 
-                control.set_actual_position({currentx, currenty});
-                control.set_actual_size(preferredSize);
+                ctrl.set_actual_position({currentx, currenty});
+                ctrl.set_actual_size(preferredSize);
             }
             else
             {
                 currentx = 0;
                 currenty += maxy;
 
-                const auto& preferredSize = control.get_actual_preferred_size();
+                const auto& preferredSize = ctrl.get_actual_preferred_size();
                 if (maxy < preferredSize.get_height())
                     maxy = preferredSize.get_height();
 
-                control.set_actual_position({currentx, currenty});
-                control.set_actual_size(preferredSize);
+                ctrl.set_actual_position({currentx, currenty});
+                ctrl.set_actual_size(preferredSize);
             }
 
-            control.do_layout();
+            ctrl.do_layout();
             currentx += controlWidth;
         });
     }
