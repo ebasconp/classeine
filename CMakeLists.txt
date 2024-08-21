@@ -69,7 +69,10 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_font_cache.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_helpers.cpp
 
-        code/classeine-lib/clsn/ui/renderers/border_renderer_helpers.cpp
+        code/classeine-lib/clsn/ui/painters/background_painter.cpp
+        code/classeine-lib/clsn/ui/painters/border_painter.cpp
+        code/classeine-lib/clsn/ui/painters/label_painter.cpp
+
         code/classeine-lib/clsn/ui/renderers/button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/customizable_renderer.cpp
@@ -77,7 +80,6 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/flow_container_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/hbox_container_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/label_renderer_helpers.cpp
         code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/vbox_container_renderer.cpp

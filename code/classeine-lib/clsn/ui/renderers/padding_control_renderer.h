@@ -1,11 +1,11 @@
 #pragma once
 
-#include "border_renderer_helpers.h"
-
 #include "clsn/ui/graphics.h"
 #include "clsn/ui/padding_control.h"
 #include "clsn/ui/renderer_base.h"
 #include "clsn/ui/ui_manager.h"
+
+#include "clsn/ui/painters/border_painter.h"
 
 #include <clsn/draw/region.h>
 
@@ -38,7 +38,7 @@ namespace clsn::ui::renderers
 
             const auto size = control.get_size();
 
-            border_renderer_helpers::draw_flat_border(
+            painters::border_painter::paint_flat_border(
                 graphics, a_region, bc, size);
 
             control.get_inner_control().paint(

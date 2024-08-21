@@ -15,10 +15,10 @@ namespace clsn::ui::renderers
     class button_renderer : public renderer_base
     {
     public:
-        [[nodiscard]] virtual auto paint_as_pressed(const clickable_control& button) const -> bool;
+        [[nodiscard]] virtual auto paint_as_pressed(const clickable_control& btn) const -> bool;
 
-        void paint(graphics& graphics,
-                   const region& region,
-                   const control& baseControl) const override;
+        void paint(graphics& gfx,
+                   const region& rgn,
+                   const control& ctrl) const override;
     };
 }

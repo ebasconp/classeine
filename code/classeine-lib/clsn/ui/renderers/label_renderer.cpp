@@ -1,9 +1,9 @@
 #include "label_renderer.h"
 
-#include "label_renderer_helpers.h"
-
 #include "clsn/ui/control.h"
 #include "clsn/ui/ui_manager.h"
+
+#include "clsn/ui/painters/label_painter.h"
 
 namespace clsn::ui::renderers
 {
@@ -21,6 +21,6 @@ namespace clsn::ui::renderers
         graphics.set_draw_color(bc);
         graphics.draw_fill_rectangle(region);
 
-        label_renderer_helpers::draw_control_text(graphics, control, region);
+        painters::label_painter::paint_label(graphics, region, control);
     }
 }

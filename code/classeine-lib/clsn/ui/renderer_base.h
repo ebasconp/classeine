@@ -24,8 +24,8 @@ namespace clsn::ui
     public:
         ~renderer_base() override = default;
 
-        virtual void paint(graphics& a_graphics,
-                           const region& region,
-                           const control& baseControl) const = 0;
+        virtual void paint(graphics& gfx,
+                           const region& rgn,
+                           const control& ctrl) const = 0;
     };
 }
