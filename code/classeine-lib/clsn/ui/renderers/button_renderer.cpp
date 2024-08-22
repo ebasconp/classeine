@@ -64,7 +64,7 @@ namespace clsn::ui::renderers
 
         auto& unhovered_clr =
              ui_manager::get_instance().get_color(
-                btn.get_default_section_name(), "controlBackgroundColor");
+                btn.get_default_section_name(), "control_background_color");
 
         const auto& clr = is_hovered
                  ? ui_manager::get_instance().get_color(section_name, "bevelUpColor")

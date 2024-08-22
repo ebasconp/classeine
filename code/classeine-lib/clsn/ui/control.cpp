@@ -23,6 +23,9 @@ namespace clsn::ui
     {
         debug_count("paint");
 
+        if (!m_invalidated)
+            return;
+
         get_renderer().paint(graphics, region, *this);
     }
 
@@ -186,7 +189,7 @@ namespace clsn::ui
             return color.value();
 
         return ui_manager::get_instance().get_color(
-                    m_defaultSectionName, "controlBackgroundColor");
+                    m_defaultSectionName, "control_background_color");
     }
 
     auto control::get_actual_foreground_color() const -> const color&

@@ -70,8 +70,10 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_helpers.cpp
 
         code/classeine-lib/clsn/ui/painters/background_painter.cpp
+        code/classeine-lib/clsn/ui/painters/check_box_painter.cpp
         code/classeine-lib/clsn/ui/painters/border_painter.cpp
         code/classeine-lib/clsn/ui/painters/label_painter.cpp
+        code/classeine-lib/clsn/ui/painters/radio_button_painter.cpp
 
         code/classeine-lib/clsn/ui/renderers/button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
