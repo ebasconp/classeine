@@ -2,39 +2,27 @@
 
 #include "list_container.h"
 
+#include "clsn/ui/layouts/dual_layout.h"
+
 namespace clsn::ui
 {
-    enum class dual_container_orientation
-    {
-        horizontal,
-        vertical
-    };
+    using namespace clsn::ui::layouts;
 
-    enum class dual_container_constraint
+    class dual_container : public list_container<dual_layout_constraint>
     {
-        use_preferred_size,
-        use_all_available_space
-    };
-
-    class dual_container : public list_container<dual_container_constraint>
-    {
-        dual_container_orientation m_orientation;
+        dual_layout_orientation m_orientation;
 
     public:
         dual_container();
 
-        auto get_orientation() const -> dual_container_orientation;
-        void set_orientation(dual_container_orientation orientation);
+        auto get_orientation() const -> dual_layout_orientation;
+        void set_orientation(dual_layout_orientation orientation);
 
         void do_layout() override;
 
     protected:
-        void check_if_valid_before_adding(const dual_container_constraint& fill) const override;
+        void check_if_valid_before_adding(const dual_layout_constraint& fill) const override;
 
         auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
-
-    private:
-        void doLayoutVertical(const point& position, const dimension& size);
-        void doLayoutHorizontal(const point& position, const dimension& size);
     };
 }

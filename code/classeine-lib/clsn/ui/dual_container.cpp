@@ -1,5 +1,7 @@
 #include "dual_container.h"
 
+#include "layouts/dual_layout.h"
+
 #include "renderers/dual_container_renderer.h"
 
 #include "clsn/core/system.h"
@@ -7,25 +9,25 @@
 namespace clsn::ui
 {
     dual_container::dual_container()
-    : list_container<dual_container_constraint>{"dual_container"}
-    , m_orientation{dual_container_orientation::vertical}
+    : list_container<dual_layout_constraint>{"dual_container"}
+    , m_orientation{dual_layout_orientation::vertical}
     {
     }
 
 
-    auto dual_container::get_orientation() const -> dual_container_orientation
+    auto dual_container::get_orientation() const -> dual_layout_orientation
     {
         return m_orientation;
     }
 
 
-    void dual_container::set_orientation(dual_container_orientation orientation)
+    void dual_container::set_orientation(dual_layout_orientation orientation)
     {
         m_orientation = orientation;
     }
 
 
-    void dual_container::check_if_valid_before_adding(const dual_container_constraint& constraint) const
+    void dual_container::check_if_valid_before_adding(const dual_layout_constraint& constraint) const
     {
         if (get_count() == 2)
             system::panic("Dual container can only contain two elements");
@@ -41,97 +43,31 @@ namespace clsn::ui
         if (visibleCount == 0)
             return;
 
-        const auto& position = get_actual_position();
-        const auto& size = get_actual_size();
+        using namespace clsn::ui::layouts;
+        dual_layout layout{m_orientation};
 
-        switch (m_orientation)
+        this->iterate_elements([&](control_and_constraint& e)
         {
-            case dual_container_orientation::horizontal:
-                doLayoutHorizontal(position, size);
-                break;
+            layout.add(
+                {e.m_control->get_actual_position(), e.m_control->get_actual_preferred_size()},
+                e.m_constraint);
+        });
 
-            case dual_container_orientation::vertical:
-                doLayoutVertical(position, size);
-                break;
-        }
-    }
+        layout.layout(get_actual_bounds());
 
-    void dual_container::doLayoutVertical(const point& position, const dimension& size)
-    {
-        const auto count = get_count();
-        if (count == 1)
+        int count = layout.get_count();
+        for (int i = 0, j = 0; i < count; i++)
         {
-            auto& cc = get_element_at(0);
+            auto& ctrl = (*this)[i];
+            if (!ctrl.is_visible())
+                continue;
 
-            auto ch = cc.m_constraint == dual_container_constraint::use_all_available_space
-                ? size.get_height()
-                : cc.m_control->get_actual_preferred_size().get_height();
+            auto& rgn = layout.get_element_at(j).m_region;
 
-            cc.m_control->set_actual_size({size.get_width(), ch});
-            cc.m_control->set_actual_position(position);
-            cc.m_control->do_layout();
-            return;
-        }
+            ctrl.set_actual_position(rgn.get_position());
+            ctrl.set_actual_size(rgn.get_size());
 
-        if (count == 2)
-        {
-            auto& cc0 = get_element_at(0);
-            auto& cc1 = get_element_at(1);
-
-            auto c0h = cc0.m_constraint == dual_container_constraint::use_all_available_space
-                            ? size.get_height() - cc1.m_control->get_actual_preferred_size().get_height()
-                            : cc0.m_control->get_actual_preferred_size().get_height();
-
-            auto c1h = size.get_height() - c0h;
-
-            cc0.m_control->set_actual_size({size.get_width(), c0h});
-            cc1.m_control->set_actual_size({size.get_width(), c1h});
-
-            cc0.m_control->set_actual_position(position);
-            cc1.m_control->set_actual_position({position.get_x(), position.get_y() + c0h});
-
-            cc0.m_control->do_layout();
-            cc1.m_control->do_layout();
-        }
-    }
-
-
-    void dual_container::doLayoutHorizontal(const point& position, const dimension& size)
-    {
-        const auto count = get_count();
-        if (count == 1)
-        {
-            auto& cc = get_element_at(0);
-
-            auto cw = cc.m_constraint == dual_container_constraint::use_all_available_space
-                ? size.get_width()
-                : cc.m_control->get_actual_preferred_size().get_width();
-
-            cc.m_control->set_actual_size({cw, size.get_height()});
-            cc.m_control->set_actual_position(position);
-            cc.m_control->do_layout();
-            return;
-        }
-
-        if (count == 2)
-        {
-            auto& cc0 = get_element_at(0);
-            auto& cc1 = get_element_at(1);
-
-            auto c0w = cc0.m_constraint == dual_container_constraint::use_all_available_space
-                            ? size.get_width() - cc1.m_control->get_actual_preferred_size().get_width()
-                            : cc0.m_control->get_actual_preferred_size().get_width();
-
-            auto c1w = size.get_width() - c0w;
-
-            cc0.m_control->set_actual_size({c0w, size.get_height()});
-            cc1.m_control->set_actual_size({c1w, size.get_height()});
-
-            cc0.m_control->set_actual_position(position);
-            cc1.m_control->set_actual_position({position.get_x() + c0w, position.get_y()});
-
-            cc0.m_control->do_layout();
-            cc1.m_control->do_layout();
+            j++;
         }
     }
 

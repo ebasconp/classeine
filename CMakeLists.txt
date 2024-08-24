@@ -69,6 +69,8 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_font_cache.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_helpers.cpp
 
+        code/classeine-lib/clsn/ui/layouts/dual_layout.cpp
+
         code/classeine-lib/clsn/ui/painters/background_painter.cpp
         code/classeine-lib/clsn/ui/painters/check_box_painter.cpp
         code/classeine-lib/clsn/ui/painters/border_painter.cpp

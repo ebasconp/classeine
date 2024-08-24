@@ -18,8 +18,10 @@ namespace clsn::ui
     template <typename Constraint>
     class list_container : public container<list_container_control_and_constraint<Constraint>>
     {
+    public:
         using control_and_constraint = list_container_control_and_constraint<Constraint>;
 
+    private:
         std::vector<control_and_constraint> m_controls;
 
     public:
