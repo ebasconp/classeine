@@ -8,15 +8,18 @@ namespace clsn::ui::painters::check_box_painter
 {
     using namespace clsn::draw;
     
-    void paint_check_box(graphics& gfx, const region& rgn, const check_box& chk_box)
+    void paint_check_box(graphics& gfx, const region& r, const check_box& chk_box, int size)
     {
+        region rgn{
+            {r.get_x() + (r.get_width() - size) / 2, r.get_y() + (r.get_height() - size) / 2},
+            { size, size }
+        };
+
         gfx.set_draw_color(color{0, 0, 255});
         gfx.draw_rectangle(rgn);
 
         const auto x = rgn.get_x();
         const auto y = rgn.get_y();
-
-        const auto size = rgn.get_width();
 
         const auto bg_color = chk_box.is_pressed() ? color{224, 224, 224} : color{255, 255, 255};
         gfx.set_draw_color(bg_color);
@@ -30,7 +33,7 @@ namespace clsn::ui::painters::check_box_painter
             gfx.set_draw_color({0, 0, 192}); // Black color
             gfx.draw_rectangle({x + 3, y + 3, size - 6, size - 6});
 
-            gfx.set_draw_color({0, 0, 224}); // Black color
+            gfx.set_draw_color({0, 0, 255}); // Black color
             gfx.draw_fill_rectangle({x + 4, y + 4, size - 8, size - 8});
         }
     }

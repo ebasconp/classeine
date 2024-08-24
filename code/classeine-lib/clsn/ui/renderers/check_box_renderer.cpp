@@ -3,6 +3,8 @@
 #include "clsn/ui/check_box.h"
 #include "clsn/ui/ui_manager.h"
 
+#include "clsn/ui/layouts/dual_layout.h"
+
 #include "clsn/ui/painters/background_painter.h"
 #include "clsn/ui/painters/check_box_painter.h"
 #include "clsn/ui/painters/label_painter.h"
@@ -26,16 +28,18 @@ namespace clsn::ui::renderers
 
         background_painter::paint_background(gfx, rgn, btn_clr);
 
-        label_painter::paint_label(gfx, rgn, ctrl);
-
         const auto text_size = gfx.get_text_size(chk_box.get_actual_font(), chk_box.get_text());
 
-        const auto mid = chk_box.get_actual_position().get_y() + (rgn.get_height() - text_size.get_height()) / 2;
         const auto size = text_size.get_height();
 
-        const auto x = 8 + chk_box.get_actual_position().get_x();
-        const auto y = mid - 1;
+        using namespace clsn::ui::layouts;
+        dual_layout layout{dual_layout_orientation::horizontal};
+        layout.add({0, 0, size, size}, dual_layout_constraint::use_preferred_size);
+        layout.add({0, 0, 0, 0}, dual_layout_constraint::use_all_available_space);
 
-        check_box_painter::paint_check_box(gfx, {x, y, size, size}, chk_box);
+        layout.layout(rgn);
+
+        check_box_painter::paint_check_box(gfx, layout.get_element_at(0).m_region, chk_box, size);
+        label_painter::paint_label(gfx, layout.get_element_at(1).m_region, chk_box);
     }
 }

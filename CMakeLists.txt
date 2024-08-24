@@ -25,7 +25,7 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     if (WIN32)
         add_compile_options(/W4 /WX /permissive-)
     else ()
-        add_compile_options(-Wall -Werror -Wunused-parameter -pedantic)
+        add_compile_options(-Wall -Wextra -Werror -Wunused-parameter -pedantic)
     endif()
 endif()
 

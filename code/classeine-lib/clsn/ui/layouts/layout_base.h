@@ -27,9 +27,9 @@ namespace clsn::ui::layouts
             m_elements.push_back(region_and_constraint{rgn, constraint});
         }
 
-        auto is_empty() const noexcept -> bool { return m_elements.empty(); }
+        [[nodiscard]] auto is_empty() const noexcept -> bool { return m_elements.empty(); }
 
-        auto get_count() const noexcept -> int { return m_elements.size(); }
+        [[nodiscard]] auto get_count() const noexcept -> int { return m_elements.size(); }
 
         auto get_element_at(int index) -> region_and_constraint&
         {
