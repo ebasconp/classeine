@@ -1,17 +1,17 @@
 #pragma once
 
-#include "list_container.h"
+#include "layout_container.h"
 
-#include "layouts/hbox_layout.h"
+#include "layouts/vbox_layout.h"
 
 namespace clsn::ui
 {
     using clsn::core::empty;
 
-    class hbox_container : public list_container<layouts::hbox_layout>
+    class vbox_layout_container : public layout_container<layouts::vbox_layout>
     {
     public:
-        hbox_container();
+        vbox_layout_container();
 
     protected:
         auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;

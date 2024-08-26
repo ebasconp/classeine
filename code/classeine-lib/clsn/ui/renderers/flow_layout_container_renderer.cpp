@@ -1,12 +1,12 @@
-#include "flow_container_renderer.h"
+#include "flow_layout_container_renderer.h"
 
 namespace clsn::ui::renderers
 {
-    void flow_container_renderer::paint(graphics& graphics,
+    void flow_layout_container_renderer::paint(graphics& graphics,
                               const region& the_region,
                               const control& baseControl) const
     {
-        const auto& container = static_cast<const flow_container&>(baseControl);
+        const auto& container = static_cast<const flow_layout_container&>(baseControl);
 
         if (container.needs_to_paint_the_container())
         {

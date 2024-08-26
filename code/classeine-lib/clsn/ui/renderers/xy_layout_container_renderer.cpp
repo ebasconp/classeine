@@ -1,12 +1,12 @@
-#include "xy_container_renderer.h"
+#include "xy_layout_container_renderer.h"
 
 namespace clsn::ui::renderers
 {
-    void xy_container_renderer::paint(graphics& graphics,
+    void xy_layout_container_renderer::paint(graphics& graphics,
                                   const region& region,
                                   const control& baseControl) const
     {
-        auto& container = static_cast<const xy_container&>(baseControl);
+        auto& container = static_cast<const xy_layout_container&>(baseControl);
 
         if (container.needs_to_paint_the_container())
         {

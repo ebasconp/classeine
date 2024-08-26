@@ -45,9 +45,9 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/check_box.cpp
         code/classeine-lib/clsn/ui/clickable_control.cpp
         code/classeine-lib/clsn/ui/control.cpp
-        code/classeine-lib/clsn/ui/dual_container.cpp
-        code/classeine-lib/clsn/ui/flow_container.cpp
-        code/classeine-lib/clsn/ui/hbox_container.cpp
+        code/classeine-lib/clsn/ui/dual_layout_container.cpp
+        code/classeine-lib/clsn/ui/flow_layout_container.cpp
+        code/classeine-lib/clsn/ui/hbox_layout_container.cpp
         code/classeine-lib/clsn/ui/label.cpp
         code/classeine-lib/clsn/ui/radio_button.cpp
         code/classeine-lib/clsn/ui/radio_button_group.cpp
@@ -56,9 +56,9 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/ui_manager.cpp
         code/classeine-lib/clsn/ui/ui_skin.cpp
         code/classeine-lib/clsn/ui/ui_theme.cpp
-        code/classeine-lib/clsn/ui/vbox_container.cpp
+        code/classeine-lib/clsn/ui/vbox_layout_container.cpp
         code/classeine-lib/clsn/ui/window.cpp
-        code/classeine-lib/clsn/ui/xy_container.cpp
+        code/classeine-lib/clsn/ui/xy_layout_container.cpp
 
         code/classeine-lib/clsn/ui/amatista/dark_amatista_ui_theme.cpp
         code/classeine-lib/clsn/ui/amatista/light_amatista_ui_theme.cpp
@@ -84,14 +84,14 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/customizable_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/dual_container_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/flow_container_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/hbox_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/dual_layout_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/flow_layout_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/hbox_layout_container_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/vbox_container_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/xy_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/vbox_layout_container_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/xy_layout_container_renderer.cpp
         code/classeine-lib/clsn/ui/mono_container.h
 )
 

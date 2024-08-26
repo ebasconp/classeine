@@ -1,6 +1,6 @@
 #pragma once
 
-#include "list_container.h"
+#include "layout_container.h"
 
 #include "clsn/ui/layouts/dual_layout.h"
 
@@ -8,12 +8,12 @@ namespace clsn::ui
 {
     using namespace clsn::ui::layouts;
 
-    class dual_container : public list_container<dual_layout>
+    class dual_layout_container : public layout_container<dual_layout>
     {
         dual_layout_orientation m_orientation = dual_layout_orientation::horizontal;
 
     public:
-        dual_container();
+        dual_layout_container();
 
         auto get_orientation() const -> dual_layout_orientation;
         void set_orientation(dual_layout_orientation orientation);

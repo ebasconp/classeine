@@ -7,17 +7,17 @@
 
 #include "clsn/ui/button.h"
 #include "clsn/ui/check_box.h"
-#include "clsn/ui/dual_container.h"
-#include "clsn/ui/flow_container.h"
-#include "clsn/ui/hbox_container.h"
+#include "clsn/ui/dual_layout_container.h"
+#include "clsn/ui/flow_layout_container.h"
+#include "clsn/ui/hbox_layout_container.h"
 #include "clsn/ui/label.h"
 #include "clsn/ui/main_window.h"
 #include "clsn/ui/padding_control.h"
 #include "clsn/ui/radio_button.h"
 #include "clsn/ui/radio_button_group.h"
 #include "clsn/ui/toggle_button.h"
-#include "clsn/ui/vbox_container.h"
-#include "clsn/ui/xy_container.h"
+#include "clsn/ui/vbox_layout_container.h"
+#include "clsn/ui/xy_layout_container.h"
 
 #include "clsn/ui/renderers/customizable_renderer.h"
 #include "clsn/ui/renderers/null_renderer.h"
@@ -51,12 +51,12 @@ void test()
 
     ui_manager::get_instance().install_theme("light");
 
-    main_window<vbox_container> mw;
+    main_window<vbox_layout_container> mw;
 
     mw.set_text("Welcome to Classeine");
     mw.set_size({1000, 600}); //ETOTODO
 
-    auto flowc = mw().make_and_add<flow_container>();
+    auto flowc = mw().make_and_add<flow_layout_container>();
     auto b0flowc = flowc->make_and_add<button>();
     b0flowc->set_text("File");
 
@@ -78,7 +78,7 @@ void test()
     auto c1 = mw().make_and_add<label>();
     c1->set_text("label");
 
-    auto c2 = mw().make_and_add<hbox_container>();
+    auto c2 = mw().make_and_add<hbox_layout_container>();
 
     auto b1 = c2->make_and_add<button>();
 
@@ -91,7 +91,7 @@ void test()
 
     b1->set_renderer(std::move(custom_renderer));
 
-    auto b2 = c2->make_and_add<vbox_container>();
+    auto b2 = c2->make_and_add<vbox_layout_container>();
 
     auto rb1 = b2->make_and_add<radio_button>();
     rb1->set_text("radio_button 1");
@@ -121,13 +121,13 @@ void test()
     b4->set_text("check_box");
     b4->set_enabled(false);
 
-    auto container = c2->make_and_add<vbox_container>();
+    auto container = c2->make_and_add<vbox_layout_container>();
     auto b6 = container->make_and_add<button>();
     auto b7 = container->make_and_add<button>();
 
     auto b5 = c2->make_and_add<button>();
 
-    auto container2 = c2->make_and_add<vbox_container>();
+    auto container2 = c2->make_and_add<vbox_layout_container>();
     auto b8 = container2->make_and_add<button>();
     auto b9 = container2->make_and_add<toggle_button>();
     b9->set_text("toggle_button");
@@ -138,7 +138,7 @@ void test()
         std::cout << "B3 visible: " << b3->is_visible() << std::endl;
     });
 
-    auto xy =  mw().make_and_add<xy_container>();
+    auto xy =  mw().make_and_add<xy_layout_container>();
 
     auto b1xy = xy->make_and_add<button>(point{10, 10});
     b1xy->set_text("Theme");
@@ -155,7 +155,7 @@ void test()
     auto b2xy = xy->make_and_add<button>(point{200, 10});
     b2xy->set_text("button 2");
 
-    auto dc = mw().make_and_add<dual_container>();
+    auto dc = mw().make_and_add<dual_layout_container>();
     dc->set_orientation(dual_layout_orientation::horizontal);
     auto cb1 = dc->make_and_add<check_box>(dual_layout_constraint::use_all_available_space);
     cb1->set_text("All available");
