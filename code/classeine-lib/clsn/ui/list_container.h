@@ -1,7 +1,6 @@
 #pragma once
 
 #include "container.h"
-#include "ui_manager.h"
 
 #include "window.h"
 
@@ -15,14 +14,16 @@ namespace clsn::ui
         Constraint m_constraint;
     };
 
-    template <typename Constraint>
-    class list_container : public container<list_container_control_and_constraint<Constraint>>
+    template <typename Layout>
+    class list_container : public container<list_container_control_and_constraint<typename Layout::constraint_type>>
     {
     public:
-        using control_and_constraint = list_container_control_and_constraint<Constraint>;
+        using constraint = typename Layout::constraint_type;
+        using control_and_constraint = list_container_control_and_constraint<constraint>;
 
     private:
         std::vector<control_and_constraint> m_controls;
+        Layout m_layout;
 
     public:
         explicit list_container(std::string_view section_name)
@@ -30,14 +31,16 @@ namespace clsn::ui
         {
         }
 
+        virtual ~list_container() = default;
+
         template <typename ControlType, typename... Args>
         std::shared_ptr<ControlType> make_and_add(Args&&... args)
         {
-            Constraint constraint{std::forward<Args>(args)...};
-            check_if_valid_before_adding(constraint);
+            constraint _constraint{std::forward<Args>(args)...};
+            check_if_valid_before_adding(_constraint);
 
             auto ptr = std::make_shared<ControlType>();
-            m_controls.emplace_back(ptr, std::move(constraint));
+            m_controls.emplace_back(ptr, std::move(_constraint));
             this->init_new_control(*ptr);
             return ptr;
         }
@@ -103,8 +106,45 @@ namespace clsn::ui
             return *(m_controls[index].m_control);
         }
 
+        void do_layout() override
+        {
+            const auto visibleCount = this->get_visible_count();
+            if (visibleCount == 0)
+                return;
+
+            Layout layout;
+
+            this->iterate_elements([&](control_and_constraint& e)
+            {
+                if (!e.m_control->is_visible())
+                    return;
+
+                layout.add(
+                    {e.m_control->get_actual_position(), e.m_control->get_actual_preferred_size()},
+                    e.m_constraint);
+            });
+
+            layout.layout(this->get_actual_bounds());
+
+            int count = layout.get_count();
+            for (int i = 0, j = 0; i < count; i++)
+            {
+                auto& ctrl = (*this)[i];
+                if (!ctrl.is_visible())
+                    continue;
+
+                auto& rgn = layout.get_element_at(j).m_region;
+
+                ctrl.set_actual_position(rgn.get_position());
+                ctrl.set_actual_size(rgn.get_size());
+
+                j++;
+            }
+        }
+
+
     protected:
-        virtual void check_if_valid_before_adding(const Constraint&) const
+        virtual void check_if_valid_before_adding(const constraint&) const
         {
             // Do nothing here
         }

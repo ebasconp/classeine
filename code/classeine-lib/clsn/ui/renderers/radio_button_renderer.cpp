@@ -3,6 +3,8 @@
 #include "clsn/ui/radio_button.h"
 #include "clsn/ui/ui_manager.h"
 
+#include "clsn/ui/layouts/dual_layout.h"
+
 #include "clsn/ui/painters/background_painter.h"
 #include "clsn/ui/painters/label_painter.h"
 #include "clsn/ui/painters/radio_button_painter.h"
@@ -26,19 +28,20 @@ namespace clsn::ui::renderers
             : ui_manager::get_instance().get_color(section_name, "control_background_color");
 
         using namespace clsn::ui::painters;
+        using namespace clsn::ui::layouts;
 
         background_painter::paint_background(gfx, rgn, btn_clr);
 
-        label_painter::paint_label(gfx, rgn, base_ctrl);
-
         const auto text_size = gfx.get_text_size(rd_btn.get_actual_font(), rd_btn.get_text());
-
-        const auto mid = rd_btn.get_actual_position().get_y() + (rgn.get_height() - text_size.get_height()) / 2;
         const auto size = text_size.get_height();
 
-        const auto x = 8 + rd_btn.get_actual_position().get_x();
-        const auto y = mid - 1;
+        dual_layout layout;
+        layout.add({0, 0, size, size}, dual_layout_constraint::use_preferred_size);
+        layout.add({0, 0, 0, 0}, dual_layout_constraint::use_all_available_space);
 
-        radio_button_painter::paint_radio_button(gfx, {x, y, size, size}, rd_btn);
+        layout.layout(rgn);
+
+        radio_button_painter::paint_radio_button(gfx, layout.get_element_at(0).m_region, rd_btn, size);
+        label_painter::paint_label(gfx, layout.get_element_at(1).m_region, base_ctrl);
     }
 }

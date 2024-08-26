@@ -10,7 +10,7 @@ namespace clsn::ui::painters::check_box_painter
     
     void paint_check_box(graphics& gfx, const region& r, const check_box& chk_box, int size)
     {
-        region rgn{
+        const region rgn{
             {r.get_x() + (r.get_width() - size) / 2, r.get_y() + (r.get_height() - size) / 2},
             { size, size }
         };

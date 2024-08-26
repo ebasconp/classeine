@@ -33,7 +33,7 @@ namespace clsn::ui::renderers
         const auto size = text_size.get_height();
 
         using namespace clsn::ui::layouts;
-        dual_layout layout{dual_layout_orientation::horizontal};
+        dual_layout layout;
         layout.add({0, 0, size, size}, dual_layout_constraint::use_preferred_size);
         layout.add({0, 0, 0, 0}, dual_layout_constraint::use_all_available_space);
 

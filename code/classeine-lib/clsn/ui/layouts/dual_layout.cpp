@@ -2,8 +2,8 @@
 
 namespace clsn::ui::layouts
 {
-    dual_layout::dual_layout(dual_layout_orientation orientation)
-        : m_orientation{orientation}
+    dual_layout::dual_layout()
+    : m_orientation{dual_layout_orientation::horizontal}
     {}
 
     auto dual_layout::get_orientation() const -> dual_layout_orientation { return m_orientation; }

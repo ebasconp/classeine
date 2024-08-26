@@ -8,17 +8,15 @@ namespace clsn::ui
 {
     using namespace clsn::ui::layouts;
 
-    class dual_container : public list_container<dual_layout_constraint>
+    class dual_container : public list_container<dual_layout>
     {
-        dual_layout_orientation m_orientation;
+        dual_layout_orientation m_orientation = dual_layout_orientation::horizontal;
 
     public:
         dual_container();
 
         auto get_orientation() const -> dual_layout_orientation;
         void set_orientation(dual_layout_orientation orientation);
-
-        void do_layout() override;
 
     protected:
         void check_if_valid_before_adding(const dual_layout_constraint& fill) const override;

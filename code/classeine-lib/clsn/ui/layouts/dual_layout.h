@@ -23,7 +23,9 @@ namespace clsn::ui::layouts
         dual_layout_orientation m_orientation;
 
     public:
-        dual_layout(dual_layout_orientation orientation);
+        using constraint_type = dual_layout_constraint;
+
+        dual_layout();
 
         auto get_orientation() const -> dual_layout_orientation;
 
@@ -32,6 +34,5 @@ namespace clsn::ui::layouts
     private:
         void layout_vertical(const point& position, const dimension& size);
         void layout_horizontal(const point& position, const dimension& size);
-
     };
 }

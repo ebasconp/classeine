@@ -2,16 +2,16 @@
 
 #include "list_container.h"
 
+#include "layouts/vbox_layout.h"
+
 namespace clsn::ui
 {
     using clsn::core::empty;
 
-    class vbox_container : public list_container<empty>
+    class vbox_container : public list_container<layouts::vbox_layout>
     {
     public:
         vbox_container();
-
-        void do_layout() override;
 
     protected:
         auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
