@@ -3,51 +3,43 @@
 #include "clsn/ui/check_box.h"
 #include "clsn/ui/ui_manager.h"
 
+#include "clsn/ui/layouts/dual_layout.h"
+
+#include "clsn/ui/painters/background_painter.h"
+#include "clsn/ui/painters/check_box_painter.h"
+#include "clsn/ui/painters/label_painter.h"
+
 #include "clsn/draw/region.h"
 
 namespace clsn::ui::renderers
 {
-    void check_box_renderer::paint(graphics& graphics,
-                   const region& region,
-                   const control& baseControl) const
+    void check_box_renderer::paint(graphics& gfx,
+                   const region& rgn,
+                   const control& ctrl) const
     {
-        auto& checkBox = static_cast<const check_box&>(baseControl);
-        auto section_name = checkBox.get_default_section_name();
+        const auto& chk_box = static_cast<const check_box&>(ctrl);
+        const auto section_name = chk_box.get_default_section_name();
 
-        auto buttonColor = checkBox.is_pressed()
+        const auto btn_clr = chk_box.is_pressed()
             ? color{192, 192, 192}
-            : ui_manager::get_instance().get_color(section_name, "controlBackgroundColor");
+            : ui_manager::get_instance().get_color(section_name, "control_background_color");
 
-        graphics.set_draw_color(buttonColor);
-        graphics.draw_fill_rectangle(region);
+        using namespace clsn::ui::painters;
 
-        m_labelRenderer.paint(graphics, region, checkBox);
+        background_painter::paint_background(gfx, rgn, btn_clr);
 
-        auto textSize = graphics.get_text_size(checkBox.get_actual_font(), checkBox.get_text());
+        const auto text_size = gfx.get_text_size(chk_box.get_actual_font(), chk_box.get_text());
 
-        const auto mid = checkBox.get_actual_position().get_y() + (region.get_height() - textSize.get_height()) / 2;
-        const auto size = textSize.get_height();
+        const auto size = text_size.get_height();
 
-        const auto x = 8 + checkBox.get_actual_position().get_x();
-        const auto y = mid - 1;
+        using namespace clsn::ui::layouts;
+        dual_layout layout;
+        layout.add({0, 0, size, size}, dual_layout_constraint::use_preferred_size);
+        layout.add({0, 0, 0, 0}, dual_layout_constraint::use_all_available_space);
 
-        graphics.set_draw_color(color{0, 0, 255});
-        graphics.draw_rectangle({x, y, size, size});
+        layout.layout(rgn);
 
-        const auto backgroundColor = checkBox.is_pressed() ? color{224, 224, 224} : color{255, 255, 255};
-        graphics.set_draw_color(backgroundColor);
-        graphics.draw_fill_rectangle({x + 1, mid, size - 2, size - 2});
-
-        if (checkBox.is_checked())
-        {
-            graphics.set_draw_color({0, 0, 128}); // Black color
-            graphics.draw_rectangle({x + 2, y + 2, size - 4, size - 4});
-
-            graphics.set_draw_color({0, 0, 192}); // Black color
-            graphics.draw_rectangle({x + 3, y + 3, size - 6, size - 6});
-
-            graphics.set_draw_color({0, 0, 224}); // Black color
-            graphics.draw_fill_rectangle({x + 4, y + 4, size - 8, size - 8});
-        }
+        check_box_painter::paint_check_box(gfx, layout.get_element_at(0).m_region, chk_box, size);
+        label_painter::paint_label(gfx, layout.get_element_at(1).m_region, chk_box);
     }
 }

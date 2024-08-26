@@ -157,12 +157,12 @@ namespace clsn::ui::impl::sdl2
 
     void graphics_sdl2_impl::draw_fill_circle(const region& r) const
     {
-        auto cx = static_cast<const short>(r.get_x() + r.get_width() / 2);
-        auto cy = static_cast<const short>(r.get_y() + r.get_height() / 2);
-        auto rx = static_cast<const short>(r.get_width() / 2);
-        auto ry = static_cast<const short>(r.get_height() / 2);
+        const auto cx = static_cast<short>(r.get_x() + r.get_width() / 2);
+        const auto cy = static_cast<short>(r.get_y() + r.get_height() / 2);
+        const auto rx = static_cast<short>(r.get_width() / 2);
+        const auto ry = static_cast<short>(r.get_height() / 2);
 
-        auto rs = filledEllipseRGBA(&m_renderer, cx, cy, rx, ry,
+        const auto rs = filledEllipseRGBA(&m_renderer, cx, cy, rx, ry,
             static_cast<Uint8>(m_draw_color.get_red()),
             static_cast<Uint8>(m_draw_color.get_green()),
             static_cast<Uint8>(m_draw_color.get_blue()),

@@ -10,7 +10,7 @@ namespace clsn::ui::amatista
         add("", "bevelDownColor", get_bevel_down_color());
         add("", "container_background_color", get_container_background_color());
         add("", "container_foreground_color", get_container_foreground_color());
-        add("", "controlBackgroundColor", get_control_background_color());
+        add("", "control_background_color", get_control_background_color());
         add("", "controlForegroundColor", get_control_foreground_color());
         add("", "controlHoveredBackgroundColor", get_control_hovered_background_color());
         add("", "disabledBackgroundColor", get_disabled_background_color());

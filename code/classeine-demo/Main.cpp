@@ -156,10 +156,10 @@ void test()
     b2xy->set_text("button 2");
 
     auto dc = mw().make_and_add<dual_container>();
-    dc->set_orientation(dual_container_orientation::horizontal);
-    auto cb1 = dc->make_and_add<check_box>(dual_container_constraint::use_all_available_space);
+    dc->set_orientation(dual_layout_orientation::horizontal);
+    auto cb1 = dc->make_and_add<check_box>(dual_layout_constraint::use_all_available_space);
     cb1->set_text("All available");
-    auto tb1 = dc->make_and_add<button>(dual_container_constraint::use_preferred_size);
+    auto tb1 = dc->make_and_add<button>(dual_layout_constraint::use_preferred_size);
     tb1->set_text("Preferred");
 
     mw.set_visible(true);

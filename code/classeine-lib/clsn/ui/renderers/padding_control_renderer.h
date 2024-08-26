@@ -1,20 +1,16 @@
 #pragma once
 
-#include "border_renderer_helpers.h"
-
 #include "clsn/ui/graphics.h"
-#include "clsn/ui/padding_control.h"
 #include "clsn/ui/renderer_base.h"
-#include "clsn/ui/ui_manager.h"
 
-#include <clsn/draw/region.h>
+#include "clsn/ui/painters/background_painter.h"
+#include "clsn/ui/painters/border_painter.h"
 
 namespace clsn::ui
 {
     template <typename InnerControlType>
     class padding_control;
 }
-
 
 
 namespace clsn::ui::renderers
@@ -25,24 +21,25 @@ namespace clsn::ui::renderers
     class padding_control_renderer : public renderer_base
     {
     public:
-        void paint(graphics& graphics,
-               const region& a_region,
-               const control& base_control) const override
+        void paint(graphics& gfx,
+               const region& rgn,
+               const control& base_ctrl) const override
         {
-            auto& control = static_cast<const padding_control<InnerControlType>&>(base_control);
+            auto& ctrl = static_cast<const padding_control<InnerControlType>&>(base_ctrl);
 
-            const auto& bc = control.get_actual_foreground_color();
+            const auto& bc = ctrl.get_actual_foreground_color();
 
-            graphics.set_draw_color(color{50, 100, 120});
-            graphics.draw_fill_rectangle(a_region);
+            using namespace clsn::ui::painters;
 
-            const auto size = control.get_size();
+            background_painter::paint_background(gfx, rgn, bc);
 
-            border_renderer_helpers::draw_flat_border(
-                graphics, a_region, bc, size);
+            const auto size = ctrl.get_size();
 
-            control.get_inner_control().paint(
-                graphics, control.get_inner_control().get_actual_bounds());
+            painters::border_painter::paint_flat_border(
+                gfx, rgn, bc, size);
+
+            ctrl.get_inner_control().paint(
+                gfx, ctrl.get_inner_control().get_actual_bounds());
         }
     };
 }

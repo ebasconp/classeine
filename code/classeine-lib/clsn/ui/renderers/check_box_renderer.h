@@ -8,8 +8,6 @@ namespace clsn::ui::renderers
 
     class check_box_renderer : public renderer_base
     {
-        label_renderer m_labelRenderer;
-
     public:
         void paint(graphics& graphics,
                    const region& region,

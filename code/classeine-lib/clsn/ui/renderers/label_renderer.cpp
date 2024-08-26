@@ -1,26 +1,23 @@
 #include "label_renderer.h"
 
-#include "label_renderer_helpers.h"
-
 #include "clsn/ui/control.h"
 #include "clsn/ui/ui_manager.h"
 
+#include "clsn/ui/painters/background_painter.h"
+#include "clsn/ui/painters/label_painter.h"
+
 namespace clsn::ui::renderers
 {
-    void label_renderer::paint(graphics& graphics,
-                              const region& region,
-                              const control& control) const
+    void label_renderer::paint(graphics& gfx,
+                              const region& rgn,
+                              const control& ctrl) const
     {
-        if (!control.is_invalidated())
-            return;
+        const auto section_name = ctrl.get_default_section_name();
 
-        auto section_name = control.get_default_section_name();
+        const auto bc = ui_manager::get_instance().get_color(section_name, "container_background_color");
 
-        auto bc = ui_manager::get_instance().get_color(section_name, "container_background_color");
+        painters::background_painter::paint_background(gfx, rgn ,bc);
 
-        graphics.set_draw_color(bc);
-        graphics.draw_fill_rectangle(region);
-
-        label_renderer_helpers::draw_control_text(graphics, control, region);
+        painters::label_painter::paint_label(gfx, rgn, ctrl);
     }
 }
