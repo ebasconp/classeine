@@ -5,7 +5,7 @@
 namespace clsn::ui
 {
     hbox_container::hbox_container()
-    : list_container("hbox_container")
+    : layout_container("hbox_container")
     {
     }
 

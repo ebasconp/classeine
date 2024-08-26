@@ -6,7 +6,7 @@
 namespace clsn::ui
 {
     vbox_container::vbox_container()
-    : list_container("vbox_container")
+    : layout_container("vbox_container")
     {
     }
 

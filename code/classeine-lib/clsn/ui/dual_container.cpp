@@ -7,7 +7,7 @@
 namespace clsn::ui
 {
     dual_container::dual_container()
-    : list_container<layouts::dual_layout>{"dual_container"}
+    : layout_container<layouts::dual_layout>{"dual_container"}
     {
     }
 

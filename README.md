@@ -44,7 +44,7 @@ the creation of rich user interfaces in modern C++.
     * `container`
       *  `mono_container`
         * `padding_control`
-      * `list_container<Constraint>`
+      * `layout_container<Constraint>`
         * `dual_container` - Container that stores only two elements, one occupying only its preferred size and the other one occupying
           the remaining space
         * `flow_container` - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering

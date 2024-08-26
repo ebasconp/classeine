@@ -6,7 +6,7 @@
 namespace clsn::ui
 {
     flow_container::flow_container()
-    : list_container("flow_container")
+    : layout_container("flow_container")
     {
     }
 

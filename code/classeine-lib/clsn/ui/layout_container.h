@@ -8,30 +8,30 @@
 namespace clsn::ui
 {
     template <typename Constraint>
-    struct list_container_control_and_constraint
+    struct layout_container_control_and_constraint
     {
         std::shared_ptr<control> m_control;
         Constraint m_constraint;
     };
 
     template <typename Layout>
-    class list_container : public container<list_container_control_and_constraint<typename Layout::constraint_type>>
+    class layout_container : public container<layout_container_control_and_constraint<typename Layout::constraint_type>>
     {
     public:
         using constraint = typename Layout::constraint_type;
-        using control_and_constraint = list_container_control_and_constraint<constraint>;
+        using control_and_constraint = layout_container_control_and_constraint<constraint>;
 
     private:
         std::vector<control_and_constraint> m_controls;
         Layout m_layout;
 
     public:
-        explicit list_container(std::string_view section_name)
+        explicit layout_container(std::string_view section_name)
         : container<control_and_constraint>{section_name}
         {
         }
 
-        virtual ~list_container() = default;
+        virtual ~layout_container() = default;
 
         template <typename ControlType, typename... Args>
         std::shared_ptr<ControlType> make_and_add(Args&&... args)

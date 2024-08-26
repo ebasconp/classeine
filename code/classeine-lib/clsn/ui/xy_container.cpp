@@ -5,7 +5,7 @@
 namespace clsn::ui
 {
     xy_container::xy_container()
-    : list_container("xy_container")
+    : layout_container("xy_container")
     {
     }
 
