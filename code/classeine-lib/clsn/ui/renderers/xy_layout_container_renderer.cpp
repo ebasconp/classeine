@@ -1,8 +1,8 @@
-#include "xy_container_renderer.h"
+#include "xy_layout_container_renderer.h"
 
 namespace clsn::ui::renderers
 {
-    void xy_container_renderer::paint(graphics& graphics,
+    void xy_layout_container_renderer::paint(graphics& graphics,
                                   const region& region,
                                   const control& baseControl) const
     {

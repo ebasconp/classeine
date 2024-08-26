@@ -1,8 +1,8 @@
-#include "dual_container_renderer.h"
+#include "dual_layout_container_renderer.h"
 
 namespace clsn::ui::renderers
 {
-    void dual_container_renderer::paint(graphics& graphics,
+    void dual_layout_container_renderer::paint(graphics& graphics,
                                   const region& region,
                                   const control& baseControl) const
     {

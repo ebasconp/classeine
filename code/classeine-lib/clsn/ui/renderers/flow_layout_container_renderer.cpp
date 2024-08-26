@@ -1,8 +1,8 @@
-#include "flow_container_renderer.h"
+#include "flow_layout_container_renderer.h"
 
 namespace clsn::ui::renderers
 {
-    void flow_container_renderer::paint(graphics& graphics,
+    void flow_layout_container_renderer::paint(graphics& graphics,
                               const region& the_region,
                               const control& baseControl) const
     {
