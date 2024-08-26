@@ -45,9 +45,9 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/check_box.cpp
         code/classeine-lib/clsn/ui/clickable_control.cpp
         code/classeine-lib/clsn/ui/control.cpp
-        code/classeine-lib/clsn/ui/dual_container.cpp
-        code/classeine-lib/clsn/ui/flow_container.cpp
-        code/classeine-lib/clsn/ui/hbox_container.cpp
+        code/classeine-lib/clsn/ui/dual_layout_container.cpp
+        code/classeine-lib/clsn/ui/flow_layout_container.cpp
+        code/classeine-lib/clsn/ui/hbox_layout_container.cpp
         code/classeine-lib/clsn/ui/label.cpp
         code/classeine-lib/clsn/ui/radio_button.cpp
         code/classeine-lib/clsn/ui/radio_button_group.cpp
@@ -56,9 +56,9 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/ui_manager.cpp
         code/classeine-lib/clsn/ui/ui_skin.cpp
         code/classeine-lib/clsn/ui/ui_theme.cpp
-        code/classeine-lib/clsn/ui/vbox_container.cpp
+        code/classeine-lib/clsn/ui/vbox_layout_container.cpp
         code/classeine-lib/clsn/ui/window.cpp
-        code/classeine-lib/clsn/ui/xy_container.cpp
+        code/classeine-lib/clsn/ui/xy_layout_container.cpp
 
         code/classeine-lib/clsn/ui/amatista/dark_amatista_ui_theme.cpp
         code/classeine-lib/clsn/ui/amatista/light_amatista_ui_theme.cpp

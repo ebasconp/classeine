@@ -45,11 +45,11 @@ the creation of rich user interfaces in modern C++.
       *  `mono_container`
         * `padding_control`
       * `layout_container<Constraint>`
-        * `dual_container` - Container that stores only two elements, one occupying only its preferred size and the other one occupying
+        * `dual_layout_container` - Container that stores only two elements, one occupying only its preferred size and the other one occupying
           the remaining space
         * `flow_container` - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering
-        * `hbox_container` - Container where the controls are rendered horizontally
-        * `vbox_container` - Container where the controls are rendered vertically
+        * `hbox_layout_container` - Container where the controls are rendered horizontally
+        * `vbox_layout_container` - Container where the controls are rendered vertically
         * `xy_container` - Container where the controls are placed in specific coordinates in the given region.
     * `ui_manager`
       * `ui_skin` - Loadable set of renderers, themes and defaults for the UI controls.

@@ -8,7 +8,7 @@
 * 20240809 Added padding_control
 * 20240808 Made all project snake_case
 * 20240806 flow_container
-* 20240731 Created dual_container
+* 20240731 Created dual_layout_container
 * 20240729 Moved do_layout() from renderer_base to control
 * 20240726 Added isValidControl() in layout_container
 * 20240724 Moved texture to graphics

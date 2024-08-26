@@ -2,16 +2,16 @@
 
 #include "layout_container.h"
 
-#include "layouts/hbox_layout.h"
+#include "layouts/flow_layout.h"
 
 namespace clsn::ui
 {
     using clsn::core::empty;
 
-    class hbox_container : public layout_container<layouts::hbox_layout>
+    class flow_layout_container : public layout_container<layouts::flow_layout>
     {
     public:
-        hbox_container();
+        flow_layout_container();
 
     protected:
         auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;

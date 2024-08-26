@@ -6,7 +6,7 @@ namespace clsn::ui::renderers
                               const region& the_region,
                               const control& baseControl) const
     {
-        const auto& container = static_cast<const flow_container&>(baseControl);
+        const auto& container = static_cast<const flow_layout_container&>(baseControl);
 
         if (container.needs_to_paint_the_container())
         {
