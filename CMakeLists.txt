@@ -84,14 +84,9 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/customizable_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/dual_layout_container_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/flow_layout_container_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/hbox_layout_container_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/vbox_layout_container_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/xy_layout_container_renderer.cpp
         code/classeine-lib/clsn/ui/mono_container.h
 )
 
