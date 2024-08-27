@@ -29,7 +29,10 @@ namespace clsn::ui::layouts
 
         [[nodiscard]] auto is_empty() const noexcept -> bool { return m_elements.empty(); }
 
-        [[nodiscard]] auto get_count() const noexcept -> int { return m_elements.size(); }
+        [[nodiscard]] auto get_count() const noexcept -> int
+        {
+            return static_cast<int>(m_elements.size());
+        }
 
         auto get_element_at(int index) -> region_and_constraint&
         {

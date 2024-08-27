@@ -126,7 +126,7 @@ namespace clsn::ui
 
             layout.layout(this->get_actual_bounds());
 
-            int count = layout.get_count();
+            int count = get_count();
             for (int i = 0, j = 0; i < count; i++)
             {
                 auto& ctrl = (*this)[i];
