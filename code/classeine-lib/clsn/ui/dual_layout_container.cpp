@@ -1,6 +1,6 @@
 #include "dual_layout_container.h"
 
-#include "renderers/dual_layout_container_renderer.h"
+#include "renderers/container_renderer.h"
 
 #include "clsn/core/system.h"
 
@@ -35,6 +35,6 @@ namespace clsn::ui
 
     auto dual_layout_container::make_default_renderer() const -> std::unique_ptr<renderer_base>
     {
-        return std::make_unique<renderers::dual_layout_container_renderer>();
+        return std::make_unique<renderers::container_renderer<dual_layout_container>>();
     }
 }

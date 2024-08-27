@@ -12,18 +12,24 @@ namespace clsn::ui::renderers
     class container_renderer : public renderer_base
     {
     public:
-        void paint(graphics& graphics,
-                   const region& a_region,
-                   const control& baseControl) const override
+        void paint(graphics& gfx,
+                   const region& rgn,
+                   const control& base_ctrl) const override
         {
-            auto& container =
-                static_cast<const ContainerType&>(baseControl);
+            const auto& container =
+                static_cast<const ContainerType&>(base_ctrl);
 
-            const auto visibleCount = container.get_visible_count();
-            if (visibleCount == 0)
+            if (container.needs_to_paint_the_container())
             {
-                graphics.set_draw_color(container.get_actual_background_color());
-                graphics.draw_fill_rectangle(a_region);
+                gfx.set_draw_color(base_ctrl.get_actual_background_color());
+                gfx.draw_fill_rectangle(rgn);
+            }
+
+            const auto visible_count = container.get_visible_count();
+            if (visible_count == 0)
+            {
+                gfx.set_draw_color(container.get_actual_background_color());
+                gfx.draw_fill_rectangle(rgn);
                 return;
             }
 
@@ -34,11 +40,11 @@ namespace clsn::ui::renderers
                 if (!control.is_visible() || !control.is_invalidated())
                     continue;
 
-                region controlRegion{
+                region ctrl_rgn{
                     control.get_actual_position(),
                     control.get_actual_size()}; // ETOTODOcontrol.getBounds();
 
-                control.paint(graphics, controlRegion);
+                control.paint(gfx, ctrl_rgn);
                 control.validate();
             }
         }
