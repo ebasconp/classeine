@@ -40,6 +40,10 @@ namespace clsn::ui::renderers
         layout.layout(rgn);
 
         check_box_painter::paint_check_box(gfx, layout.get_element_at(0).m_region, chk_box, size);
-        label_painter::paint_label(gfx, layout.get_element_at(1).m_region, chk_box);
+
+        using namespace clsn::ui::painters::label_painter;
+        painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};
+
+        label_painter::paint_label(gfx, layout.get_element_at(1).m_region, chk_box, info);
     }
 }

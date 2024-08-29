@@ -18,6 +18,9 @@ namespace clsn::ui::renderers
 
         painters::background_painter::paint_background(gfx, rgn ,bc);
 
-        painters::label_painter::paint_label(gfx, rgn, ctrl);
+        using namespace clsn::ui::painters::label_painter;
+        painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};
+
+        painters::label_painter::paint_label(gfx, rgn, ctrl, info);
     }
 }

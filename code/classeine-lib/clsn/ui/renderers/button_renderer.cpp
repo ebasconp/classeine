@@ -77,14 +77,17 @@ namespace clsn::ui::renderers
 
         const region inner_rect = rgn + region{depth, depth, -depth2, -depth2};
 
+        using namespace clsn::ui::painters::label_painter;
+        painting_info info{text_horizontal_alignment::center, text_vertical_alignment::middle};
+
         if (pressed)
         {
             const region inner_rect_shifted = inner_rect + region{depth, depth, -depth, -depth};
-            label_painter::paint_label(gfx, inner_rect_shifted, ctrl);
+            paint_label(gfx, inner_rect_shifted, ctrl, info);
         }
         else
         {
-            label_painter::paint_label(gfx, inner_rect, ctrl);
+            paint_label(gfx, inner_rect, ctrl, info);
         }
     }
 }
