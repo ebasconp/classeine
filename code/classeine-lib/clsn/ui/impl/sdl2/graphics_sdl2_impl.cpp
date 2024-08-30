@@ -13,6 +13,8 @@
 #include <SDL2_gfxPrimitives.h>
 
 #include <SDL_ttf.h>
+#include <clsn/draw/text_horizontal_alignment.h>
+#include <clsn/draw/text_vertical_alignment.h>
 
 namespace
 {
@@ -188,7 +190,9 @@ namespace clsn::ui::impl::sdl2
 
     void graphics_sdl2_impl::draw_text(const region& r,
                                     const font& font,
-                                    std::string_view text) const
+                                    std::string_view text,
+                                    [[maybe_unused]] text_horizontal_alignment horizontal_alignment,
+                                    [[maybe_unused]] text_vertical_alignment vertical_alignment) const
     {
         auto ttfFont = getFontFromCache(font, m_font_cache);
         SDL_Color textColor = sdl2_helpers::to_sdl(m_draw_color);
@@ -201,13 +205,30 @@ namespace clsn::ui::impl::sdl2
 
         SDL_FreeSurface(surface);
 
-        auto textSize = getTextSizeImpl(ttfFont, text);
+        auto text_size = getTextSizeImpl(ttfFont, text);
+
+        int x = r.get_x();
+        int y = r.get_y();
+
+        switch (horizontal_alignment)
+        {
+            case text_horizontal_alignment::left:   break;
+            case text_horizontal_alignment::center:  x += (r.get_width() - text_size.get_width()) / 2; break;
+            case text_horizontal_alignment::right: x += r.get_width() - text_size.get_width(); break;
+        }
+
+        switch (vertical_alignment)
+        {
+            case text_vertical_alignment::top:   break;
+            case text_vertical_alignment::middle:  y += (r.get_height() - text_size.get_height()) / 2; break;
+            case text_vertical_alignment::bottom: y += r.get_height() - text_size.get_height(); break;
+        }
 
         SDL_Rect textRect;
-        textRect.w = textSize.get_width();
-        textRect.h = textSize.get_height();
-        textRect.x = r.get_x() + (r.get_width() - textSize.get_width()) / 2;
-        textRect.y = r.get_y() + (r.get_height() - textSize.get_height()) / 2;
+        textRect.w = text_size.get_width();
+        textRect.h = text_size.get_height();
+        textRect.x = x;
+        textRect.y = y;
 
         auto sdlrect = sdl2_helpers::to_sdl(r);
         SDL_RenderSetClipRect(&m_renderer, &sdlrect);

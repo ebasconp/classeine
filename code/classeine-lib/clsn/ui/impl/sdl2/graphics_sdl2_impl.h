@@ -6,9 +6,10 @@
 
 #include "clsn/draw/color.h"
 #include "clsn/draw/dimension.h"
+#include <clsn/draw/text_horizontal_alignment.h>
+#include <clsn/draw/text_vertical_alignment.h>
 
 #include "sdl2_font_cache.h"
-
 
 struct SDL_Renderer;
 
@@ -51,7 +52,9 @@ namespace clsn::ui::impl::sdl2
         void draw_fill_rectangle(const region& r) const;
         void draw_text(const region& r,
                       const font& f,
-                      std::string_view text) const;
+                      std::string_view text,
+                      text_horizontal_alignment,
+                      text_vertical_alignment) const;
 
         auto get_text_size(const font& f, std::string_view text) const -> dimension;
 
