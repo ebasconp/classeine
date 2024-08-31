@@ -22,6 +22,8 @@ namespace clsn::ui
             init_container_events();
         }
 
+        CLSN_PROPERTY_VAL(margin, int, true, 0)
+
         virtual void iterate_elements(std::function<void(ElementType&)> func) = 0;
         virtual void iterate_elements(std::function<void(const ElementType&)> func)  const = 0;
 
