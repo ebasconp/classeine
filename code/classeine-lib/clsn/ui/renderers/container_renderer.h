@@ -33,6 +33,10 @@ namespace clsn::ui::renderers
                 return;
             }
 
+            const auto margin = container.get_margin();
+            const region shift_rgn{
+                margin, margin, -(margin * 2), -(margin * 2)};
+
             const auto count = container.get_count();
             for (int i = 0; i < count; i++)
             {
@@ -40,11 +44,11 @@ namespace clsn::ui::renderers
                 if (!control.is_visible() || !control.is_invalidated())
                     continue;
 
-                region ctrl_rgn{
+                const region ctrl_rgn{
                     control.get_actual_position(),
                     control.get_actual_size()}; // ETOTODOcontrol.getBounds();
 
-                control.paint(gfx, ctrl_rgn);
+                control.paint(gfx, ctrl_rgn + shift_rgn);
                 control.validate();
             }
         }

@@ -79,6 +79,7 @@ void test()
     c1->set_text("label");
 
     auto c2 = mw().make_and_add<hbox_layout_container>();
+    c2->set_margin(8);
 
     auto b1 = c2->make_and_add<button>();
 
