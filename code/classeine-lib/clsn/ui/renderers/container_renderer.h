@@ -19,14 +19,14 @@ namespace clsn::ui::renderers
             const auto& container =
                 static_cast<const ContainerType&>(base_ctrl);
 
-            if (container.needs_to_paint_the_container())
+            const auto container_needs_repaint = container.needs_to_paint_the_container();
+            if (container_needs_repaint)
             {
                 gfx.set_draw_color(base_ctrl.get_actual_background_color());
                 gfx.draw_fill_rectangle(rgn);
             }
 
-            const auto visible_count = container.get_visible_count();
-            if (visible_count == 0)
+            if (container.get_visible_count() == 0)
             {
                 gfx.set_draw_color(container.get_actual_background_color());
                 gfx.draw_fill_rectangle(rgn);
@@ -51,6 +51,9 @@ namespace clsn::ui::renderers
                 control.paint(gfx, ctrl_rgn + shift_rgn);
                 control.validate();
             }
+
+            if (container_needs_repaint)
+                container.validate();
         }
     };
 }
