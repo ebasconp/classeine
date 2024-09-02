@@ -56,6 +56,9 @@ void test()
     mw.set_text("Welcome to Classeine");
     mw.set_size({1000, 600}); //ETOTODO
 
+    auto empty_container = mw().make_and_add<xy_layout_container>();
+    empty_container->set_background_color(color{0, 90, 160});
+
     auto flowc = mw().make_and_add<flow_layout_container>();
     auto b0flowc = flowc->make_and_add<button>();
     b0flowc->set_text("File");
