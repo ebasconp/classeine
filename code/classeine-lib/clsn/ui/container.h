@@ -64,6 +64,9 @@ namespace clsn::ui
 
         auto is_invalidated() const noexcept -> bool override
         {
+            if (m_needs_to_paint_the_container && is_empty())
+                return true;
+
             auto invalidated = false;
 
             iterate_controls([&invalidated](auto& c)
