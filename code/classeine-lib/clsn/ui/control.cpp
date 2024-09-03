@@ -225,4 +225,20 @@ namespace clsn::ui
         return { get_actual_position(), get_actual_size() };
     }
 
+    void control::set_parent_control(control& control)
+    {
+        m_parent_control = std::ref(control);
+    }
+
+    auto control::get_parent_control() -> optional_reference<control>&
+    {
+        return m_parent_control;
+    }
+
+    auto control::get_parent_control() const -> const optional_reference<control>&
+    {
+        return m_parent_control;
+    }
+
+
 }

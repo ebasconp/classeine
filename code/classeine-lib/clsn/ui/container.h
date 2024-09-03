@@ -119,6 +119,7 @@ namespace clsn::ui
         void init_new_control(control& control)
         {
             control.set_parent_window(get_parent_window());
+            control.set_parent_control(*this);
 
             control.add_visible_changed_listener(
                 [this](auto&)

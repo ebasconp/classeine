@@ -28,6 +28,9 @@ namespace clsn::ui
     class renderer_base;
     class window;
 
+    template <typename T>
+    using optional_reference = std::optional<std::reference_wrapper<T>>;
+
     class control : public entity
     {
         event_listener_list<control_resized_event> m_control_resized_listeners;
@@ -41,7 +44,8 @@ namespace clsn::ui
 
         mutable bool m_invalidated;
 
-        std::optional<std::reference_wrapper<window>> m_parentWindow;
+        optional_reference<window>  m_parentWindow;
+        optional_reference<control> m_parent_control;
 
     public:
         explicit control(std::string_view section_name);
@@ -53,6 +57,10 @@ namespace clsn::ui
         control& operator=(control&&) = delete;
 
         ~control() override;
+
+        virtual void set_parent_control(control& control);
+        auto get_parent_control() -> optional_reference<control>&;
+        auto get_parent_control() const -> const optional_reference<control>&;
 
         CLSN_PROPERTY(actual_position, point, true);
         CLSN_PROPERTY(actual_size, dimension, true);

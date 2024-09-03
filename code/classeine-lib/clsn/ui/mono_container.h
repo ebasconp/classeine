@@ -17,10 +17,16 @@ namespace clsn::ui
         {
         }
         
-        void set_parent_window(std::optional<std::reference_wrapper<window>> pw) override
+        void set_parent_window(optional_reference<window> pw) override
         {
             control::set_parent_window(pw);
             m_inner_control.set_parent_window(pw);
+        }
+
+        void set_parent_control(control& parent_control) override
+        {
+            control::set_parent_control(parent_control);
+            m_inner_control.set_parent_control(*this);
         }
         
         auto get_inner_control() -> InnerControlType& { return m_inner_control; }
