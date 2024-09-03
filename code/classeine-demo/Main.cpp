@@ -60,20 +60,27 @@ void test()
     empty_container->set_background_color(color{0, 90, 160});
 
     auto flowc = mw().make_and_add<flow_layout_container>();
+    flowc->set_background_color(color{50, 110, 170});
+
     auto b0flowc = flowc->make_and_add<button>();
     b0flowc->set_text("File");
+    b0flowc->set_opaque(false);
 
     auto b1flowc = flowc->make_and_add<button>();
     b1flowc->set_text("Edit");
+    b1flowc->set_opaque(false);
 
     auto b2flowc = flowc->make_and_add<button>();
     b2flowc->set_text("View");
+    b2flowc->set_opaque(false);
 
     auto b3flowc = flowc->make_and_add<button>();
     b3flowc->set_text("window");
+    b3flowc->set_opaque(false);
 
     auto b4flowc = flowc->make_and_add<button>();
     b4flowc->set_text("Help");
+    b4flowc->set_opaque(false);
 
     auto c0 = mw().make_and_add<button>();
     c0->set_text("button");

@@ -26,7 +26,7 @@ namespace clsn::ui::renderers
 
         using namespace clsn::ui::painters;
 
-        background_painter::paint_background(gfx, rgn, btn_clr);
+        background_painter::paint_background(gfx, rgn, btn_clr, ctrl.is_opaque());
 
         const auto text_size = gfx.get_text_size(chk_box.get_actual_font(), chk_box.get_text());
 

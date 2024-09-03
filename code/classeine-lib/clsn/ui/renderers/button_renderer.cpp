@@ -57,7 +57,7 @@ namespace clsn::ui::renderers
              ? ui_manager::get_instance().get_color("button", "pressedBackgroundColor")
              : get_ultimate_background_color(btn, is_hovered);
 
-        background_painter::paint_background(gfx, rgn, btn_clr);
+        background_painter::paint_background(gfx, rgn, btn_clr, ctrl.is_opaque());
 
         // paint border
         const auto section_name = btn.get_default_section_name();
@@ -71,7 +71,11 @@ namespace clsn::ui::renderers
                  : unhovered_clr;
 
         constexpr int depth = 2;
-        border_painter::paint_flat_border(gfx, rgn, clr, depth);
+
+        if (is_hovered || btn.is_opaque())
+        {
+            border_painter::paint_flat_border(gfx, rgn, clr, depth);
+        }
 
         constexpr int depth2 = depth * 2;
 

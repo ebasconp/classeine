@@ -60,6 +60,7 @@ namespace clsn::ui
         CLSN_BOOL_PROPERTY_VAL(enabled, true, true);
         CLSN_PROPERTY(font, std::optional<font>, true);
         CLSN_PROPERTY(foreground_color, std::optional<color>, true);
+        CLSN_BOOL_PROPERTY_VAL(opaque, true, true)
         CLSN_PROPERTY(preferred_size, std::optional<dimension>, true);
         CLSN_PROPERTY(text, std::string, true);
         CLSN_BOOL_PROPERTY_VAL(visible, true, true);

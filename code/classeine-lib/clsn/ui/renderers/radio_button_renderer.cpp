@@ -30,7 +30,7 @@ namespace clsn::ui::renderers
         using namespace clsn::ui::painters;
         using namespace clsn::ui::layouts;
 
-        background_painter::paint_background(gfx, rgn, btn_clr);
+        background_painter::paint_background(gfx, rgn, btn_clr, base_ctrl.is_opaque());
 
         const auto text_size = gfx.get_text_size(rd_btn.get_actual_font(), rd_btn.get_text());
         const auto size = text_size.get_height();

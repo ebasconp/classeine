@@ -16,7 +16,7 @@ namespace clsn::ui::renderers
 
         const auto bc = ui_manager::get_instance().get_color(section_name, "container_background_color");
 
-        painters::background_painter::paint_background(gfx, rgn ,bc);
+        painters::background_painter::paint_background(gfx, rgn, bc, ctrl.is_opaque());
 
         using namespace clsn::ui::painters::label_painter;
         painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};

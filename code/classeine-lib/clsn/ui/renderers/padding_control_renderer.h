@@ -31,7 +31,7 @@ namespace clsn::ui::renderers
 
             using namespace clsn::ui::painters;
 
-            background_painter::paint_background(gfx, rgn, bc);
+            background_painter::paint_background(gfx, rgn, bc, ctrl.is_opaque());
 
             const auto size = ctrl.get_size();
 
