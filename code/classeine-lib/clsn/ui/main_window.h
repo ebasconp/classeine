@@ -29,6 +29,7 @@ namespace clsn::ui
             });
 
             m_control.set_parent_window(*this);
+            m_control.set_parent_control(*this);
         }
 
         [[nodiscard]] auto operator()() noexcept -> ControlType&
