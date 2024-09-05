@@ -116,18 +116,17 @@ namespace clsn::ui
         add_visible_changed_listener([this](auto&) { invalidate(); });
     }
 
-    void control::set_parent_window(
-        std::optional<std::reference_wrapper<window>> parentWindow)
+    void control::set_parent_window(optional_reference<window> parentWindow)
     {
         m_parentWindow = parentWindow;
     }
 
-    std::optional<std::reference_wrapper<window>> control::get_parent_window()
+    optional_reference<window> control::get_parent_window()
     {
         return m_parentWindow;
     }
 
-    std::optional<std::reference_wrapper<const window>>
+    optional_reference<const window>
         control::get_parent_window() const
     {
         return m_parentWindow;
@@ -225,17 +224,17 @@ namespace clsn::ui
         return { get_actual_position(), get_actual_size() };
     }
 
-    void control::set_parent_control(control& control)
+    void control::set_parent_control(std::optional<std::reference_wrapper<control>> ctrl)
     {
-        m_parent_control = std::ref(control);
+        m_parent_control = ctrl;
     }
 
-    auto control::get_parent_control() -> optional_reference<control>&
+    auto control::get_parent_control() -> optional_reference<control>
     {
         return m_parent_control;
     }
 
-    auto control::get_parent_control() const -> const optional_reference<control>&
+    auto control::get_parent_control() const -> const_optional_reference<control>
     {
         return m_parent_control;
     }

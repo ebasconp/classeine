@@ -23,7 +23,7 @@ namespace clsn::ui
             m_inner_control.set_parent_window(pw);
         }
 
-        void set_parent_control(control& parent_control) override
+        void set_parent_control(optional_reference<control> parent_control) override
         {
             control::set_parent_control(parent_control);
             m_inner_control.set_parent_control(*this);
