@@ -46,6 +46,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/clickable_control.cpp
         code/classeine-lib/clsn/ui/control.cpp
         code/classeine-lib/clsn/ui/dual_layout_container.cpp
+        code/classeine-lib/clsn/ui/dynamic_pane.cpp
         code/classeine-lib/clsn/ui/flow_layout_container.cpp
         code/classeine-lib/clsn/ui/hbox_layout_container.cpp
         code/classeine-lib/clsn/ui/label.cpp
@@ -84,6 +85,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/customizable_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/dynamic_pane_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp

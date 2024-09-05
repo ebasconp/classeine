@@ -39,7 +39,7 @@ namespace clsn::ui
             constraint _constraint{std::forward<Args>(args)...};
             check_if_valid_before_adding(_constraint);
 
-            auto ptr = std::make_shared<ControlType>();
+            auto ptr = make_control<ControlType>();
             m_controls.emplace_back(ptr, std::move(_constraint));
             this->init_new_control(*ptr);
             return ptr;

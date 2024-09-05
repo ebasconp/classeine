@@ -4,10 +4,12 @@
 #include "clsn/core/system.h"
 
 #include "clsn/draw/colors.h"
+#include "clsn/draw/dimension.h"
 
 #include "clsn/ui/button.h"
 #include "clsn/ui/check_box.h"
 #include "clsn/ui/dual_layout_container.h"
+#include "clsn/ui/dynamic_pane.h"
 #include "clsn/ui/flow_layout_container.h"
 #include "clsn/ui/hbox_layout_container.h"
 #include "clsn/ui/label.h"
@@ -20,16 +22,53 @@
 #include "clsn/ui/xy_layout_container.h"
 
 #include "clsn/ui/renderers/customizable_renderer.h"
-#include "clsn/ui/renderers/null_renderer.h"
 
 #include <memory>
 
+using namespace clsn::core;
+using namespace clsn::draw;
+using namespace clsn::ui;
+using namespace clsn::ui::renderers;
+
+void create_option_buttons(dual_layout_container& options)
+{
+    auto vbox = options.make_and_add<vbox_layout_container>(dual_layout_constraint::use_preferred_size);
+    vbox->set_preferred_size(dimension{150, 100});
+
+    auto dyn = options.make_and_add<dynamic_pane>(dual_layout_constraint::use_all_available_space);
+
+    auto buttons_container = make_control<hbox_layout_container>();
+    buttons_container->set_background_color(colors::make_blue());
+
+    auto hbox_container = make_control<hbox_layout_container>();
+    hbox_container->set_background_color(colors::make_red());
+
+    auto b1 = vbox->make_and_add<button>();
+    b1->set_text("Buttons");
+    b1->add_action_listener([=](auto&)
+    {
+       dyn->set_inner_control(buttons_container);
+    });
+
+    auto b2 = vbox->make_and_add<button>();
+    b2->set_text("HBox container");
+    b2->add_action_listener([=](auto&)
+    {
+       dyn->set_inner_control(hbox_container);
+    });
+
+}
+
+void create_main_dual_panel(vbox_layout_container& c)
+{
+    auto panel = c.make_and_add<dual_layout_container>();
+    panel->set_orientation(dual_layout_orientation::horizontal);
+
+    create_option_buttons(*panel);
+}
+
 void test()
 {
-    using namespace clsn::core;
-    using namespace clsn::ui;
-    using namespace clsn::ui::renderers;
-
     class A
     {
     public:
@@ -165,6 +204,8 @@ void test()
     cb1->set_text("All available");
     auto tb1 = dc->make_and_add<button>(dual_layout_constraint::use_preferred_size);
     tb1->set_text("Preferred");
+
+    create_main_dual_panel(mw());
 
     mw.set_visible(true);
 

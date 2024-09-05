@@ -31,6 +31,9 @@ namespace clsn::ui
     template <typename T>
     using optional_reference = std::optional<std::reference_wrapper<T>>;
 
+    template <typename T>
+    using const_optional_reference = std::optional<std::reference_wrapper<const T>>;
+
     class control : public entity
     {
         event_listener_list<control_resized_event> m_control_resized_listeners;
@@ -58,9 +61,9 @@ namespace clsn::ui
 
         ~control() override;
 
-        virtual void set_parent_control(control& control);
-        auto get_parent_control() -> optional_reference<control>&;
-        auto get_parent_control() const -> const optional_reference<control>&;
+        virtual void set_parent_control(optional_reference<control>);
+        auto get_parent_control() -> optional_reference<control>;
+        auto get_parent_control() const -> const_optional_reference<control>;
 
         CLSN_PROPERTY(actual_position, point, true);
         CLSN_PROPERTY(actual_size, dimension, true);
@@ -120,9 +123,9 @@ namespace clsn::ui
 
         virtual void release_mouse();
 
-        virtual void set_parent_window(std::optional<std::reference_wrapper<window>>);
-        auto get_parent_window() -> std::optional<std::reference_wrapper<window>>;
-        auto get_parent_window() const -> std::optional<std::reference_wrapper<const window>>;
+        virtual void set_parent_window(optional_reference<window>);
+        auto get_parent_window() -> optional_reference<window>;
+        auto get_parent_window() const -> const_optional_reference<window>;
 
         auto is_hovered() const -> bool;
 
@@ -151,10 +154,9 @@ namespace clsn::ui
         void init_events();
     };
 
-    using const_control_optional_reference =
-            std::optional<std::reference_wrapper<const control>>;
-
-    using control_optional_reference =
-        std::optional<std::reference_wrapper<control>>;
-
+    template <typename T, typename... Args>
+    std::shared_ptr<T> make_control(Args&&... args)
+    {
+        return std::make_shared<T>(std::forward<Args>(args)...);
+    }
 }

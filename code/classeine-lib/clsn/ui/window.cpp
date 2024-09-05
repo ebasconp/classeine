@@ -7,9 +7,9 @@ namespace
 {
     using namespace clsn::ui;
 
-    auto areEqual(
-            const const_control_optional_reference& a,
-            const const_control_optional_reference& b) -> bool
+    auto are_equal(
+            const const_optional_reference<control>& a,
+            const const_optional_reference<control>& b) -> bool
     {
         if (a.has_value() != b.has_value())
             return false;
@@ -65,21 +65,20 @@ namespace clsn::ui
 
     void window::process_mouse_moved_event(events::mouse_moved_event &e)
     {
-        auto currentlyHovered = get_control_by_position(e.position);
-        if (!areEqual(m_hovered_control, currentlyHovered))
+        auto currently_hovered = get_control_by_position(e.position);
+        if (!are_equal(m_hovered_control, currently_hovered))
         {
             if (m_hovered_control.has_value())
             {
                 m_hovered_control.value().get().invalidate();
             }
 
-            m_hovered_control = currentlyHovered;
+            m_hovered_control = currently_hovered;
 
             if (m_hovered_control.has_value())
             {
                 m_hovered_control.value().get().invalidate();
             }
-
         }
     }
 
