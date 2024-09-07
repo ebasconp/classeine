@@ -111,4 +111,13 @@ namespace clsn::ui
     {
         return m_skin->get_current_theme_name();
     }
+
+    void ui_manager::run(std::function<void()> proc)
+    {
+        clsn::ui::ui_manager::init();
+        proc();
+        clsn::ui::ui_manager::finalize();
+        clsn::core::entity::dump();
+    }
+
 }

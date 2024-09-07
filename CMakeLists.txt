@@ -35,7 +35,12 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     endif()
 endif()
 
-add_executable(classeine code/classeine-demo/Main.cpp
+add_executable(classeine
+        code/classeine-demo/Main.cpp
+
+        code/classeine-demo/demo_option_container.cpp
+        code/classeine-demo/demo_window.cpp
+
         code/classeine-lib/clsn/core/entity.cpp
         code/classeine-lib/clsn/core/event.cpp
         code/classeine-lib/clsn/core/strings.cpp
