@@ -33,6 +33,16 @@ namespace clsn::ui
 
         virtual ~layout_container() = default;
 
+        auto get_layout() -> Layout&
+        {
+            return m_layout;
+        }
+
+        auto get_layout() const -> const Layout&
+        {
+            return m_layout;
+        }
+
         template <typename ControlType, typename... Args>
         std::shared_ptr<ControlType> make_and_add(Args&&... args)
         {
@@ -112,19 +122,19 @@ namespace clsn::ui
             if (visibleCount == 0)
                 return;
 
-            Layout layout;
+            m_layout.clear();
 
             this->iterate_elements([&](control_and_constraint& e)
             {
                 if (!e.m_control->is_visible())
                     return;
 
-                layout.add(
+                m_layout.add(
                     {e.m_control->get_actual_position(), e.m_control->get_actual_preferred_size()},
                     e.m_constraint);
             });
 
-            layout.layout(this->get_actual_bounds());
+            m_layout.layout(this->get_actual_bounds());
 
             int count = get_count();
             for (int i = 0, j = 0; i < count; i++)
@@ -133,7 +143,7 @@ namespace clsn::ui
                 if (!ctrl.is_visible())
                     continue;
 
-                auto& rgn = layout.get_element_at(j).m_region;
+                auto& rgn = m_layout.get_element_at(j).m_region;
 
                 ctrl.set_actual_position(rgn.get_position());
                 ctrl.set_actual_size(rgn.get_size());

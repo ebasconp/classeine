@@ -28,6 +28,7 @@ namespace clsn::ui::layouts
         dual_layout();
 
         auto get_orientation() const -> dual_layout_orientation;
+        void set_orientation(dual_layout_orientation orientation);
 
         void layout(const region& rgn) override;
 
