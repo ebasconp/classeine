@@ -1,6 +1,6 @@
 #include "label_renderer.h"
 
-#include "clsn/ui/control.h"
+#include "clsn/ui/label.h"
 #include "clsn/ui/ui_manager.h"
 
 #include "clsn/ui/painters/background_painter.h"
@@ -16,10 +16,13 @@ namespace clsn::ui::renderers
 
         const auto bc = ui_manager::get_instance().get_color(section_name, "container_background_color");
 
-        painters::background_painter::paint_background(gfx, rgn ,bc);
+        painters::background_painter::paint_background(gfx, rgn, bc);
+
+        const auto& _label = static_cast<const label&>(ctrl);
 
         using namespace clsn::ui::painters::label_painter;
-        painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};
+        painting_info info{_label.get_horizontal_alignment(),
+                           _label.get_vertical_alignment()};
 
         painters::label_painter::paint_label(gfx, rgn, ctrl, info);
     }
