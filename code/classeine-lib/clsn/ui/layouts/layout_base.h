@@ -34,6 +34,11 @@ namespace clsn::ui::layouts
             return static_cast<int>(m_elements.size());
         }
 
+        void clear()
+        {
+            m_elements.clear();
+        }
+
         auto get_element_at(int index) -> region_and_constraint&
         {
             return m_elements[index];
