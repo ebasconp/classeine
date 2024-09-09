@@ -3,16 +3,16 @@
 namespace
 {
     template <typename Type>
-    auto getFromDefaults(const clsn::ui::ui_theme_defaults& defaults, std::string_view section_name, std::string_view name, const Type& errorValue) -> const Type&
+    auto get_from_defaults(const clsn::ui::ui_theme_defaults& defaults, std::string_view section_name, std::string_view name, const Type& error_value) -> const Type&
     {
         const auto value = defaults.get<Type>(section_name, name);
         if (!value.has_value())
         {
-            const auto themeValue = defaults.get<Type>("", name);
-            if (themeValue.has_value())
-                return themeValue->get();
+            const auto theme_value = defaults.get<Type>("", name);
+            if (theme_value.has_value())
+                return theme_value->get();
 
-            return errorValue;
+            return error_value;
         }
 
         return value->get();
@@ -21,18 +21,18 @@ namespace
 
 namespace clsn::ui
 {
-    auto ui_theme::get_color(std::string_view section_name, std::string_view name, const color& errorValue) const -> const color&
+    auto ui_theme::get_color(std::string_view section_name, std::string_view name, const color& error_value) const -> const color&
     {
-        return getFromDefaults<color>(m_defaults_by_name, section_name, name, errorValue);
+        return get_from_defaults<color>(m_defaults_by_name, section_name, name, error_value);
     }
 
-    auto ui_theme::get_dimension(std::string_view section_name, std::string_view name, const dimension& errorValue) const -> const dimension&
+    auto ui_theme::get_dimension(std::string_view section_name, std::string_view name, const dimension& error_value) const -> const dimension&
     {
-        return getFromDefaults<dimension>(m_defaults_by_name, section_name, name, errorValue);
+        return get_from_defaults<dimension>(m_defaults_by_name, section_name, name, error_value);
     }
 
-    auto ui_theme::get_font(std::string_view section_name, std::string_view name, const font& errorValue) const -> const font&
+    auto ui_theme::get_font(std::string_view section_name, std::string_view name, const font& error_value) const -> const font&
     {
-        return getFromDefaults<font>(m_defaults_by_name, section_name, name, errorValue);
+        return get_from_defaults<font>(m_defaults_by_name, section_name, name, error_value);
     }
 }

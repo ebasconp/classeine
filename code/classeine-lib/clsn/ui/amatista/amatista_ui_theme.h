@@ -12,7 +12,11 @@ namespace clsn::ui::amatista
         void populate_defaults() final;
         
     protected:
-        virtual auto get_default_font() const -> font;
+        virtual auto get_default_regular_font() const -> font;
+        virtual auto get_default_bold_font() const -> font;
+        virtual auto get_default_italic_font() const -> font;
+        virtual auto get_default_bold_italic_font() const -> font;
+
         virtual auto get_button_preferred_size() const -> dimension;
 
         virtual auto get_bevel_up_color() const -> color = 0;

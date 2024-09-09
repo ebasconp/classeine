@@ -23,6 +23,11 @@ namespace clsn::draw
         return m_style;
     }
 
+    auto font::add_size(int size) const noexcept -> font
+    {
+        return {m_name, m_style, m_size + size};
+    }
+
     auto font::operator==(const font& other) const noexcept -> bool
     {
         return std::tie(m_name, m_style, m_size) ==
