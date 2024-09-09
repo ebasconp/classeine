@@ -24,7 +24,7 @@ namespace clsn::demo
         m_option_container = (*this)().make_and_add<demo_option_container>(dual_layout_constraint::use_preferred_size);
 
         auto right_container = (*this)().make_and_add<dual_layout_container>(dual_layout_constraint::use_all_available_space);
-        right_container->set_orientation(dual_layout_orientation::horizontal);
+        right_container->set_orientation(dual_layout_orientation::vertical);
 
         m_label = right_container->make_and_add<label>(dual_layout_constraint::use_preferred_size);
         m_label->set_preferred_size(dimension{24, 24});
