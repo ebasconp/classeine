@@ -1,5 +1,8 @@
 #pragma once
 
+#include "text_horizontal_alignment.h"
+#include "text_vertical_alignment.h"
+
 namespace clsn::draw
 {
     class color;
