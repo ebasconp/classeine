@@ -4,6 +4,8 @@
 #include <clsn/ui/dual_layout_container.h>
 #include <clsn/ui/main_window.h>
 
+#include <string>
+
 namespace clsn::demo
 {
   using namespace clsn::ui;
@@ -18,6 +20,8 @@ namespace clsn::demo
 
   public:
     demo_window();
+
+    void set_title(const std::string& title);
 
   private:
     void init_container();
