@@ -28,6 +28,8 @@ namespace clsn::draw
         auto get_size() const noexcept -> int;
         auto get_style() const noexcept -> font_style;
 
+        auto add_size(int size) const noexcept -> font;
+
         bool operator==(const font& font) const noexcept;
     };
 }

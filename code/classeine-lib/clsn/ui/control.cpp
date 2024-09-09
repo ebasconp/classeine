@@ -207,7 +207,7 @@ namespace clsn::ui
         if (font.has_value())
             return font.value();
 
-        return ui_manager::get_instance().get_font(m_defaultSectionName, "defaultFont");
+        return ui_manager::get_instance().get_font(m_defaultSectionName, "default_regular_font");
     }
 
     auto control::get_actual_preferred_size() const -> const dimension&

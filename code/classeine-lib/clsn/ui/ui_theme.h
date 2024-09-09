@@ -27,8 +27,8 @@ namespace clsn::ui
             m_defaults_by_name.set(section_name, name, std::forward<Type>(value));
         }
 
-        auto get_color(std::string_view section_name, std::string_view name, const color& errorValue = color{255, 0, 0}) const -> const color&;
-        auto get_dimension(std::string_view section_name, std::string_view name, const dimension& errorValue = dimension{32, 32}) const -> const dimension&;
-        auto get_font(std::string_view section_name, std::string_view name, const font& errorValue = font{}) const -> const font&;
+        auto get_color(std::string_view section_name, std::string_view name, const color& error_value = color{255, 0, 0}) const -> const color&;
+        auto get_dimension(std::string_view section_name, std::string_view name, const dimension& error_value = dimension{32, 32}) const -> const dimension&;
+        auto get_font(std::string_view section_name, std::string_view name, const font& error_value = font{}) const -> const font&;
     };
 }

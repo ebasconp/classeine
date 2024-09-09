@@ -16,8 +16,14 @@ include_directories(${SDL2_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS} ${SDL2_GFX_INCL
 
 if (WIN32)
     add_compile_definitions(_CLSN_DEFAULT_FONT_PATH_="c:/windows/fonts/calibri.ttf")
+    add_compile_definitions(_CLSN_DEFAULT_BOLD_FONT_PATH_="c:/windows/fonts/calibrib.ttf")
+    add_compile_definitions(_CLSN_DEFAULT_ITALIC_FONT_PATH_="c:/windows/fonts/calibrii.ttf")
+    add_compile_definitions(_CLSN_DEFAULT_BOLD_ITALIC_FONT_PATH_="c:/windows/fonts/calibriz.ttf")
 else ()
     add_compile_definitions(_CLSN_DEFAULT_FONT_PATH_="/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf")
+    add_compile_definitions(_CLSN_DEFAULT_BOLD_FONT_PATH_="/usr/share/fonts/opentype/urw-base35/NimbusSans-Bold.otf")
+    add_compile_definitions(_CLSN_DEFAULT_ITALIC_FONT_PATH_="/usr/share/fonts/opentype/urw-base35/NimbusSans-Italic.otf")
+    add_compile_definitions(_CLSN_DEFAULT_BOLD_ITALIC_FONT_PATH_="/usr/share/fonts/opentype/urw-base35/NimbusSans-BoldItalic.otf")
 endif()
 
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")

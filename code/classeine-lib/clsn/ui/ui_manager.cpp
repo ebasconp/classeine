@@ -47,7 +47,16 @@ namespace clsn::ui
     void ui_manager::populate_font_mappings()
     {
         add_font_mapping(
-            font_info{"Default", font_style::regular}, _CLSN_DEFAULT_FONT_PATH_);
+            font_info{"default", font_style::regular}, _CLSN_DEFAULT_FONT_PATH_);
+
+        add_font_mapping(
+            font_info{"bold", font_style::bold}, _CLSN_DEFAULT_BOLD_FONT_PATH_);
+
+        add_font_mapping(
+            font_info{"italic", font_style::italic}, _CLSN_DEFAULT_ITALIC_FONT_PATH_);
+
+        add_font_mapping(
+            font_info{"bold_italic", font_style::bold_italic}, _CLSN_DEFAULT_BOLD_ITALIC_FONT_PATH_);
     }
 
     void ui_manager::populate_defaults()

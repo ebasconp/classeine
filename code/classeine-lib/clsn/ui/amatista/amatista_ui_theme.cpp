@@ -16,15 +16,34 @@ namespace clsn::ui::amatista
         add("", "disabledBackgroundColor", get_disabled_background_color());
         add("", "disabledForegroundColor", get_disabled_foreground_color());
 
-        add("", "defaultFont", get_default_font());
+        add("", "default_regular_font", get_default_regular_font());
+        add("", "default_bold_font", get_default_bold_font());
+        add("", "default_italic_font", get_default_italic_font());
+        add("", "default_bold_italic_font", get_default_bold_italic_font());
+
 
         add("button", "pressedBackgroundColor", get_button_pressed_background_color());
         add("button", "preferredSize", get_button_preferred_size());
     }
 
-    auto amatista_ui_theme::get_default_font() const -> font
+    auto amatista_ui_theme::get_default_regular_font() const -> font
     {
-        return font{"Default", font_style::regular, 14};
+        return font{"default", font_style::regular, 14};
+    }
+
+    auto amatista_ui_theme::get_default_bold_font() const -> font
+    {
+        return font{"bold", font_style::bold, 14};
+    }
+
+    auto amatista_ui_theme::get_default_italic_font() const -> font
+    {
+        return font{"italic", font_style::italic, 14};
+    }
+
+    auto amatista_ui_theme::get_default_bold_italic_font() const -> font
+    {
+        return font{"bold_italic", font_style::bold_italic, 14};
     }
 
     auto amatista_ui_theme::get_button_preferred_size() const -> dimension
