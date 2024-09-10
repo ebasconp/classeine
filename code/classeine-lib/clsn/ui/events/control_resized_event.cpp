@@ -3,8 +3,10 @@
 namespace clsn::ui::events
 {
 
-control_resized_event::control_resized_event(int width, int height)
-: m_width{width}
+control_resized_event::control_resized_event(
+    control& ctrl, int width, int height)
+: control_event{ctrl}
+, m_width{width}
 , m_height{height}
 {
 }

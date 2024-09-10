@@ -1,16 +1,16 @@
 #pragma once
 
-#include "clsn/core/event.h"
+#include "clsn/ui/events/control_event.h"
 
 namespace clsn::ui::events
 {
-    class control_resized_event : public core::event
+    class control_resized_event : public control_event
     {
         int m_width;
         int m_height;
 
     public:
-        control_resized_event(int width, int height);
+        control_resized_event(control&, int width, int height);
 
         auto get_width() const noexcept -> int;
         auto get_height() const noexcept -> int;

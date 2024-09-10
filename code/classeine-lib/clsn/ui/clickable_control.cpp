@@ -15,12 +15,12 @@ namespace clsn::ui
         return m_pressed;
     }
 
-    void clickable_control::add_action_listener(event_listener<empty_event> event)
+    void clickable_control::add_action_listener(event_listener<action_event> event)
     {
         m_action_listeners.add(std::move(event));
     }
 
-    void clickable_control::notify_action_event(empty_event& e)
+    void clickable_control::notify_action_event(action_event& e)
     {
         m_action_listeners.notify(e);
     }
@@ -38,21 +38,21 @@ namespace clsn::ui
 
     void clickable_control::process_mouse_click_event(events::mouse_click_event& e)
     {
-        auto pressedNow = e.get_status() == clsn::ui::events::mouse_click_status::pressed;
+        auto pressed_now = e.get_status() == clsn::ui::events::mouse_click_status::pressed;
 
-        m_pressed = pressedNow;
+        m_pressed = pressed_now;
         this->invalidate();
 
         if (!m_pressed) // button has been released, then Action
         {
-            empty_event actionEvent;
-            notify_action_event(actionEvent);
+            action_event _action_event{*this, m_action_name.get()};
+            notify_action_event(_action_event);
         }
         else
         {
-            invoke_in_parent_window([this](auto& parentWindow)
+            invoke_in_parent_window([this](auto& parent_window)
             {
-                parentWindow.grabMouse(*this);
+                parent_window.grab_mouse(*this);
             });
         }
 
