@@ -24,7 +24,7 @@ namespace clsn::ui
         CLSN_PROPERTY(size, dimension, true)
         CLSN_BOOL_PROPERTY_VAL(resizable, true, true);
 
-        void grabMouse(control& control);
+        void grab_mouse(control& control);
         void release_mouse();
 
         auto is_hovered(const control& control) const -> bool;

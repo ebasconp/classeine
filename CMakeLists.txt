@@ -74,6 +74,8 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/amatista/amatista_ui_skin.cpp
         code/classeine-lib/clsn/ui/amatista/amatista_ui_theme.cpp
 
+        code/classeine-lib/clsn/ui/events/action_event.cpp
+        code/classeine-lib/clsn/ui/events/control_event.cpp
         code/classeine-lib/clsn/ui/events/control_resized_event.cpp
         code/classeine-lib/clsn/ui/events/mouse_click_event.cpp
         code/classeine-lib/clsn/ui/events/mouse_moved_event.cpp

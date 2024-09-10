@@ -49,9 +49,9 @@ namespace clsn::ui
         set_visible(false);
     }
 
-    void window::grabMouse(control& control)
+    void window::grab_mouse(control& ctrl)
     {
-        m_mouse_grabber_control = std::ref(control);
+        m_mouse_grabber_control = std::ref(ctrl);
     }
 
     void window::release_mouse()
