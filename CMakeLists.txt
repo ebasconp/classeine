@@ -37,6 +37,7 @@ endif()
 
 add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/core/entity.cpp
+        code/classeine-lib/clsn/core/event.cpp
         code/classeine-lib/clsn/core/strings.cpp
 
         code/classeine-lib/clsn/draw/color.cpp
@@ -56,6 +57,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/flow_layout_container.cpp
         code/classeine-lib/clsn/ui/hbox_layout_container.cpp
         code/classeine-lib/clsn/ui/label.cpp
+        code/classeine-lib/clsn/ui/mono_container.h
         code/classeine-lib/clsn/ui/radio_button.cpp
         code/classeine-lib/clsn/ui/radio_button_group.cpp
         code/classeine-lib/clsn/ui/toggle_button.cpp
@@ -71,6 +73,10 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/amatista/light_amatista_ui_theme.cpp
         code/classeine-lib/clsn/ui/amatista/amatista_ui_skin.cpp
         code/classeine-lib/clsn/ui/amatista/amatista_ui_theme.cpp
+
+        code/classeine-lib/clsn/ui/events/control_resized_event.cpp
+        code/classeine-lib/clsn/ui/events/mouse_click_event.cpp
+        code/classeine-lib/clsn/ui/events/mouse_moved_event.cpp
 
         code/classeine-lib/clsn/ui/impl/sdl2/graphics_sdl2_impl.cpp
         code/classeine-lib/clsn/ui/impl/sdl2/sdl2_font_cache.cpp
@@ -95,7 +101,6 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp
-        code/classeine-lib/clsn/ui/mono_container.h
 )
 
 target_include_directories(classeine PUBLIC code/classeine-lib)

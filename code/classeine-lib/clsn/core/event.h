@@ -1,27 +1,21 @@
 #pragma once
 
-#include <utility>
+#include "entity.h"
 
 namespace clsn::core
 {
-    template <typename Data>
-    class event final : public Data
+    class event : public entity
     {
         bool m_consumed;
 
     public:
-        template <typename... Args>
-        explicit event(Args&&... args)
-        : Data{std::forward<Args>(args)...}
-        , m_consumed{false}
-        {
-        }
+        virtual ~event() = default;
 
-        [[nodiscard]] auto is_consumed() const noexcept -> bool
-        {
-            return m_consumed;
-        }
+        [[nodiscard]] auto is_consumed() const noexcept -> bool;
 
-        void consume() { m_consumed = true; }
+        void consume();
+
+    protected:
+        event();
     };
 }

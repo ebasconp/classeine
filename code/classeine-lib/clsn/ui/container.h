@@ -136,7 +136,7 @@ namespace clsn::ui
                 if (!ctrl.is_visible() || !ctrl.is_enabled())
                     return;
 
-                if (ctrl.contains_point(e.getPoint()))
+                if (ctrl.contains_point(e.get_point()))
                 {
                     ctrl.notify_mouse_click_event(e);
                 }
@@ -154,7 +154,7 @@ namespace clsn::ui
                 if (!ctrl.is_visible() || !ctrl.is_enabled())
                     return;
 
-                if (ctrl.contains_point(e.position))
+                if (ctrl.contains_point(e.get_position()))
                 {
                     ctrl.notify_mouse_moved_event(e);
                 }
