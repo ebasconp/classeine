@@ -4,6 +4,9 @@
 #include "clsn/draw/dimension.h"
 
 #include "clsn/ui/button.h"
+#include "clsn/ui/dynamic_pane.h"
+
+#include "demo_hbox_layout_container.h"
 
 namespace clsn::demo
 {
@@ -21,7 +24,8 @@ namespace clsn::demo
     {
         auto btn = make_and_add<button>();
         btn->set_text(name);
-        btn->add_action_listener([this](auto& ) { this->process_action(); });
+        btn->set_action_name(name);
+        btn->add_action_listener([this](auto& e) { this->process_action(e); });
 
         return btn;
     }
@@ -36,8 +40,16 @@ namespace clsn::demo
         m_controls = init_option("Controls");
     }
 
-    void demo_option_container::process_action()
+    void demo_option_container::process_action(const action_event& e)
     {
+        const auto& action_name = e.get_action_name();
+
+        m_demo_window.set_title(action_name + " demo");
+
+        if (action_name == "hbox_layout_container")
+        {
+            m_demo_window.get_content_pane().set_inner_control(make_control<demo_hbox_layout_container>());
+        }
 
     }
 }

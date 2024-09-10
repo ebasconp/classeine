@@ -23,6 +23,8 @@ namespace clsn::demo
 
     void set_title(const std::string& title);
 
+    auto get_content_pane() -> dynamic_pane&;
+
   private:
     void init_container();
   };

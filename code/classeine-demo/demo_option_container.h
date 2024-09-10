@@ -4,6 +4,11 @@
 
 #include <clsn/ui/vbox_layout_container.h>
 
+namespace clsn::ui::events
+{
+    class action_event;
+}
+
 namespace clsn::demo
 {
     using namespace clsn::ui;
@@ -28,6 +33,6 @@ namespace clsn::demo
         void init_options();
         auto init_option(const std::string& name) -> std::shared_ptr<button>;
 
-        void process_action();
+        void process_action(const action_event& e);
     };
 }

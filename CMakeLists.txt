@@ -38,6 +38,7 @@ endif()
 add_executable(classeine
         code/classeine-demo/Main.cpp
 
+        code/classeine-demo/demo_hbox_layout_container.cpp
         code/classeine-demo/demo_option_container.cpp
         code/classeine-demo/demo_window.cpp
 
@@ -59,6 +60,7 @@ add_executable(classeine
         code/classeine-lib/clsn/ui/control.cpp
         code/classeine-lib/clsn/ui/dual_layout_container.cpp
         code/classeine-lib/clsn/ui/dynamic_pane.cpp
+        code/classeine-lib/clsn/ui/empty_control.cpp
         code/classeine-lib/clsn/ui/flow_layout_container.cpp
         code/classeine-lib/clsn/ui/hbox_layout_container.cpp
         code/classeine-lib/clsn/ui/label.cpp

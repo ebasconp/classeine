@@ -19,6 +19,11 @@ namespace clsn::demo
         init_container();
     }
 
+    auto demo_window::get_content_pane() -> dynamic_pane&
+    {
+        return *m_content_pane;
+    }
+
     void demo_window::init_container()
     {
         m_option_container = make_control<demo_option_container>(*this);
