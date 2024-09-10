@@ -49,7 +49,7 @@ namespace clsn::ui
         if (!is_enabled())
             return;
 
-        if (e.getStatus() == mouse_click_status::released)
+        if (e.get_status() == mouse_click_status::released)
         {
             invoke_in_parent_window([](auto& w) { w.release_mouse(); });
         }

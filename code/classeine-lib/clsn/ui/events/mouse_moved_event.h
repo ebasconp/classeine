@@ -8,10 +8,13 @@ namespace clsn::ui::events
 {
     using namespace clsn::draw;
 
-    struct point_data
+    class mouse_moved_event : public core::event
     {
-        point position;
-    };
+        point m_position;
 
-    using mouse_moved_event = clsn::core::event<point_data>;
+    public:
+        explicit mouse_moved_event(const point& position);
+
+        auto get_position() const noexcept -> const point&;
+    };
 }

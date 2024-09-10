@@ -38,7 +38,7 @@ namespace clsn::ui
 
     void clickable_control::process_mouse_click_event(events::mouse_click_event& e)
     {
-        auto pressedNow = e.getStatus() == clsn::ui::events::mouse_click_status::pressed;
+        auto pressedNow = e.get_status() == clsn::ui::events::mouse_click_status::pressed;
 
         m_pressed = pressedNow;
         this->invalidate();
