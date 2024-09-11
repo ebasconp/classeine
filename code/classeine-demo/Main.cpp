@@ -42,6 +42,15 @@ void create_option_buttons(dual_layout_container& options)
 
     auto hbox_container = make_control<hbox_layout_container>();
     hbox_container->set_background_color(colors::make_red());
+    auto hbb1 = hbox_container->make_and_add<button>();
+    hbb1->set_text("Button A");
+
+    auto hbb2 = hbox_container->make_and_add<button>();
+    hbb2->set_text("Button B");
+
+    auto hbb3 = hbox_container->make_and_add<button>();
+    hbb3->set_text("Button C");
+    hbb3->add_action_listener([](auto&) { clsn::core::console::debug("Hello hbb3"); });
 
     auto b1 = vbox->make_and_add<button>();
     b1->set_text("Buttons");

@@ -50,9 +50,10 @@ namespace clsn::ui
         optional_reference<window>  m_parentWindow;
         optional_reference<control> m_parent_control;
 
-    public:
+    protected:
         explicit control(std::string_view section_name);
 
+    public:
         control(const control&) = delete;
         control(control&&) = delete;
 

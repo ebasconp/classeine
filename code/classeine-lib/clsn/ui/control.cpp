@@ -113,7 +113,10 @@ namespace clsn::ui
 
     void control::init_events()
     {
-        add_visible_changed_listener([this](auto&) { invalidate(); });
+        auto invalidate_proc = [this](auto&) { invalidate(); };
+
+        add_text_changed_listener(invalidate_proc);
+        add_visible_changed_listener(invalidate_proc);
     }
 
     void control::set_parent_window(optional_reference<window> parentWindow)

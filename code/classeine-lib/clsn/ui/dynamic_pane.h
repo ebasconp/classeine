@@ -24,6 +24,12 @@ namespace clsn::ui
         void validate() const noexcept override;
 
     protected:
+        void process_mouse_click_event(events::mouse_click_event& e) override;
+        void process_mouse_moved_event(events::mouse_moved_event& e) override;
+
         auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
+
+    private:
+        void init_dynamic_pane_events();
     };
 }
