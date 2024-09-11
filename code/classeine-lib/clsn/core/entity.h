@@ -29,6 +29,8 @@ namespace clsn::core
 
         virtual ~entity();
 
+        virtual auto to_string() const -> std::string;
+
         static void dump();
     };
 }

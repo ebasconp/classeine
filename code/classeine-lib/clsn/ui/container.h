@@ -3,6 +3,8 @@
 #include "control.h"
 #include "ui_manager.h"
 
+#include "clsn/core/console.h"
+
 #include "window.h"
 
 
@@ -47,6 +49,7 @@ namespace clsn::ui
         {
             m_needs_to_paint_the_container = true;
 
+            //ETOTODO: clsn::core::console::debug("container::invalidate: [[{}]]", *this);
             iterate_controls([](auto& c) { c.invalidate(); });
         }
 
@@ -97,7 +100,7 @@ namespace clsn::ui
         }
 
         auto get_control_by_position(const point &point) const
-    -> std::optional<std::reference_wrapper<const control>> override
+                -> const_optional_reference<control> override
         {
             std::optional<std::reference_wrapper<const control>> result;
 

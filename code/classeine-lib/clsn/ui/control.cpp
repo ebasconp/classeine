@@ -242,5 +242,9 @@ namespace clsn::ui
         return m_parent_control;
     }
 
-
+    auto control::to_string() const -> std::string
+    {
+        using namespace clsn::core::strings;
+        return format("({}) [{}]: {}", typeid(*this).name(), m_text.get(), this);
+    }
 }

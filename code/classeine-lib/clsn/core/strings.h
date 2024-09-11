@@ -16,6 +16,17 @@ namespace clsn::core::strings
         return value.to_string();
     }
 
+    template <typename T>
+    auto to_string(const T* value) -> std::string
+    {
+        if (value == nullptr)
+            return "[nullptr]";
+
+        std::stringstream ss;
+        ss << value;
+        return ss.str();
+    }
+
     auto to_string(int value) -> std::string;
     auto to_string(double value) -> std::string;
     auto to_string(bool value) -> std::string;

@@ -1,5 +1,7 @@
 #include "entity.h"
 
+#include "console.h"
+
 #include <iostream>
 
 namespace clsn::core
@@ -50,6 +52,11 @@ namespace clsn::core
 #endif
     }
 
+    auto entity::to_string() const -> std::string
+    {
+        return clsn::core::strings::format("({}): {}", typeid(*this).name(), this);
+    }
+
     void entity::dump()
     {
 #ifdef _CLSN_DEBUG_
@@ -62,11 +69,11 @@ namespace clsn::core
 
         if (instances_left_count != 0)
         {
-            std::cout << "Living entities:\n";
+            clsn::core::console::debug("Living entities");
 
             for (auto& p : m_living_entities)
             {
-                std::cout << "* (" << typeid(*p).name() << ")\n";
+                clsn::core::console::debug("* {}", *p);
             }
         }
 

@@ -145,6 +145,8 @@ namespace clsn::ui
 
         virtual void load_defaults();
 
+        std::string to_string() const override;
+
     protected:
         virtual void process_mouse_click_event(events::mouse_click_event& e);
         virtual void process_mouse_moved_event(events::mouse_moved_event& e);

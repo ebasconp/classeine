@@ -44,13 +44,21 @@ void create_option_buttons(dual_layout_container& options)
     hbox_container->set_background_color(colors::make_red());
     auto hbb1 = hbox_container->make_and_add<button>();
     hbb1->set_text("Button A");
+    hbb1->add_action_listener([](auto&) { clsn::core::console::debug("Hello hbb1"); });
 
     auto hbb2 = hbox_container->make_and_add<button>();
     hbb2->set_text("Button B");
+    hbb2->add_action_listener([](auto&) { clsn::core::console::debug("Hello hbb2"); });
 
     auto hbb3 = hbox_container->make_and_add<button>();
     hbb3->set_text("Button C");
-    hbb3->add_action_listener([](auto&) { clsn::core::console::debug("Hello hbb3"); });
+    auto ptr = hbb3.get();
+    hbb3->add_action_listener([ptr](auto&)
+    {
+        static auto i = 0;
+        ptr->set_text(clsn::core::strings::format("Clicked: {}", i++));
+        clsn::core::console::debug("Hello hbb3");
+    });
 
     auto b1 = vbox->make_and_add<button>();
     b1->set_text("Buttons");
