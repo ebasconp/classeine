@@ -118,6 +118,18 @@ namespace clsn::ui
             return result;
         }
 
+        void set_parent_window(optional_reference<window> pw) override
+        {
+            control::set_parent_window(pw);
+            iterate_controls([&](control& ctrl) { ctrl.set_parent_window(pw); });
+        }
+
+        void set_parent_control(optional_reference<control> parent_control) override
+        {
+            control::set_parent_control(parent_control);
+            iterate_controls([&](control& ctrl) { ctrl.set_parent_control(*this); });
+        }
+
     protected:
         void init_new_control(control& control)
         {

@@ -101,8 +101,10 @@ namespace clsn::ui
 
             add_size_changed_listener([this](auto& e)
             {
-                auto& newValue = e.get_new_value();
-                m_control.set_actual_size(newValue);
+                auto& new_value = e.get_new_value();
+
+                set_actual_size(new_value);
+                m_control.set_actual_size(new_value);
                 m_control.invalidate();
             });
 

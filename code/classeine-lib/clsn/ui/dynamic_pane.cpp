@@ -50,8 +50,12 @@ namespace clsn::ui
         }
 
         m_inner_control = ctrl;
-        m_inner_control->set_parent_control(this->get_parent_control());
-        m_inner_control->set_parent_window(this->get_parent_window());
+
+        if (ctrl != nullptr)
+        {
+            m_inner_control->set_parent_window(this->get_parent_window());
+            m_inner_control->set_parent_control(*this);
+        }
 
         do_layout();
         invalidate();
