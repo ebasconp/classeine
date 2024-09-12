@@ -24,7 +24,7 @@ namespace clsn::ui::impl::sdl2
     template <typename WindowType>
     class main_window_sdl2_impl final
     {
-        WindowType& m_parentWindow;
+        WindowType& m_parent_window;
 
         SDL_Window* m_window = nullptr;
         SDL_Renderer* m_renderer = nullptr;
@@ -32,8 +32,8 @@ namespace clsn::ui::impl::sdl2
         bool m_sdl_initialized = false;
 
     public:
-        explicit main_window_sdl2_impl(WindowType& parentWindow)
-        : m_parentWindow{parentWindow}
+        explicit main_window_sdl2_impl(WindowType& parent_window)
+        : m_parent_window{parent_window}
         {
         }
 
@@ -68,13 +68,13 @@ namespace clsn::ui::impl::sdl2
             }
 
             const int resizable =
-                m_parentWindow.is_resizable() ? SDL_WINDOW_RESIZABLE : 0;
+                m_parent_window.is_resizable() ? SDL_WINDOW_RESIZABLE : 0;
 
-            m_window = SDL_CreateWindow(m_parentWindow.get_text().c_str(),
+            m_window = SDL_CreateWindow(m_parent_window.get_text().c_str(),
                                         SDL_WINDOWPOS_CENTERED,
                                         SDL_WINDOWPOS_CENTERED,
-                                        m_parentWindow.get_size().get_width(),
-                                        m_parentWindow.get_size().get_height(),
+                                        m_parent_window.get_size().get_width(),
+                                        m_parent_window.get_size().get_height(),
                                         SDL_WINDOW_SHOWN | resizable);
             if (m_window == nullptr)
             {
@@ -99,7 +99,7 @@ namespace clsn::ui::impl::sdl2
                 return;
             }
 
-            auto& minimumSize = m_parentWindow.get_minimum_size();
+            auto& minimumSize = m_parent_window.get_minimum_size();
             SDL_SetWindowMinimumSize(
                 m_window, minimumSize.get_width(), minimumSize.get_height());
 
@@ -136,17 +136,17 @@ namespace clsn::ui::impl::sdl2
 
         void repaintAll(graphics_sdl2_impl& graphics)
         {
-            const region region{point{0, 0}, m_parentWindow.get_actual_size()};
-            m_parentWindow().paint(graphics, region);
+            const region region{point{0, 0}, m_parent_window.get_actual_size()};
+            m_parent_window().paint(graphics, region);
             graphics.apply();
         }
 
         void run_event_loop()
         {
-            m_parentWindow().do_layout();
-            m_parentWindow().invalidate();
+            m_parent_window().do_layout();
+            m_parent_window().invalidate();
 
-            graphics_sdl2_impl graphics{*m_renderer, m_parentWindow.get_size()};
+            graphics_sdl2_impl graphics{*m_renderer, m_parent_window.get_size()};
 
             SDL_Event event;
             while (SDL_WaitEvent(&event))
@@ -180,8 +180,8 @@ namespace clsn::ui::impl::sdl2
                         break;
                 }
 
-                const region region{point{0, 0}, m_parentWindow.get_actual_size()};
-                m_parentWindow().paint(graphics, region);
+                const region region{point{0, 0}, m_parent_window.get_actual_size()};
+                m_parent_window().paint(graphics, region);
                 graphics.apply();
             }
         }
@@ -196,18 +196,18 @@ namespace clsn::ui::impl::sdl2
             clsn::ui::events::mouse_click_event mouseClickEvent{
                 status, point{e.button.x, e.button.y}};
 
-            m_parentWindow.process_mouse_click_event(mouseClickEvent);
+            m_parent_window.process_mouse_click_event(mouseClickEvent);
         }
 
         void trigger_mouse_moved_event(SDL_Event& e)
         {
-            clsn::ui::events::mouse_moved_event mouseMovedEvent{point{e.motion.x, e.motion.y}};
-            m_parentWindow.process_mouse_moved_event(mouseMovedEvent);
+            mouse_moved_event _mouse_moved_event{point{e.motion.x, e.motion.y}};
+            m_parent_window.process_mouse_moved_event(_mouse_moved_event);
         }
 
         void process_control_resized_event(const dimension& newSize)
         {
-            m_parentWindow.set_actual_size(newSize);
+            m_parent_window.set_actual_size(newSize);
         }
     };
 }

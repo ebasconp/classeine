@@ -18,12 +18,22 @@ namespace clsn::ui
         auto get_inner_control() -> std::shared_ptr<control>&;
         auto get_inner_control() const -> const std::shared_ptr<control>&;
 
-        void set_inner_control(std::shared_ptr<control> ctrl);
+        void set_inner_control(const std::shared_ptr<control>& ctrl);
 
         void invalidate() const noexcept override;
         void validate() const noexcept override;
+        auto is_invalidated() const noexcept -> bool override;
+
+        auto get_control_by_position(const point& point) const
+            -> const_optional_reference<control> override;
 
     protected:
+        void process_mouse_click_event(events::mouse_click_event& e) override;
+        void process_mouse_moved_event(events::mouse_moved_event& e) override;
+
         auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
+
+    private:
+        void init_dynamic_pane_events();
     };
 }

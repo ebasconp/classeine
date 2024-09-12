@@ -11,10 +11,10 @@
 namespace clsn::ui
 {
     control::control(std::string_view section_name)
-    : m_defaultSectionName{section_name}
+    : m_default_section_name{section_name}
     , m_invalidated{true}
     {
-        init_events();
+        init_control_events();
     }
 
     control::~control() = default;
@@ -23,7 +23,7 @@ namespace clsn::ui
     {
         debug_count("paint");
 
-        if (!m_invalidated)
+        if (!is_invalidated())
             return;
 
         get_renderer().paint(graphics, region, *this);
@@ -72,10 +72,10 @@ namespace clsn::ui
 
     auto control::get_default_section_name() const -> std::string_view
     {
-        return m_defaultSectionName;
+        return m_default_section_name;
     }
 
-    void control::set_renderer(std::unique_ptr<renderer_base>&& renderer)
+    void control::set_renderer(std::unique_ptr<renderer_base>&& renderer) const
     {
         m_renderer = std::move(renderer);
     }
@@ -111,25 +111,28 @@ namespace clsn::ui
     }
 
 
-    void control::init_events()
+    void control::init_control_events()
     {
-        add_visible_changed_listener([this](auto&) { invalidate(); });
+        auto invalidate_proc = [this](auto&) { invalidate(); };
+
+        add_text_changed_listener(invalidate_proc);
+        add_visible_changed_listener(invalidate_proc);
     }
 
     void control::set_parent_window(optional_reference<window> parentWindow)
     {
-        m_parentWindow = parentWindow;
+        m_parent_window = parentWindow;
     }
 
     optional_reference<window> control::get_parent_window()
     {
-        return m_parentWindow;
+        return m_parent_window;
     }
 
     optional_reference<const window>
         control::get_parent_window() const
     {
-        return m_parentWindow;
+        return m_parent_window;
     }
 
     auto control::contains_point(const point& point) const -> bool
@@ -148,10 +151,10 @@ namespace clsn::ui
 
     auto control::is_hovered() const -> bool
     {
-        if (!m_parentWindow.has_value())
+        if (!m_parent_window.has_value())
             return false;
 
-        return m_parentWindow.value().get().is_hovered(*this);
+        return m_parent_window.value().get().is_hovered(*this);
     }
 
 
@@ -188,7 +191,7 @@ namespace clsn::ui
             return color.value();
 
         return ui_manager::get_instance().get_color(
-                    m_defaultSectionName, "control_background_color");
+                    m_default_section_name, "control_background_color");
     }
 
     auto control::get_actual_foreground_color() const -> const color&
@@ -198,7 +201,7 @@ namespace clsn::ui
             return color.value();
 
         return ui_manager::get_instance().get_color(
-                    m_defaultSectionName, "controlForegroundColor");
+                    m_default_section_name, "controlForegroundColor");
     }
 
     auto control::get_actual_font() const -> const font&
@@ -207,7 +210,7 @@ namespace clsn::ui
         if (font.has_value())
             return font.value();
 
-        return ui_manager::get_instance().get_font(m_defaultSectionName, "default_regular_font");
+        return ui_manager::get_instance().get_font(m_default_section_name, "default_regular_font");
     }
 
     auto control::get_actual_preferred_size() const -> const dimension&
@@ -216,7 +219,7 @@ namespace clsn::ui
         if (size.has_value())
             return size.value();
 
-        return ui_manager::get_instance().get_dimension(m_defaultSectionName, "preferredSize");
+        return ui_manager::get_instance().get_dimension(m_default_section_name, "preferredSize");
     }
 
     auto control::get_actual_bounds() const -> region
@@ -239,5 +242,9 @@ namespace clsn::ui
         return m_parent_control;
     }
 
-
+    auto control::to_string() const -> std::string
+    {
+        using namespace clsn::core::strings;
+        return format("({}) [{}]: {}", typeid(*this).name(), m_text.get(), this);
+    }
 }

@@ -2,6 +2,7 @@
 
 #include "ui_manager.h"
 
+#include <clsn/core/console.h>
 
 namespace
 {
@@ -77,6 +78,7 @@ namespace clsn::ui
 
             if (m_hovered_control.has_value())
             {
+                clsn::core::console::debug("window::process_mouse_moved_event: Ctrl: {}", m_hovered_control.value().get());
                 m_hovered_control.value().get().invalidate();
             }
         }

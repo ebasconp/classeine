@@ -2,12 +2,15 @@
 
 #include "renderers/dynamic_pane_renderer.h"
 
+#include <clsn/core/console.h>
+
 namespace clsn::ui
 {
     using namespace clsn::ui::renderers;
 
     dynamic_pane::dynamic_pane() : control("dynamic_pane")
     {
+        init_dynamic_pane_events();
     }
 
     void dynamic_pane::do_layout()
@@ -35,7 +38,7 @@ namespace clsn::ui
         return m_inner_control;
     }
 
-    void dynamic_pane::set_inner_control(std::shared_ptr<control> ctrl)
+    void dynamic_pane::set_inner_control(const std::shared_ptr<control>& ctrl)
     {
         if (m_inner_control.get() == ctrl.get())
             return;
@@ -47,15 +50,20 @@ namespace clsn::ui
         }
 
         m_inner_control = ctrl;
-        m_inner_control->set_parent_control(this->get_parent_control());
-        m_inner_control->set_parent_window(this->get_parent_window());
 
+        if (ctrl != nullptr)
+        {
+            m_inner_control->set_parent_window(this->get_parent_window());
+            m_inner_control->set_parent_control(*this);
+        }
+
+        do_layout();
         invalidate();
-        m_inner_control->invalidate();
     }
 
     void dynamic_pane::invalidate() const noexcept
     {
+        //ETOTODO: clsn::core::console::debug("dynamic_pane::invalidate: [[{}]]", *this);
         control::invalidate();
 
         if (m_inner_control != nullptr)
@@ -70,5 +78,65 @@ namespace clsn::ui
             m_inner_control->validate();
     }
 
+    auto dynamic_pane::is_invalidated() const noexcept -> bool
+    {
+        if (m_inner_control == nullptr)
+        {
+            return control::is_invalidated();
+        }
 
+        return m_inner_control->is_invalidated();
+    }
+
+    void dynamic_pane::process_mouse_click_event(events::mouse_click_event& e)
+    {
+        if (m_inner_control == nullptr)
+            return;
+
+        if (!m_inner_control->is_visible() || !m_inner_control->is_enabled())
+                return;
+
+        if (m_inner_control->contains_point(e.get_point()))
+        {
+            m_inner_control->notify_mouse_click_event(e);
+        }
+
+        control::process_mouse_click_event(e);
+    }
+
+    void dynamic_pane::process_mouse_moved_event(events::mouse_moved_event& e)
+    {
+        control::process_mouse_moved_event(e);
+
+        if (m_inner_control == nullptr)
+            return;
+
+        if (!m_inner_control->is_visible() || !m_inner_control->is_enabled())
+            return;
+
+        if (m_inner_control->contains_point(e.get_position()))
+        {
+            m_inner_control->notify_mouse_moved_event(e);
+        }
+    }
+
+    void dynamic_pane::init_dynamic_pane_events()
+    {
+        add_actual_size_changed_listener([this](auto& )
+        {
+            do_layout();
+        });
+    }
+
+    auto dynamic_pane::get_control_by_position(const point &point) const
+            -> const_optional_reference<control>
+    {
+        if (m_inner_control == nullptr)
+            return {};
+
+        if (!m_inner_control->is_visible() || !m_inner_control->is_enabled())
+            return {};
+
+        return m_inner_control->get_control_by_position(point);
+    }
 }

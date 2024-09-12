@@ -43,16 +43,17 @@ namespace clsn::ui
         std::shared_ptr<entity> m_tag;
         mutable std::unique_ptr<renderer_base> m_renderer;
 
-        std::string m_defaultSectionName;
+        std::string m_default_section_name;
 
         mutable bool m_invalidated;
 
-        optional_reference<window>  m_parentWindow;
+        optional_reference<window>  m_parent_window;
         optional_reference<control> m_parent_control;
 
-    public:
+    protected:
         explicit control(std::string_view section_name);
 
+    public:
         control(const control&) = delete;
         control(control&&) = delete;
 
@@ -110,7 +111,7 @@ namespace clsn::ui
             return static_cast<EntityWrapper<TagType>&>(*m_tag).get();
         }
 
-        void set_renderer(std::unique_ptr<renderer_base>&& renderer);
+        void set_renderer(std::unique_ptr<renderer_base>&& renderer) const;
 
         auto get_renderer() const -> const renderer_base&;
         auto get_renderer() -> renderer_base&;
@@ -136,13 +137,15 @@ namespace clsn::ui
         template <typename Proc>
         void invoke_in_parent_window(Proc proc)
         {
-            if (!m_parentWindow.has_value())
+            if (!m_parent_window.has_value())
                 return;
 
-            proc(m_parentWindow.value().get());
+            proc(m_parent_window.value().get());
         }
 
         virtual void load_defaults();
+
+        std::string to_string() const override;
 
     protected:
         virtual void process_mouse_click_event(events::mouse_click_event& e);
@@ -151,7 +154,7 @@ namespace clsn::ui
         virtual auto make_default_renderer() const -> std::unique_ptr<renderer_base>;
 
     private:
-        void init_events();
+        void init_control_events();
     };
 
     template <typename T, typename... Args>

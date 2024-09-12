@@ -9,8 +9,8 @@ namespace clsn::ui::renderers
     class dynamic_pane_renderer : public renderer_base
     {
     public:
-        void paint(graphics& graphics,
-                   const region& region,
-                   const control& control) const override;
+        void paint(graphics& gfx,
+                   const region& rgn,
+                   const control& ctrl) const override;
     };
 }

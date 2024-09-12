@@ -31,7 +31,7 @@ namespace clsn::ui
         {
         }
 
-        virtual ~layout_container() = default;
+        ~layout_container() override = default;
 
         auto get_layout() -> Layout&
         {
@@ -91,7 +91,7 @@ namespace clsn::ui
             }
         }
 
-        auto get_count() const noexcept -> int override
+        [[nodiscard]] auto get_count() const noexcept -> int override
         {
             return static_cast<int>(m_controls.size());
         }
@@ -118,8 +118,7 @@ namespace clsn::ui
 
         void do_layout() override
         {
-            const auto visibleCount = this->get_visible_count();
-            if (visibleCount == 0)
+            if (this->get_visible_count() == 0)
                 return;
 
             m_layout.clear();
