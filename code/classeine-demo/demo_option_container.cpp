@@ -1,3 +1,8 @@
+// This file belongs to the Classeine project
+//
+// SPDX-License-Identifier: BSD-3-Clause
+// SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
+
 #include "demo_option_container.h"
 #include "demo_window.h"
 
@@ -5,8 +10,10 @@
 
 #include "clsn/ui/button.h"
 #include "clsn/ui/dynamic_pane.h"
+#include "clsn/ui/hbox_layout_container.h"
+#include "clsn/ui/vbox_layout_container.h"
 
-#include "demo_hbox_layout_container.h"
+#include "demo_box_layout_container.h"
 
 namespace clsn::demo
 {
@@ -48,8 +55,37 @@ namespace clsn::demo
 
         if (action_name == "hbox_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(make_control<demo_hbox_layout_container>());
+            m_demo_window.get_content_pane().set_inner_control(make_control<demo_box_layout_container<hbox_layout_container>>());
+            return;
         }
 
+        if (action_name == "vbox_layout_container")
+        {
+            m_demo_window.get_content_pane().set_inner_control(make_control<demo_box_layout_container<vbox_layout_container>>());
+            return;
+        }
+
+        if (action_name == "dual_layout_container")
+        {
+            m_demo_window.get_content_pane().set_inner_control(nullptr);
+            return;
+        }
+
+        if (action_name == "flow_layout_container")
+        {
+            m_demo_window.get_content_pane().set_inner_control(nullptr);
+            return;
+        }
+
+        if (action_name == "xy_layout_container")
+        {
+            m_demo_window.get_content_pane().set_inner_control(nullptr);
+            return;
+        }
+
+        if (action_name == "Controls")
+        {
+            m_demo_window.get_content_pane().set_inner_control(nullptr);
+        }
     }
 }

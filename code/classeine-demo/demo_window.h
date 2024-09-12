@@ -1,5 +1,10 @@
 #pragma once
 
+// This file belongs to the Classeine project
+//
+// SPDX-License-Identifier: BSD-3-Clause
+// SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
+
 #include <clsn/ui/forward.h>
 #include <clsn/ui/dual_layout_container.h>
 #include <clsn/ui/main_window.h>

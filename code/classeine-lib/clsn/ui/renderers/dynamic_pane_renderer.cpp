@@ -24,7 +24,7 @@ namespace clsn::ui::renderers
         const auto& inner_ctrl = dyn_pane.get_inner_control();
         if (inner_ctrl == nullptr)
         {
-            const auto& clr = ui_manager::get_instance().get_color("", "container_background_color");
+            const auto& clr = dyn_pane.get_actual_background_color();
             painters::background_painter::paint_background(gfx, rgn, clr);
             return;
         }

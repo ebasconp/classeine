@@ -13,5 +13,8 @@ namespace clsn::ui
     {
     public:
         empty_control();
+
+    protected:
+        auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;
     };
 }

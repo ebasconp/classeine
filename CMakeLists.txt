@@ -38,7 +38,6 @@ endif()
 add_executable(classeine
         code/classeine-demo/Main.cpp
 
-        code/classeine-demo/demo_hbox_layout_container.cpp
         code/classeine-demo/demo_option_container.cpp
         code/classeine-demo/demo_window.cpp
 
@@ -107,6 +106,7 @@ add_executable(classeine
         code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/customizable_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/dynamic_pane_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/empty_control_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp

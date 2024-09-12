@@ -21,7 +21,9 @@ namespace clsn::ui::renderers
     {
         const auto section_name = ctrl.get_default_section_name();
 
-        const auto bc = ui_manager::get_instance().get_color(section_name, "container_background_color");
+        const auto bc = ctrl.get_background_color().has_value()
+                ? ctrl.get_background_color().value()
+                : ui_manager::get_instance().get_color(section_name, "container_background_color");
 
         painters::background_painter::paint_background(gfx, rgn, bc);
 
