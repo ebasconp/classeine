@@ -1,3 +1,8 @@
+// This file belongs to the Classeine project
+//
+// SPDX-License-Identifier: BSD-3-Clause
+// SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
+
 #include "toggle_button_renderer.h"
 
 #include "clsn/ui/toggle_button.h"
