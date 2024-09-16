@@ -35,7 +35,16 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     endif()
 endif()
 
-add_executable(classeine code/classeine-demo/Main.cpp
+add_executable(classeine
+        code/classeine-demo/Main.cpp
+
+        code/classeine-demo/demo_control_container.cpp
+        code/classeine-demo/demo_dual_layout_container.cpp
+        code/classeine-demo/demo_flow_layout_container.cpp
+        code/classeine-demo/demo_xy_layout_container.cpp
+        code/classeine-demo/demo_option_container.cpp
+        code/classeine-demo/demo_window.cpp
+
         code/classeine-lib/clsn/core/entity.cpp
         code/classeine-lib/clsn/core/event.cpp
         code/classeine-lib/clsn/core/strings.cpp
@@ -54,6 +63,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/control.cpp
         code/classeine-lib/clsn/ui/dual_layout_container.cpp
         code/classeine-lib/clsn/ui/dynamic_pane.cpp
+        code/classeine-lib/clsn/ui/empty_control.cpp
         code/classeine-lib/clsn/ui/flow_layout_container.cpp
         code/classeine-lib/clsn/ui/hbox_layout_container.cpp
         code/classeine-lib/clsn/ui/label.cpp
@@ -100,6 +110,7 @@ add_executable(classeine code/classeine-demo/Main.cpp
         code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/customizable_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/dynamic_pane_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/empty_control_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/toggle_button_renderer.cpp

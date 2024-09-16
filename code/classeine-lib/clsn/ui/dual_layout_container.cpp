@@ -18,12 +18,10 @@ namespace clsn::ui
     {
     }
 
-
     auto dual_layout_container::get_orientation() const -> dual_layout_orientation
     {
         return this->get_layout().get_orientation();
     }
-
 
     void dual_layout_container::set_orientation(dual_layout_orientation orientation)
     {

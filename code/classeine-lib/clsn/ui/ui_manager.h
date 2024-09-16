@@ -37,6 +37,8 @@ namespace clsn::ui
         ~ui_manager() override = default;
 
         static auto get_instance() -> ui_manager&;
+
+        static void run(std::function<void()> proc);
         static void init();
         static void finalize();
 

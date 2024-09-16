@@ -17,7 +17,7 @@ namespace
         skin.make_theme_and_add<amatista::light_amatista_ui_theme>("light");
         skin.make_theme_and_add<amatista::dark_amatista_ui_theme>("dark");
 
-        skin.install_theme_by_name("dark");
+        skin.install_theme_by_name("light");
     }
 }
 

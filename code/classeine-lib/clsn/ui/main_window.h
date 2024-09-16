@@ -12,7 +12,7 @@
 namespace clsn::ui
 {
     template <typename ControlType>
-    class main_window final : public window
+    class main_window : public window
     {
         clsn::ui::impl::main_window_impl<main_window<ControlType>> m_impl;
         ControlType m_control;

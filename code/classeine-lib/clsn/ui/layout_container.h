@@ -51,13 +51,19 @@ namespace clsn::ui
         template <typename ControlType, typename... Args>
         std::shared_ptr<ControlType> make_and_add(Args&&... args)
         {
+            auto ptr = make_control<ControlType>();
+            add(ptr, std::forward<Args>(args)...);
+
+            return ptr;
+        }
+
+        template <typename... Args>
+        void add(std::shared_ptr<control> ctrl, Args&&... args)
+        {
             constraint _constraint{std::forward<Args>(args)...};
             check_if_valid_before_adding(_constraint);
-
-            auto ptr = make_control<ControlType>();
-            m_controls.emplace_back(ptr, std::move(_constraint));
-            this->init_new_control(*ptr);
-            return ptr;
+            m_controls.emplace_back(ctrl, std::move(_constraint));
+            this->init_new_control(*ctrl);
         }
 
         void iterate_elements(std::function<void(control_and_constraint&)> func) override
@@ -156,6 +162,19 @@ namespace clsn::ui
             }
         }
 
+        void set_parent_control(optional_reference<control> ctrl) override
+        {
+            control::set_parent_control(ctrl);
+
+            iterate_controls([this](control& c) { c.set_parent_control(*this); });
+        }
+
+        void set_parent_window(optional_reference<window> wnd) override
+        {
+            control::set_parent_window(wnd);
+
+            iterate_controls([&wnd](control& c) { c.set_parent_window(wnd); });
+        }
 
     protected:
         virtual void check_if_valid_before_adding(const constraint&) const

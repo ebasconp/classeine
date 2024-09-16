@@ -67,9 +67,14 @@ namespace clsn::ui
         auto get_parent_control() -> optional_reference<control>;
         auto get_parent_control() const -> const_optional_reference<control>;
 
-        CLSN_PROPERTY(actual_position, clsn::draw::point, true);
-        CLSN_PROPERTY(actual_size, clsn::draw::dimension, true);
-        CLSN_PROPERTY(background_color, std::optional<clsn::draw::color>, true);
+        virtual void set_parent_window(optional_reference<window>);
+        auto get_parent_window() -> optional_reference<window>;
+        auto get_parent_window() const -> const_optional_reference<window>;
+
+        CLSN_PROPERTY(actual_position, draw::point, true);
+        CLSN_PROPERTY(actual_size, draw::dimension, true);
+        CLSN_PROPERTY(background_color, std::optional<draw::color>, true);
+
         CLSN_BOOL_PROPERTY_VAL(enabled, true, true);
         CLSN_PROPERTY(font, std::optional<clsn::draw::font>, true);
         CLSN_PROPERTY(foreground_color, std::optional<clsn::draw::color>, true);
@@ -124,10 +129,6 @@ namespace clsn::ui
         virtual auto is_invalidated() const noexcept -> bool;
 
         virtual void release_mouse();
-
-        virtual void set_parent_window(optional_reference<window>);
-        auto get_parent_window() -> optional_reference<window>;
-        auto get_parent_window() const -> const_optional_reference<window>;
 
         auto is_hovered() const -> bool;
 
