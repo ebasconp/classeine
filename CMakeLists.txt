@@ -38,6 +38,10 @@ endif()
 add_executable(classeine
         code/classeine-demo/Main.cpp
 
+        code/classeine-demo/demo_control_container.cpp
+        code/classeine-demo/demo_dual_layout_container.cpp
+        code/classeine-demo/demo_flow_layout_container.cpp
+        code/classeine-demo/demo_xy_layout_container.cpp
         code/classeine-demo/demo_option_container.cpp
         code/classeine-demo/demo_window.cpp
 

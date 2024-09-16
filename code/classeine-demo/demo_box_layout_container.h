@@ -24,9 +24,15 @@ namespace clsn::demo
         demo_box_layout_container()
         {
             m_button  = this->template make_and_add<button>();
-            m_button->set_text("Click me");
+            m_button->set_text("Click me to toggle UI theme");
             m_button->set_background_color(draw::colors::make_red());
             m_button->set_foreground_color(draw::colors::make_white());
+            m_button->add_action_listener([](auto&)
+            {
+                auto& _ui_mgr = ui::ui_manager::get_instance();
+                const auto& theme_name = _ui_mgr.get_current_theme_name();
+                _ui_mgr.install_theme(theme_name == "light" ? "dark" : "light");
+            });
 
             m_control = this->template make_and_add<empty_control>();
             m_control->set_background_color(draw::colors::make_yellow());

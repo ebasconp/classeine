@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20240917 created demo app
 * 20240904 created clsn::ui::dynamic_pane
 * 20240826 Renamed list_container to layout_container
 * 20240826 Added layouts and refactored containers

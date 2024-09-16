@@ -52,6 +52,7 @@ the creation of rich user interfaces in modern C++.
         * `vbox_layout_container` - Container where the controls are rendered vertically
         * `xy_layout_container` - Container where the controls are placed in specific coordinates in the given region.
     * `dynamic_pane` - Pane able to load and unload dynamically any control
+    * `empty_control` - Control that only paints its background. Useful to have a custom renderer.
     * `ui_manager`
       * `ui_skin` - Loadable set of renderers, themes and defaults for the UI controls.
       * `ui_theme` - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.

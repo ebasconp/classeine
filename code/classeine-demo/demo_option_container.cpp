@@ -14,6 +14,10 @@
 #include "clsn/ui/vbox_layout_container.h"
 
 #include "demo_box_layout_container.h"
+#include "demo_control_container.h"
+#include "demo_dual_layout_container.h"
+#include "demo_flow_layout_container.h"
+#include "demo_xy_layout_container.h"
 
 namespace clsn::demo
 {
@@ -69,25 +73,25 @@ namespace clsn::demo
 
         if (action_name == "dual_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(nullptr);
+            m_demo_window.get_content_pane().set_inner_control(make_control<demo_dual_layout_container>());
             return;
         }
 
         if (action_name == "flow_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(nullptr);
+            m_demo_window.get_content_pane().set_inner_control(make_control<demo_flow_layout_container>());
             return;
         }
 
         if (action_name == "xy_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(nullptr);
+            m_demo_window.get_content_pane().set_inner_control(make_control<demo_xy_layout_container>());
             return;
         }
 
         if (action_name == "Controls")
         {
-            m_demo_window.get_content_pane().set_inner_control(nullptr);
+            m_demo_window.get_content_pane().set_inner_control(make_control<demo_control_container>());
         }
     }
 }
