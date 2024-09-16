@@ -5,12 +5,15 @@
 
 #include "empty_control_renderer.h"
 
-#include "clsn/ui/ui_manager.h"
+#include "clsn/ui/control.h"
 
 #include "clsn/ui/painters/background_painter.h"
 
 namespace clsn::ui::renderers
 {
+    using namespace clsn::draw;
+    using namespace clsn::ui;
+
     void empty_control_renderer::paint(graphics& gfx,
                               const region& rgn,
                               const control& ctrl) const

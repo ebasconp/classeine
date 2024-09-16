@@ -18,6 +18,8 @@
 namespace clsn::demo
 {
     using namespace clsn::draw;
+    using namespace clsn::ui;
+    using namespace clsn::ui::events;
 
     demo_option_container::demo_option_container(demo_window& demo_window)
     : m_demo_window{demo_window}

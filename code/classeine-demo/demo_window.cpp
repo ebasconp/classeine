@@ -16,6 +16,10 @@
 
 namespace clsn::demo
 {
+    using namespace clsn::draw;
+    using namespace clsn::ui;
+    using namespace clsn::ui::layouts;
+
     demo_window::demo_window()
     {
         set_text("Classeine");

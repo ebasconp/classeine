@@ -67,13 +67,13 @@ namespace clsn::ui
         auto get_parent_control() -> optional_reference<control>;
         auto get_parent_control() const -> const_optional_reference<control>;
 
-virtual void set_parent_window(optional_reference<window>);
+        virtual void set_parent_window(optional_reference<window>);
         auto get_parent_window() -> optional_reference<window>;
         auto get_parent_window() const -> const_optional_reference<window>;
 
-        CLSN_PROPERTY(actual_position, point, true);
-        CLSN_PROPERTY(actual_size, dimension, true);
-        CLSN_PROPERTY(background_color, std::optional<color>, true);
+        CLSN_PROPERTY(actual_position, draw::point, true);
+        CLSN_PROPERTY(actual_size, draw::dimension, true);
+        CLSN_PROPERTY(background_color, std::optional<draw::color>, true);
 
         CLSN_BOOL_PROPERTY_VAL(enabled, true, true);
         CLSN_PROPERTY(font, std::optional<clsn::draw::font>, true);
