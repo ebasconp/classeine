@@ -11,8 +11,6 @@
 
 namespace clsn::ui
 {
-    using clsn::core::empty;
-
     class xy_layout_container : public layout_container<layouts::xy_layout>
     {
     public:

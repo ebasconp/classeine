@@ -9,13 +9,10 @@
 
 #include "clsn/core/property.h"
 
-#include "clsn/draw/dimension.h"
-#include "clsn/draw/point.h"
+#include "clsn/draw/forward.h"
 
 namespace clsn::ui
 {
-    using namespace clsn::draw;
-
     class window : public control
     {
         optional_reference<control> m_mouse_grabber_control;
@@ -24,9 +21,9 @@ namespace clsn::ui
     public:
         explicit window(std::string_view section_name);
 
-        CLSN_PROPERTY(position, point, true)
-        CLSN_PROPERTY(minimum_size, dimension, true)
-        CLSN_PROPERTY(size, dimension, true)
+        CLSN_PROPERTY(position, clsn::draw::point, true)
+        CLSN_PROPERTY(minimum_size, clsn::draw::dimension, true)
+        CLSN_PROPERTY(size, clsn::draw::dimension, true)
         CLSN_BOOL_PROPERTY_VAL(resizable, true, true);
 
         void grab_mouse(control& control);
@@ -34,7 +31,7 @@ namespace clsn::ui
 
         auto is_hovered(const control& control) const -> bool;
 
-        virtual auto get_control_by_position(const point& point) const ->
+        virtual auto get_control_by_position(const clsn::draw::point& point) const ->
                             const_optional_reference<control> = 0;
 
     protected:

@@ -11,14 +11,12 @@
 
 namespace clsn::ui::renderers
 {
-    using namespace clsn::draw;
-
     template <typename ContainerType>
     class container_renderer : public renderer_base
     {
     public:
         void paint(graphics& gfx,
-                   const region& rgn,
+                   const clsn::draw::region& rgn,
                    const control& base_ctrl) const override
         {
             const auto& container =
@@ -39,7 +37,7 @@ namespace clsn::ui::renderers
             }
 
             const auto margin = container.get_margin();
-            const region shift_rgn{
+            const clsn::draw::region shift_rgn{
                 margin, margin, -(margin * 2), -(margin * 2)};
 
             const auto count = container.get_count();
@@ -49,7 +47,7 @@ namespace clsn::ui::renderers
                 if (!control.is_visible() || !control.is_invalidated())
                     continue;
 
-                const region ctrl_rgn{
+                const draw::region ctrl_rgn{
                     control.get_actual_position(),
                     control.get_actual_size()}; // ETOTODOcontrol.getBounds();
 

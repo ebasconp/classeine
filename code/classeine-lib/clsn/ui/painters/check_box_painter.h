@@ -13,7 +13,5 @@ namespace clsn::ui { class check_box; }
 
 namespace clsn::ui::painters::check_box_painter
 {
-    using namespace clsn::draw;
-
-    void paint_check_box(graphics& gfx, const region& rgn, const check_box& cb, int size);
+    void paint_check_box(graphics& gfx, const clsn::draw::region& rgn, const check_box& cb, int size);
 }

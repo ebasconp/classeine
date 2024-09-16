@@ -16,15 +16,13 @@
 
 namespace clsn::ui::impl::sdl2
 {
-    using namespace clsn::draw;
-
     using optional_ttf_font_ref = std::optional<std::reference_wrapper<TTF_Font>>;
 
     class sdl2_font_cache final
     {
-        mutable std::unordered_map<font, sdl2_font_wrapper> m_fonts;
+        mutable std::unordered_map<clsn::draw::font, sdl2_font_wrapper> m_fonts;
 
     public:
-        optional_ttf_font_ref get_font(const font& font) const;
+        optional_ttf_font_ref get_font(const clsn::draw::font& font) const;
     };
 }

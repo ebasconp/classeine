@@ -5,10 +5,10 @@
 
 #include "amatista_ui_theme.h"
 
-#include "clsn/draw/colors.h"
-
 namespace clsn::ui::amatista
 {
+    using namespace clsn::draw;
+
     void amatista_ui_theme::populate_defaults()
     {
         add("", "bevelUpColor", get_bevel_up_color());

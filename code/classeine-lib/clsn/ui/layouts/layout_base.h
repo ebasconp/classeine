@@ -11,14 +11,12 @@
 
 namespace clsn::ui::layouts
 {
-    using namespace clsn::draw;
-
     template <typename Constraint>
     class layout_base
     {
         struct region_and_constraint
         {
-            region m_region;
+            draw::region m_region;
             Constraint m_constraint;
         };
 
@@ -27,7 +25,7 @@ namespace clsn::ui::layouts
     public:
         virtual ~layout_base() = default;
 
-        void add(const region& rgn, const Constraint& constraint)
+        void add(const draw::region& rgn, const Constraint& constraint)
         {
             m_elements.push_back(region_and_constraint{rgn, constraint});
         }
@@ -54,6 +52,6 @@ namespace clsn::ui::layouts
             return m_elements[index];
         }
 
-        virtual void layout(const region& rgn) = 0;
+        virtual void layout(const draw::region& rgn) = 0;
     };
 }

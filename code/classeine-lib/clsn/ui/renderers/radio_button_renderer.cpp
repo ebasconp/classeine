@@ -20,6 +20,8 @@
 
 namespace clsn::ui::renderers
 {
+    using namespace clsn::draw;
+
     void radio_button_renderer::paint(graphics& gfx,
                    const region& rgn,
                    const control& base_ctrl) const

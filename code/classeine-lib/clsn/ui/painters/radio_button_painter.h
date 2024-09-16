@@ -16,10 +16,8 @@ namespace clsn::ui
 
 namespace clsn::ui::painters::radio_button_painter
 {
-    using namespace clsn::draw;
-
     void paint_radio_button(graphics& gfx,
-                            const region& rgn,
+                            const clsn::draw::region& rgn,
                             const radio_button& rb,
                             int size);
 }

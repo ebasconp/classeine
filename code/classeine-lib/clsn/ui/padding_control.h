@@ -11,8 +11,6 @@
 
 namespace clsn::ui
 {
-    using namespace clsn::ui::renderers;
-
     template <typename InnerControlType>
     class padding_control : public mono_container<InnerControlType>
     {
@@ -29,8 +27,8 @@ namespace clsn::ui
             const auto size = m_size.get();
 
             auto& ctrl = this->get_inner_control();
-            ctrl.set_actual_position(this->get_actual_position() + point{size, size});
-            ctrl.set_actual_size(this->get_actual_size() + dimension(-size * 2, -size * 2));
+            ctrl.set_actual_position(this->get_actual_position() + draw::point{size, size});
+            ctrl.set_actual_size(this->get_actual_size() + draw::dimension(-size * 2, -size * 2));
 
             ctrl.do_layout();
         }
@@ -38,7 +36,7 @@ namespace clsn::ui
     protected:
         auto make_default_renderer() const -> std::unique_ptr<renderer_base> override
         {
-            return std::make_unique<padding_control_renderer<InnerControlType>>();
+            return std::make_unique<renderers::padding_control_renderer<InnerControlType>>();
         }
 
     private:

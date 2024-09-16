@@ -26,6 +26,8 @@ namespace
 
 namespace clsn::ui
 {
+    using namespace clsn::draw;
+
     auto ui_theme::get_color(std::string_view section_name, std::string_view name, const color& error_value) const -> const color&
     {
         return get_from_defaults<color>(m_defaults_by_name, section_name, name, error_value);

@@ -13,6 +13,8 @@
 
 namespace clsn::ui
 {
+    using namespace clsn::draw;
+
     std::unique_ptr<ui_manager> ui_manager::m_singleton;
 
     ui_manager& ui_manager::get_instance()
@@ -95,14 +97,14 @@ namespace clsn::ui
         return m_skin->get_font(section_name, name);
     }
 
-    auto ui_manager::install_theme(const std::string& themeName) -> bool
+    auto ui_manager::install_theme(const std::string& theme_name) -> bool
     {
-        return m_skin->install_theme_by_name(themeName);
+        return m_skin->install_theme_by_name(theme_name);
     }
 
-    auto ui_manager::add_theme_changed_listener(event_listener<empty_event> listener) -> int
+    auto ui_manager::add_theme_changed_listener(core::event_listener<core::empty_event> listener) -> int
     {
-        return m_skin->add_theme_changed_listener(listener);
+        return m_skin->add_theme_changed_listener(std::move(listener));
     }
 
     auto ui_manager::get_current_theme_name() const -> const std::string&

@@ -10,6 +10,7 @@ namespace clsn::ui
   class button;
   class check_box;
   class clickable_control;
+  class control;
   class dual_layout_container;
   class dynamic_pane;
   class empty_control;
@@ -18,6 +19,7 @@ namespace clsn::ui
   class label;
   class radio_button;
   class radio_button_group;
+  class renderer_base;
   class toggle_button;
   class toggle_control;
   class vbox_layout_container;

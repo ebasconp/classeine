@@ -9,6 +9,8 @@
 
 namespace clsn::ui::amatista
 {
+    using namespace clsn::draw;
+
     auto light_amatista_ui_theme::get_bevel_up_color() const -> color
     {
         return color{0, 92, 155 };

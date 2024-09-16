@@ -11,8 +11,6 @@
 
 namespace clsn::ui
 {
-    using clsn::core::empty;
-
     class flow_layout_container : public layout_container<layouts::flow_layout>
     {
     public:

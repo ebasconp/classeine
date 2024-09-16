@@ -13,6 +13,8 @@
 
 namespace clsn::ui::renderers
 {
+    using namespace clsn::draw;
+
     void dynamic_pane_renderer::paint(graphics& gfx,
                               const region& rgn,
                               const control& ctrl) const

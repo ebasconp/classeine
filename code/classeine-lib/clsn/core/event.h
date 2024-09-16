@@ -14,7 +14,7 @@ namespace clsn::core
         bool m_consumed;
 
     public:
-        virtual ~event() = default;
+        ~event() override = default;
 
         [[nodiscard]] auto is_consumed() const noexcept -> bool;
 
