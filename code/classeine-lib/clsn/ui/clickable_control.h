@@ -16,7 +16,7 @@ namespace clsn::ui
     class clickable_control : public control
     {
         bool m_pressed = false;
-        event_listener_list<action_event> m_action_listeners;
+        clsn::core::event_listener_list<events::action_event> m_action_listeners;
 
     public:
         explicit clickable_control(std::string_view section_name);
@@ -25,8 +25,8 @@ namespace clsn::ui
 
         [[nodiscard]] auto is_pressed() const noexcept -> bool;
 
-        void add_action_listener(event_listener<action_event> event);
-        void notify_action_event(action_event& e);
+        void add_action_listener(clsn::core::event_listener<events::action_event> event);
+        void notify_action_event(events::action_event& e);
 
         void release_mouse() override;
 
@@ -34,6 +34,6 @@ namespace clsn::ui
         void process_mouse_click_event(events::mouse_click_event& e) override;
 
     private:
-        void init_events();
+        void init_clickable_control_events();
     };
 }

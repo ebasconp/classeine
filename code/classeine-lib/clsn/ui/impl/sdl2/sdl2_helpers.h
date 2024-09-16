@@ -5,19 +5,14 @@
 
 #pragma once
 
-#include <SDL.h>
-#undef main
+#include "clsn/draw/forward.h"
 
-namespace clsn::draw
-{
-    class color;
-    class region;
-}
+#include <SDL.h>
+
+#undef main
 
 namespace clsn::ui::impl::sdl2::sdl2_helpers
 {
-    using namespace clsn::draw;
-
-    SDL_Rect to_sdl(const region&);
-    SDL_Color to_sdl(const color&);
+    SDL_Rect to_sdl(const clsn::draw::region&);
+    SDL_Color to_sdl(const clsn::draw::color&);
 }

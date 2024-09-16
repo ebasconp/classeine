@@ -11,8 +11,6 @@
 
 namespace clsn::ui
 {
-    using namespace clsn::draw;
-
     template <typename ControlType>
     class main_window final : public window
     {
@@ -24,7 +22,7 @@ namespace clsn::ui
         : window("main_window")
         , m_impl{*this}
         {
-            init_visibility();
+            init_main_window_visibility();
             init_size();
             load_window_defaults();
 
@@ -47,18 +45,18 @@ namespace clsn::ui
             return m_control;
         }
 
-        void process_mouse_click_event(events::mouse_click_event& e)
+        void process_mouse_click_event(events::mouse_click_event& e) override
         {
             m_control.notify_mouse_click_event(e);
         }
 
-        void process_mouse_moved_event(events::mouse_moved_event& e)
+        void process_mouse_moved_event(events::mouse_moved_event& e) override
         {
             window::process_mouse_moved_event(e);
             m_control.notify_mouse_moved_event(e);
         }
 
-        auto get_control_by_position(const point& point) const ->
+        auto get_control_by_position(const draw::point& point) const ->
             std::optional<std::reference_wrapper<const control>> override
         {
             return m_control.get_control_by_position(point);
@@ -80,7 +78,7 @@ namespace clsn::ui
         }
 
 
-        void init_visibility()
+        void init_main_window_visibility()
         {
             add_visible_changed_listener(
                 [this](auto& e)
@@ -102,7 +100,7 @@ namespace clsn::ui
             //                "main_window", "size", dimension{300, 200});
             //ETOTODO: MOVE THIS TO THE THEME
 
-            m_control.set_actual_size(dimension{800, 600});
+            m_control.set_actual_size(draw::dimension{800, 600});
 
             add_size_changed_listener([this](auto& e)
             {

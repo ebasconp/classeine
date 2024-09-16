@@ -9,6 +9,9 @@
 #include "ui_manager.h"
 #include "window.h"
 
+#include "clsn/ui/events/mouse_click_event.h"
+#include "clsn/ui/events/mouse_moved_event.h"
+
 #include "renderers/null_renderer.h"
 
 #include "clsn/draw/region.h"
@@ -24,7 +27,7 @@ namespace clsn::ui
 
     control::~control() = default;
 
-    void control::paint(graphics& graphics, const region& region) const
+    void control::paint(graphics& graphics, const draw::region& region) const
     {
         debug_count("paint");
 
@@ -34,17 +37,17 @@ namespace clsn::ui
         get_renderer().paint(graphics, region, *this);
     }
 
-    void control::notify_mouse_click_event(mouse_click_event& e)
+    void control::notify_mouse_click_event(events::mouse_click_event& e)
     {
         process_mouse_click_event(e);
     }
 
-    void control::add_mouse_moved_listener(event_listener<mouse_moved_event> event)
+    void control::add_mouse_moved_listener(core::event_listener<events::mouse_moved_event> event)
     {
         m_mouse_moved_listeners.add(std::move(event));
     }
 
-    void control::notify_mouse_moved_event(mouse_moved_event& e)
+    void control::notify_mouse_moved_event(events::mouse_moved_event& e)
     {
         process_mouse_moved_event(e);
     }
@@ -54,7 +57,7 @@ namespace clsn::ui
         if (!is_enabled())
             return;
 
-        if (e.get_status() == mouse_click_status::released)
+        if (e.get_status() == events::mouse_click_status::released)
         {
             invoke_in_parent_window([](auto& w) { w.release_mouse(); });
         }
@@ -70,7 +73,7 @@ namespace clsn::ui
         m_mouse_moved_listeners.notify(e);
     }
 
-    void control::add_mouse_click_listener(event_listener<mouse_click_event> event)
+    void control::add_mouse_click_listener(core::event_listener<events::mouse_click_event> event)
     {
         m_mouse_click_listeners.add(std::move(event));
     }
@@ -140,12 +143,12 @@ namespace clsn::ui
         return m_parent_window;
     }
 
-    auto control::contains_point(const point& point) const -> bool
+    auto control::contains_point(const draw::point& point) const -> bool
     {
-        return region{m_actual_position.get(), m_actual_size.get()}.contains_point(point);
+        return draw::region{m_actual_position.get(), m_actual_size.get()}.contains_point(point);
     }
 
-    auto control::get_control_by_position(const point& point) const
+    auto control::get_control_by_position(const draw::point& point) const
         -> std::optional<std::reference_wrapper<const control>>
     {
         if (this->contains_point(point))
@@ -189,7 +192,7 @@ namespace clsn::ui
         // Do nothing here
     }
 
-    auto control::get_actual_background_color() const -> const color&
+    auto control::get_actual_background_color() const -> const draw::color&
     {
         const auto& color = get_background_color();
         if (color.has_value())
@@ -199,7 +202,7 @@ namespace clsn::ui
                     m_default_section_name, "control_background_color");
     }
 
-    auto control::get_actual_foreground_color() const -> const color&
+    auto control::get_actual_foreground_color() const -> const draw::color&
     {
         const auto& color = get_foreground_color();
         if (color.has_value())
@@ -209,7 +212,7 @@ namespace clsn::ui
                     m_default_section_name, "controlForegroundColor");
     }
 
-    auto control::get_actual_font() const -> const font&
+    auto control::get_actual_font() const -> const draw::font&
     {
         const auto& font = get_font();
         if (font.has_value())
@@ -218,7 +221,7 @@ namespace clsn::ui
         return ui_manager::get_instance().get_font(m_default_section_name, "default_regular_font");
     }
 
-    auto control::get_actual_preferred_size() const -> const dimension&
+    auto control::get_actual_preferred_size() const -> const draw::dimension&
     {
         const auto& size = get_preferred_size();
         if (size.has_value())
@@ -227,7 +230,7 @@ namespace clsn::ui
         return ui_manager::get_instance().get_dimension(m_default_section_name, "preferredSize");
     }
 
-    auto control::get_actual_bounds() const -> region
+    auto control::get_actual_bounds() const -> draw::region
     {
         return { get_actual_position(), get_actual_size() };
     }

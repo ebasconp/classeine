@@ -9,13 +9,11 @@
 
 namespace clsn::ui::renderers
 {
-    using namespace clsn::draw;
-
     class check_box_renderer : public renderer_base
     {
     public:
         void paint(graphics& graphics,
-                   const region& region,
+                   const clsn::draw::region& region,
                    const control& baseControl) const override;
     };
 }

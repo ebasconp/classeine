@@ -10,6 +10,8 @@
 
 namespace clsn::ui::impl::sdl2::sdl2_helpers
 {
+    using namespace clsn::draw;
+
     SDL_Rect to_sdl(const region& region)
     {
         SDL_Rect rect;

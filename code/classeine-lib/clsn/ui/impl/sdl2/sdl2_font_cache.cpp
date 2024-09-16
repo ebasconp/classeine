@@ -11,6 +11,8 @@
 
 namespace clsn::ui::impl::sdl2
 {
+    using namespace clsn::draw;
+
     optional_ttf_font_ref sdl2_font_cache::get_font(const clsn::draw::font& font) const
     {
         auto it = m_fonts.find(font);

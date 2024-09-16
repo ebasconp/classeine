@@ -7,6 +7,8 @@
 
 #include "control.h"
 
+#include "clsn/draw/forward.h"
+
 #include <memory>
 
 namespace clsn::ui
@@ -29,7 +31,7 @@ namespace clsn::ui
         void validate() const noexcept override;
         auto is_invalidated() const noexcept -> bool override;
 
-        auto get_control_by_position(const point& point) const
+        auto get_control_by_position(const clsn::draw::point& point) const
             -> const_optional_reference<control> override;
 
     protected:

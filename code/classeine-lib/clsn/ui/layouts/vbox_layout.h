@@ -19,6 +19,6 @@ namespace clsn::ui::layouts
     public:
         using constraint_type = core::empty;
 
-        void layout(const region& rgn) override;
+        void layout(const clsn::draw::region& rgn) override;
     };
 }

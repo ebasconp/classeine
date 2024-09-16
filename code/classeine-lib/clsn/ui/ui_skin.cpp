@@ -7,6 +7,8 @@
 
 namespace clsn::ui
 {
+    using namespace clsn::draw;
+
     auto ui_skin::install_theme_by_name(const std::string& name) -> bool
     {
         auto it = m_theme_factories_by_name.find(name);
@@ -16,7 +18,7 @@ namespace clsn::ui
         m_current_theme = std::make_pair(name, it->second());
         m_current_theme.second->populate_defaults();
 
-        empty_event e;
+        core::empty_event e;
         m_theme_changed_listeners.notify(e);
 
         return true;
@@ -37,7 +39,7 @@ namespace clsn::ui
         return m_current_theme.second->get_font(section_name, name);
     }
 
-    auto ui_skin::add_theme_changed_listener(event_listener<empty_event> listener) -> int
+    auto ui_skin::add_theme_changed_listener(core::event_listener<core::empty_event> listener) -> int
     {
         return m_theme_changed_listeners.add(listener);
     }

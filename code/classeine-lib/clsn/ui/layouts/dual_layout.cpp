@@ -7,6 +7,8 @@
 
 namespace clsn::ui::layouts
 {
+    using namespace clsn::draw;
+
     dual_layout::dual_layout()
     : m_orientation{dual_layout_orientation::horizontal}
     {

@@ -11,6 +11,8 @@
 
 namespace clsn::ui
 {
+    using namespace clsn::ui::layouts;
+
     dual_layout_container::dual_layout_container()
     : layout_container<layouts::dual_layout>{"dual_layout_container"}
     {
@@ -31,10 +33,10 @@ namespace clsn::ui
     void dual_layout_container::check_if_valid_before_adding(const dual_layout_constraint& constraint) const
     {
         if (get_count() == 2)
-            system::panic("Dual container can only contain two elements");
+            core::system::panic("Dual container can only contain two elements");
 
         if (get_count() == 1 && constraint == get_element_at(0).m_constraint)
-            system::panic("Both controls must have different constraints");
+            core::system::panic("Both controls must have different constraints");
     }
 
 

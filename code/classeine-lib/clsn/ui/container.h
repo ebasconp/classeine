@@ -8,10 +8,7 @@
 #include "control.h"
 #include "ui_manager.h"
 
-#include "clsn/core/console.h"
-
 #include "window.h"
-
 
 namespace clsn::ui
 {
@@ -104,7 +101,7 @@ namespace clsn::ui
             iterate_controls([](control& c) { c.load_defaults(); });
         }
 
-        auto get_control_by_position(const point &point) const
+        auto get_control_by_position(const draw::point &point) const
                 -> const_optional_reference<control> override
         {
             std::optional<std::reference_wrapper<const control>> result;

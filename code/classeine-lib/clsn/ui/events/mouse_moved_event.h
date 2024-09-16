@@ -11,15 +11,13 @@
 
 namespace clsn::ui::events
 {
-    using namespace clsn::draw;
-
     class mouse_moved_event : public core::event
     {
-        point m_position;
+        clsn::draw::point m_position;
 
     public:
-        explicit mouse_moved_event(const point& position);
+        explicit mouse_moved_event(const clsn::draw::point& position);
 
-        auto get_position() const noexcept -> const point&;
+        auto get_position() const noexcept -> const clsn::draw::point&;
     };
 }

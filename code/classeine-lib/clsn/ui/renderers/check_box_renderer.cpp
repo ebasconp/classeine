@@ -18,6 +18,8 @@
 
 namespace clsn::ui::renderers
 {
+    using namespace clsn::draw;
+
     void check_box_renderer::paint(graphics& gfx,
                    const region& rgn,
                    const control& ctrl) const

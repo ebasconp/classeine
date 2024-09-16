@@ -7,6 +7,8 @@
 
 namespace clsn::ui::events
 {
+    using namespace clsn::draw;
+
     mouse_moved_event::mouse_moved_event(const point& position)
     : m_position(position)
     {

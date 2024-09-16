@@ -14,9 +14,6 @@ namespace  clsn::ui
 
 namespace clsn::ui::renderers
 {
-    using namespace clsn::draw;
-    using namespace clsn::ui;
-
     class toggle_button_renderer : public button_renderer
     {
     public:

@@ -11,7 +11,5 @@
 
 namespace clsn::ui::painters::background_painter
 {
-    using namespace clsn::draw;
-
-    void paint_background(graphics& gfx, const region& rgn, const color& clr);
+    void paint_background(graphics& gfx, const clsn::draw::region& rgn, const clsn::draw::color& clr);
 }

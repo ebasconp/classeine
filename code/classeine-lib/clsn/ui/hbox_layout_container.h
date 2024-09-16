@@ -11,8 +11,6 @@
 
 namespace clsn::ui
 {
-    using clsn::core::empty;
-
     class hbox_layout_container : public layout_container<layouts::hbox_layout>
     {
     public:

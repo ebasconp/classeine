@@ -14,16 +14,13 @@ namespace clsn::ui
 
 namespace clsn::ui::renderers
 {
-    using namespace clsn::draw;
-    using namespace clsn::ui;
-
     class button_renderer : public renderer_base
     {
     public:
         [[nodiscard]] virtual auto paint_as_pressed(const clickable_control& btn) const -> bool;
 
         void paint(graphics& gfx,
-                   const region& rgn,
+                   const clsn::draw::region& rgn,
                    const control& ctrl) const override;
     };
 }

@@ -11,10 +11,8 @@
 
 namespace clsn::ui::painters::border_painter
 {
-    using namespace clsn::draw;
-
     void paint_flat_border(graphics& gfx,
-                   const region& rgn,
-                   const color& c,
+                   const clsn::draw::region& rgn,
+                   const clsn::draw::color& c,
                    int depth);
 }

@@ -12,13 +12,14 @@
 namespace clsn::core
 {
     template <typename Type>
-    class EntityWrapper : public entity
+    class entity_wrapper : public entity
     {
         Type m_value;
 
     public:
-        EntityWrapper(Type value)
-        : m_value{std::move(value)}
+        template <typename TType>
+        entity_wrapper(TType&& value)
+        : m_value{std::forward<TType>(value)}
         {
         }
 

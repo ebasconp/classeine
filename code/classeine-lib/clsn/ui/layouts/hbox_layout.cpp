@@ -7,6 +7,8 @@
 
 namespace clsn::ui::layouts
 {
+    using namespace clsn::draw;
+
     void hbox_layout::layout(const region& rgn)
     {
         const auto count = get_count();

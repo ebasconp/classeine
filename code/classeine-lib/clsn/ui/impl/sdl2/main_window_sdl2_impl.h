@@ -24,8 +24,6 @@
 
 namespace clsn::ui::impl::sdl2
 {
-    using clsn::draw::dimension;
-
     template <typename WindowType>
     class main_window_sdl2_impl final
     {
@@ -134,15 +132,15 @@ namespace clsn::ui::impl::sdl2
         }
 
     private:
-        void resizeGraphics(graphics_sdl2_impl& graphics, const dimension& newSize)
+        void resizeGraphics(graphics_sdl2_impl& graphics, const draw::dimension& new_size)
         {
-            graphics.resize(newSize);
+            graphics.resize(new_size);
         }
 
         void repaintAll(graphics_sdl2_impl& graphics)
         {
-            const region region{point{0, 0}, m_parent_window.get_actual_size()};
-            m_parent_window().paint(graphics, region);
+            const draw::region rgn{{0, 0}, m_parent_window.get_actual_size()};
+            m_parent_window().paint(graphics, rgn);
             graphics.apply();
         }
 
@@ -163,7 +161,7 @@ namespace clsn::ui::impl::sdl2
                     case SDL_WINDOWEVENT:
                         if (event.window.event == SDL_WINDOWEVENT_RESIZED)
                         {
-                            const dimension newSize{event.window.data1, event.window.data2};
+                            const draw::dimension newSize{event.window.data1, event.window.data2};
 
                             resizeGraphics(graphics, newSize);
                             process_control_resized_event(newSize);
@@ -185,8 +183,8 @@ namespace clsn::ui::impl::sdl2
                         break;
                 }
 
-                const region region{point{0, 0}, m_parent_window.get_actual_size()};
-                m_parent_window().paint(graphics, region);
+                const draw::region rgn{{0, 0}, m_parent_window.get_actual_size()};
+                m_parent_window().paint(graphics, rgn);
                 graphics.apply();
             }
         }
@@ -199,18 +197,18 @@ namespace clsn::ui::impl::sdl2
                     : clsn::ui::events::mouse_click_status::released;
 
             clsn::ui::events::mouse_click_event mouseClickEvent{
-                status, point{e.button.x, e.button.y}};
+                status, draw::point{e.button.x, e.button.y}};
 
             m_parent_window.process_mouse_click_event(mouseClickEvent);
         }
 
         void trigger_mouse_moved_event(SDL_Event& e)
         {
-            mouse_moved_event _mouse_moved_event{point{e.motion.x, e.motion.y}};
+            events::mouse_moved_event _mouse_moved_event{{e.motion.x, e.motion.y}};
             m_parent_window.process_mouse_moved_event(_mouse_moved_event);
         }
 
-        void process_control_resized_event(const dimension& newSize)
+        void process_control_resized_event(const draw::dimension& newSize)
         {
             m_parent_window.set_actual_size(newSize);
         }

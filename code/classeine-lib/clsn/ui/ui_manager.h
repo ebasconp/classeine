@@ -18,14 +18,12 @@
 
 namespace clsn::ui
 {
-    using namespace clsn::draw;
-
-    class ui_manager final : public entity
+    class ui_manager final : public clsn::core::entity
     {
         std::unique_ptr<ui_skin> m_skin;
 
         ui_manager_defaults m_defaults;
-        std::unordered_map<font_info, std::string> m_paths_by_font_info;
+        std::unordered_map<draw::font_info, std::string> m_paths_by_font_info;
 
         static std::unique_ptr<ui_manager> m_singleton;
 
@@ -48,17 +46,17 @@ namespace clsn::ui
             m_skin = std::make_unique<SkinType>();
         }
 
-        auto get_renderer_by_control(const control& ctrl) const -> std::shared_ptr<renderer_base>;
+        auto get_renderer_by_control(const control& ctrl) const -> std::shared_ptr<clsn::ui::renderer_base>;
 
-        auto get_color(std::string_view section_name, std::string_view name) const -> const color&;
-        auto get_dimension(std::string_view section_name, std::string_view name) const -> const dimension&;
-        auto get_font(std::string_view section_name, std::string_view name) const -> const font&;
+        auto get_color(std::string_view section_name, std::string_view name) const -> const draw::color&;
+        auto get_dimension(std::string_view section_name, std::string_view name) const -> const draw::dimension&;
+        auto get_font(std::string_view section_name, std::string_view name) const -> const draw::font&;
 
-        void add_font_mapping(const font_info& fontInfo, std::string_view path);
-        auto get_path_by_font_info(const font_info&) const noexcept -> std::string_view;
+        void add_font_mapping(const draw::font_info& fontInfo, std::string_view path);
+        auto get_path_by_font_info(const draw::font_info&) const noexcept -> std::string_view;
 
         auto install_theme(const std::string& themeName) -> bool;
-        auto add_theme_changed_listener(event_listener<empty_event> listener) -> int;
+        auto add_theme_changed_listener(core::event_listener<core::empty_event> listener) -> int;
         auto get_current_theme_name() const -> const std::string&;
 
     private:

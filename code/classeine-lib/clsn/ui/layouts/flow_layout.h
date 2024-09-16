@@ -19,10 +19,10 @@ namespace clsn::ui::layouts
     public:
         using constraint_type = core::empty;
 
-        void layout(const region& rgn) override;
+        void layout(const clsn::draw::region& rgn) override;
 
     private:
-        void layout_vertical(const point& position, const dimension& size);
-        void layout_horizontal(const point& position, const dimension& size);
+        void layout_vertical(const clsn::draw::point& position, const clsn::draw::dimension& size);
+        void layout_horizontal(const clsn::draw::point& position, const clsn::draw::dimension& size);
     };
 }

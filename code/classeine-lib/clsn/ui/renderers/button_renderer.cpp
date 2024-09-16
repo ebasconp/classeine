@@ -19,6 +19,7 @@
 
 namespace
 {
+    using namespace clsn::draw;
     using namespace clsn::ui;
 
     color get_ultimate_background_color(const button& btn, bool is_hovered)
