@@ -53,4 +53,17 @@ namespace clsn::draw
     {
         return std::tie(r, g, b, a) == std::tie(p.r, p.g, p.b, p.a);
     }
+
+    auto color::to_gray() const noexcept -> color
+    {
+        const auto gray =
+            static_cast<int>((r * 0.299) + (g * 0.587) + (b * 0.114));
+
+        return {gray, gray, gray};
+    }
+
+    auto color::to_gray_if(bool convert) const noexcept -> color
+    {
+        return convert ? to_gray() : *this;
+    }
 }

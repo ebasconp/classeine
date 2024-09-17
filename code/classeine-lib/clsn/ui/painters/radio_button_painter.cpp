@@ -3,12 +3,12 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "radio_button_painter.h"
+#include <clsn/ui/painters/radio_button_painter.h>
 
-#include "clsn/ui/radio_button.h"
+#include <clsn/ui/radio_button.h>
 
-#include "clsn/draw/colors.h"
-#include "clsn/draw/region.h"
+#include <clsn/draw/colors.h>
+#include <clsn/draw/region.h>
 
 namespace clsn::ui::painters::radio_button_painter
 {
@@ -26,7 +26,9 @@ namespace clsn::ui::painters::radio_button_painter
         const auto x = rgn.get_x();
         const auto y = rgn.get_y();
 
-        gfx.set_draw_color(color{0, 0, 255});
+        const auto is_enabled = rd_btn.is_enabled();
+
+        gfx.set_draw_color(color{0, 0, 255}.to_gray_if(!is_enabled));
         gfx.draw_fill_circle({x, y, size, size});
         gfx.draw_fill_circle({x + 1, y + 1, size - 2, size - 2});
 
@@ -37,15 +39,15 @@ namespace clsn::ui::painters::radio_button_painter
         const auto white = colors::make_white();
         const bool is_checked = rd_btn.is_checked();
 
-        gfx.set_draw_color(is_checked ? color{0, 0, 128}
+        gfx.set_draw_color(is_checked ? color{0, 0, 128}.to_gray_if(!is_enabled)
                                       : white); // Black color
         gfx.draw_fill_circle({x + 2, y + 2, size - 4, size - 4});
 
-        gfx.set_draw_color(is_checked ? color{0, 0, 192}
+        gfx.set_draw_color(is_checked ? color{0, 0, 192}.to_gray_if(!is_enabled)
                                       : white); // Black color
         gfx.draw_fill_circle({x + 3, y + 3, size - 6, size - 6});
 
-        gfx.set_draw_color(is_checked ? color{128, 255, 128}
+        gfx.set_draw_color(is_checked ? color{128, 255, 128}.to_gray_if(!is_enabled)
                                       : white); // Black color
         gfx.draw_fill_circle({x + 4, y + 4, size - 8, size - 8});
     }
