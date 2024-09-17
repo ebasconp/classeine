@@ -42,7 +42,7 @@ namespace clsn::ui::layouts
             }
             else
             {
-                currentx = 0;
+                currentx = position.get_x();
                 currenty += maxy;
 
                 const auto& preferred_size = r.get_size();
