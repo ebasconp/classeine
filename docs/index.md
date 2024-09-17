@@ -1,7 +1,4 @@
 ---
-title: Proyecto
+title: Classeine
 ---
 
-{% include_relative README.md %}
-
-[## Reference Docs](docs/html/index.html).
