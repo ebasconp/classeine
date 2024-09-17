@@ -14,9 +14,18 @@
 
 #include <string_view>
 
+/// This namespace contains several basic utilities and base classes that
+/// make developing applications with *classeine* easier.
+///
+/// Configuration utilities, console methods, events, properties, and string
+/// handling utilities are available here.
 namespace clsn::core
 {
-    // Base class for polymorphic containers
+    /// This is the base class for all polymorphic class hierarchies.
+    ///
+    /// In addition to providing a base for polymorphic use within containers,
+    /// it exposes a `to_string()` method and, in debug mode, stores information
+    /// about objects being instantiated and deallocated.
     class entity
     {
 #ifdef _CLSN_DEBUG_
