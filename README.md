@@ -3,6 +3,10 @@
 Classeine is a library that should provide all needed tools to make easier
 the creation of rich user interfaces in modern C++.
 
+## Reference docs
+
+http://ebasconp/github.io/classeine
+
 ## Features
 * Written in modern C++
 * control renderers pluggable
