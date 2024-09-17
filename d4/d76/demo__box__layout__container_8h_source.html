@@ -105,59 +105,66 @@ $(document).ready(function(){initNavTree('d4/d76/demo__box__layout__container_8h
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// SPDX-License-Identifier: BSD-3-Clause</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../d7/d0e/button_8h.html">clsn/ui/button.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d5/de3/empty__control_8h.html">clsn/ui/empty_control.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../d7/d4c/label_8h.html">clsn/ui/label.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/d0e/button_8h.html">clsn/ui/button.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/de3/empty__control_8h.html">clsn/ui/empty_control.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/d4c/label_8h.html">clsn/ui/label.h</a>&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/dd8/colors_8h.html">clsn/draw/colors.h</a>&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d74/customizable__renderer_8h.html">clsn/ui/renderers/customizable_renderer.h</a>&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d8/dba/namespaceclsn.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/da2/namespaceclsn_1_1demo.html">clsn::demo</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> LayoutContainer&gt;</div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html">demo_box_layout_container</a> : <span class="keyword">public</span> LayoutContainer</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        std::shared_ptr&lt;clsn::ui::button&gt; m_button;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        std::shared_ptr&lt;clsn::ui::empty_control&gt; m_control;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::shared_ptr&lt;clsn::ui::label&gt; m_label;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html#a7b22cd4b86c44c924d44651f061d7890">   24</a></span>        <a class="code hl_function" href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html#a7b22cd4b86c44c924d44651f061d7890">demo_box_layout_container</a>()</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            m_button  = this-&gt;<span class="keyword">template</span> make_and_add&lt;button&gt;();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            m_button-&gt;set_text(<span class="stringliteral">&quot;Click me to toggle UI theme&quot;</span>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            m_button-&gt;set_background_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a36180e19a988907e76608cb1b8e45205">draw::colors::make_red</a>());</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            m_button-&gt;set_foreground_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a42d8eaab11dfd2ccf0818d4aa2061016">draw::colors::make_white</a>());</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            m_button-&gt;add_action_listener([](<span class="keyword">auto</span>&amp;)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="keyword">auto</span>&amp; _ui_mgr = <a class="code hl_function" href="../../d3/dda/classclsn_1_1ui_1_1ui__manager.html#ad06c52766ee2c6e015915408fb934bab">ui::ui_manager::get_instance</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; theme_name = _ui_mgr.get_current_theme_name();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                _ui_mgr.install_theme(theme_name == <span class="stringliteral">&quot;light&quot;</span> ? <span class="stringliteral">&quot;dark&quot;</span> : <span class="stringliteral">&quot;light&quot;</span>);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            });</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            m_control = this-&gt;<span class="keyword">template</span> make_and_add&lt;empty_control&gt;();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            m_control-&gt;set_background_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#afa33a3e4da336d2fd7ab9891d6aa4b0b">draw::colors::make_yellow</a>());</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            m_label = this-&gt;<span class="keyword">template</span> make_and_add&lt;label&gt;();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            m_label-&gt;set_text(<span class="stringliteral">&quot;This is a label&quot;</span>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            m_label-&gt;set_background_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a9cddaa89a5b436c5d4dc07761f1f68c5">draw::colors::make_blue</a>());</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            m_label-&gt;set_foreground_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a42d8eaab11dfd2ccf0818d4aa2061016">draw::colors::make_white</a>());</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="../../da/dd8/colors_8h.html">clsn/draw/colors.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d8/dba/namespaceclsn.html">   16</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d5/da2/namespaceclsn_1_1demo.html">clsn::demo</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> LayoutContainer&gt;</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html">demo_box_layout_container</a> : <span class="keyword">public</span> LayoutContainer</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::shared_ptr&lt;clsn::ui::button&gt; m_button;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        std::shared_ptr&lt;clsn::ui::empty_control&gt; m_control;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        std::shared_ptr&lt;clsn::ui::label&gt; m_label;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html#a7b22cd4b86c44c924d44651f061d7890">   26</a></span>        <a class="code hl_function" href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html#a7b22cd4b86c44c924d44651f061d7890">demo_box_layout_container</a>()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            m_button  = this-&gt;<span class="keyword">template</span> make_and_add&lt;button&gt;();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            m_button-&gt;set_text(<span class="stringliteral">&quot;Click me to toggle UI theme&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            m_button-&gt;set_background_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a36180e19a988907e76608cb1b8e45205">draw::colors::make_red</a>());</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            m_button-&gt;set_foreground_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a42d8eaab11dfd2ccf0818d4aa2061016">draw::colors::make_white</a>());</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            m_button-&gt;add_action_listener([](<span class="keyword">auto</span>&amp;)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keyword">auto</span>&amp; _ui_mgr = <a class="code hl_function" href="../../d3/dda/classclsn_1_1ui_1_1ui__manager.html#ad06c52766ee2c6e015915408fb934bab">ui::ui_manager::get_instance</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; theme_name = _ui_mgr.get_current_theme_name();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                _ui_mgr.install_theme(theme_name == <span class="stringliteral">&quot;light&quot;</span> ? <span class="stringliteral">&quot;dark&quot;</span> : <span class="stringliteral">&quot;light&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            });</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            m_control = this-&gt;<span class="keyword">template</span> make_and_add&lt;empty_control&gt;();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            m_control-&gt;set_renderer(std::make_unique&lt;renderers::customizable_renderer&gt;([](<span class="keyword">auto</span>&amp; gfx, <span class="keyword">auto</span>&amp; rgn, <span class="keyword">auto</span>&amp;)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                gfx.set_draw_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#afa33a3e4da336d2fd7ab9891d6aa4b0b">draw::colors::make_yellow</a>());</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                gfx.draw_fill_rectangle(rgn);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }));</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            m_label = this-&gt;<span class="keyword">template</span> make_and_add&lt;label&gt;();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            m_label-&gt;set_text(<span class="stringliteral">&quot;This is a label&quot;</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            m_label-&gt;set_background_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a9cddaa89a5b436c5d4dc07761f1f68c5">draw::colors::make_blue</a>());</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            m_label-&gt;set_foreground_color(<a class="code hl_function" href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a42d8eaab11dfd2ccf0818d4aa2061016">draw::colors::make_white</a>());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    };</div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
 <div class="ttc" id="abutton_8h_html"><div class="ttname"><a href="../../d7/d0e/button_8h.html">button.h</a></div></div>
-<div class="ttc" id="aclassclsn_1_1demo_1_1demo__box__layout__container_html"><div class="ttname"><a href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html">clsn::demo::demo_box_layout_container</a></div><div class="ttdef"><b>Definition</b> demo_box_layout_container.h:18</div></div>
-<div class="ttc" id="aclassclsn_1_1demo_1_1demo__box__layout__container_html_a7b22cd4b86c44c924d44651f061d7890"><div class="ttname"><a href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html#a7b22cd4b86c44c924d44651f061d7890">clsn::demo::demo_box_layout_container::demo_box_layout_container</a></div><div class="ttdeci">demo_box_layout_container()</div><div class="ttdef"><b>Definition</b> demo_box_layout_container.h:24</div></div>
+<div class="ttc" id="aclassclsn_1_1demo_1_1demo__box__layout__container_html"><div class="ttname"><a href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html">clsn::demo::demo_box_layout_container</a></div><div class="ttdef"><b>Definition</b> demo_box_layout_container.h:20</div></div>
+<div class="ttc" id="aclassclsn_1_1demo_1_1demo__box__layout__container_html_a7b22cd4b86c44c924d44651f061d7890"><div class="ttname"><a href="../../de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html#a7b22cd4b86c44c924d44651f061d7890">clsn::demo::demo_box_layout_container::demo_box_layout_container</a></div><div class="ttdeci">demo_box_layout_container()</div><div class="ttdef"><b>Definition</b> demo_box_layout_container.h:26</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1ui__manager_html_ad06c52766ee2c6e015915408fb934bab"><div class="ttname"><a href="../../d3/dda/classclsn_1_1ui_1_1ui__manager.html#ad06c52766ee2c6e015915408fb934bab">clsn::ui::ui_manager::get_instance</a></div><div class="ttdeci">static auto get_instance() -&gt; ui_manager &amp;</div><div class="ttdef"><b>Definition</b> ui_manager.cpp:20</div></div>
 <div class="ttc" id="acolors_8h_html"><div class="ttname"><a href="../../da/dd8/colors_8h.html">colors.h</a></div></div>
+<div class="ttc" id="acustomizable__renderer_8h_html"><div class="ttname"><a href="../../dd/d74/customizable__renderer_8h.html">customizable_renderer.h</a></div></div>
 <div class="ttc" id="aempty__control_8h_html"><div class="ttname"><a href="../../d5/de3/empty__control_8h.html">empty_control.h</a></div></div>
 <div class="ttc" id="alabel_8h_html"><div class="ttname"><a href="../../d7/d4c/label_8h.html">label.h</a></div></div>
-<div class="ttc" id="anamespaceclsn_1_1demo_html"><div class="ttname"><a href="../../d5/da2/namespaceclsn_1_1demo.html">clsn::demo</a></div><div class="ttdef"><b>Definition</b> demo_box_layout_container.h:15</div></div>
+<div class="ttc" id="anamespaceclsn_1_1demo_html"><div class="ttname"><a href="../../d5/da2/namespaceclsn_1_1demo.html">clsn::demo</a></div><div class="ttdef"><b>Definition</b> demo_box_layout_container.h:17</div></div>
 <div class="ttc" id="anamespaceclsn_1_1draw_1_1colors_html_a36180e19a988907e76608cb1b8e45205"><div class="ttname"><a href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a36180e19a988907e76608cb1b8e45205">clsn::draw::colors::make_red</a></div><div class="ttdeci">auto make_red() -&gt; color</div><div class="ttdef"><b>Definition</b> colors.cpp:10</div></div>
 <div class="ttc" id="anamespaceclsn_1_1draw_1_1colors_html_a42d8eaab11dfd2ccf0818d4aa2061016"><div class="ttname"><a href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a42d8eaab11dfd2ccf0818d4aa2061016">clsn::draw::colors::make_white</a></div><div class="ttdeci">auto make_white() -&gt; color</div><div class="ttdef"><b>Definition</b> colors.cpp:13</div></div>
 <div class="ttc" id="anamespaceclsn_1_1draw_1_1colors_html_a9cddaa89a5b436c5d4dc07761f1f68c5"><div class="ttname"><a href="../../d3/d28/namespaceclsn_1_1draw_1_1colors.html#a9cddaa89a5b436c5d4dc07761f1f68c5">clsn::draw::colors::make_blue</a></div><div class="ttdeci">auto make_blue() -&gt; color</div><div class="ttdef"><b>Definition</b> colors.cpp:12</div></div>
@@ -168,7 +175,7 @@ $(document).ready(function(){initNavTree('d4/d76/demo__box__layout__container_8h
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="../../dir_1a157e5f05dbf63c58c82f8222b8670c.html">classeine-demo</a></li><li class="navelem"><a class="el" href="../../d4/d76/demo__box__layout__container_8h.html">demo_box_layout_container.h</a></li>
-    <li class="footer">Generated on Tue Sep 17 2024 20:37:28 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Sep 17 2024 22:02:33 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

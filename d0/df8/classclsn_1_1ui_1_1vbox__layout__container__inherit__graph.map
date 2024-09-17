@@ -1,15 +1,17 @@
 <map id="clsn::ui::vbox_layout_container" name="clsn::ui::vbox_layout_container">
-<area shape="rect" id="Node000001" title=" " alt="" coords="836,37,992,77"/>
-<area shape="rect" id="Node000006" href="$d0/de4/classclsn_1_1demo_1_1demo__control__container.html" title=" " alt="" coords="1040,5,1231,45"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1006,41,1040,36,1040,42,1006,47"/>
-<area shape="rect" id="Node000007" href="$dc/de5/classclsn_1_1demo_1_1demo__option__container.html" title=" " alt="" coords="1042,69,1229,109"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1006,68,1042,73,1041,78,1005,73"/>
-<area shape="rect" id="Node000002" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="600,37,788,77"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="802,55,836,55,836,60,802,60"/>
-<area shape="rect" id="Node000003" href="$d2/d50/classclsn_1_1ui_1_1container.html" title=" " alt="" coords="353,23,552,92"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="566,55,600,55,600,60,566,60"/>
-<area shape="rect" id="Node000004" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="184,45,305,70"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="319,55,353,55,353,60,319,60"/>
-<area shape="rect" id="Node000005" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="5,45,136,70"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="150,55,184,55,184,60,150,60"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1021,37,1177,77"/>
+<area shape="rect" id="Node000007" href="$d0/de4/classclsn_1_1demo_1_1demo__control__container.html" title=" " alt="" coords="1225,5,1416,45"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1191,41,1225,36,1226,42,1192,47"/>
+<area shape="rect" id="Node000008" href="$dc/de5/classclsn_1_1demo_1_1demo__option__container.html" title=" " alt="" coords="1227,69,1414,109"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1191,68,1228,73,1227,78,1191,73"/>
+<area shape="rect" id="Node000002" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="785,37,973,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="987,55,1021,55,1021,60,987,60"/>
+<area shape="rect" id="Node000003" href="$d2/d50/classclsn_1_1ui_1_1container.html" title=" " alt="" coords="539,23,737,92"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="751,55,785,55,785,60,751,60"/>
+<area shape="rect" id="Node000004" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="353,37,491,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="504,55,538,55,538,60,504,60"/>
+<area shape="rect" id="Node000005" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="184,45,305,70"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="319,55,353,55,353,60,319,60"/>
+<area shape="rect" id="Node000006" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="5,45,136,70"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="150,55,184,55,184,60,150,60"/>
 </map>

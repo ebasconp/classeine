@@ -80,6 +80,7 @@ var annotated_dup =
           [ "toggle_button_renderer", "db/d90/classclsn_1_1ui_1_1renderers_1_1toggle__button__renderer.html", "db/d90/classclsn_1_1ui_1_1renderers_1_1toggle__button__renderer" ]
         ] ],
         [ "button", "d7/d35/classclsn_1_1ui_1_1button.html", "d7/d35/classclsn_1_1ui_1_1button" ],
+        [ "captionable_control", "d2/d41/classclsn_1_1ui_1_1captionable__control.html", "d2/d41/classclsn_1_1ui_1_1captionable__control" ],
         [ "check_box", "d6/d05/classclsn_1_1ui_1_1check__box.html", "d6/d05/classclsn_1_1ui_1_1check__box" ],
         [ "clickable_control", "d9/df3/classclsn_1_1ui_1_1clickable__control.html", "d9/df3/classclsn_1_1ui_1_1clickable__control" ],
         [ "container", "d2/d50/classclsn_1_1ui_1_1container.html", "d2/d50/classclsn_1_1ui_1_1container" ],
@@ -95,6 +96,7 @@ var annotated_dup =
         [ "main_window", "d8/d8f/classclsn_1_1ui_1_1main__window.html", "d8/d8f/classclsn_1_1ui_1_1main__window" ],
         [ "mono_container", "da/dd5/classclsn_1_1ui_1_1mono__container.html", "da/dd5/classclsn_1_1ui_1_1mono__container" ],
         [ "padding_control", "dd/d15/classclsn_1_1ui_1_1padding__control.html", "dd/d15/classclsn_1_1ui_1_1padding__control" ],
+        [ "paintable_control", "db/deb/classclsn_1_1ui_1_1paintable__control.html", "db/deb/classclsn_1_1ui_1_1paintable__control" ],
         [ "radio_button", "d5/df8/classclsn_1_1ui_1_1radio__button.html", "d5/df8/classclsn_1_1ui_1_1radio__button" ],
         [ "radio_button_group", "da/da9/classclsn_1_1ui_1_1radio__button__group.html", "da/da9/classclsn_1_1ui_1_1radio__button__group" ],
         [ "renderer_base", "d3/dae/classclsn_1_1ui_1_1renderer__base.html", "d3/dae/classclsn_1_1ui_1_1renderer__base" ],

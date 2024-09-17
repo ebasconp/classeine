@@ -19,55 +19,59 @@ var hierarchy =
       ] ],
       [ "clsn::core::lazy< T >", "dc/de1/classclsn_1_1core_1_1lazy.html", null ],
       [ "clsn::ui::control", "d7/d66/classclsn_1_1ui_1_1control.html", [
-        [ "clsn::ui::container< layout_container_control_and_constraint< Layout::constraint_type > >", "d2/d50/classclsn_1_1ui_1_1container.html", [
-          [ "clsn::ui::layout_container< layouts::dual_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
-            [ "clsn::ui::dual_layout_container", "d2/d46/classclsn_1_1ui_1_1dual__layout__container.html", [
-              [ "clsn::demo::demo_dual_layout_container", "d1/dc2/classclsn_1_1demo_1_1demo__dual__layout__container.html", null ]
-            ] ]
-          ] ],
-          [ "clsn::ui::layout_container< layouts::flow_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
-            [ "clsn::ui::flow_layout_container", "d8/d3d/classclsn_1_1ui_1_1flow__layout__container.html", [
-              [ "clsn::demo::demo_flow_layout_container", "d0/d63/classclsn_1_1demo_1_1demo__flow__layout__container.html", null ]
-            ] ]
-          ] ],
-          [ "clsn::ui::layout_container< layouts::hbox_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
-            [ "clsn::ui::hbox_layout_container", "d4/def/classclsn_1_1ui_1_1hbox__layout__container.html", null ]
-          ] ],
-          [ "clsn::ui::layout_container< layouts::vbox_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
-            [ "clsn::ui::vbox_layout_container", "dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html", [
-              [ "clsn::demo::demo_control_container", "d0/de4/classclsn_1_1demo_1_1demo__control__container.html", null ],
-              [ "clsn::demo::demo_option_container", "dc/de5/classclsn_1_1demo_1_1demo__option__container.html", null ]
-            ] ]
-          ] ],
-          [ "clsn::ui::layout_container< layouts::xy_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
-            [ "clsn::ui::xy_layout_container", "df/dcf/classclsn_1_1ui_1_1xy__layout__container.html", [
-              [ "clsn::demo::demo_xy_layout_container", "d6/d69/classclsn_1_1demo_1_1demo__xy__layout__container.html", null ]
-            ] ]
-          ] ],
-          [ "clsn::ui::layout_container< Layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", null ]
-        ] ],
-        [ "clsn::ui::container< InnerControlType >", "d2/d50/classclsn_1_1ui_1_1container.html", [
-          [ "clsn::ui::mono_container< InnerControlType >", "da/dd5/classclsn_1_1ui_1_1mono__container.html", [
-            [ "clsn::ui::padding_control< InnerControlType >", "dd/d15/classclsn_1_1ui_1_1padding__control.html", null ]
-          ] ]
-        ] ],
-        [ "clsn::ui::clickable_control", "d9/df3/classclsn_1_1ui_1_1clickable__control.html", [
-          [ "clsn::ui::button", "d7/d35/classclsn_1_1ui_1_1button.html", null ],
-          [ "clsn::ui::toggle_control", "d6/d77/classclsn_1_1ui_1_1toggle__control.html", [
-            [ "clsn::ui::check_box", "d6/d05/classclsn_1_1ui_1_1check__box.html", null ],
-            [ "clsn::ui::radio_button", "d5/df8/classclsn_1_1ui_1_1radio__button.html", null ],
-            [ "clsn::ui::toggle_button", "de/d99/classclsn_1_1ui_1_1toggle__button.html", null ]
-          ] ]
-        ] ],
-        [ "clsn::ui::container< ElementType >", "d2/d50/classclsn_1_1ui_1_1container.html", null ],
-        [ "clsn::ui::dynamic_pane", "d2/dfb/classclsn_1_1ui_1_1dynamic__pane.html", null ],
         [ "clsn::ui::empty_control", "d9/db9/classclsn_1_1ui_1_1empty__control.html", null ],
-        [ "clsn::ui::label", "dc/de8/classclsn_1_1ui_1_1label.html", null ],
-        [ "clsn::ui::window", "d0/dfd/classclsn_1_1ui_1_1window.html", [
-          [ "clsn::ui::main_window< dual_layout_container >", "d8/d8f/classclsn_1_1ui_1_1main__window.html", [
-            [ "clsn::demo::demo_window", "d2/db9/classclsn_1_1demo_1_1demo__window.html", null ]
+        [ "clsn::ui::paintable_control", "db/deb/classclsn_1_1ui_1_1paintable__control.html", [
+          [ "clsn::ui::container< layout_container_control_and_constraint< Layout::constraint_type > >", "d2/d50/classclsn_1_1ui_1_1container.html", [
+            [ "clsn::ui::layout_container< layouts::dual_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
+              [ "clsn::ui::dual_layout_container", "d2/d46/classclsn_1_1ui_1_1dual__layout__container.html", [
+                [ "clsn::demo::demo_dual_layout_container", "d1/dc2/classclsn_1_1demo_1_1demo__dual__layout__container.html", null ]
+              ] ]
+            ] ],
+            [ "clsn::ui::layout_container< layouts::flow_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
+              [ "clsn::ui::flow_layout_container", "d8/d3d/classclsn_1_1ui_1_1flow__layout__container.html", [
+                [ "clsn::demo::demo_flow_layout_container", "d0/d63/classclsn_1_1demo_1_1demo__flow__layout__container.html", null ]
+              ] ]
+            ] ],
+            [ "clsn::ui::layout_container< layouts::hbox_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
+              [ "clsn::ui::hbox_layout_container", "d4/def/classclsn_1_1ui_1_1hbox__layout__container.html", null ]
+            ] ],
+            [ "clsn::ui::layout_container< layouts::vbox_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
+              [ "clsn::ui::vbox_layout_container", "dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html", [
+                [ "clsn::demo::demo_control_container", "d0/de4/classclsn_1_1demo_1_1demo__control__container.html", null ],
+                [ "clsn::demo::demo_option_container", "dc/de5/classclsn_1_1demo_1_1demo__option__container.html", null ]
+              ] ]
+            ] ],
+            [ "clsn::ui::layout_container< layouts::xy_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
+              [ "clsn::ui::xy_layout_container", "df/dcf/classclsn_1_1ui_1_1xy__layout__container.html", [
+                [ "clsn::demo::demo_xy_layout_container", "d6/d69/classclsn_1_1demo_1_1demo__xy__layout__container.html", null ]
+              ] ]
+            ] ],
+            [ "clsn::ui::layout_container< Layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", null ]
           ] ],
-          [ "clsn::ui::main_window< ControlType >", "d8/d8f/classclsn_1_1ui_1_1main__window.html", null ]
+          [ "clsn::ui::container< InnerControlType >", "d2/d50/classclsn_1_1ui_1_1container.html", [
+            [ "clsn::ui::mono_container< InnerControlType >", "da/dd5/classclsn_1_1ui_1_1mono__container.html", [
+              [ "clsn::ui::padding_control< InnerControlType >", "dd/d15/classclsn_1_1ui_1_1padding__control.html", null ]
+            ] ]
+          ] ],
+          [ "clsn::ui::captionable_control", "d2/d41/classclsn_1_1ui_1_1captionable__control.html", [
+            [ "clsn::ui::clickable_control", "d9/df3/classclsn_1_1ui_1_1clickable__control.html", [
+              [ "clsn::ui::button", "d7/d35/classclsn_1_1ui_1_1button.html", null ],
+              [ "clsn::ui::toggle_control", "d6/d77/classclsn_1_1ui_1_1toggle__control.html", [
+                [ "clsn::ui::check_box", "d6/d05/classclsn_1_1ui_1_1check__box.html", null ],
+                [ "clsn::ui::radio_button", "d5/df8/classclsn_1_1ui_1_1radio__button.html", null ],
+                [ "clsn::ui::toggle_button", "de/d99/classclsn_1_1ui_1_1toggle__button.html", null ]
+              ] ]
+            ] ],
+            [ "clsn::ui::label", "dc/de8/classclsn_1_1ui_1_1label.html", null ],
+            [ "clsn::ui::window", "d0/dfd/classclsn_1_1ui_1_1window.html", [
+              [ "clsn::ui::main_window< dual_layout_container >", "d8/d8f/classclsn_1_1ui_1_1main__window.html", [
+                [ "clsn::demo::demo_window", "d2/db9/classclsn_1_1demo_1_1demo__window.html", null ]
+              ] ],
+              [ "clsn::ui::main_window< ControlType >", "d8/d8f/classclsn_1_1ui_1_1main__window.html", null ]
+            ] ]
+          ] ],
+          [ "clsn::ui::container< ElementType >", "d2/d50/classclsn_1_1ui_1_1container.html", null ],
+          [ "clsn::ui::dynamic_pane", "d2/dfb/classclsn_1_1ui_1_1dynamic__pane.html", null ]
         ] ]
       ] ],
       [ "clsn::ui::impl::sdl2::graphics_sdl2_impl", "d3/d67/classclsn_1_1ui_1_1impl_1_1sdl2_1_1graphics__sdl2__impl.html", null ],

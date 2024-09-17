@@ -1,7 +1,9 @@
 <map id="clsn::ui::dynamic_pane" name="clsn::ui::dynamic_pane">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,152,176,177"/>
-<area shape="rect" id="Node000002" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="30,79,151,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,118,93,152,88,152,88,118"/>
-<area shape="rect" id="Node000003" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="25,5,156,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,44,93,79,88,79,88,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,240,176,265"/>
+<area shape="rect" id="Node000002" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="22,152,159,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,206,93,240,88,240,88,206"/>
+<area shape="rect" id="Node000003" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="30,79,151,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,118,93,152,88,152,88,118"/>
+<area shape="rect" id="Node000004" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="25,5,156,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="93,44,93,79,88,79,88,44"/>
 </map>
