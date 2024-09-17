@@ -1,31 +1,14 @@
-name: Build and Deploy Doxygen Documentation
+name: Doxygen GitHub Pages Deploy Action
 
 on:
   push:
     branches:
       - develop
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Install Doxygen and Graphviz
-        run: sudo apt-get install doxygen graphviz -y
-
-      - name: Clean repository
-        run: |
-          git reset --hard
-          git clean -fdx
-
-      - name: Generate Documentation
-        run: doxygen Doxyfile
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: DenverCoder1/doxygen-github-pages-action@v2.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/html
-          
