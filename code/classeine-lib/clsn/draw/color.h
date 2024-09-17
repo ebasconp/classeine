@@ -27,5 +27,8 @@ namespace clsn::draw
         [[nodiscard]] auto get_alpha() const noexcept -> int;
 
         auto operator==(const color& ) const noexcept -> bool;
+
+        auto to_gray() const noexcept -> color;
+        auto to_gray_if(bool ) const noexcept -> color;
     };
 }

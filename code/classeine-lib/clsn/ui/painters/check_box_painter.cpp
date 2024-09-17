@@ -20,7 +20,10 @@ namespace clsn::ui::painters::check_box_painter
             { size, size }
         };
 
-        gfx.set_draw_color(color{0, 0, 255});
+        const auto enabled = chk_box.is_enabled();
+
+        const color _color{0, 0, 255};
+        gfx.set_draw_color(enabled ? _color : _color.to_gray());
         gfx.draw_rectangle(rgn);
 
         const auto x = rgn.get_x();
@@ -32,13 +35,16 @@ namespace clsn::ui::painters::check_box_painter
 
         if (chk_box.is_checked())
         {
-            gfx.set_draw_color({0, 0, 128}); // Black color
+            const color c1{0, 0, 128};
+            gfx.set_draw_color(enabled ? c1 : c1.to_gray()); // Black color
             gfx.draw_rectangle({x + 2, y + 2, size - 4, size - 4});
 
-            gfx.set_draw_color({0, 0, 192}); // Black color
+            const color c2{0, 0, 192};
+            gfx.set_draw_color(enabled ? c2 : c2.to_gray()); // Black color
             gfx.draw_rectangle({x + 3, y + 3, size - 6, size - 6});
 
-            gfx.set_draw_color({0, 0, 255}); // Black color
+            const color c3{0, 0, 255};
+            gfx.set_draw_color(enabled ? c3 : c3.to_gray()); // Black color
             gfx.draw_fill_rectangle({x + 4, y + 4, size - 8, size - 8});
         }
     }
