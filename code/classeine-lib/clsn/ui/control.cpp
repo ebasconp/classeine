@@ -3,18 +3,18 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "control.h"
+#include <clsn/ui/control.h>
 
-#include "renderer_base.h"
-#include "ui_manager.h"
-#include "window.h"
+#include <clsn/ui/renderer_base.h>
+#include <clsn/ui/ui_manager.h>
+#include <clsn/ui/window.h>
 
-#include "clsn/ui/events/mouse_click_event.h"
-#include "clsn/ui/events/mouse_moved_event.h"
+#include <clsn/ui/events/mouse_click_event.h>
+#include <clsn/ui/events/mouse_moved_event.h>
 
-#include "renderers/null_renderer.h"
+#include <clsn/ui/renderers/null_renderer.h>
 
-#include "clsn/draw/region.h"
+#include <clsn/draw/region.h>
 
 namespace clsn::ui
 {

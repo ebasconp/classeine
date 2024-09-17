@@ -5,19 +5,19 @@
 
 #pragma once
 
-#include "clsn/ui/graphics.h"
+#include <clsn/ui/graphics.h>
 
-#include "clsn/ui/events/control_resized_event.h"
-#include "clsn/ui/events/mouse_click_event.h"
-#include "clsn/ui/events/mouse_moved_event.h"
+#include <clsn/ui/events/control_resized_event.h>
+#include <clsn/ui/events/mouse_click_event.h>
+#include <clsn/ui/events/mouse_moved_event.h>
 
-#include "clsn/draw/color.h"
-#include "clsn/draw/dimension.h"
+#include <clsn/draw/color.h>
+#include <clsn/draw/dimension.h>
 
-#include "clsn/core/entity.h"
-#include "clsn/core/entity_wrapper.h"
-#include "clsn/core/event_listener_list.h"
-#include "clsn/core/property.h"
+#include <clsn/core/entity.h>
+#include <clsn/core/entity_wrapper.h>
+#include <clsn/core/event_listener_list.h>
+#include <clsn/core/property.h>
 
 #include <functional>
 #include <memory>
@@ -62,8 +62,8 @@ namespace clsn::ui
         control(const control&) = delete;
         control(control&&) = delete;
 
-        control& operator=(const control&) = delete;
-        control& operator=(control&&) = delete;
+        auto operator=(const control&) -> control& = delete;
+        auto operator=(control&&) -> control& = delete;
 
         ~control() override;
 
@@ -145,7 +145,7 @@ namespace clsn::ui
 
         virtual void load_defaults();
 
-        std::string to_string() const override;
+        auto to_string() const -> std::string override;
 
     protected:
         virtual void process_mouse_click_event(events::mouse_click_event& e);
