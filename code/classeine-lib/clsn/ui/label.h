@@ -5,13 +5,13 @@
 
 #pragma once
 
-#include "control.h"
+#include <clsn/ui/captionable_control.h>
 
-#include "clsn/draw/forward.h"
+#include <clsn/draw/forward.h>
 
 namespace clsn::ui
 {
-    class label : public control
+    class label : public captionable_control
     {
         clsn::draw::text_horizontal_alignment m_horizontal_alignment;
         clsn::draw::text_vertical_alignment m_vertical_alignment;

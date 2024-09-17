@@ -89,11 +89,11 @@ namespace clsn::ui::renderers
         if (pressed)
         {
             const region inner_rect_shifted = inner_rect + region{depth, depth, -depth, -depth};
-            paint_label(gfx, inner_rect_shifted, ctrl, info);
+            paint_label(gfx, inner_rect_shifted, btn, info);
         }
         else
         {
-            paint_label(gfx, inner_rect, ctrl, info);
+            paint_label(gfx, inner_rect, btn, info);
         }
     }
 }

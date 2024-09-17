@@ -35,6 +35,10 @@ namespace clsn::ui
     template <typename T>
     using const_optional_reference = std::optional<std::reference_wrapper<const T>>;
 
+    /// Base class for all controls (referred to as UI widgets) in *classeine*.
+    ///
+    /// This class provides basic methods for handling events and
+    /// offers the infrastructure for managing rendering and layouts.
     class control : public clsn::core::entity
     {
         clsn::core::event_listener_list<clsn::ui::events::control_resized_event> m_control_resized_listeners;
@@ -73,18 +77,12 @@ namespace clsn::ui
 
         CLSN_PROPERTY(actual_position, draw::point, true);
         CLSN_PROPERTY(actual_size, draw::dimension, true);
-        CLSN_PROPERTY(background_color, std::optional<draw::color>, true);
 
         CLSN_BOOL_PROPERTY_VAL(enabled, true, true);
-        CLSN_PROPERTY(font, std::optional<clsn::draw::font>, true);
-        CLSN_PROPERTY(foreground_color, std::optional<clsn::draw::color>, true);
-        CLSN_PROPERTY(preferred_size, std::optional<clsn::draw::dimension>, true);
-        CLSN_PROPERTY(text, std::string, true);
         CLSN_BOOL_PROPERTY_VAL(visible, true, true);
 
-        auto get_actual_background_color() const -> const clsn::draw::color&;
-        auto get_actual_foreground_color() const -> const clsn::draw::color&;
-        auto get_actual_font() const -> const clsn::draw::font&;
+        CLSN_PROPERTY(preferred_size, std::optional<clsn::draw::dimension>, true);
+
         auto get_actual_preferred_size() const -> const clsn::draw::dimension&;
         auto get_actual_bounds() const -> clsn::draw::region;
 
@@ -153,9 +151,9 @@ namespace clsn::ui
         virtual void process_mouse_click_event(events::mouse_click_event& e);
         virtual void process_mouse_moved_event(events::mouse_moved_event& e);
 
+    private:
         virtual auto make_default_renderer() const -> std::unique_ptr<renderer_base>;
 
-    private:
         void init_control_events();
     };
 

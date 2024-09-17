@@ -5,15 +5,16 @@
 
 #pragma once
 
-#include "control.h"
+#include <clsn/ui/captionable_control.h>
 
-#include "clsn/core/property.h"
+#include <clsn/draw/forward.h>
 
-#include "clsn/draw/forward.h"
+#include <clsn/core/property.h>
+
 
 namespace clsn::ui
 {
-    class window : public control
+    class window : public captionable_control
     {
         optional_reference<control> m_mouse_grabber_control;
         const_optional_reference<control> m_hovered_control;

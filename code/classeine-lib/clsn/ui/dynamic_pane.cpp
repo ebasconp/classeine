@@ -14,7 +14,7 @@ namespace clsn::ui
     using namespace clsn::draw;
     using namespace clsn::ui::renderers;
 
-    dynamic_pane::dynamic_pane() : control("dynamic_pane")
+    dynamic_pane::dynamic_pane() : paintable_control("dynamic_pane")
     {
         init_dynamic_pane_events();
     }

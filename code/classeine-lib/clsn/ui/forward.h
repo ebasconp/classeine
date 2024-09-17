@@ -9,6 +9,7 @@ namespace clsn::ui
 {
   class button;
   class check_box;
+  class captionable_control;
   class clickable_control;
   class control;
   class dual_layout_container;
@@ -17,6 +18,7 @@ namespace clsn::ui
   class flow_layout_container;
   class hbox_layout_container;
   class label;
+  class paintable_control;
   class radio_button;
   class radio_button_group;
   class renderer_base;

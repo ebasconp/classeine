@@ -3,20 +3,19 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "radio_button_renderer.h"
+#include <clsn/ui/renderers/radio_button_renderer.h>
 
-#include "clsn/ui/radio_button.h"
-#include "clsn/ui/ui_manager.h"
+#include <clsn/ui/radio_button.h>
+#include <clsn/ui/ui_manager.h>
 
-#include "clsn/ui/layouts/dual_layout.h"
+#include <clsn/ui/layouts/dual_layout.h>
 
-#include "clsn/ui/painters/background_painter.h"
-#include "clsn/ui/painters/label_painter.h"
-#include "clsn/ui/painters/radio_button_painter.h"
+#include <clsn/ui/painters/background_painter.h>
+#include <clsn/ui/painters/label_painter.h>
+#include <clsn/ui/painters/radio_button_painter.h>
 
-#include "clsn/draw/colors.h"
-#include "clsn/draw/region.h"
-
+#include <clsn/draw/colors.h>
+#include <clsn/draw/region.h>
 
 namespace clsn::ui::renderers
 {
@@ -53,6 +52,6 @@ namespace clsn::ui::renderers
         using namespace clsn::ui::painters::label_painter;
         painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};
 
-        label_painter::paint_label(gfx, layout.get_element_at(1).m_region, base_ctrl, info);
+        label_painter::paint_label(gfx, layout.get_element_at(1).m_region, rd_btn, info);
     }
 }

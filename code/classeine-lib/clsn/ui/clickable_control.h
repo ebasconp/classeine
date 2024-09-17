@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/ui/control.h"
+#include "clsn/ui/captionable_control.h"
 
 #include "clsn/ui/events/action_event.h"
 
@@ -13,7 +13,11 @@
 
 namespace clsn::ui
 {
-    class clickable_control : public control
+    /// Base class for all clickable controls (buttons, checkboxes, radio buttons, etc.):
+    ///
+    /// It provides functionality for handling clickable controls and also
+    /// exposes the action event and action name for handling clicks.
+    class clickable_control : public captionable_control
     {
         bool m_pressed = false;
         clsn::core::event_listener_list<events::action_event> m_action_listeners;

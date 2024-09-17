@@ -3,13 +3,13 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "label_painter.h"
+#include <clsn/ui/painters/label_painter.h>
 
-#include "clsn/draw/color.h"
-#include "clsn/draw/region.h"
+#include <clsn/draw/color.h>
+#include <clsn/draw/region.h>
 
-#include "clsn/ui/control.h"
-#include "clsn/ui/ui_manager.h"
+#include <clsn/ui/captionable_control.h>
+#include <clsn/ui/ui_manager.h>
 
 namespace clsn::ui::painters::label_painter
 {
@@ -17,7 +17,7 @@ namespace clsn::ui::painters::label_painter
 
     void paint_label(graphics& gfx,
                      const region& rgn,
-                     const control& ctrl,
+                     const captionable_control& ctrl,
                      const painting_info& info)
     {
         if (!ctrl.is_enabled())

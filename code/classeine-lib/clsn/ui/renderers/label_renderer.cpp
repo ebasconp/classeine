@@ -3,13 +3,13 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "label_renderer.h"
+#include <clsn/ui/renderers/label_renderer.h>
 
-#include "clsn/ui/label.h"
-#include "clsn/ui/ui_manager.h"
+#include <clsn/ui/label.h>
+#include <clsn/ui/ui_manager.h>
 
-#include "clsn/ui/painters/background_painter.h"
-#include "clsn/ui/painters/label_painter.h"
+#include <clsn/ui/painters/background_painter.h>
+#include <clsn/ui/painters/label_painter.h>
 
 namespace clsn::ui::renderers
 {
@@ -21,18 +21,18 @@ namespace clsn::ui::renderers
     {
         const auto section_name = ctrl.get_default_section_name();
 
-        const auto bc = ctrl.get_background_color().has_value()
-                ? ctrl.get_background_color().value()
+        const auto& _label = static_cast<const label&>(ctrl);
+
+        const auto bc = _label.get_background_color().has_value()
+                ? _label.get_background_color().value()
                 : ui_manager::get_instance().get_color(section_name, "container_background_color");
 
         painters::background_painter::paint_background(gfx, rgn, bc);
-
-        const auto& _label = static_cast<const label&>(ctrl);
 
         using namespace clsn::ui::painters::label_painter;
         painting_info info{_label.get_horizontal_alignment(),
                            _label.get_vertical_alignment()};
 
-        painters::label_painter::paint_label(gfx, rgn, ctrl, info);
+        painters::label_painter::paint_label(gfx, rgn, _label, info);
     }
 }

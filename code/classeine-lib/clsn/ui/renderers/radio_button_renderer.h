@@ -5,15 +5,16 @@
 
 #pragma once
 
-#include "clsn/ui/renderers/label_renderer.h"
+#include <clsn/ui/forward.h>
+#include <clsn/ui/renderer_base.h>
 
 namespace clsn::ui::renderers
 {
-    class radio_button_renderer : public renderer_base
+    class radio_button_renderer : public ui::renderer_base
     {
     public:
-        void paint(graphics& graphics,
-                   const clsn::draw::region& region,
-                   const control& baseControl) const override;
+        void paint(graphics& gfx,
+                   const draw::region& rgn,
+                   const control& ctrl) const override;
     };
 }
