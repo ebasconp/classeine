@@ -1,22 +1,31 @@
+name: Build and Deploy Doxygen Documentation
+
 on:
   push:
     branches:
       - develop
-permissions:
-  contents: write
-
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Action Doxygen and GitHub Pages
-        id: ghaction
-        uses: AgarwalSaurav/ghaction-doxygen-ghpages@release/v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Doxygen and Graphviz
+        run: sudo apt-get install doxygen graphviz -y
+
+      - name: Clean repository
+        run: |
+          git reset --hard
+          git clean -fdx
+
+      - name: Generate Documentation
+        run: doxygen Doxyfile
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          working-directory: .
-          doxyfile-path: Doxyfile
-          html-output-folder: docs/html
-          branch: develop
+          publish_dir: ./docs/html
+          
