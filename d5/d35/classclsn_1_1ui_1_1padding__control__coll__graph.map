@@ -1,0 +1,11 @@
+<map id="clsn::ui::padding_control&lt; InnerControlType &gt;" name="clsn::ui::padding_control&lt; InnerControlType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="6,328,186,368"/>
+<area shape="rect" id="Node000002" href="$da/dd5/classclsn_1_1ui_1_1mono__container.html" title=" " alt="" coords="5,240,187,280"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,294,99,328,93,328,93,294"/>
+<area shape="rect" id="Node000003" href="$d2/d50/classclsn_1_1ui_1_1container.html" title=" " alt="" coords="15,152,177,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="99,206,99,240,93,240,93,206"/>
+<area shape="rect" id="Node000004" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="35,79,157,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,118,99,152,93,152,93,118"/>
+<area shape="rect" id="Node000005" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="31,5,161,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="99,44,99,79,93,79,93,44"/>
+</map>

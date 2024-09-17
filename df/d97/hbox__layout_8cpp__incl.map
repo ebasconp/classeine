@@ -1,0 +1,20 @@
+<map id="code/classeine&#45;lib/clsn/ui/layouts/hbox_layout.cpp" name="code/classeine&#45;lib/clsn/ui/layouts/hbox_layout.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="171,5,327,60"/>
+<area shape="rect" id="Node000002" href="$df/db8/hbox__layout_8h.html" title=" " alt="" coords="191,108,306,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,60,251,94,246,94,246,60"/>
+<area shape="rect" id="Node000003" href="$da/d55/layout__base_8h.html" title=" " alt="" coords="117,181,231,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="239,135,198,174,194,170,235,131"/>
+<area shape="rect" id="Node000009" href="$d0/d4d/empty_8h.html" title=" " alt="" coords="255,181,391,207"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="262,131,303,170,299,174,259,135"/>
+<area shape="rect" id="Node000004" href="$df/d07/region_8h.html" title=" " alt="" coords="41,255,182,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="166,209,133,246,129,242,162,205"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="207,255,269,280"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="187,205,221,243,217,246,183,209"/>
+<area shape="rect" id="Node000005" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="5,328,108,353"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="104,282,76,319,72,316,100,279"/>
+<area shape="rect" id="Node000007" href="$d2/d91/point_8h.html" title=" " alt="" coords="133,328,199,353"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="122,279,151,316,147,319,118,282"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="82,401,141,427"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="68,352,96,389,92,392,64,355"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="159,355,131,392,126,389,155,352"/>
+</map>

@@ -1,0 +1,31 @@
+<map id="code/classeine&#45;lib/clsn/core/system.h" name="code/classeine&#45;lib/clsn/core/system.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="483,5,631,45"/>
+<area shape="rect" id="Node000002" href="$d9/d15/strings_8cpp.html" title=" " alt="" coords="5,101,164,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="469,42,331,65,176,96,148,103,146,98,175,91,330,60,468,37"/>
+<area shape="rect" id="Node000003" href="$db/d7d/dual__layout__container_8cpp.html" title=" " alt="" coords="188,93,336,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="485,52,337,99,335,93,483,47"/>
+<area shape="rect" id="Node000004" href="$d0/d5c/graphics__sdl2__impl_8cpp.html" title=" " alt="" coords="360,93,551,148"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="528,57,486,95,482,91,524,53"/>
+<area shape="rect" id="Node000005" href="$dd/d21/main__window__sdl2__impl_8h.html" title=" " alt="" coords="575,93,744,148"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="589,52,632,91,629,95,586,56"/>
+<area shape="rect" id="Node000012" href="$de/d83/mono__container_8h.html" title=" " alt="" coords="768,101,956,141"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="632,47,801,98,800,103,630,52"/>
+<area shape="rect" id="Node000015" href="$d0/d73/ui__manager_8cpp.html" title=" " alt="" coords="980,101,1155,141"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="645,36,797,59,969,91,1000,98,999,103,968,96,796,64,644,41"/>
+<area shape="rect" id="Node000006" href="$d7/d07/main__window__impl_8h.html" title=" " alt="" coords="555,196,750,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="659,162,657,196,652,196,654,162"/>
+<area shape="rect" id="Node000007" href="$d7/deb/main__window_8h.html" title=" " alt="" coords="566,299,739,339"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="655,264,655,299,650,299,650,264"/>
+<area shape="rect" id="Node000008" href="$d9/d93/demo__window_8h.html" title=" " alt="" coords="573,387,733,427"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="655,353,655,386,650,386,650,353"/>
+<area shape="rect" id="Node000009" href="$d5/de0/Main_8cpp.html" title=" " alt="" coords="366,475,526,515"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="596,434,492,477,490,472,594,429"/>
+<area shape="rect" id="Node000010" href="$d5/dc7/demo__option__container_8cpp.html" title=" " alt="" coords="550,475,755,515"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="655,441,655,474,650,474,650,441"/>
+<area shape="rect" id="Node000011" href="$d4/d4b/demo__window_8cpp.html" title=" " alt="" coords="779,475,939,515"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="712,429,815,472,813,477,710,434"/>
+<area shape="rect" id="Node000013" href="$d7/d4a/padding__control_8h.html" title=" " alt="" coords="775,203,963,243"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="867,154,870,203,865,203,861,154"/>
+<area shape="rect" id="Node000014" href="$de/d11/demo__control__container_8cpp.html" title=" " alt="" coords="764,299,973,339"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="871,257,871,299,866,299,866,257"/>
+</map>

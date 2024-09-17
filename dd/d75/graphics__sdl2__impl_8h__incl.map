@@ -1,0 +1,37 @@
+<map id="code/classeine&#45;lib/clsn/ui/impl/sdl2/graphics_sdl2_impl.h" name="code/classeine&#45;lib/clsn/ui/impl/sdl2/graphics_sdl2_impl.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="204,5,395,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,181,103,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,43,167,51,130,64,95,84,67,110,59,123,55,137,53,168,48,167,49,137,54,121,63,106,92,79,127,60,165,46,203,38"/>
+<area shape="rect" id="Node000003" href="$d8/d83/entity_8h.html" title=" " alt="" coords="77,108,209,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,62,178,104,175,99,250,58"/>
+<area shape="rect" id="Node000004" href="$da/dec/color_8h.html" title=" " alt="" coords="234,108,365,133"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="302,60,302,94,297,94,297,60"/>
+<area shape="rect" id="Node000005" href="$d7/d82/draw_2forward_8h.html" title=" " alt="" coords="389,108,540,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="351,58,432,99,429,104,349,62"/>
+<area shape="rect" id="Node000008" href="$df/d2e/sdl2__font__cache_8h.html" title=" " alt="" coords="723,108,862,133"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="395,48,714,103,713,108,395,53"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="131,135,81,175,78,170,127,131"/>
+<area shape="rect" id="Node000006" href="$d0/d6a/text__horizontal__alignment_8h.html" title=" " alt="" coords="141,181,346,207"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="430,136,293,180,291,175,428,131"/>
+<area shape="rect" id="Node000007" href="$d6/dd3/text__vertical__alignment_8h.html" title=" " alt="" coords="370,181,559,207"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="467,134,467,168,462,168,462,134"/>
+<area shape="rect" id="Node000009" href="$de/db6/sdl2__font__wrapper_8h.html" title=" " alt="" coords="635,181,788,207"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="781,135,737,174,733,170,778,131"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="562,255,642,280"/>
+<area shape="poly" id="edge16_Node000008_Node000010" title=" " alt="" coords="724,133,670,150,645,165,624,183,615,196,609,211,604,241,599,240,604,209,611,194,620,180,642,160,668,145,722,128"/>
+<area shape="rect" id="Node000012" href="$d9/d67/font_8h.html" title=" " alt="" coords="812,181,939,207"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="808,131,853,170,850,174,804,135"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="963,181,1038,207"/>
+<area shape="poly" id="edge17_Node000008_Node000016" title=" " alt="" coords="827,131,955,174,953,179,825,136"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1063,181,1187,207"/>
+<area shape="poly" id="edge18_Node000008_Node000017" title=" " alt="" coords="847,131,1058,176,1057,181,845,136"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="695,209,633,249,630,245,692,204"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="669,255,746,280"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="713,207,711,241,706,241,708,207"/>
+<area shape="rect" id="Node000013" href="$d6/d13/font__style_8h.html" title=" " alt="" coords="770,255,869,280"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="868,209,839,245,835,242,864,205"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="893,255,951,280"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="885,206,909,242,905,245,881,208"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="976,255,1036,280"/>
+<area shape="poly" id="edge15_Node000012_Node000015" title=" " alt="" coords="898,204,974,246,972,250,895,209"/>
+</map>

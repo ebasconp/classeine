@@ -1,0 +1,7 @@
+<map id="clsn::ui::label" name="clsn::ui::label">
+<area shape="rect" id="Node000001" title=" " alt="" coords="17,152,125,177"/>
+<area shape="rect" id="Node000002" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="10,79,131,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,118,73,152,68,152,68,118"/>
+<area shape="rect" id="Node000003" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="5,5,136,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,44,73,79,68,79,68,44"/>
+</map>
