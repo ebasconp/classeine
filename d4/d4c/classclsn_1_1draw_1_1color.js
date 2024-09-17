@@ -9,5 +9,7 @@ var classclsn_1_1draw_1_1color =
     [ "get_color", "d4/d4c/classclsn_1_1draw_1_1color.html#aa52719d83cf5809d759ba3bf791e5f8b", null ],
     [ "get_green", "d4/d4c/classclsn_1_1draw_1_1color.html#abaf330cbecee41a34cbbe3a93e9e3946", null ],
     [ "get_red", "d4/d4c/classclsn_1_1draw_1_1color.html#abde5546f01932c72154f21733856484e", null ],
-    [ "operator==", "d4/d4c/classclsn_1_1draw_1_1color.html#a3882bb840510e840b776270de83560a1", null ]
+    [ "operator==", "d4/d4c/classclsn_1_1draw_1_1color.html#a3882bb840510e840b776270de83560a1", null ],
+    [ "to_gray", "d4/d4c/classclsn_1_1draw_1_1color.html#a5ab767e02bf522ccb6ae66640767519f", null ],
+    [ "to_gray_if", "d4/d4c/classclsn_1_1draw_1_1color.html#a080ab2b7596c239b30956b839ec40900", null ]
 ];

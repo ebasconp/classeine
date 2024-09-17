@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme.html#a416434d67c8c48354478b71bf38c7bc4":[1,0,0,3,0,1,13],
+"dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme.html#a47228e76aba7fbfcb81ee85a35634c5c":[1,0,0,3,0,1,10],
 "dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme.html#a5d4095e34b027643f0a8f7121de5f482":[1,0,0,3,0,1,12],
 "dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme.html#a649ff0f8121dc8bfdb711430dfa22a64":[1,0,0,3,0,1,3],
 "dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme.html#a64c45d553631b02d9a0271fe0a25b301":[1,0,0,3,0,1,15],
@@ -155,8 +157,8 @@ var NAVTREEINDEX3 =
 "functions_d.html":[1,3,0,3],
 "functions_e.html":[1,3,0,4],
 "functions_f.html":[1,3,0,5],
-"functions_func.html":[1,3,1],
 "functions_func.html":[1,3,1,0],
+"functions_func.html":[1,3,1],
 "functions_func_b.html":[1,3,1,1],
 "functions_func_c.html":[1,3,1,2],
 "functions_func_d.html":[1,3,1,3],
