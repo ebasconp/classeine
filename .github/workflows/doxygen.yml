@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - arch
+      - ubuntu-latest
 permissions:
   contents: write
 
