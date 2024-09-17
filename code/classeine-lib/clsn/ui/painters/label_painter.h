@@ -5,14 +5,10 @@
 
 #pragma once
 
-#include "clsn/ui/graphics.h"
+#include <clsn/ui/forward.h>
+#include <clsn/ui/graphics.h>
 
-#include "clsn/draw/forward.h"
-
-namespace clsn::ui
-{
-    class control;
-}
+#include <clsn/draw/forward.h>
 
 namespace clsn::ui::painters::label_painter
 {
@@ -23,7 +19,7 @@ namespace clsn::ui::painters::label_painter
     };
 
     void paint_label(graphics& gfx,
-                     const clsn::draw::region& rgn,
-                     const control& ctrl,
+                     const draw::region& rgn,
+                     const captionable_control& ctrl,
                      const painting_info& info);
 }

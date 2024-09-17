@@ -5,21 +5,21 @@
 
 #pragma once
 
-#include "control.h"
-#include "ui_manager.h"
+#include <clsn/ui/paintable_control.h>
+#include <clsn/ui/ui_manager.h>
 
-#include "window.h"
+#include <clsn/ui/window.h>
 
 namespace clsn::ui
 {
     template <typename ElementType>
-    class container : public control
+    class container : public paintable_control
     {
         mutable bool m_needs_to_paint_the_container;
 
     public:
         explicit container(std::string_view section_name)
-        : control{section_name}
+        : paintable_control{section_name}
         , m_needs_to_paint_the_container{false}
         {
             load_container_defaults();

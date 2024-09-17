@@ -123,7 +123,6 @@ namespace clsn::ui
     {
         auto invalidate_proc = [this](auto&) { invalidate(); };
 
-        add_text_changed_listener(invalidate_proc);
         add_visible_changed_listener(invalidate_proc);
     }
 
@@ -192,35 +191,6 @@ namespace clsn::ui
         // Do nothing here
     }
 
-    auto control::get_actual_background_color() const -> const draw::color&
-    {
-        const auto& color = get_background_color();
-        if (color.has_value())
-            return color.value();
-
-        return ui_manager::get_instance().get_color(
-                    m_default_section_name, "control_background_color");
-    }
-
-    auto control::get_actual_foreground_color() const -> const draw::color&
-    {
-        const auto& color = get_foreground_color();
-        if (color.has_value())
-            return color.value();
-
-        return ui_manager::get_instance().get_color(
-                    m_default_section_name, "controlForegroundColor");
-    }
-
-    auto control::get_actual_font() const -> const draw::font&
-    {
-        const auto& font = get_font();
-        if (font.has_value())
-            return font.value();
-
-        return ui_manager::get_instance().get_font(m_default_section_name, "default_regular_font");
-    }
-
     auto control::get_actual_preferred_size() const -> const draw::dimension&
     {
         const auto& size = get_preferred_size();
@@ -253,6 +223,6 @@ namespace clsn::ui
     auto control::to_string() const -> std::string
     {
         using namespace clsn::core::strings;
-        return format("({}) [{}]: {}", typeid(*this).name(), m_text.get(), this);
+        return format("({}): {}", typeid(*this).name(), this);
     }
 }

@@ -10,7 +10,7 @@
 namespace clsn::ui
 {
     label::label()
-    : control{"label"}
+    : captionable_control{"label"}
     , m_horizontal_alignment{clsn::draw::text_horizontal_alignment::left}
     , m_vertical_alignment{clsn::draw::text_vertical_alignment::middle}
     {

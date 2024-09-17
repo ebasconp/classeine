@@ -25,7 +25,7 @@ namespace clsn::ui::renderers
             const auto container_needs_repaint = container.needs_to_paint_the_container();
             if (container_needs_repaint)
             {
-                gfx.set_draw_color(base_ctrl.get_actual_background_color());
+                gfx.set_draw_color(container.get_actual_background_color());
                 gfx.draw_fill_rectangle(rgn);
             }
 

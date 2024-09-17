@@ -29,7 +29,7 @@ namespace
 namespace clsn::ui
 {
     window::window(std::string_view section_name)
-    : control(section_name)
+    : captionable_control(section_name)
     {
         init_visibility();
         init_defaults();

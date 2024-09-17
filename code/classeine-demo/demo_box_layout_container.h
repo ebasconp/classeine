@@ -5,9 +5,11 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "clsn/ui/button.h"
-#include "clsn/ui/empty_control.h"
-#include "clsn/ui/label.h"
+#include <clsn/ui/button.h>
+#include <clsn/ui/empty_control.h>
+#include <clsn/ui/label.h>
+
+#include <clsn/ui/renderers/customizable_renderer.h>
 
 #include <clsn/draw/colors.h>
 
@@ -35,7 +37,11 @@ namespace clsn::demo
             });
 
             m_control = this->template make_and_add<empty_control>();
-            m_control->set_background_color(draw::colors::make_yellow());
+            m_control->set_renderer(std::make_unique<renderers::customizable_renderer>([](auto& gfx, auto& rgn, auto&)
+            {
+                gfx.set_draw_color(draw::colors::make_yellow());
+                gfx.draw_fill_rectangle(rgn);
+            }));
 
             m_label = this->template make_and_add<label>();
             m_label->set_text("This is a label");

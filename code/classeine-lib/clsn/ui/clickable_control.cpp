@@ -3,14 +3,13 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "clickable_control.h"
-#include "window.h"
-
+#include <clsn/ui/clickable_control.h>
+#include <clsn/ui/window.h>
 
 namespace clsn::ui
 {
     clickable_control::clickable_control(std::string_view section_name)
-    : control{section_name}
+    : captionable_control{section_name}
     {
         init_clickable_control_events();
     }

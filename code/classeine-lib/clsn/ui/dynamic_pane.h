@@ -5,15 +5,15 @@
 
 #pragma once
 
-#include "control.h"
+#include <clsn/ui/paintable_control.h>
 
-#include "clsn/draw/forward.h"
+#include <clsn/draw/forward.h>
 
 #include <memory>
 
 namespace clsn::ui
 {
-    class dynamic_pane : public control
+    class dynamic_pane : public paintable_control
     {
         std::shared_ptr<control> m_inner_control;
 
