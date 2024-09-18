@@ -22,11 +22,12 @@ var searchData=
   ['layout_5fcontainer_3c_20layouts_3a_3avbox_5flayout_20_3e_19',['layout_container&lt; layouts::vbox_layout &gt;',['../d1/d65/classclsn_1_1ui_1_1layout__container.html',1,'clsn::ui']]],
   ['layout_5fcontainer_3c_20layouts_3a_3axy_5flayout_20_3e_20',['layout_container&lt; layouts::xy_layout &gt;',['../d1/d65/classclsn_1_1ui_1_1layout__container.html',1,'clsn::ui']]],
   ['layout_5fcontainer_5fcontrol_5fand_5fconstraint_21',['layout_container_control_and_constraint',['../dc/d1d/structclsn_1_1ui_1_1layout__container__control__and__constraint.html',1,'clsn::ui']]],
-  ['lazy_22',['lazy',['../dc/de1/classclsn_1_1core_1_1lazy.html',1,'clsn::core::lazy&lt; T &gt;'],['../dc/de1/classclsn_1_1core_1_1lazy.html#a010baa5ff3eac96be6af5ed97061f4f9',1,'clsn::core::lazy::lazy()']]],
+  ['lazy_22',['lazy',['../dc/de1/classclsn_1_1core_1_1lazy.html#a010baa5ff3eac96be6af5ed97061f4f9',1,'clsn::core::lazy::lazy()'],['../dc/de1/classclsn_1_1core_1_1lazy.html',1,'clsn::core::lazy&lt; T &gt;']]],
   ['lazy_2eh_23',['lazy.h',['../d9/d04/lazy_8h.html',1,'']]],
   ['left_24',['left',['../db/dde/namespaceclsn_1_1draw.html#afd84e988ff2de6514aba027f2101bc16a811882fecd5c7618d7099ebbd39ea254',1,'clsn::draw']]],
-  ['light_5famatista_5fui_5ftheme_25',['light_amatista_ui_theme',['../d0/d2a/classclsn_1_1ui_1_1amatista_1_1light__amatista__ui__theme.html',1,'clsn::ui::amatista::light_amatista_ui_theme'],['../d0/d2a/classclsn_1_1ui_1_1amatista_1_1light__amatista__ui__theme.html#aeb3c0630afdae254e62d1a7223e37afd',1,'clsn::ui::amatista::light_amatista_ui_theme::light_amatista_ui_theme()']]],
-  ['light_5famatista_5fui_5ftheme_2ecpp_26',['light_amatista_ui_theme.cpp',['../d7/d3b/light__amatista__ui__theme_8cpp.html',1,'']]],
-  ['light_5famatista_5fui_5ftheme_2eh_27',['light_amatista_ui_theme.h',['../d6/dc2/light__amatista__ui__theme_8h.html',1,'']]],
-  ['load_5fdefaults_28',['load_defaults',['../d2/d50/classclsn_1_1ui_1_1container.html#a2b406b5dcc877d47d790ce6316ae76c0',1,'clsn::ui::container::load_defaults()'],['../d7/d66/classclsn_1_1ui_1_1control.html#a132981465980452f5bc715b52874e126',1,'clsn::ui::control::load_defaults()']]]
+  ['libraries_20implemented_25',['Libraries implemented',['../index.html#autotoc_md3',1,'']]],
+  ['light_5famatista_5fui_5ftheme_26',['light_amatista_ui_theme',['../d0/d2a/classclsn_1_1ui_1_1amatista_1_1light__amatista__ui__theme.html',1,'clsn::ui::amatista::light_amatista_ui_theme'],['../d0/d2a/classclsn_1_1ui_1_1amatista_1_1light__amatista__ui__theme.html#aeb3c0630afdae254e62d1a7223e37afd',1,'clsn::ui::amatista::light_amatista_ui_theme::light_amatista_ui_theme()']]],
+  ['light_5famatista_5fui_5ftheme_2ecpp_27',['light_amatista_ui_theme.cpp',['../d7/d3b/light__amatista__ui__theme_8cpp.html',1,'']]],
+  ['light_5famatista_5fui_5ftheme_2eh_28',['light_amatista_ui_theme.h',['../d6/dc2/light__amatista__ui__theme_8h.html',1,'']]],
+  ['load_5fdefaults_29',['load_defaults',['../d2/d50/classclsn_1_1ui_1_1container.html#a2b406b5dcc877d47d790ce6316ae76c0',1,'clsn::ui::container::load_defaults()'],['../d7/d66/classclsn_1_1ui_1_1control.html#a132981465980452f5bc715b52874e126',1,'clsn::ui::control::load_defaults()']]]
 ];

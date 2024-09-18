@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Classeine: Main Page</title>
+<title>Classeine: classeine</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,16 +89,111 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Classeine Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">classeine </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> Classeine is a library that should provide all needed tools to make easier the creation of rich user interfaces in modern C++.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Reference docs</h1>
+<p><a href="http://classeine.org">http://classeine.org</a></p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Features</h1>
+<ul>
+<li>Written in modern C++</li>
+<li>control renderers pluggable</li>
+<li>Built on top of the standard library and:<ul>
+<li>SDL2</li>
+<li>SDL2_ttf</li>
+<li>SDL2_gfx</li>
+<li><a href="https://github.com/aminosbh/sdl2-cmake-modules">https://github.com/aminosbh/sdl2-cmake-modules</a></li>
+</ul>
+</li>
+<li>No exceptions</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Libraries implemented</h1>
+<ul>
+<li><b><a class="el" href="dd/d52/namespaceclsn_1_1core.html">clsn::core</a></b> - Core functionality<ul>
+<li>Event management</li>
+<li>Properties</li>
+<li>configuration by sections</li>
+<li><code>entity</code> polymorphic base class: Adds some memory profiling tools<ul>
+<li><code>entity_wrapper&lt;T&gt;</code>: Wrapper for any <code>T</code>, inheriting from <code>entity</code></li>
+</ul>
+</li>
+<li><code>factory&lt;T&gt;</code>: Factory that returns an instance of a base class T when invoked.</li>
+<li><code>lazy&lt;T&gt;</code>: Object T is constructed the first time this instance is accessed.</li>
+<li>Simple and tiny string builder</li>
+</ul>
+</li>
+<li><b><a class="el" href="db/dde/namespaceclsn_1_1draw.html">clsn::draw</a></b> - library providing drawing primitives<ul>
+<li><code>color</code></li>
+<li><code>dimension</code></li>
+<li><code>font</code></li>
+<li><code>point</code></li>
+<li><code>region</code></li>
+</ul>
+</li>
+<li><b><a class="el" href="de/dd9/namespaceclsn_1_1ui.html">clsn::ui</a></b> - library providing componentable UI controls<ul>
+<li><code>control</code><ul>
+<li><code>clickable_control</code><ul>
+<li><code>button</code></li>
+<li><code>toggle_control</code><ul>
+<li><code>check_box</code></li>
+<li><code>radio_button</code></li>
+<li><code>toggle_button</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>label</code></li>
+<li><code>container</code><ul>
+<li><code>mono_container</code><ul>
+<li><code>padding_control</code></li>
+</ul>
+</li>
+<li><code>layout_container&lt;Layout&gt;</code><ul>
+<li><code>dual_layout_container</code> - Container that stores only two elements, one occupying only its preferred size and the other one occupying the remaining space</li>
+<li><code>flow_layout_container</code> - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering</li>
+<li><code>hbox_layout_container</code> - Container where the controls are rendered horizontally</li>
+<li><code>vbox_layout_container</code> - Container where the controls are rendered vertically</li>
+<li><code>xy_layout_container</code> - Container where the controls are placed in specific coordinates in the given region.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>dynamic_pane</code> - Pane able to load and unload dynamically any control</li>
+<li><code>empty_control</code> - Control that only paints its background. Useful to have a custom renderer.</li>
+<li><code>ui_manager</code><ul>
+<li><code>ui_skin</code> - Loadable set of renderers, themes and defaults for the UI controls.</li>
+<li><code>ui_theme</code> - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.<ul>
+<li><code>amatista_ui_theme</code> - Set of specific set of colors<ul>
+<li><code>light_amatista_ui_theme</code> - Light theme</li>
+<li><code>dark_amatista_ui_theme</code> - Dark theme</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>window</code><ul>
+<li><code>main_window</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>graphics</code> - abstraction to rendering backend </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Sep 18 2024 11:57:37 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Sep 18 2024 12:04:37 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
