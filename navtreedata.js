@@ -25,9 +25,10 @@
 var NAVTREE =
 [
   [ "Classeine", "index.html", [
-    [ "Reference docs", "index.html#autotoc_md1", null ],
-    [ "Features", "index.html#autotoc_md2", null ],
-    [ "Libraries implemented", "index.html#autotoc_md3", null ],
+    [ "Features", "index.html#autotoc_md1", null ],
+    [ "Libraries implemented", "index.html#autotoc_md2", null ],
+    [ "Supported Platforms", "index.html#autotoc_md3", null ],
+    [ "GitHub", "index.html#autotoc_md4", null ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
       [ "Functions", "namespacemembers_func.html", null ],

@@ -2,7 +2,7 @@ var searchData=
 [
   ['factory_0',['factory',['../df/dce/classclsn_1_1core_1_1factory.html',1,'clsn::core']]],
   ['factory_2eh_1',['factory.h',['../de/d06/factory_8h.html',1,'']]],
-  ['features_2',['Features',['../index.html#autotoc_md2',1,'']]],
+  ['features_2',['Features',['../index.html#autotoc_md1',1,'']]],
   ['finalize_3',['finalize',['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a156d2c1e9fdd63301c41b864611763bc',1,'clsn::ui::ui_manager']]],
   ['flow_5flayout_4',['flow_layout',['../d0/ddf/classclsn_1_1ui_1_1layouts_1_1flow__layout.html',1,'clsn::ui::layouts']]],
   ['flow_5flayout_2ecpp_5',['flow_layout.cpp',['../dc/d41/flow__layout_8cpp.html',1,'']]],

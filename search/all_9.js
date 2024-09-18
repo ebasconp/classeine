@@ -25,7 +25,7 @@ var searchData=
   ['lazy_22',['lazy',['../dc/de1/classclsn_1_1core_1_1lazy.html#a010baa5ff3eac96be6af5ed97061f4f9',1,'clsn::core::lazy::lazy()'],['../dc/de1/classclsn_1_1core_1_1lazy.html',1,'clsn::core::lazy&lt; T &gt;']]],
   ['lazy_2eh_23',['lazy.h',['../d9/d04/lazy_8h.html',1,'']]],
   ['left_24',['left',['../db/dde/namespaceclsn_1_1draw.html#afd84e988ff2de6514aba027f2101bc16a811882fecd5c7618d7099ebbd39ea254',1,'clsn::draw']]],
-  ['libraries_20implemented_25',['Libraries implemented',['../index.html#autotoc_md3',1,'']]],
+  ['libraries_20implemented_25',['Libraries implemented',['../index.html#autotoc_md2',1,'']]],
   ['light_5famatista_5fui_5ftheme_26',['light_amatista_ui_theme',['../d0/d2a/classclsn_1_1ui_1_1amatista_1_1light__amatista__ui__theme.html',1,'clsn::ui::amatista::light_amatista_ui_theme'],['../d0/d2a/classclsn_1_1ui_1_1amatista_1_1light__amatista__ui__theme.html#aeb3c0630afdae254e62d1a7223e37afd',1,'clsn::ui::amatista::light_amatista_ui_theme::light_amatista_ui_theme()']]],
   ['light_5famatista_5fui_5ftheme_2ecpp_27',['light_amatista_ui_theme.cpp',['../d7/d3b/light__amatista__ui__theme_8cpp.html',1,'']]],
   ['light_5famatista_5fui_5ftheme_2eh_28',['light_amatista_ui_theme.h',['../d6/dc2/light__amatista__ui__theme_8h.html',1,'']]],

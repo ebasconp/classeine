@@ -93,15 +93,13 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">classeine </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> Classeine is a library that should provide all needed tools to make easier the creation of rich user interfaces in modern C++.</p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> Classeine is a library designed to provide all the necessary tools for creating full-featured and portable applications built on top of SDL2 in modern C++.</p>
+<p>Please note that it is currently in an early stage of development.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Reference docs</h1>
-<p><a href="http://classeine.org">http://classeine.org</a></p>
-<h1><a class="anchor" id="autotoc_md2"></a>
 Features</h1>
 <ul>
 <li>Written in modern C++</li>
-<li>control renderers pluggable</li>
+<li>UI control renderers pluggable with multi-theme support</li>
 <li>Built on top of the standard library and:<ul>
 <li>SDL2</li>
 <li>SDL2_ttf</li>
@@ -110,8 +108,9 @@ Features</h1>
 </ul>
 </li>
 <li>No exceptions</li>
+<li>No manual memory management (through extensive usage of smart pointers and RAII)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md2"></a>
 Libraries implemented</h1>
 <ul>
 <li><b><a class="el" href="dd/d52/namespaceclsn_1_1core.html">clsn::core</a></b> - Core functionality<ul>
@@ -183,17 +182,26 @@ Libraries implemented</h1>
 </li>
 </ul>
 </li>
-<li><code>graphics</code> - abstraction to rendering backend </li>
+<li><code>graphics</code> - abstraction to rendering backend</li>
 </ul>
 </li>
 </ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Supported Platforms</h1>
+<ul>
+<li>Linux</li>
+<li>Windows</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+GitHub</h1>
+<p><a href="http://www.github.com/ebasconp/classeine">http://www.github.com/ebasconp/classeine</a> </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Sep 18 2024 12:04:37 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Sep 18 2024 12:18:50 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

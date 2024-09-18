@@ -21,5 +21,6 @@ var searchData=
   ['show_18',['show',['../db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html#a1a0b6709255f561e785e6f8d67155727',1,'clsn::ui::impl::sdl2::main_window_sdl2_impl']]],
   ['strings_2ecpp_19',['strings.cpp',['../d9/d15/strings_8cpp.html',1,'']]],
   ['strings_2eh_20',['strings.h',['../d6/d90/strings_8h.html',1,'']]],
-  ['system_2eh_21',['system.h',['../dc/db2/system_8h.html',1,'']]]
+  ['supported_20platforms_21',['Supported Platforms',['../index.html#autotoc_md3',1,'']]],
+  ['system_2eh_22',['system.h',['../dc/db2/system_8h.html',1,'']]]
 ];

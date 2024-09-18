@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['implemented_0',['Libraries implemented',['../index.html#autotoc_md3',1,'']]],
+  ['implemented_0',['Libraries implemented',['../index.html#autotoc_md2',1,'']]],
   ['init_1',['init',['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a9631d0d43a0760d29144596cbddb4ef6',1,'clsn::ui::ui_manager']]],
   ['init_5fnew_5fcontrol_2',['init_new_control',['../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e',1,'clsn::ui::container']]],
   ['install_5ftheme_3',['install_theme',['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a13d44c37f5c5015ef9161849fde3e1d3',1,'clsn::ui::ui_manager']]],
