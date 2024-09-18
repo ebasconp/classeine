@@ -5,7 +5,7 @@ the creation of rich user interfaces in modern C++.
 
 ## Reference docs
 
-http://ebasconp/github.io/classeine
+http://classeine.org
 
 ## Features
 * Written in modern C++
