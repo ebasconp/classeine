@@ -1,21 +1,19 @@
 # classeine
 
-Classeine is a library that should provide all needed tools to make easier
-the creation of rich user interfaces in modern C++.
+Classeine is a library designed to provide all the necessary tools for creating full-featured and portable applications built on top of SDL2 in modern C++.
 
-## Reference docs
-
-http://classeine.org
+Please note that it is currently in an early stage of development.
 
 ## Features
 * Written in modern C++
-* control renderers pluggable
+* UI control renderers pluggable with multi-theme support
 * Built on top of the standard library and:
   * SDL2
   * SDL2_ttf
   * SDL2_gfx
   * https://github.com/aminosbh/sdl2-cmake-modules
 * No exceptions
+* No manual memory management (through extensive usage of smart pointers and RAII)
 
 ## Libraries implemented
 
@@ -66,4 +64,12 @@ http://classeine.org
     * `window`
       * `main_window`
   * `graphics` - abstraction to rendering backend
+
+## Supported Platforms
+  * Linux
+  * Windows
+
+## GitHub 
+
+http://www.github.com/ebasconp/classeine
 
