@@ -63,7 +63,8 @@ var annotated_dup =
           [ "hbox_layout", "d4/de0/classclsn_1_1ui_1_1layouts_1_1hbox__layout.html", "d4/de0/classclsn_1_1ui_1_1layouts_1_1hbox__layout" ],
           [ "layout_base", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base" ],
           [ "vbox_layout", "dc/ded/classclsn_1_1ui_1_1layouts_1_1vbox__layout.html", "dc/ded/classclsn_1_1ui_1_1layouts_1_1vbox__layout" ],
-          [ "xy_layout", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout" ]
+          [ "xy_layout", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout" ],
+          [ "xy_layout_constraint", "d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html", "d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint" ]
         ] ],
         [ "painters", "d8/d64/namespaceclsn_1_1ui_1_1painters.html", [
           [ "background_painter", "d1/d4b/classclsn_1_1ui_1_1painters_1_1background__painter.html", null ],

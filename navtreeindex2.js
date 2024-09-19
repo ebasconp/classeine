@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"d8/df8/classclsn_1_1draw_1_1font.html#a522a6804901cf477892c2b2ca48bc5ea":[5,0,0,2,3,1],
+"d8/df8/classclsn_1_1draw_1_1font.html#a9bd689009d4953949859b49c5e39ab3b":[5,0,0,2,3,5],
+"d8/df8/classclsn_1_1draw_1_1font.html#aa9e172a2a875c56a3a12652fe66805a3":[5,0,0,2,3,2],
+"d8/df8/classclsn_1_1draw_1_1font.html#ac66d8ab7ce9273c431ca9474cafb0620":[5,0,0,2,3,3],
 "d8/df8/classclsn_1_1draw_1_1font.html#ad3ba18e196b7a84be269638495189deb":[5,0,0,2,3,4],
 "d8/df8/classclsn_1_1draw_1_1font.html#adb25f2d74425a09c07c51ed92236510b":[5,0,0,2,3,6],
 "d8/dfb/classclsn_1_1core_1_1configuration.html":[5,0,0,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "dd/d61/vbox__layout_8cpp.html":[6,0,0,1,0,2,3,7],
 "dd/d74/customizable__renderer_8h.html":[6,0,0,1,0,2,5,6],
 "dd/d74/customizable__renderer_8h_source.html":[6,0,0,1,0,2,5,6],
-"dd/d88/classclsn_1_1core_1_1value__changed__event.html":[5,0,0,0,13],
-"dd/d88/classclsn_1_1core_1_1value__changed__event.html#a7142fab9066925174e0eb1f4cd4f45b1":[5,0,0,0,13,0],
-"dd/d88/classclsn_1_1core_1_1value__changed__event.html#aa561c485cd320c95f1fe2862e62b42b0":[5,0,0,0,13,1],
-"dd/d88/classclsn_1_1core_1_1value__changed__event.html#aa86f4ed09b35f7080083fd3f49f3d89e":[5,0,0,0,13,2],
-"dd/da0/classclsn_1_1ui_1_1impl_1_1sdl2_1_1sdl2__font__cache.html":[5,0,0,3,2,0,2]
+"dd/d88/classclsn_1_1core_1_1value__changed__event.html":[5,0,0,0,13]
 };
