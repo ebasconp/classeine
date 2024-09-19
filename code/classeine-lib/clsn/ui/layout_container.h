@@ -51,7 +51,7 @@ namespace clsn::ui
         template <typename ControlType, typename... Args>
         std::shared_ptr<ControlType> make_and_add(Args&&... args)
         {
-            auto ptr = make_control<ControlType>();
+            auto ptr = control::make<ControlType>();
             add(ptr, std::forward<Args>(args)...);
 
             return ptr;

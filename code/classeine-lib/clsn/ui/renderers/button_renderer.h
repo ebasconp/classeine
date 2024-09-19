@@ -5,12 +5,8 @@
 
 #pragma once
 
-#include "clsn/ui/renderer_base.h"
-
-namespace clsn::ui
-{
-  class clickable_control;
-}
+#include <clsn/ui/forward.h>
+#include <clsn/ui/renderer_base.h>
 
 namespace clsn::ui::renderers
 {

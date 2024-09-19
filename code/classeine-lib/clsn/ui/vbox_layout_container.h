@@ -5,14 +5,12 @@
 
 #pragma once
 
-#include "layout_container.h"
+#include <clsn/ui/layout_container.h>
 
-#include "layouts/vbox_layout.h"
+#include <clsn/ui/layouts/vbox_layout.h>
 
 namespace clsn::ui
 {
-    using clsn::core::empty;
-
     class vbox_layout_container : public layout_container<layouts::vbox_layout>
     {
     public:

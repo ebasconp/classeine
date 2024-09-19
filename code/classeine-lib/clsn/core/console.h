@@ -5,50 +5,53 @@
 
 #pragma once
 
-#include "strings.h"
+#include <clsn/core/non_instantiable.h>
+#include <clsn/core/strings.h>
 
 #include <iostream>
 
-namespace clsn::core::console
+namespace clsn::core
 {
-    template <typename... Args>
-    void print_stream(std::ostream& os, std::string_view fmtspec, const Args&... args)
+    class console final : public non_instantiable
     {
-        strings::format_stream(os, fmtspec, args...);
-    }
+    public:
+        template <typename... Args>
+        static void print_stream(std::ostream& os, std::string_view fmtspec, const Args&... args)
+        {
+            strings::format_stream(os, fmtspec, args...);
+        }
 
-    template <typename... Args>
-    void println_stream(std::ostream& os, std::string_view fmtspec, const Args&... args)
-    {
-        strings::format_stream(os, fmtspec, args...);
-        os << '\n';
-    }
+        template <typename... Args>
+        static void println_stream(std::ostream& os, std::string_view fmtspec, const Args&... args)
+        {
+            strings::format_stream(os, fmtspec, args...);
+            os << '\n';
+        }
 
-    template <typename... Args>
-    void print(std::string_view fmtspec, const Args&... args)
-    {
-        print_stream(std::cout, fmtspec, args...);
-    }
+        template <typename... Args>
+        static void print(std::string_view fmtspec, const Args&... args)
+        {
+            print_stream(std::cout, fmtspec, args...);
+        }
 
-    template <typename... Args>
-    void println(std::string_view fmtspec, const Args&... args)
-    {
-        println_stream(std::cout, fmtspec, args...);
-    }
+        template <typename... Args>
+        static void println(std::string_view fmtspec, const Args&... args)
+        {
+            println_stream(std::cout, fmtspec, args...);
+        }
 
 #ifdef _CLSN_DEBUG_
-    template <typename... Args>
-    void debug(std::string_view fmtspec, const Args&... args)
-    {
-        print("DEBUG: ");
-        print(fmtspec, args...);
-        std::cout << std::endl;
-    }
+        template <typename... Args>
+        static void debug(std::string_view fmtspec, const Args&... args)
+        {
+            print("DEBUG: ");
+            print(fmtspec, args...);
+            std::cout << std::endl;
+        }
 #else
-    inline void debug(std::string_view, ...)
-    {
-    }
+        static inline void debug(std::string_view, ...)
+        {
+        }
 #endif
-
-
+    };
 }

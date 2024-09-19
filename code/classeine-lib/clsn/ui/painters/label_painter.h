@@ -5,12 +5,14 @@
 
 #pragma once
 
+#include <clsn/core/non_instantiable.h>
+
 #include <clsn/ui/forward.h>
 #include <clsn/ui/graphics.h>
 
 #include <clsn/draw/forward.h>
 
-namespace clsn::ui::painters::label_painter
+namespace clsn::ui::painters
 {
     struct painting_info final
     {
@@ -18,8 +20,12 @@ namespace clsn::ui::painters::label_painter
         clsn::draw::text_vertical_alignment vertical_alignment;
     };
 
-    void paint_label(graphics& gfx,
+    class label_painter final : public core::non_instantiable
+    {
+    public:
+        static void paint_label(graphics& gfx,
                      const draw::region& rgn,
                      const captionable_control& ctrl,
                      const painting_info& info);
+    };
 }

@@ -11,7 +11,6 @@
 #include <clsn/ui/events/mouse_click_event.h>
 #include <clsn/ui/events/mouse_moved_event.h>
 
-#include <clsn/draw/color.h>
 #include <clsn/draw/dimension.h>
 
 #include <clsn/core/entity.h>
@@ -155,11 +154,13 @@ namespace clsn::ui
         virtual auto make_default_renderer() const -> std::unique_ptr<renderer_base>;
 
         void init_control_events();
+
+    public:
+        template <typename T, typename... Args>
+        static auto make(Args&&... args) -> std::shared_ptr<T>
+        {
+            return std::make_shared<T>(std::forward<Args>(args)...);
+        }
     };
 
-    template <typename T, typename... Args>
-    std::shared_ptr<T> make_control(Args&&... args)
-    {
-        return std::make_shared<T>(std::forward<Args>(args)...);
-    }
 }

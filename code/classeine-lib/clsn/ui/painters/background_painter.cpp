@@ -3,13 +3,13 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "background_painter.h"
+#include <clsn/ui/painters/background_painter.h>
 
-namespace clsn::ui::painters::background_painter
+namespace clsn::ui::painters
 {
     using namespace clsn::draw;
 
-    void paint_background(graphics& gfx, const region& rgn, const color& clr)
+    void background_painter::paint_background(graphics& gfx, const region& rgn, const color& clr)
     {
         gfx.set_draw_color(clr);
         gfx.draw_fill_rectangle(rgn);

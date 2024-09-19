@@ -5,13 +5,18 @@
 
 #pragma once
 
-#include "clsn/ui/graphics.h"
+#include <clsn/ui/forward.h>
+#include <clsn/ui/graphics.h>
 
-#include "clsn/draw/forward.h"
+#include <clsn/draw/forward.h>
 
-namespace clsn::ui { class check_box; }
+#include <clsn/core/non_instantiable.h>
 
-namespace clsn::ui::painters::check_box_painter
+namespace clsn::ui::painters
 {
-    void paint_check_box(graphics& gfx, const clsn::draw::region& rgn, const check_box& cb, int size);
+    class check_box_painter final : public core::non_instantiable
+    {
+    public:
+        static void paint_check_box(graphics& gfx, const clsn::draw::region& rgn, const check_box& cb, int size);
+    };
 }

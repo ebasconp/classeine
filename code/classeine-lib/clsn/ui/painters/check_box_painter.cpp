@@ -3,17 +3,17 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "check_box_painter.h"
+#include <clsn/ui/painters/check_box_painter.h>
 
-#include "clsn/ui/check_box.h"
+#include <clsn/ui/check_box.h>
 
-#include "clsn/draw/region.h"
+#include <clsn/draw/region.h>
 
-namespace clsn::ui::painters::check_box_painter
+namespace clsn::ui::painters
 {
     using namespace clsn::draw;
     
-    void paint_check_box(graphics& gfx, const region& r, const check_box& chk_box, int size)
+    void check_box_painter::paint_check_box(graphics& gfx, const region& r, const check_box& chk_box, int size)
     {
         const region rgn{
             {r.get_x() + (r.get_width() - size) / 2, r.get_y() + (r.get_height() - size) / 2},

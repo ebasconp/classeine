@@ -54,7 +54,7 @@ namespace clsn::ui::impl::sdl2
         void show()
         {
             using namespace std::string_literals;
-            using namespace clsn::core::system;
+            using namespace clsn::core;
 
             if (!m_sdl_initialized)
             {
@@ -62,7 +62,7 @@ namespace clsn::ui::impl::sdl2
                 {
                     SDL_Log("Error while initializing SDL: %s", SDL_GetError());
 
-                    panic("Error while initializing SDL: {}", SDL_GetError());
+                    system::panic("Error while initializing SDL: {}", SDL_GetError());
                     return;
                 }
 
@@ -84,7 +84,7 @@ namespace clsn::ui::impl::sdl2
                 SDL_Log("Error while creating window: %s", SDL_GetError());
                 SDL_Quit();
 
-                panic("Error while creating window: {}", SDL_GetError());
+                system::panic("Error while creating window: {}", SDL_GetError());
                 return;
             }
 
@@ -98,7 +98,7 @@ namespace clsn::ui::impl::sdl2
                 SDL_DestroyWindow(m_window);
                 SDL_Quit();
 
-                panic("Error while creating renderer: {}", SDL_GetError());
+                system::panic("Error while creating renderer: {}", SDL_GetError());
                 return;
             }
 
@@ -189,7 +189,7 @@ namespace clsn::ui::impl::sdl2
             }
         }
 
-        void trigger_mouse_click_event(SDL_Event& e, Uint32 type)
+        void trigger_mouse_click_event(const SDL_Event& e, Uint32 type)
         {
             const auto status =
                 type == SDL_MOUSEBUTTONDOWN

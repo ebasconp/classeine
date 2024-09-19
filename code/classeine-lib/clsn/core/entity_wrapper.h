@@ -5,14 +5,14 @@
 
 #pragma once
 
-#include "entity.h"
+#include <clsn/core/entity.h>
 
 #include <utility>
 
 namespace clsn::core
 {
     template <typename Type>
-    class entity_wrapper : public entity
+    class entity_wrapper final : public entity
     {
         Type m_value;
 

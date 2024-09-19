@@ -61,37 +61,37 @@ namespace clsn::demo
 
         if (action_name == "hbox_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(make_control<demo_box_layout_container<hbox_layout_container>>());
+            m_demo_window.get_content_pane().set_inner_control(control::make<demo_box_layout_container<hbox_layout_container>>());
             return;
         }
 
         if (action_name == "vbox_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(make_control<demo_box_layout_container<vbox_layout_container>>());
+            m_demo_window.get_content_pane().set_inner_control(control::make<demo_box_layout_container<vbox_layout_container>>());
             return;
         }
 
         if (action_name == "dual_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(make_control<demo_dual_layout_container>());
+            m_demo_window.get_content_pane().set_inner_control(control::make<demo_dual_layout_container>());
             return;
         }
 
         if (action_name == "flow_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(make_control<demo_flow_layout_container>());
+            m_demo_window.get_content_pane().set_inner_control(control::make<demo_flow_layout_container>());
             return;
         }
 
         if (action_name == "xy_layout_container")
         {
-            m_demo_window.get_content_pane().set_inner_control(make_control<demo_xy_layout_container>());
+            m_demo_window.get_content_pane().set_inner_control(control::make<demo_xy_layout_container>());
             return;
         }
 
         if (action_name == "Controls")
         {
-            m_demo_window.get_content_pane().set_inner_control(make_control<demo_control_container>());
+            m_demo_window.get_content_pane().set_inner_control(control::make<demo_control_container>());
         }
     }
 }
