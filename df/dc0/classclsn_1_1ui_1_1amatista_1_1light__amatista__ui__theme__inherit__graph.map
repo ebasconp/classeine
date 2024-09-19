@@ -1,9 +1,9 @@
 <map id="clsn::ui::amatista::light_amatista_ui_theme" name="clsn::ui::amatista::light_amatista_ui_theme">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,1056,207,1453"/>
-<area shape="rect" id="Node000002" href="$dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme.html" title=" " alt="" coords="5,432,207,1008"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,1022,109,1056,103,1056,103,1022"/>
-<area shape="rect" id="Node000003" href="$d1/da9/classclsn_1_1ui_1_1ui__theme.html" title=" " alt="" coords="28,239,184,384"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,398,109,432,103,432,103,398"/>
-<area shape="rect" id="Node000004" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="45,5,167,191"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="109,204,109,238,103,238,103,204"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,240,197,280"/>
+<area shape="rect" id="Node000002" href="$dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme.html" title=" " alt="" coords="23,152,179,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,206,104,240,99,240,99,206"/>
+<area shape="rect" id="Node000003" href="$d1/da9/classclsn_1_1ui_1_1ui__theme.html" title=" " alt="" coords="33,79,170,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,118,104,152,99,152,99,118"/>
+<area shape="rect" id="Node000004" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="36,5,167,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="104,44,104,79,99,79,99,44"/>
 </map>

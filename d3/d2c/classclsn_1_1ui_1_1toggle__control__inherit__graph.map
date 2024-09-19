@@ -1,19 +1,19 @@
 <map id="clsn::ui::toggle_control" name="clsn::ui::toggle_control">
-<area shape="rect" id="Node000001" title=" " alt="" coords="223,2057,403,2177"/>
-<area shape="rect" id="Node000007" href="$d6/d05/classclsn_1_1ui_1_1check__box.html" title=" " alt="" coords="5,2235,195,2321"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="224,2188,158,2237,155,2233,221,2184"/>
-<area shape="rect" id="Node000008" href="$d5/df8/classclsn_1_1ui_1_1radio__button.html" title=" " alt="" coords="219,2225,408,2331"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="316,2191,316,2225,311,2225,311,2191"/>
-<area shape="rect" id="Node000009" href="$de/d99/classclsn_1_1ui_1_1toggle__button.html" title=" " alt="" coords="432,2235,621,2321"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="405,2184,472,2233,469,2237,402,2188"/>
-<area shape="rect" id="Node000002" href="$d9/df3/classclsn_1_1ui_1_1clickable__control.html" title=" " alt="" coords="230,1815,397,2009"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="316,2024,316,2057,311,2057,311,2024"/>
-<area shape="rect" id="Node000003" href="$d2/d41/classclsn_1_1ui_1_1captionable__control.html" title="This class exposes the text property." alt="" coords="230,1647,397,1767"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,1781,316,1814,311,1814,311,1781"/>
-<area shape="rect" id="Node000004" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="223,1369,403,1599"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,1613,316,1646,311,1646,311,1613"/>
-<area shape="rect" id="Node000005" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="203,239,424,1321"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="316,1335,316,1369,311,1369,311,1335"/>
-<area shape="rect" id="Node000006" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="252,5,375,191"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="316,205,316,238,311,238,311,205"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="169,416,339,441"/>
+<area shape="rect" id="Node000007" href="$d6/d05/classclsn_1_1ui_1_1check__box.html" title=" " alt="" coords="5,489,151,515"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="214,449,108,492,106,487,212,444"/>
+<area shape="rect" id="Node000008" href="$d5/df8/classclsn_1_1ui_1_1radio__button.html" title=" " alt="" coords="175,489,333,515"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="257,455,257,489,251,489,251,455"/>
+<area shape="rect" id="Node000009" href="$de/d99/classclsn_1_1ui_1_1toggle__button.html" title=" " alt="" coords="357,489,524,515"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="297,444,411,487,409,492,296,449"/>
+<area shape="rect" id="Node000002" href="$d9/df3/classclsn_1_1ui_1_1clickable__control.html" title=" " alt="" coords="187,328,321,368"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,382,257,416,251,416,251,382"/>
+<area shape="rect" id="Node000003" href="$d2/d41/classclsn_1_1ui_1_1captionable__control.html" title="This class exposes the text property." alt="" coords="178,240,330,280"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,294,257,328,251,328,251,294"/>
+<area shape="rect" id="Node000004" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="185,152,323,192"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="257,206,257,240,251,240,251,206"/>
+<area shape="rect" id="Node000005" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="193,79,315,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="257,118,257,152,251,152,251,118"/>
+<area shape="rect" id="Node000006" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="189,5,319,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="257,44,257,79,251,79,251,44"/>
 </map>

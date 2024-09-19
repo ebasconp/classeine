@@ -1,5 +1,5 @@
 <map id="clsn::ui::ui_manager" name="clsn::ui::ui_manager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,239,235,664"/>
-<area shape="rect" id="Node000002" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="59,5,181,191"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,205,123,239,117,239,117,205"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,159,104"/>
+<area shape="rect" id="Node000002" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="17,5,147,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,44,85,79,79,79,79,44"/>
 </map>

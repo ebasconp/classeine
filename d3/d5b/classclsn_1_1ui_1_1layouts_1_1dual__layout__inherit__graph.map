@@ -1,5 +1,5 @@
 <map id="clsn::ui::layouts::dual_layout" name="clsn::ui::layouts::dual_layout">
-<area shape="rect" id="Node000001" title=" " alt="" coords="29,288,166,428"/>
-<area shape="rect" id="Node000002" href="$d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html" title=" " alt="" coords="5,5,189,240"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,254,100,287,95,287,95,254"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="35,108,167,148"/>
+<area shape="rect" id="Node000002" href="$d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html" title=" " alt="" coords="5,5,197,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,74,104,108,99,108,99,74"/>
 </map>
