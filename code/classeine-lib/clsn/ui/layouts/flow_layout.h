@@ -9,15 +9,14 @@
 
 #include <clsn/draw/forward.h>
 
-#include <clsn/core/empty.h>
-
+#include <variant>
 
 namespace clsn::ui::layouts
 {
-    class flow_layout : public layout_base<core::empty>
+    class flow_layout final : public layout_base<std::monostate>
     {
     public:
-        using constraint_type = core::empty;
+        using constraint_type = std::monostate;
 
         void layout(const clsn::draw::region& rgn) override;
 

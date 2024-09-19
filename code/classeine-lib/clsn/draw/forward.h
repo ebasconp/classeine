@@ -11,6 +11,7 @@
 namespace clsn::draw
 {
     class color;
+    class colors;
     class dimension;
     class font;
     class font_info;

@@ -23,7 +23,7 @@ namespace clsn::ui::layouts
         use_all_available_space
     };
 
-    class dual_layout : public layout_base<dual_layout_constraint>
+    class dual_layout final : public layout_base<dual_layout_constraint>
     {
         dual_layout_orientation m_orientation;
 

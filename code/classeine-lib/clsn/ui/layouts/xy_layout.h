@@ -11,7 +11,7 @@
 
 namespace clsn::ui::layouts
 {
-    class xy_layout : public layout_base<clsn::draw::point>
+    class xy_layout final : public layout_base<clsn::draw::point>
     {
     public:
         using constraint_type = clsn::draw::point;

@@ -29,10 +29,10 @@ namespace clsn::ui::renderers
 
         painters::background_painter::paint_background(gfx, rgn, bc);
 
-        using namespace clsn::ui::painters::label_painter;
+        using namespace clsn::ui::painters;
         painting_info info{_label.get_horizontal_alignment(),
                            _label.get_vertical_alignment()};
 
-        painters::label_painter::paint_label(gfx, rgn, _label, info);
+        label_painter::paint_label(gfx, rgn, _label, info);
     }
 }

@@ -10,11 +10,11 @@
 #include <clsn/draw/colors.h>
 #include <clsn/draw/region.h>
 
-namespace clsn::ui::painters::radio_button_painter
+namespace clsn::ui::painters
 {
     using namespace clsn::draw;
 
-    void paint_radio_button(graphics& gfx,
+    void radio_button_painter::paint_radio_button(graphics& gfx,
                             const region& r,
                             const radio_button& rd_btn,
                             int size)

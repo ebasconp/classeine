@@ -222,7 +222,7 @@ namespace clsn::ui
 
     auto control::to_string() const -> std::string
     {
-        using namespace clsn::core::strings;
-        return format("({}): {}", typeid(*this).name(), this);
+        using namespace clsn::core;
+        return strings::format("({}): {}", typeid(*this).name(), this);
     }
 }

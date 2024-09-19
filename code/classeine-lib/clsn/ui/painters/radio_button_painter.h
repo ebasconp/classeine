@@ -5,19 +5,21 @@
 
 #pragma once
 
-#include "clsn/ui/graphics.h"
+#include <clsn/ui/forward.h>
+#include <clsn/ui/graphics.h>
 
-#include "clsn/draw/forward.h"
+#include <clsn/draw/forward.h>
 
-namespace clsn::ui
+#include <clsn/core/non_instantiable.h>
+
+namespace clsn::ui::painters
 {
-    class radio_button;
-}
-
-namespace clsn::ui::painters::radio_button_painter
-{
-    void paint_radio_button(graphics& gfx,
-                            const clsn::draw::region& rgn,
-                            const radio_button& rb,
-                            int size);
+    class radio_button_painter final : public core::non_instantiable
+    {
+    public:
+        static void paint_radio_button(graphics& gfx,
+                          const clsn::draw::region& rgn,
+                          const radio_button& rb,
+                          int size);
+    };
 }

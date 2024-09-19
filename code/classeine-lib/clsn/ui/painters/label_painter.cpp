@@ -11,11 +11,11 @@
 #include <clsn/ui/captionable_control.h>
 #include <clsn/ui/ui_manager.h>
 
-namespace clsn::ui::painters::label_painter
+namespace clsn::ui::painters
 {
     using namespace clsn::draw;
 
-    void paint_label(graphics& gfx,
+    void label_painter::paint_label(graphics& gfx,
                      const region& rgn,
                      const captionable_control& ctrl,
                      const painting_info& info)

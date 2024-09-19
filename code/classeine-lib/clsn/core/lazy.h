@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "entity.h"
+#include <<clsn/core/entity.h>
 
 #include <functional>
 #include <optional>
@@ -24,7 +24,7 @@ namespace clsn::core
         {
         }
 
-        const auto& get() const
+        auto get() const -> const T&
         {
             if (!m_instance.has_value())
                 m_instance = m_factory();
@@ -32,7 +32,7 @@ namespace clsn::core
             return m_instance.value();
         }
 
-        auto& get()
+        auto get() -> T&
         {
             if (!m_instance.has_value())
                 m_instance = m_factory();

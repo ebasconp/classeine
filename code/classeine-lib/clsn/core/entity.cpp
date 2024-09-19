@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "entity.h"
+#include <clsn/core/entity.h>
 
-#include "console.h"
+#include <clsn/core/console.h>
 
 #include <iostream>
 

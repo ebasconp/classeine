@@ -5,21 +5,26 @@
 
 #pragma once
 
-#include "console.h"
+#include <clsn/core/console.h>
+#include <clsn/core/non_instantiable.h>
 
-namespace clsn::core::system
+namespace clsn::core
 {
-    template <typename... Args>
-    void panic(int exitCode, std::string_view fmtspec, const Args&... args)
+    class system : public non_instantiable
     {
-        console::print_stream(std::cerr, "RUNTIME ERROR: ");
-        console::println_stream(std::cerr, fmtspec, args...);
-        exit(exitCode);
-    }
+    public:
+        template <typename... Args>
+        static void panic(int exitCode, std::string_view fmtspec, const Args&... args)
+        {
+            console::print_stream(std::cerr, "RUNTIME ERROR: ");
+            console::println_stream(std::cerr, fmtspec, args...);
+            exit(exitCode);
+        }
 
-    template <typename... Args>
-    void panic(std::string_view fmtspec, const Args&... args)
-    {
-        panic(-1, fmtspec, args...);
-    }
+        template <typename... Args>
+        static void panic(std::string_view fmtspec, const Args&... args)
+        {
+            panic(-1, fmtspec, args...);
+        }
+    };
 }

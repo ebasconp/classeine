@@ -17,23 +17,22 @@ namespace clsn::core
 
     public:
         template <typename DerivedType>
-        factory& set()
+        auto set() -> factory&
         {
             m_factory = []() { return std::make_unique<DerivedType>(); };
             return *this;
         }
 
-        std::unique_ptr<BaseType> operator()() const
+        auto operator()() const -> std::unique_ptr<BaseType>
         {
             return m_factory();
         }
+
+        template <typename DerivedType>
+        static auto make_factory() -> factory<BaseType>
+        {
+            auto _factory = factory<BaseType>{};
+            return _factory.template set<DerivedType>();
+        }
     };
-
-
-    template <typename BaseType, typename DerivedType>
-    factory<BaseType> make_factory()
-    {
-        auto a_factory = factory<BaseType>{};
-        return a_factory.template set<DerivedType>();
-    }
 }

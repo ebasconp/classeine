@@ -22,7 +22,7 @@ namespace clsn::ui
 
     auto captionable_control::to_string() const -> std::string
     {
-        using namespace clsn::core::strings;
-        return format("{} [{}]", paintable_control::to_string(), m_text.get());
+        using namespace clsn::core;
+        return strings::format("{} [{}]", paintable_control::to_string(), m_text.get());
     }
 }

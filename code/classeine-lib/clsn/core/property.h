@@ -5,12 +5,12 @@
 
 #pragma once
 
-#include "empty.h"
-#include "event_listener_list.h"
-#include "strings.h"
-#include "value_changed_event.h"
+#include <clsn/core/event_listener_list.h>
+#include <clsn/core/strings.h>
+#include <clsn/core/value_changed_event.h>
 
 #include <type_traits>
+#include <variant>
 
 namespace clsn::core
 {
@@ -21,7 +21,7 @@ namespace clsn::core
         T m_value;
         std::conditional_t<HasValueChangedEventListener,
                          event_listener_list<value_changed_event<T>>,
-                         empty> m_value_changed_listeners;
+                         std::monostate> m_value_changed_listeners;
 
     public:
         template <typename StringType>
@@ -44,7 +44,7 @@ namespace clsn::core
 
         [[nodiscard]] auto get() const noexcept -> const T& { return m_value; }
 
-        auto to_string() const -> std::string
+        [[nodiscard]] auto to_string() const -> std::string
         {
             return strings::format("Property. Name: [{}}], Value: [{}]",
                                    m_name, m_value);

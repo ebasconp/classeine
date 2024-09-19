@@ -5,11 +5,17 @@
 
 #pragma once
 
-#include "clsn/ui/graphics.h"
+#include <clsn/ui/graphics.h>
 
-#include "clsn/draw/forward.h"
+#include <clsn/draw/forward.h>
 
-namespace clsn::ui::painters::background_painter
+#include <clsn/core/non_instantiable.h>
+
+namespace clsn::ui::painters
 {
-    void paint_background(graphics& gfx, const clsn::draw::region& rgn, const clsn::draw::color& clr);
+    class background_painter final : public core::non_instantiable
+    {
+    public:
+        static void paint_background(graphics& gfx, const clsn::draw::region& rgn, const clsn::draw::color& clr);
+    };
 }

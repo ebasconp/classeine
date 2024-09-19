@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "event_listener.h"
+#include <clsn/core/event_listener.h>
 
 #include <vector>
 

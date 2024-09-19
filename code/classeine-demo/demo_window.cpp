@@ -35,7 +35,7 @@ namespace clsn::demo
 
     void demo_window::init_container()
     {
-        m_option_container = make_control<demo_option_container>(*this);
+        m_option_container = control::make<demo_option_container>(*this);
 
         (*this)().add(m_option_container, dual_layout_constraint::use_preferred_size);
 

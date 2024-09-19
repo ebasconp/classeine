@@ -5,16 +5,22 @@
 
 #pragma once
 
-#include "color.h"
+#include <clsn/draw/color.h>
 
-namespace clsn::draw::colors
+#include <clsn/core/non_instantiable.h>
+
+namespace clsn::draw
 {
-    [[nodiscard]] auto make_red() -> color;
-    [[nodiscard]] auto make_green() -> color;
-    [[nodiscard]] auto make_blue() -> color;
-    [[nodiscard]] auto make_white() -> color;
-    [[nodiscard]] auto make_black() -> color;
-    [[nodiscard]] auto make_yellow() -> color;
-    [[nodiscard]] auto make_purple() -> color;
-    [[nodiscard]] auto make_cyan() -> color;
+    class colors : public core::non_instantiable
+    {
+    public:
+        [[nodiscard]] static auto make_red() -> color;
+        [[nodiscard]] static auto make_green() -> color;
+        [[nodiscard]] static auto make_blue() -> color;
+        [[nodiscard]] static auto make_white() -> color;
+        [[nodiscard]] static auto make_black() -> color;
+        [[nodiscard]] static auto make_yellow() -> color;
+        [[nodiscard]] static auto make_purple() -> color;
+        [[nodiscard]] static auto make_cyan() -> color;
+    };
 }

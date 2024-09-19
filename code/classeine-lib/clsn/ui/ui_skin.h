@@ -34,7 +34,7 @@ namespace clsn::ui
         {
             m_theme_factories_by_name.emplace(
                 name,
-                clsn::core::make_factory<ui_theme, UIThemeConcreteType>());
+                clsn::core::factory<ui_theme>::make_factory<UIThemeConcreteType>());
         }
 
         auto install_theme_by_name(const std::string& name) -> bool;
