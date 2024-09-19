@@ -1,7 +1,7 @@
 <map id="clsn::ui::renderers::label_renderer" name="clsn::ui::renderers::label_renderer">
-<area shape="rect" id="Node000001" title=" " alt="" coords="21,152,159,192"/>
-<area shape="rect" id="Node000002" href="$d3/dae/classclsn_1_1ui_1_1renderer__base.html" title=" " alt="" coords="5,79,175,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,118,93,152,87,152,87,118"/>
-<area shape="rect" id="Node000003" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="25,5,155,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,44,93,79,87,79,87,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="21,372,151,452"/>
+<area shape="rect" id="Node000002" href="$d3/dae/classclsn_1_1ui_1_1renderer__base.html" title=" " alt="" coords="5,239,167,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,338,89,372,83,372,83,338"/>
+<area shape="rect" id="Node000003" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="25,5,147,191"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,204,89,239,83,239,83,204"/>
 </map>
