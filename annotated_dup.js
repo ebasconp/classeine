@@ -3,7 +3,7 @@ var annotated_dup =
     [ "clsn", "d8/dba/namespaceclsn.html", [
       [ "core", "dd/d52/namespaceclsn_1_1core.html", [
         [ "configuration", "d8/dfb/classclsn_1_1core_1_1configuration.html", "d8/dfb/classclsn_1_1core_1_1configuration" ],
-        [ "empty", "d4/de3/classclsn_1_1core_1_1empty.html", null ],
+        [ "console", "d9/dd8/classclsn_1_1core_1_1console.html", null ],
         [ "empty_event", "d9/d89/classclsn_1_1core_1_1empty__event.html", "d9/d89/classclsn_1_1core_1_1empty__event" ],
         [ "entity", "d3/dd1/classclsn_1_1core_1_1entity.html", "d3/dd1/classclsn_1_1core_1_1entity" ],
         [ "entity_wrapper", "d2/d8e/classclsn_1_1core_1_1entity__wrapper.html", "d2/d8e/classclsn_1_1core_1_1entity__wrapper" ],
@@ -11,7 +11,10 @@ var annotated_dup =
         [ "event_listener_list", "d0/d37/classclsn_1_1core_1_1event__listener__list.html", "d0/d37/classclsn_1_1core_1_1event__listener__list" ],
         [ "factory", "df/dce/classclsn_1_1core_1_1factory.html", "df/dce/classclsn_1_1core_1_1factory" ],
         [ "lazy", "dc/de1/classclsn_1_1core_1_1lazy.html", "dc/de1/classclsn_1_1core_1_1lazy" ],
+        [ "non_instantiable", "dc/df1/classclsn_1_1core_1_1non__instantiable.html", "dc/df1/classclsn_1_1core_1_1non__instantiable" ],
         [ "property", "df/d29/classclsn_1_1core_1_1property.html", "df/d29/classclsn_1_1core_1_1property" ],
+        [ "strings", "da/dfe/classclsn_1_1core_1_1strings.html", null ],
+        [ "system", "dc/d33/classclsn_1_1core_1_1system.html", null ],
         [ "value_changed_event", "dd/d88/classclsn_1_1core_1_1value__changed__event.html", "dd/d88/classclsn_1_1core_1_1value__changed__event" ]
       ] ],
       [ "demo", "d5/da2/namespaceclsn_1_1demo.html", [
@@ -25,6 +28,7 @@ var annotated_dup =
       ] ],
       [ "draw", "db/dde/namespaceclsn_1_1draw.html", [
         [ "color", "d4/d4c/classclsn_1_1draw_1_1color.html", "d4/d4c/classclsn_1_1draw_1_1color" ],
+        [ "colors", "da/d1d/classclsn_1_1draw_1_1colors.html", null ],
         [ "dimension", "d9/d81/classclsn_1_1draw_1_1dimension.html", "d9/d81/classclsn_1_1draw_1_1dimension" ],
         [ "font", "d8/df8/classclsn_1_1draw_1_1font.html", "d8/df8/classclsn_1_1draw_1_1font" ],
         [ "font_info", "d3/d1a/classclsn_1_1draw_1_1font__info.html", "d3/d1a/classclsn_1_1draw_1_1font__info" ],
@@ -62,9 +66,12 @@ var annotated_dup =
           [ "xy_layout", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout" ]
         ] ],
         [ "painters", "d8/d64/namespaceclsn_1_1ui_1_1painters.html", [
-          [ "label_painter", "d4/db7/namespaceclsn_1_1ui_1_1painters_1_1label__painter.html", [
-            [ "painting_info", "d0/dcf/structclsn_1_1ui_1_1painters_1_1label__painter_1_1painting__info.html", "d0/dcf/structclsn_1_1ui_1_1painters_1_1label__painter_1_1painting__info" ]
-          ] ]
+          [ "background_painter", "d1/d4b/classclsn_1_1ui_1_1painters_1_1background__painter.html", null ],
+          [ "border_painter", "db/d26/classclsn_1_1ui_1_1painters_1_1border__painter.html", null ],
+          [ "check_box_painter", "df/d0e/classclsn_1_1ui_1_1painters_1_1check__box__painter.html", null ],
+          [ "label_painter", "d5/dcf/classclsn_1_1ui_1_1painters_1_1label__painter.html", null ],
+          [ "painting_info", "d2/d5d/structclsn_1_1ui_1_1painters_1_1painting__info.html", "d2/d5d/structclsn_1_1ui_1_1painters_1_1painting__info" ],
+          [ "radio_button_painter", "dd/db4/classclsn_1_1ui_1_1painters_1_1radio__button__painter.html", null ]
         ] ],
         [ "renderers", "da/de8/namespaceclsn_1_1ui_1_1renderers.html", [
           [ "button_renderer", "d1/dd0/classclsn_1_1ui_1_1renderers_1_1button__renderer.html", "d1/dd0/classclsn_1_1ui_1_1renderers_1_1button__renderer" ],

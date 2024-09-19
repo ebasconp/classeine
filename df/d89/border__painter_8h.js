@@ -1,4 +1,4 @@
 var border__painter_8h =
 [
-    [ "paint_flat_border", "df/d89/border__painter_8h.html#a4528ddd6efc0f683652cad3c7db1670a", null ]
+    [ "clsn::ui::painters::border_painter", "db/d26/classclsn_1_1ui_1_1painters_1_1border__painter.html", null ]
 ];

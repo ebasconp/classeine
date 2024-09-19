@@ -4,7 +4,6 @@ var hierarchy =
     [ "clsn::core::configuration< ConfigurationValueTypes >", "d8/dfb/classclsn_1_1core_1_1configuration.html", null ],
     [ "clsn::core::configuration< clsn::draw::color, clsn::draw::dimension, clsn::draw::font >", "d8/dfb/classclsn_1_1core_1_1configuration.html", null ],
     [ "clsn::draw::dimension", "d9/d81/classclsn_1_1draw_1_1dimension.html", null ],
-    [ "clsn::core::empty", "d4/de3/classclsn_1_1core_1_1empty.html", null ],
     [ "clsn::core::entity", "d3/dd1/classclsn_1_1core_1_1entity.html", [
       [ "clsn::core::entity_wrapper< Type >", "d2/d8e/classclsn_1_1core_1_1entity__wrapper.html", null ],
       [ "clsn::core::event", "d3/dff/classclsn_1_1core_1_1event.html", [
@@ -115,13 +114,13 @@ var hierarchy =
     [ "clsn::ui::layouts::layout_base< clsn::draw::point >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", [
       [ "clsn::ui::layouts::xy_layout", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html", null ]
     ] ],
-    [ "clsn::ui::layouts::layout_base< core::empty >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", [
+    [ "clsn::ui::layouts::layout_base< dual_layout_constraint >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", [
+      [ "clsn::ui::layouts::dual_layout", "dc/da4/classclsn_1_1ui_1_1layouts_1_1dual__layout.html", null ]
+    ] ],
+    [ "clsn::ui::layouts::layout_base< std::monostate >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", [
       [ "clsn::ui::layouts::flow_layout", "d0/ddf/classclsn_1_1ui_1_1layouts_1_1flow__layout.html", null ],
       [ "clsn::ui::layouts::hbox_layout", "d4/de0/classclsn_1_1ui_1_1layouts_1_1hbox__layout.html", null ],
       [ "clsn::ui::layouts::vbox_layout", "dc/ded/classclsn_1_1ui_1_1layouts_1_1vbox__layout.html", null ]
-    ] ],
-    [ "clsn::ui::layouts::layout_base< dual_layout_constraint >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", [
-      [ "clsn::ui::layouts::dual_layout", "dc/da4/classclsn_1_1ui_1_1layouts_1_1dual__layout.html", null ]
     ] ],
     [ "clsn::ui::layout_container_control_and_constraint< Constraint >", "dc/d1d/structclsn_1_1ui_1_1layout__container__control__and__constraint.html", null ],
     [ "LayoutContainer", null, [
@@ -130,7 +129,18 @@ var hierarchy =
     [ "clsn::ui::impl::sdl2::main_window_sdl2_impl< WindowType >", "db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html", null ],
     [ "clsn::ui::impl::sdl2::main_window_sdl2_impl< clsn::ui::main_window< ControlType > >", "db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html", null ],
     [ "clsn::ui::impl::sdl2::main_window_sdl2_impl< clsn::ui::main_window< dual_layout_container > >", "db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html", null ],
-    [ "clsn::ui::painters::label_painter::painting_info", "d0/dcf/structclsn_1_1ui_1_1painters_1_1label__painter_1_1painting__info.html", null ],
+    [ "clsn::core::non_instantiable", "dc/df1/classclsn_1_1core_1_1non__instantiable.html", [
+      [ "clsn::core::console", "d9/dd8/classclsn_1_1core_1_1console.html", null ],
+      [ "clsn::core::strings", "da/dfe/classclsn_1_1core_1_1strings.html", null ],
+      [ "clsn::core::system", "dc/d33/classclsn_1_1core_1_1system.html", null ],
+      [ "clsn::draw::colors", "da/d1d/classclsn_1_1draw_1_1colors.html", null ],
+      [ "clsn::ui::painters::background_painter", "d1/d4b/classclsn_1_1ui_1_1painters_1_1background__painter.html", null ],
+      [ "clsn::ui::painters::border_painter", "db/d26/classclsn_1_1ui_1_1painters_1_1border__painter.html", null ],
+      [ "clsn::ui::painters::check_box_painter", "df/d0e/classclsn_1_1ui_1_1painters_1_1check__box__painter.html", null ],
+      [ "clsn::ui::painters::label_painter", "d5/dcf/classclsn_1_1ui_1_1painters_1_1label__painter.html", null ],
+      [ "clsn::ui::painters::radio_button_painter", "dd/db4/classclsn_1_1ui_1_1painters_1_1radio__button__painter.html", null ]
+    ] ],
+    [ "clsn::ui::painters::painting_info", "d2/d5d/structclsn_1_1ui_1_1painters_1_1painting__info.html", null ],
     [ "clsn::draw::point", "d8/d50/classclsn_1_1draw_1_1point.html", null ],
     [ "clsn::core::property< T, HasValueChangedEventListener >", "df/d29/classclsn_1_1core_1_1property.html", null ],
     [ "clsn::ui::radio_button_group", "da/da9/classclsn_1_1ui_1_1radio__button__group.html", null ],

@@ -10,5 +10,5 @@ var searchData=
   ['vbox_5flayout_5fcontainer_2ecpp_7',['vbox_layout_container.cpp',['../d6/de0/vbox__layout__container_8cpp.html',1,'']]],
   ['vbox_5flayout_5fcontainer_2eh_8',['vbox_layout_container.h',['../d5/d8a/vbox__layout__container_8h.html',1,'']]],
   ['vertical_9',['vertical',['../d0/d76/namespaceclsn_1_1ui_1_1layouts.html#a06dcfb7ebc0d5d667a0aa2fe959ab70aae6dec152d6a941fccb0a5e8cc2579cc3',1,'clsn::ui::layouts']]],
-  ['vertical_5falignment_10',['vertical_alignment',['../d0/dcf/structclsn_1_1ui_1_1painters_1_1label__painter_1_1painting__info.html#a649e92aea542ece34bb7b79cf1587329',1,'clsn::ui::painters::label_painter::painting_info']]]
+  ['vertical_5falignment_10',['vertical_alignment',['../d2/d5d/structclsn_1_1ui_1_1painters_1_1painting__info.html#aed020659acca75488dd3d33cc7c273d7',1,'clsn::ui::painters::painting_info']]]
 ];

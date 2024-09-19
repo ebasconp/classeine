@@ -18,8 +18,8 @@ var searchData=
   ['font_5finfo_2eh_15',['font_info.h',['../df/d10/font__info_8h.html',1,'']]],
   ['font_5fstyle_16',['font_style',['../db/dde/namespaceclsn_1_1draw.html#aad7b3e6a7c71db2da8ecddd68b31fff9',1,'clsn::draw']]],
   ['font_5fstyle_2eh_17',['font_style.h',['../d6/d13/font__style_8h.html',1,'']]],
-  ['format_18',['format',['../d0/daf/namespaceclsn_1_1core_1_1strings.html#a6df3f70f942a19e846e37d53500b5c1e',1,'clsn::core::strings']]],
-  ['format_5fstream_19',['format_stream',['../d0/daf/namespaceclsn_1_1core_1_1strings.html#ada71f1f71bf2f579c860b0f8ff2b756f',1,'clsn::core::strings::format_stream(std::ostream &amp;os, std::string_view spec) -&gt; std::ostream &amp;'],['../d0/daf/namespaceclsn_1_1core_1_1strings.html#ac4e281c2193a65bcc3d12eedf7a6d995',1,'clsn::core::strings::format_stream(std::ostream &amp;os, std::string_view fmtspec, const Args &amp;... args) -&gt; std::ostream &amp;']]],
-  ['format_5fvalues_20',['format_values',['../d0/daf/namespaceclsn_1_1core_1_1strings.html#a983dc88887f26bd7622585890f222ede',1,'clsn::core::strings']]],
+  ['format_18',['format',['../da/dfe/classclsn_1_1core_1_1strings.html#ad6855312ede00913b118db683c7b27f6',1,'clsn::core::strings']]],
+  ['format_5fstream_19',['format_stream',['../da/dfe/classclsn_1_1core_1_1strings.html#a6b75fb25960c37b941bbcadfcfca1fd1',1,'clsn::core::strings::format_stream(std::ostream &amp;os, std::string_view fmtspec, const Args &amp;... args) -&gt; std::ostream &amp;'],['../da/dfe/classclsn_1_1core_1_1strings.html#ada71f1f71bf2f579c860b0f8ff2b756f',1,'clsn::core::strings::format_stream(std::ostream &amp;os, std::string_view spec) -&gt; std::ostream &amp;']]],
+  ['format_5fvalues_20',['format_values',['../da/dfe/classclsn_1_1core_1_1strings.html#a983dc88887f26bd7622585890f222ede',1,'clsn::core::strings']]],
   ['forward_2eh_21',['forward.h',['../d2/dbc/ui_2forward_8h.html',1,'(Global Namespace)'],['../d7/d82/draw_2forward_8h.html',1,'(Global Namespace)']]]
 ];

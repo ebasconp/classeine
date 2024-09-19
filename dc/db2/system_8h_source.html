@@ -105,42 +105,51 @@ $(document).ready(function(){initNavTree('dc/db2/system_8h_source.html','../../'
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/de3/console_8h.html">console.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../da/de4/namespaceclsn_1_1core_1_1system.html">   10</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/de4/namespaceclsn_1_1core_1_1system.html">clsn::core::system</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../da/de4/namespaceclsn_1_1core_1_1system.html#ac81751d0b63ee953d163bbc921859588">   13</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/de4/namespaceclsn_1_1core_1_1system.html#ac81751d0b63ee953d163bbc921859588">panic</a>(<span class="keywordtype">int</span> exitCode, std::string_view fmtspec, <span class="keyword">const</span> Args&amp;... args)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/de3/console_8h.html">clsn/core/console.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="../../d3/d8b/non__instantiable_8h.html">clsn/core/non_instantiable.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dd/d52/namespaceclsn_1_1core.html">clsn::core</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dc/d33/classclsn_1_1core_1_1system.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d33/classclsn_1_1core_1_1system.html">system</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../dc/df1/classclsn_1_1core_1_1non__instantiable.html">non_instantiable</a></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_function" href="../../d8/d44/namespaceclsn_1_1core_1_1console.html#a1682131287d51071e0352d268ae89eeb">console::print_stream</a>(std::cerr, <span class="stringliteral">&quot;RUNTIME ERROR: &quot;</span>);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_function" href="../../d8/d44/namespaceclsn_1_1core_1_1console.html#aff35b6eebeb12a1908ebad1a0b976864">console::println_stream</a>(std::cerr, fmtspec, args...);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        exit(exitCode);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../dc/d33/classclsn_1_1core_1_1system.html#ada6f253cba72410612f83e3b3ce4b266">   17</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d33/classclsn_1_1core_1_1system.html#ada6f253cba72410612f83e3b3ce4b266">panic</a>(<span class="keywordtype">int</span> exitCode, std::string_view fmtspec, <span class="keyword">const</span> Args&amp;... args)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <a class="code hl_function" href="../../d9/dd8/classclsn_1_1core_1_1console.html#a31e55872b8469e1bbe760478ed63293c">console::print_stream</a>(std::cerr, <span class="stringliteral">&quot;RUNTIME ERROR: &quot;</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_function" href="../../d9/dd8/classclsn_1_1core_1_1console.html#aac9aaa17570c6a957a2a3a84ac3604b6">console::println_stream</a>(std::cerr, fmtspec, args...);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            exit(exitCode);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../da/de4/namespaceclsn_1_1core_1_1system.html#a6dd1f85fd585973a3f802191a1876a0d">   21</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/de4/namespaceclsn_1_1core_1_1system.html#ac81751d0b63ee953d163bbc921859588">panic</a>(std::string_view fmtspec, <span class="keyword">const</span> Args&amp;... args)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="../../da/de4/namespaceclsn_1_1core_1_1system.html#ac81751d0b63ee953d163bbc921859588">panic</a>(-1, fmtspec, args...);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dc/d33/classclsn_1_1core_1_1system.html#a4f8990f2182db185eff63e8a7f207374">   25</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d33/classclsn_1_1core_1_1system.html#a4f8990f2182db185eff63e8a7f207374">panic</a>(std::string_view fmtspec, <span class="keyword">const</span> Args&amp;... args)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <a class="code hl_function" href="../../dc/d33/classclsn_1_1core_1_1system.html#ada6f253cba72410612f83e3b3ce4b266">panic</a>(-1, fmtspec, args...);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
 </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="ttc" id="aclassclsn_1_1core_1_1console_html_a31e55872b8469e1bbe760478ed63293c"><div class="ttname"><a href="../../d9/dd8/classclsn_1_1core_1_1console.html#a31e55872b8469e1bbe760478ed63293c">clsn::core::console::print_stream</a></div><div class="ttdeci">static void print_stream(std::ostream &amp;os, std::string_view fmtspec, const Args &amp;... args)</div><div class="ttdef"><b>Definition</b> console.h:19</div></div>
+<div class="ttc" id="aclassclsn_1_1core_1_1console_html_aac9aaa17570c6a957a2a3a84ac3604b6"><div class="ttname"><a href="../../d9/dd8/classclsn_1_1core_1_1console.html#aac9aaa17570c6a957a2a3a84ac3604b6">clsn::core::console::println_stream</a></div><div class="ttdeci">static void println_stream(std::ostream &amp;os, std::string_view fmtspec, const Args &amp;... args)</div><div class="ttdef"><b>Definition</b> console.h:25</div></div>
+<div class="ttc" id="aclassclsn_1_1core_1_1non__instantiable_html"><div class="ttname"><a href="../../dc/df1/classclsn_1_1core_1_1non__instantiable.html">clsn::core::non_instantiable</a></div><div class="ttdoc">Base class to prevent instantiation of derived classes.</div><div class="ttdef"><b>Definition</b> non_instantiable.h:18</div></div>
+<div class="ttc" id="aclassclsn_1_1core_1_1system_html"><div class="ttname"><a href="../../dc/d33/classclsn_1_1core_1_1system.html">clsn::core::system</a></div><div class="ttdef"><b>Definition</b> system.h:14</div></div>
+<div class="ttc" id="aclassclsn_1_1core_1_1system_html_a4f8990f2182db185eff63e8a7f207374"><div class="ttname"><a href="../../dc/d33/classclsn_1_1core_1_1system.html#a4f8990f2182db185eff63e8a7f207374">clsn::core::system::panic</a></div><div class="ttdeci">static void panic(std::string_view fmtspec, const Args &amp;... args)</div><div class="ttdef"><b>Definition</b> system.h:25</div></div>
+<div class="ttc" id="aclassclsn_1_1core_1_1system_html_ada6f253cba72410612f83e3b3ce4b266"><div class="ttname"><a href="../../dc/d33/classclsn_1_1core_1_1system.html#ada6f253cba72410612f83e3b3ce4b266">clsn::core::system::panic</a></div><div class="ttdeci">static void panic(int exitCode, std::string_view fmtspec, const Args &amp;... args)</div><div class="ttdef"><b>Definition</b> system.h:17</div></div>
 <div class="ttc" id="aconsole_8h_html"><div class="ttname"><a href="../../d0/de3/console_8h.html">console.h</a></div></div>
-<div class="ttc" id="anamespaceclsn_1_1core_1_1console_html_a1682131287d51071e0352d268ae89eeb"><div class="ttname"><a href="../../d8/d44/namespaceclsn_1_1core_1_1console.html#a1682131287d51071e0352d268ae89eeb">clsn::core::console::print_stream</a></div><div class="ttdeci">void print_stream(std::ostream &amp;os, std::string_view fmtspec, const Args &amp;... args)</div><div class="ttdef"><b>Definition</b> console.h:15</div></div>
-<div class="ttc" id="anamespaceclsn_1_1core_1_1console_html_aff35b6eebeb12a1908ebad1a0b976864"><div class="ttname"><a href="../../d8/d44/namespaceclsn_1_1core_1_1console.html#aff35b6eebeb12a1908ebad1a0b976864">clsn::core::console::println_stream</a></div><div class="ttdeci">void println_stream(std::ostream &amp;os, std::string_view fmtspec, const Args &amp;... args)</div><div class="ttdef"><b>Definition</b> console.h:21</div></div>
-<div class="ttc" id="anamespaceclsn_1_1core_1_1system_html"><div class="ttname"><a href="../../da/de4/namespaceclsn_1_1core_1_1system.html">clsn::core::system</a></div><div class="ttdef"><b>Definition</b> system.h:11</div></div>
-<div class="ttc" id="anamespaceclsn_1_1core_1_1system_html_ac81751d0b63ee953d163bbc921859588"><div class="ttname"><a href="../../da/de4/namespaceclsn_1_1core_1_1system.html#ac81751d0b63ee953d163bbc921859588">clsn::core::system::panic</a></div><div class="ttdeci">void panic(int exitCode, std::string_view fmtspec, const Args &amp;... args)</div><div class="ttdef"><b>Definition</b> system.h:13</div></div>
+<div class="ttc" id="anamespaceclsn_1_1core_html"><div class="ttname"><a href="../../dd/d52/namespaceclsn_1_1core.html">clsn::core</a></div><div class="ttdef"><b>Definition</b> configuration.h:16</div></div>
+<div class="ttc" id="anon__instantiable_8h_html"><div class="ttname"><a href="../../d3/d8b/non__instantiable_8h.html">non_instantiable.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="../../dir_395636c3765b356249f082f1456b1313.html">classeine-lib</a></li><li class="navelem"><a class="el" href="../../dir_b3c449063711a5ed2927daee8dca92cd.html">clsn</a></li><li class="navelem"><a class="el" href="../../dir_600407ede49e9ce41cdcd29c2ea2a1d0.html">core</a></li><li class="navelem"><a class="el" href="../../dc/db2/system_8h.html">system.h</a></li>
-    <li class="footer">Generated on Wed Sep 18 2024 12:18:49 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Sep 19 2024 22:28:48 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

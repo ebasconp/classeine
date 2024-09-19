@@ -1,4 +1,4 @@
 var check__box__painter_8h =
 [
-    [ "paint_check_box", "de/d8c/check__box__painter_8h.html#a30b7901e4c8cf4eccdba180fb1b0f3e9", null ]
+    [ "clsn::ui::painters::check_box_painter", "df/d0e/classclsn_1_1ui_1_1painters_1_1check__box__painter.html", null ]
 ];

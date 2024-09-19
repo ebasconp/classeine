@@ -105,12 +105,12 @@ $(document).ready(function(){initNavTree('da/dc4/property_8h_source.html','../..
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d4d/empty_8h.html">empty.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/d0b/event__listener__list_8h.html">event_listener_list.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d90/strings_8h.html">strings.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d8e/value__changed__event_8h.html">value_changed_event.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d0b/event__listener__list_8h.html">clsn/core/event_listener_list.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d90/strings_8h.html">clsn/core/strings.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="../../db/d8e/value__changed__event_8h.html">clsn/core/value_changed_event.h</a>&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;variant&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dd/d52/namespaceclsn_1_1core.html">clsn::core</a></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('da/dc4/property_8h_source.html','../..
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        T m_value;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        std::conditional_t&lt;HasValueChangedEventListener,</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                         <a class="code hl_class" href="../../d0/d37/classclsn_1_1core_1_1event__listener__list.html">event_listener_list&lt;value_changed_event&lt;T&gt;</a>&gt;,</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                         <a class="code hl_class" href="../../d4/de3/classclsn_1_1core_1_1empty.html">empty</a>&gt; m_value_changed_listeners;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                         std::monostate&gt; m_value_changed_listeners;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> StringType&gt;</div>
@@ -152,9 +152,9 @@ $(document).ready(function(){initNavTree('da/dc4/property_8h_source.html','../..
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../df/d29/classclsn_1_1core_1_1property.html#a2a25a2e020a2286362dbed004052ab2f">   45</a></span>        [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="../../df/d29/classclsn_1_1core_1_1property.html#a2a25a2e020a2286362dbed004052ab2f">get</a>() const noexcept -&gt; const T&amp; { <span class="keywordflow">return</span> m_value; }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../df/d29/classclsn_1_1core_1_1property.html#a02ac510e0376500c65b514d072fd3e27">   47</a></span>        <span class="keyword">auto</span> <a class="code hl_function" href="../../df/d29/classclsn_1_1core_1_1property.html#a02ac510e0376500c65b514d072fd3e27">to_string</a>() const -&gt; std::<span class="keywordtype">string</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../df/d29/classclsn_1_1core_1_1property.html#a02ac510e0376500c65b514d072fd3e27">   47</a></span>        [[nodiscard]] <span class="keyword">auto</span> <a class="code hl_function" href="../../df/d29/classclsn_1_1core_1_1property.html#a02ac510e0376500c65b514d072fd3e27">to_string</a>() const -&gt; std::<span class="keywordtype">string</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d0/daf/namespaceclsn_1_1core_1_1strings.html#a6df3f70f942a19e846e37d53500b5c1e">strings::format</a>(<span class="stringliteral">&quot;Property. Name: [{}}], Value: [{}]&quot;</span>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../da/dfe/classclsn_1_1core_1_1strings.html#ad6855312ede00913b118db683c7b27f6">strings::format</a>(<span class="stringliteral">&quot;Property. Name: [{}}], Value: [{}]&quot;</span>,</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                   m_name, m_value);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
 </div>
@@ -257,7 +257,6 @@ $(document).ready(function(){initNavTree('da/dc4/property_8h_source.html','../..
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">        #name, initialValue};                                                 \</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">    CLSN_BOOL_PROPERTY_BODY(name)</span></div>
 </div>
-<div class="ttc" id="aclassclsn_1_1core_1_1empty_html"><div class="ttname"><a href="../../d4/de3/classclsn_1_1core_1_1empty.html">clsn::core::empty</a></div><div class="ttdef"><b>Definition</b> empty.h:11</div></div>
 <div class="ttc" id="aclassclsn_1_1core_1_1event__listener__list_html"><div class="ttname"><a href="../../d0/d37/classclsn_1_1core_1_1event__listener__list.html">clsn::core::event_listener_list</a></div><div class="ttdef"><b>Definition</b> event_listener_list.h:16</div></div>
 <div class="ttc" id="aclassclsn_1_1core_1_1property_html"><div class="ttname"><a href="../../df/d29/classclsn_1_1core_1_1property.html">clsn::core::property</a></div><div class="ttdef"><b>Definition</b> property.h:19</div></div>
 <div class="ttc" id="aclassclsn_1_1core_1_1property_html_a02ac510e0376500c65b514d072fd3e27"><div class="ttname"><a href="../../df/d29/classclsn_1_1core_1_1property.html#a02ac510e0376500c65b514d072fd3e27">clsn::core::property::to_string</a></div><div class="ttdeci">auto to_string() const -&gt; std::string</div><div class="ttdef"><b>Definition</b> property.h:47</div></div>
@@ -267,10 +266,9 @@ $(document).ready(function(){initNavTree('da/dc4/property_8h_source.html','../..
 <div class="ttc" id="aclassclsn_1_1core_1_1property_html_a51ed2858c77e0b9f5b17ebb5f8201f0a"><div class="ttname"><a href="../../df/d29/classclsn_1_1core_1_1property.html#a51ed2858c77e0b9f5b17ebb5f8201f0a">clsn::core::property::property</a></div><div class="ttdeci">property(StringType &amp;&amp;name)</div><div class="ttdef"><b>Definition</b> property.h:28</div></div>
 <div class="ttc" id="aclassclsn_1_1core_1_1property_html_a62cb45d989df43eb4926cc28dec6612c"><div class="ttname"><a href="../../df/d29/classclsn_1_1core_1_1property.html#a62cb45d989df43eb4926cc28dec6612c">clsn::core::property::property</a></div><div class="ttdeci">property(StringType &amp;&amp;name, ValueType &amp;&amp;value)</div><div class="ttdef"><b>Definition</b> property.h:34</div></div>
 <div class="ttc" id="aclassclsn_1_1core_1_1property_html_a77ffaebb8a563461b7be95f1e0406d4a"><div class="ttname"><a href="../../df/d29/classclsn_1_1core_1_1property.html#a77ffaebb8a563461b7be95f1e0406d4a">clsn::core::property::get_name</a></div><div class="ttdeci">auto get_name() const noexcept -&gt; const std::string &amp;</div><div class="ttdef"><b>Definition</b> property.h:40</div></div>
+<div class="ttc" id="aclassclsn_1_1core_1_1strings_html_ad6855312ede00913b118db683c7b27f6"><div class="ttname"><a href="../../da/dfe/classclsn_1_1core_1_1strings.html#ad6855312ede00913b118db683c7b27f6">clsn::core::strings::format</a></div><div class="ttdeci">static auto format(std::string_view fmtspec, const Args &amp;... args) -&gt; std::string</div><div class="ttdef"><b>Definition</b> strings.h:86</div></div>
 <div class="ttc" id="aclassclsn_1_1core_1_1value__changed__event_html"><div class="ttname"><a href="../../dd/d88/classclsn_1_1core_1_1value__changed__event.html">clsn::core::value_changed_event</a></div><div class="ttdef"><b>Definition</b> value_changed_event.h:14</div></div>
-<div class="ttc" id="aempty_8h_html"><div class="ttname"><a href="../../d0/d4d/empty_8h.html">empty.h</a></div></div>
 <div class="ttc" id="aevent__listener__list_8h_html"><div class="ttname"><a href="../../dd/d0b/event__listener__list_8h.html">event_listener_list.h</a></div></div>
-<div class="ttc" id="anamespaceclsn_1_1core_1_1strings_html_a6df3f70f942a19e846e37d53500b5c1e"><div class="ttname"><a href="../../d0/daf/namespaceclsn_1_1core_1_1strings.html#a6df3f70f942a19e846e37d53500b5c1e">clsn::core::strings::format</a></div><div class="ttdeci">auto format(std::string_view fmtspec, const Args &amp;... args) -&gt; std::string</div><div class="ttdef"><b>Definition</b> strings.h:81</div></div>
 <div class="ttc" id="anamespaceclsn_1_1core_html"><div class="ttname"><a href="../../dd/d52/namespaceclsn_1_1core.html">clsn::core</a></div><div class="ttdef"><b>Definition</b> configuration.h:16</div></div>
 <div class="ttc" id="anamespaceclsn_1_1core_html_a93a167843e3d966e188dace1ed5fd4a2"><div class="ttname"><a href="../../dd/d52/namespaceclsn_1_1core.html#a93a167843e3d966e188dace1ed5fd4a2">clsn::core::event_listener</a></div><div class="ttdeci">std::function&lt; void(EventType &amp;)&gt; event_listener</div><div class="ttdef"><b>Definition</b> event_listener.h:13</div></div>
 <div class="ttc" id="astrings_8h_html"><div class="ttname"><a href="../../d6/d90/strings_8h.html">strings.h</a></div></div>
@@ -281,7 +279,7 @@ $(document).ready(function(){initNavTree('da/dc4/property_8h_source.html','../..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="../../dir_395636c3765b356249f082f1456b1313.html">classeine-lib</a></li><li class="navelem"><a class="el" href="../../dir_b3c449063711a5ed2927daee8dca92cd.html">clsn</a></li><li class="navelem"><a class="el" href="../../dir_600407ede49e9ce41cdcd29c2ea2a1d0.html">core</a></li><li class="navelem"><a class="el" href="../../da/dc4/property_8h.html">property.h</a></li>
-    <li class="footer">Generated on Wed Sep 18 2024 12:18:49 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Sep 19 2024 22:28:48 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

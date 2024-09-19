@@ -105,28 +105,25 @@ $(document).ready(function(){initNavTree('d5/d8a/vbox__layout__container_8h_sour
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../d7/da6/layout__container_8h.html">layout_container.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="../../d7/da6/layout__container_8h.html">clsn/ui/layout_container.h</a>&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../d5/dd7/vbox__layout_8h.html">layouts/vbox_layout.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="../../d5/dd7/vbox__layout_8h.html">clsn/ui/layouts/vbox_layout.h</a>&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../de/dd9/namespaceclsn_1_1ui.html">clsn::ui</a></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">using </span><a class="code hl_class" href="../../d4/de3/classclsn_1_1core_1_1empty.html">clsn::core::empty</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html">vbox_layout_container</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html">layout_container</a>&lt;layouts::vbox_layout&gt;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_function" href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html#a15357172d6626299337bed5951228816">vbox_layout_container</a>();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">auto</span> <a class="code hl_function" href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html#ab1c098f748478fef5bd222ff2ec29385">make_default_renderer</a>() <span class="keyword">const</span> -&gt; std::unique_ptr&lt;renderer_base&gt; <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html">vbox_layout_container</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html">layout_container</a>&lt;layouts::vbox_layout&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_function" href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html#a15357172d6626299337bed5951228816">vbox_layout_container</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">auto</span> <a class="code hl_function" href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html#ab1c098f748478fef5bd222ff2ec29385">make_default_renderer</a>() <span class="keyword">const</span> -&gt; std::unique_ptr&lt;renderer_base&gt; <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
-<div class="ttc" id="aclassclsn_1_1core_1_1empty_html"><div class="ttname"><a href="../../d4/de3/classclsn_1_1core_1_1empty.html">clsn::core::empty</a></div><div class="ttdef"><b>Definition</b> empty.h:11</div></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1layout__container_html"><div class="ttname"><a href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html">clsn::ui::layout_container</a></div><div class="ttdef"><b>Definition</b> layout_container.h:24</div></div>
-<div class="ttc" id="aclassclsn_1_1ui_1_1vbox__layout__container_html"><div class="ttname"><a href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html">clsn::ui::vbox_layout_container</a></div><div class="ttdef"><b>Definition</b> vbox_layout_container.h:17</div></div>
+<div class="ttc" id="aclassclsn_1_1ui_1_1vbox__layout__container_html"><div class="ttname"><a href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html">clsn::ui::vbox_layout_container</a></div><div class="ttdef"><b>Definition</b> vbox_layout_container.h:15</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1vbox__layout__container_html_a15357172d6626299337bed5951228816"><div class="ttname"><a href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html#a15357172d6626299337bed5951228816">clsn::ui::vbox_layout_container::vbox_layout_container</a></div><div class="ttdeci">vbox_layout_container()</div><div class="ttdef"><b>Definition</b> vbox_layout_container.cpp:13</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1vbox__layout__container_html_ab1c098f748478fef5bd222ff2ec29385"><div class="ttname"><a href="../../dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html#ab1c098f748478fef5bd222ff2ec29385">clsn::ui::vbox_layout_container::make_default_renderer</a></div><div class="ttdeci">auto make_default_renderer() const -&gt; std::unique_ptr&lt; renderer_base &gt; override</div><div class="ttdef"><b>Definition</b> vbox_layout_container.cpp:18</div></div>
 <div class="ttc" id="alayout__container_8h_html"><div class="ttname"><a href="../../d7/da6/layout__container_8h.html">layout_container.h</a></div></div>
@@ -138,7 +135,7 @@ $(document).ready(function(){initNavTree('d5/d8a/vbox__layout__container_8h_sour
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="../../dir_395636c3765b356249f082f1456b1313.html">classeine-lib</a></li><li class="navelem"><a class="el" href="../../dir_b3c449063711a5ed2927daee8dca92cd.html">clsn</a></li><li class="navelem"><a class="el" href="../../dir_f66264c372379b3371ed6e39f1162625.html">ui</a></li><li class="navelem"><a class="el" href="../../d5/d8a/vbox__layout__container_8h.html">vbox_layout_container.h</a></li>
-    <li class="footer">Generated on Wed Sep 18 2024 12:18:49 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Sep 19 2024 22:28:48 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
