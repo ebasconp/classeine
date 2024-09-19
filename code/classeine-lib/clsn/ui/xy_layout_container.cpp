@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "xy_layout_container.h"
+#include <clsn/ui/xy_layout_container.h>
 
-#include "renderers/container_renderer.h"
+#include <clsn/ui/renderers/container_renderer.h>
 
 namespace clsn::ui
 {
