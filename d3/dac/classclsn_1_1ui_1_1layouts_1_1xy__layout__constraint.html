@@ -97,18 +97,27 @@ $(document).ready(function(){initNavTree('d3/dac/classclsn_1_1ui_1_1layouts_1_1x
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d5/d58/xy__layout_8h_source.html">xy_layout.h</a>&gt;</code></p>
+<p>Represents the constraints for placing UI controls arbitrarily within an <a class="el" href="../../d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html">xy_layout</a>.  
+ <a href="../../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/d84/xy__layout__constraint_8h_source.html">xy_layout_constraint.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8ffa5a0c3e1b874cfe5a86449c9bdb6" id="r_aa8ffa5a0c3e1b874cfe5a86449c9bdb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html#aa8ffa5a0c3e1b874cfe5a86449c9bdb6">xy_layout_constraint</a> (const <a class="el" href="../../d8/d50/classclsn_1_1draw_1_1point.html">draw::point</a> &amp;position)</td></tr>
+<tr class="memdesc:aa8ffa5a0c3e1b874cfe5a86449c9bdb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="../../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html" title="Represents the constraints for placing UI controls arbitrarily within an xy_layout.">xy_layout_constraint</a> with the specified position.  <br /></td></tr>
 <tr class="separator:aa8ffa5a0c3e1b874cfe5a86449c9bdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6095b14490293599f11788f9eee94a59" id="r_a6095b14490293599f11788f9eee94a59"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html#a6095b14490293599f11788f9eee94a59">get_position</a> () const -&gt; const <a class="el" href="../../d8/d50/classclsn_1_1draw_1_1point.html">draw::point</a> &amp;</td></tr>
+<tr class="memdesc:a6095b14490293599f11788f9eee94a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current position of the constraint.  <br /></td></tr>
 <tr class="separator:a6095b14490293599f11788f9eee94a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b13e9490aff75c869ba5ef913065e9" id="r_ac2b13e9490aff75c869ba5ef913065e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html#ac2b13e9490aff75c869ba5ef913065e9">set_position</a> (const <a class="el" href="../../d8/d50/classclsn_1_1draw_1_1point.html">draw::point</a> &amp;position)</td></tr>
+<tr class="memdesc:ac2b13e9490aff75c869ba5ef913065e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a new position for the constraint.  <br /></td></tr>
 <tr class="separator:ac2b13e9490aff75c869ba5ef913065e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents the constraints for placing UI controls arbitrarily within an <a class="el" href="../../d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html">xy_layout</a>. </p>
+<p>This class defines the position constraint, which is necessary to position UI elements in specific locations within an <a class="el" href="../../d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html">xy_layout</a>. Each control within the layout can have a unique constraint, specifying its position inside its container. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa8ffa5a0c3e1b874cfe5a86449c9bdb6" name="aa8ffa5a0c3e1b874cfe5a86449c9bdb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8ffa5a0c3e1b874cfe5a86449c9bdb6">&#9670;&#160;</a></span>xy_layout_constraint()</h2>
 
@@ -133,6 +142,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a new <a class="el" href="../../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html" title="Represents the constraints for placing UI controls arbitrarily within an xy_layout.">xy_layout_constraint</a> with the specified position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position where the UI control will be placed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -150,6 +167,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the current position of the constraint. </p>
+<dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="../../d8/d50/classclsn_1_1draw_1_1point.html">draw::point</a>&amp; The position of the control in the layout. </dd></dl>
 
 </div>
 </div>
@@ -169,11 +189,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets a new position for the constraint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The new position for the control in the layout. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>code/classeine-lib/clsn/ui/layouts/<a class="el" href="../../d5/d58/xy__layout_8h_source.html">xy_layout.h</a></li>
-<li>code/classeine-lib/clsn/ui/layouts/<a class="el" href="../../d1/da2/xy__layout_8cpp.html">xy_layout.cpp</a></li>
+<li>code/classeine-lib/clsn/ui/layouts/<a class="el" href="../../d6/d84/xy__layout__constraint_8h_source.html">xy_layout_constraint.h</a></li>
+<li>code/classeine-lib/clsn/ui/layouts/<a class="el" href="../../d1/d8e/xy__layout__constraint_8cpp.html">xy_layout_constraint.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -181,7 +209,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d8/dba/namespaceclsn.html">clsn</a></li><li class="navelem"><a class="el" href="../../de/dd9/namespaceclsn_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="../../d0/d76/namespaceclsn_1_1ui_1_1layouts.html">layouts</a></li><li class="navelem"><a class="el" href="../../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html">xy_layout_constraint</a></li>
-    <li class="footer">Generated on Thu Sep 19 2024 23:25:03 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Mon Sep 23 2024 18:33:15 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

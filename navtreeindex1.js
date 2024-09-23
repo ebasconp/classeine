@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"d3/dd3/sdl2__helpers_8h.html":[6,0,0,1,0,2,2,0,7],
 "d3/dd3/sdl2__helpers_8h.html#a12b502a8293fbcdf2385aed00c130953":[6,0,0,1,0,2,2,0,7,0],
 "d3/dd3/sdl2__helpers_8h.html#a4b3a22d467afcf875e7849a333774054":[6,0,0,1,0,2,2,0,7,1],
 "d3/dd3/sdl2__helpers_8h_source.html":[6,0,0,1,0,2,2,0,7],
@@ -117,6 +118,8 @@ var NAVTREEINDEX1 =
 "d6/d77/classclsn_1_1ui_1_1toggle__control.html#ac7fa4827eeee840083f496cb9ac839fc":[5,0,0,3,28,0],
 "d6/d81/xy__layout__container_8h.html":[6,0,0,1,0,2,58],
 "d6/d81/xy__layout__container_8h_source.html":[6,0,0,1,0,2,58],
+"d6/d84/xy__layout__constraint_8h.html":[6,0,0,1,0,2,3,12],
+"d6/d84/xy__layout__constraint_8h_source.html":[6,0,0,1,0,2,3,12],
 "d6/d90/strings_8h.html":[6,0,0,1,0,0,15],
 "d6/d90/strings_8h_source.html":[6,0,0,1,0,0,15],
 "d6/dab/classclsn_1_1ui_1_1ui__skin.html":[5,0,0,3,30],
@@ -246,8 +249,5 @@ var NAVTREEINDEX1 =
 "d8/d8f/classclsn_1_1ui_1_1main__window.html#af9e9504395a5ff9f176e44dc9b331003":[5,0,0,3,20,3],
 "d8/d8f/radio__button__renderer_8cpp.html":[6,0,0,1,0,2,5,15],
 "d8/dc3/label_8cpp.html":[6,0,0,1,0,2,29],
-"d8/de7/check__box__renderer_8h.html":[6,0,0,1,0,2,5,3],
-"d8/de7/check__box__renderer_8h_source.html":[6,0,0,1,0,2,5,3],
-"d8/df8/classclsn_1_1draw_1_1font.html":[5,0,0,2,3],
-"d8/df8/classclsn_1_1draw_1_1font.html#a0bbab36a13ee402a614a8f4b03b84c78":[5,0,0,2,3,0]
+"d8/de7/check__box__renderer_8h.html":[6,0,0,1,0,2,5,3]
 };

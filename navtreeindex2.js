@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"d8/de7/check__box__renderer_8h_source.html":[6,0,0,1,0,2,5,3],
+"d8/df8/classclsn_1_1draw_1_1font.html":[5,0,0,2,3],
+"d8/df8/classclsn_1_1draw_1_1font.html#a0bbab36a13ee402a614a8f4b03b84c78":[5,0,0,2,3,0],
 "d8/df8/classclsn_1_1draw_1_1font.html#a522a6804901cf477892c2b2ca48bc5ea":[5,0,0,2,3,1],
 "d8/df8/classclsn_1_1draw_1_1font.html#a9bd689009d4953949859b49c5e39ab3b":[5,0,0,2,3,5],
 "d8/df8/classclsn_1_1draw_1_1font.html#aa9e172a2a875c56a3a12652fe66805a3":[5,0,0,2,3,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "dd/d5c/dual__layout_8h.html#a8e13ac3005ee0abe1d3d87db71614983a80242c78f8a7fe008d3d774f90b403d3":[6,0,0,1,0,2,3,1,1,0],
 "dd/d5c/dual__layout_8h.html#a8e13ac3005ee0abe1d3d87db71614983aa947877064acd553716a54e6cadf622a":[6,0,0,1,0,2,3,1,1,1],
 "dd/d5c/dual__layout_8h_source.html":[6,0,0,1,0,2,3,1],
-"dd/d61/vbox__layout_8cpp.html":[6,0,0,1,0,2,3,7],
-"dd/d74/customizable__renderer_8h.html":[6,0,0,1,0,2,5,6],
-"dd/d74/customizable__renderer_8h_source.html":[6,0,0,1,0,2,5,6],
-"dd/d88/classclsn_1_1core_1_1value__changed__event.html":[5,0,0,0,13]
+"dd/d61/vbox__layout_8cpp.html":[6,0,0,1,0,2,3,7]
 };
