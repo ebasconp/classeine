@@ -101,6 +101,7 @@ add_executable(classeine
         code/classeine-lib/clsn/ui/layouts/hbox_layout.cpp
         code/classeine-lib/clsn/ui/layouts/vbox_layout.cpp
         code/classeine-lib/clsn/ui/layouts/xy_layout.cpp
+        code/classeine-lib/clsn/ui/layouts/xy_layout_constraint.cpp
 
         code/classeine-lib/clsn/ui/painters/background_painter.cpp
         code/classeine-lib/clsn/ui/painters/check_box_painter.cpp
