@@ -34,7 +34,7 @@ namespace clsn::ui
         }
 
     protected:
-        auto make_default_renderer() const -> std::unique_ptr<renderer_base> override
+        [[nodiscard]] auto make_default_renderer() const -> std::unique_ptr<renderer_base> override
         {
             return std::make_unique<renderers::padding_control_renderer<InnerControlType>>();
         }
