@@ -47,7 +47,7 @@ var hierarchy =
             ] ],
             [ "clsn::ui::layout_container< Layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", null ]
           ] ],
-          [ "clsn::ui::container< InnerControlType >", "d2/d50/classclsn_1_1ui_1_1container.html", [
+          [ "clsn::ui::container< std::shared_ptr< InnerControlType > >", "d2/d50/classclsn_1_1ui_1_1container.html", [
             [ "clsn::ui::mono_container< InnerControlType >", "da/dd5/classclsn_1_1ui_1_1mono__container.html", [
               [ "clsn::ui::padding_control< InnerControlType >", "dd/d15/classclsn_1_1ui_1_1padding__control.html", null ]
             ] ]

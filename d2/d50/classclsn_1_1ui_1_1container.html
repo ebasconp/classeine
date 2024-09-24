@@ -98,13 +98,16 @@ $(document).ready(function(){initNavTree('d2/d50/classclsn_1_1ui_1_1container.ht
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a generic container for UI elements.  
+ <a href="../../d2/d50/classclsn_1_1ui_1_1container.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d4/ddd/container_8h_source.html">container.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for clsn::ui::container&lt; ElementType &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d27/classclsn_1_1ui_1_1container__inherit__graph.png" border="0" usemap="#aclsn_1_1ui_1_1container_3_01ElementType_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aclsn_1_1ui_1_1container_3_01ElementType_01_4_inherit__map" id="aclsn_1_1ui_1_1container_3_01ElementType_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,240,143,280"/>
+<area shape="rect" title="Represents a generic container for UI elements." alt="" coords="5,240,143,280"/>
 <area shape="rect" href="../../db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="5,152,143,192"/>
 <area shape="poly" title=" " alt="" coords="77,206,77,240,71,240,71,206"/>
 <area shape="rect" href="../../d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="13,79,135,104"/>
@@ -117,44 +120,70 @@ Inheritance diagram for clsn::ui::container&lt; ElementType &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a63c5f61c8a9039fa2236cd0e3777a1" id="r_a6a63c5f61c8a9039fa2236cd0e3777a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a6a63c5f61c8a9039fa2236cd0e3777a1">container</a> (std::string_view section_name)</td></tr>
+<tr class="memdesc:a6a63c5f61c8a9039fa2236cd0e3777a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a container with the specified section name.  <br /></td></tr>
 <tr class="separator:a6a63c5f61c8a9039fa2236cd0e3777a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a67f1947dfb99dcfa95b29dd1b9518b" id="r_a9a67f1947dfb99dcfa95b29dd1b9518b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a9a67f1947dfb99dcfa95b29dd1b9518b">iterate_elements</a> (std::function&lt; void(ElementType &amp;)&gt; func)=0</td></tr>
-<tr class="separator:a9a67f1947dfb99dcfa95b29dd1b9518b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2f298f7e1e97df6e589154d1d5c7ce5" id="r_ac2f298f7e1e97df6e589154d1d5c7ce5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#ac2f298f7e1e97df6e589154d1d5c7ce5">iterate_elements</a> (std::function&lt; void(const ElementType &amp;)&gt; func) const =0</td></tr>
-<tr class="separator:ac2f298f7e1e97df6e589154d1d5c7ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2c5c49b73bca76d96fed2b87140b5f" id="r_a3f2c5c49b73bca76d96fed2b87140b5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a3f2c5c49b73bca76d96fed2b87140b5f">iterate_controls</a> (std::function&lt; void(<a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;)&gt; func)=0</td></tr>
-<tr class="separator:a3f2c5c49b73bca76d96fed2b87140b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d7930e3156ad6de18262863fcbc5d87" id="r_a6d7930e3156ad6de18262863fcbc5d87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a6d7930e3156ad6de18262863fcbc5d87">iterate_controls</a> (std::function&lt; void(const <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;)&gt; func) const =0</td></tr>
-<tr class="separator:a6d7930e3156ad6de18262863fcbc5d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af08fa5b26293169f322fd2daf98ecca5" id="r_af08fa5b26293169f322fd2daf98ecca5"><td class="memItemLeft" align="right" valign="top">virtual auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#af08fa5b26293169f322fd2daf98ecca5">get_count</a> () const noexcept -&gt; int=0</td></tr>
-<tr class="separator:af08fa5b26293169f322fd2daf98ecca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e1ac3fd964fb95e3a342b92254c48c" id="r_a29e1ac3fd964fb95e3a342b92254c48c"><td class="memItemLeft" align="right" valign="top">virtual auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a29e1ac3fd964fb95e3a342b92254c48c">get_element_at</a> (int index) -&gt; ElementType &amp;=0</td></tr>
-<tr class="separator:a29e1ac3fd964fb95e3a342b92254c48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a750a18e361f0ede4b994b916197a1208" id="r_a750a18e361f0ede4b994b916197a1208"><td class="memItemLeft" align="right" valign="top">virtual auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a750a18e361f0ede4b994b916197a1208">get_element_at</a> (int index) const -&gt; const ElementType &amp;=0</td></tr>
-<tr class="separator:a750a18e361f0ede4b994b916197a1208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6904c69e9d9501895a8049c242cebfad" id="r_a6904c69e9d9501895a8049c242cebfad"><td class="memItemLeft" align="right" valign="top">virtual auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a6904c69e9d9501895a8049c242cebfad">operator[]</a> (int index) noexcept -&gt; <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;=0</td></tr>
-<tr class="separator:a6904c69e9d9501895a8049c242cebfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace079b9827c5d8fa55ab0e200872951d" id="r_ace079b9827c5d8fa55ab0e200872951d"><td class="memItemLeft" align="right" valign="top">virtual auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#ace079b9827c5d8fa55ab0e200872951d">operator[]</a> (int index) const noexcept -&gt; const <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;=0</td></tr>
-<tr class="separator:ace079b9827c5d8fa55ab0e200872951d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1448cea3cd3c2031db8f36ffef75ca42" id="r_a1448cea3cd3c2031db8f36ffef75ca42"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1448cea3cd3c2031db8f36ffef75ca42">get_elements</a> () -&gt; std::ranges::subrange&lt; typename element_vector_type::iterator &gt;</td></tr>
+<tr class="memdesc:a1448cea3cd3c2031db8f36ffef75ca42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a subrange of the elements in the container.  <br /></td></tr>
+<tr class="separator:a1448cea3cd3c2031db8f36ffef75ca42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6b5a45c8d72f379414467dbbe5e87e" id="r_a1f6b5a45c8d72f379414467dbbe5e87e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a> ()</td></tr>
+<tr class="memdesc:a1f6b5a45c8d72f379414467dbbe5e87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a view of the controls in the container.  <br /></td></tr>
+<tr class="separator:a1f6b5a45c8d72f379414467dbbe5e87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51cbc359034e1574b962a1966bcb4e86" id="r_a51cbc359034e1574b962a1966bcb4e86"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a51cbc359034e1574b962a1966bcb4e86">get_elements</a> () const -&gt; std::ranges::subrange&lt; typename element_vector_type::const_iterator &gt;</td></tr>
+<tr class="memdesc:a51cbc359034e1574b962a1966bcb4e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a const subrange of the elements in the container.  <br /></td></tr>
+<tr class="separator:a51cbc359034e1574b962a1966bcb4e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745249d9714684dda853962b9825b379" id="r_a745249d9714684dda853962b9825b379"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a745249d9714684dda853962b9825b379">get_controls</a> () const</td></tr>
+<tr class="memdesc:a745249d9714684dda853962b9825b379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a const view of the controls in the container.  <br /></td></tr>
+<tr class="separator:a745249d9714684dda853962b9825b379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5b26d636e3c64acf205757660af211" id="r_a4a5b26d636e3c64acf205757660af211"><td class="memItemLeft" align="right" valign="top">virtual auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4a5b26d636e3c64acf205757660af211">to_control</a> (ElementType &amp;e) -&gt; <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;=0</td></tr>
+<tr class="memdesc:a4a5b26d636e3c64acf205757660af211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an ElementType to a control reference.  <br /></td></tr>
+<tr class="separator:a4a5b26d636e3c64acf205757660af211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3939c26f810e5f82cd22ce5e7b55c96" id="r_af3939c26f810e5f82cd22ce5e7b55c96"><td class="memItemLeft" align="right" valign="top">virtual auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#af3939c26f810e5f82cd22ce5e7b55c96">to_control</a> (const ElementType &amp;e) const -&gt; const <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;=0</td></tr>
+<tr class="memdesc:af3939c26f810e5f82cd22ce5e7b55c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a const ElementType to a const control reference.  <br /></td></tr>
+<tr class="separator:af3939c26f810e5f82cd22ce5e7b55c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4918f3e2df63a31fd869f4c41dfd74f" id="r_aa4918f3e2df63a31fd869f4c41dfd74f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#aa4918f3e2df63a31fd869f4c41dfd74f">get_count</a> () const noexcept -&gt; int</td></tr>
+<tr class="memdesc:aa4918f3e2df63a31fd869f4c41dfd74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of elements in the container.  <br /></td></tr>
+<tr class="separator:aa4918f3e2df63a31fd869f4c41dfd74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a308af6f9bb28d536f4429654cc66ba48" id="r_a308af6f9bb28d536f4429654cc66ba48"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a308af6f9bb28d536f4429654cc66ba48">get_element_at</a> (int index) -&gt; ElementType &amp;</td></tr>
+<tr class="memdesc:a308af6f9bb28d536f4429654cc66ba48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the element at the specified index.  <br /></td></tr>
+<tr class="separator:a308af6f9bb28d536f4429654cc66ba48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da49c6c84590bc2cb01be642a6eae8a" id="r_a9da49c6c84590bc2cb01be642a6eae8a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a9da49c6c84590bc2cb01be642a6eae8a">get_element_at</a> (int index) const -&gt; const ElementType &amp;</td></tr>
+<tr class="memdesc:a9da49c6c84590bc2cb01be642a6eae8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the element at the specified index as const.  <br /></td></tr>
+<tr class="separator:a9da49c6c84590bc2cb01be642a6eae8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb0d4dfb3fc07a4bb68100958fb1999" id="r_a7eb0d4dfb3fc07a4bb68100958fb1999"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a7eb0d4dfb3fc07a4bb68100958fb1999">operator[]</a> (int index) noexcept -&gt; <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;</td></tr>
+<tr class="memdesc:a7eb0d4dfb3fc07a4bb68100958fb1999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads the subscript operator to access controls.  <br /></td></tr>
+<tr class="separator:a7eb0d4dfb3fc07a4bb68100958fb1999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f421492c50b3bd2587ceddbc7f4805" id="r_ab2f421492c50b3bd2587ceddbc7f4805"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#ab2f421492c50b3bd2587ceddbc7f4805">operator[]</a> (int index) const noexcept -&gt; const <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;</td></tr>
+<tr class="memdesc:ab2f421492c50b3bd2587ceddbc7f4805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads the subscript operator to access controls as const.  <br /></td></tr>
+<tr class="separator:ab2f421492c50b3bd2587ceddbc7f4805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a717cb5c516f45f121e1cba9e9aed7f6a" id="r_a717cb5c516f45f121e1cba9e9aed7f6a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a717cb5c516f45f121e1cba9e9aed7f6a">is_empty</a> () const -&gt; bool</td></tr>
+<tr class="memdesc:a717cb5c516f45f121e1cba9e9aed7f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the container is empty.  <br /></td></tr>
 <tr class="separator:a717cb5c516f45f121e1cba9e9aed7f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15bdfea2f8d12c34b3a2e4fec71fa19f" id="r_a15bdfea2f8d12c34b3a2e4fec71fa19f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a15bdfea2f8d12c34b3a2e4fec71fa19f">invalidate</a> () const noexcept override</td></tr>
+<tr class="memdesc:a15bdfea2f8d12c34b3a2e4fec71fa19f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidates the container, requiring it to be repainted.  <br /></td></tr>
 <tr class="separator:a15bdfea2f8d12c34b3a2e4fec71fa19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a228f8e4c96157b931345362420f310bd" id="r_a228f8e4c96157b931345362420f310bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a228f8e4c96157b931345362420f310bd">validate</a> () const noexcept override</td></tr>
+<tr class="memdesc:a228f8e4c96157b931345362420f310bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates the container, marking it as painted.  <br /></td></tr>
 <tr class="separator:a228f8e4c96157b931345362420f310bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43096bb2b41081a95ab21c8bc9b7772f" id="r_a43096bb2b41081a95ab21c8bc9b7772f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a43096bb2b41081a95ab21c8bc9b7772f">needs_to_paint_the_container</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a43096bb2b41081a95ab21c8bc9b7772f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the container needs painting.  <br /></td></tr>
 <tr class="separator:a43096bb2b41081a95ab21c8bc9b7772f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf53e300c9f60a3b9f601c627766ba3" id="r_a6bf53e300c9f60a3b9f601c627766ba3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a6bf53e300c9f60a3b9f601c627766ba3">is_invalidated</a> () const noexcept -&gt; bool override</td></tr>
+<tr class="memdesc:a6bf53e300c9f60a3b9f601c627766ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the container or its controls are invalidated.  <br /></td></tr>
 <tr class="separator:a6bf53e300c9f60a3b9f601c627766ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83d62d591a7e703cd92db594d49d6861" id="r_a83d62d591a7e703cd92db594d49d6861"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a83d62d591a7e703cd92db594d49d6861">get_visible_count</a> () const -&gt; int</td></tr>
+<tr class="memdesc:a83d62d591a7e703cd92db594d49d6861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the count of visible controls in the container.  <br /></td></tr>
 <tr class="separator:a83d62d591a7e703cd92db594d49d6861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b406b5dcc877d47d790ce6316ae76c0" id="r_a2b406b5dcc877d47d790ce6316ae76c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a2b406b5dcc877d47d790ce6316ae76c0">load_defaults</a> () override</td></tr>
+<tr class="memdesc:a2b406b5dcc877d47d790ce6316ae76c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads default settings for the container and its controls.  <br /></td></tr>
 <tr class="separator:a2b406b5dcc877d47d790ce6316ae76c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab355dbb922221ca7a55b583ebf7a59c8" id="r_ab355dbb922221ca7a55b583ebf7a59c8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#ab355dbb922221ca7a55b583ebf7a59c8">get_control_by_position</a> (const <a class="el" href="../../d8/d50/classclsn_1_1draw_1_1point.html">draw::point</a> &amp;<a class="el" href="../../d8/d50/classclsn_1_1draw_1_1point.html">point</a>) const -&gt; <a class="el" href="../../de/dd9/namespaceclsn_1_1ui.html#a0370625be02ea8e1077805ab77ed14a7">const_optional_reference</a>&lt; <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &gt; override</td></tr>
+<tr class="memdesc:ab355dbb922221ca7a55b583ebf7a59c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the control at the specified position.  <br /></td></tr>
 <tr class="separator:ab355dbb922221ca7a55b583ebf7a59c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23bc08051e33602154564aab102e3422" id="r_a23bc08051e33602154564aab102e3422"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a23bc08051e33602154564aab102e3422">set_parent_window</a> (<a class="el" href="../../de/dd9/namespaceclsn_1_1ui.html#a0e9f3a505de867a9b7ae91789bf743f0">optional_reference</a>&lt; <a class="el" href="../../d0/dfd/classclsn_1_1ui_1_1window.html">window</a> &gt; pw) override</td></tr>
+<tr class="memdesc:a23bc08051e33602154564aab102e3422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parent window for the container and its controls.  <br /></td></tr>
 <tr class="separator:a23bc08051e33602154564aab102e3422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e6263a12d26e4e30dd0523e1b0d20b7" id="r_a4e6263a12d26e4e30dd0523e1b0d20b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4e6263a12d26e4e30dd0523e1b0d20b7">set_parent_control</a> (<a class="el" href="../../de/dd9/namespaceclsn_1_1ui.html#a0e9f3a505de867a9b7ae91789bf743f0">optional_reference</a>&lt; <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &gt; parent_control) override</td></tr>
+<tr class="memdesc:a4e6263a12d26e4e30dd0523e1b0d20b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parent control for the container and its controls.  <br /></td></tr>
 <tr class="separator:a4e6263a12d26e4e30dd0523e1b0d20b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classclsn_1_1ui_1_1paintable__control"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classclsn_1_1ui_1_1paintable__control')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../db/deb/classclsn_1_1ui_1_1paintable__control.html">clsn::ui::paintable_control</a></td></tr>
 <tr class="memitem:aba657df5bd7f2be4f4b724aedd352bce inherit pub_methods_classclsn_1_1ui_1_1paintable__control" id="r_aba657df5bd7f2be4f4b724aedd352bce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/deb/classclsn_1_1ui_1_1paintable__control.html#aba657df5bd7f2be4f4b724aedd352bce">paintable_control</a> (std::string_view name)</td></tr>
@@ -259,6 +288,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7a5c55f44b1227ba3dec9adb328a4d43" id="r_a7a5c55f44b1227ba3dec9adb328a4d43"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a7a5c55f44b1227ba3dec9adb328a4d43"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a7a5c55f44b1227ba3dec9adb328a4d43">add_element</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a7a5c55f44b1227ba3dec9adb328a4d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new element to the container. Used only for derived classes to add actual elements instead of only controls.  <br /></td></tr>
+<tr class="separator:a7a5c55f44b1227ba3dec9adb328a4d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe36255c6d621f76556e88d7921e589e" id="r_abe36255c6d621f76556e88d7921e589e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e">init_new_control</a> (<a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;<a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>)</td></tr>
 <tr class="separator:abe36255c6d621f76556e88d7921e589e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18180121eef228e7c20e4e3fd5961d82" id="r_a18180121eef228e7c20e4e3fd5961d82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a18180121eef228e7c20e4e3fd5961d82">process_mouse_click_event</a> (<a class="el" href="../../d2/d7a/classclsn_1_1ui_1_1events_1_1mouse__click__event.html">events::mouse_click_event</a> &amp;e) override</td></tr>
@@ -279,7 +312,17 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:af18d5f405a1961db0fcf310bb581a4c3 inherit pub_static_methods_classclsn_1_1core_1_1entity" id="r_af18d5f405a1961db0fcf310bb581a4c3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd1/classclsn_1_1core_1_1entity.html#af18d5f405a1961db0fcf310bb581a4c3">dump</a> ()</td></tr>
 <tr class="separator:af18d5f405a1961db0fcf310bb581a4c3 inherit pub_static_methods_classclsn_1_1core_1_1entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename ElementType&gt;<br />
+class clsn::ui::container&lt; ElementType &gt;</div><p>Represents a generic container for UI elements. </p>
+<p>This class serves as a container that can hold UI elements along with their layout constraints. The key difference between an Element and a Control is that an Element is the entity stored in the container, likely representing a control with additional information, such as layout constraints.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElementType</td><td>The type of elements stored in the container. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6a63c5f61c8a9039fa2236cd0e3777a1" name="a6a63c5f61c8a9039fa2236cd0e3777a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a63c5f61c8a9039fa2236cd0e3777a1">&#9670;&#160;</a></span>container()</h2>
 
@@ -306,9 +349,61 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a container with the specified section name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">section_name</td><td>The name of the section for this container. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7a5c55f44b1227ba3dec9adb328a4d43" name="a7a5c55f44b1227ba3dec9adb328a4d43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5c55f44b1227ba3dec9adb328a4d43">&#9670;&#160;</a></span>add_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::add_element </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a new element to the container. Used only for derived classes to add actual elements instead of only controls. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>Variadic template arguments for constructing the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The arguments used to construct the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab355dbb922221ca7a55b583ebf7a59c8" name="ab355dbb922221ca7a55b583ebf7a59c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab355dbb922221ca7a55b583ebf7a59c8">&#9670;&#160;</a></span>get_control_by_position()</h2>
 
@@ -335,12 +430,21 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the control at the specified position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>The position to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An optional reference to the control at the position. </dd></dl>
+
 <p>Reimplemented from <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html#ab5c72fecae37a74e246256272fe0b7aa">clsn::ui::control</a>.</p>
 
 </div>
 </div>
-<a id="af08fa5b26293169f322fd2daf98ecca5" name="af08fa5b26293169f322fd2daf98ecca5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af08fa5b26293169f322fd2daf98ecca5">&#9670;&#160;</a></span>get_count()</h2>
+<a id="a1f6b5a45c8d72f379414467dbbe5e87e" name="a1f6b5a45c8d72f379414467dbbe5e87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6b5a45c8d72f379414467dbbe5e87e">&#9670;&#160;</a></span>get_controls() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,25 +455,26 @@ template&lt;typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_count </td>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_controls </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt;  int</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#abbd3c31afd76d03a4dfd1d83705956fe">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#abbd3c31afd76d03a4dfd1d83705956fe">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#abbd3c31afd76d03a4dfd1d83705956fe">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#abbd3c31afd76d03a4dfd1d83705956fe">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#abbd3c31afd76d03a4dfd1d83705956fe">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#abbd3c31afd76d03a4dfd1d83705956fe">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>, and <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a1e94acf31306e4cd2ae5d2de9bfb1337">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
+<p>Retrieves a view of the controls in the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>A view of the controls corresponding to the elements in the container. </dd></dl>
 
 </div>
 </div>
-<a id="a29e1ac3fd964fb95e3a342b92254c48c" name="a29e1ac3fd964fb95e3a342b92254c48c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29e1ac3fd964fb95e3a342b92254c48c">&#9670;&#160;</a></span>get_element_at() <span class="overload">[1/2]</span></h2>
+<a id="a745249d9714684dda853962b9825b379" name="a745249d9714684dda853962b9825b379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a745249d9714684dda853962b9825b379">&#9670;&#160;</a></span>get_controls() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,26 +485,26 @@ template&lt;typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_element_at </td>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_controls </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> -&gt;  ElementType &amp;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#ad2ad2ca052a13b5928bc829851a2a7ba">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#ad2ad2ca052a13b5928bc829851a2a7ba">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#ad2ad2ca052a13b5928bc829851a2a7ba">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#ad2ad2ca052a13b5928bc829851a2a7ba">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#ad2ad2ca052a13b5928bc829851a2a7ba">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#ad2ad2ca052a13b5928bc829851a2a7ba">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>, and <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a615f7293b1e98f7fad16fce76cdc9807">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
+<p>Retrieves a const view of the controls in the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>A const view of the controls corresponding to the elements in the container. </dd></dl>
 
 </div>
 </div>
-<a id="a750a18e361f0ede4b994b916197a1208" name="a750a18e361f0ede4b994b916197a1208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a750a18e361f0ede4b994b916197a1208">&#9670;&#160;</a></span>get_element_at() <span class="overload">[2/2]</span></h2>
+<a id="aa4918f3e2df63a31fd869f4c41dfd74f" name="aa4918f3e2df63a31fd869f4c41dfd74f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4918f3e2df63a31fd869f4c41dfd74f">&#9670;&#160;</a></span>get_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,21 +515,161 @@ template&lt;typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_element_at </td>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_count </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const -&gt;  const ElementType &amp;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+        </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#aa36f886f4c4503a709e21869bd3033e9">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#aa36f886f4c4503a709e21869bd3033e9">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#aa36f886f4c4503a709e21869bd3033e9">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#aa36f886f4c4503a709e21869bd3033e9">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#aa36f886f4c4503a709e21869bd3033e9">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#aa36f886f4c4503a709e21869bd3033e9">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>, and <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#acb045bcc3620344b57e056dd88dbbcdc">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
+<p>Gets the number of elements in the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>The count of elements in the container. </dd></dl>
+
+</div>
+</div>
+<a id="a308af6f9bb28d536f4429654cc66ba48" name="a308af6f9bb28d536f4429654cc66ba48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a308af6f9bb28d536f4429654cc66ba48">&#9670;&#160;</a></span>get_element_at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_element_at </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> -&gt; ElementType&amp;
+        </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the element at the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the element at the specified index. </dd></dl>
+
+</div>
+</div>
+<a id="a9da49c6c84590bc2cb01be642a6eae8a" name="a9da49c6c84590bc2cb01be642a6eae8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da49c6c84590bc2cb01be642a6eae8a">&#9670;&#160;</a></span>get_element_at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_element_at </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const -&gt; const ElementType&amp;
+        </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the element at the specified index as const. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the element at the specified index. </dd></dl>
+
+</div>
+</div>
+<a id="a1448cea3cd3c2031db8f36ffef75ca42" name="a1448cea3cd3c2031db8f36ffef75ca42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1448cea3cd3c2031db8f36ffef75ca42">&#9670;&#160;</a></span>get_elements() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_elements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::ranges::subrange&lt;
+                    typename element_vector_type::iterator&gt;
+        </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a subrange of the elements in the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>A subrange of the elements in the container. </dd></dl>
+
+</div>
+</div>
+<a id="a51cbc359034e1574b962a1966bcb4e86" name="a51cbc359034e1574b962a1966bcb4e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51cbc359034e1574b962a1966bcb4e86">&#9670;&#160;</a></span>get_elements() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::get_elements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::ranges::subrange&lt;typename element_vector_type::const_iterator&gt;
+        </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a const subrange of the elements in the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>A const subrange of the elements in the container. </dd></dl>
 
 </div>
 </div>
@@ -453,6 +698,9 @@ template&lt;typename ElementType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the count of visible controls in the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>The count of visible controls. </dd></dl>
 
 </div>
 </div>
@@ -509,6 +757,8 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Invalidates the container, requiring it to be repainted. </p>
+
 <p>Reimplemented from <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html#ad5598413da0d4aa1f03c64872c639b57">clsn::ui::control</a>.</p>
 
 </div>
@@ -539,6 +789,9 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Checks if the container is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the container is empty, false otherwise. </dd></dl>
+
 </div>
 </div>
 <a id="a6bf53e300c9f60a3b9f601c627766ba3" name="a6bf53e300c9f60a3b9f601c627766ba3"></a>
@@ -566,127 +819,10 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Checks if the container or its controls are invalidated. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the container is invalidated, false otherwise. </dd></dl>
+
 <p>Reimplemented from <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html#aae82f6cf859d474c0f976f18e06854e2">clsn::ui::control</a>.</p>
-
-</div>
-</div>
-<a id="a6d7930e3156ad6de18262863fcbc5d87" name="a6d7930e3156ad6de18262863fcbc5d87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d7930e3156ad6de18262863fcbc5d87">&#9670;&#160;</a></span>iterate_controls() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ElementType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::iterate_controls </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(const <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a19602ed5a9b6b7d6e33ecae42fa67888">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a19602ed5a9b6b7d6e33ecae42fa67888">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a19602ed5a9b6b7d6e33ecae42fa67888">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a19602ed5a9b6b7d6e33ecae42fa67888">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a19602ed5a9b6b7d6e33ecae42fa67888">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a19602ed5a9b6b7d6e33ecae42fa67888">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>, and <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a003346ba2611fb90fef5cf33779f63c8">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a3f2c5c49b73bca76d96fed2b87140b5f" name="a3f2c5c49b73bca76d96fed2b87140b5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f2c5c49b73bca76d96fed2b87140b5f">&#9670;&#160;</a></span>iterate_controls() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ElementType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::iterate_controls </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(<a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a35de3dd8513a5cbcc8089509ec45c598">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a35de3dd8513a5cbcc8089509ec45c598">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a35de3dd8513a5cbcc8089509ec45c598">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a35de3dd8513a5cbcc8089509ec45c598">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a35de3dd8513a5cbcc8089509ec45c598">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a35de3dd8513a5cbcc8089509ec45c598">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>, and <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a33e327bb2b90cb7c7844661f5266e282">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
-
-</div>
-</div>
-<a id="ac2f298f7e1e97df6e589154d1d5c7ce5" name="ac2f298f7e1e97df6e589154d1d5c7ce5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2f298f7e1e97df6e589154d1d5c7ce5">&#9670;&#160;</a></span>iterate_elements() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ElementType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::iterate_elements </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(const ElementType &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#abb7f14091c9f1f823b4e903b7a475f33">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a9a67f1947dfb99dcfa95b29dd1b9518b" name="a9a67f1947dfb99dcfa95b29dd1b9518b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a67f1947dfb99dcfa95b29dd1b9518b">&#9670;&#160;</a></span>iterate_elements() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ElementType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::iterate_elements </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(ElementType &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a86cf38d6a905036b3ddebd1a29542ca6">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
 
 </div>
 </div>
@@ -714,6 +850,8 @@ template&lt;typename ElementType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Loads default settings for the container and its controls. </p>
 
 <p>Reimplemented from <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a132981465980452f5bc715b52874e126">clsn::ui::control</a>.</p>
 
@@ -745,10 +883,13 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Checks if the container needs painting. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the container needs painting, false otherwise. </dd></dl>
+
 </div>
 </div>
-<a id="ace079b9827c5d8fa55ab0e200872951d" name="ace079b9827c5d8fa55ab0e200872951d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace079b9827c5d8fa55ab0e200872951d">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+<a id="ab2f421492c50b3bd2587ceddbc7f4805" name="ab2f421492c50b3bd2587ceddbc7f4805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f421492c50b3bd2587ceddbc7f4805">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -759,26 +900,34 @@ template&lt;typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::operator[] </td>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const -&gt;  const <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;</td>
+          <td> const -&gt; const <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>&amp;
+        </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a08f528bdd5abb210e1aaec9550bf620b">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a08f528bdd5abb210e1aaec9550bf620b">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a08f528bdd5abb210e1aaec9550bf620b">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a08f528bdd5abb210e1aaec9550bf620b">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a08f528bdd5abb210e1aaec9550bf620b">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a08f528bdd5abb210e1aaec9550bf620b">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>, and <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a3c5e0099b9300d67afbbf0fdbbfc81a6">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
+<p>Overloads the subscript operator to access controls as const. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the control at the specified index. </dd></dl>
 
 </div>
 </div>
-<a id="a6904c69e9d9501895a8049c242cebfad" name="a6904c69e9d9501895a8049c242cebfad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6904c69e9d9501895a8049c242cebfad">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+<a id="a7eb0d4dfb3fc07a4bb68100958fb1999" name="a7eb0d4dfb3fc07a4bb68100958fb1999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb0d4dfb3fc07a4bb68100958fb1999">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -789,21 +938,29 @@ template&lt;typename ElementType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::operator[] </td>
+          <td class="memname">auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
-          <td> -&gt;  <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;</td>
+          <td> -&gt; <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>&amp;
+        </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#af97535a9f043e90ae79c326c834533d2">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#af97535a9f043e90ae79c326c834533d2">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#af97535a9f043e90ae79c326c834533d2">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#af97535a9f043e90ae79c326c834533d2">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#af97535a9f043e90ae79c326c834533d2">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#af97535a9f043e90ae79c326c834533d2">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>, and <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a2d3f94b3515d634de5df24f71042d250">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
+<p>Overloads the subscript operator to access controls. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the control at the specified index. </dd></dl>
 
 </div>
 </div>
@@ -893,9 +1050,15 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html#aed824d2075f5ebe50592477ab1571cc0">clsn::ui::control</a>.</p>
+<p>Sets the parent control for the container and its controls. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent_control</td><td>The optional reference to the parent control. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Reimplemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a8135e0d853100a2b2f7d9cfbf5ef5ad5">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a8135e0d853100a2b2f7d9cfbf5ef5ad5">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a8135e0d853100a2b2f7d9cfbf5ef5ad5">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a8135e0d853100a2b2f7d9cfbf5ef5ad5">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a8135e0d853100a2b2f7d9cfbf5ef5ad5">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, and <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a8135e0d853100a2b2f7d9cfbf5ef5ad5">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html#aed824d2075f5ebe50592477ab1571cc0">clsn::ui::control</a>.</p>
 
 </div>
 </div>
@@ -925,9 +1088,93 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the parent window for the container and its controls. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pw</td><td>The optional reference to the parent window. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a3a75143f32f350bea9663bffef35ca03">clsn::ui::control</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a9ea84f1893f14245ebeabd0ff9676962">clsn::ui::layout_container&lt; Layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a9ea84f1893f14245ebeabd0ff9676962">clsn::ui::layout_container&lt; layouts::dual_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a9ea84f1893f14245ebeabd0ff9676962">clsn::ui::layout_container&lt; layouts::flow_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a9ea84f1893f14245ebeabd0ff9676962">clsn::ui::layout_container&lt; layouts::hbox_layout &gt;</a>, <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a9ea84f1893f14245ebeabd0ff9676962">clsn::ui::layout_container&lt; layouts::vbox_layout &gt;</a>, and <a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html#a9ea84f1893f14245ebeabd0ff9676962">clsn::ui::layout_container&lt; layouts::xy_layout &gt;</a>.</p>
+</div>
+</div>
+<a id="af3939c26f810e5f82cd22ce5e7b55c96" name="af3939c26f810e5f82cd22ce5e7b55c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3939c26f810e5f82cd22ce5e7b55c96">&#9670;&#160;</a></span>to_control() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::to_control </td>
+          <td>(</td>
+          <td class="paramtype">const ElementType &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td> const -&gt;  const <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a const ElementType to a const control reference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The element to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the corresponding control. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a851af2ab511bdf433f81a9755a9d0880">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a4a5b26d636e3c64acf205757660af211" name="a4a5b26d636e3c64acf205757660af211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a5b26d636e3c64acf205757660af211">&#9670;&#160;</a></span>to_control() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual auto <a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a>&lt; ElementType &gt;::to_control </td>
+          <td>(</td>
+          <td class="paramtype">ElementType &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td> -&gt;  <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts an ElementType to a control reference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The element to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the corresponding control. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../da/dd5/classclsn_1_1ui_1_1mono__container.html#a6328c13925f79d4bc0cdb851c930249b">clsn::ui::mono_container&lt; InnerControlType &gt;</a>.</p>
 
 </div>
 </div>
@@ -956,6 +1203,8 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Validates the container, marking it as painted. </p>
+
 <p>Reimplemented from <a class="el" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a333a1c57c152577e1b44b60d74baf44e">clsn::ui::control</a>.</p>
 
 </div>
@@ -969,7 +1218,7 @@ template&lt;typename ElementType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d8/dba/namespaceclsn.html">clsn</a></li><li class="navelem"><a class="el" href="../../de/dd9/namespaceclsn_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">container</a></li>
-    <li class="footer">Generated on Mon Sep 23 2024 18:33:15 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Sep 24 2024 23:13:15 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
