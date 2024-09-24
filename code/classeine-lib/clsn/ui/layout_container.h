@@ -27,7 +27,6 @@ namespace clsn::ui
         using control_and_constraint = layout_container_control_and_constraint<constraint>;
 
     private:
-        std::vector<control_and_constraint> m_controls;
         Layout m_layout;
 
     public:
@@ -62,69 +61,8 @@ namespace clsn::ui
         {
             constraint _constraint{std::forward<Args>(args)...};
             check_if_valid_before_adding(_constraint);
-            m_controls.emplace_back(ctrl, std::move(_constraint));
+            this->add_element(ctrl, std::move(_constraint));
             this->init_new_control(*ctrl);
-        }
-
-        void iterate_elements(std::function<void(control_and_constraint&)> func) override
-        {
-            const auto count = m_controls.size();
-            for (auto i = 0U; i < count; i++)
-            {
-                func(m_controls[i]);
-            }
-        }
-
-        void iterate_elements(std::function<void(const control_and_constraint&)> func) const override
-        {
-            const auto count = m_controls.size();
-            for (auto i = 0U; i < count; i++)
-            {
-                func(m_controls[i]);
-            }
-        }
-
-        void iterate_controls(std::function<void(control&)> func) override
-        {
-            const auto count = m_controls.size();
-            for (auto i = 0U; i < count; i++)
-            {
-                func(*(m_controls[i].m_control));
-            }
-        }
-
-        void iterate_controls(std::function<void(const control&)> func) const override
-        {
-            const auto count = m_controls.size();
-            for (auto i = 0U; i < count; i++)
-            {
-                func(*(m_controls[i].m_control));
-            }
-        }
-
-        [[nodiscard]] auto get_count() const noexcept -> int override
-        {
-            return static_cast<int>(m_controls.size());
-        }
-
-        auto get_element_at(int index) -> control_and_constraint& override
-        {
-            return m_controls[index];
-        }
-
-        auto get_element_at(int index) const -> const control_and_constraint& override
-        {
-            return m_controls[index];
-        }
-
-        auto operator[](int index) noexcept -> control& override
-        {
-            return *(m_controls[index].m_control);
-        }
-
-        auto operator[](int index) const noexcept -> const control& override
-        {
-            return *(m_controls[index].m_control);
         }
 
         void do_layout() override
@@ -134,19 +72,19 @@ namespace clsn::ui
 
             m_layout.clear();
 
-            this->iterate_elements([&](control_and_constraint& e)
+            for (auto& e : this->get_elements())
             {
                 if (!e.m_control->is_visible())
-                    return;
+                    continue;
 
                 m_layout.add(
                     {e.m_control->get_actual_position(), e.m_control->get_actual_preferred_size()},
                     e.m_constraint);
-            });
+            }
 
             m_layout.layout(this->get_actual_bounds());
 
-            int count = get_count();
+            int count = this->get_count();
             for (int i = 0, j = 0; i < count; i++)
             {
                 auto& ctrl = (*this)[i];
@@ -162,18 +100,14 @@ namespace clsn::ui
             }
         }
 
-        void set_parent_control(optional_reference<control> ctrl) override
+        auto to_control(control_and_constraint& e) -> control& override
         {
-            control::set_parent_control(ctrl);
-
-            iterate_controls([this](control& c) { c.set_parent_control(*this); });
+            return *e.m_control;
         }
 
-        void set_parent_window(optional_reference<window> wnd) override
+        auto to_control(const control_and_constraint& e) const -> const control& override
         {
-            control::set_parent_window(wnd);
-
-            iterate_controls([&wnd](control& c) { c.set_parent_window(wnd); });
+            return *e.m_control;
         }
 
     protected:

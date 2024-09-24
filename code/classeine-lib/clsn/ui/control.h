@@ -151,7 +151,7 @@ namespace clsn::ui
         virtual void process_mouse_moved_event(events::mouse_moved_event& e);
 
     private:
-        virtual auto make_default_renderer() const -> std::unique_ptr<renderer_base>;
+        [[nodiscard]] virtual auto make_default_renderer() const -> std::unique_ptr<renderer_base>;
 
         void init_control_events();
 

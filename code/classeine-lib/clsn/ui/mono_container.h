@@ -12,66 +12,28 @@
 namespace clsn::ui
 {
     template <typename InnerControlType>
-    class mono_container : public container<InnerControlType>
+    class mono_container : public container<std::shared_ptr<InnerControlType>>
     {
-        InnerControlType m_inner_control;
-        
+        using element_type = std::shared_ptr<InnerControlType>;
     public:
         explicit mono_container(std::string_view section_name)
-        : container<InnerControlType>(section_name)
+        : container<element_type>(section_name)
         {
+            auto ctrl = control::make<InnerControlType>();
+            this->add_element(ctrl);
         }
         
-        auto get_inner_control() -> InnerControlType& { return m_inner_control; }
-        auto get_inner_control() const -> const InnerControlType& { return m_inner_control; }
+        auto get_inner_control() -> InnerControlType& { return *this->get_element_at(0); }
+        auto get_inner_control() const -> const InnerControlType& { return *this->get_element_at(0); }
         
-        void iterate_elements(std::function<void(InnerControlType&)> func) override
+        auto to_control(element_type& e) -> control& override
         {
-            func(m_inner_control);
+            return *e;
         }
 
-        void iterate_elements(std::function<void(const InnerControlType&)> func)  const override
+        auto to_control(const element_type& e) const -> const control& override
         {
-            func(m_inner_control);
-        }
-        
-        void iterate_controls(std::function<void(control&)> func) override
-        {
-            func(m_inner_control);
-        }
-
-        void iterate_controls(std::function<void(const control&)> func) const override
-        {
-            func(m_inner_control);
-        }
-
-        auto get_count() const noexcept -> int override
-        {
-            return 1;
-        }
-
-        auto get_element_at(int index) -> InnerControlType& override
-        {
-            if (index > 0) clsn::core::system::panic("Index cannot be greater than zero");
-
-            return m_inner_control;
-        }
-
-        auto get_element_at(int index) const -> const InnerControlType& override
-        {
-            if (index > 0) clsn::core::system::panic("Index cannot be greater than zero");
-
-            return m_inner_control;
-        }
-
-        auto operator[](int index) noexcept -> control& override
-        {
-            return get_element_at(index);
-        }
-
-        auto operator[](int index) const noexcept -> const control& override
-        {
-            return get_element_at(index);
+            return *e;
         }
     };
 }
