@@ -216,15 +216,12 @@ namespace clsn::ui
         /// @return The count of visible controls.
         auto get_visible_count() const -> int
         {
-            auto count = 0;
-
-            for (auto& c : get_controls())
-            {
-                if (c.is_visible())
-                    count++;
-            }
-
-            return count;
+            return std::count_if(m_elements.cbegin(), m_elements.cend(),
+                [this](const ElementType& e) -> bool
+                    {
+                        return to_control(e).is_visible();
+                    }
+            );
         }
 
         /// @brief Loads default settings for the container and its controls.
