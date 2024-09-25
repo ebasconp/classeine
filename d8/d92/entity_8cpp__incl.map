@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="297,5,448,45"/>
 <area shape="rect" id="Node000002" href="$d8/d83/entity_8h.html" title=" " alt="" coords="113,93,245,119"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="327,48,221,91,219,86,325,43"/>
-<area shape="rect" id="Node000004" href="$d0/de3/console_8h.html" title=" " alt="" coords="299,93,446,119"/>
+<area shape="rect" id="Node000004" href="$d0/de3/console_8h.html" title="Console utility class for printing formatted strings." alt="" coords="299,93,446,119"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="375,46,375,79,370,79,370,46"/>
 <area shape="rect" id="Node000011" title=" " alt="" coords="467,167,547,192"/>
 <area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="404,43,432,65,460,92,482,122,499,153,494,155,478,125,456,95,429,69,401,48"/>
