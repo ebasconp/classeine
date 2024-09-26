@@ -110,19 +110,20 @@ var hierarchy =
     [ "clsn::draw::font_info", "d3/d1a/classclsn_1_1draw_1_1font__info.html", null ],
     [ "std::hash< clsn::draw::font >", "d2/dc2/structstd_1_1hash_3_01clsn_1_1draw_1_1font_01_4.html", null ],
     [ "std::hash< clsn::draw::font_info >", "d2/dbd/structstd_1_1hash_3_01clsn_1_1draw_1_1font__info_01_4.html", null ],
-    [ "clsn::ui::layouts::layout_base< Constraint >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", null ],
-    [ "clsn::ui::layouts::layout_base< dual_layout_constraint >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", [
+    [ "clsn::ui::layouts::layout< Constraint >", "df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html", null ],
+    [ "clsn::ui::layouts::layout< dual_layout_constraint >", "df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html", [
       [ "clsn::ui::layouts::dual_layout", "dc/da4/classclsn_1_1ui_1_1layouts_1_1dual__layout.html", null ]
     ] ],
-    [ "clsn::ui::layouts::layout_base< std::monostate >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", [
+    [ "clsn::ui::layouts::layout< std::monostate >", "df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html", [
       [ "clsn::ui::layouts::flow_layout", "d0/ddf/classclsn_1_1ui_1_1layouts_1_1flow__layout.html", null ],
       [ "clsn::ui::layouts::hbox_layout", "d4/de0/classclsn_1_1ui_1_1layouts_1_1hbox__layout.html", null ],
       [ "clsn::ui::layouts::vbox_layout", "dc/ded/classclsn_1_1ui_1_1layouts_1_1vbox__layout.html", null ]
     ] ],
-    [ "clsn::ui::layouts::layout_base< xy_layout_constraint >", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", [
+    [ "clsn::ui::layouts::layout< xy_layout_constraint >", "df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html", [
       [ "clsn::ui::layouts::xy_layout", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html", null ]
     ] ],
-    [ "clsn::ui::layout_container_control_and_constraint< Constraint >", "dc/d1d/structclsn_1_1ui_1_1layout__container__control__and__constraint.html", null ],
+    [ "clsn::ui::layout_container_control_and_constraint< Constraint >", "dd/d4a/classclsn_1_1ui_1_1layout__container__control__and__constraint.html", null ],
+    [ "clsn::ui::layouts::layout< Constraint >::layout_element_info", "da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html", null ],
     [ "LayoutContainer", null, [
       [ "clsn::demo::demo_box_layout_container< LayoutContainer >", "de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html", null ]
     ] ],
@@ -146,7 +147,6 @@ var hierarchy =
     [ "clsn::core::property< T, HasValueChangedEventListener >", "df/d29/classclsn_1_1core_1_1property.html", null ],
     [ "clsn::ui::radio_button_group", "da/da9/classclsn_1_1ui_1_1radio__button__group.html", null ],
     [ "clsn::draw::region", "de/d04/classclsn_1_1draw_1_1region.html", null ],
-    [ "clsn::ui::layouts::layout_base< Constraint >::region_and_constraint", "d1/d16/structclsn_1_1ui_1_1layouts_1_1layout__base_1_1region__and__constraint.html", null ],
     [ "clsn::ui::impl::sdl2::sdl2_font_cache", "dd/da0/classclsn_1_1ui_1_1impl_1_1sdl2_1_1sdl2__font__cache.html", null ],
     [ "clsn::ui::impl::sdl2::ttf_font_deleter", "dd/d3e/structclsn_1_1ui_1_1impl_1_1sdl2_1_1ttf__font__deleter.html", null ],
     [ "clsn::ui::layouts::xy_layout_constraint", "d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html", null ]

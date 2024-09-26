@@ -1,13 +1,13 @@
 <map id="code/classeine&#45;lib/clsn/ui/layouts/dual_layout.h" name="code/classeine&#45;lib/clsn/ui/layouts/dual_layout.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="241,5,393,60"/>
-<area shape="rect" id="Node000002" href="$da/d55/layout__base_8h.html" title=" " alt="" coords="181,108,295,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="295,62,260,99,256,96,291,58"/>
-<area shape="rect" id="Node000008" href="$d7/d82/draw_2forward_8h.html" title=" " alt="" coords="321,108,472,133"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="343,58,378,96,374,99,339,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="247,5,399,60"/>
+<area shape="rect" id="Node000002" href="$db/d51/layout_8h.html" title=" " alt="" coords="143,108,317,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,62,255,100,251,96,293,58"/>
+<area shape="rect" id="Node000008" href="$d7/d82/draw_2forward_8h.html" title=" " alt="" coords="341,108,492,133"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="354,58,396,96,392,100,350,62"/>
 <area shape="rect" id="Node000003" href="$df/d07/region_8h.html" title=" " alt="" coords="41,181,182,207"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,136,145,177,143,172,216,131"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,136,144,176,141,172,210,131"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="207,181,269,207"/>
-<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="241,134,241,168,235,168,235,134"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="234,133,238,168,233,168,229,134"/>
 <area shape="rect" id="Node000004" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="5,255,108,280"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="104,209,76,245,72,242,100,205"/>
 <area shape="rect" id="Node000006" href="$d2/d91/point_8h.html" title=" " alt="" coords="133,255,199,280"/>
@@ -15,8 +15,8 @@
 <area shape="rect" id="Node000005" title=" " alt="" coords="82,328,141,353"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="68,279,96,316,92,319,64,282"/>
 <area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="159,282,131,319,126,316,155,279"/>
-<area shape="rect" id="Node000009" href="$d0/d6a/text__horizontal__alignment_8h.html" title=" " alt="" coords="294,181,499,207"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="399,134,399,168,394,168,394,134"/>
-<area shape="rect" id="Node000010" href="$d6/dd3/text__vertical__alignment_8h.html" title=" " alt="" coords="523,181,713,207"/>
-<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="433,131,570,175,569,180,431,136"/>
+<area shape="rect" id="Node000009" href="$d0/d6a/text__horizontal__alignment_8h.html" title=" " alt="" coords="307,181,513,207"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="418,134,415,168,410,168,413,133"/>
+<area shape="rect" id="Node000010" href="$d6/dd3/text__vertical__alignment_8h.html" title=" " alt="" coords="537,181,726,207"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="452,131,584,174,583,179,450,136"/>
 </map>

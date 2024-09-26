@@ -6,7 +6,7 @@ var dir_5371e4c3571ed73fc4ee677f2e04dc38 =
     [ "flow_layout.h", "dc/d3b/flow__layout_8h.html", "dc/d3b/flow__layout_8h" ],
     [ "hbox_layout.cpp", "d3/d80/hbox__layout_8cpp.html", null ],
     [ "hbox_layout.h", "df/db8/hbox__layout_8h.html", "df/db8/hbox__layout_8h" ],
-    [ "layout_base.h", "da/d55/layout__base_8h.html", "da/d55/layout__base_8h" ],
+    [ "layout.h", "db/d51/layout_8h.html", "db/d51/layout_8h" ],
     [ "layout_utils.h", "d6/d8a/layout__utils_8h.html", "d6/d8a/layout__utils_8h" ],
     [ "vbox_layout.cpp", "dd/d61/vbox__layout_8cpp.html", null ],
     [ "vbox_layout.h", "d5/dd7/vbox__layout_8h.html", "d5/dd7/vbox__layout_8h" ],

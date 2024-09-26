@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_5fwindow_5fimpl_0',['main_window_impl',['../df/dd6/namespaceclsn_1_1ui_1_1impl.html#a0c148f293ff85c1380038e64f45f9ab0',1,'clsn::ui::impl']]]
+  ['layout_5felement_5finfo_5fvector_0',['layout_element_info_vector',['../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#af0c0a5f0c88c5714884e1c4afda94431',1,'clsn::ui::layouts::layout']]]
 ];

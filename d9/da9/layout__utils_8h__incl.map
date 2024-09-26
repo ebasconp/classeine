@@ -1,20 +1,7 @@
 <map id="code/classeine&#45;lib/clsn/ui/layouts/layout_utils.h" name="code/classeine&#45;lib/clsn/ui/layouts/layout_utils.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="231,5,397,60"/>
-<area shape="rect" id="Node000002" href="$d3/d8b/non__instantiable_8h.html" title=" " alt="" coords="5,115,209,141"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,62,146,112,144,107,255,58"/>
-<area shape="rect" id="Node000003" href="$da/d55/layout__base_8h.html" title=" " alt="" coords="233,108,395,148"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="317,60,317,94,311,94,311,60"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="419,115,505,141"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="357,58,433,106,431,110,354,62"/>
-<area shape="rect" id="Node000004" href="$df/d07/region_8h.html" title=" " alt="" coords="179,196,321,221"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="301,150,270,187,266,183,296,147"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="345,196,408,221"/>
-<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="331,147,361,183,357,187,327,150"/>
-<area shape="rect" id="Node000005" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="144,269,247,295"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="243,223,215,260,210,257,239,220"/>
-<area shape="rect" id="Node000007" href="$d2/d91/point_8h.html" title=" " alt="" coords="271,269,338,295"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="261,220,290,257,285,260,257,223"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="221,343,279,368"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="206,293,235,330,231,333,202,297"/>
-<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="298,297,269,333,265,330,294,293"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="109,5,274,60"/>
+<area shape="rect" id="Node000002" href="$d3/d8b/non__instantiable_8h.html" title=" " alt="" coords="5,108,209,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,62,130,100,126,96,164,58"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="234,108,319,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,58,257,96,253,100,216,62"/>
 </map>

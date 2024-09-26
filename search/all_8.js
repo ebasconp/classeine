@@ -12,5 +12,6 @@ var searchData=
   ['is_5fhovered_9',['is_hovered',['../d7/d66/classclsn_1_1ui_1_1control.html#aeef0b56d8927101124e787491df46532',1,'clsn::ui::control::is_hovered()'],['../d0/dfd/classclsn_1_1ui_1_1window.html#a9950d39ee021c04c77d78aec82947553',1,'clsn::ui::window::is_hovered()']]],
   ['is_5finvalidated_10',['is_invalidated',['../d2/d50/classclsn_1_1ui_1_1container.html#a6bf53e300c9f60a3b9f601c627766ba3',1,'clsn::ui::container::is_invalidated()'],['../d7/d66/classclsn_1_1ui_1_1control.html#aae82f6cf859d474c0f976f18e06854e2',1,'clsn::ui::control::is_invalidated()'],['../d2/dfb/classclsn_1_1ui_1_1dynamic__pane.html#ae384ab249a04387ed9272eb6b8b66e9c',1,'clsn::ui::dynamic_pane::is_invalidated()']]],
   ['is_5fpressed_11',['is_pressed',['../d9/df3/classclsn_1_1ui_1_1clickable__control.html#a53b04e15841d1482740142a9083b0e8e',1,'clsn::ui::clickable_control']]],
-  ['italic_12',['italic',['../db/dde/namespaceclsn_1_1draw.html#aad7b3e6a7c71db2da8ecddd68b31fff9a030c5b6d1e5715105943ac111d9671bf',1,'clsn::draw']]]
+  ['is_5fvisible_12',['is_visible',['../da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html#a2920647bdd42622438b6126ac6f24f38',1,'clsn::ui::layouts::layout::layout_element_info']]],
+  ['italic_13',['italic',['../db/dde/namespaceclsn_1_1draw.html#aad7b3e6a7c71db2da8ecddd68b31fff9a030c5b6d1e5715105943ac111d9671bf',1,'clsn::draw']]]
 ];

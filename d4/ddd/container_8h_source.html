@@ -313,136 +313,138 @@ $(document).ready(function(){initNavTree('d4/ddd/container_8h_source.html','../.
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                <span class="keywordflow">if</span> (!c.is_visible() || !c.is_enabled())</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keywordflow">return</span> c.get_control_by_position(<a class="code hl_class" href="../../d8/d50/classclsn_1_1draw_1_1point.html">point</a>);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            }</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keyword">auto</span> result = c.get_control_by_position(<a class="code hl_class" href="../../d8/d50/classclsn_1_1draw_1_1point.html">point</a>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                <span class="keywordflow">if</span> (result.has_value())</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        }</div>
 </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="foldopen" id="foldopen00261" data-start="{" data-end="}">
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a23bc08051e33602154564aab102e3422">  261</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a23bc08051e33602154564aab102e3422">set_parent_window</a>(<a class="code hl_typedef" href="../../de/dd9/namespaceclsn_1_1ui.html#a0e9f3a505de867a9b7ae91789bf743f0">optional_reference&lt;window&gt;</a> pw)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a3a75143f32f350bea9663bffef35ca03">control::set_parent_window</a>(pw);</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            {</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                c.set_parent_window(pw);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            }</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="foldopen" id="foldopen00263" data-start="{" data-end="}">
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a23bc08051e33602154564aab102e3422">  263</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a23bc08051e33602154564aab102e3422">set_parent_window</a>(<a class="code hl_typedef" href="../../de/dd9/namespaceclsn_1_1ui.html#a0e9f3a505de867a9b7ae91789bf743f0">optional_reference&lt;window&gt;</a> pw)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a3a75143f32f350bea9663bffef35ca03">control::set_parent_window</a>(pw);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                c.set_parent_window(pw);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            }</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
 </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
-<div class="foldopen" id="foldopen00274" data-start="{" data-end="}">
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4e6263a12d26e4e30dd0523e1b0d20b7">  274</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4e6263a12d26e4e30dd0523e1b0d20b7">set_parent_control</a>(<a class="code hl_typedef" href="../../de/dd9/namespaceclsn_1_1ui.html#a0e9f3a505de867a9b7ae91789bf743f0">optional_reference&lt;control&gt;</a> parent_control)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#aed824d2075f5ebe50592477ab1571cc0">control::set_parent_control</a>(parent_control);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            {</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                c.set_parent_control(*<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="foldopen" id="foldopen00276" data-start="{" data-end="}">
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4e6263a12d26e4e30dd0523e1b0d20b7">  276</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4e6263a12d26e4e30dd0523e1b0d20b7">set_parent_control</a>(<a class="code hl_typedef" href="../../de/dd9/namespaceclsn_1_1ui.html#a0e9f3a505de867a9b7ae91789bf743f0">optional_reference&lt;control&gt;</a> parent_control)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#aed824d2075f5ebe50592477ab1571cc0">control::set_parent_control</a>(parent_control);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                c.set_parent_control(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        }</div>
 </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keyword">protected</span>:</div>
-<div class="foldopen" id="foldopen00285" data-start="{" data-end="}">
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e">  285</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e">init_new_control</a>(<a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>&amp; <a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>)</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        {</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>.<a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a3a75143f32f350bea9663bffef35ca03">set_parent_window</a>(<a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a48e5fb190fb5e5d1cfa8a7dd6f3a5640">get_parent_window</a>());</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>.<a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#aed824d2075f5ebe50592477ab1571cc0">set_parent_control</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>.add_visible_changed_listener(</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                [<span class="keyword">this</span>](<span class="keyword">auto</span>&amp;)</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                {</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                    <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#ac1bc4541058c1ab4eb13cb43eb8106a3">do_layout</a>();</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                    <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a15bdfea2f8d12c34b3a2e4fec71fa19f">invalidate</a>();</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                });</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keyword">protected</span>:</div>
+<div class="foldopen" id="foldopen00287" data-start="{" data-end="}">
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e">  287</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e">init_new_control</a>(<a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>&amp; <a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>)</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        {</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>.<a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a3a75143f32f350bea9663bffef35ca03">set_parent_window</a>(<a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a48e5fb190fb5e5d1cfa8a7dd6f3a5640">get_parent_window</a>());</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>.<a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#aed824d2075f5ebe50592477ab1571cc0">set_parent_control</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            <a class="code hl_class" href="../../d7/d66/classclsn_1_1ui_1_1control.html">control</a>.add_visible_changed_listener(</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                [<span class="keyword">this</span>](<span class="keyword">auto</span>&amp;)</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                    <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#ac1bc4541058c1ab4eb13cb43eb8106a3">do_layout</a>();</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                    <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a15bdfea2f8d12c34b3a2e4fec71fa19f">invalidate</a>();</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                });</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        }</div>
 </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="foldopen" id="foldopen00298" data-start="{" data-end="}">
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a18180121eef228e7c20e4e3fd5961d82">  298</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a18180121eef228e7c20e4e3fd5961d82">process_mouse_click_event</a>(<a class="code hl_class" href="../../d2/d7a/classclsn_1_1ui_1_1events_1_1mouse__click__event.html">events::mouse_click_event</a>&amp; e)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            {</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <span class="keywordflow">if</span> (!c.is_visible() || !c.is_enabled())</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                <span class="keywordflow">if</span> (c.contains_point(e.<a class="code hl_function" href="../../d2/d7a/classclsn_1_1ui_1_1events_1_1mouse__click__event.html#aeb53679200c61cc8bde2250ea4338f96">get_point</a>()))</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                {</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                    c.notify_mouse_click_event(e);</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                }</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            }</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a7293b12631defa7f56d2ed105d28bd3d">control::process_mouse_click_event</a>(e);</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="foldopen" id="foldopen00300" data-start="{" data-end="}">
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a18180121eef228e7c20e4e3fd5961d82">  300</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a18180121eef228e7c20e4e3fd5961d82">process_mouse_click_event</a>(<a class="code hl_class" href="../../d2/d7a/classclsn_1_1ui_1_1events_1_1mouse__click__event.html">events::mouse_click_event</a>&amp; e)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                <span class="keywordflow">if</span> (!c.is_visible() || !c.is_enabled())</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                <span class="keywordflow">if</span> (c.contains_point(e.<a class="code hl_function" href="../../d2/d7a/classclsn_1_1ui_1_1events_1_1mouse__click__event.html#aeb53679200c61cc8bde2250ea4338f96">get_point</a>()))</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                    c.notify_mouse_click_event(e);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            }</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a7293b12631defa7f56d2ed105d28bd3d">control::process_mouse_click_event</a>(e);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        }</div>
 </div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="foldopen" id="foldopen00315" data-start="{" data-end="}">
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#ac32f46732748f031494c2d76daaa1e02">  315</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#ac32f46732748f031494c2d76daaa1e02">process_mouse_moved_event</a>(<a class="code hl_class" href="../../d7/de7/classclsn_1_1ui_1_1events_1_1mouse__moved__event.html">events::mouse_moved_event</a>&amp; e)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a59b1f3fa2e7135a2294395cdd211e706">control::process_mouse_moved_event</a>(e);</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                <span class="keywordflow">if</span> (!c.is_visible() || !c.is_enabled())</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                <span class="keywordflow">if</span> (c.contains_point(e.<a class="code hl_function" href="../../d7/de7/classclsn_1_1ui_1_1events_1_1mouse__moved__event.html#af49f14672e887a3d249f41483df78bb2">get_position</a>()))</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                    c.notify_mouse_moved_event(e);</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            }</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        }</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="foldopen" id="foldopen00317" data-start="{" data-end="}">
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="../../d2/d50/classclsn_1_1ui_1_1container.html#ac32f46732748f031494c2d76daaa1e02">  317</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#ac32f46732748f031494c2d76daaa1e02">process_mouse_moved_event</a>(<a class="code hl_class" href="../../d7/de7/classclsn_1_1ui_1_1events_1_1mouse__moved__event.html">events::mouse_moved_event</a>&amp; e)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a59b1f3fa2e7135a2294395cdd211e706">control::process_mouse_moved_event</a>(e);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            {</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                <span class="keywordflow">if</span> (!c.is_visible() || !c.is_enabled())</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                <span class="keywordflow">if</span> (c.contains_point(e.<a class="code hl_function" href="../../d7/de7/classclsn_1_1ui_1_1events_1_1mouse__moved__event.html#af49f14672e887a3d249f41483df78bb2">get_position</a>()))</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                    c.notify_mouse_moved_event(e);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                }</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        }</div>
 </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <span class="keywordtype">void</span> init_container_events()</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        {</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            add_enabled_changed_listener([<span class="keyword">this</span>](<span class="keyword">auto</span>&amp; e)</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            {</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                {</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    c.set_enabled(e.get_new_value());</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                }</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            });</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            add_actual_size_changed_listener(</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                [<span class="keyword">this</span>](<span class="keyword">auto</span>&amp; )</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                {</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                    <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#ac1bc4541058c1ab4eb13cb43eb8106a3">do_layout</a>();</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                });</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        }</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordtype">void</span> load_container_defaults()</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        {</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            <span class="keyword">auto</span>&amp; uiManager = <a class="code hl_function" href="../../d3/dda/classclsn_1_1ui_1_1ui__manager.html#ad06c52766ee2c6e015915408fb934bab">clsn::ui::ui_manager::get_instance</a>();</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            <span class="keyword">auto</span> section_name = <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a5d3b5e1840cc3182374fb398aa8356b1">get_default_section_name</a>();</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            set_background_color(uiManager.get_color(</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                section_name, <span class="stringliteral">&quot;container_background_color&quot;</span>));</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            set_foreground_color(uiManager.get_color(</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                section_name, <span class="stringliteral">&quot;container_foreground_color&quot;</span>));</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        }</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    };</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <span class="keywordtype">void</span> init_container_events()</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            add_enabled_changed_listener([<span class="keyword">this</span>](<span class="keyword">auto</span>&amp; e)</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : <a class="code hl_function" href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">get_controls</a>())</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                {</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                    c.set_enabled(e.get_new_value());</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            });</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            add_actual_size_changed_listener(</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                [<span class="keyword">this</span>](<span class="keyword">auto</span>&amp; )</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                {</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                    <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#ac1bc4541058c1ab4eb13cb43eb8106a3">do_layout</a>();</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                });</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        }</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        <span class="keywordtype">void</span> load_container_defaults()</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keyword">auto</span>&amp; uiManager = <a class="code hl_function" href="../../d3/dda/classclsn_1_1ui_1_1ui__manager.html#ad06c52766ee2c6e015915408fb934bab">clsn::ui::ui_manager::get_instance</a>();</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            <span class="keyword">auto</span> section_name = <a class="code hl_function" href="../../d7/d66/classclsn_1_1ui_1_1control.html#a5d3b5e1840cc3182374fb398aa8356b1">get_default_section_name</a>();</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            set_background_color(uiManager.get_color(</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                section_name, <span class="stringliteral">&quot;container_background_color&quot;</span>));</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            set_foreground_color(uiManager.get_color(</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                section_name, <span class="stringliteral">&quot;container_foreground_color&quot;</span>));</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        }</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    };</div>
 </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>}</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>}</div>
 <div class="ttc" id="aclassclsn_1_1draw_1_1point_html"><div class="ttname"><a href="../../d8/d50/classclsn_1_1draw_1_1point.html">clsn::draw::point</a></div><div class="ttdef"><b>Definition</b> point.h:13</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html">clsn::ui::container</a></div><div class="ttdoc">Represents a generic container for UI elements.</div><div class="ttdef"><b>Definition</b> container.h:28</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a1448cea3cd3c2031db8f36ffef75ca42"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1448cea3cd3c2031db8f36ffef75ca42">clsn::ui::container::get_elements</a></div><div class="ttdeci">auto get_elements() -&gt; std::ranges::subrange&lt; typename element_vector_type::iterator &gt;</div><div class="ttdoc">Retrieves a subrange of the elements in the container.</div><div class="ttdef"><b>Definition</b> container.h:66</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a15bdfea2f8d12c34b3a2e4fec71fa19f"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a15bdfea2f8d12c34b3a2e4fec71fa19f">clsn::ui::container::invalidate</a></div><div class="ttdeci">void invalidate() const noexcept override</div><div class="ttdoc">Invalidates the container, requiring it to be repainted.</div><div class="ttdef"><b>Definition</b> container.h:171</div></div>
-<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a18180121eef228e7c20e4e3fd5961d82"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a18180121eef228e7c20e4e3fd5961d82">clsn::ui::container::process_mouse_click_event</a></div><div class="ttdeci">void process_mouse_click_event(events::mouse_click_event &amp;e) override</div><div class="ttdef"><b>Definition</b> container.h:298</div></div>
+<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a18180121eef228e7c20e4e3fd5961d82"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a18180121eef228e7c20e4e3fd5961d82">clsn::ui::container::process_mouse_click_event</a></div><div class="ttdeci">void process_mouse_click_event(events::mouse_click_event &amp;e) override</div><div class="ttdef"><b>Definition</b> container.h:300</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a1f6b5a45c8d72f379414467dbbe5e87e"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e">clsn::ui::container::get_controls</a></div><div class="ttdeci">auto get_controls()</div><div class="ttdoc">Retrieves a view of the controls in the container.</div><div class="ttdef"><b>Definition</b> container.h:76</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a228f8e4c96157b931345362420f310bd"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a228f8e4c96157b931345362420f310bd">clsn::ui::container::validate</a></div><div class="ttdeci">void validate() const noexcept override</div><div class="ttdoc">Validates the container, marking it as painted.</div><div class="ttdef"><b>Definition</b> container.h:182</div></div>
-<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a23bc08051e33602154564aab102e3422"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a23bc08051e33602154564aab102e3422">clsn::ui::container::set_parent_window</a></div><div class="ttdeci">void set_parent_window(optional_reference&lt; window &gt; pw) override</div><div class="ttdoc">Sets the parent window for the container and its controls.</div><div class="ttdef"><b>Definition</b> container.h:261</div></div>
+<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a23bc08051e33602154564aab102e3422"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a23bc08051e33602154564aab102e3422">clsn::ui::container::set_parent_window</a></div><div class="ttdeci">void set_parent_window(optional_reference&lt; window &gt; pw) override</div><div class="ttdoc">Sets the parent window for the container and its controls.</div><div class="ttdef"><b>Definition</b> container.h:263</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a2b406b5dcc877d47d790ce6316ae76c0"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a2b406b5dcc877d47d790ce6316ae76c0">clsn::ui::container::load_defaults</a></div><div class="ttdeci">void load_defaults() override</div><div class="ttdoc">Loads default settings for the container and its controls.</div><div class="ttdef"><b>Definition</b> container.h:228</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a308af6f9bb28d536f4429654cc66ba48"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a308af6f9bb28d536f4429654cc66ba48">clsn::ui::container::get_element_at</a></div><div class="ttdeci">auto get_element_at(int index) -&gt; ElementType &amp;</div><div class="ttdoc">Retrieves the element at the specified index.</div><div class="ttdef"><b>Definition</b> container.h:130</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a43096bb2b41081a95ab21c8bc9b7772f"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a43096bb2b41081a95ab21c8bc9b7772f">clsn::ui::container::needs_to_paint_the_container</a></div><div class="ttdeci">auto needs_to_paint_the_container() const noexcept -&gt; bool</div><div class="ttdoc">Checks if the container needs painting.</div><div class="ttdef"><b>Definition</b> container.h:195</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a4a5b26d636e3c64acf205757660af211"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4a5b26d636e3c64acf205757660af211">clsn::ui::container::to_control</a></div><div class="ttdeci">virtual auto to_control(ElementType &amp;e) -&gt; control &amp;=0</div><div class="ttdoc">Converts an ElementType to a control reference.</div></div>
-<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a4e6263a12d26e4e30dd0523e1b0d20b7"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4e6263a12d26e4e30dd0523e1b0d20b7">clsn::ui::container::set_parent_control</a></div><div class="ttdeci">void set_parent_control(optional_reference&lt; control &gt; parent_control) override</div><div class="ttdoc">Sets the parent control for the container and its controls.</div><div class="ttdef"><b>Definition</b> container.h:274</div></div>
+<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a4e6263a12d26e4e30dd0523e1b0d20b7"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a4e6263a12d26e4e30dd0523e1b0d20b7">clsn::ui::container::set_parent_control</a></div><div class="ttdeci">void set_parent_control(optional_reference&lt; control &gt; parent_control) override</div><div class="ttdoc">Sets the parent control for the container and its controls.</div><div class="ttdef"><b>Definition</b> container.h:276</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a51cbc359034e1574b962a1966bcb4e86"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a51cbc359034e1574b962a1966bcb4e86">clsn::ui::container::get_elements</a></div><div class="ttdeci">auto get_elements() const -&gt; std::ranges::subrange&lt; typename element_vector_type::const_iterator &gt;</div><div class="ttdoc">Retrieves a const subrange of the elements in the container.</div><div class="ttdef"><b>Definition</b> container.h:88</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a6a63c5f61c8a9039fa2236cd0e3777a1"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a6a63c5f61c8a9039fa2236cd0e3777a1">clsn::ui::container::container</a></div><div class="ttdeci">container(std::string_view section_name)</div><div class="ttdoc">Constructs a container with the specified section name.</div><div class="ttdef"><b>Definition</b> container.h:40</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_a6bf53e300c9f60a3b9f601c627766ba3"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#a6bf53e300c9f60a3b9f601c627766ba3">clsn::ui::container::is_invalidated</a></div><div class="ttdeci">auto is_invalidated() const noexcept -&gt; bool override</div><div class="ttdoc">Checks if the container or its controls are invalidated.</div><div class="ttdef"><b>Definition</b> container.h:203</div></div>
@@ -455,8 +457,8 @@ $(document).ready(function(){initNavTree('d4/ddd/container_8h_source.html','../.
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_aa4918f3e2df63a31fd869f4c41dfd74f"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#aa4918f3e2df63a31fd869f4c41dfd74f">clsn::ui::container::get_count</a></div><div class="ttdeci">auto get_count() const noexcept -&gt; int</div><div class="ttdoc">Gets the number of elements in the container.</div><div class="ttdef"><b>Definition</b> container.h:121</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_ab2f421492c50b3bd2587ceddbc7f4805"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#ab2f421492c50b3bd2587ceddbc7f4805">clsn::ui::container::operator[]</a></div><div class="ttdeci">auto operator[](int index) const noexcept -&gt; const control &amp;</div><div class="ttdoc">Overloads the subscript operator to access controls as const.</div><div class="ttdef"><b>Definition</b> container.h:157</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_ab355dbb922221ca7a55b583ebf7a59c8"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#ab355dbb922221ca7a55b583ebf7a59c8">clsn::ui::container::get_control_by_position</a></div><div class="ttdeci">auto get_control_by_position(const draw::point &amp;point) const -&gt; const_optional_reference&lt; control &gt; override</div><div class="ttdoc">Gets the control at the specified position.</div><div class="ttdef"><b>Definition</b> container.h:244</div></div>
-<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_abe36255c6d621f76556e88d7921e589e"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e">clsn::ui::container::init_new_control</a></div><div class="ttdeci">void init_new_control(control &amp;control)</div><div class="ttdef"><b>Definition</b> container.h:285</div></div>
-<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_ac32f46732748f031494c2d76daaa1e02"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#ac32f46732748f031494c2d76daaa1e02">clsn::ui::container::process_mouse_moved_event</a></div><div class="ttdeci">void process_mouse_moved_event(events::mouse_moved_event &amp;e) override</div><div class="ttdef"><b>Definition</b> container.h:315</div></div>
+<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_abe36255c6d621f76556e88d7921e589e"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e">clsn::ui::container::init_new_control</a></div><div class="ttdeci">void init_new_control(control &amp;control)</div><div class="ttdef"><b>Definition</b> container.h:287</div></div>
+<div class="ttc" id="aclassclsn_1_1ui_1_1container_html_ac32f46732748f031494c2d76daaa1e02"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#ac32f46732748f031494c2d76daaa1e02">clsn::ui::container::process_mouse_moved_event</a></div><div class="ttdeci">void process_mouse_moved_event(events::mouse_moved_event &amp;e) override</div><div class="ttdef"><b>Definition</b> container.h:317</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1container_html_af3939c26f810e5f82cd22ce5e7b55c96"><div class="ttname"><a href="../../d2/d50/classclsn_1_1ui_1_1container.html#af3939c26f810e5f82cd22ce5e7b55c96">clsn::ui::container::to_control</a></div><div class="ttdeci">virtual auto to_control(const ElementType &amp;e) const -&gt; const control &amp;=0</div><div class="ttdoc">Converts a const ElementType to a const control reference.</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1control_html"><div class="ttname"><a href="../../d7/d66/classclsn_1_1ui_1_1control.html">clsn::ui::control</a></div><div class="ttdef"><b>Definition</b> control.h:42</div></div>
 <div class="ttc" id="aclassclsn_1_1ui_1_1control_html_a132981465980452f5bc715b52874e126"><div class="ttname"><a href="../../d7/d66/classclsn_1_1ui_1_1control.html#a132981465980452f5bc715b52874e126">clsn::ui::control::load_defaults</a></div><div class="ttdeci">virtual void load_defaults()</div><div class="ttdef"><b>Definition</b> control.cpp:189</div></div>
@@ -487,7 +489,7 @@ $(document).ready(function(){initNavTree('d4/ddd/container_8h_source.html','../.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="../../dir_395636c3765b356249f082f1456b1313.html">classeine-lib</a></li><li class="navelem"><a class="el" href="../../dir_b3c449063711a5ed2927daee8dca92cd.html">clsn</a></li><li class="navelem"><a class="el" href="../../dir_f66264c372379b3371ed6e39f1162625.html">ui</a></li><li class="navelem"><a class="el" href="../../d4/ddd/container_8h.html">container.h</a></li>
-    <li class="footer">Generated on Thu Sep 26 2024 00:10:02 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Sep 26 2024 15:49:27 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
