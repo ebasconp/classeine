@@ -3,13 +3,13 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "flow_layout.h"
+#include <clsn/ui/layouts/flow_layout.h>
 
 namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void flow_layout::do_layout(const draw::region& rgn, std::vector<region_and_constraint>& elems) const
+    void flow_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
         if (count == 0)
@@ -23,17 +23,17 @@ namespace clsn::ui::layouts
         int currentx = position.get_x();
         int currenty = position.get_y();
 
-        int maxx = currentx + width;
+        const int maxx = currentx + width;
         int maxy = 0;
 
         for (auto& e : elems)
         {
-            if (!e.m_visible)
+            if (!e.is_visible())
                 continue;
 
-            auto& r = e.m_input_region;
+            auto& r = e.get_input_region();
 
-            auto control_width = r.get_size().get_width();
+            const auto control_width = r.get_size().get_width();
 
             if (currentx + control_width < maxx)
             {
@@ -41,7 +41,7 @@ namespace clsn::ui::layouts
                 if (maxy < preferred_size.get_height())
                     maxy = preferred_size.get_height();
 
-                e.m_output_region = { {currentx, currenty}, preferred_size };
+                e.set_output_region({ {currentx, currenty}, preferred_size });
             }
             else
             {
@@ -52,7 +52,7 @@ namespace clsn::ui::layouts
                 if (maxy < preferred_size.get_height())
                     maxy = preferred_size.get_height();
 
-                e.m_output_region = { {currentx, currenty}, preferred_size };
+                e.set_output_region({ {currentx, currenty}, preferred_size });
             }
 
             currentx += control_width;

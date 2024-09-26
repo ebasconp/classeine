@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "vbox_layout.h"
+#include <clsn/ui/layouts/vbox_layout.h>
 
 #include <algorithm>
 
@@ -11,13 +11,14 @@ namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void vbox_layout::do_layout(const draw::region& rgn, std::vector<region_and_constraint>& elems) const
+    void vbox_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
 
         const auto visible_count = static_cast<int>(
-            std::count_if(elems.begin(), elems.end(),
-                [](auto& e) { return e.m_visible; }));
+            std::ranges::count_if(
+                elems,
+                [](auto& e) { return e.is_visible(); }));
 
         if (visible_count == 0)
             return;
@@ -31,12 +32,12 @@ namespace clsn::ui::layouts
         int last_y = 0;
         for (int i = 0; i < count; i++)
         {
-            if (!elems[i].m_visible)
+            if (!elems[i].is_visible())
                 continue;
 
             const auto actual_height = i < count - 1 ? height : actual_size.get_height() - last_y;
 
-            elems[i].m_output_region = { {position.get_x(), last_y + position.get_y()}, {width, actual_height} };
+            elems[i].set_output_region({ {position.get_x(), last_y + position.get_y()}, {width, actual_height} });
 
             last_y += height;
         }

@@ -249,7 +249,9 @@ namespace clsn::ui
                 if (!c.is_visible() || !c.is_enabled())
                     continue;
 
-                return c.get_control_by_position(point);
+                auto result = c.get_control_by_position(point);
+                if (result.has_value())
+                    return result;
             }
 
             return std::nullopt;

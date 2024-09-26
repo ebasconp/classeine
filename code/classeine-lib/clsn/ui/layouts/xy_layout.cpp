@@ -9,7 +9,7 @@ namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void xy_layout::do_layout(const draw::region& rgn, std::vector<region_and_constraint>& elems) const
+    void xy_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
         if (count == 0)
@@ -20,11 +20,11 @@ namespace clsn::ui::layouts
         for (int i = 0; i < count; i++)
         {
             auto& elem = elems[i];
-            if (!elem.m_visible)
+            if (!elem.is_visible())
                 continue;
 
-            elem.m_output_region = { {position.get_x() + elem.m_constraint.get_position().get_x(), position.get_y() + elem.m_constraint.get_position().get_y()},
-                                elem.m_input_region.get_size() };
+            elem.set_output_region({ {position.get_x() + elem.get_constraint().get_position().get_x(), position.get_y() + elem.get_constraint().get_position().get_y()},
+                                elem.get_input_region().get_size() });
         }
     };
 }

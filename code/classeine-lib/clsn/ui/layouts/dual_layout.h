@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "layout_base.h"
+#include <clsn/ui/layouts/layout.h>
 
 #include <clsn/draw/forward.h>
 
@@ -23,7 +23,7 @@ namespace clsn::ui::layouts
         use_all_available_space
     };
 
-    class dual_layout final : public layout_base<dual_layout_constraint>
+    class dual_layout final : public layout<dual_layout_constraint>
     {
         dual_layout_orientation m_orientation;
 
@@ -32,9 +32,9 @@ namespace clsn::ui::layouts
 
         dual_layout();
 
-        auto get_orientation() const -> dual_layout_orientation;
+        [[nodiscard]] auto get_orientation() const -> dual_layout_orientation;
         void set_orientation(dual_layout_orientation orientation);
 
-        void do_layout(const draw::region& rgn, std::vector<region_and_constraint>&) const override;
+        void do_layout(const draw::region& rgn, layout_element_info_vector&) const override;
     };
 }

@@ -7,8 +7,6 @@
 
 #include <clsn/core/non_instantiable.h>
 
-#include <clsn/ui/layouts/layout_base.h>
-
 #include <algorithm>
 
 namespace clsn::ui
@@ -24,8 +22,9 @@ namespace clsn::ui::layouts
     public:
         template <typename LayoutType>
         static auto to_layout_info(layout_container<LayoutType>& container)
+                    -> typename LayoutType::layout_element_info_vector
         {
-            std::vector<typename LayoutType::region_and_constraint> infos;
+            typename LayoutType::layout_element_info_vector infos;
 
             auto elems = container.get_elements();
 
@@ -33,12 +32,12 @@ namespace clsn::ui::layouts
                     elems.begin(), elems.end(),
                     std::back_inserter(infos), [](auto& e)
                     {
-                        auto& c = *e.m_control;
+                        auto& c = *e.get_control_ptr();
 
-                        return typename LayoutType::region_and_constraint
+                        return typename LayoutType::layout_element_info
                         {
                             { c.get_actual_position(), c.get_actual_preferred_size() },
-                            e.m_constraint,
+                            e.get_constraint(),
                             c.is_visible()
                         };
                     });
