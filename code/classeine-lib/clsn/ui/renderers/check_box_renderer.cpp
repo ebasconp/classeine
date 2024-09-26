@@ -41,16 +41,19 @@ namespace clsn::ui::renderers
 
         using namespace clsn::ui::layouts;
         dual_layout layout;
-        layout.add({0, 0, size, size}, dual_layout_constraint::use_preferred_size);
-        layout.add({0, 0, 0, 0}, dual_layout_constraint::use_all_available_space);
 
-        layout.layout(rgn);
+        std::vector<dual_layout::region_and_constraint> infos;
 
-        check_box_painter::paint_check_box(gfx, layout.get_element_at(0).m_region, chk_box, size);
+        infos.emplace_back(draw::region{0, 0, size, size}, dual_layout_constraint::use_preferred_size, true);
+        infos.emplace_back(draw::region{0, 0, 0, 0}, dual_layout_constraint::use_all_available_space, true);
+
+        layout.do_layout(rgn, infos);
+
+        check_box_painter::paint_check_box(gfx, infos[0].m_output_region, chk_box, size);
 
         using namespace clsn::ui::painters;
         painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};
 
-        label_painter::paint_label(gfx, layout.get_element_at(1).m_region, chk_box, info);
+        label_painter::paint_label(gfx, infos[1].m_output_region, chk_box, info);
     }
 }

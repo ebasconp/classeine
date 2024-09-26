@@ -18,10 +18,6 @@ namespace clsn::ui::layouts
     public:
         using constraint_type = std::monostate;
 
-        void layout(const clsn::draw::region& rgn) override;
-
-    private:
-        void layout_vertical(const clsn::draw::point& position, const clsn::draw::dimension& size);
-        void layout_horizontal(const clsn::draw::point& position, const clsn::draw::dimension& size);
+        void do_layout(const draw::region& rgn, std::vector<region_and_constraint>&) const override;
     };
 }

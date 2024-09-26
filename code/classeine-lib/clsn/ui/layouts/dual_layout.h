@@ -35,10 +35,6 @@ namespace clsn::ui::layouts
         auto get_orientation() const -> dual_layout_orientation;
         void set_orientation(dual_layout_orientation orientation);
 
-        void layout(const clsn::draw::region& rgn) override;
-
-    private:
-        void layout_vertical(const clsn::draw::point& position, const clsn::draw::dimension& size);
-        void layout_horizontal(const clsn::draw::point& position, const clsn::draw::dimension& size);
+        void do_layout(const draw::region& rgn, std::vector<region_and_constraint>&) const override;
     };
 }

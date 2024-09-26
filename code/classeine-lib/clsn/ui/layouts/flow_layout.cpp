@@ -9,9 +9,9 @@ namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void flow_layout::layout(const region& rgn)
+    void flow_layout::do_layout(const draw::region& rgn, std::vector<region_and_constraint>& elems) const
     {
-        const auto count = get_count();
+        const auto count = static_cast<int>(elems.size());
         if (count == 0)
             return;
 
@@ -26,9 +26,12 @@ namespace clsn::ui::layouts
         int maxx = currentx + width;
         int maxy = 0;
 
-        for (int i = 0; i < count; i++)
+        for (auto& e : elems)
         {
-            auto& r = get_element_at(i).m_region;
+            if (!e.m_visible)
+                continue;
+
+            auto& r = e.m_input_region;
 
             auto control_width = r.get_size().get_width();
 
@@ -38,7 +41,7 @@ namespace clsn::ui::layouts
                 if (maxy < preferred_size.get_height())
                     maxy = preferred_size.get_height();
 
-                r = { {currentx, currenty}, preferred_size };
+                e.m_output_region = { {currentx, currenty}, preferred_size };
             }
             else
             {
@@ -49,7 +52,7 @@ namespace clsn::ui::layouts
                 if (maxy < preferred_size.get_height())
                     maxy = preferred_size.get_height();
 
-                r = { {currentx, currenty}, preferred_size };
+                e.m_output_region = { {currentx, currenty}, preferred_size };
             }
 
             currentx += control_width;

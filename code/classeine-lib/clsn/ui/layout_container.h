@@ -5,10 +5,11 @@
 
 #pragma once
 
-#include "container.h"
+#include <clsn/ui/container.h>
 
-#include "window.h"
+#include <clsn/ui/window.h>
 
+#include <clsn/ui/layouts/layout_utils.h>
 
 namespace clsn::ui
 {
@@ -70,19 +71,9 @@ namespace clsn::ui
             if (this->get_visible_count() == 0)
                 return;
 
-            m_layout.clear();
+            auto infos = layouts::layout_utils::to_layout_info(*this);
 
-            for (auto& e : this->get_elements())
-            {
-                if (!e.m_control->is_visible())
-                    continue;
-
-                m_layout.add(
-                    {e.m_control->get_actual_position(), e.m_control->get_actual_preferred_size()},
-                    e.m_constraint);
-            }
-
-            m_layout.layout(this->get_actual_bounds());
+            m_layout.do_layout(this->get_actual_bounds(), infos);
 
             int count = this->get_count();
             for (int i = 0, j = 0; i < count; i++)
@@ -91,7 +82,7 @@ namespace clsn::ui
                 if (!ctrl.is_visible())
                     continue;
 
-                auto& rgn = m_layout.get_element_at(j).m_region;
+                auto& rgn = infos[i].m_output_region;
 
                 ctrl.set_actual_position(rgn.get_position());
                 ctrl.set_actual_size(rgn.get_size());
