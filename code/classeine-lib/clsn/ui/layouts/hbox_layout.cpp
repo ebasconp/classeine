@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "hbox_layout.h"
+#include <clsn/ui/layouts/hbox_layout.h>
 
 #include <algorithm>
 
@@ -14,7 +14,9 @@ namespace clsn::ui::layouts
     void hbox_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
-        const auto visible_count = static_cast<int>(std::count_if(elems.begin(), elems.end(), [](auto& e) { return e.m_visible; }));
+        const auto visible_count = static_cast<int>(
+            std::ranges::count_if(elems, [](auto& e) { return e.m_visible; }));
+
         if (visible_count == 0)
             return;
 

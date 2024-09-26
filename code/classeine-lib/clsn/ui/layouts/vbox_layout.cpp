@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "vbox_layout.h"
+#include <clsn/ui/layouts/vbox_layout.h>
 
 #include <algorithm>
 
@@ -16,7 +16,8 @@ namespace clsn::ui::layouts
         const auto count = static_cast<int>(elems.size());
 
         const auto visible_count = static_cast<int>(
-            std::count_if(elems.begin(), elems.end(),
+            std::ranges::count_if(
+                elems,
                 [](auto& e) { return e.m_visible; }));
 
         if (visible_count == 0)

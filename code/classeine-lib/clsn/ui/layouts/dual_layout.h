@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "layout.h"
+#include <clsn/ui/layouts/layout.h>
 
 #include <clsn/draw/forward.h>
 
@@ -32,7 +32,7 @@ namespace clsn::ui::layouts
 
         dual_layout();
 
-        auto get_orientation() const -> dual_layout_orientation;
+        [[nodiscard]] auto get_orientation() const -> dual_layout_orientation;
         void set_orientation(dual_layout_orientation orientation);
 
         void do_layout(const draw::region& rgn, layout_element_info_vector&) const override;

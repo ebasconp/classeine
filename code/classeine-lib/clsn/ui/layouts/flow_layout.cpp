@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "flow_layout.h"
+#include <clsn/ui/layouts/flow_layout.h>
 
 namespace clsn::ui::layouts
 {
@@ -23,7 +23,7 @@ namespace clsn::ui::layouts
         int currentx = position.get_x();
         int currenty = position.get_y();
 
-        int maxx = currentx + width;
+        const int maxx = currentx + width;
         int maxy = 0;
 
         for (auto& e : elems)
@@ -33,7 +33,7 @@ namespace clsn::ui::layouts
 
             auto& r = e.m_input_region;
 
-            auto control_width = r.get_size().get_width();
+            const auto control_width = r.get_size().get_width();
 
             if (currentx + control_width < maxx)
             {
