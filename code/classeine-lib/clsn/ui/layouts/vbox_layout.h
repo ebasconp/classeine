@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "layout_base.h"
+#include "layout.h"
 
 #include <clsn/draw/forward.h>
 
@@ -13,11 +13,11 @@
 
 namespace clsn::ui::layouts
 {
-    class vbox_layout final : public layout_base<std::monostate>
+    class vbox_layout final : public layout<std::monostate>
     {
     public:
         using constraint_type = std::monostate;
 
-        void do_layout(const draw::region& rgn, std::vector<region_and_constraint>&) const override;
+        void do_layout(const draw::region& rgn, layout_element_info_vector&) const override;
     };
 }

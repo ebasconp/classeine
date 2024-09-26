@@ -5,17 +5,17 @@
 
 #pragma once
 
-#include <clsn/ui/layouts/layout_base.h>
+#include <clsn/ui/layouts/layout.h>
 
 #include <variant>
 
 namespace clsn::ui::layouts
 {
-    class hbox_layout final : public layout_base<std::monostate>
+    class hbox_layout final : public layout<std::monostate>
     {
     public:
         using constraint_type = std::monostate;
 
-        void do_layout(const draw::region& rgn, std::vector<region_and_constraint>&) const override;
+        void do_layout(const draw::region& rgn, layout_element_info_vector&) const override;
     };
 }

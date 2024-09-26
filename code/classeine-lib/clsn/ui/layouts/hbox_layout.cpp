@@ -11,7 +11,7 @@ namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void hbox_layout::do_layout(const draw::region& rgn, std::vector<region_and_constraint>& elems) const
+    void hbox_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
         const auto visible_count = static_cast<int>(std::count_if(elems.begin(), elems.end(), [](auto& e) { return e.m_visible; }));

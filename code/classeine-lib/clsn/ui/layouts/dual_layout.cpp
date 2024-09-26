@@ -11,7 +11,7 @@ namespace
     using namespace clsn::ui::layouts;
 
     void layout_vertical(const point& position,
-                                      const dimension& size, std::vector<dual_layout::region_and_constraint>& elems)
+                                      const dimension& size, dual_layout::layout_element_info_vector& elems)
     {
         const auto count = static_cast<int>(elems.size());
         if (count == 1)
@@ -46,7 +46,7 @@ namespace
 
     void layout_horizontal(const point& position,
                                         const dimension& size,
-                                        std::vector<dual_layout::region_and_constraint>& elems)
+                                        dual_layout::layout_element_info_vector& elems)
     {
         const auto count = static_cast<int>(elems.size());
         if (count == 1)
@@ -99,7 +99,7 @@ namespace clsn::ui::layouts
         m_orientation = orientation;
     }
 
-    void dual_layout::do_layout(const region& rgn, std::vector<region_and_constraint>& elems) const
+    void dual_layout::do_layout(const region& rgn, layout_element_info_vector& elems) const
     {
         if (elems.empty())
             return;

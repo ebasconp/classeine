@@ -9,7 +9,7 @@ namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void xy_layout::do_layout(const draw::region& rgn, std::vector<region_and_constraint>& elems) const
+    void xy_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
         if (count == 0)

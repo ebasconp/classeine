@@ -12,12 +12,12 @@
 namespace clsn::ui::layouts
 {
     template <typename Constraint>
-    class layout_base
+    class layout
     {
     public:
-        struct region_and_constraint
+        struct layout_element_info
         {
-            region_and_constraint(const draw::region& input_region, const Constraint& constraint, bool visible)
+            layout_element_info(const draw::region& input_region, const Constraint& constraint, bool visible)
             : m_input_region{input_region}
             , m_output_region{0, 0, 0, 0}
             , m_constraint{constraint}
@@ -31,8 +31,10 @@ namespace clsn::ui::layouts
             bool m_visible;
         };
 
-        virtual ~layout_base() = default;
+        using layout_element_info_vector = std::vector<layout_element_info>;
 
-        virtual void do_layout(const draw::region& rgn, std::vector<region_and_constraint>&) const = 0;
+        virtual ~layout() = default;
+
+        virtual void do_layout(const draw::region& rgn, layout_element_info_vector&) const = 0;
     };
 }

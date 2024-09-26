@@ -5,18 +5,18 @@
 
 #pragma once
 
-#include <clsn/ui/layouts/layout_base.h>
+#include <clsn/ui/layouts/layout.h>
 #include <clsn/ui/layouts/xy_layout_constraint.h>
 
 #include <clsn/draw/forward.h>
 
 namespace clsn::ui::layouts
 {
-    class xy_layout final : public layout_base<xy_layout_constraint>
+    class xy_layout final : public layout<xy_layout_constraint>
     {
     public:
         using constraint_type = xy_layout_constraint;
 
-        void do_layout(const draw::region& rgn, std::vector<region_and_constraint>&) const override;
+        void do_layout(const draw::region& rgn, layout_element_info_vector&) const override;
     };
 }

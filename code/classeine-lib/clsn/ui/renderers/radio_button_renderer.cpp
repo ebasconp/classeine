@@ -43,7 +43,7 @@ namespace clsn::ui::renderers
 
         dual_layout layout;
 
-        std::vector<dual_layout::region_and_constraint> infos;
+        dual_layout::layout_element_info_vector infos;
         infos.emplace_back(draw::region{0, 0, size, size}, dual_layout_constraint::use_preferred_size, true);
         infos.emplace_back(draw::region{0, 0, 0, 0}, dual_layout_constraint::use_all_available_space, true);
 
