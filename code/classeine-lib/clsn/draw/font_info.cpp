@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "font_info.h"
+#include <clsn/draw/font_info.h>
 
 namespace clsn::draw
 {

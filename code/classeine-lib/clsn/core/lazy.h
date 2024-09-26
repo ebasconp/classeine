@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <<clsn/core/entity.h>
+#include <clsn/core/entity.h>
 
 #include <functional>
 #include <optional>

@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "font_style.h"
+#include <clsn/draw/font_style.h>
 
 #include <string>
 #include <string_view>
@@ -22,8 +22,8 @@ namespace clsn::draw
 
         auto operator==(const font_info& oth) const -> bool;
 
-        auto get_style() const noexcept -> font_style;
-        auto get_name() const noexcept -> const std::string&;
+        [[nodiscard]] auto get_style() const noexcept -> font_style;
+        [[nodiscard]] auto get_name() const noexcept -> const std::string&;
     };
 }
 

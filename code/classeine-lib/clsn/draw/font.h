@@ -29,11 +29,11 @@ namespace clsn::draw
         {
         }
 
-        auto get_name() const noexcept -> const std::string&;
-        auto get_size() const noexcept -> int;
-        auto get_style() const noexcept -> font_style;
+        [[nodiscard]] auto get_name() const noexcept -> const std::string&;
+        [[nodiscard]] auto get_size() const noexcept -> int;
+        [[nodiscard]] auto get_style() const noexcept -> font_style;
 
-        auto add_size(int size) const noexcept -> font;
+        [[nodiscard]] auto add_size(int size) const noexcept -> font;
 
         bool operator==(const font& font) const noexcept;
     };

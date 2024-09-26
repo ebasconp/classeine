@@ -53,7 +53,7 @@ namespace clsn::draw
             && py > ty && py < (ty + height);
     }
 
-    auto region::to_string() noexcept -> std::string
+    auto region::to_string() const noexcept -> std::string
     {
         return clsn::core::strings::format("Region. Position: [{}], Size: [{}]",
                                m_position, m_size);

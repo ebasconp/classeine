@@ -25,6 +25,6 @@ namespace clsn::draw
 
         auto operator+(const point& other) const noexcept -> point;
 
-        auto to_string() const -> std::string;
+        [[nodiscard]] auto to_string() const -> std::string;
     };
 }

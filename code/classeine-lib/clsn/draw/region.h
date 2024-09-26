@@ -33,7 +33,7 @@ namespace clsn::draw
 
         [[nodiscard]] auto operator+(const region& r) const noexcept -> region;
 
-        auto to_string() noexcept -> std::string;
+        [[nodiscard]] auto to_string() const noexcept -> std::string;
 
     };
 }
