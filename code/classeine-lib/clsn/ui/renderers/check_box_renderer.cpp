@@ -49,11 +49,11 @@ namespace clsn::ui::renderers
 
         layout.do_layout(rgn, infos);
 
-        check_box_painter::paint_check_box(gfx, infos[0].m_output_region, chk_box, size);
+        check_box_painter::paint_check_box(gfx, infos[0].get_output_region(), chk_box, size);
 
         using namespace clsn::ui::painters;
         painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};
 
-        label_painter::paint_label(gfx, infos[1].m_output_region, chk_box, info);
+        label_painter::paint_label(gfx, infos[1].get_output_region(), chk_box, info);
     }
 }

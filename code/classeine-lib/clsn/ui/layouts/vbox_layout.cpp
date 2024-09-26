@@ -18,7 +18,7 @@ namespace clsn::ui::layouts
         const auto visible_count = static_cast<int>(
             std::ranges::count_if(
                 elems,
-                [](auto& e) { return e.m_visible; }));
+                [](auto& e) { return e.is_visible(); }));
 
         if (visible_count == 0)
             return;
@@ -32,12 +32,12 @@ namespace clsn::ui::layouts
         int last_y = 0;
         for (int i = 0; i < count; i++)
         {
-            if (!elems[i].m_visible)
+            if (!elems[i].is_visible())
                 continue;
 
             const auto actual_height = i < count - 1 ? height : actual_size.get_height() - last_y;
 
-            elems[i].m_output_region = { {position.get_x(), last_y + position.get_y()}, {width, actual_height} };
+            elems[i].set_output_region({ {position.get_x(), last_y + position.get_y()}, {width, actual_height} });
 
             last_y += height;
         }

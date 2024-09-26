@@ -28,10 +28,10 @@ namespace clsn::ui::layouts
 
         for (auto& e : elems)
         {
-            if (!e.m_visible)
+            if (!e.is_visible())
                 continue;
 
-            auto& r = e.m_input_region;
+            auto& r = e.get_input_region();
 
             const auto control_width = r.get_size().get_width();
 
@@ -41,7 +41,7 @@ namespace clsn::ui::layouts
                 if (maxy < preferred_size.get_height())
                     maxy = preferred_size.get_height();
 
-                e.m_output_region = { {currentx, currenty}, preferred_size };
+                e.set_output_region({ {currentx, currenty}, preferred_size });
             }
             else
             {
@@ -52,7 +52,7 @@ namespace clsn::ui::layouts
                 if (maxy < preferred_size.get_height())
                     maxy = preferred_size.get_height();
 
-                e.m_output_region = { {currentx, currenty}, preferred_size };
+                e.set_output_region({ {currentx, currenty}, preferred_size });
             }
 
             currentx += control_width;

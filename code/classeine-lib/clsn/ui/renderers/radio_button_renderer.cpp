@@ -49,11 +49,11 @@ namespace clsn::ui::renderers
 
         layout.do_layout(rgn, infos);
 
-        radio_button_painter::paint_radio_button(gfx, infos[0].m_output_region, rd_btn, size);
+        radio_button_painter::paint_radio_button(gfx, infos[0].get_output_region(), rd_btn, size);
 
         using namespace clsn::ui::painters;
         painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};
 
-        label_painter::paint_label(gfx, infos[1].m_output_region, rd_btn, info);
+        label_painter::paint_label(gfx, infos[1].get_output_region(), rd_btn, info);
     }
 }

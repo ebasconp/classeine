@@ -20,11 +20,11 @@ namespace clsn::ui::layouts
         for (int i = 0; i < count; i++)
         {
             auto& elem = elems[i];
-            if (!elem.m_visible)
+            if (!elem.is_visible())
                 continue;
 
-            elem.m_output_region = { {position.get_x() + elem.m_constraint.get_position().get_x(), position.get_y() + elem.m_constraint.get_position().get_y()},
-                                elem.m_input_region.get_size() };
+            elem.set_output_region({ {position.get_x() + elem.get_constraint().get_position().get_x(), position.get_y() + elem.get_constraint().get_position().get_y()},
+                                elem.get_input_region().get_size() });
         }
     };
 }

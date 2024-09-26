@@ -14,10 +14,23 @@
 namespace clsn::ui
 {
     template <typename Constraint>
-    struct layout_container_control_and_constraint
+    class layout_container_control_and_constraint final
     {
-        std::shared_ptr<control> m_control;
+        std::shared_ptr<control> m_control_ptr;
         Constraint m_constraint;
+
+    public:
+        layout_container_control_and_constraint(std::shared_ptr<control> ctrl, Constraint constraint)
+        : m_control_ptr{std::move(ctrl)}
+        , m_constraint{constraint}
+        {
+        }
+
+        [[nodiscard]] auto get_control_ptr() { return m_control_ptr; }
+        [[nodiscard]] auto get_control_ptr() const -> const std::shared_ptr<control>&  { return m_control_ptr; }
+
+        [[nodiscard]] auto get_constraint() const -> const Constraint& { return m_constraint; }
+        [[nodiscard]] auto get_constraint() -> Constraint& { return m_constraint; }
     };
 
     template <typename Layout>
@@ -82,7 +95,7 @@ namespace clsn::ui
                 if (!ctrl.is_visible())
                     continue;
 
-                auto& rgn = infos[i].m_output_region;
+                auto& rgn = infos[i].get_output_region();
 
                 ctrl.set_actual_position(rgn.get_position());
                 ctrl.set_actual_size(rgn.get_size());
@@ -93,12 +106,12 @@ namespace clsn::ui
 
         auto to_control(control_and_constraint& e) -> control& override
         {
-            return *e.m_control;
+            return *e.get_control_ptr();
         }
 
         auto to_control(const control_and_constraint& e) const -> const control& override
         {
-            return *e.m_control;
+            return *e.get_control_ptr();
         }
 
     protected:

@@ -18,12 +18,12 @@ namespace
         {
             auto& cc = elems[0];
 
-            auto ch = cc.m_constraint ==
+            auto ch = cc.get_constraint() ==
                               dual_layout_constraint::use_all_available_space
                           ? size.get_height()
-                          : cc.m_input_region.get_size().get_height();
+                          : cc.get_input_region().get_size().get_height();
 
-            cc.m_output_region = {position, {size.get_width(), ch}};
+            cc.set_output_region({position, {size.get_width(), ch}});
         }
 
         if (count == 2)
@@ -31,16 +31,16 @@ namespace
             auto& cc0 = elems[0];
             auto& cc1 = elems[1];
 
-            auto c0h = cc0.m_constraint ==
+            auto c0h = cc0.get_constraint() ==
                                dual_layout_constraint::use_all_available_space
-                           ? size.get_height() - cc1.m_input_region.get_height()
-                           : cc0.m_input_region.get_height();
+                           ? size.get_height() - cc1.get_input_region().get_height()
+                           : cc0.get_input_region().get_height();
 
             auto c1h = size.get_height() - c0h;
 
-            cc0.m_output_region = {position, {size.get_width(), c0h}};
-            cc1.m_output_region = {{position.get_x(), position.get_y() + c0h},
-                            {size.get_width(), c1h}};
+            cc0.set_output_region({position, {size.get_width(), c0h}});
+            cc1.set_output_region({{position.get_x(), position.get_y() + c0h},
+                            {size.get_width(), c1h}});
         }
     }
 
@@ -53,12 +53,12 @@ namespace
         {
             auto& cc = elems[0];
 
-            auto cw = cc.m_constraint ==
+            auto cw = cc.get_constraint() ==
                               dual_layout_constraint::use_all_available_space
                           ? size.get_width()
-                          : cc.m_input_region.get_width();
+                          : cc.get_input_region().get_width();
 
-            cc.m_output_region = {position, {cw, size.get_height()}};
+            cc.set_output_region({position, {cw, size.get_height()}});
         }
 
         if (count == 2)
@@ -66,16 +66,16 @@ namespace
             auto& cc0 = elems[0];
             auto& cc1 = elems[1];
 
-            auto c0w = cc0.m_constraint ==
+            auto c0w = cc0.get_constraint() ==
                                dual_layout_constraint::use_all_available_space
-                           ? size.get_width() - cc1.m_input_region.get_width()
-                           : cc0.m_input_region.get_width();
+                           ? size.get_width() - cc1.get_input_region().get_width()
+                           : cc0.get_input_region().get_width();
 
             auto c1w = size.get_width() - c0w;
 
-            cc0.m_output_region = {position, {c0w, size.get_height()}};
-            cc1.m_output_region = {{position.get_x() + c0w, position.get_y()},
-                            {c1w, size.get_height()}};
+            cc0.set_output_region({position, {c0w, size.get_height()}});
+            cc1.set_output_region({{position.get_x() + c0w, position.get_y()},
+                            {c1w, size.get_height()}});
         }
     }
 }
