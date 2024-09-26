@@ -14,44 +14,25 @@ namespace clsn::ui::layouts
     template <typename Constraint>
     class layout_base
     {
+    public:
         struct region_and_constraint
         {
-            draw::region m_region;
+            region_and_constraint(const draw::region& input_region, const Constraint& constraint, bool visible)
+            : m_input_region{input_region}
+            , m_output_region{0, 0, 0, 0}
+            , m_constraint{constraint}
+            , m_visible{visible}
+            {
+            }
+
+            const draw::region m_input_region;
+            draw::region m_output_region;
             Constraint m_constraint;
+            bool m_visible;
         };
 
-        std::vector<region_and_constraint> m_elements;
-
-    public:
         virtual ~layout_base() = default;
 
-        void add(const draw::region& rgn, const Constraint& constraint)
-        {
-            m_elements.push_back(region_and_constraint{rgn, constraint});
-        }
-
-        [[nodiscard]] auto is_empty() const noexcept -> bool { return m_elements.empty(); }
-
-        [[nodiscard]] auto get_count() const noexcept -> int
-        {
-            return static_cast<int>(m_elements.size());
-        }
-
-        void clear()
-        {
-            m_elements.clear();
-        }
-
-        auto get_element_at(int index) -> region_and_constraint&
-        {
-            return m_elements[index];
-        }
-
-        auto get_element_at(int index) const -> const region_and_constraint&
-        {
-            return m_elements[index];
-        }
-
-        virtual void layout(const draw::region& rgn) = 0;
+        virtual void do_layout(const draw::region& rgn, std::vector<region_and_constraint>&) const = 0;
     };
 }
