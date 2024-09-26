@@ -1,6 +1,6 @@
 <map id="code/classeine&#45;lib/clsn/ui/layouts/hbox_layout.h" name="code/classeine&#45;lib/clsn/ui/layouts/hbox_layout.h">
 <area shape="rect" id="Node000001" title=" " alt="" coords="168,5,324,60"/>
-<area shape="rect" id="Node000002" href="$db/d51/layout_8h.html" title=" " alt="" coords="87,108,261,133"/>
+<area shape="rect" id="Node000002" href="$db/d51/layout_8h.html" title="Base class for UI layouts in the Classeine project. This file belongs to the Classeine project." alt="" coords="87,108,261,133"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,62,195,99,191,96,222,58"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="285,108,353,133"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="270,58,302,96,298,99,266,62"/>

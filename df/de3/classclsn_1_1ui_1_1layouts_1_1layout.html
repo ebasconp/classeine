@@ -99,26 +99,42 @@ $(document).ready(function(){initNavTree('df/de3/classclsn_1_1ui_1_1layouts_1_1l
 </div><!--header-->
 <div class="contents">
 
+<p>Template base class for UI layouts.  
+ <a href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../db/d51/layout_8h_source.html">layout.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html">layout_element_info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information about a layout element.  <a href="../../da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:af0c0a5f0c88c5714884e1c4afda94431" id="r_af0c0a5f0c88c5714884e1c4afda94431"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#af0c0a5f0c88c5714884e1c4afda94431">layout_element_info_vector</a> = std::vector&lt; <a class="el" href="../../da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html">layout_element_info</a> &gt;</td></tr>
+<tr class="memdesc:af0c0a5f0c88c5714884e1c4afda94431"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of <a class="el" href="../../da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html" title="Information about a layout element.">layout_element_info</a> objects.  <br /></td></tr>
 <tr class="separator:af0c0a5f0c88c5714884e1c4afda94431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a90337b44dbec4b7a63f36639a9465336" id="r_a90337b44dbec4b7a63f36639a9465336"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#a90337b44dbec4b7a63f36639a9465336">~layout</a> ()=default</td></tr>
+<tr class="memdesc:a90337b44dbec4b7a63f36639a9465336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor.  <br /></td></tr>
 <tr class="separator:a90337b44dbec4b7a63f36639a9465336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89768052e730fac1a0227bf19966da79" id="r_a89768052e730fac1a0227bf19966da79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#a89768052e730fac1a0227bf19966da79">do_layout</a> (const <a class="el" href="../../de/d04/classclsn_1_1draw_1_1region.html">draw::region</a> &amp;rgn, <a class="el" href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#af0c0a5f0c88c5714884e1c4afda94431">layout_element_info_vector</a> &amp;) const =0</td></tr>
-<tr class="separator:a89768052e730fac1a0227bf19966da79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374fa33de0bd3a19534cc582a053e45c" id="r_a374fa33de0bd3a19534cc582a053e45c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#a374fa33de0bd3a19534cc582a053e45c">do_layout</a> (const <a class="el" href="../../de/d04/classclsn_1_1draw_1_1region.html">draw::region</a> &amp;rgn, <a class="el" href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#af0c0a5f0c88c5714884e1c4afda94431">layout_element_info_vector</a> &amp;layout_element_info_vec) const =0</td></tr>
+<tr class="memdesc:a374fa33de0bd3a19534cc582a053e45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs layout in the specified region using the provided element info vector.  <br /></td></tr>
+<tr class="separator:a374fa33de0bd3a19534cc582a053e45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Constraint&gt;<br />
+class clsn::ui::layouts::layout&lt; Constraint &gt;</div><p>Template base class for UI layouts. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Constraint</td><td>The type of constraint used in the layout. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="af0c0a5f0c88c5714884e1c4afda94431" name="af0c0a5f0c88c5714884e1c4afda94431"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0c0a5f0c88c5714884e1c4afda94431">&#9670;&#160;</a></span>layout_element_info_vector</h2>
 
@@ -132,6 +148,8 @@ template&lt;typename Constraint &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A vector of <a class="el" href="../../da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html" title="Information about a layout element.">layout_element_info</a> objects. </p>
 
 </div>
 </div>
@@ -161,11 +179,13 @@ template&lt;typename Constraint &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Virtual destructor. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a89768052e730fac1a0227bf19966da79" name="a89768052e730fac1a0227bf19966da79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89768052e730fac1a0227bf19966da79">&#9670;&#160;</a></span>do_layout()</h2>
+<a id="a374fa33de0bd3a19534cc582a053e45c" name="a374fa33de0bd3a19534cc582a053e45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374fa33de0bd3a19534cc582a053e45c">&#9670;&#160;</a></span>do_layout()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +205,7 @@ template&lt;typename Constraint &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#af0c0a5f0c88c5714884e1c4afda94431">layout_element_info_vector</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>layout_element_info_vec</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -200,6 +220,15 @@ template&lt;typename Constraint &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Performs layout in the specified region using the provided element info vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rgn</td><td>The region in which to perform the layout. </td></tr>
+    <tr><td class="paramname">layout_element_info_vec</td><td>The vector of layout element info. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="../../dc/da4/classclsn_1_1ui_1_1layouts_1_1dual__layout.html#a486821f8655ab9b22527d8a35fa3de34">clsn::ui::layouts::dual_layout</a>, <a class="el" href="../../d0/ddf/classclsn_1_1ui_1_1layouts_1_1flow__layout.html#ae09baf5bf9236b49443fcd91346aa766">clsn::ui::layouts::flow_layout</a>, and <a class="el" href="../../d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html#aca8b6721a3b9cfcd63a4747eab23c16e">clsn::ui::layouts::xy_layout</a>.</p>
 
 </div>
@@ -213,7 +242,7 @@ template&lt;typename Constraint &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d8/dba/namespaceclsn.html">clsn</a></li><li class="navelem"><a class="el" href="../../de/dd9/namespaceclsn_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="../../d0/d76/namespaceclsn_1_1ui_1_1layouts.html">layouts</a></li><li class="navelem"><a class="el" href="../../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html">layout</a></li>
-    <li class="footer">Generated on Thu Sep 26 2024 15:49:27 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Sep 26 2024 16:15:49 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

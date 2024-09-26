@@ -97,13 +97,16 @@ $(document).ready(function(){initNavTree('d6/d49/classclsn_1_1ui_1_1layouts_1_1l
 </div><!--header-->
 <div class="contents">
 
+<p>Utility class for managing UI layout information.  
+ <a href="../../d6/d49/classclsn_1_1ui_1_1layouts_1_1layout__utils.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d6/d8a/layout__utils_8h_source.html">layout_utils.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for clsn::ui::layouts::layout_utils:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/db4/classclsn_1_1ui_1_1layouts_1_1layout__utils__inherit__graph.png" border="0" usemap="#aclsn_1_1ui_1_1layouts_1_1layout__utils_inherit__map" alt="Inheritance graph"/></div>
 <map name="aclsn_1_1ui_1_1layouts_1_1layout__utils_inherit__map" id="aclsn_1_1ui_1_1layouts_1_1layout__utils_inherit__map">
-<area shape="rect" title=" " alt="" coords="39,79,171,119"/>
+<area shape="rect" title="Utility class for managing UI layout information." alt="" coords="39,79,171,119"/>
 <area shape="rect" href="../../dc/df1/classclsn_1_1core_1_1non__instantiable.html" title="Base class to prevent instantiation of derived classes." alt="" coords="5,5,205,31"/>
 <area shape="poly" title=" " alt="" coords="108,44,108,79,103,79,103,44"/>
 </map>
@@ -113,6 +116,7 @@ Inheritance diagram for clsn::ui::layouts::layout_utils:</div>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac027705d56fc2a496e624545bda546a4" id="r_ac027705d56fc2a496e624545bda546a4"><td class="memTemplParams" colspan="2">template&lt;typename LayoutType &gt; </td></tr>
 <tr class="memitem:ac027705d56fc2a496e624545bda546a4"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d49/classclsn_1_1ui_1_1layouts_1_1layout__utils.html#ac027705d56fc2a496e624545bda546a4">to_layout_info</a> (<a class="el" href="../../d1/d65/classclsn_1_1ui_1_1layout__container.html">layout_container</a>&lt; LayoutType &gt; &amp;<a class="el" href="../../d2/d50/classclsn_1_1ui_1_1container.html">container</a>) -&gt; typename LayoutType::layout_element_info_vector</td></tr>
+<tr class="memdesc:ac027705d56fc2a496e624545bda546a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the elements of a layout container to layout info. This function maps the elements of a layout container to elements that can be processed by a layout.  <br /></td></tr>
 <tr class="separator:ac027705d56fc2a496e624545bda546a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -129,7 +133,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a319cec76a54ccb49e69123b2f9a0146c inherit pub_methods_classclsn_1_1core_1_1non__instantiable" id="r_a319cec76a54ccb49e69123b2f9a0146c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df1/classclsn_1_1core_1_1non__instantiable.html#a319cec76a54ccb49e69123b2f9a0146c">operator=</a> (<a class="el" href="../../dc/df1/classclsn_1_1core_1_1non__instantiable.html">non_instantiable</a> &amp;&amp;) -&gt; <a class="el" href="../../dc/df1/classclsn_1_1core_1_1non__instantiable.html">non_instantiable</a> &amp;=delete</td></tr>
 <tr class="separator:a319cec76a54ccb49e69123b2f9a0146c inherit pub_methods_classclsn_1_1core_1_1non__instantiable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Utility class for managing UI layout information. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac027705d56fc2a496e624545bda546a4" name="ac027705d56fc2a496e624545bda546a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac027705d56fc2a496e624545bda546a4">&#9670;&#160;</a></span>to_layout_info()</h2>
 
@@ -157,6 +163,21 @@ template&lt;typename LayoutType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Converts the elements of a layout container to layout info. This function maps the elements of a layout container to elements that can be processed by a layout. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">LayoutType</td><td>The type of the layout. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container</td><td>The layout container whose elements need to be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of layout element info specific to the layout type. </dd></dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -168,7 +189,7 @@ template&lt;typename LayoutType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d8/dba/namespaceclsn.html">clsn</a></li><li class="navelem"><a class="el" href="../../de/dd9/namespaceclsn_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="../../d0/d76/namespaceclsn_1_1ui_1_1layouts.html">layouts</a></li><li class="navelem"><a class="el" href="../../d6/d49/classclsn_1_1ui_1_1layouts_1_1layout__utils.html">layout_utils</a></li>
-    <li class="footer">Generated on Thu Sep 26 2024 15:49:27 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Sep 26 2024 16:15:49 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -41,7 +41,7 @@
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="655,277,986,331,985,336,654,283"/>
 <area shape="rect" id="Node000056" href="$d3/df1/window_8h.html" title=" " alt="" coords="786,423,915,449"/>
 <area shape="poly" id="edge40_Node000007_Node000056" title=" " alt="" coords="604,278,822,414,819,418,601,282"/>
-<area shape="rect" id="Node000060" href="$d6/d8a/layout__utils_8h.html" title=" " alt="" coords="478,328,639,368"/>
+<area shape="rect" id="Node000060" href="$d6/d8a/layout__utils_8h.html" title="Utility functions related to UI layouts. This file belongs to the Classeine project." alt="" coords="478,328,639,368"/>
 <area shape="poly" id="edge41_Node000007_Node000060" title=" " alt="" coords="583,281,571,316,566,314,578,279"/>
 <area shape="rect" id="Node000009" href="$d1/dbc/paintable__control_8h.html" title=" " alt="" coords="973,599,1166,625"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1072,361,1072,586,1067,586,1067,361"/>
@@ -50,8 +50,8 @@
 <area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1104,622,1253,673,1251,678,1102,627"/>
 <area shape="poly" id="edge32_Node000010_Node000004" title=" " alt="" coords="1236,700,960,719,782,735,602,756,553,764,552,759,601,751,781,730,960,713,1236,695"/>
 <area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1362,694,1695,713,1916,730,2140,751,2190,757,2189,762,2140,756,1915,735,1694,719,1361,700"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="1917,1091,2014,1116"/>
-<area shape="poly" id="edge34_Node000010_Node000014" title=" " alt="" coords="1362,691,1456,693,1564,701,1616,709,1661,719,1698,733,1723,752,1740,779,1744,806,1739,832,1730,858,1720,885,1713,911,1714,939,1725,968,1741,991,1761,1011,1807,1044,1857,1068,1904,1085,1902,1090,1855,1073,1804,1048,1757,1015,1737,994,1720,971,1708,940,1708,911,1715,883,1725,857,1734,831,1739,806,1735,781,1719,755,1696,738,1660,724,1615,714,1564,706,1456,698,1362,696"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1917,1098,2014,1123"/>
+<area shape="poly" id="edge34_Node000010_Node000014" title=" " alt="" coords="1362,691,1456,693,1564,701,1616,709,1661,719,1698,733,1723,752,1740,779,1744,806,1739,832,1730,858,1720,884,1714,911,1714,939,1725,968,1742,992,1762,1013,1809,1048,1860,1074,1908,1091,1906,1096,1858,1079,1806,1052,1758,1017,1737,995,1720,971,1709,940,1708,910,1715,883,1725,856,1734,831,1739,806,1735,781,1719,755,1696,738,1660,724,1615,714,1564,706,1456,698,1362,696"/>
 <area shape="rect" id="Node000015" href="$d8/d83/entity_8h.html" title=" " alt="" coords="1899,1017,2031,1043"/>
 <area shape="poly" id="edge23_Node000010_Node000015" title=" " alt="" coords="1362,693,1469,698,1597,708,1716,725,1764,737,1800,751,1853,787,1888,824,1914,870,1942,928,1957,967,1965,1003,1959,1004,1952,968,1938,930,1909,872,1883,827,1850,791,1797,756,1763,742,1715,730,1596,713,1469,703,1362,698"/>
 <area shape="rect" id="Node000029" href="$d0/d6d/control__resized__event_8h.html" title=" " alt="" coords="1363,753,1525,793"/>
@@ -76,15 +76,15 @@
 <area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="2259,788,2198,841,2194,837,2256,784"/>
 <area shape="rect" id="Node000013" href="$d1/d19/graphics__sdl2__impl_8h.html" title=" " alt="" coords="2003,929,2146,969"/>
 <area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="2161,876,2108,922,2105,918,2157,872"/>
-<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="2074,970,2065,1006,2046,1044,2024,1067,2000,1086,1997,1081,2021,1064,2042,1041,2060,1004,2069,969"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="2074,970,2064,1006,2046,1044,2023,1071,1997,1092,1994,1088,2019,1067,2042,1041,2059,1004,2069,969"/>
 <area shape="poly" id="edge14_Node000013_Node000015" title=" " alt="" coords="2050,972,1994,1011,1991,1007,2047,967"/>
 <area shape="rect" id="Node000017" href="$d7/d82/draw_2forward_8h.html" title=" " alt="" coords="775,1017,926,1043"/>
 <area shape="poly" id="edge16_Node000013_Node000017" title=" " alt="" coords="2003,964,1940,972,1654,995,1371,1012,940,1029,939,1024,1370,1007,1653,990,1940,967,2003,959"/>
-<area shape="poly" id="edge15_Node000015_Node000014" title=" " alt="" coords="1968,1043,1968,1077,1963,1077,1963,1043"/>
-<area shape="rect" id="Node000018" href="$d0/d6a/text__horizontal__alignment_8h.html" title=" " alt="" coords="859,1091,1064,1116"/>
-<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="870,1040,933,1081,930,1085,867,1045"/>
-<area shape="rect" id="Node000019" href="$d6/dd3/text__vertical__alignment_8h.html" title=" " alt="" coords="645,1091,835,1116"/>
-<area shape="poly" id="edge18_Node000017_Node000019" title=" " alt="" coords="834,1045,771,1085,768,1081,831,1040"/>
+<area shape="poly" id="edge15_Node000015_Node000014" title=" " alt="" coords="1968,1043,1968,1084,1963,1084,1963,1043"/>
+<area shape="rect" id="Node000018" href="$d0/d6a/text__horizontal__alignment_8h.html" title=" " alt="" coords="859,1091,1045,1131"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="867,1041,918,1080,915,1084,864,1045"/>
+<area shape="rect" id="Node000019" href="$d6/dd3/text__vertical__alignment_8h.html" title=" " alt="" coords="664,1091,835,1131"/>
+<area shape="poly" id="edge18_Node000017_Node000019" title=" " alt="" coords="837,1045,786,1084,783,1080,834,1041"/>
 <area shape="poly" id="edge25_Node000036_Node000015" title=" " alt="" coords="1852,960,1935,1008,1932,1013,1849,964"/>
 <area shape="poly" id="edge27_Node000037_Node000005" title=" " alt="" coords="544,884,276,941,275,936,543,879"/>
 <area shape="poly" id="edge29_Node000040_Node000037" title=" " alt="" coords="683,788,654,831,650,828,678,785"/>
@@ -97,7 +97,7 @@
 <area shape="poly" id="edge37_Node000057_Node000009" title=" " alt="" coords="986,542,1045,588,1042,593,983,546"/>
 <area shape="poly" id="edge45_Node000062_Node000017" title=" " alt="" coords="158,795,145,817,135,842,129,882,136,915,156,942,188,967,219,977,273,987,429,1003,762,1022,762,1028,428,1008,272,992,217,982,185,972,152,946,131,917,124,882,129,841,140,814,153,792"/>
 <area shape="poly" id="edge46_Node000062_Node000046" title=" " alt="" coords="216,791,337,841,335,846,214,796"/>
-<area shape="rect" id="Node000063" href="$db/d51/layout_8h.html" title=" " alt="" coords="144,849,317,874"/>
+<area shape="rect" id="Node000063" href="$db/d51/layout_8h.html" title="Base class for UI layouts in the Classeine project. This file belongs to the Classeine project." alt="" coords="144,849,317,874"/>
 <area shape="poly" id="edge43_Node000062_Node000063" title=" " alt="" coords="185,792,217,836,212,839,181,795"/>
 <area shape="poly" id="edge44_Node000063_Node000005" title=" " alt="" coords="233,874,233,922,228,922,228,874"/>
 <area shape="rect" id="Node000066" href="$d1/d26/clickable__control_8h.html" title=" " alt="" coords="775,255,918,280"/>

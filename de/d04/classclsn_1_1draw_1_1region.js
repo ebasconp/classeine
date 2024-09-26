@@ -10,5 +10,5 @@ var classclsn_1_1draw_1_1region =
     [ "get_x", "de/d04/classclsn_1_1draw_1_1region.html#adc9393ffe793329d836b447d75d2b18c", null ],
     [ "get_y", "de/d04/classclsn_1_1draw_1_1region.html#abff9b11614e9e0c13d682694bfa8e90d", null ],
     [ "operator+", "de/d04/classclsn_1_1draw_1_1region.html#a41655fe7481136e50d2c4cb6f4fe4959", null ],
-    [ "to_string", "de/d04/classclsn_1_1draw_1_1region.html#a0029b599ac524f4399a2c01375c3a5f9", null ]
+    [ "to_string", "de/d04/classclsn_1_1draw_1_1region.html#a8b12c4111b752bd9213190c9cc317d25", null ]
 ];

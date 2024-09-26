@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="210,5,350,60"/>
 <area shape="rect" id="Node000002" href="$d5/d58/xy__layout_8h.html" title=" " alt="" coords="212,108,348,148"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,60,283,94,277,94,277,60"/>
-<area shape="rect" id="Node000003" href="$db/d51/layout_8h.html" title=" " alt="" coords="5,203,179,229"/>
+<area shape="rect" id="Node000003" href="$db/d51/layout_8h.html" title="Base class for UI layouts in the Classeine project. This file belongs to the Classeine project." alt="" coords="5,203,179,229"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,150,130,200,128,195,238,146"/>
 <area shape="rect" id="Node000009" href="$d6/d84/xy__layout__constraint_8h.html" title=" " alt="" coords="203,196,357,236"/>
 <area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="283,148,283,182,277,182,277,148"/>
@@ -12,17 +12,17 @@
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="93,229,89,270,84,270,88,229"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="179,284,242,309"/>
 <area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="111,227,183,274,180,278,108,231"/>
-<area shape="rect" id="Node000005" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="33,357,135,383"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,310,87,344,81,344,81,310"/>
-<area shape="rect" id="Node000007" href="$d2/d91/point_8h.html" title=" " alt="" coords="160,357,227,383"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="103,307,165,347,162,352,100,312"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="109,431,168,456"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="95,381,124,418,119,421,91,385"/>
-<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="186,385,158,421,154,418,182,381"/>
-<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="280,237,272,272,256,311,239,332,221,350,217,347,235,329,251,308,267,270,275,235"/>
+<area shape="rect" id="Node000005" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="33,365,135,390"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,310,87,351,81,351,81,310"/>
+<area shape="rect" id="Node000007" href="$d2/d91/point_8h.html" title=" " alt="" coords="160,365,227,390"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="102,307,167,354,164,359,99,312"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="109,445,168,471"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="94,389,125,433,121,436,90,392"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="187,392,157,436,152,433,183,389"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="280,237,271,272,256,311,238,336,218,357,215,354,234,333,251,308,266,270,274,236"/>
 <area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="309,234,368,274,365,278,306,238"/>
-<area shape="rect" id="Node000011" href="$d0/d6a/text__horizontal__alignment_8h.html" title=" " alt="" coords="271,357,476,383"/>
-<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="394,310,383,345,378,343,389,309"/>
-<area shape="rect" id="Node000012" href="$d6/dd3/text__vertical__alignment_8h.html" title=" " alt="" coords="500,357,689,383"/>
-<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="428,307,550,350,548,355,426,312"/>
+<area shape="rect" id="Node000011" href="$d0/d6a/text__horizontal__alignment_8h.html" title=" " alt="" coords="276,357,463,397"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="393,310,382,345,377,344,388,309"/>
+<area shape="rect" id="Node000012" href="$d6/dd3/text__vertical__alignment_8h.html" title=" " alt="" coords="487,357,657,397"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="422,307,518,349,516,354,419,312"/>
 </map>
