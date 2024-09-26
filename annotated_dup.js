@@ -62,6 +62,7 @@ var annotated_dup =
           [ "flow_layout", "d0/ddf/classclsn_1_1ui_1_1layouts_1_1flow__layout.html", "d0/ddf/classclsn_1_1ui_1_1layouts_1_1flow__layout" ],
           [ "hbox_layout", "d4/de0/classclsn_1_1ui_1_1layouts_1_1hbox__layout.html", "d4/de0/classclsn_1_1ui_1_1layouts_1_1hbox__layout" ],
           [ "layout_base", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base.html", "d9/d76/classclsn_1_1ui_1_1layouts_1_1layout__base" ],
+          [ "layout_utils", "d6/d49/classclsn_1_1ui_1_1layouts_1_1layout__utils.html", null ],
           [ "vbox_layout", "dc/ded/classclsn_1_1ui_1_1layouts_1_1vbox__layout.html", "dc/ded/classclsn_1_1ui_1_1layouts_1_1vbox__layout" ],
           [ "xy_layout", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html", "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout" ],
           [ "xy_layout_constraint", "d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html", "d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint" ]

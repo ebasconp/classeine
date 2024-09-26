@@ -1,7 +1,9 @@
 <map id="code/classeine&#45;lib/clsn/ui/layouts/hbox_layout.cpp" name="code/classeine&#45;lib/clsn/ui/layouts/hbox_layout.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="165,5,321,60"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="227,5,383,60"/>
 <area shape="rect" id="Node000002" href="$df/db8/hbox__layout_8h.html" title=" " alt="" coords="186,108,301,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,60,246,94,241,94,241,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="288,62,262,98,258,95,284,59"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="325,108,410,133"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="326,58,353,95,348,98,322,62"/>
 <area shape="rect" id="Node000003" href="$da/d55/layout__base_8h.html" title=" " alt="" coords="93,181,255,221"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,135,202,173,198,169,231,132"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="279,189,347,214"/>

@@ -134,6 +134,7 @@ var hierarchy =
       [ "clsn::core::strings", "da/dfe/classclsn_1_1core_1_1strings.html", null ],
       [ "clsn::core::system", "dc/d33/classclsn_1_1core_1_1system.html", null ],
       [ "clsn::draw::colors", "da/d1d/classclsn_1_1draw_1_1colors.html", null ],
+      [ "clsn::ui::layouts::layout_utils", "d6/d49/classclsn_1_1ui_1_1layouts_1_1layout__utils.html", null ],
       [ "clsn::ui::painters::background_painter", "d1/d4b/classclsn_1_1ui_1_1painters_1_1background__painter.html", null ],
       [ "clsn::ui::painters::border_painter", "db/d26/classclsn_1_1ui_1_1painters_1_1border__painter.html", null ],
       [ "clsn::ui::painters::check_box_painter", "df/d0e/classclsn_1_1ui_1_1painters_1_1check__box__painter.html", null ],
@@ -145,6 +146,7 @@ var hierarchy =
     [ "clsn::core::property< T, HasValueChangedEventListener >", "df/d29/classclsn_1_1core_1_1property.html", null ],
     [ "clsn::ui::radio_button_group", "da/da9/classclsn_1_1ui_1_1radio__button__group.html", null ],
     [ "clsn::draw::region", "de/d04/classclsn_1_1draw_1_1region.html", null ],
+    [ "clsn::ui::layouts::layout_base< Constraint >::region_and_constraint", "d1/d16/structclsn_1_1ui_1_1layouts_1_1layout__base_1_1region__and__constraint.html", null ],
     [ "clsn::ui::impl::sdl2::sdl2_font_cache", "dd/da0/classclsn_1_1ui_1_1impl_1_1sdl2_1_1sdl2__font__cache.html", null ],
     [ "clsn::ui::impl::sdl2::ttf_font_deleter", "dd/d3e/structclsn_1_1ui_1_1impl_1_1sdl2_1_1ttf__font__deleter.html", null ],
     [ "clsn::ui::layouts::xy_layout_constraint", "d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html", null ]
