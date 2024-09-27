@@ -5,47 +5,22 @@
 
 #pragma once
 
-#include <clsn/ui/container.h>
-
-#include <clsn/ui/window.h>
+#include <clsn/ui/constrained_container.h>
 
 #include <clsn/ui/layouts/layout_utils.h>
 
 namespace clsn::ui
 {
-    template <typename Constraint>
-    class layout_container_control_and_constraint final
-    {
-        std::shared_ptr<control> m_control_ptr;
-        Constraint m_constraint;
-
-    public:
-        layout_container_control_and_constraint(std::shared_ptr<control> ctrl, Constraint constraint)
-        : m_control_ptr{std::move(ctrl)}
-        , m_constraint{constraint}
-        {
-        }
-
-        [[nodiscard]] auto get_control_ptr() { return m_control_ptr; }
-        [[nodiscard]] auto get_control_ptr() const -> const std::shared_ptr<control>&  { return m_control_ptr; }
-
-        [[nodiscard]] auto get_constraint() const -> const Constraint& { return m_constraint; }
-        [[nodiscard]] auto get_constraint() -> Constraint& { return m_constraint; }
-    };
-
     template <typename Layout>
-    class layout_container : public container<layout_container_control_and_constraint<typename Layout::constraint_type>>
+    class layout_container : public constrained_container<typename Layout::constraint_type>
     {
-    public:
-        using constraint = typename Layout::constraint_type;
-        using control_and_constraint = layout_container_control_and_constraint<constraint>;
-
-    private:
         Layout m_layout;
 
     public:
+        using constraint_type = typename Layout::constraint_type;
+
         explicit layout_container(std::string_view section_name)
-        : container<control_and_constraint>{section_name}
+        : constrained_container<constraint_type>{section_name}
         {
         }
 
@@ -59,24 +34,6 @@ namespace clsn::ui
         auto get_layout() const -> const Layout&
         {
             return m_layout;
-        }
-
-        template <typename ControlType, typename... Args>
-        std::shared_ptr<ControlType> make_and_add(Args&&... args)
-        {
-            auto ptr = control::make<ControlType>();
-            add(ptr, std::forward<Args>(args)...);
-
-            return ptr;
-        }
-
-        template <typename... Args>
-        void add(std::shared_ptr<control> ctrl, Args&&... args)
-        {
-            constraint _constraint{std::forward<Args>(args)...};
-            check_if_valid_before_adding(_constraint);
-            this->add_element(ctrl, std::move(_constraint));
-            this->init_new_control(*ctrl);
         }
 
         void do_layout() override
@@ -102,22 +59,6 @@ namespace clsn::ui
 
                 j++;
             }
-        }
-
-        auto to_control(control_and_constraint& e) -> control& override
-        {
-            return *e.get_control_ptr();
-        }
-
-        auto to_control(const control_and_constraint& e) const -> const control& override
-        {
-            return *e.get_control_ptr();
-        }
-
-    protected:
-        virtual void check_if_valid_before_adding(const constraint&) const
-        {
-            // Do nothing here
         }
     };
 }
