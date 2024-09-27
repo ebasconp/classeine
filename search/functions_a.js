@@ -4,7 +4,7 @@ var searchData=
   ['main_5fwindow_1',['main_window',['../d8/d8f/classclsn_1_1ui_1_1main__window.html#a3641361dc7dc0ec2f17637ae6bac1522',1,'clsn::ui::main_window']]],
   ['main_5fwindow_5fsdl2_5fimpl_2',['main_window_sdl2_impl',['../db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html#a22cd2b8be637dac9cec7896b59d98bbf',1,'clsn::ui::impl::sdl2::main_window_sdl2_impl']]],
   ['make_3',['make',['../d7/d66/classclsn_1_1ui_1_1control.html#a3faa3b81565a6570348fd764ade4b59d',1,'clsn::ui::control']]],
-  ['make_5fand_5fadd_4',['make_and_add',['../d1/d65/classclsn_1_1ui_1_1layout__container.html#ae44d0c5a5d98e11bf737e9ec50059168',1,'clsn::ui::layout_container']]],
+  ['make_5fand_5fadd_4',['make_and_add',['../d4/d34/classclsn_1_1ui_1_1constrained__container.html#a627d6caa07d71b7602672fa51245be58',1,'clsn::ui::constrained_container']]],
   ['make_5fand_5fload_5fskin_5',['make_and_load_skin',['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a3de2b3e8202bab17c119f6009b8f3aab',1,'clsn::ui::ui_manager']]],
   ['make_5fblack_6',['make_black',['../da/d1d/classclsn_1_1draw_1_1colors.html#a91206a66d0536aefd99580692c4907fb',1,'clsn::draw::colors']]],
   ['make_5fblue_7',['make_blue',['../da/d1d/classclsn_1_1draw_1_1colors.html#a9cddaa89a5b436c5d4dc07761f1f68c5',1,'clsn::draw::colors']]],
