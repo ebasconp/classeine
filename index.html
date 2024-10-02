@@ -136,6 +136,9 @@ Libraries implemented</h1>
 </li>
 <li><b><a class="el" href="de/dd9/namespaceclsn_1_1ui.html">clsn::ui</a></b> - library providing componentable UI controls<ul>
 <li><code>control</code><ul>
+<li><code>empty_control</code> - Control that does nothing. Useful to have a custom renderer.</li>
+<li><code>paintable_control</code> - Control with background, foreground and font<ul>
+<li><code>captionable_control</code><ul>
 <li><code>clickable_control</code><ul>
 <li><code>button</code></li>
 <li><code>toggle_control</code><ul>
@@ -147,11 +150,14 @@ Libraries implemented</h1>
 </ul>
 </li>
 <li><code>label</code></li>
-<li><code>container</code><ul>
-<li><code>mono_container</code><ul>
-<li><code>padding_control</code></li>
+<li><code>window</code><ul>
+<li><code>main_window</code></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><code>container</code><ul>
+<li><code>constrained_container&lt;Constraint&gt;</code> - Container that stores controls with its constraints<ul>
 <li><code>layout_container&lt;Layout&gt;</code><ul>
 <li><code>dual_layout_container</code> - Container that stores only two elements, one occupying only its preferred size and the other one occupying the remaining space</li>
 <li><code>flow_layout_container</code> - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering</li>
@@ -162,9 +168,22 @@ Libraries implemented</h1>
 </li>
 </ul>
 </li>
-<li><code>dynamic_pane</code> - Pane able to load and unload dynamically any control</li>
-<li><code>empty_control</code> - Control that only paints its background. Useful to have a custom renderer.</li>
-<li><code>ui_manager</code><ul>
+</ul>
+</li>
+<li><code>content_pane</code> - Abstract class that handles layout and events for specific control containers<ul>
+<li><code>dynamic_content_pane</code> - Content pane able to load and unload dynamically any control</li>
+<li><code>static_content_pane</code> - Content pane with its child content already bound in compile time<ul>
+<li><code>padding_control</code> - Control with a border with variable size</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>graphics</code> - abstraction to rendering backend</li>
+<li><code>ui_manager</code></li>
 <li><code>ui_skin</code> - Loadable set of renderers, themes and defaults for the UI controls.</li>
 <li><code>ui_theme</code> - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.<ul>
 <li><code>amatista_ui_theme</code> - Set of specific set of colors<ul>
@@ -174,15 +193,6 @@ Libraries implemented</h1>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li><code>window</code><ul>
-<li><code>main_window</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>graphics</code> - abstraction to rendering backend</li>
 </ul>
 </li>
 </ul>
@@ -201,7 +211,7 @@ GitHub</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Sep 27 2024 16:30:54 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Oct 2 2024 16:33:09 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

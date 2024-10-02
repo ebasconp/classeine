@@ -6,10 +6,10 @@
 <area shape="poly" id="edge44_Node000001_Node000042" title=" " alt="" coords="1327,48,1199,96,908,224,696,324,694,320,905,219,1197,91,1325,43"/>
 <area shape="rect" id="Node000051" href="$d3/df1/window_8h.html" title=" " alt="" coords="1211,93,1340,119"/>
 <area shape="poly" id="edge84_Node000001_Node000051" title=" " alt="" coords="1357,48,1304,87,1301,83,1354,43"/>
-<area shape="rect" id="Node000053" title=" " alt="" coords="1418,93,1560,119"/>
-<area shape="poly" id="edge89_Node000001_Node000053" title=" " alt="" coords="1409,43,1463,83,1460,87,1406,48"/>
-<area shape="rect" id="Node000054" title=" " alt="" coords="1584,93,1650,119"/>
-<area shape="poly" id="edge90_Node000001_Node000054" title=" " alt="" coords="1438,43,1572,87,1570,92,1437,48"/>
+<area shape="rect" id="Node000053" title=" " alt="" coords="1418,93,1504,119"/>
+<area shape="poly" id="edge89_Node000001_Node000053" title=" " alt="" coords="1402,44,1441,82,1437,85,1399,47"/>
+<area shape="rect" id="Node000054" title=" " alt="" coords="1528,93,1594,119"/>
+<area shape="poly" id="edge90_Node000001_Node000054" title=" " alt="" coords="1425,43,1523,85,1521,90,1423,48"/>
 <area shape="rect" id="Node000003" href="$d9/d02/control_8h.html" title=" " alt="" coords="2169,328,2294,353"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1478,274,2155,330,2155,336,1478,279"/>
 <area shape="rect" id="Node000004" href="$d7/d04/graphics_8h.html" title=" " alt="" coords="2246,409,2380,434"/>
