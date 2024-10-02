@@ -10,34 +10,24 @@
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,183,184,183,184,188,150,188"/>
 <area shape="rect" id="Node000006" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="996,5,1181,45"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="872,147,927,100,993,55,1019,43,1021,48,996,60,930,104,876,151"/>
-<area shape="rect" id="Node000009" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="996,69,1181,109"/>
-<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="914,150,994,119,1027,107,1029,112,996,124,916,155"/>
-<area shape="rect" id="Node000012" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="995,133,1183,173"/>
-<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="960,167,994,163,995,168,961,172"/>
-<area shape="rect" id="Node000014" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="995,197,1183,237"/>
-<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="961,198,995,203,994,208,960,204"/>
-<area shape="rect" id="Node000018" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="996,261,1181,301"/>
-<area shape="poly" id="edge17_Node000005_Node000018" title=" " alt="" coords="916,215,996,247,1029,259,1027,264,994,252,914,220"/>
-<area shape="rect" id="Node000021" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="996,325,1181,365"/>
-<area shape="poly" id="edge20_Node000005_Node000021" title=" " alt="" coords="876,220,930,267,996,311,1021,323,1019,328,993,316,927,271,872,224"/>
+<area shape="rect" id="Node000008" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="996,69,1181,109"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="914,150,994,119,1027,107,1029,112,996,124,916,155"/>
+<area shape="rect" id="Node000010" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="995,133,1183,173"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="960,167,994,163,995,168,961,172"/>
+<area shape="rect" id="Node000012" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="995,197,1183,237"/>
+<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="961,198,995,203,994,208,960,204"/>
+<area shape="rect" id="Node000014" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="996,261,1181,301"/>
+<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="916,215,996,247,1029,259,1027,264,994,252,914,220"/>
+<area shape="rect" id="Node000016" href="$d1/d65/classclsn_1_1ui_1_1layout__container.html" title=" " alt="" coords="996,325,1181,365"/>
+<area shape="poly" id="edge15_Node000005_Node000016" title=" " alt="" coords="876,220,930,267,996,311,1021,323,1019,328,993,316,927,271,872,224"/>
 <area shape="rect" id="Node000007" href="$d2/d46/classclsn_1_1ui_1_1dual__layout__container.html" title=" " alt="" coords="1233,5,1385,45"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1195,23,1232,23,1232,28,1195,28"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="1443,5,1617,45"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1399,23,1443,23,1443,28,1399,28"/>
-<area shape="rect" id="Node000010" href="$d8/d3d/classclsn_1_1ui_1_1flow__layout__container.html" title=" " alt="" coords="1233,69,1384,109"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1195,87,1233,87,1233,92,1195,92"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="1444,69,1616,109"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1398,87,1444,87,1444,92,1398,92"/>
-<area shape="rect" id="Node000013" href="$d4/def/classclsn_1_1ui_1_1hbox__layout__container.html" title=" " alt="" coords="1231,133,1387,173"/>
-<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="1196,151,1231,151,1231,156,1196,156"/>
-<area shape="rect" id="Node000015" href="$dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html" title=" " alt="" coords="1231,197,1387,237"/>
-<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="1196,215,1231,215,1231,220,1196,220"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="1435,133,1625,173"/>
-<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="1391,191,1460,171,1461,176,1392,196"/>
-<area shape="rect" id="Node000017" title=" " alt="" coords="1437,197,1623,237"/>
-<area shape="poly" id="edge16_Node000015_Node000017" title=" " alt="" coords="1401,215,1437,215,1437,220,1401,220"/>
-<area shape="rect" id="Node000019" href="$df/dcf/classclsn_1_1ui_1_1xy__layout__container.html" title=" " alt="" coords="1239,261,1379,301"/>
-<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="1195,279,1238,279,1238,284,1195,284"/>
-<area shape="rect" id="Node000020" title=" " alt="" coords="1449,261,1611,301"/>
-<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="1393,279,1449,279,1449,284,1393,284"/>
+<area shape="rect" id="Node000009" href="$d8/d3d/classclsn_1_1ui_1_1flow__layout__container.html" title=" " alt="" coords="1233,69,1384,109"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1195,87,1233,87,1233,92,1195,92"/>
+<area shape="rect" id="Node000011" href="$d4/def/classclsn_1_1ui_1_1hbox__layout__container.html" title=" " alt="" coords="1231,133,1387,173"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1196,151,1231,151,1231,156,1196,156"/>
+<area shape="rect" id="Node000013" href="$dc/d34/classclsn_1_1ui_1_1vbox__layout__container.html" title=" " alt="" coords="1231,197,1387,237"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="1196,215,1231,215,1231,220,1196,220"/>
+<area shape="rect" id="Node000015" href="$df/dcf/classclsn_1_1ui_1_1xy__layout__container.html" title=" " alt="" coords="1239,261,1379,301"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="1195,279,1238,279,1238,284,1195,284"/>
 </map>

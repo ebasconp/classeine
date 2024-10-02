@@ -1,31 +1,27 @@
 <map id="clsn::ui::captionable_control" name="clsn::ui::captionable_control">
-<area shape="rect" id="Node000001" title="This class exposes the text property." alt="" coords="539,103,691,143"/>
-<area shape="rect" id="Node000005" href="$d9/df3/classclsn_1_1ui_1_1clickable__control.html" title=" " alt="" coords="739,46,872,86"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="694,97,738,83,739,88,696,102"/>
-<area shape="rect" id="Node000011" href="$dc/de8/classclsn_1_1ui_1_1label.html" title=" " alt="" coords="751,111,859,136"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="705,121,751,121,751,126,705,126"/>
-<area shape="rect" id="Node000012" href="$d0/dfd/classclsn_1_1ui_1_1window.html" title=" " alt="" coords="742,160,869,185"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="705,144,756,157,755,162,704,149"/>
-<area shape="rect" id="Node000002" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="353,103,491,143"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="504,121,538,121,538,126,504,126"/>
-<area shape="rect" id="Node000003" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="184,111,305,136"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="319,121,353,121,353,126,319,126"/>
-<area shape="rect" id="Node000004" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="5,111,136,136"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,121,184,121,184,126,150,126"/>
-<area shape="rect" id="Node000006" href="$d7/d35/classclsn_1_1ui_1_1button.html" title=" " alt="" coords="959,5,1077,31"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="885,45,960,28,962,33,886,51"/>
-<area shape="rect" id="Node000007" href="$d6/d77/classclsn_1_1ui_1_1toggle__control.html" title=" " alt="" coords="933,55,1103,80"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="886,64,933,64,933,69,886,69"/>
-<area shape="rect" id="Node000008" href="$d6/d05/classclsn_1_1ui_1_1check__box.html" title=" " alt="" coords="1189,5,1334,31"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1094,49,1197,28,1198,33,1095,55"/>
-<area shape="rect" id="Node000009" href="$d5/df8/classclsn_1_1ui_1_1radio__button.html" title=" " alt="" coords="1182,55,1341,80"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="1116,65,1182,65,1182,70,1116,70"/>
-<area shape="rect" id="Node000010" href="$de/d99/classclsn_1_1ui_1_1toggle__button.html" title=" " alt="" coords="1178,104,1345,129"/>
-<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="1095,80,1198,101,1197,107,1094,85"/>
-<area shape="rect" id="Node000013" href="$d8/d8f/classclsn_1_1ui_1_1main__window.html" title=" " alt="" coords="920,150,1116,190"/>
-<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="882,169,920,169,920,174,883,174"/>
-<area shape="rect" id="Node000015" href="$d8/d8f/classclsn_1_1ui_1_1main__window.html" title=" " alt="" coords="935,214,1101,254"/>
-<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="864,187,949,211,947,217,863,192"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="1164,157,1359,183"/>
-<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="1130,167,1164,167,1164,173,1130,173"/>
+<area shape="rect" id="Node000001" title="This class exposes the text property." alt="" coords="275,240,427,280"/>
+<area shape="rect" id="Node000005" href="$d9/df3/classclsn_1_1ui_1_1clickable__control.html" title=" " alt="" coords="139,328,273,368"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="309,289,239,330,236,326,306,285"/>
+<area shape="rect" id="Node000011" href="$dc/de8/classclsn_1_1ui_1_1label.html" title=" " alt="" coords="297,335,405,361"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="354,294,354,335,349,335,349,294"/>
+<area shape="rect" id="Node000012" href="$d0/dfd/classclsn_1_1ui_1_1window.html" title=" " alt="" coords="429,335,556,361"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="395,285,475,333,472,338,393,289"/>
+<area shape="rect" id="Node000002" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="283,152,420,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,206,354,240,349,240,349,206"/>
+<area shape="rect" id="Node000003" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="291,79,412,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,118,354,152,349,152,349,118"/>
+<area shape="rect" id="Node000004" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="286,5,417,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="354,44,354,79,349,79,349,44"/>
+<area shape="rect" id="Node000006" href="$d7/d35/classclsn_1_1ui_1_1button.html" title=" " alt="" coords="27,423,145,449"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="170,378,104,425,101,421,167,374"/>
+<area shape="rect" id="Node000007" href="$d6/d77/classclsn_1_1ui_1_1toggle__control.html" title=" " alt="" coords="169,423,339,449"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="226,379,250,422,245,424,221,381"/>
+<area shape="rect" id="Node000008" href="$d6/d05/classclsn_1_1ui_1_1check__box.html" title=" " alt="" coords="5,504,151,529"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="217,457,105,506,103,502,215,452"/>
+<area shape="rect" id="Node000009" href="$d5/df8/classclsn_1_1ui_1_1radio__button.html" title=" " alt="" coords="175,504,333,529"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="257,462,257,504,251,504,251,462"/>
+<area shape="rect" id="Node000010" href="$de/d99/classclsn_1_1ui_1_1toggle__button.html" title=" " alt="" coords="357,504,524,529"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="295,451,415,502,412,506,293,456"/>
+<area shape="rect" id="Node000013" href="$d8/d8f/classclsn_1_1ui_1_1main__window.html" title=" " alt="" coords="409,416,576,456"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="495,374,495,416,490,416,490,374"/>
 </map>

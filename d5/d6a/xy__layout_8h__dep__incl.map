@@ -1,15 +1,9 @@
 <map id="code/classeine&#45;lib/clsn/ui/layouts/xy_layout.h" name="code/classeine&#45;lib/clsn/ui/layouts/xy_layout.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="179,5,319,60"/>
-<area shape="rect" id="Node000002" href="$d1/da2/xy__layout_8cpp.html" title=" " alt="" coords="79,108,219,163"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,72,177,110,174,106,211,68"/>
-<area shape="rect" id="Node000003" href="$d6/d81/xy__layout__container_8h.html" title=" " alt="" coords="243,115,458,155"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="288,68,333,113,329,117,284,72"/>
-<area shape="rect" id="Node000004" href="$da/d75/demo__xy__layout__container_8h.html" title=" " alt="" coords="121,211,335,251"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,166,254,213,251,208,313,162"/>
-<area shape="rect" id="Node000007" href="$df/d52/xy__layout__container_8cpp.html" title=" " alt="" coords="359,211,590,251"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="388,161,451,208,448,213,385,166"/>
-<area shape="rect" id="Node000005" href="$d5/dc7/demo__option__container_8cpp.html" title=" " alt="" coords="5,299,211,339"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="192,261,136,301,133,296,188,257"/>
-<area shape="rect" id="Node000006" href="$d5/db2/demo__xy__layout__container_8cpp.html" title=" " alt="" coords="235,299,463,339"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="267,256,324,296,321,301,264,261"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="105,5,245,60"/>
+<area shape="rect" id="Node000002" href="$d1/da2/xy__layout_8cpp.html" title=" " alt="" coords="5,108,145,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,72,103,110,100,106,137,68"/>
+<area shape="rect" id="Node000003" href="$d6/d81/xy__layout__container_8h.html" title=" " alt="" coords="169,115,384,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,68,259,113,255,117,210,72"/>
+<area shape="rect" id="Node000004" href="$df/d52/xy__layout__container_8cpp.html" title=" " alt="" coords="161,211,392,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="279,169,279,211,274,211,274,169"/>
 </map>

@@ -1,7 +1,4 @@
 <map id="code" name="code">
-<area shape="rect" id="node2" href="dir_1a157e5f05dbf63c58c82f8222b8670c.html" title="classeine&#45;demo" alt="" coords="27,27,152,52"/>
-<area shape="rect" id="node3" href="dir_395636c3765b356249f082f1456b1313.html" title="classeine&#45;lib" alt="" coords="37,100,141,125"/>
-<area shape="poly" id="edge1" href="dir_000001_000002.html" alt="" coords="92,52,92,86,87,86,87,52"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000001_000002.html" title="45" alt="" coords="89,74,106,89"/>
-<area shape="rect" id="clust1" href="dir_050edd66366d13764f98250ef6db77f6.html" alt="" coords="16,16,240,136"/>
+<area shape="rect" id="node2" href="dir_395636c3765b356249f082f1456b1313.html" title="classeine&#45;lib" alt="" coords="27,27,131,52"/>
+<area shape="rect" id="clust1" href="dir_050edd66366d13764f98250ef6db77f6.html" alt="" coords="16,16,219,63"/>
 </map>

@@ -1,10 +1,10 @@
 <map id="code/classeine&#45;lib/clsn/ui/layouts" name="code/classeine&#45;lib/clsn/ui/layouts">
 <area shape="rect" id="node1" href="dir_5371e4c3571ed73fc4ee677f2e04dc38.html" title="layouts" alt="" coords="34,52,105,77"/>
 <area shape="rect" id="node2" href="dir_600407ede49e9ce41cdcd29c2ea2a1d0.html" title="core" alt="" coords="5,125,56,151"/>
-<area shape="poly" id="edge1" href="dir_000009_000005.html" alt="" coords="65,79,46,115,41,112,61,76"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000009_000005.html" title="1" alt="" coords="48,106,58,121"/>
+<area shape="poly" id="edge1" href="dir_000008_000004.html" alt="" coords="65,79,46,115,41,112,61,76"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000008_000004.html" title="1" alt="" coords="48,106,58,121"/>
 <area shape="rect" id="node3" href="dir_cd7027cb88abb99c65bc8c785ac38b77.html" title="draw" alt="" coords="81,125,135,151"/>
-<area shape="poly" id="edge2" href="dir_000009_000006.html" alt="" coords="78,76,98,112,93,115,73,79"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000009_000006.html" title="7" alt="" coords="96,98,105,113"/>
+<area shape="poly" id="edge2" href="dir_000008_000005.html" alt="" coords="78,76,98,112,93,115,73,79"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000008_000005.html" title="7" alt="" coords="96,98,105,113"/>
 <area shape="rect" id="clust1" href="dir_f66264c372379b3371ed6e39f1162625.html" title="ui" alt="" coords="23,16,116,88"/>
 </map>

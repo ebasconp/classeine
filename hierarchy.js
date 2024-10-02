@@ -36,7 +36,6 @@ var hierarchy =
             ] ],
             [ "clsn::ui::label", "dc/de8/classclsn_1_1ui_1_1label.html", null ],
             [ "clsn::ui::window", "d0/dfd/classclsn_1_1ui_1_1window.html", [
-              [ "clsn::ui::main_window< dual_layout_container >", "d8/d8f/classclsn_1_1ui_1_1main__window.html", null ],
               [ "clsn::ui::main_window< ControlType >", "d8/d8f/classclsn_1_1ui_1_1main__window.html", null ]
             ] ]
           ] ],
@@ -121,7 +120,6 @@ var hierarchy =
     [ "clsn::ui::layouts::layout< Constraint >::layout_element_info", "da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html", null ],
     [ "clsn::ui::impl::sdl2::main_window_sdl2_impl< WindowType >", "db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html", null ],
     [ "clsn::ui::impl::sdl2::main_window_sdl2_impl< clsn::ui::main_window< ControlType > >", "db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html", null ],
-    [ "clsn::ui::impl::sdl2::main_window_sdl2_impl< clsn::ui::main_window< dual_layout_container > >", "db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html", null ],
     [ "clsn::core::non_instantiable", "dc/df1/classclsn_1_1core_1_1non__instantiable.html", [
       [ "clsn::core::console", "d9/dd8/classclsn_1_1core_1_1console.html", null ],
       [ "clsn::core::strings", "da/dfe/classclsn_1_1core_1_1strings.html", null ],
