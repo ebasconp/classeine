@@ -21,14 +21,14 @@ namespace clsn::demo
   {
     std::shared_ptr<demo_option_container> m_option_container;
     std::shared_ptr<label> m_label;
-    std::shared_ptr<dynamic_pane> m_content_pane;
+    std::shared_ptr<dynamic_content_pane> m_content_pane;
 
   public:
     demo_window();
 
     void set_title(const std::string& title);
 
-    auto get_content_pane() -> dynamic_pane&;
+    auto get_content_pane() -> dynamic_content_pane&;
 
   private:
     void init_container();

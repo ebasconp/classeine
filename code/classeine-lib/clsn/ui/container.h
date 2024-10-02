@@ -242,7 +242,7 @@ namespace clsn::ui
         /// @param point The position to check.
         /// @return An optional reference to the control at the position.
         auto get_control_by_position(const draw::point &point) const
-                -> const_optional_reference<control> override
+                -> core::const_optional_reference<control> override
         {
             for (auto& c : get_controls())
             {
@@ -254,13 +254,13 @@ namespace clsn::ui
                     return result;
             }
 
-            return std::nullopt;
+            return {};
         }
 
         /// @brief Sets the parent window for the container and its controls.
         ///
         /// @param pw The optional reference to the parent window.
-        void set_parent_window(optional_reference<window> pw) override
+        void set_parent_window(core::optional_reference<window> pw) override
         {
             control::set_parent_window(pw);
 
@@ -273,7 +273,7 @@ namespace clsn::ui
         /// @brief Sets the parent control for the container and its controls.
         ///
         /// @param parent_control The optional reference to the parent control.
-        void set_parent_control(optional_reference<control> parent_control) override
+        void set_parent_control(core::optional_reference<control> parent_control) override
         {
             control::set_parent_control(parent_control);
 

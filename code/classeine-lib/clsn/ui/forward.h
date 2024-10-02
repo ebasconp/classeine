@@ -13,7 +13,7 @@ namespace clsn::ui
   class clickable_control;
   class control;
   class dual_layout_container;
-  class dynamic_pane;
+  class dynamic_content_pane;
   class empty_control;
   class flow_layout_container;
   class hbox_layout_container;

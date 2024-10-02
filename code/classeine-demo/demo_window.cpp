@@ -9,7 +9,7 @@
 #include "clsn/draw/dimension.h"
 
 #include "clsn/ui/dual_layout_container.h"
-#include "clsn/ui/dynamic_pane.h"
+#include "clsn/ui/dynamic_content_pane.h"
 #include "clsn/ui/label.h"
 
 #include "demo_option_container.h"
@@ -28,7 +28,7 @@ namespace clsn::demo
         init_container();
     }
 
-    auto demo_window::get_content_pane() -> dynamic_pane&
+    auto demo_window::get_content_pane() -> dynamic_content_pane&
     {
         return *m_content_pane;
     }
@@ -49,7 +49,7 @@ namespace clsn::demo
         m_label->set_horizontal_alignment(text_horizontal_alignment::center);
         set_title("Classeine Demo");
 
-        m_content_pane = right_container->make_and_add<dynamic_pane>(dual_layout_constraint::use_all_available_space);
+        m_content_pane = right_container->make_and_add<dynamic_content_pane>(dual_layout_constraint::use_all_available_space);
         m_content_pane->set_background_color(clsn::draw::color{128, 0, 64});
     }
 

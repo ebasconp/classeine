@@ -61,14 +61,14 @@ add_executable(classeine
         code/classeine-lib/clsn/ui/check_box.cpp
         code/classeine-lib/clsn/ui/captionable_control.cpp
         code/classeine-lib/clsn/ui/clickable_control.cpp
+        code/classeine-lib/clsn/ui/content_pane.cpp
         code/classeine-lib/clsn/ui/control.cpp
         code/classeine-lib/clsn/ui/dual_layout_container.cpp
-        code/classeine-lib/clsn/ui/dynamic_pane.cpp
+        code/classeine-lib/clsn/ui/dynamic_content_pane.cpp
         code/classeine-lib/clsn/ui/empty_control.cpp
         code/classeine-lib/clsn/ui/flow_layout_container.cpp
         code/classeine-lib/clsn/ui/hbox_layout_container.cpp
         code/classeine-lib/clsn/ui/label.cpp
-        code/classeine-lib/clsn/ui/mono_container.h
         code/classeine-lib/clsn/ui/paintable_control.cpp
         code/classeine-lib/clsn/ui/radio_button.cpp
         code/classeine-lib/clsn/ui/radio_button_group.cpp
@@ -111,8 +111,8 @@ add_executable(classeine
 
         code/classeine-lib/clsn/ui/renderers/button_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/check_box_renderer.cpp
+        code/classeine-lib/clsn/ui/renderers/content_pane_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/customizable_renderer.cpp
-        code/classeine-lib/clsn/ui/renderers/dynamic_pane_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/empty_control_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/label_renderer.cpp
         code/classeine-lib/clsn/ui/renderers/radio_button_renderer.cpp

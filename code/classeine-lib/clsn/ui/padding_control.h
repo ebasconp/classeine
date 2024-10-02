@@ -5,19 +5,19 @@
 
 #pragma once
 
-#include "mono_container.h"
+#include <clsn/ui/static_content_pane.h>
 
 #include "renderers/padding_control_renderer.h"
 
 namespace clsn::ui
 {
     template <typename InnerControlType>
-    class padding_control : public mono_container<InnerControlType>
+    class padding_control : public static_content_pane<InnerControlType>
     {
         CLSN_PROPERTY_VAL(size, int, true, 4)
 
     public:
-        padding_control() : mono_container<InnerControlType>("padding_control")
+        padding_control() : static_content_pane<InnerControlType>("padding_control")
         {
             init_padding_control_events();
         }

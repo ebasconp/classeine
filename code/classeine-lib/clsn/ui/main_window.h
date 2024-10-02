@@ -57,7 +57,7 @@ namespace clsn::ui
         }
 
         auto get_control_by_position(const draw::point& point) const ->
-            std::optional<std::reference_wrapper<const control>> override
+            core::const_optional_reference<control> override
         {
             return m_control.get_control_by_position(point);
         }

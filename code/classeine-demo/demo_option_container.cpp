@@ -9,7 +9,7 @@
 #include "clsn/draw/dimension.h"
 
 #include "clsn/ui/button.h"
-#include "clsn/ui/dynamic_pane.h"
+#include "clsn/ui/dynamic_content_pane.h"
 #include "clsn/ui/hbox_layout_container.h"
 #include "clsn/ui/vbox_layout_container.h"
 
