@@ -18,15 +18,6 @@ var annotated_dup =
         [ "system", "dc/d33/classclsn_1_1core_1_1system.html", null ],
         [ "value_changed_event", "dd/d88/classclsn_1_1core_1_1value__changed__event.html", "dd/d88/classclsn_1_1core_1_1value__changed__event" ]
       ] ],
-      [ "demo", "d5/da2/namespaceclsn_1_1demo.html", [
-        [ "demo_box_layout_container", "de/d3d/classclsn_1_1demo_1_1demo__box__layout__container.html", "de/d3d/classclsn_1_1demo_1_1demo__box__layout__container" ],
-        [ "demo_control_container", "d0/de4/classclsn_1_1demo_1_1demo__control__container.html", "d0/de4/classclsn_1_1demo_1_1demo__control__container" ],
-        [ "demo_dual_layout_container", "d1/dc2/classclsn_1_1demo_1_1demo__dual__layout__container.html", "d1/dc2/classclsn_1_1demo_1_1demo__dual__layout__container" ],
-        [ "demo_flow_layout_container", "d0/d63/classclsn_1_1demo_1_1demo__flow__layout__container.html", "d0/d63/classclsn_1_1demo_1_1demo__flow__layout__container" ],
-        [ "demo_option_container", "dc/de5/classclsn_1_1demo_1_1demo__option__container.html", "dc/de5/classclsn_1_1demo_1_1demo__option__container" ],
-        [ "demo_window", "d2/db9/classclsn_1_1demo_1_1demo__window.html", "d2/db9/classclsn_1_1demo_1_1demo__window" ],
-        [ "demo_xy_layout_container", "d6/d69/classclsn_1_1demo_1_1demo__xy__layout__container.html", "d6/d69/classclsn_1_1demo_1_1demo__xy__layout__container" ]
-      ] ],
       [ "draw", "db/dde/namespaceclsn_1_1draw.html", [
         [ "color", "d4/d4c/classclsn_1_1draw_1_1color.html", "d4/d4c/classclsn_1_1draw_1_1color" ],
         [ "colors", "da/d1d/classclsn_1_1draw_1_1colors.html", null ],
