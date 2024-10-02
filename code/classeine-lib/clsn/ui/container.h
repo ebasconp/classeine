@@ -10,7 +10,7 @@
 
 #include <clsn/ui/window.h>
 
-#include <bits/ranges_algo.h>
+#include <algorithm>
 #include <ranges>
 
 namespace clsn::ui
@@ -216,12 +216,12 @@ namespace clsn::ui
         /// @return The count of visible controls.
         auto get_visible_count() const -> int
         {
-            return std::count_if(m_elements.cbegin(), m_elements.cend(),
+            return static_cast<int>(std::count_if(m_elements.cbegin(), m_elements.cend(),
                 [this](const ElementType& e) -> bool
                     {
                         return to_control(e).is_visible();
                     }
-            );
+            ));
         }
 
         /// @brief Loads default settings for the container and its controls.

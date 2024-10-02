@@ -36,34 +36,38 @@ Please note that it is currently in an early stage of development.
   
 * **clsn::ui** - library providing componentable UI controls
   * `control`
-    * `clickable_control`
-      * `button` 
-      * `toggle_control`
-        * `check_box` 
-        * `radio_button`
-        * `toggle_button`
-    * `label` 
-    * `container`
-      *  `mono_container`
-        * `padding_control`
-      * `layout_container<Layout>`
-        * `dual_layout_container` - Container that stores only two elements, one occupying only its preferred size and the other one occupying
-          the remaining space
-        * `flow_layout_container` - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering
-        * `hbox_layout_container` - Container where the controls are rendered horizontally
-        * `vbox_layout_container` - Container where the controls are rendered vertically
-        * `xy_layout_container` - Container where the controls are placed in specific coordinates in the given region.
-    * `dynamic_pane` - Pane able to load and unload dynamically any control
-    * `empty_control` - Control that only paints its background. Useful to have a custom renderer.
-    * `ui_manager`
-      * `ui_skin` - Loadable set of renderers, themes and defaults for the UI controls.
-      * `ui_theme` - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.
-        * `amatista_ui_theme` - Set of specific set of colors
-          * `light_amatista_ui_theme` - Light theme
-          * `dark_amatista_ui_theme` - Dark theme
-    * `window`
-      * `main_window`
+    * `empty_control` - Control that does nothing. Useful to have a custom renderer. 
+    * `paintable_control` - Control with background, foreground and font 
+      * `captionable_control`
+        * `clickable_control`
+          * `button` 
+          * `toggle_control`
+            * `check_box` 
+            * `radio_button`
+            * `toggle_button`
+        * `label` 
+        * `window`
+          * `main_window`
+      * `container`
+        * `constrained_container<Constraint>` - Container that stores controls with its constraints
+          * `layout_container<Layout>`
+            * `dual_layout_container` - Container that stores only two elements, one occupying only its preferred size and the other one occupying
+              the remaining space
+            * `flow_layout_container` - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering
+            * `hbox_layout_container` - Container where the controls are rendered horizontally
+            * `vbox_layout_container` - Container where the controls are rendered vertically
+            * `xy_layout_container` - Container where the controls are placed in specific coordinates in the given region.
+      * `content_pane` - Abstract class that handles layout and events for specific control containers
+        * `dynamic_content_pane` - Content pane able to load and unload dynamically any control
+        * `static_content_pane` - Content pane with its child content already bound in compile time
+          * `padding_control` - Control with a border with variable size
   * `graphics` - abstraction to rendering backend
+  * `ui_manager`
+  * `ui_skin` - Loadable set of renderers, themes and defaults for the UI controls.
+  * `ui_theme` - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.
+    * `amatista_ui_theme` - Set of specific set of colors
+      * `light_amatista_ui_theme` - Light theme
+      * `dark_amatista_ui_theme` - Dark theme
 
 ## Supported Platforms
   * Linux
