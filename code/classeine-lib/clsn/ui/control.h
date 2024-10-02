@@ -16,6 +16,7 @@
 #include <clsn/core/entity.h>
 #include <clsn/core/entity_wrapper.h>
 #include <clsn/core/event_listener_list.h>
+#include <clsn/core/optional_reference.h>
 #include <clsn/core/property.h>
 
 #include <functional>
@@ -27,12 +28,6 @@ namespace clsn::ui
 {
     class renderer_base;
     class window;
-
-    template <typename T>
-    using optional_reference = std::optional<std::reference_wrapper<T>>;
-
-    template <typename T>
-    using const_optional_reference = std::optional<std::reference_wrapper<const T>>;
 
     /// Base class for all controls (referred to as UI widgets) in *classeine*.
     ///
@@ -51,8 +46,8 @@ namespace clsn::ui
 
         mutable bool m_invalidated;
 
-        optional_reference<window>  m_parent_window;
-        optional_reference<control> m_parent_control;
+        core::optional_reference<window>  m_parent_window;
+        core::optional_reference<control> m_parent_control;
 
     protected:
         explicit control(std::string_view section_name);
@@ -66,13 +61,13 @@ namespace clsn::ui
 
         ~control() override;
 
-        virtual void set_parent_control(optional_reference<control>);
-        auto get_parent_control() -> optional_reference<control>;
-        auto get_parent_control() const -> const_optional_reference<control>;
+        virtual void set_parent_control(core::optional_reference<control>);
+        auto get_parent_control() -> core::optional_reference<control>;
+        auto get_parent_control() const -> core::const_optional_reference<control>;
 
-        virtual void set_parent_window(optional_reference<window>);
-        auto get_parent_window() -> optional_reference<window>;
-        auto get_parent_window() const -> const_optional_reference<window>;
+        virtual void set_parent_window(core::optional_reference<window>);
+        auto get_parent_window() -> core::optional_reference<window>;
+        auto get_parent_window() const -> core::const_optional_reference<window>;
 
         CLSN_PROPERTY(actual_position, draw::point, true);
         CLSN_PROPERTY(actual_size, draw::dimension, true);
@@ -131,15 +126,12 @@ namespace clsn::ui
 
         auto contains_point(const clsn::draw::point& point) const -> bool;
         virtual auto get_control_by_position(const clsn::draw::point& point) const ->
-                const_optional_reference<control>;
+                core::const_optional_reference<control>;
 
         template <typename Proc>
         void invoke_in_parent_window(Proc proc)
         {
-            if (!m_parent_window.has_value())
-                return;
-
-            proc(m_parent_window.value().get());
+            m_parent_window.safe_invoke(proc);
         }
 
         virtual void load_defaults();

@@ -9,7 +9,7 @@
 
 namespace clsn::ui::renderers
 {
-    class dynamic_pane_renderer : public renderer_base
+    class content_pane_renderer : public renderer_base
     {
     public:
         void paint(graphics& gfx,

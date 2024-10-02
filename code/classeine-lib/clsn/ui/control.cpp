@@ -126,20 +126,20 @@ namespace clsn::ui
         add_visible_changed_listener(invalidate_proc);
     }
 
-    void control::set_parent_window(optional_reference<window> parentWindow)
+    void control::set_parent_window(core::optional_reference<window> parentWindow)
     {
         m_parent_window = parentWindow;
     }
 
-    optional_reference<window> control::get_parent_window()
+    core::optional_reference<window> control::get_parent_window()
     {
         return m_parent_window;
     }
 
-    optional_reference<const window>
+    core::const_optional_reference<window>
         control::get_parent_window() const
     {
-        return m_parent_window;
+        return m_parent_window.to_const();
     }
 
     auto control::contains_point(const draw::point& point) const -> bool
@@ -148,7 +148,7 @@ namespace clsn::ui
     }
 
     auto control::get_control_by_position(const draw::point& point) const
-        -> std::optional<std::reference_wrapper<const control>>
+        -> core::const_optional_reference<control>
     {
         if (this->contains_point(point))
             return *this;
@@ -161,7 +161,7 @@ namespace clsn::ui
         if (!m_parent_window.has_value())
             return false;
 
-        return m_parent_window.value().get().is_hovered(*this);
+        return m_parent_window.get_ref().is_hovered(*this);
     }
 
 
@@ -205,19 +205,19 @@ namespace clsn::ui
         return { get_actual_position(), get_actual_size() };
     }
 
-    void control::set_parent_control(std::optional<std::reference_wrapper<control>> ctrl)
+    void control::set_parent_control(core::optional_reference<control> ctrl)
     {
         m_parent_control = ctrl;
     }
 
-    auto control::get_parent_control() -> optional_reference<control>
+    auto control::get_parent_control() -> core::optional_reference<control>
     {
         return m_parent_control;
     }
 
-    auto control::get_parent_control() const -> const_optional_reference<control>
+    auto control::get_parent_control() const -> core::const_optional_reference<control>
     {
-        return m_parent_control;
+        return m_parent_control.to_const();
     }
 
     auto control::to_string() const -> std::string

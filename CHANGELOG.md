@@ -1,5 +1,6 @@
 # CHANGELOG #
 
+* 20241002 added dynamic and static content panes
 * 20240917 added doxygen action in github
 * 20240916 created demo app
 * 20240904 created clsn::ui::dynamic_pane
