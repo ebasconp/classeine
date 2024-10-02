@@ -16,10 +16,11 @@ var searchData=
   ['container_13',['container',['../d2/d50/classclsn_1_1ui_1_1container.html',1,'clsn::ui']]],
   ['container_3c_20constrained_5fcontainer_5finfo_3c_20constraint_20_3e_20_3e_14',['container&lt; constrained_container_info&lt; Constraint &gt; &gt;',['../d2/d50/classclsn_1_1ui_1_1container.html',1,'clsn::ui']]],
   ['container_3c_20constrained_5fcontainer_5finfo_3c_20layout_3a_3aconstraint_5ftype_20_3e_20_3e_15',['container&lt; constrained_container_info&lt; Layout::constraint_type &gt; &gt;',['../d2/d50/classclsn_1_1ui_1_1container.html',1,'clsn::ui']]],
-  ['container_3c_20std_3a_3ashared_5fptr_3c_20innercontroltype_20_3e_20_3e_16',['container&lt; std::shared_ptr&lt; InnerControlType &gt; &gt;',['../d2/d50/classclsn_1_1ui_1_1container.html',1,'clsn::ui']]],
-  ['container_5frenderer_17',['container_renderer',['../dd/de5/classclsn_1_1ui_1_1renderers_1_1container__renderer.html',1,'clsn::ui::renderers']]],
-  ['control_18',['control',['../d7/d66/classclsn_1_1ui_1_1control.html',1,'clsn::ui']]],
-  ['control_5fevent_19',['control_event',['../db/d71/classclsn_1_1ui_1_1events_1_1control__event.html',1,'clsn::ui::events']]],
-  ['control_5fresized_5fevent_20',['control_resized_event',['../d3/d4d/classclsn_1_1ui_1_1events_1_1control__resized__event.html',1,'clsn::ui::events']]],
-  ['customizable_5frenderer_21',['customizable_renderer',['../dd/d58/classclsn_1_1ui_1_1renderers_1_1customizable__renderer.html',1,'clsn::ui::renderers']]]
+  ['container_5frenderer_16',['container_renderer',['../dd/de5/classclsn_1_1ui_1_1renderers_1_1container__renderer.html',1,'clsn::ui::renderers']]],
+  ['content_5fpane_17',['content_pane',['../d6/d4f/classclsn_1_1ui_1_1content__pane.html',1,'clsn::ui']]],
+  ['content_5fpane_5frenderer_18',['content_pane_renderer',['../d1/dc0/classclsn_1_1ui_1_1renderers_1_1content__pane__renderer.html',1,'clsn::ui::renderers']]],
+  ['control_19',['control',['../d7/d66/classclsn_1_1ui_1_1control.html',1,'clsn::ui']]],
+  ['control_5fevent_20',['control_event',['../db/d71/classclsn_1_1ui_1_1events_1_1control__event.html',1,'clsn::ui::events']]],
+  ['control_5fresized_5fevent_21',['control_resized_event',['../d3/d4d/classclsn_1_1ui_1_1events_1_1control__resized__event.html',1,'clsn::ui::events']]],
+  ['customizable_5frenderer_22',['customizable_renderer',['../dd/d58/classclsn_1_1ui_1_1renderers_1_1customizable__renderer.html',1,'clsn::ui::renderers']]]
 ];

@@ -1,13 +1,13 @@
 <map id="clsn::ui::padding_control&lt; InnerControlType &gt;" name="clsn::ui::padding_control&lt; InnerControlType &gt;">
-<area shape="rect" id="Node000001" title=" " alt="" coords="30,431,210,471"/>
-<area shape="rect" id="Node000002" href="$da/dd5/classclsn_1_1ui_1_1mono__container.html" title=" " alt="" coords="29,343,211,383"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,397,123,430,117,430,117,397"/>
-<area shape="rect" id="Node000003" href="$d2/d50/classclsn_1_1ui_1_1container.html" title=" " alt="" coords="5,240,235,295"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,308,123,343,117,343,117,308"/>
-<area shape="rect" id="Node000004" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="51,152,189,192"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="123,205,123,240,117,240,117,205"/>
-<area shape="rect" id="Node000005" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="59,79,181,104"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="123,118,123,152,117,152,117,118"/>
-<area shape="rect" id="Node000006" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="55,5,185,31"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="123,44,123,79,117,79,117,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="16,401,196,441"/>
+<area shape="rect" id="Node000002" href="$da/d24/classclsn_1_1ui_1_1static__content__pane.html" title=" " alt="" coords="5,313,207,353"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,367,109,401,103,401,103,367"/>
+<area shape="rect" id="Node000003" href="$d6/d4f/classclsn_1_1ui_1_1content__pane.html" title="A base class representing a content pane with layout and event handling capabilities." alt="" coords="24,240,188,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,279,109,313,103,313,103,279"/>
+<area shape="rect" id="Node000004" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="37,152,175,192"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="109,206,109,240,103,240,103,206"/>
+<area shape="rect" id="Node000005" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="45,79,167,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="109,118,109,152,103,152,103,118"/>
+<area shape="rect" id="Node000006" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="41,5,171,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="109,44,109,79,103,79,103,44"/>
 </map>

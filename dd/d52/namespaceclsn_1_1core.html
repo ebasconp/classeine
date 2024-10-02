@@ -121,6 +121,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df1/classclsn_1_1core_1_1non__instantiable.html">non_instantiable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class to prevent instantiation of derived classes.  <a href="../../dc/df1/classclsn_1_1core_1_1non__instantiable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1a/classclsn_1_1core_1_1optional__reference.html">optional_reference</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d29/classclsn_1_1core_1_1property.html">property</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/classclsn_1_1core_1_1strings.html">strings</a></td></tr>
@@ -135,11 +137,37 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a93a167843e3d966e188dace1ed5fd4a2" id="r_a93a167843e3d966e188dace1ed5fd4a2"><td class="memTemplParams" colspan="2">template&lt;typename EventType &gt; </td></tr>
 <tr class="memitem:a93a167843e3d966e188dace1ed5fd4a2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d52/namespaceclsn_1_1core.html#a93a167843e3d966e188dace1ed5fd4a2">event_listener</a> = std::function&lt; void(EventType &amp;)&gt;</td></tr>
 <tr class="separator:a93a167843e3d966e188dace1ed5fd4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4220dfe8b6e0d2c5a42924d3fc8deab1" id="r_a4220dfe8b6e0d2c5a42924d3fc8deab1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4220dfe8b6e0d2c5a42924d3fc8deab1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d52/namespaceclsn_1_1core.html#a4220dfe8b6e0d2c5a42924d3fc8deab1">const_optional_reference</a> = <a class="el" href="../../dc/d1a/classclsn_1_1core_1_1optional__reference.html">optional_reference</a>&lt; const T &gt;</td></tr>
+<tr class="separator:a4220dfe8b6e0d2c5a42924d3fc8deab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This namespace contains several basic utilities and base classes that make developing applications with <em>classeine</em> easier.</p>
 <p>Configuration utilities, console methods, events, properties, and string handling utilities are available here. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a4220dfe8b6e0d2c5a42924d3fc8deab1" name="a4220dfe8b6e0d2c5a42924d3fc8deab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4220dfe8b6e0d2c5a42924d3fc8deab1">&#9670;&#160;</a></span>const_optional_reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../dd/d52/namespaceclsn_1_1core.html#a4220dfe8b6e0d2c5a42924d3fc8deab1">clsn::core::const_optional_reference</a> = typedef <a class="el" href="../../dc/d1a/classclsn_1_1core_1_1optional__reference.html">optional_reference</a>&lt;const T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An alias for <a class="el" href="../../dc/d1a/classclsn_1_1core_1_1optional__reference.html">optional_reference</a> with a const reference.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the object the reference will point to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a93a167843e3d966e188dace1ed5fd4a2" name="a93a167843e3d966e188dace1ed5fd4a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93a167843e3d966e188dace1ed5fd4a2">&#9670;&#160;</a></span>event_listener</h2>
 
@@ -162,7 +190,7 @@ template&lt;typename EventType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d8/dba/namespaceclsn.html">clsn</a></li><li class="navelem"><a class="el" href="../../dd/d52/namespaceclsn_1_1core.html">core</a></li>
-    <li class="footer">Generated on Wed Oct 2 2024 16:33:09 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Wed Oct 2 2024 17:11:24 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

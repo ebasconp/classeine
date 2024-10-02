@@ -2,7 +2,7 @@ var classclsn_1_1ui_1_1container =
 [
     [ "container", "d2/d50/classclsn_1_1ui_1_1container.html#a6a63c5f61c8a9039fa2236cd0e3777a1", null ],
     [ "add_element", "d2/d50/classclsn_1_1ui_1_1container.html#a7a5c55f44b1227ba3dec9adb328a4d43", null ],
-    [ "get_control_by_position", "d2/d50/classclsn_1_1ui_1_1container.html#ab355dbb922221ca7a55b583ebf7a59c8", null ],
+    [ "get_control_by_position", "d2/d50/classclsn_1_1ui_1_1container.html#aee2d282ef850993b76a51ff79a05b06a", null ],
     [ "get_controls", "d2/d50/classclsn_1_1ui_1_1container.html#a1f6b5a45c8d72f379414467dbbe5e87e", null ],
     [ "get_controls", "d2/d50/classclsn_1_1ui_1_1container.html#a745249d9714684dda853962b9825b379", null ],
     [ "get_count", "d2/d50/classclsn_1_1ui_1_1container.html#aa4918f3e2df63a31fd869f4c41dfd74f", null ],
@@ -21,8 +21,8 @@ var classclsn_1_1ui_1_1container =
     [ "operator[]", "d2/d50/classclsn_1_1ui_1_1container.html#a7eb0d4dfb3fc07a4bb68100958fb1999", null ],
     [ "process_mouse_click_event", "d2/d50/classclsn_1_1ui_1_1container.html#a18180121eef228e7c20e4e3fd5961d82", null ],
     [ "process_mouse_moved_event", "d2/d50/classclsn_1_1ui_1_1container.html#ac32f46732748f031494c2d76daaa1e02", null ],
-    [ "set_parent_control", "d2/d50/classclsn_1_1ui_1_1container.html#a4e6263a12d26e4e30dd0523e1b0d20b7", null ],
-    [ "set_parent_window", "d2/d50/classclsn_1_1ui_1_1container.html#a23bc08051e33602154564aab102e3422", null ],
+    [ "set_parent_control", "d2/d50/classclsn_1_1ui_1_1container.html#a251462a0654769b8dde2468b32acdb8c", null ],
+    [ "set_parent_window", "d2/d50/classclsn_1_1ui_1_1container.html#a718ff666809a6633056554ba8fa4fbf9", null ],
     [ "to_control", "d2/d50/classclsn_1_1ui_1_1container.html#af3939c26f810e5f82cd22ce5e7b55c96", null ],
     [ "to_control", "d2/d50/classclsn_1_1ui_1_1container.html#a4a5b26d636e3c64acf205757660af211", null ],
     [ "validate", "d2/d50/classclsn_1_1ui_1_1container.html#a228f8e4c96157b931345362420f310bd", null ]

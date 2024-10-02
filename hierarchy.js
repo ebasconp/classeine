@@ -25,11 +25,6 @@ var hierarchy =
             [ "clsn::ui::constrained_container< Constraint >", "d4/d34/classclsn_1_1ui_1_1constrained__container.html", null ]
           ] ],
           [ "clsn::ui::container< constrained_container_info< Layout::constraint_type > >", "d2/d50/classclsn_1_1ui_1_1container.html", null ],
-          [ "clsn::ui::container< std::shared_ptr< InnerControlType > >", "d2/d50/classclsn_1_1ui_1_1container.html", [
-            [ "clsn::ui::mono_container< InnerControlType >", "da/dd5/classclsn_1_1ui_1_1mono__container.html", [
-              [ "clsn::ui::padding_control< InnerControlType >", "dd/d15/classclsn_1_1ui_1_1padding__control.html", null ]
-            ] ]
-          ] ],
           [ "clsn::ui::captionable_control", "d2/d41/classclsn_1_1ui_1_1captionable__control.html", [
             [ "clsn::ui::clickable_control", "d9/df3/classclsn_1_1ui_1_1clickable__control.html", [
               [ "clsn::ui::button", "d7/d35/classclsn_1_1ui_1_1button.html", null ],
@@ -76,7 +71,13 @@ var hierarchy =
               [ "clsn::ui::layout_container< Layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", null ]
             ] ]
           ] ],
-          [ "clsn::ui::dynamic_pane", "d2/dfb/classclsn_1_1ui_1_1dynamic__pane.html", null ]
+          [ "clsn::ui::content_pane", "d6/d4f/classclsn_1_1ui_1_1content__pane.html", [
+            [ "clsn::ui::static_content_pane< InnerControlType >", "da/d24/classclsn_1_1ui_1_1static__content__pane.html", [
+              [ "clsn::ui::padding_control< InnerControlType >", "dd/d15/classclsn_1_1ui_1_1padding__control.html", null ]
+            ] ],
+            [ "clsn::ui::dynamic_content_pane", "d1/d0a/classclsn_1_1ui_1_1dynamic__content__pane.html", null ],
+            [ "clsn::ui::static_content_pane< ControlType >", "da/d24/classclsn_1_1ui_1_1static__content__pane.html", null ]
+          ] ]
         ] ]
       ] ],
       [ "clsn::ui::impl::sdl2::graphics_sdl2_impl", "d3/d67/classclsn_1_1ui_1_1impl_1_1sdl2_1_1graphics__sdl2__impl.html", null ],
@@ -86,8 +87,8 @@ var hierarchy =
         ] ],
         [ "clsn::ui::renderers::check_box_renderer", "db/d12/classclsn_1_1ui_1_1renderers_1_1check__box__renderer.html", null ],
         [ "clsn::ui::renderers::container_renderer< ContainerType >", "dd/de5/classclsn_1_1ui_1_1renderers_1_1container__renderer.html", null ],
+        [ "clsn::ui::renderers::content_pane_renderer", "d1/dc0/classclsn_1_1ui_1_1renderers_1_1content__pane__renderer.html", null ],
         [ "clsn::ui::renderers::customizable_renderer", "dd/d58/classclsn_1_1ui_1_1renderers_1_1customizable__renderer.html", null ],
-        [ "clsn::ui::renderers::dynamic_pane_renderer", "dc/dca/classclsn_1_1ui_1_1renderers_1_1dynamic__pane__renderer.html", null ],
         [ "clsn::ui::renderers::empty_control_renderer", "dc/db0/classclsn_1_1ui_1_1renderers_1_1empty__control__renderer.html", null ],
         [ "clsn::ui::renderers::label_renderer", "d4/de8/classclsn_1_1ui_1_1renderers_1_1label__renderer.html", null ],
         [ "clsn::ui::renderers::null_renderer", "d6/d76/classclsn_1_1ui_1_1renderers_1_1null__renderer.html", null ],
@@ -147,6 +148,9 @@ var hierarchy =
       [ "clsn::ui::painters::label_painter", "d5/dcf/classclsn_1_1ui_1_1painters_1_1label__painter.html", null ],
       [ "clsn::ui::painters::radio_button_painter", "dd/db4/classclsn_1_1ui_1_1painters_1_1radio__button__painter.html", null ]
     ] ],
+    [ "clsn::core::optional_reference< T >", "dc/d1a/classclsn_1_1core_1_1optional__reference.html", null ],
+    [ "clsn::core::optional_reference< clsn::ui::control >", "dc/d1a/classclsn_1_1core_1_1optional__reference.html", null ],
+    [ "clsn::core::optional_reference< clsn::ui::window >", "dc/d1a/classclsn_1_1core_1_1optional__reference.html", null ],
     [ "clsn::ui::painters::painting_info", "d2/d5d/structclsn_1_1ui_1_1painters_1_1painting__info.html", null ],
     [ "clsn::draw::point", "d8/d50/classclsn_1_1draw_1_1point.html", null ],
     [ "clsn::core::property< T, HasValueChangedEventListener >", "df/d29/classclsn_1_1core_1_1property.html", null ],

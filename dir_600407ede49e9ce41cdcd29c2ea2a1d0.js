@@ -13,6 +13,7 @@ var dir_600407ede49e9ce41cdcd29c2ea2a1d0 =
     [ "factory.h", "de/d06/factory_8h.html", "de/d06/factory_8h" ],
     [ "lazy.h", "d9/d04/lazy_8h.html", "d9/d04/lazy_8h" ],
     [ "non_instantiable.h", "d3/d8b/non__instantiable_8h.html", "d3/d8b/non__instantiable_8h" ],
+    [ "optional_reference.h", "d7/d5a/optional__reference_8h.html", "d7/d5a/optional__reference_8h" ],
     [ "property.h", "da/dc4/property_8h.html", "da/dc4/property_8h" ],
     [ "strings.cpp", "d9/d15/strings_8cpp.html", null ],
     [ "strings.h", "d6/d90/strings_8h.html", "d6/d90/strings_8h" ],
