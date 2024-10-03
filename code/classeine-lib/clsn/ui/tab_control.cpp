@@ -7,8 +7,9 @@
 
 namespace clsn::ui
 {
-    tab_control::tab_control(std::string_view section_name)
-    : base_class(section_name)
+    tab_control::tab_control()
+    : base_class{*this}
+    , m_view{get_inner_control()}
     {
         //ETOTODO
         //m_header = this->get_inner_control().make_and_add<_private::tab_pane_header>();

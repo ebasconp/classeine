@@ -114,4 +114,24 @@ namespace clsn::ui
 
         return inner_control.get_control_by_position(point);
     }
+
+    void content_pane::set_parent_control(core::optional_reference<control> ctrl)
+    {
+        paintable_control::set_parent_control(ctrl);
+
+        get_actual_inner_control().safe_invoke([&](auto& c)
+        {
+            c.set_parent_control(*this);
+        });
+    }
+
+    void content_pane::set_parent_window(core::optional_reference<window> wnd)
+    {
+        paintable_control::set_parent_window(wnd);
+
+        get_actual_inner_control().safe_invoke([&](auto& c)
+        {
+            c.set_parent_window(wnd);
+        });
+    }
 }

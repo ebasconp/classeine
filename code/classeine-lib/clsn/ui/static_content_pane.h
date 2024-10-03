@@ -6,7 +6,6 @@
 #pragma once
 
 #include <clsn/ui/content_pane.h>
-#include <memory>
 
 namespace clsn::ui
 {
@@ -21,10 +20,19 @@ namespace clsn::ui
         ControlType m_inner_control; ///< The control of type ControlType.
 
     public:
-        /// @brief Constructs a static_content_pane with an optional section name.
+        /// @brief Constructs a static_content_pane with the provided arguments.
         ///
-        /// @param section_name The name of the section (default is an empty string).
-        static_content_pane(std::string_view section_name = "") : content_pane{section_name}
+        /// This constructor initializes a static_content_pane object with the given arguments.
+        /// The pane is labeled as "static_content_pane" and the arguments are forwarded to
+        /// initialize the inner control component whose type is passed as
+        /// argument of the class.
+        ///
+        /// @tparam Args The types of the arguments to forward to the inner control.
+        /// @param args The arguments to forward to the inner control.
+        template <typename... Args>
+        explicit static_content_pane(Args&&... args)
+        : content_pane{"static_content_pane"}
+        , m_inner_control{std::forward<Args>(args)...}
         {
         }
 

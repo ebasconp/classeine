@@ -22,7 +22,8 @@ namespace clsn::ui
   class radio_button;
   class radio_button_group;
   class renderer_base;
-  class tab_pane;
+  class tab_control;
+  class tab_page;
   class toggle_button;
   class toggle_control;
   class vbox_layout_container;
