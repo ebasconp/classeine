@@ -17,6 +17,7 @@
 #include "demo_control_container.h"
 #include "demo_dual_layout_container.h"
 #include "demo_flow_layout_container.h"
+#include "demo_tab_control.h"
 #include "demo_xy_layout_container.h"
 
 namespace clsn::demo
@@ -49,8 +50,9 @@ namespace clsn::demo
         m_vbox_demo = init_option("vbox_layout_container");
         m_dual_demo = init_option("dual_layout_container");
         m_flow_demo = init_option("flow_layout_container");
-        m_xy_demo = init_option("xy_layout_container");
-        m_controls = init_option("Controls");
+        m_xy_demo   = init_option("xy_layout_container");
+        m_controls  = init_option("Controls");
+        m_tabs      = init_option("Tabs");
     }
 
     void demo_option_container::process_action(const action_event& e)
@@ -92,6 +94,13 @@ namespace clsn::demo
         if (action_name == "Controls")
         {
             m_demo_window.get_content_pane().set_inner_control(control::make<demo_control_container>());
+            return;
+        }
+
+        if (action_name == "Tabs")
+        {
+            m_demo_window.get_content_pane().set_inner_control(control::make<demo_tab_control>());
+            return;
         }
     }
 }

@@ -31,7 +31,7 @@ namespace clsn::ui
         /// @brief Gets a non-const reference to the inner control.
         ///
         /// @return A reference to the inner control.
-        auto get_inner_control() -> control&
+        auto get_inner_control() -> ControlType&
         {
             return m_inner_control;
         }
@@ -39,7 +39,7 @@ namespace clsn::ui
         /// @brief Gets a const reference to the inner control.
         ///
         /// @return A const reference to the inner control.
-        auto get_inner_control() const -> const control&
+        auto get_inner_control() const -> const ControlType&
         {
             return m_inner_control;
         }

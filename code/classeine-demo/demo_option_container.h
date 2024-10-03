@@ -26,6 +26,7 @@ namespace clsn::demo
         std::shared_ptr<ui::button> m_flow_demo;
         std::shared_ptr<ui::button> m_xy_demo;
         std::shared_ptr<ui::button> m_controls;
+        std::shared_ptr<ui::button> m_tabs;
 
         demo_window& m_demo_window;
 
