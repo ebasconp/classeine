@@ -15,7 +15,7 @@ namespace clsn::demo
         auto [_2, tab1] = this->make_and_add<ui::button>("Tab 1");
         tab1->set_text("Click me");
 
-        auto [_1, tab2] = this->make_and_add<ui::label>("Tab 1");
+        auto [_1, tab2] = this->make_and_add<ui::label>("Tab 2");
         tab2->set_text("I'm a label");
         tab2->set_enabled(false);
     }

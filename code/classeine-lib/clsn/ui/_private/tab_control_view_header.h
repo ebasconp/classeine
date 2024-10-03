@@ -7,10 +7,22 @@
 
 #include <clsn/ui/flow_layout_container.h>
 
+#include <clsn/ui/forward.h>
+
 namespace clsn::ui::_private
 {
-    class tab_control_view_header : public clsn::ui::flow_layout_container
-    {
+    class tab_control_view;
+    class tab_control_view_header_button;
 
+    class tab_control_view_header final : public clsn::ui::flow_layout_container
+    {
+        core::optional_reference<tab_control_view> m_view_ref;
+        std::vector<std::shared_ptr<tab_control_view_header_button>> m_buttons;
+
+    public:
+        tab_control_view_header();
+
+        void add(tab_page& page);
+        void set_view(tab_control_view& view);
     };
 }
