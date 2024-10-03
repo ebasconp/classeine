@@ -21,6 +21,7 @@ namespace clsn::ui
   class paintable_control;
   class radio_button;
   class renderer_base;
+  class tab_pane;
   class toggle_button;
   class toggle_control;
   class toggle_control_group;
