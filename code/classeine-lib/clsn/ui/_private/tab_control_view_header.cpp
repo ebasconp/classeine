@@ -22,7 +22,7 @@ namespace clsn::ui::_private
 
     void tab_control_view_header::add(tab_page& page)
     {
-        auto btn = make_and_add<tab_control_view_header_button>();
+        auto btn = flow_layout_container::add(control::make<tab_control_view_header_button>());
         m_buttons.push_back(btn);
 
         btn->set_page(page);

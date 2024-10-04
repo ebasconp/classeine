@@ -15,10 +15,10 @@ namespace clsn::ui::_private
     {
         this->set_orientation(layouts::dual_layout_orientation::vertical);
 
-        m_header = make_and_add<tab_control_view_header>(layouts::dual_layout_constraint::use_preferred_size);
+        m_header = dual_layout_container::add(control::make<tab_control_view_header>(), layouts::dual_layout_constraint::use_preferred_size);
         m_header->set_view(*this);
 
-        m_content_pane = make_and_add<dynamic_content_pane>(layouts::dual_layout_constraint::use_all_available_space);
+        m_content_pane = dual_layout_container::add(control::make<dynamic_content_pane>(), layouts::dual_layout_constraint::use_all_available_space);
     }
 
     void tab_control_view::add(tab_page& page)

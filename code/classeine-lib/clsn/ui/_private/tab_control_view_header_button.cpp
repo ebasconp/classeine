@@ -10,7 +10,7 @@ namespace clsn::ui::_private
     void tab_control_view_header_button::set_page(tab_page& page)
     {
         m_page_ref = page;
-        set_text(page.get_name());
+        set_caption(page.get_name());
     }
 
     auto tab_control_view_header_button::get_page() -> tab_page&
