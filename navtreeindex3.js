@@ -1,8 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"dd/de5/classclsn_1_1ui_1_1renderers_1_1container__renderer.html":[5,0,0,2,5,2],
-"dd/de5/classclsn_1_1ui_1_1renderers_1_1container__renderer.html#a15be7a12a608343082d39f10ed83aaf1":[5,0,0,2,5,2,0],
-"dd/df1/dark__amatista__ui__theme_8cpp.html":[6,0,0,0,0,2,0,4],
 "de/d04/classclsn_1_1draw_1_1region.html":[5,0,0,1,6],
 "de/d04/classclsn_1_1draw_1_1region.html#a1ea01fcc71504522926db97c64df8d41":[5,0,0,1,6,0],
 "de/d04/classclsn_1_1draw_1_1region.html#a21e5ed63c42a3f093d28886e3a8a8e1a":[5,0,0,1,6,4],
@@ -95,8 +92,8 @@ var NAVTREEINDEX3 =
 "dir_f34cc02d0118f4f8541432998ed57ea7.html":[6,0,0,0,0,2,1],
 "dir_f66264c372379b3371ed6e39f1162625.html":[6,0,0,0,0,2],
 "files.html":[6,0],
-"functions.html":[5,3,0],
 "functions.html":[5,3,0,0],
+"functions.html":[5,3,0],
 "functions_b.html":[5,3,0,1],
 "functions_c.html":[5,3,0,2],
 "functions_d.html":[5,3,0,3],
