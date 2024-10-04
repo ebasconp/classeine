@@ -40,7 +40,7 @@
 <area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="579,358,596,347,612,325,619,302,626,279,643,255,662,241,665,245,647,259,631,281,624,304,617,327,599,351,582,363"/>
 <area shape="rect" id="Node000017" href="$d2/d50/classclsn_1_1ui_1_1container.html" title=" " alt="" coords="648,269,835,338"/>
 <area shape="poly" id="edge16_Node000014_Node000017" title=" " alt="" coords="574,355,647,331,649,336,576,360"/>
-<area shape="rect" id="Node000018" href="$d2/d41/classclsn_1_1ui_1_1captionable__control.html" title="This class exposes the text property." alt="" coords="665,362,817,402"/>
+<area shape="rect" id="Node000018" href="$d2/d41/classclsn_1_1ui_1_1captionable__control.html" title="This class represents a UI control that has a caption property." alt="" coords="665,362,817,402"/>
 <area shape="poly" id="edge17_Node000014_Node000018" title=" " alt="" coords="582,379,665,379,665,385,582,385"/>
 <area shape="rect" id="Node000028" href="$d2/d50/classclsn_1_1ui_1_1container.html" title="Represents a generic container for UI elements." alt="" coords="673,426,810,466"/>
 <area shape="poly" id="edge23_Node000014_Node000028" title=" " alt="" coords="583,401,673,425,672,430,581,406"/>

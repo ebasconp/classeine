@@ -8,7 +8,7 @@
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="297,444,411,487,409,492,296,449"/>
 <area shape="rect" id="Node000002" href="$d9/df3/classclsn_1_1ui_1_1clickable__control.html" title=" " alt="" coords="187,328,321,368"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,382,257,416,251,416,251,382"/>
-<area shape="rect" id="Node000003" href="$d2/d41/classclsn_1_1ui_1_1captionable__control.html" title="This class exposes the text property." alt="" coords="178,240,330,280"/>
+<area shape="rect" id="Node000003" href="$d2/d41/classclsn_1_1ui_1_1captionable__control.html" title="This class represents a UI control that has a caption property." alt="" coords="178,240,330,280"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,294,257,328,251,328,251,294"/>
 <area shape="rect" id="Node000004" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="185,152,323,192"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="257,206,257,240,251,240,251,206"/>
