@@ -8,6 +8,10 @@
 
 namespace clsn::ui
 {
+    CLSN_CPP_PROPERTY(paintable_control, background_color, std::optional<draw::color>)
+    CLSN_CPP_PROPERTY(paintable_control, font, std::optional<clsn::draw::font>)
+    CLSN_CPP_PROPERTY(paintable_control, foreground_color, std::optional<clsn::draw::color>)
+
     paintable_control::paintable_control(std::string_view section_name)
     : control{section_name}
     {}

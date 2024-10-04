@@ -26,7 +26,7 @@ namespace clsn::ui
         /// @brief The caption property of the control.
         ///
         /// This property allows getting or setting the caption text of the control.
-        CLSN_PROPERTY(caption, std::string, true);
+        CLSN_HEADER_PROPERTY(caption, std::string, true)
 
         /// @brief Converts the captionable control to a string representation.
         ///

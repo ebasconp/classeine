@@ -25,7 +25,7 @@ namespace clsn::ui
     public:
         explicit clickable_control(std::string_view section_name);
 
-        CLSN_PROPERTY(action_name, std::string, true)
+        CLSN_HEADER_PROPERTY(action_name, std::string, true)
 
         [[nodiscard]] auto is_pressed() const noexcept -> bool;
 

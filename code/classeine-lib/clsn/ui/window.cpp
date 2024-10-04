@@ -11,6 +11,11 @@
 
 namespace clsn::ui
 {
+    CLSN_CPP_PROPERTY(window, position, clsn::draw::point)
+    CLSN_CPP_PROPERTY(window, minimum_size, clsn::draw::dimension)
+    CLSN_CPP_PROPERTY(window, size, clsn::draw::dimension)
+    CLSN_CPP_BOOL_PROPERTY(window, resizable)
+
     window::window(std::string_view section_name)
     : captionable_control(section_name)
     {

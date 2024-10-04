@@ -44,7 +44,6 @@ namespace clsn::ui
             return m_inner_control;
         }
 
-    public:
         /// @brief Gets the actual inner control as a core::optional_reference.
         ///
         /// This method overrides the get_actual_inner_control method from the base class.

@@ -7,6 +7,8 @@
 
 namespace clsn::ui
 {
+    CLSN_CPP_PROPERTY(captionable_control, caption, std::string)
+
     captionable_control::captionable_control(std::string_view section_name)
     : paintable_control{section_name}
     {

@@ -8,6 +8,8 @@
 
 namespace clsn::ui
 {
+    CLSN_CPP_PROPERTY(clickable_control, action_name, std::string)
+
     clickable_control::clickable_control(std::string_view section_name)
     : captionable_control{section_name}
     {

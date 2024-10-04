@@ -14,7 +14,7 @@ namespace clsn::ui
     template <typename InnerControlType>
     class padding_control : public static_content_pane<InnerControlType>
     {
-        CLSN_PROPERTY_VAL(size, int, true, 4)
+        CLSN_FULL_PROPERTY_WITH_DEFAULT_VALUE(size, int, true, 4)
 
     public:
         padding_control() : static_content_pane<InnerControlType>("padding_control")

@@ -69,13 +69,13 @@ namespace clsn::ui
         auto get_parent_window() -> core::optional_reference<window>;
         auto get_parent_window() const -> core::const_optional_reference<window>;
 
-        CLSN_PROPERTY(actual_position, draw::point, true);
-        CLSN_PROPERTY(actual_size, draw::dimension, true);
+        CLSN_HEADER_PROPERTY(actual_position, draw::point, true)
+        CLSN_HEADER_PROPERTY(actual_size, draw::dimension, true)
 
-        CLSN_BOOL_PROPERTY_VAL(enabled, true, true);
-        CLSN_BOOL_PROPERTY_VAL(visible, true, true);
+        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(enabled, true, true)
+        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(visible, true, true)
 
-        CLSN_PROPERTY(preferred_size, std::optional<clsn::draw::dimension>, true);
+        CLSN_HEADER_PROPERTY(preferred_size, std::optional<clsn::draw::dimension>, true)
 
         auto get_actual_preferred_size() const -> const clsn::draw::dimension&;
         auto get_actual_bounds() const -> clsn::draw::region;
