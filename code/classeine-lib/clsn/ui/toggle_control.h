@@ -14,7 +14,7 @@ namespace clsn::ui
     public:
         explicit toggle_control(std::string_view section_name);
 
-        CLSN_BOOL_PROPERTY_VAL(checked, true, false);
+        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(checked, true, false)
 
         virtual void toggle();
 

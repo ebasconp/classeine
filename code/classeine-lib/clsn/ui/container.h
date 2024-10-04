@@ -45,7 +45,7 @@ namespace clsn::ui
             init_container_events();
         }
 
-        CLSN_PROPERTY_VAL(margin, int, true, 0)
+        CLSN_FULL_PROPERTY_WITH_DEFAULT_VALUE(margin, int, true, 0)
 
     protected:
         /// @brief Adds a new element to the container. Used only for derived

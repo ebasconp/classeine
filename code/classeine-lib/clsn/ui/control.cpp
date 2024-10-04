@@ -18,6 +18,14 @@
 
 namespace clsn::ui
 {
+    CLSN_CPP_PROPERTY(control, actual_position, draw::point)
+    CLSN_CPP_PROPERTY(control, actual_size, draw::dimension)
+
+    CLSN_CPP_BOOL_PROPERTY(control, enabled)
+    CLSN_CPP_BOOL_PROPERTY(control, visible)
+
+    CLSN_CPP_PROPERTY(control, preferred_size, std::optional<clsn::draw::dimension>)
+
     control::control(std::string_view section_name)
     : m_default_section_name{section_name}
     , m_invalidated{true}

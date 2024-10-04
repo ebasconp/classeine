@@ -22,10 +22,10 @@ namespace clsn::ui
     public:
         explicit window(std::string_view section_name);
 
-        CLSN_PROPERTY(position, clsn::draw::point, true)
-        CLSN_PROPERTY(minimum_size, clsn::draw::dimension, true)
-        CLSN_PROPERTY(size, clsn::draw::dimension, true)
-        CLSN_BOOL_PROPERTY_VAL(resizable, true, true);
+        CLSN_HEADER_PROPERTY(position, clsn::draw::point, true)
+        CLSN_HEADER_PROPERTY(minimum_size, clsn::draw::dimension, true)
+        CLSN_HEADER_PROPERTY(size, clsn::draw::dimension, true)
+        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(resizable, true, true)
 
         void grab_mouse(control& control);
         void release_mouse();

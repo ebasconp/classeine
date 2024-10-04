@@ -7,6 +7,8 @@
 
 namespace clsn::ui
 {
+    CLSN_CPP_BOOL_PROPERTY(toggle_control, checked)
+
     toggle_control::toggle_control(std::string_view section_name)
     : clickable_control{section_name}
     {
