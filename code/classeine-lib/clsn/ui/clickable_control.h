@@ -5,11 +5,11 @@
 
 #pragma once
 
-#include "clsn/ui/captionable_control.h"
+#include <clsn/ui/captionable_control.h>
 
-#include "clsn/ui/events/action_event.h"
+#include <clsn/ui/events/action_event.h>
 
-#include "clsn/core/event_listener_list.h"
+#include <clsn/core/event_listener_list.h>
 
 namespace clsn::ui
 {

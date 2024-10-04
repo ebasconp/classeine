@@ -17,12 +17,12 @@ namespace clsn::ui
     {
         auto invalidate_proc = [this](auto&) { invalidate(); };
 
-        add_text_changed_listener(invalidate_proc);
+        add_caption_changed_listener(invalidate_proc);
     }
 
     auto captionable_control::to_string() const -> std::string
     {
         using namespace clsn::core;
-        return strings::format("{} [{}]", paintable_control::to_string(), m_text.get());
+        return strings::format("{} [{}]", paintable_control::to_string(), m_caption.get());
     }
 }
