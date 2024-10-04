@@ -37,7 +37,7 @@ namespace clsn::ui
 
     void clickable_control::init_clickable_control_events()
     {
-        add_text_changed_listener([this](auto&) { invalidate(); });
+        add_caption_changed_listener([this](auto&) { invalidate(); });
     }
 
     void clickable_control::process_mouse_click_event(events::mouse_click_event& e)

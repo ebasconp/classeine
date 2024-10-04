@@ -38,7 +38,7 @@ namespace clsn::ui::renderers
 
         background_painter::paint_background(gfx, rgn, btn_clr);
 
-        const auto text_size = gfx.get_text_size(rd_btn.get_actual_font(), rd_btn.get_text());
+        const auto text_size = gfx.get_text_size(rd_btn.get_actual_font(), rd_btn.get_caption());
         const auto size = text_size.get_height();
 
         dual_layout layout;

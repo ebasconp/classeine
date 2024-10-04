@@ -35,7 +35,7 @@ namespace clsn::ui::renderers
 
         background_painter::paint_background(gfx, rgn, btn_clr);
 
-        const auto text_size = gfx.get_text_size(chk_box.get_actual_font(), chk_box.get_text());
+        const auto text_size = gfx.get_text_size(chk_box.get_actual_font(), chk_box.get_caption());
 
         const auto size = text_size.get_height();
 

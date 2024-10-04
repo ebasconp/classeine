@@ -36,7 +36,7 @@ namespace clsn::demo
     auto demo_option_container::init_option(const std::string& name) -> std::shared_ptr<button>
     {
         auto btn = make_and_add<button>();
-        btn->set_text(name);
+        btn->set_caption(name);
         btn->set_action_name(name);
         btn->add_action_listener([this](auto& e) { this->process_action(e); });
 

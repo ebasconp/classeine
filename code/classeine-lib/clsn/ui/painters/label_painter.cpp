@@ -25,7 +25,7 @@ namespace clsn::ui::painters
             gfx.set_draw_color({192, 192, 192});
             gfx.draw_text(rgn + region{1, 1, 0, 0},
                           ctrl.get_actual_font(),
-                          ctrl.get_text(),
+                          ctrl.get_caption(),
                           info.horizontal_alignment,
                           info.vertical_alignment);
         }
@@ -37,7 +37,7 @@ namespace clsn::ui::painters
 
         gfx.draw_text(rgn,
                       ctrl.get_actual_font(),
-                      ctrl.get_text(),
+                      ctrl.get_caption(),
                       info.horizontal_alignment,
                       info.vertical_alignment);
     }

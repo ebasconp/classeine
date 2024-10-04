@@ -22,7 +22,7 @@ namespace clsn::demo
 
     demo_window::demo_window()
     {
-        set_text("Classeine");
+        set_caption("Classeine");
         set_size({800, 600});
 
         init_container();
@@ -55,6 +55,6 @@ namespace clsn::demo
 
     void demo_window::set_title(const std::string& title)
     {
-        m_label->set_text(title);
+        m_label->set_caption(title);
     }
 }

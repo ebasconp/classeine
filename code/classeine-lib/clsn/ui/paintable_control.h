@@ -14,7 +14,7 @@ namespace clsn::ui
     class paintable_control : public clsn::ui::control
     {
     public:
-        paintable_control(std::string_view name);
+        explicit paintable_control(std::string_view name);
 
         CLSN_PROPERTY(background_color, std::optional<draw::color>, true);
         CLSN_PROPERTY(font, std::optional<clsn::draw::font>, true);
