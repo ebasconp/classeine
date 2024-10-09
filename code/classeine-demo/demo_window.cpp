@@ -39,17 +39,17 @@ namespace clsn::demo
 
         (*this)().add(m_option_container, dual_layout_constraint::use_preferred_size);
 
-        auto right_container = (*this)().make_and_add<dual_layout_container>(dual_layout_constraint::use_all_available_space);
+        auto right_container = (*this)().add(control::make<dual_layout_container>(), dual_layout_constraint::use_all_available_space);
         right_container->set_orientation(dual_layout_orientation::vertical);
 
-        m_label = right_container->make_and_add<label>(dual_layout_constraint::use_preferred_size);
+        m_label = right_container->add(control::make<label>(), dual_layout_constraint::use_preferred_size);
         m_label->set_preferred_size(dimension{0, 40});
         m_label->set_font(ui_manager::get_instance().get_font("", "default_bold_font").add_size(5));
         m_label->set_background_color(colors::make_white());
         m_label->set_horizontal_alignment(text_horizontal_alignment::center);
         set_title("Classeine Demo");
 
-        m_content_pane = right_container->make_and_add<dynamic_content_pane>(dual_layout_constraint::use_all_available_space);
+        m_content_pane = right_container->add(control::make<dynamic_content_pane>(), dual_layout_constraint::use_all_available_space);
         m_content_pane->set_background_color(clsn::draw::color{128, 0, 64});
     }
 

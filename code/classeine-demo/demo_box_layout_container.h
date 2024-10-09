@@ -25,7 +25,7 @@ namespace clsn::demo
     public:
         demo_box_layout_container()
         {
-            m_button  = this->template make_and_add<button>();
+            m_button  = this->add(control::make<button>());
             m_button->set_caption("Click me to toggle UI theme");
             m_button->set_background_color(draw::colors::make_red());
             m_button->set_foreground_color(draw::colors::make_white());
@@ -36,14 +36,14 @@ namespace clsn::demo
                 _ui_mgr.install_theme(theme_name == "light" ? "dark" : "light");
             });
 
-            m_control = this->template make_and_add<empty_control>();
+            m_control = this->add(control::make<empty_control>());
             m_control->set_renderer(std::make_unique<renderers::customizable_renderer>([](auto& gfx, auto& rgn, auto&)
             {
                 gfx.set_draw_color(draw::colors::make_yellow());
                 gfx.draw_fill_rectangle(rgn);
             }));
 
-            m_label = this->template make_and_add<label>();
+            m_label = this->add(control::make<label>());
             m_label->set_caption("This is a label");
             m_label->set_background_color(draw::colors::make_blue());
             m_label->set_foreground_color(draw::colors::make_white());
