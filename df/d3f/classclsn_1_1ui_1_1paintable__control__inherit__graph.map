@@ -14,7 +14,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,198,353,198,353,203,319,203"/>
 <area shape="rect" id="Node000003" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="5,188,136,213"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="150,198,184,198,184,203,150,203"/>
-<area shape="rect" id="Node000005" href="$d4/d34/classclsn_1_1ui_1_1constrained__container.html" title=" " alt="" coords="793,11,980,51"/>
+<area shape="rect" id="Node000005" href="$d4/d34/classclsn_1_1ui_1_1constrained__container.html" title="A container that manages controls with associated constraints." alt="" coords="793,11,980,51"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="736,29,793,29,793,34,736,35"/>
 <area shape="rect" id="Node000008" href="$d9/df3/classclsn_1_1ui_1_1clickable__control.html" title=" " alt="" coords="820,75,953,115"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="712,173,724,166,747,147,757,136,772,126,819,108,821,113,775,131,761,141,751,150,727,171,714,177"/>

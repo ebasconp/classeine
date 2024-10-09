@@ -16,7 +16,7 @@
 <area shape="poly" id="edge17_Node000004_Node000018" title=" " alt="" coords="497,224,621,281,619,286,495,229"/>
 <area shape="rect" id="Node000031" href="$d6/d4f/classclsn_1_1ui_1_1content__pane.html" title="A base class representing a content pane with layout and event handling capabilities." alt="" coords="583,524,747,549"/>
 <area shape="poly" id="edge30_Node000004_Node000031" title=" " alt="" coords="463,231,658,522,653,525,459,233"/>
-<area shape="rect" id="Node000006" href="$d4/d34/classclsn_1_1ui_1_1constrained__container.html" title=" " alt="" coords="827,11,1013,51"/>
+<area shape="rect" id="Node000006" href="$d4/d34/classclsn_1_1ui_1_1constrained__container.html" title="A container that manages controls with associated constraints." alt="" coords="827,11,1013,51"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="770,29,826,29,826,34,770,35"/>
 <area shape="rect" id="Node000009" href="$d9/df3/classclsn_1_1ui_1_1clickable__control.html" title=" " alt="" coords="853,75,987,115"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="745,173,757,166,781,147,791,136,805,126,852,108,854,113,808,131,794,141,784,150,760,171,747,177"/>

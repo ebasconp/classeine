@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"d8/dfb/classclsn_1_1core_1_1configuration.html":[5,0,0,0,0],
 "d8/dfb/classclsn_1_1core_1_1configuration.html#a1e1c24056bde1cf26a316485112660b3":[5,0,0,0,0,2],
 "d8/dfb/classclsn_1_1core_1_1configuration.html#a3c5efe4e9a71a9d0bfbf192076636240":[5,0,0,0,0,0],
 "d8/dfb/classclsn_1_1core_1_1configuration.html#a7450408ec52433c8823e0814615436f2":[5,0,0,0,0,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "dd/db4/classclsn_1_1ui_1_1painters_1_1radio__button__painter.html":[5,0,0,2,4,5],
 "dd/de5/classclsn_1_1ui_1_1renderers_1_1container__renderer.html":[5,0,0,2,5,2],
 "dd/de5/classclsn_1_1ui_1_1renderers_1_1container__renderer.html#a15be7a12a608343082d39f10ed83aaf1":[5,0,0,2,5,2,0],
-"dd/df1/dark__amatista__ui__theme_8cpp.html":[6,0,0,0,0,2,0,4]
+"dd/df1/dark__amatista__ui__theme_8cpp.html":[6,0,0,0,0,2,0,4],
+"de/d04/classclsn_1_1draw_1_1region.html":[5,0,0,1,6]
 };

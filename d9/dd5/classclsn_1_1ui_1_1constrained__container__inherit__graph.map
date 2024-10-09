@@ -1,5 +1,5 @@
 <map id="clsn::ui::constrained_container&lt; Constraint &gt;" name="clsn::ui::constrained_container&lt; Constraint &gt;">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,343,192,383"/>
+<area shape="rect" id="Node000001" title="A container that manages controls with associated constraints." alt="" coords="5,343,192,383"/>
 <area shape="rect" id="Node000002" href="$d2/d50/classclsn_1_1ui_1_1container.html" title=" " alt="" coords="8,240,189,295"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,308,101,343,96,343,96,308"/>
 <area shape="rect" id="Node000003" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="30,152,167,192"/>

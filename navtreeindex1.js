@@ -12,14 +12,13 @@ var NAVTREEINDEX1 =
 "d4/d10/mouse__click__event_8h.html#a8bce6b066775e7135f4175a129368ae0a6375592a2d987630e9bf9afd9e7de973":[6,0,0,0,0,2,1,7,1,1],
 "d4/d10/mouse__click__event_8h_source.html":[6,0,0,0,0,2,1,7],
 "d4/d34/classclsn_1_1ui_1_1constrained__container.html":[5,0,0,2,10],
-"d4/d34/classclsn_1_1ui_1_1constrained__container.html#a08f7b6202b964f857c5f4c9f735ebc06":[5,0,0,2,10,8],
+"d4/d34/classclsn_1_1ui_1_1constrained__container.html#a04646941c42c4abe5e0cfb203d5f9335":[5,0,0,2,10,4],
+"d4/d34/classclsn_1_1ui_1_1constrained__container.html#a08f7b6202b964f857c5f4c9f735ebc06":[5,0,0,2,10,7],
 "d4/d34/classclsn_1_1ui_1_1constrained__container.html#a1cf66c0c38c18d00ade2dd9c6fbef58d":[5,0,0,2,10,1],
-"d4/d34/classclsn_1_1ui_1_1constrained__container.html#a627d6caa07d71b7602672fa51245be58":[5,0,0,2,10,6],
 "d4/d34/classclsn_1_1ui_1_1constrained__container.html#a7fd4d59574fd52223657351a380bbace":[5,0,0,2,10,5],
 "d4/d34/classclsn_1_1ui_1_1constrained__container.html#a8da48e14bd412302b35c9b3ffd3addbf":[5,0,0,2,10,0],
-"d4/d34/classclsn_1_1ui_1_1constrained__container.html#a8e8dfb002d34c9c8af4059b628361412":[5,0,0,2,10,4],
 "d4/d34/classclsn_1_1ui_1_1constrained__container.html#acf55189114b32282398c41e3ba877954":[5,0,0,2,10,3],
-"d4/d34/classclsn_1_1ui_1_1constrained__container.html#ad8dc7dc696c1616acd092b91aebe0b13":[5,0,0,2,10,7],
+"d4/d34/classclsn_1_1ui_1_1constrained__container.html#ad8dc7dc696c1616acd092b91aebe0b13":[5,0,0,2,10,6],
 "d4/d34/classclsn_1_1ui_1_1constrained__container.html#ae981042c03f56be85a5941ddaaa67ea5":[5,0,0,2,10,2],
 "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html":[5,0,0,2,3,6],
 "d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html#a2ee15a5a46ec7b9d6e2d3af2adc574c7":[5,0,0,2,3,6,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "d8/df8/classclsn_1_1draw_1_1font.html#aa9e172a2a875c56a3a12652fe66805a3":[5,0,0,1,3,2],
 "d8/df8/classclsn_1_1draw_1_1font.html#ac66d8ab7ce9273c431ca9474cafb0620":[5,0,0,1,3,3],
 "d8/df8/classclsn_1_1draw_1_1font.html#ad3ba18e196b7a84be269638495189deb":[5,0,0,1,3,4],
-"d8/df8/classclsn_1_1draw_1_1font.html#adb25f2d74425a09c07c51ed92236510b":[5,0,0,1,3,6]
+"d8/df8/classclsn_1_1draw_1_1font.html#adb25f2d74425a09c07c51ed92236510b":[5,0,0,1,3,6],
+"d8/dfb/classclsn_1_1core_1_1configuration.html":[5,0,0,0,0]
 };
