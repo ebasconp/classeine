@@ -7,25 +7,24 @@
 
 namespace clsn::ui
 {
-    tab_page::tab_page(std::shared_ptr<control> control_ptr, std::string_view name)
-    : m_control_ptr{control_ptr}
-    , m_name{name}
+    tab_page::tab_page(std::string_view name, std::shared_ptr<control> control_ptr)
+    : m_name{name}
     , m_visible{true}
+    , m_control_ptr{control_ptr}
     {
     }
 
-    auto tab_page::get_control_ptr() const -> std::shared_ptr<control>
+    auto tab_page::get_name() const -> const std::string& { return m_name; }
+    auto tab_page::is_visible() const -> bool { return m_visible; }
+
+    auto tab_page::get_control_ptr() -> std::shared_ptr<control>
     {
         return m_control_ptr;
     }
 
-    auto tab_page::get_name() const -> const std::string&
+    auto tab_page::get_control_ptr() const -> const std::shared_ptr<control>
     {
-        return m_name;
+        return m_control_ptr;
     }
 
-    auto tab_page::is_visible() const -> bool
-    {
-        return m_visible;
-    }
 }
