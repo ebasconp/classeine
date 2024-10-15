@@ -19,26 +19,22 @@ namespace clsn::ui
         using base_class = static_content_pane;
 
         _private::tab_control_view& m_view;
-        std::vector<std::unique_ptr<tab_page>> m_pages;
+        std::vector<std::shared_ptr<tab_page_base>> m_pages;
 
     public:
         explicit tab_control();
 
-        template <typename ControlType>
-        auto add(std::string_view name, const std::shared_ptr<ControlType>& ctrl_ptr) -> std::pair<tab_page&, std::shared_ptr<ControlType>>
-        {
-            auto& page = m_pages.emplace_back(std::make_unique<tab_page>(ctrl_ptr, name));
-
-            m_view.add(*page);
-
-            return {*page, ctrl_ptr};
-        }
-
         template <typename ControlType, typename... Args>
-        auto make_and_add(std::string_view name, Args&&... args) -> std::pair<tab_page&, std::shared_ptr<ControlType>>
+        auto make_and_add(std::string_view name, Args&&... args) -> std::shared_ptr<tab_page_adapter<ControlType>>
         {
-            auto ctrl_ptr = control::make<ControlType>(std::forward<Args>(args)...);
-            return add(name, ctrl_ptr);
+            auto ctrl = control::make<ControlType>(std::forward<Args>(args)...);
+
+            auto new_ptr = std::make_shared<tab_page>(name, ctrl);
+            m_pages.push_back(new_ptr);
+
+            m_view.add(*new_ptr);
+
+            return std::make_shared<tab_page_adapter<ControlType>>(*new_ptr);
         }
     };
 }
