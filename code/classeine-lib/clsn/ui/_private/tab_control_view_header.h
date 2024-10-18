@@ -6,6 +6,7 @@
 #pragma once
 
 #include <clsn/ui/flow_layout_container.h>
+#include <clsn/ui/toggle_control_group.h>
 
 #include <clsn/ui/forward.h>
 
@@ -18,6 +19,8 @@ namespace clsn::ui::_private
     {
         core::optional_reference<tab_control_view> m_view_ref;
         std::vector<std::shared_ptr<tab_control_view_header_button>> m_buttons;
+
+        toggle_control_group m_group;
 
     public:
         tab_control_view_header();

@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "tab_control_view_header.h"
+#include <clsn/ui/_private/tab_control_view_header.h>
 
 #include <clsn/ui/dual_layout_container.h>
 #include <clsn/ui/forward.h>
