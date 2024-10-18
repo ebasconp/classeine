@@ -25,6 +25,8 @@ namespace clsn::ui::_private
         auto btn = flow_layout_container::add(control::make<tab_control_view_header_button>());
         m_buttons.push_back(btn);
 
+        m_group.add(btn);
+
         btn->set_page(page);
         btn->add_action_listener([&](auto& e)
         {
