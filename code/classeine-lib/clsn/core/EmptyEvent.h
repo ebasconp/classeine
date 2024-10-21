@@ -5,13 +5,13 @@
 
 #pragma once
 
-#include <clsn/core/event.h>
+#include <clsn/core/Event.h>
 
 namespace clsn::core
 {
-    class empty_event : public event
+    class EmptyEvent : public Event
     {
     public:
-        empty_event() = default;
+        EmptyEvent() = default;
     };
 }

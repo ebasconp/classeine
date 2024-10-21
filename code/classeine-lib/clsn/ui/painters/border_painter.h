@@ -9,11 +9,11 @@
 
 #include <clsn/draw/forward.h>
 
-#include <clsn/core/non_instantiable.h>
+#include <clsn/core/NonInstantiable.h>
 
 namespace clsn::ui::painters
 {
-    class border_painter final : public core::non_instantiable
+    class border_painter final : public core::NonInstantiable
     {
     public:
         static void paint_flat_border(graphics& gfx,

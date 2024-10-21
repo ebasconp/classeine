@@ -9,23 +9,23 @@
 
 #include <clsn/draw/forward.h>
 
-#include <clsn/core/property.h>
+#include <clsn/core/Property.h>
 
 
 namespace clsn::ui
 {
     class window : public captionable_control
     {
-        core::optional_reference<control> m_mouse_grabber_control;
-        core::const_optional_reference<control> m_hovered_control;
+        core::OptionalReference<control> m_mouse_grabber_control;
+        core::constOptionalReference<control> m_hovered_control;
 
     public:
-        explicit window(std::string_view section_name);
+        explicit window(std::string_view sectionName);
 
-        CLSN_HEADER_PROPERTY(position, clsn::draw::point, true)
-        CLSN_HEADER_PROPERTY(minimum_size, clsn::draw::dimension, true)
-        CLSN_HEADER_PROPERTY(size, clsn::draw::dimension, true)
-        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(resizable, true, true)
+        CLSN_HEADER_PROPERTY(Position, clsn::draw::point, true)
+        CLSN_HEADER_PROPERTY(MinimumSize, clsn::draw::dimension, true)
+        CLSN_HEADER_PROPERTY(Size, clsn::draw::dimension, true)
+        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(Resizable, true, true)
 
         void grab_mouse(control& control);
         void release_mouse();
@@ -33,7 +33,7 @@ namespace clsn::ui
         auto is_hovered(const control& control) const -> bool;
 
         virtual auto get_control_by_position(const clsn::draw::point& point) const ->
-                            core::const_optional_reference<control> = 0;
+                            core::constOptionalReference<control> = 0;
 
     protected:
         void process_mouse_moved_event(events::mouse_moved_event &e) override;

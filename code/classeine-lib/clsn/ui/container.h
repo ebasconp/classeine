@@ -19,7 +19,7 @@ namespace clsn::ui
     ///
     /// This class serves as a container that can hold UI elements along with their
     /// layout constraints. The key difference between an Element and a Control is that
-    /// an Element is the entity stored in the container, likely representing a control
+    /// an Element is the Entity stored in the container, likely representing a control
     /// with additional information, such as layout constraints.
     ///
     /// @tparam ElementType The type of elements stored in the container.
@@ -36,16 +36,16 @@ namespace clsn::ui
     public:
         /// @brief Constructs a container with the specified section name.
         ///
-        /// @param section_name The name of the section for this container.
-        explicit container(std::string_view section_name)
-        : paintable_control{section_name}
+        /// @param sectionName The name of the section for this container.
+        explicit container(std::string_view sectionName)
+        : paintable_control{sectionName}
         , m_needs_to_paint_the_container{false}
         {
             load_container_defaults();
             init_container_events();
         }
 
-        CLSN_FULL_PROPERTY_WITH_DEFAULT_VALUE(margin, int, true, 0)
+        CLSN_FULL_PROPERTY_WITH_DEFAULT_VALUE(Margin, int, true, 0)
 
     protected:
         /// @brief Adds a new element to the container. Used only for derived
@@ -219,7 +219,7 @@ namespace clsn::ui
             return static_cast<int>(std::count_if(m_elements.cbegin(), m_elements.cend(),
                 [this](const ElementType& e) -> bool
                     {
-                        return to_control(e).is_visible();
+                        return to_control(e).isVisible();
                     }
             ));
         }
@@ -242,15 +242,15 @@ namespace clsn::ui
         /// @param point The position to check.
         /// @return An optional reference to the control at the position.
         auto get_control_by_position(const draw::point &point) const
-                -> core::const_optional_reference<control> override
+                -> core::constOptionalReference<control> override
         {
             for (auto& c : get_controls())
             {
-                if (!c.is_visible() || !c.is_enabled())
+                if (!c.isVisible() || !c.isEnabled())
                     continue;
 
                 auto result = c.get_control_by_position(point);
-                if (result.has_value())
+                if (result.hasValue())
                     return result;
             }
 
@@ -260,7 +260,7 @@ namespace clsn::ui
         /// @brief Sets the parent window for the container and its controls.
         ///
         /// @param pw The optional reference to the parent window.
-        void set_parent_window(core::optional_reference<window> pw) override
+        void set_parent_window(core::OptionalReference<window> pw) override
         {
             control::set_parent_window(pw);
 
@@ -273,7 +273,7 @@ namespace clsn::ui
         /// @brief Sets the parent control for the container and its controls.
         ///
         /// @param parent_control The optional reference to the parent control.
-        void set_parent_control(core::optional_reference<control> parent_control) override
+        void set_parent_control(core::OptionalReference<control> parent_control) override
         {
             control::set_parent_control(parent_control);
 
@@ -289,7 +289,7 @@ namespace clsn::ui
             control.set_parent_window(get_parent_window());
             control.set_parent_control(*this);
 
-            control.add_visible_changed_listener(
+            control.addVisibleChangedListener(
                 [this](auto&)
                 {
                     do_layout();
@@ -301,7 +301,7 @@ namespace clsn::ui
         {
             for (auto& c : get_controls())
             {
-                if (!c.is_visible() || !c.is_enabled())
+                if (!c.isVisible() || !c.isEnabled())
                     continue;
 
                 if (c.contains_point(e.get_point()))
@@ -320,7 +320,7 @@ namespace clsn::ui
 
             for (auto& c : get_controls())
             {
-                if (!c.is_visible() || !c.is_enabled())
+                if (!c.isVisible() || !c.isEnabled())
                     continue;
 
                 if (c.contains_point(e.get_position()))
@@ -334,15 +334,15 @@ namespace clsn::ui
     private:
         void init_container_events()
         {
-            add_enabled_changed_listener([this](auto& e)
+            addEnabledChangedListener([this](auto& e)
             {
                 for (auto& c : get_controls())
                 {
-                    c.set_enabled(e.get_new_value());
+                    c.setEnabled(e.get_new_value());
                 }
             });
 
-            add_actual_size_changed_listener(
+            addActualSizeChangedListener(
                 [this](auto& )
                 {
                     do_layout();
@@ -352,13 +352,13 @@ namespace clsn::ui
         void load_container_defaults()
         {
             auto& uiManager = clsn::ui::ui_manager::get_instance();
-            auto section_name = get_default_section_name();
+            auto sectionName = get_default_section_name();
 
-            set_background_color(uiManager.get_color(
-                section_name, "container_background_color"));
+            setBackgroundColor(uiManager.get_color(
+                sectionName, "container_background_color"));
 
-            set_foreground_color(uiManager.get_color(
-                section_name, "container_foreground_color"));
+            setForegroundColor(uiManager.get_color(
+                sectionName, "container_foreground_color"));
         }
     };
 }

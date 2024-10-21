@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <clsn/core/non_instantiable.h>
+#include <clsn/core/NonInstantiable.h>
 
 #include <clsn/ui/forward.h>
 #include <clsn/ui/graphics.h>
@@ -20,7 +20,7 @@ namespace clsn::ui::painters
         clsn::draw::text_vertical_alignment vertical_alignment;
     };
 
-    class label_painter final : public core::non_instantiable
+    class label_painter final : public core::NonInstantiable
     {
     public:
         static void paint_label(graphics& gfx,

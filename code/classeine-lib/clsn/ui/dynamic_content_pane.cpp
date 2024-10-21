@@ -46,7 +46,7 @@ namespace clsn::ui
         invalidate();
     }
 
-    auto dynamic_content_pane::get_actual_inner_control() -> core::optional_reference<control>
+    auto dynamic_content_pane::get_actual_inner_control() -> core::OptionalReference<control>
     {
         if (m_inner_control == nullptr)
             return {};
@@ -54,7 +54,7 @@ namespace clsn::ui
         return *m_inner_control.get();
     }
 
-    auto dynamic_content_pane::get_actual_inner_control() const -> core::const_optional_reference<control>
+    auto dynamic_content_pane::get_actual_inner_control() const -> core::constOptionalReference<control>
     {
         if (m_inner_control == nullptr)
             return {};

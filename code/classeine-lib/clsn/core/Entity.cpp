@@ -3,69 +3,69 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include <clsn/core/entity.h>
+#include <clsn/core/Entity.h>
 
-#include <clsn/core/console.h>
+#include <clsn/core/Console.h>
 
 #include <iostream>
 
 namespace clsn::core
 {
 #ifdef _CLSN_DEBUG_
-    inline std::atomic<int> entity::m_instances_created{0};
-    inline std::atomic<int> entity::m_instances_destroyed{0};
-    inline std::unordered_set<entity*> entity::m_living_entities;
-    inline std::unordered_map<std::string, int> entity::m_counters;
+    inline std::atomic<int> Entity::m_instancesCreated{0};
+    inline std::atomic<int> Entity::m_instancesDestroyed{0};
+    inline std::unordered_set<Entity*> Entity::m_livingEntities;
+    inline std::unordered_map<std::string, int> Entity::m_counters;
 #endif
 
-    entity::entity()
+    Entity::Entity()
     {
 #ifdef _CLSN_DEBUG_
-        ++m_instances_created;
-        m_living_entities.insert(this);
+        ++m_instancesCreated;
+        m_livingEntities.insert(this);
 #endif
     }
 
-    entity::entity(const entity&)
+    Entity::Entity(const Entity&)
     {
 #ifdef _CLSN_DEBUG_
-        ++m_instances_created;
-        m_living_entities.insert(this);
+        ++m_instancesCreated;
+        m_livingEntities.insert(this);
 #endif
     }
 
-    entity::entity(entity&&) noexcept
+    Entity::Entity(Entity&&) noexcept
     {
 #ifdef _CLSN_DEBUG_
-        ++m_instances_created;
-        m_living_entities.insert(this);
+        ++m_instancesCreated;
+        m_livingEntities.insert(this);
 #endif
     }
 
-    entity::~entity()
+    Entity::~Entity()
     {
 #ifdef _CLSN_DEBUG_
-        ++m_instances_destroyed;
-        m_living_entities.erase(this);
+        ++m_instancesDestroyed;
+        m_livingEntities.erase(this);
 #endif
     }
 
-    void entity::debug_count(std::string_view key) const
+    void Entity::debugCount(std::string_view key) const
     {
 #ifdef _CLSN_DEBUG_
         m_counters[std::string{key}]++;
 #endif
     }
 
-    auto entity::to_string() const -> std::string
+    auto Entity::toString() const -> std::string
     {
-        return clsn::core::strings::format("({}): {}", typeid(*this).name(), this);
+        return clsn::core::Strings::format("({}): {}", typeid(*this).name(), this);
     }
 
-    void entity::dump()
+    void Entity::dump()
     {
 #ifdef _CLSN_DEBUG_
-        auto instances_left_count = m_instances_created - m_instances_destroyed;
+        auto instances_left_count = m_instancesCreated - m_instancesDestroyed;
         std::cout
             << "*********************************************************\n"
             << "Classeine number of instances left:   "
@@ -74,11 +74,11 @@ namespace clsn::core
 
         if (instances_left_count != 0)
         {
-            clsn::core::console::debug("Living entities");
+            clsn::core::Console::debug("Living entities");
 
-            for (auto& p : m_living_entities)
+            for (auto& p : m_livingEntities)
             {
-                clsn::core::console::debug("* {}", *p);
+                clsn::core::Console::debug("* {}", *p);
             }
         }
 

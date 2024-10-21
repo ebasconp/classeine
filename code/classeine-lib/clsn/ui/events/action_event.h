@@ -16,6 +16,6 @@ namespace clsn::ui::events
     public:
         explicit action_event(control& ctrl, const std::string& action_name);
 
-        auto get_action_name() const -> const std::string&;
+        auto getActionName() const -> const std::string&;
     };
 }

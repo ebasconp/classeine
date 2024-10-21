@@ -5,22 +5,22 @@
 
 #pragma once
 
-#include <clsn/core/entity.h>
+#include <clsn/core/Entity.h>
 
 namespace clsn::core
 {
-    class event : public entity
+    class Event : public Entity
     {
         bool m_consumed;
 
     public:
-        ~event() override = default;
+        ~Event() override = default;
 
-        [[nodiscard]] auto is_consumed() const noexcept -> bool;
+        [[nodiscard]] auto isConsumed() const noexcept -> bool;
 
         void consume();
 
     protected:
-        event();
+        Event();
     };
 }

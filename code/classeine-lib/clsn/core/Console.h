@@ -1,19 +1,19 @@
 /// @file
-/// @brief Console utility class for printing formatted strings.
+/// @brief Console utility class for printing formatted Strings.
 /// @copyright © 2024 Ernesto Bascón Pantoja
 /// @license BSD-3-Clause
 
 #pragma once
 
-#include <clsn/core/non_instantiable.h>
-#include <clsn/core/strings.h>
+#include <clsn/core/NonInstantiable.h>
+#include <clsn/core/Strings.h>
 
 #include <iostream>
 
 namespace clsn::core
 {
-    /// @brief Console class with static methods for console services.
-    class console final : public non_instantiable
+    /// @brief Console class with static methods for Console services.
+    class Console final : public NonInstantiable
     {
     public:
         /// @brief Prints a formatted string to the given output stream.
@@ -22,9 +22,9 @@ namespace clsn::core
         /// @param fmtspec The format specification string.
         /// @param args The arguments to format.
         template <typename... Args>
-        static void print_stream(std::ostream& os, std::string_view fmtspec, const Args&... args)
+        static void printStream(std::ostream& os, std::string_view fmtspec, const Args&... args)
         {
-            strings::format_stream(os, fmtspec, args...);
+            Strings::formatStream(os, fmtspec, args...);
         }
 
         /// @brief Prints a formatted string to the given output stream and appends a newline.
@@ -33,9 +33,9 @@ namespace clsn::core
         /// @param fmtspec The format specification string.
         /// @param args The arguments to format.
         template <typename... Args>
-        static void println_stream(std::ostream& os, std::string_view fmtspec, const Args&... args)
+        static void printlnStream(std::ostream& os, std::string_view fmtspec, const Args&... args)
         {
-            strings::format_stream(os, fmtspec, args...);
+            Strings::formatStream(os, fmtspec, args...);
             os << '\n';
         }
 
@@ -46,7 +46,7 @@ namespace clsn::core
         template <typename... Args>
         static void print(std::string_view fmtspec, const Args&... args)
         {
-            print_stream(std::cout, fmtspec, args...);
+            printStream(std::cout, fmtspec, args...);
         }
 
         /// @brief Prints a formatted string to the standard output stream and appends a newline.
@@ -56,7 +56,7 @@ namespace clsn::core
         template <typename... Args>
         static void println(std::string_view fmtspec, const Args&... args)
         {
-            println_stream(std::cout, fmtspec, args...);
+            printlnStream(std::cout, fmtspec, args...);
         }
 
 #ifdef _CLSN_DEBUG_

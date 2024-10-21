@@ -5,20 +5,20 @@
 
 #pragma once
 
-#include <clsn/core/entity.h>
+#include <clsn/core/Entity.h>
 
 #include <utility>
 
 namespace clsn::core
 {
     template <typename Type>
-    class entity_wrapper final : public entity
+    class EntityWrapper final : public Entity
     {
         Type m_value;
 
     public:
         template <typename TType>
-        entity_wrapper(TType&& value)
+        EntityWrapper(TType&& value)
         : m_value{std::forward<TType>(value)}
         {
         }

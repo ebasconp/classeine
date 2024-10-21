@@ -9,7 +9,7 @@
 void test()
 {
     clsn::demo::demo_window dw;
-    dw.set_visible(true);
+    dw.setVisible(true);
 }
 
 int main()

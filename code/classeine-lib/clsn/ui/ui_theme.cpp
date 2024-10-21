@@ -8,9 +8,9 @@
 namespace
 {
     template <typename Type>
-    auto get_from_defaults(const clsn::ui::ui_theme_defaults& defaults, std::string_view section_name, std::string_view name, const Type& error_value) -> const Type&
+    auto get_from_defaults(const clsn::ui::ui_theme_defaults& defaults, std::string_view sectionName, std::string_view name, const Type& error_value) -> const Type&
     {
-        const auto value = defaults.get<Type>(section_name, name);
+        const auto value = defaults.get<Type>(sectionName, name);
         if (!value.has_value())
         {
             const auto theme_value = defaults.get<Type>("", name);
@@ -28,18 +28,18 @@ namespace clsn::ui
 {
     using namespace clsn::draw;
 
-    auto ui_theme::get_color(std::string_view section_name, std::string_view name, const color& error_value) const -> const color&
+    auto ui_theme::get_color(std::string_view sectionName, std::string_view name, const color& error_value) const -> const color&
     {
-        return get_from_defaults<color>(m_defaults_by_name, section_name, name, error_value);
+        return get_from_defaults<color>(m_defaults_by_name, sectionName, name, error_value);
     }
 
-    auto ui_theme::get_dimension(std::string_view section_name, std::string_view name, const dimension& error_value) const -> const dimension&
+    auto ui_theme::get_dimension(std::string_view sectionName, std::string_view name, const dimension& error_value) const -> const dimension&
     {
-        return get_from_defaults<dimension>(m_defaults_by_name, section_name, name, error_value);
+        return get_from_defaults<dimension>(m_defaults_by_name, sectionName, name, error_value);
     }
 
-    auto ui_theme::get_font(std::string_view section_name, std::string_view name, const font& error_value) const -> const font&
+    auto ui_theme::getFont(std::string_view sectionName, std::string_view name, const font& error_value) const -> const font&
     {
-        return get_from_defaults<font>(m_defaults_by_name, section_name, name, error_value);
+        return get_from_defaults<font>(m_defaults_by_name, sectionName, name, error_value);
     }
 }

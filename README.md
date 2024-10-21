@@ -21,10 +21,10 @@ Please note that it is currently in an early stage of development.
   * Event management
   * Properties
   * configuration by sections
-  * `entity` polymorphic base class: Adds some memory profiling tools
-    * `entity_wrapper<T>`: Wrapper for any `T`, inheriting from `entity`
-  * `factory<T>`: Factory that returns an instance of a base class T when invoked.
-  * `lazy<T>`: Object T is constructed the first time this instance is accessed.
+  * `Entity` polymorphic base class: Adds some memory profiling tools
+    * `EntityWrapper<T>`: Wrapper for any `T`, inheriting from `Entity`
+  * `Factory<T>`: Factory that returns an instance of a base class T when invoked.
+  * `Lazy<T>`: Object T is constructed the first time this instance is accessed.
   * Simple and tiny string builder
   
 * **clsn::draw** - library providing drawing primitives

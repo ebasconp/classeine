@@ -10,7 +10,7 @@
 namespace clsn::ui
 {
     /// @brief A base class representing a content pane with layout and
-    /// event handling capabilities.
+    /// Event handling capabilities.
     ///
     /// This class provides methods for managing the layout and handling various
     /// events for a pane that contains content.
@@ -19,8 +19,8 @@ namespace clsn::ui
     protected:
         /// @brief Constructs a content_pane with the given section name.
         ///
-        /// @param section_name The name of the section.
-        explicit content_pane(std::string_view section_name);
+        /// @param sectionName The name of the section.
+        explicit content_pane(std::string_view sectionName);
 
     public:
         /// @brief Perform layout arrangement for the content pane.
@@ -42,17 +42,17 @@ namespace clsn::ui
         /// @param point The position to check for a control.
         /// @return An optional reference to the control at the specified position.
         auto get_control_by_position(const clsn::draw::point& point) const
-            -> core::const_optional_reference<control> override;
+            -> core::constOptionalReference<control> override;
 
     protected:
-        /// @brief Process a mouse click event.
+        /// @brief Process a mouse click Event.
         ///
-        /// @param e The mouse click event to process.
+        /// @param e The mouse click Event to process.
         void process_mouse_click_event(events::mouse_click_event& e) override;
 
-        /// @brief Process a mouse moved event.
+        /// @brief Process a mouse moved Event.
         ///
-        /// @param e The mouse moved event to process.
+        /// @param e The mouse moved Event to process.
         void process_mouse_moved_event(events::mouse_moved_event& e) override;
 
         /// @brief Create the default renderer for the content pane.
@@ -70,13 +70,13 @@ namespace clsn::ui
         /// This is a pure virtual function that must be implemented by derived classes.
         ///
         /// @return An optional reference to the actual inner control.
-        virtual auto get_actual_inner_control() -> core::optional_reference<control> = 0;
+        virtual auto get_actual_inner_control() -> core::OptionalReference<control> = 0;
 
         /// @brief Get the actual inner control contained within the content pane (const version).
         ///
         /// This is a pure virtual function that must be implemented by derived classes.
         ///
         /// @return An optional reference to the actual inner control.
-        virtual auto get_actual_inner_control() const -> core::const_optional_reference<control> = 0;
+        virtual auto get_actual_inner_control() const -> core::constOptionalReference<control> = 0;
     };
 }

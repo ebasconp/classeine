@@ -35,9 +35,9 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
 endif()
 
 add_library(classeine_lib
-        clsn/core/entity.cpp
-        clsn/core/event.cpp
-        clsn/core/strings.cpp
+        clsn/core/Entity.cpp
+        clsn/core/Event.cpp
+        clsn/core/Strings.cpp
 
         clsn/draw/color.cpp
         clsn/draw/colors.cpp

@@ -12,7 +12,7 @@
 
 namespace clsn::ui
 {
-    class renderer_base : public clsn::core::entity
+    class renderer_base : public clsn::core::Entity
     {
     public:
         ~renderer_base() override = default;

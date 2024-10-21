@@ -13,11 +13,11 @@
 
 #include <clsn/draw/dimension.h>
 
-#include <clsn/core/entity.h>
-#include <clsn/core/entity_wrapper.h>
-#include <clsn/core/event_listener_list.h>
-#include <clsn/core/optional_reference.h>
-#include <clsn/core/property.h>
+#include <clsn/core/Entity.h>
+#include <clsn/core/EntityWrapper.h>
+#include <clsn/core/EventListenerList.h>
+#include <clsn/core/OptionalReference.h>
+#include <clsn/core/Property.h>
 
 #include <functional>
 #include <memory>
@@ -33,26 +33,26 @@ namespace clsn::ui
     ///
     /// This class provides basic methods for handling events and
     /// offers the infrastructure for managing rendering and layouts.
-    class control : public clsn::core::entity
+    class control : public clsn::core::Entity
     {
-        clsn::core::event_listener_list<clsn::ui::events::control_resized_event> m_control_resized_listeners;
-        clsn::core::event_listener_list<clsn::ui::events::mouse_click_event> m_mouse_click_listeners;
-        clsn::core::event_listener_list<clsn::ui::events::mouse_moved_event> m_mouse_moved_listeners;
+        clsn::core::EventListenerList<clsn::ui::events::control_resized_event> m_control_resized_listeners;
+        clsn::core::EventListenerList<clsn::ui::events::mouse_click_event> m_mouse_click_listeners;
+        clsn::core::EventListenerList<clsn::ui::events::mouse_moved_event> m_mouse_moved_listeners;
 
-        std::shared_ptr<clsn::core::entity> m_tag;
+        std::shared_ptr<clsn::core::Entity> m_tag;
         mutable std::unique_ptr<renderer_base> m_renderer;
 
         std::string m_default_section_name;
 
         mutable bool m_invalidated;
 
-        core::optional_reference<window>  m_parent_window;
-        core::optional_reference<control> m_parent_control;
+        core::OptionalReference<window>  m_parent_window;
+        core::OptionalReference<control> m_parent_control;
 
     protected:
         /// Constructs a control with a specified section name.
-        /// @param section_name The section name to be used.
-        explicit control(std::string_view section_name);
+        /// @param sectionName The section name to be used.
+        explicit control(std::string_view sectionName);
 
     public:
         // Rule of five implementations for control
@@ -67,42 +67,42 @@ namespace clsn::ui
 
         /// Sets the parent control of this control.
         /// @param parent The parent control.
-        virtual void set_parent_control(core::optional_reference<control> parent);
+        virtual void set_parent_control(core::OptionalReference<control> parent);
 
         /// Gets the parent control of this control.
         /// @return The parent control.
-        auto get_parent_control() -> core::optional_reference<control>;
+        auto get_parent_control() -> core::OptionalReference<control>;
 
         /// Gets the parent control of this control (const version).
         /// @return The parent control.
-        auto get_parent_control() const -> core::const_optional_reference<control>;
+        auto get_parent_control() const -> core::constOptionalReference<control>;
 
         /// Sets the parent window of this control.
         /// @param parent The parent window.
-        virtual void set_parent_window(core::optional_reference<window> parent);
+        virtual void set_parent_window(core::OptionalReference<window> parent);
 
         /// Gets the parent window of this control.
         /// @return The parent window.
-        auto get_parent_window() -> core::optional_reference<window>;
+        auto get_parent_window() -> core::OptionalReference<window>;
 
         /// Gets the parent window of this control (const version).
         /// @return The parent window.
-        auto get_parent_window() const -> core::const_optional_reference<window>;
+        auto get_parent_window() const -> core::constOptionalReference<window>;
 
         /// Property for the actual position of the control.
-        CLSN_HEADER_PROPERTY(actual_position, draw::point, true)
+        CLSN_HEADER_PROPERTY(ActualPosition, draw::point, true)
 
         /// Property for the actual size of the control.
-        CLSN_HEADER_PROPERTY(actual_size, draw::dimension, true)
+        CLSN_HEADER_PROPERTY(ActualSize, draw::dimension, true)
 
-        /// Boolean property indicating whether the control is enabled.
-        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(enabled, true, true)
+        /// Boolean Property indicating whether the control is enabled.
+        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(Enabled, true, true)
 
-        /// Boolean property indicating whether the control is visible.
-        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(visible, true, true)
+        /// Boolean Property indicating whether the control is visible.
+        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(Visible, true, true)
 
         /// Property for the preferred size of the control.
-        CLSN_HEADER_PROPERTY(preferred_size, std::optional<clsn::draw::dimension>, true)
+        CLSN_HEADER_PROPERTY(PreferredSize, std::optional<clsn::draw::dimension>, true)
 
         /// Gets the actual preferred size of the control.
         /// @return The preferred size.
@@ -122,20 +122,20 @@ namespace clsn::ui
         /// @return True if this control is not equal to rhs.
         auto operator!=(const control& rhs) const -> bool;
 
-        /// Adds a mouse click event listener.
-        /// @param event The event listener to add.
-        void add_mouse_click_listener(clsn::core::event_listener<events::mouse_click_event> event);
+        /// Adds a mouse click Event listener.
+        /// @param Event The Event listener to add.
+        void add_mouse_click_listener(clsn::core::EventListener<events::mouse_click_event> Event);
 
-        /// Notifies all registered listeners of a mouse click event.
-        /// @param e The mouse click event to notify.
+        /// Notifies all registered listeners of a mouse click Event.
+        /// @param e The mouse click Event to notify.
         void notify_mouse_click_event(events::mouse_click_event& e);
 
-        /// Adds a mouse moved event listener.
-        /// @param event The event listener to add.
-        void add_mouse_moved_listener(clsn::core::event_listener<events::mouse_moved_event> event);
+        /// Adds a mouse moved Event listener.
+        /// @param Event The Event listener to add.
+        void add_mouse_moved_listener(clsn::core::EventListener<events::mouse_moved_event> Event);
 
-        /// Notifies all registered listeners of a mouse moved event.
-        /// @param e The mouse moved event to notify.
+        /// Notifies all registered listeners of a mouse moved Event.
+        /// @param e The mouse moved Event to notify.
         void notify_mouse_moved_event(events::mouse_moved_event& e);
 
         /// Paints the control within a given region.
@@ -157,7 +157,7 @@ namespace clsn::ui
         template <typename TagType, typename... Args>
         void make_tag(Args&... args)
         {
-            m_tag = std::make_unique<clsn::core::entity_wrapper<TagType>>(
+            m_tag = std::make_unique<clsn::core::EntityWrapper<TagType>>(
                 std::forward<Args>(args)...);
         }
 
@@ -171,7 +171,7 @@ namespace clsn::ui
             if (m_tag == nullptr)
                 return defValue;
 
-            return static_cast<clsn::core::entity_wrapper<TagType>&>(*m_tag).get();
+            return static_cast<clsn::core::EntityWrapper<TagType>&>(*m_tag).get();
         }
 
         /// Sets the renderer for the control.
@@ -215,7 +215,7 @@ namespace clsn::ui
         /// @param point The position to check.
         /// @return The control at the position, or a null reference if none exists.
         virtual auto get_control_by_position(const clsn::draw::point& point) const ->
-                core::const_optional_reference<control>;
+                core::constOptionalReference<control>;
 
         /// Invokes a procedure in the context of the parent window.
         /// @tparam Proc The type of the procedure.
@@ -223,7 +223,7 @@ namespace clsn::ui
         template <typename Proc>
         void invoke_in_parent_window(Proc proc)
         {
-            m_parent_window.safe_invoke(proc);
+            m_parent_window.safeInvoke(proc);
         }
 
         /// Loads the default settings for the control.
@@ -231,15 +231,15 @@ namespace clsn::ui
 
         /// Converts the control to a string representation.
         /// @return The string representation.
-        auto to_string() const -> std::string override;
+        auto toString() const -> std::string override;
 
     protected:
-        /// Processes a mouse click event for the control.
-        /// @param e The mouse click event.
+        /// Processes a mouse click Event for the control.
+        /// @param e The mouse click Event.
         virtual void process_mouse_click_event(events::mouse_click_event& e);
 
-        /// Processes a mouse moved event for the control.
-        /// @param e The mouse moved event.
+        /// Processes a mouse moved Event for the control.
+        /// @param e The mouse moved Event.
         virtual void process_mouse_moved_event(events::mouse_moved_event& e);
 
     private:

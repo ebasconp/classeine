@@ -10,11 +10,11 @@
 
 #include <clsn/draw/forward.h>
 
-#include <clsn/core/non_instantiable.h>
+#include <clsn/core/NonInstantiable.h>
 
 namespace clsn::ui::painters
 {
-    class check_box_painter final : public core::non_instantiable
+    class check_box_painter final : public core::NonInstantiable
     {
     public:
         static void paint_check_box(graphics& gfx, const clsn::draw::region& rgn, const check_box& cb, int size);

@@ -19,8 +19,8 @@ namespace clsn::ui
     public:
         using constraint_type = typename Layout::constraint_type;
 
-        explicit layout_container(std::string_view section_name)
-        : constrained_container<constraint_type>{section_name}
+        explicit layout_container(std::string_view sectionName)
+        : constrained_container<constraint_type>{sectionName}
         {
         }
 
@@ -49,13 +49,13 @@ namespace clsn::ui
             for (int i = 0, j = 0; i < count; i++)
             {
                 auto& ctrl = (*this)[i];
-                if (!ctrl.is_visible())
+                if (!ctrl.isVisible())
                     continue;
 
                 auto& rgn = infos[i].get_output_region();
 
-                ctrl.set_actual_position(rgn.get_position());
-                ctrl.set_actual_size(rgn.get_size());
+                ctrl.setActualPosition(rgn.get_position());
+                ctrl.setActualSize(rgn.getSize());
 
                 j++;
             }

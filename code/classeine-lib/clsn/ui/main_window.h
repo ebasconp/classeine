@@ -57,7 +57,7 @@ namespace clsn::ui
         }
 
         auto get_control_by_position(const draw::point& point) const ->
-            core::const_optional_reference<control> override
+            core::constOptionalReference<control> override
         {
             return m_control.get_control_by_position(point);
         }
@@ -80,7 +80,7 @@ namespace clsn::ui
 
         void init_main_window_visibility()
         {
-            add_visible_changed_listener(
+            addVisibleChangedListener(
                 [this](auto& e)
                 {
                     if (e.get_new_value())
@@ -100,21 +100,21 @@ namespace clsn::ui
             //                "main_window", "size", dimension{300, 200});
             //ETOTODO: MOVE THIS TO THE THEME
 
-            m_control.set_actual_size(draw::dimension{800, 600});
+            m_control.setActualSize(draw::dimension{800, 600});
 
-            add_size_changed_listener([this](auto& e)
+            addSizeChangedListener([this](auto& e)
             {
                 auto& new_value = e.get_new_value();
 
-                set_actual_size(new_value);
-                m_control.set_actual_size(new_value);
+                setActualSize(new_value);
+                m_control.setActualSize(new_value);
                 m_control.invalidate();
             });
 
-            add_actual_size_changed_listener([this](auto& e)
+            addActualSizeChangedListener([this](auto& e)
             {
                 auto& newValue = e.get_new_value();
-                m_control.set_actual_size(newValue);
+                m_control.setActualSize(newValue);
                 m_control.invalidate();
             });
         }

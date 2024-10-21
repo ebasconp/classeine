@@ -5,7 +5,7 @@
 
 #include "region.h"
 
-#include "clsn/core/strings.h"
+#include "clsn/core/Strings.h"
 
 namespace clsn::draw
 {
@@ -22,7 +22,7 @@ namespace clsn::draw
 
     auto region::get_position() const noexcept -> const point& { return m_position; }
 
-    auto region::get_size() const noexcept -> const dimension& { return m_size; }
+    auto region::getSize() const noexcept -> const dimension& { return m_size; }
 
     auto region::get_x() const noexcept -> int { return m_position.get_x(); }
     auto region::get_y() const noexcept -> int { return m_position.get_y(); }
@@ -53,9 +53,9 @@ namespace clsn::draw
             && py > ty && py < (ty + height);
     }
 
-    auto region::to_string() const noexcept -> std::string
+    auto region::toString() const noexcept -> std::string
     {
-        return clsn::core::strings::format("Region. Position: [{}], Size: [{}]",
+        return clsn::core::Strings::format("Region. Position: [{}], Size: [{}]",
                                m_position, m_size);
     }
 }

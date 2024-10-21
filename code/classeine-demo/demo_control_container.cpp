@@ -29,15 +29,15 @@ namespace clsn::demo
         m_buttons = this->add(control::make<ui::hbox_layout_container>());
 
         auto b1 = m_buttons->add(control::make<ui::button>());
-        b1->set_caption("Button");
+        b1->setCaption("Button");
 
         auto b2 = m_buttons->add(control::make<ui::button>());
-        b2->set_caption("Disabled");
-        b2->set_enabled(false);
+        b2->setCaption("Disabled");
+        b2->setEnabled(false);
 
         auto b3 = m_buttons->add(
             control::make<ui::toggle_button>());
-        b3->set_caption("Toggle");
+        b3->setCaption("Toggle");
 
     }
 
@@ -46,24 +46,24 @@ namespace clsn::demo
         m_buttons = this->add(control::make<ui::hbox_layout_container>());
 
         auto label1 = m_buttons->add(control::make<ui::label>());
-        label1->set_caption("Top left");
+        label1->setCaption("Top left");
         label1->set_horizontal_alignment(draw::text_horizontal_alignment::left);
         label1->set_vertical_alignment(draw::text_vertical_alignment::top);
-        label1->set_background_color(draw::color{255, 128, 0});
+        label1->setBackgroundColor(draw::color{255, 128, 0});
 
         auto label2 = m_buttons->add(control::make<ui::label>());
-        label2->set_caption("Middle center");
+        label2->setCaption("Middle center");
         label2->set_horizontal_alignment(draw::text_horizontal_alignment::center);
         label2->set_vertical_alignment(draw::text_vertical_alignment::middle);
-        label2->set_background_color(draw::color{230, 150, 0});
+        label2->setBackgroundColor(draw::color{230, 150, 0});
 
 
         auto label3 = m_buttons->add(control::make<ui::label>());
-        label3->set_caption("Bottom right");
+        label3->setCaption("Bottom right");
         label3->set_horizontal_alignment(draw::text_horizontal_alignment::right);
         label3->set_vertical_alignment(draw::text_vertical_alignment::bottom);
-        label3->set_background_color(draw::color{200, 180, 0});
-        label3->set_enabled(false);
+        label3->setBackgroundColor(draw::color{200, 180, 0});
+        label3->setEnabled(false);
     }
 
     void demo_control_container::make_radio_buttons()
@@ -73,13 +73,13 @@ namespace clsn::demo
         auto enabled_ones = m_radio_buttons->add(control::make<ui::vbox_layout_container>());
 
         auto rb1 = enabled_ones->add(control::make<ui::radio_button>());
-        rb1->set_caption("Option 1");
+        rb1->setCaption("Option 1");
 
         auto rb2 = enabled_ones->add(control::make<ui::radio_button>());
-        rb2->set_caption("Option 2");
+        rb2->setCaption("Option 2");
 
         auto rb3 = enabled_ones->add(control::make<ui::radio_button>());
-        rb3->set_caption("Option 3");
+        rb3->setCaption("Option 3");
 
         m_radio_button_group.add(rb1);
         m_radio_button_group.add(rb2);
@@ -88,17 +88,17 @@ namespace clsn::demo
         auto disabled_ones = m_radio_buttons->add(control::make<ui::vbox_layout_container>());
 
         auto db1 = disabled_ones->add(control::make<ui::radio_button>());
-        db1->set_caption("One");
-        db1->set_checked(true);
-        db1->set_enabled(false);
+        db1->setCaption("One");
+        db1->setChecked(true);
+        db1->setEnabled(false);
 
         auto db2 = disabled_ones->add(control::make<ui::radio_button>());
-        db2->set_caption("Two");
-        db2->set_enabled(false);
+        db2->setCaption("Two");
+        db2->setEnabled(false);
 
         auto db3 = disabled_ones->add(control::make<ui::radio_button>());
-        db3->set_caption("Three");
-        db3->set_enabled(false);
+        db3->setCaption("Three");
+        db3->setEnabled(false);
     }
 
 
@@ -107,8 +107,8 @@ namespace clsn::demo
         m_check_boxes = this->add(control::make<ui::hbox_layout_container>());
 
         auto padding = m_check_boxes->add(control::make<ui::padding_control<ui::empty_control>>());
-        padding->set_foreground_color(draw::color{0, 240, 180});
-        padding->set_size(8);
+        padding->setForegroundColor(draw::color{0, 240, 180});
+        padding->setSize(8);
 
         auto& empty = padding->get_inner_control();
         empty.set_renderer(std::make_unique<ui::renderers::customizable_renderer>(
@@ -126,28 +126,28 @@ namespace clsn::demo
         auto enabled_ones = m_check_boxes->add(control::make<ui::vbox_layout_container>());
 
         auto rb1 = enabled_ones->add(control::make<ui::check_box>());
-        rb1->set_caption("Option 1");
+        rb1->setCaption("Option 1");
 
         auto rb2 = enabled_ones->add(control::make<ui::check_box>());
-        rb2->set_caption("Option 2");
+        rb2->setCaption("Option 2");
 
         auto rb3 = enabled_ones->add(control::make<ui::check_box>());
-        rb3->set_caption("Option 3");
+        rb3->setCaption("Option 3");
 
         auto disabled_ones = m_check_boxes->add(control::make<ui::vbox_layout_container>());
 
         auto db1 = disabled_ones->add(control::make<ui::check_box>());
-        db1->set_caption("One");
-        db1->set_enabled(false);
+        db1->setCaption("One");
+        db1->setEnabled(false);
 
         auto db2 = disabled_ones->add(control::make<ui::check_box>());
-        db2->set_caption("Two");
-        db2->set_checked(true);
-        db2->set_enabled(false);
+        db2->setCaption("Two");
+        db2->setChecked(true);
+        db2->setEnabled(false);
 
         auto db3 = disabled_ones->add(control::make<ui::check_box>());
-        db3->set_caption("Three");
-        db3->set_enabled(false);
+        db3->setCaption("Three");
+        db3->setEnabled(false);
 
     }
 }

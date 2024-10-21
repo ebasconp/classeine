@@ -18,28 +18,28 @@ namespace clsn::ui
         m_current_theme = std::make_pair(name, it->second());
         m_current_theme.second->populate_defaults();
 
-        core::empty_event e;
+        core::EmptyEvent e;
         m_theme_changed_listeners.notify(e);
 
         return true;
     }
 
-    auto ui_skin::get_color(std::string_view section_name, std::string_view name) -> const color&
+    auto ui_skin::get_color(std::string_view sectionName, std::string_view name) -> const color&
     {
-        return m_current_theme.second->get_color(section_name, name);
+        return m_current_theme.second->get_color(sectionName, name);
     }
 
-    auto ui_skin::get_dimension(std::string_view section_name, std::string_view name) -> const dimension&
+    auto ui_skin::get_dimension(std::string_view sectionName, std::string_view name) -> const dimension&
     {
-        return m_current_theme.second->get_dimension(section_name, name);
+        return m_current_theme.second->get_dimension(sectionName, name);
     }
 
-    auto ui_skin::get_font(std::string_view section_name, std::string_view name) -> const font&
+    auto ui_skin::getFont(std::string_view sectionName, std::string_view name) -> const font&
     {
-        return m_current_theme.second->get_font(section_name, name);
+        return m_current_theme.second->getFont(sectionName, name);
     }
 
-    auto ui_skin::add_theme_changed_listener(core::event_listener<core::empty_event> listener) -> int
+    auto ui_skin::add_theme_changed_listener(core::EventListener<core::EmptyEvent> listener) -> int
     {
         return m_theme_changed_listeners.add(listener);
     }

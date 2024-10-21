@@ -18,16 +18,16 @@
 
 namespace clsn::ui
 {
-    CLSN_CPP_PROPERTY(control, actual_position, draw::point)
-    CLSN_CPP_PROPERTY(control, actual_size, draw::dimension)
+    CLSN_CPP_PROPERTY(control, ActualPosition, draw::point)
+    CLSN_CPP_PROPERTY(control, ActualSize, draw::dimension)
 
-    CLSN_CPP_BOOL_PROPERTY(control, enabled)
-    CLSN_CPP_BOOL_PROPERTY(control, visible)
+    CLSN_CPP_BOOL_PROPERTY(control, Enabled)
+    CLSN_CPP_BOOL_PROPERTY(control, Visible)
 
-    CLSN_CPP_PROPERTY(control, preferred_size, std::optional<clsn::draw::dimension>)
+    CLSN_CPP_PROPERTY(control, PreferredSize, std::optional<clsn::draw::dimension>)
 
-    control::control(std::string_view section_name)
-    : m_default_section_name{section_name}
+    control::control(std::string_view sectionName)
+    : m_default_section_name{sectionName}
     , m_invalidated{true}
     {
         init_control_events();
@@ -37,7 +37,7 @@ namespace clsn::ui
 
     void control::paint(graphics& graphics, const draw::region& region) const
     {
-        debug_count("paint");
+        debugCount("paint");
 
         if (!is_invalidated())
             return;
@@ -50,9 +50,9 @@ namespace clsn::ui
         process_mouse_click_event(e);
     }
 
-    void control::add_mouse_moved_listener(core::event_listener<events::mouse_moved_event> event)
+    void control::add_mouse_moved_listener(core::EventListener<events::mouse_moved_event> Event)
     {
-        m_mouse_moved_listeners.add(std::move(event));
+        m_mouse_moved_listeners.add(std::move(Event));
     }
 
     void control::notify_mouse_moved_event(events::mouse_moved_event& e)
@@ -62,7 +62,7 @@ namespace clsn::ui
 
     void control::process_mouse_click_event(events::mouse_click_event& e)
     {
-        if (!is_enabled())
+        if (!isEnabled())
             return;
 
         if (e.get_status() == events::mouse_click_status::released)
@@ -75,15 +75,15 @@ namespace clsn::ui
 
     void control::process_mouse_moved_event(events::mouse_moved_event& e)
     {
-        if (!is_enabled())
+        if (!isEnabled())
             return;
 
         m_mouse_moved_listeners.notify(e);
     }
 
-    void control::add_mouse_click_listener(core::event_listener<events::mouse_click_event> event)
+    void control::add_mouse_click_listener(core::EventListener<events::mouse_click_event> Event)
     {
-        m_mouse_click_listeners.add(std::move(event));
+        m_mouse_click_listeners.add(std::move(Event));
     }
 
     auto control::get_default_section_name() const -> std::string_view
@@ -98,7 +98,7 @@ namespace clsn::ui
 
     void control::do_layout()
     {
-        debug_count("do_layout");
+        debugCount("do_layout");
     }
 
     void control::invalidate() const noexcept { m_invalidated = true; }
@@ -131,20 +131,20 @@ namespace clsn::ui
     {
         auto invalidate_proc = [this](auto&) { invalidate(); };
 
-        add_visible_changed_listener(invalidate_proc);
+        addVisibleChangedListener(invalidate_proc);
     }
 
-    void control::set_parent_window(core::optional_reference<window> parentWindow)
+    void control::set_parent_window(core::OptionalReference<window> parentWindow)
     {
         m_parent_window = parentWindow;
     }
 
-    core::optional_reference<window> control::get_parent_window()
+    core::OptionalReference<window> control::get_parent_window()
     {
         return m_parent_window;
     }
 
-    core::const_optional_reference<window>
+    core::constOptionalReference<window>
         control::get_parent_window() const
     {
         return m_parent_window.to_const();
@@ -152,11 +152,11 @@ namespace clsn::ui
 
     auto control::contains_point(const draw::point& point) const -> bool
     {
-        return draw::region{m_actual_position.get(), m_actual_size.get()}.contains_point(point);
+        return draw::region{m_propertyActualPosition.get(), m_propertyActualSize.get()}.contains_point(point);
     }
 
     auto control::get_control_by_position(const draw::point& point) const
-        -> core::const_optional_reference<control>
+        -> core::constOptionalReference<control>
     {
         if (this->contains_point(point))
             return *this;
@@ -166,10 +166,10 @@ namespace clsn::ui
 
     auto control::is_hovered() const -> bool
     {
-        if (!m_parent_window.has_value())
+        if (!m_parent_window.hasValue())
             return false;
 
-        return m_parent_window.get_ref().is_hovered(*this);
+        return m_parent_window.getRef().is_hovered(*this);
     }
 
 
@@ -201,7 +201,7 @@ namespace clsn::ui
 
     auto control::get_actual_preferred_size() const -> const draw::dimension&
     {
-        const auto& size = get_preferred_size();
+        const auto& size = getPreferredSize();
         if (size.has_value())
             return size.value();
 
@@ -210,27 +210,27 @@ namespace clsn::ui
 
     auto control::get_actual_bounds() const -> draw::region
     {
-        return { get_actual_position(), get_actual_size() };
+        return { getActualPosition(), getActualSize() };
     }
 
-    void control::set_parent_control(core::optional_reference<control> ctrl)
+    void control::set_parent_control(core::OptionalReference<control> ctrl)
     {
         m_parent_control = ctrl;
     }
 
-    auto control::get_parent_control() -> core::optional_reference<control>
+    auto control::get_parent_control() -> core::OptionalReference<control>
     {
         return m_parent_control;
     }
 
-    auto control::get_parent_control() const -> core::const_optional_reference<control>
+    auto control::get_parent_control() const -> core::constOptionalReference<control>
     {
         return m_parent_control.to_const();
     }
 
-    auto control::to_string() const -> std::string
+    auto control::toString() const -> std::string
     {
         using namespace clsn::core;
-        return strings::format("({}): {}", typeid(*this).name(), this);
+        return Strings::format("({}): {}", typeid(*this).name(), this);
     }
 }

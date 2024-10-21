@@ -26,9 +26,9 @@ namespace clsn::ui::painters
         const auto x = rgn.get_x();
         const auto y = rgn.get_y();
 
-        const auto is_enabled = rd_btn.is_enabled();
+        const auto isEnabled = rd_btn.isEnabled();
 
-        gfx.set_draw_color(color{0, 0, 255}.to_gray_if(!is_enabled));
+        gfx.set_draw_color(color{0, 0, 255}.to_gray_if(!isEnabled));
         gfx.draw_fill_circle({x, y, size, size});
         gfx.draw_fill_circle({x + 1, y + 1, size - 2, size - 2});
 
@@ -37,17 +37,17 @@ namespace clsn::ui::painters
         gfx.set_draw_color(bg_color);
 
         const auto white = colors::make_white();
-        const bool is_checked = rd_btn.is_checked();
+        const bool isChecked = rd_btn.isChecked();
 
-        gfx.set_draw_color(is_checked ? color{0, 0, 128}.to_gray_if(!is_enabled)
+        gfx.set_draw_color(isChecked ? color{0, 0, 128}.to_gray_if(!isEnabled)
                                       : white); // Black color
         gfx.draw_fill_circle({x + 2, y + 2, size - 4, size - 4});
 
-        gfx.set_draw_color(is_checked ? color{0, 0, 192}.to_gray_if(!is_enabled)
+        gfx.set_draw_color(isChecked ? color{0, 0, 192}.to_gray_if(!isEnabled)
                                       : white); // Black color
         gfx.draw_fill_circle({x + 3, y + 3, size - 6, size - 6});
 
-        gfx.set_draw_color(is_checked ? color{128, 255, 128}.to_gray_if(!is_enabled)
+        gfx.set_draw_color(isChecked ? color{128, 255, 128}.to_gray_if(!isEnabled)
                                       : white); // Black color
         gfx.draw_fill_circle({x + 4, y + 4, size - 8, size - 8});
     }

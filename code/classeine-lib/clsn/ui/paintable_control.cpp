@@ -8,17 +8,17 @@
 
 namespace clsn::ui
 {
-    CLSN_CPP_PROPERTY(paintable_control, background_color, std::optional<draw::color>)
-    CLSN_CPP_PROPERTY(paintable_control, font, std::optional<clsn::draw::font>)
-    CLSN_CPP_PROPERTY(paintable_control, foreground_color, std::optional<clsn::draw::color>)
+    CLSN_CPP_PROPERTY(paintable_control, BackgroundColor, std::optional<draw::color>)
+    CLSN_CPP_PROPERTY(paintable_control, Font, std::optional<clsn::draw::font>)
+    CLSN_CPP_PROPERTY(paintable_control, ForegroundColor, std::optional<clsn::draw::color>)
 
-    paintable_control::paintable_control(std::string_view section_name)
-    : control{section_name}
+    paintable_control::paintable_control(std::string_view sectionName)
+    : control{sectionName}
     {}
 
     auto paintable_control::get_actual_background_color() const -> const draw::color&
     {
-        const auto& color = get_background_color();
+        const auto& color = getBackgroundColor();
         if (color.has_value())
             return color.value();
 
@@ -28,7 +28,7 @@ namespace clsn::ui
 
     auto paintable_control::get_actual_foreground_color() const -> const draw::color&
     {
-        const auto& color = get_foreground_color();
+        const auto& color = getForegroundColor();
         if (color.has_value())
             return color.value();
 
@@ -38,10 +38,10 @@ namespace clsn::ui
 
     auto paintable_control::get_actual_font() const -> const draw::font&
     {
-        const auto& font = get_font();
+        const auto& font = getFont();
         if (font.has_value())
             return font.value();
 
-        return ui_manager::get_instance().get_font(get_default_section_name(), "default_regular_font");
+        return ui_manager::get_instance().getFont(get_default_section_name(), "default_regular_font");
     }
 }

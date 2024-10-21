@@ -7,17 +7,17 @@
 
 #include "ui_manager.h"
 
-#include <clsn/core/console.h>
+#include <clsn/core/Console.h>
 
 namespace clsn::ui
 {
-    CLSN_CPP_PROPERTY(window, position, clsn::draw::point)
-    CLSN_CPP_PROPERTY(window, minimum_size, clsn::draw::dimension)
-    CLSN_CPP_PROPERTY(window, size, clsn::draw::dimension)
-    CLSN_CPP_BOOL_PROPERTY(window, resizable)
+    CLSN_CPP_PROPERTY(window, Position, clsn::draw::point)
+    CLSN_CPP_PROPERTY(window, MinimumSize, clsn::draw::dimension)
+    CLSN_CPP_PROPERTY(window, Size, clsn::draw::dimension)
+    CLSN_CPP_BOOL_PROPERTY(window, Resizable)
 
-    window::window(std::string_view section_name)
-    : captionable_control(section_name)
+    window::window(std::string_view sectionName)
+    : captionable_control(sectionName)
     {
         init_visibility();
         init_defaults();
@@ -32,15 +32,15 @@ namespace clsn::ui
         auto& dimension = ui_manager::get_instance().getDefault(
             get_default_section_name(), "size", dimension{300, 200});
 
-        set_actual_size(dimension);*/
+        setActualSize(dimension);*/
 
-        set_minimum_size({50, 50});
-        set_actual_position({300, 200});
+        setMinimumSize({50, 50});
+        setActualPosition({300, 200});
     }
 
     void window::init_visibility()
     {
-        set_visible(false);
+        setVisible(false);
     }
 
     void window::grab_mouse(control& ctrl)
@@ -50,9 +50,9 @@ namespace clsn::ui
 
     void window::release_mouse()
     {
-        if (m_mouse_grabber_control.has_value())
+        if (m_mouse_grabber_control.hasValue())
         {
-            m_mouse_grabber_control.get_ref().release_mouse();
+            m_mouse_grabber_control.getRef().release_mouse();
             m_mouse_grabber_control = std::nullopt;
         }
     }
@@ -62,27 +62,27 @@ namespace clsn::ui
         auto currently_hovered = get_control_by_position(e.get_position());
         if (m_hovered_control != currently_hovered)
         {
-            if (m_hovered_control.has_value())
+            if (m_hovered_control.hasValue())
             {
-                m_hovered_control.get_ref().invalidate();
+                m_hovered_control.getRef().invalidate();
             }
 
             m_hovered_control = currently_hovered;
 
-            if (m_hovered_control.has_value())
+            if (m_hovered_control.hasValue())
             {
-                clsn::core::console::debug("window::process_mouse_moved_event: Ctrl: {}", m_hovered_control.get_ref());
-                m_hovered_control.get_ref().invalidate();
+                clsn::core::Console::debug("window::process_mouse_moved_event: Ctrl: {}", m_hovered_control.getRef());
+                m_hovered_control.getRef().invalidate();
             }
         }
     }
 
     auto window::is_hovered(const control& control) const -> bool
     {
-        if (!m_hovered_control.has_value())
+        if (!m_hovered_control.hasValue())
             return false;
 
-        return control == m_hovered_control.get_ref();
+        return control == m_hovered_control.getRef();
     }
 
 }

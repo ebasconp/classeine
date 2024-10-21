@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "clsn/core/strings.h"
+#include "clsn/core/Strings.h"
 
 namespace clsn::draw
 {
@@ -36,8 +36,8 @@ namespace clsn::draw
         return { m_x + other.m_x, m_y + other.m_y };
     }
 
-    auto point::to_string() const -> std::string
+    auto point::toString() const -> std::string
     {
-        return clsn::core::strings::format("Point: [{}, {}]", m_x, m_y);
+        return clsn::core::Strings::format("Point: [{}, {}]", m_x, m_y);
     }
 }

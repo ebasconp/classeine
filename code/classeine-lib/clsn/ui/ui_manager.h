@@ -10,7 +10,7 @@
 
 #include "clsn/draw/font_info.h"
 
-#include "clsn/core/entity.h"
+#include "clsn/core/Entity.h"
 
 #include <memory>
 #include <string>
@@ -18,7 +18,7 @@
 
 namespace clsn::ui
 {
-    class ui_manager final : public clsn::core::entity
+    class ui_manager final : public clsn::core::Entity
     {
         std::unique_ptr<ui_skin> m_skin;
 
@@ -50,15 +50,15 @@ namespace clsn::ui
 
         auto get_renderer_by_control(const control& ctrl) const -> std::shared_ptr<clsn::ui::renderer_base>;
 
-        auto get_color(std::string_view section_name, std::string_view name) const -> const draw::color&;
-        auto get_dimension(std::string_view section_name, std::string_view name) const -> const draw::dimension&;
-        auto get_font(std::string_view section_name, std::string_view name) const -> const draw::font&;
+        auto get_color(std::string_view sectionName, std::string_view name) const -> const draw::color&;
+        auto get_dimension(std::string_view sectionName, std::string_view name) const -> const draw::dimension&;
+        auto getFont(std::string_view sectionName, std::string_view name) const -> const draw::font&;
 
         void add_font_mapping(const draw::font_info& fontInfo, std::string_view path);
         auto get_path_by_font_info(const draw::font_info&) const noexcept -> std::string_view;
 
         auto install_theme(const std::string& themeName) -> bool;
-        auto add_theme_changed_listener(core::event_listener<core::empty_event> listener) -> int;
+        auto add_theme_changed_listener(core::EventListener<core::EmptyEvent> listener) -> int;
         auto get_current_theme_name() const -> const std::string&;
 
     private:

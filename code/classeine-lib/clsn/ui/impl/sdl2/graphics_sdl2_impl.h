@@ -7,7 +7,7 @@
 
 #include <string_view>
 
-#include "clsn/core/entity.h"
+#include "clsn/core/Entity.h"
 
 #include "clsn/draw/color.h"
 #include "clsn/draw/forward.h"
@@ -18,7 +18,7 @@ struct SDL_Renderer;
 
 namespace clsn::ui::impl::sdl2
 {
-    class graphics_sdl2_impl final : public clsn::core::entity
+    class graphics_sdl2_impl final : public clsn::core::Entity
     {
         SDL_Renderer& m_renderer;
         SDL_Texture* m_texture;

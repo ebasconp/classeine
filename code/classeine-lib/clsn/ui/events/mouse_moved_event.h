@@ -5,13 +5,13 @@
 
 #pragma once
 
-#include "clsn/core/event.h"
+#include "clsn/core/Event.h"
 
 #include "clsn/draw/point.h"
 
 namespace clsn::ui::events
 {
-    class mouse_moved_event : public core::event
+    class mouse_moved_event : public core::Event
     {
         clsn::draw::point m_position;
 

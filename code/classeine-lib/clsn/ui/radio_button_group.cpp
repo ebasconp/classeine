@@ -24,7 +24,7 @@ namespace clsn::ui
                 if (ptr.get() == &a_radio_button)
                     continue;
 
-                ptr->set_checked(false);
+                ptr->setChecked(false);
                 ptr->invalidate();
             }
         });

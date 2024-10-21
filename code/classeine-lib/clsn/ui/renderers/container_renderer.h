@@ -36,7 +36,7 @@ namespace clsn::ui::renderers
                 return;
             }
 
-            const auto margin = container.get_margin();
+            const auto margin = container.getMargin();
             const clsn::draw::region shift_rgn{
                 margin, margin, -(margin * 2), -(margin * 2)};
 
@@ -44,12 +44,12 @@ namespace clsn::ui::renderers
             for (int i = 0; i < count; i++)
             {
                 auto& control = container[i];
-                if (!control.is_visible() || !control.is_invalidated())
+                if (!control.isVisible() || !control.is_invalidated())
                     continue;
 
                 const draw::region ctrl_rgn{
-                    control.get_actual_position(),
-                    control.get_actual_size()}; // ETOTODOcontrol.getBounds();
+                    control.getActualPosition(),
+                    control.getActualSize()}; // ETOTODOcontrol.getBounds();
 
                 control.paint(gfx, ctrl_rgn + shift_rgn);
                 control.validate();

@@ -16,9 +16,9 @@ namespace clsn::ui
     public:
         explicit paintable_control(std::string_view name);
 
-        CLSN_HEADER_PROPERTY(background_color, std::optional<draw::color>, true)
-        CLSN_HEADER_PROPERTY(font, std::optional<clsn::draw::font>, true)
-        CLSN_HEADER_PROPERTY(foreground_color, std::optional<clsn::draw::color>, true)
+        CLSN_HEADER_PROPERTY(BackgroundColor, std::optional<draw::color>, true)
+        CLSN_HEADER_PROPERTY(Font, std::optional<clsn::draw::font>, true)
+        CLSN_HEADER_PROPERTY(ForegroundColor, std::optional<clsn::draw::color>, true)
 
         auto get_actual_background_color() const -> const clsn::draw::color&;
         auto get_actual_foreground_color() const -> const clsn::draw::color&;

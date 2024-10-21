@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/core/event.h"
+#include "clsn/core/Event.h"
 
 namespace clsn::ui
 {
@@ -14,7 +14,7 @@ namespace clsn::ui
 
 namespace clsn::ui::events
 {
-    class control_event : public core::event
+    class control_event : public core::Event
     {
         control& m_control;
 

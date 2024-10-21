@@ -26,9 +26,9 @@ namespace clsn::demo
         demo_box_layout_container()
         {
             m_button  = this->add(control::make<button>());
-            m_button->set_caption("Click me to toggle UI theme");
-            m_button->set_background_color(draw::colors::make_red());
-            m_button->set_foreground_color(draw::colors::make_white());
+            m_button->setCaption("Click me to toggle UI theme");
+            m_button->setBackgroundColor(draw::colors::make_red());
+            m_button->setForegroundColor(draw::colors::make_white());
             m_button->add_action_listener([](auto&)
             {
                 auto& _ui_mgr = ui::ui_manager::get_instance();
@@ -44,9 +44,9 @@ namespace clsn::demo
             }));
 
             m_label = this->add(control::make<label>());
-            m_label->set_caption("This is a label");
-            m_label->set_background_color(draw::colors::make_blue());
-            m_label->set_foreground_color(draw::colors::make_white());
+            m_label->setCaption("This is a label");
+            m_label->setBackgroundColor(draw::colors::make_blue());
+            m_label->setForegroundColor(draw::colors::make_white());
         }
     };
 }

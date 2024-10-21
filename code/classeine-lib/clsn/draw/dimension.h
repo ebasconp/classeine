@@ -44,6 +44,6 @@ namespace clsn::draw
 
         /// @brief Converts the dimension to a string representation.
         /// @return A std::string representing the dimension.
-        [[nodiscard]] auto to_string() const -> std::string;
+        [[nodiscard]] auto toString() const -> std::string;
     };
 }

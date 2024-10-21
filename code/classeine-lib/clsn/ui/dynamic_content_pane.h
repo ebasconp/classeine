@@ -39,18 +39,18 @@ namespace clsn::ui
         void set_inner_control(const std::shared_ptr<control>& ctrl);
 
     public:
-        /// @brief Gets the actual inner control as a core::optional_reference.
+        /// @brief Gets the actual inner control as a core::OptionalReference.
         ///
         /// This method overrides the get_actual_inner_control method from the base class.
         ///
-        /// @return A core::optional_reference to the inner control.
-        auto get_actual_inner_control() -> core::optional_reference<control> override;
+        /// @return A core::OptionalReference to the inner control.
+        auto get_actual_inner_control() -> core::OptionalReference<control> override;
 
-        /// @brief Gets the actual inner control as a core::const_optional_reference.
+        /// @brief Gets the actual inner control as a core::constOptionalReference.
         ///
         /// This method overrides the get_actual_inner_control method from the base class.
         ///
-        /// @return A core::const_optional_reference to the inner control.
-        auto get_actual_inner_control() const -> core::const_optional_reference<control> override;
+        /// @return A core::constOptionalReference to the inner control.
+        auto get_actual_inner_control() const -> core::constOptionalReference<control> override;
     };
 }

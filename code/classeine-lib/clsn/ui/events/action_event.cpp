@@ -13,7 +13,7 @@ namespace clsn::ui::events
     {
     }
 
-    auto action_event::get_action_name() const -> const std::string&
+    auto action_event::getActionName() const -> const std::string&
     {
         return m_action_name;
     }

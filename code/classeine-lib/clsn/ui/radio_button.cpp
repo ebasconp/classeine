@@ -17,8 +17,8 @@ namespace clsn::ui
 
     void radio_button::toggle()
     {
-        if (!is_checked())
-            set_checked(true);
+        if (!isChecked())
+            setChecked(true);
     }
 
     auto radio_button::make_default_renderer() const -> std::unique_ptr<renderer_base>

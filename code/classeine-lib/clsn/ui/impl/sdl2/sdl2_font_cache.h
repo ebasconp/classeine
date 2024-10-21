@@ -23,6 +23,6 @@ namespace clsn::ui::impl::sdl2
         mutable std::unordered_map<clsn::draw::font, sdl2_font_wrapper> m_fonts;
 
     public:
-        optional_ttf_font_ref get_font(const clsn::draw::font& font) const;
+        optional_ttf_font_ref getFont(const clsn::draw::font& font) const;
     };
 }

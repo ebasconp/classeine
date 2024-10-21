@@ -15,7 +15,7 @@
 #include "clsn/draw/point.h"
 #include "clsn/draw/region.h"
 
-#include "clsn/core/system.h"
+#include "clsn/core/System.h"
 
 #include <SDL.h>
 #undef main
@@ -62,7 +62,7 @@ namespace clsn::ui::impl::sdl2
                 {
                     SDL_Log("Error while initializing SDL: %s", SDL_GetError());
 
-                    system::panic("Error while initializing SDL: {}", SDL_GetError());
+                    System::panic("Error while initializing SDL: {}", SDL_GetError());
                     return;
                 }
 
@@ -71,20 +71,20 @@ namespace clsn::ui::impl::sdl2
             }
 
             const int resizable =
-                m_parent_window.is_resizable() ? SDL_WINDOW_RESIZABLE : 0;
+                m_parent_window.isResizable() ? SDL_WINDOW_RESIZABLE : 0;
 
-            m_window = SDL_CreateWindow(m_parent_window.get_caption().c_str(),
+            m_window = SDL_CreateWindow(m_parent_window.getCaption().c_str(),
                                         SDL_WINDOWPOS_CENTERED,
                                         SDL_WINDOWPOS_CENTERED,
-                                        m_parent_window.get_size().get_width(),
-                                        m_parent_window.get_size().get_height(),
+                                        m_parent_window.getSize().get_width(),
+                                        m_parent_window.getSize().get_height(),
                                         SDL_WINDOW_SHOWN | resizable);
             if (m_window == nullptr)
             {
                 SDL_Log("Error while creating window: %s", SDL_GetError());
                 SDL_Quit();
 
-                system::panic("Error while creating window: {}", SDL_GetError());
+                System::panic("Error while creating window: {}", SDL_GetError());
                 return;
             }
 
@@ -98,11 +98,11 @@ namespace clsn::ui::impl::sdl2
                 SDL_DestroyWindow(m_window);
                 SDL_Quit();
 
-                system::panic("Error while creating renderer: {}", SDL_GetError());
+                System::panic("Error while creating renderer: {}", SDL_GetError());
                 return;
             }
 
-            auto& minimumSize = m_parent_window.get_minimum_size();
+            auto& minimumSize = m_parent_window.getMinimumSize();
             SDL_SetWindowMinimumSize(
                 m_window, minimumSize.get_width(), minimumSize.get_height());
 
@@ -139,7 +139,7 @@ namespace clsn::ui::impl::sdl2
 
         void repaintAll(graphics_sdl2_impl& graphics)
         {
-            const draw::region rgn{{0, 0}, m_parent_window.get_actual_size()};
+            const draw::region rgn{{0, 0}, m_parent_window.getActualSize()};
             m_parent_window().paint(graphics, rgn);
             graphics.apply();
         }
@@ -149,19 +149,19 @@ namespace clsn::ui::impl::sdl2
             m_parent_window().do_layout();
             m_parent_window().invalidate();
 
-            graphics_sdl2_impl graphics{*m_renderer, m_parent_window.get_size()};
+            graphics_sdl2_impl graphics{*m_renderer, m_parent_window.getSize()};
 
-            SDL_Event event;
-            while (SDL_WaitEvent(&event))
+            SDL_Event Event;
+            while (SDL_WaitEvent(&Event))
             {
-                switch (event.type)
+                switch (Event.type)
                 {
                     case SDL_QUIT: return;
 
                     case SDL_WINDOWEVENT:
-                        if (event.window.event == SDL_WINDOWEVENT_RESIZED)
+                        if (Event.window.event == SDL_WINDOWEVENT_RESIZED)
                         {
-                            const draw::dimension newSize{event.window.data1, event.window.data2};
+                            const draw::dimension newSize{Event.window.data1, Event.window.data2};
 
                             resizeGraphics(graphics, newSize);
                             process_control_resized_event(newSize);
@@ -172,18 +172,18 @@ namespace clsn::ui::impl::sdl2
 
                     case SDL_MOUSEBUTTONUP:
                     case SDL_MOUSEBUTTONDOWN:
-                        trigger_mouse_click_event(event, event.type);
+                        trigger_mouse_click_event(Event, Event.type);
                         break;
 
                     case SDL_MOUSEMOTION:
-                        trigger_mouse_moved_event(event);
+                        trigger_mouse_moved_event(Event);
                         break;
 
                     default:
                         break;
                 }
 
-                const draw::region rgn{{0, 0}, m_parent_window.get_actual_size()};
+                const draw::region rgn{{0, 0}, m_parent_window.getActualSize()};
                 m_parent_window().paint(graphics, rgn);
                 graphics.apply();
             }
@@ -210,7 +210,7 @@ namespace clsn::ui::impl::sdl2
 
         void process_control_resized_event(const draw::dimension& newSize)
         {
-            m_parent_window.set_actual_size(newSize);
+            m_parent_window.setActualSize(newSize);
         }
     };
 }

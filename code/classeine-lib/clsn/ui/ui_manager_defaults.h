@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/core/configuration.h"
+#include "clsn/core/Configuration.h"
 
 #include "clsn/draw/forward.h"
 
@@ -13,7 +13,7 @@
 
 namespace clsn::ui
 {
-    using ui_manager_defaults = clsn::core::configuration<clsn::draw::color,
+    using ui_manager_defaults = clsn::core::Configuration<clsn::draw::color,
                                                         clsn::draw::dimension,
                                                         clsn::draw::font>;
 }

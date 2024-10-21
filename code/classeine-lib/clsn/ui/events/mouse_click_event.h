@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/core/event.h"
+#include "clsn/core/Event.h"
 
 #include "clsn/draw/point.h"
 
@@ -17,7 +17,7 @@ namespace clsn::ui::events
         pressed
     };
 
-    class mouse_click_event : public core::event
+    class mouse_click_event : public core::Event
     {
         mouse_click_status m_status;
         clsn::draw::point m_point;

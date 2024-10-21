@@ -7,11 +7,11 @@
 
 #include <clsn/draw/color.h>
 
-#include <clsn/core/non_instantiable.h>
+#include <clsn/core/NonInstantiable.h>
 
 namespace clsn::draw
 {
-    class colors : public core::non_instantiable
+    class colors : public core::NonInstantiable
     {
     public:
         [[nodiscard]] static auto make_red() -> color;

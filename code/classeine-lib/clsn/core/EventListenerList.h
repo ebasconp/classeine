@@ -5,25 +5,25 @@
 
 #pragma once
 
-#include <clsn/core/event_listener.h>
+#include <clsn/core/EventListener.h>
 
 #include <vector>
 
 namespace clsn::core
 {
     template <typename EventType>
-    class event_listener_list
+    class EventListenerList
     {
-        struct event_listener_container
+        struct EventListenerContainer
         {
-            event_listener<EventType> callback;
+            EventListener<EventType> callback;
             bool enabled;
         };
 
-        std::vector<event_listener_container> m_listeners;
+        std::vector<EventListenerContainer> m_listeners;
 
     public:
-        auto add(event_listener<EventType> callback) -> int
+        auto add(EventListener<EventType> callback) -> int
         {
             m_listeners.emplace_back(callback, true);
 
@@ -34,7 +34,7 @@ namespace clsn::core
         {
             for (auto& listener : m_listeners)
             {
-                if (e.is_consumed())
+                if (e.isConsumed())
                     break;
 
                 if (!listener.enabled)
@@ -44,7 +44,7 @@ namespace clsn::core
             }
         }
 
-        void set_enabled(int index, bool enabled)
+        void setEnabled(int index, bool enabled)
         {
             m_listeners[index].enabled = enabled;
         }

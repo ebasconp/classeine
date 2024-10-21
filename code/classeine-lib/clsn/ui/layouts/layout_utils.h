@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <clsn/core/non_instantiable.h>
+#include <clsn/core/NonInstantiable.h>
 #include <algorithm>
 
 namespace clsn::ui
@@ -18,7 +18,7 @@ namespace clsn::ui
 namespace clsn::ui::layouts
 {
     /// @brief Utility class for managing UI layout information.
-    class layout_utils : public clsn::core::non_instantiable
+    class layout_utils : public clsn::core::NonInstantiable
     {
     public:
         /// @brief Converts the elements of a layout container to layout info.
@@ -44,9 +44,9 @@ namespace clsn::ui::layouts
 
                         return typename LayoutType::layout_element_info
                         {
-                            { c.get_actual_position(), c.get_actual_preferred_size() },
+                            { c.getActualPosition(), c.get_actual_preferred_size() },
                             e.get_constraint(),
-                            c.is_visible()
+                            c.isVisible()
                         };
                     });
 

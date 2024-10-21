@@ -7,17 +7,17 @@
 
 namespace clsn::ui
 {
-    CLSN_CPP_BOOL_PROPERTY(toggle_control, checked)
+    CLSN_CPP_BOOL_PROPERTY(toggle_control, Checked)
 
-    toggle_control::toggle_control(std::string_view section_name)
-    : clickable_control{section_name}
+    toggle_control::toggle_control(std::string_view sectionName)
+    : clickable_control{sectionName}
     {
         init_events();
     }
 
     void toggle_control::toggle()
     {
-        set_checked(!is_checked());
+        setChecked(!isChecked());
     }
 
     void toggle_control::init_events()

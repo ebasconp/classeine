@@ -14,7 +14,7 @@ namespace clsn::ui
     template <typename InnerControlType>
     class padding_control : public static_content_pane<InnerControlType>
     {
-        CLSN_FULL_PROPERTY_WITH_DEFAULT_VALUE(size, int, true, 4)
+        CLSN_FULL_PROPERTY_WITH_DEFAULT_VALUE(Size, int, true, 4)
 
     public:
         padding_control() : static_content_pane<InnerControlType>("padding_control")
@@ -24,11 +24,11 @@ namespace clsn::ui
 
         void do_layout() override
         {
-            const auto size = m_size.get();
+            const auto size = m_propertySize.get();
 
             auto& ctrl = this->get_inner_control();
-            ctrl.set_actual_position(this->get_actual_position() + draw::point{size, size});
-            ctrl.set_actual_size(this->get_actual_size() + draw::dimension(-size * 2, -size * 2));
+            ctrl.setActualPosition(this->getActualPosition() + draw::point{size, size});
+            ctrl.setActualSize(this->getActualSize() + draw::dimension(-size * 2, -size * 2));
 
             ctrl.do_layout();
         }
@@ -42,7 +42,7 @@ namespace clsn::ui
     private:
         void init_padding_control_events()
         {
-            m_size.add_value_changed_listener([this](auto&)
+            m_propertySize.addValueChangedListener([this](auto&)
             {
                 do_layout();
                 this->invalidate();

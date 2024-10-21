@@ -27,18 +27,18 @@ namespace clsn::ui::renderers
     {
         const auto& rd_btn = static_cast<const radio_button&>(base_ctrl);
 
-        const auto section_name = rd_btn.get_default_section_name();
+        const auto sectionName = rd_btn.get_default_section_name();
 
         const auto btn_clr = rd_btn.is_pressed()
             ? color{192, 192, 192}
-            : ui_manager::get_instance().get_color(section_name, "control_background_color");
+            : ui_manager::get_instance().get_color(sectionName, "control_background_color");
 
         using namespace clsn::ui::painters;
         using namespace clsn::ui::layouts;
 
         background_painter::paint_background(gfx, rgn, btn_clr);
 
-        const auto text_size = gfx.get_text_size(rd_btn.get_actual_font(), rd_btn.get_caption());
+        const auto text_size = gfx.get_text_size(rd_btn.get_actual_font(), rd_btn.getCaption());
         const auto size = text_size.get_height();
 
         dual_layout layout;

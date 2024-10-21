@@ -65,9 +65,9 @@ namespace clsn::ui
         using container_info = constrained_container_info<constraint>;
 
         /// @brief Constructs a constrained container with a given section name.
-        /// @param section_name A string representing the name of the section.
-        explicit constrained_container(std::string_view section_name)
-        : container<container_info>{section_name}
+        /// @param sectionName A string representing the name of the section.
+        explicit constrained_container(std::string_view sectionName)
+        : container<container_info>{sectionName}
         {
         }
 

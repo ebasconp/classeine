@@ -18,8 +18,8 @@ namespace clsn::ui::painters
     {
         int px = rgn.get_position().get_x();
         int py = rgn.get_position().get_y();
-        int pw = rgn.get_size().get_width();
-        int ph = rgn.get_size().get_height();
+        int pw = rgn.getSize().get_width();
+        int ph = rgn.getSize().get_height();
 
         gfx.set_draw_color(clr);
         for (int i = 0; i < depth; i++)

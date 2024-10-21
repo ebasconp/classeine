@@ -21,7 +21,7 @@ namespace
             auto ch = cc.get_constraint() ==
                               dual_layout_constraint::use_all_available_space
                           ? size.get_height()
-                          : cc.get_input_region().get_size().get_height();
+                          : cc.get_input_region().getSize().get_height();
 
             cc.set_output_region({position, {size.get_width(), ch}});
         }
@@ -105,7 +105,7 @@ namespace clsn::ui::layouts
             return;
 
         const auto& position = rgn.get_position();
-        const auto& size = rgn.get_size();
+        const auto& size = rgn.getSize();
 
         switch (m_orientation)
         {

@@ -30,7 +30,7 @@ namespace clsn::ui::renderers
 
             const auto& bc = ctrl.get_actual_foreground_color();
 
-            const auto size = ctrl.get_size();
+            const auto size = ctrl.getSize();
 
             painters::border_painter::paint_flat_border(
                 gfx, rgn, bc, size);

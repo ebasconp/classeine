@@ -56,7 +56,7 @@ namespace clsn::ui::layouts
 
             /// @brief Checks if the element is visible.
             /// @return True if the element is visible, false otherwise.
-            auto is_visible() const -> bool { return m_visible; }
+            auto isVisible() const -> bool { return m_visible; }
         };
 
         /// @brief A vector of layout_element_info objects.

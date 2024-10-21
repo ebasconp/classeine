@@ -11,7 +11,7 @@
 #include "clsn/draw/point.h"
 #include "clsn/draw/region.h"
 
-#include "clsn/core/system.h"
+#include "clsn/core/System.h"
 
 #include <SDL.h>
 #undef main
@@ -27,10 +27,10 @@ namespace
                           const clsn::ui::impl::sdl2::sdl2_font_cache& fontCache)
         -> TTF_Font*
     {
-        auto optionalRefFont = fontCache.get_font(font);
+        auto optionalRefFont = fontCache.getFont(font);
         if (!optionalRefFont.has_value())
         {
-            clsn::core::system::panic("Font not found: [{}]", font.get_name());
+            clsn::core::System::panic("Font not found: [{}]", font.getName());
             return nullptr;
         }
 
@@ -107,7 +107,7 @@ namespace clsn::ui::impl::sdl2
         {
             SDL_Log("Error while creating texture: %s", SDL_GetError());
             SDL_DestroyRenderer(&m_renderer);
-            system::panic("Error while creating texture: "s + SDL_GetError());
+            System::panic("Error while creating texture: "s + SDL_GetError());
             return;
         }
 
@@ -177,7 +177,7 @@ namespace clsn::ui::impl::sdl2
 
         if (rs == -1)
         {
-            clsn::core::console::debug(
+            clsn::core::Console::debug(
                 "Error on graphics_sdl2_impl::draw_fill_circle: {}",
                 SDL_GetError());
         }

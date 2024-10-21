@@ -9,19 +9,19 @@ namespace clsn::core
 {
     /// @brief Base class to prevent instantiation of derived classes.
     ///
-    /// The `non_instantiable` class is designed to prevent instances of any
+    /// The `NonInstantiable` class is designed to prevent instances of any
     /// class that inherits from it. All members of classes derived from this
     /// class must be declared static.
     /// It serves as a base class for other utility classes that should not be
     /// instantiated.
-    class non_instantiable
+    class NonInstantiable
     {
     public:
-        non_instantiable() = delete;
-        non_instantiable(const non_instantiable&) = delete;
-        non_instantiable(non_instantiable&&) = delete;
+        NonInstantiable() = delete;
+        NonInstantiable(const NonInstantiable&) = delete;
+        NonInstantiable(NonInstantiable&&) = delete;
 
-        auto operator=(const non_instantiable&) -> non_instantiable& = delete;
-        auto operator=(non_instantiable&&) -> non_instantiable& = delete;
+        auto operator=(const NonInstantiable&) -> NonInstantiable& = delete;
+        auto operator=(NonInstantiable&&) -> NonInstantiable& = delete;
     };
 };

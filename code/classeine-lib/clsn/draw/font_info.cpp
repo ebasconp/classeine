@@ -13,7 +13,7 @@ namespace clsn::draw
     {
     }
 
-    auto font_info::get_name() const noexcept -> const std::string&
+    auto font_info::getName() const noexcept -> const std::string&
     {
         return m_name;
     }

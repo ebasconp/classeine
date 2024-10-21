@@ -9,27 +9,27 @@
 
 #include <clsn/ui/events/action_event.h>
 
-#include <clsn/core/event_listener_list.h>
+#include <clsn/core/EventListenerList.h>
 
 namespace clsn::ui
 {
     /// Base class for all clickable controls (buttons, checkboxes, radio buttons, etc.):
     ///
     /// It provides functionality for handling clickable controls and also
-    /// exposes the action event and action name for handling clicks.
+    /// exposes the action Event and action name for handling clicks.
     class clickable_control : public captionable_control
     {
         bool m_pressed = false;
-        clsn::core::event_listener_list<events::action_event> m_action_listeners;
+        clsn::core::EventListenerList<events::action_event> m_action_listeners;
 
     public:
-        explicit clickable_control(std::string_view section_name);
+        explicit clickable_control(std::string_view sectionName);
 
-        CLSN_HEADER_PROPERTY(action_name, std::string, true)
+        CLSN_HEADER_PROPERTY(ActionName, std::string, true)
 
         [[nodiscard]] auto is_pressed() const noexcept -> bool;
 
-        void add_action_listener(clsn::core::event_listener<events::action_event> event);
+        void add_action_listener(clsn::core::EventListener<events::action_event> Event);
         void notify_action_event(events::action_event& e);
 
         void release_mouse() override;

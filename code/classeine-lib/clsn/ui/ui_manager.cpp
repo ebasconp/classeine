@@ -5,8 +5,8 @@
 
 #include "ui_manager.h"
 
-#include "clsn/core/console.h"
-#include "clsn/core/system.h"
+#include "clsn/core/Console.h"
+#include "clsn/core/System.h"
 
 #include "amatista/amatista_ui_skin.h"
 
@@ -20,7 +20,7 @@ namespace clsn::ui
     ui_manager& ui_manager::get_instance()
     {
         if (m_singleton == nullptr)
-            clsn::core::system::panic(
+            clsn::core::System::panic(
                 "ui_manager is not initialized. Run ui_manager::init() at the "
                 "beginning of your application");
 
@@ -45,7 +45,7 @@ namespace clsn::ui
 
     ui_manager::ui_manager()
     {
-        clsn::core::console::debug("ui_manager instantiated");
+        clsn::core::Console::debug("ui_manager instantiated");
 
         populate_font_mappings();
         populate_defaults();
@@ -82,19 +82,19 @@ namespace clsn::ui
         return it->second;
     }
 
-    auto ui_manager::get_color(std::string_view section_name, std::string_view name) const -> const color&
+    auto ui_manager::get_color(std::string_view sectionName, std::string_view name) const -> const color&
     {
-        return m_skin->get_color(section_name, name);
+        return m_skin->get_color(sectionName, name);
     }
 
-    auto ui_manager::get_dimension(std::string_view section_name, std::string_view name) const -> const dimension&
+    auto ui_manager::get_dimension(std::string_view sectionName, std::string_view name) const -> const dimension&
     {
-        return m_skin->get_dimension(section_name, name);
+        return m_skin->get_dimension(sectionName, name);
     }
 
-    auto ui_manager::get_font(std::string_view section_name, std::string_view name) const -> const font&
+    auto ui_manager::getFont(std::string_view sectionName, std::string_view name) const -> const font&
     {
-        return m_skin->get_font(section_name, name);
+        return m_skin->getFont(sectionName, name);
     }
 
     auto ui_manager::install_theme(const std::string& theme_name) -> bool
@@ -102,7 +102,7 @@ namespace clsn::ui
         return m_skin->install_theme_by_name(theme_name);
     }
 
-    auto ui_manager::add_theme_changed_listener(core::event_listener<core::empty_event> listener) -> int
+    auto ui_manager::add_theme_changed_listener(core::EventListener<core::EmptyEvent> listener) -> int
     {
         return m_skin->add_theme_changed_listener(std::move(listener));
     }
@@ -117,7 +117,7 @@ namespace clsn::ui
         clsn::ui::ui_manager::init();
         proc();
         clsn::ui::ui_manager::finalize();
-        clsn::core::entity::dump();
+        clsn::core::Entity::dump();
     }
 
 }

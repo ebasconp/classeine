@@ -19,13 +19,13 @@ namespace clsn::ui::renderers
                               const region& rgn,
                               const control& ctrl) const
     {
-        const auto section_name = ctrl.get_default_section_name();
+        const auto sectionName = ctrl.get_default_section_name();
 
         const auto& _label = static_cast<const label&>(ctrl);
 
-        const auto bc = _label.get_background_color().has_value()
-                ? _label.get_background_color().value()
-                : ui_manager::get_instance().get_color(section_name, "container_background_color");
+        const auto bc = _label.getBackgroundColor().has_value()
+                ? _label.getBackgroundColor().value()
+                : ui_manager::get_instance().get_color(sectionName, "container_background_color");
 
         painters::background_painter::paint_background(gfx, rgn, bc);
 

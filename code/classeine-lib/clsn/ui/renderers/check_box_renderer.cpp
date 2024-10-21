@@ -25,17 +25,17 @@ namespace clsn::ui::renderers
                    const control& ctrl) const
     {
         const auto& chk_box = static_cast<const check_box&>(ctrl);
-        const auto section_name = chk_box.get_default_section_name();
+        const auto sectionName = chk_box.get_default_section_name();
 
         const auto btn_clr = chk_box.is_pressed()
             ? color{192, 192, 192}
-            : ui_manager::get_instance().get_color(section_name, "control_background_color");
+            : ui_manager::get_instance().get_color(sectionName, "control_background_color");
 
         using namespace clsn::ui::painters;
 
         background_painter::paint_background(gfx, rgn, btn_clr);
 
-        const auto text_size = gfx.get_text_size(chk_box.get_actual_font(), chk_box.get_caption());
+        const auto text_size = gfx.get_text_size(chk_box.get_actual_font(), chk_box.getCaption());
 
         const auto size = text_size.get_height();
 

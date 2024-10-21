@@ -3,21 +3,21 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include <clsn/core/event.h>
+#include <clsn/core/Event.h>
 
 namespace clsn::core
 {
-    event::event()
+    Event::Event()
     : m_consumed{false}
     {
     }
 
-    auto event::is_consumed() const noexcept -> bool
+    auto Event::isConsumed() const noexcept -> bool
     {
         return m_consumed;
     }
 
-    void event::consume()
+    void Event::consume()
     {
         m_consumed = true;
     }

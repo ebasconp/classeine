@@ -5,7 +5,7 @@
 
 #include "dimension.h"
 
-#include "clsn/core/strings.h"
+#include "clsn/core/Strings.h"
 
 namespace clsn::draw
 {
@@ -34,9 +34,9 @@ namespace clsn::draw
         return { m_width + other.m_width, m_height + other.m_height };
     }
 
-    auto dimension::to_string() const -> std::string
+    auto dimension::toString() const -> std::string
     {
-        return clsn::core::strings::format(
+        return clsn::core::Strings::format(
             "Dimension: [W: {}, H: {}]", m_width, m_height);
     }
 }

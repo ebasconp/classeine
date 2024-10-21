@@ -66,14 +66,14 @@ namespace clsn::ui::renderers
         background_painter::paint_background(gfx, rgn, btn_clr);
 
         // paint border
-        const auto section_name = btn.get_default_section_name();
+        const auto sectionName = btn.get_default_section_name();
 
         auto& unhovered_clr =
              ui_manager::get_instance().get_color(
                 btn.get_default_section_name(), "control_background_color");
 
         const auto& clr = is_hovered
-                 ? ui_manager::get_instance().get_color(section_name, "bevelUpColor")
+                 ? ui_manager::get_instance().get_color(sectionName, "bevelUpColor")
                  : unhovered_clr;
 
         constexpr int depth = 2;

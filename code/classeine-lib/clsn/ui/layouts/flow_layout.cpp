@@ -15,7 +15,7 @@ namespace clsn::ui::layouts
         if (count == 0)
             return;
 
-        const auto& size = rgn.get_size();
+        const auto& size = rgn.getSize();
         const auto& position = rgn.get_position();
 
         const auto width = size.get_width();
@@ -28,16 +28,16 @@ namespace clsn::ui::layouts
 
         for (auto& e : elems)
         {
-            if (!e.is_visible())
+            if (!e.isVisible())
                 continue;
 
             auto& r = e.get_input_region();
 
-            const auto control_width = r.get_size().get_width();
+            const auto control_width = r.getSize().get_width();
 
             if (currentx + control_width < maxx)
             {
-                const auto& preferred_size = r.get_size();
+                const auto& preferred_size = r.getSize();
                 if (maxy < preferred_size.get_height())
                     maxy = preferred_size.get_height();
 
@@ -48,7 +48,7 @@ namespace clsn::ui::layouts
                 currentx = position.get_x();
                 currenty += maxy;
 
-                const auto& preferred_size = r.get_size();
+                const auto& preferred_size = r.getSize();
                 if (maxy < preferred_size.get_height())
                     maxy = preferred_size.get_height();
 

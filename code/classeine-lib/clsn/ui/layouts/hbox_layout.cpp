@@ -15,12 +15,12 @@ namespace clsn::ui::layouts
     {
         const auto count = static_cast<int>(elems.size());
         const auto visible_count = static_cast<int>(
-            std::ranges::count_if(elems, [](auto& e) { return e.is_visible(); }));
+            std::ranges::count_if(elems, [](auto& e) { return e.isVisible(); }));
 
         if (visible_count == 0)
             return;
 
-        const auto& actual_size = rgn.get_size();
+        const auto& actual_size = rgn.getSize();
         const auto width = actual_size.get_width() / visible_count;
         const auto height = actual_size.get_height();
 

@@ -14,6 +14,6 @@ namespace clsn::ui::renderers
 
     auto toggle_button_renderer::paint_as_pressed(const clickable_control& button) const -> bool
     {
-        return static_cast<const toggle_button&>(button).is_checked() || button.is_pressed();
+        return static_cast<const toggle_button&>(button).isChecked() || button.is_pressed();
     }
 }

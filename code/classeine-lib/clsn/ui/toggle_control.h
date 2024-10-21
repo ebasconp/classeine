@@ -12,9 +12,9 @@ namespace clsn::ui
     class toggle_control : public clickable_control
     {
     public:
-        explicit toggle_control(std::string_view section_name);
+        explicit toggle_control(std::string_view sectionName);
 
-        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(checked, true, false)
+        CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(Checked, true, false)
 
         virtual void toggle();
 

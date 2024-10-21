@@ -8,10 +8,10 @@
 
 namespace clsn::ui
 {
-    CLSN_CPP_PROPERTY(clickable_control, action_name, std::string)
+    CLSN_CPP_PROPERTY(clickable_control, ActionName, std::string)
 
-    clickable_control::clickable_control(std::string_view section_name)
-    : captionable_control{section_name}
+    clickable_control::clickable_control(std::string_view sectionName)
+    : captionable_control{sectionName}
     {
         init_clickable_control_events();
     }
@@ -21,9 +21,9 @@ namespace clsn::ui
         return m_pressed;
     }
 
-    void clickable_control::add_action_listener(clsn::core::event_listener<events::action_event> event)
+    void clickable_control::add_action_listener(clsn::core::EventListener<events::action_event> Event)
     {
-        m_action_listeners.add(std::move(event));
+        m_action_listeners.add(std::move(Event));
     }
 
     void clickable_control::notify_action_event(events::action_event& e)
@@ -39,7 +39,7 @@ namespace clsn::ui
 
     void clickable_control::init_clickable_control_events()
     {
-        add_caption_changed_listener([this](auto&) { invalidate(); });
+        addCaptionChangedListener([this](auto&) { invalidate(); });
     }
 
     void clickable_control::process_mouse_click_event(events::mouse_click_event& e)
@@ -51,7 +51,7 @@ namespace clsn::ui
 
         if (!m_pressed) // button has been released, then Action
         {
-            events::action_event _action_event{*this, m_action_name.get()};
+            events::action_event _action_event{*this, m_propertyActionName.get()};
             notify_action_event(_action_event);
         }
         else

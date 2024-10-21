@@ -20,13 +20,13 @@ namespace clsn::ui::renderers
         const auto& con_pane = static_cast<const content_pane&>(ctrl);
 
         auto inner_ctrl = con_pane.get_actual_inner_control();
-        if (!inner_ctrl.has_value())
+        if (!inner_ctrl.hasValue())
         {
             const auto& clr = con_pane.get_actual_background_color();
             painters::background_painter::paint_background(gfx, rgn, clr);
             return;
         }
 
-        inner_ctrl.get_ref().paint(gfx, rgn);
+        inner_ctrl.getRef().paint(gfx, rgn);
     }
 }

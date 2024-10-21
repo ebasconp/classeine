@@ -21,7 +21,7 @@ namespace clsn::draw
 
         [[nodiscard]] auto get_position() const noexcept -> const point&;
 
-        [[nodiscard]] auto get_size() const noexcept -> const dimension&;
+        [[nodiscard]] auto getSize() const noexcept -> const dimension&;
 
         [[nodiscard]] auto get_x() const noexcept -> int;
         [[nodiscard]] auto get_y() const noexcept -> int;
@@ -33,7 +33,7 @@ namespace clsn::draw
 
         [[nodiscard]] auto operator+(const region& r) const noexcept -> region;
 
-        [[nodiscard]] auto to_string() const noexcept -> std::string;
+        [[nodiscard]] auto toString() const noexcept -> std::string;
 
     };
 }

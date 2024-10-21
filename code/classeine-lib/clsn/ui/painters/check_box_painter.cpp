@@ -20,7 +20,7 @@ namespace clsn::ui::painters
             { size, size }
         };
 
-        const auto enabled = chk_box.is_enabled();
+        const auto enabled = chk_box.isEnabled();
 
         const color _color{0, 0, 255};
         gfx.set_draw_color(enabled ? _color : _color.to_gray());
@@ -33,7 +33,7 @@ namespace clsn::ui::painters
         gfx.set_draw_color(bg_color);
         gfx.draw_fill_rectangle({x + 1, y + 1, size - 2, size - 2});
 
-        if (chk_box.is_checked())
+        if (chk_box.isChecked())
         {
             const color c1{0, 0, 128};
             gfx.set_draw_color(enabled ? c1 : c1.to_gray()); // Black color

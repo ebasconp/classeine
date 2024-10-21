@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <clsn/core/entity.h>
+#include <clsn/core/Entity.h>
 
 #include <functional>
 #include <optional>
@@ -13,20 +13,20 @@
 namespace clsn::core
 {
     template <typename T>
-    class lazy final : public entity
+    class Lazy final : public Entity
     {
         mutable std::optional<T> m_instance;
         std::function<T ()> m_factory;
 
     public:
-        explicit lazy(std::function<T()> factory)
-        : m_factory{factory}
+        explicit Lazy(std::function<T()> Factory)
+        : m_factory{Factory}
         {
         }
 
         auto get() const -> const T&
         {
-            if (!m_instance.has_value())
+            if (!m_instance.hasValue())
                 m_instance = m_factory();
 
             return m_instance.value();
@@ -34,7 +34,7 @@ namespace clsn::core
 
         auto get() -> T&
         {
-            if (!m_instance.has_value())
+            if (!m_instance.hasValue())
                 m_instance = m_factory();
 
             return m_instance.value();

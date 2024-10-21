@@ -29,8 +29,8 @@ namespace clsn::draw
         {
         }
 
-        [[nodiscard]] auto get_name() const noexcept -> const std::string&;
-        [[nodiscard]] auto get_size() const noexcept -> int;
+        [[nodiscard]] auto getName() const noexcept -> const std::string&;
+        [[nodiscard]] auto getSize() const noexcept -> int;
         [[nodiscard]] auto get_style() const noexcept -> font_style;
 
         [[nodiscard]] auto add_size(int size) const noexcept -> font;
@@ -44,7 +44,7 @@ struct std::hash<clsn::draw::font>
 {
     auto operator()(const clsn::draw::font& font) const noexcept -> int
     {
-        return static_cast<int>(std::hash<std::string>{}(font.get_name()) * 31 +
-               static_cast<int>(font.get_style()) * 31 + font.get_size());
+        return static_cast<int>(std::hash<std::string>{}(font.getName()) * 31 +
+               static_cast<int>(font.get_style()) * 31 + font.getSize());
     }
 };

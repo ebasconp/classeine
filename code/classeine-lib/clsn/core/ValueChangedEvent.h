@@ -5,19 +5,19 @@
 
 #pragma once
 
-#include <clsn/core/event.h>
+#include <clsn/core/Event.h>
 
 namespace clsn::core
 {
     template <typename T>
-    class value_changed_event : public event
+    class ValueChangedEvent : public Event
     {
         T m_old_value;
         const T& m_new_value;
 
     public:
         template <typename OldValueType>
-        value_changed_event(OldValueType&& old_value, const T& new_value)
+        ValueChangedEvent(OldValueType&& old_value, const T& new_value)
         : m_old_value{std::forward<OldValueType>(old_value)}
         , m_new_value{new_value}
         {

@@ -15,41 +15,41 @@
 namespace clsn::core
 {
     template <typename... ConfigurationValueTypes>
-    class configuration final
+    class Configuration final
     {
         using section_map =
             std::unordered_map<std::string,
                                std::variant<ConfigurationValueTypes...>>;
 
     public:
-        configuration() = default;
-        ~configuration() = default;
+        Configuration() = default;
+        ~Configuration() = default;
 
     private:
         std::unordered_map<std::string, section_map> m_sections;
 
     public:
         template <typename ValueType>
-        void set(std::string_view section_name,
+        void set(std::string_view sectionName,
                  std::string_view key,
                  ValueType&& value)
         {
-            m_sections[std::string{section_name}].insert(
+            m_sections[std::string{sectionName}].insert(
                 { std::string{key}, std::forward<ValueType>(value)});
         }
 
         template <typename ValueType>
         auto get(
-            std::string_view section_name,
+            std::string_view sectionName,
             std::string_view key) const -> std::optional<std::reference_wrapper<const ValueType>>
         {
-            const auto section_it = m_sections.find(std::string{section_name});
-            if (section_it == m_sections.end())
+            const auto sectionIt = m_sections.find(std::string{sectionName});
+            if (sectionIt == m_sections.end())
                 return std::nullopt;
 
-            auto& section_map = section_it->second;
-            const auto it = section_map.find(std::string{key});
-            if (it == section_map.end())
+            auto& sectionMap = sectionIt->second;
+            const auto it = sectionMap.find(std::string{key});
+            if (it == sectionMap.end())
                 return std::nullopt;
 
             const auto* value = std::get_if<ValueType>(&(it->second));

@@ -28,7 +28,7 @@ namespace clsn::demo
     demo_option_container::demo_option_container(demo_window& demo_window)
     : m_demo_window{demo_window}
     {
-        set_preferred_size(dimension{175, 0});
+        setPreferredSize(dimension{175, 0});
 
         init_options();
     }
@@ -36,8 +36,8 @@ namespace clsn::demo
     auto demo_option_container::init_option(const std::string& name) -> std::shared_ptr<button>
     {
         auto btn = add(control::make<button>());
-        btn->set_caption(name);
-        btn->set_action_name(name);
+        btn->setCaption(name);
+        btn->setActionName(name);
         btn->add_action_listener([this](auto& e) { this->process_action(e); });
 
         return btn;
@@ -55,7 +55,7 @@ namespace clsn::demo
 
     void demo_option_container::process_action(const action_event& e)
     {
-        const auto& action_name = e.get_action_name();
+        const auto& action_name = e.getActionName();
 
         m_demo_window.set_title(action_name + " demo");
 

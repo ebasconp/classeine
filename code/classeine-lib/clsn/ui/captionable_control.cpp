@@ -7,10 +7,10 @@
 
 namespace clsn::ui
 {
-    CLSN_CPP_PROPERTY(captionable_control, caption, std::string)
+    CLSN_CPP_PROPERTY(captionable_control, Caption, std::string)
 
-    captionable_control::captionable_control(std::string_view section_name)
-    : paintable_control{section_name}
+    captionable_control::captionable_control(std::string_view sectionName)
+    : paintable_control{sectionName}
     {
         init_captionable_control_events();
     }
@@ -19,12 +19,13 @@ namespace clsn::ui
     {
         auto invalidate_proc = [this](auto&) { invalidate(); };
 
-        add_caption_changed_listener(invalidate_proc);
+        addCaptionChangedListener(invalidate_proc);
     }
 
-    auto captionable_control::to_string() const -> std::string
+    auto captionable_control::toString() const -> std::string
     {
         using namespace clsn::core;
-        return strings::format("{} [{}]", paintable_control::to_string(), m_caption.get());
+        return Strings::format(
+            "{} [{}]", paintable_control::toString(), m_propertyCaption.get());
     }
 }
