@@ -11,9 +11,9 @@
 
 namespace clsn::ui
 {
-    CLSN_CPP_PROPERTY(window, Position, clsn::draw::point)
-    CLSN_CPP_PROPERTY(window, MinimumSize, clsn::draw::dimension)
-    CLSN_CPP_PROPERTY(window, Size, clsn::draw::dimension)
+    CLSN_CPP_PROPERTY(window, Position, clsn::draw::Point)
+    CLSN_CPP_PROPERTY(window, MinimumSize, clsn::draw::Dimension)
+    CLSN_CPP_PROPERTY(window, Size, clsn::draw::Dimension)
     CLSN_CPP_BOOL_PROPERTY(window, Resizable)
 
     window::window(std::string_view sectionName)
@@ -27,12 +27,12 @@ namespace clsn::ui
     {
         //ETOTODO: MOVE THIS TO THE tHEME
 /*        setMinimumSize(ui_manager::get_instance().getDefault(
-            get_default_section_name(), "minimumSize", dimension{50, 50}));
+            get_default_section_name(), "minimumSize", Dimension{50, 50}));
 
-        auto& dimension = ui_manager::get_instance().getDefault(
-            get_default_section_name(), "size", dimension{300, 200});
+        auto& Dimension = ui_manager::get_instance().getDefault(
+            get_default_section_name(), "size", Dimension{300, 200});
 
-        setActualSize(dimension);*/
+        setActualSize(Dimension);*/
 
         setMinimumSize({50, 50});
         setActualPosition({300, 200});
@@ -59,7 +59,7 @@ namespace clsn::ui
 
     void window::process_mouse_moved_event(events::mouse_moved_event &e)
     {
-        auto currently_hovered = get_control_by_position(e.get_position());
+        auto currently_hovered = get_control_by_position(e.getPosition());
         if (m_hovered_control != currently_hovered)
         {
             if (m_hovered_control.hasValue())

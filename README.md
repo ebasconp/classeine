@@ -28,16 +28,16 @@ Please note that it is currently in an early stage of development.
   * Simple and tiny string builder
   
 * **clsn::draw** - library providing drawing primitives
-  * `color`
-  * `dimension`
-  * `font`
-  * `point`
-  * `region`
+  * `Color`
+  * `Dimension`
+  * `Font`
+  * `Point`
+  * `Region`
   
 * **clsn::ui** - library providing componentable UI controls
   * `control`
     * `empty_control` - Control that does nothing. Useful to have a custom renderer. 
-    * `paintable_control` - Control with background, foreground and font 
+    * `paintable_control` - Control with background, foreground and Font 
       * `captionable_control`
         * `clickable_control`
           * `button` 
@@ -56,7 +56,7 @@ Please note that it is currently in an early stage of development.
             * `flow_layout_container` - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering
             * `hbox_layout_container` - Container where the controls are rendered horizontally
             * `vbox_layout_container` - Container where the controls are rendered vertically
-            * `xy_layout_container` - Container where the controls are placed in specific coordinates in the given region.
+            * `xy_layout_container` - Container where the controls are placed in specific coordinates in the given Region.
       * `content_pane` - Abstract class that handles layout and events for specific control containers
         * `dynamic_content_pane` - Content pane able to load and unload dynamically any control
         * `static_content_pane` - Content pane with its child content already bound in compile time
@@ -64,8 +64,8 @@ Please note that it is currently in an early stage of development.
   * `graphics` - abstraction to rendering backend
   * `ui_manager`
   * `ui_skin` - Loadable set of renderers, themes and defaults for the UI controls.
-  * `ui_theme` - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.
-    * `amatista_ui_theme` - Set of specific set of colors
+  * `ui_theme` - Set of Colors and defaults given a theme. A Skin can have registered several themes but only one current.
+    * `amatista_ui_theme` - Set of specific set of Colors
       * `light_amatista_ui_theme` - Light theme
       * `dark_amatista_ui_theme` - Dark theme
 

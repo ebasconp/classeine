@@ -10,21 +10,21 @@
 #include <clsn/ui/forward.h>
 #include <clsn/ui/graphics.h>
 
-#include <clsn/draw/forward.h>
+#include <clsn/draw/Forward.h>
 
 namespace clsn::ui::painters
 {
     struct painting_info final
     {
-        clsn::draw::text_horizontal_alignment horizontal_alignment;
-        clsn::draw::text_vertical_alignment vertical_alignment;
+        clsn::draw::TextHorizontalAlignment horizontal_alignment;
+        clsn::draw::TextVerticalAlignment vertical_alignment;
     };
 
     class label_painter final : public core::NonInstantiable
     {
     public:
         static void paint_label(graphics& gfx,
-                     const draw::region& rgn,
+                     const draw::Region& rgn,
                      const captionable_control& ctrl,
                      const painting_info& info);
     };

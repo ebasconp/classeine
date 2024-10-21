@@ -5,21 +5,21 @@
 
 #include <clsn/ui/painters/border_painter.h>
 
-#include <clsn/draw/region.h>
+#include <clsn/draw/Region.h>
 
 namespace clsn::ui::painters
 {
     using namespace clsn::draw;
 
     void border_painter::paint_flat_border(graphics& gfx,
-                        const region& rgn,
-                        const color& clr,
+                        const Region& rgn,
+                        const Color& clr,
                         int depth)
     {
-        int px = rgn.get_position().get_x();
-        int py = rgn.get_position().get_y();
-        int pw = rgn.getSize().get_width();
-        int ph = rgn.getSize().get_height();
+        int px = rgn.getPosition().getX();
+        int py = rgn.getPosition().getY();
+        int pw = rgn.getSize().getWidth();
+        int ph = rgn.getSize().getHeight();
 
         gfx.set_draw_color(clr);
         for (int i = 0; i < depth; i++)

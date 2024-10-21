@@ -10,19 +10,19 @@
 namespace clsn::ui
 {
     /// This class exposes properties for handling background and foreground
-    /// colors, as well as fonts.
+    /// Colors, as well as fonts.
     class paintable_control : public clsn::ui::control
     {
     public:
         explicit paintable_control(std::string_view name);
 
-        CLSN_HEADER_PROPERTY(BackgroundColor, std::optional<draw::color>, true)
-        CLSN_HEADER_PROPERTY(Font, std::optional<clsn::draw::font>, true)
-        CLSN_HEADER_PROPERTY(ForegroundColor, std::optional<clsn::draw::color>, true)
+        CLSN_HEADER_PROPERTY(BackgroundColor, std::optional<draw::Color>, true)
+        CLSN_HEADER_PROPERTY(Font, std::optional<clsn::draw::Font>, true)
+        CLSN_HEADER_PROPERTY(ForegroundColor, std::optional<clsn::draw::Color>, true)
 
-        auto get_actual_background_color() const -> const clsn::draw::color&;
-        auto get_actual_foreground_color() const -> const clsn::draw::color&;
-        auto get_actual_font() const -> const clsn::draw::font&;
+        auto get_actual_background_color() const -> const clsn::draw::Color&;
+        auto get_actual_foreground_color() const -> const clsn::draw::Color&;
+        auto get_actual_font() const -> const clsn::draw::Font&;
 
     };
 }

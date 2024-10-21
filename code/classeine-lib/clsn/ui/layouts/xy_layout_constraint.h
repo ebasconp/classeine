@@ -5,8 +5,8 @@
 
 #pragma once
 
-#include <clsn/draw/forward.h>
-#include <clsn/draw/point.h>
+#include <clsn/draw/Forward.h>
+#include <clsn/draw/Point.h>
 
 namespace clsn::ui::layouts
 {
@@ -19,22 +19,22 @@ namespace clsn::ui::layouts
   /// specifying its position inside its container.
   class xy_layout_constraint final
   {
-    draw::point m_position;
+    draw::Point m_position;
 
   public:
     /// @brief Constructs a new xy_layout_constraint with the specified position.
     ///
     /// @param position The position where the UI control will be placed.
-    explicit xy_layout_constraint(const draw::point& position);
+    explicit xy_layout_constraint(const draw::Point& position);
 
     /// @brief Gets the current position of the constraint.
     ///
-    /// @return const draw::point& The position of the control in the layout.
-    [[nodiscard]] auto get_position() const -> const draw::point&;
+    /// @return const draw::Point& The position of the control in the layout.
+    [[nodiscard]] auto getPosition() const -> const draw::Point&;
 
     /// @brief Sets a new position for the constraint.
     ///
     /// @param position The new position for the control in the layout.
-    void set_position(const draw::point& position);
+    void set_position(const draw::Point& position);
   };
 }

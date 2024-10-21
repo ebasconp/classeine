@@ -239,9 +239,9 @@ namespace clsn::ui
 
         /// @brief Gets the control at the specified position.
         ///
-        /// @param point The position to check.
+        /// @param Point The position to check.
         /// @return An optional reference to the control at the position.
-        auto get_control_by_position(const draw::point &point) const
+        auto get_control_by_position(const draw::Point &Point) const
                 -> core::constOptionalReference<control> override
         {
             for (auto& c : get_controls())
@@ -249,7 +249,7 @@ namespace clsn::ui
                 if (!c.isVisible() || !c.isEnabled())
                     continue;
 
-                auto result = c.get_control_by_position(point);
+                auto result = c.get_control_by_position(Point);
                 if (result.hasValue())
                     return result;
             }
@@ -304,7 +304,7 @@ namespace clsn::ui
                 if (!c.isVisible() || !c.isEnabled())
                     continue;
 
-                if (c.contains_point(e.get_point()))
+                if (c.containsPoint(e.get_point()))
                 {
                     c.notify_mouse_click_event(e);
                     break;
@@ -323,7 +323,7 @@ namespace clsn::ui
                 if (!c.isVisible() || !c.isEnabled())
                     continue;
 
-                if (c.contains_point(e.get_position()))
+                if (c.containsPoint(e.getPosition()))
                 {
                     c.notify_mouse_moved_event(e);
                     break;
@@ -354,10 +354,10 @@ namespace clsn::ui
             auto& uiManager = clsn::ui::ui_manager::get_instance();
             auto sectionName = get_default_section_name();
 
-            setBackgroundColor(uiManager.get_color(
+            setBackgroundColor(uiManager.getColor(
                 sectionName, "container_background_color"));
 
-            setForegroundColor(uiManager.get_color(
+            setForegroundColor(uiManager.getColor(
                 sectionName, "container_foreground_color"));
         }
     };

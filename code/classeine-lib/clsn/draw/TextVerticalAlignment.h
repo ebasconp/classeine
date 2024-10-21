@@ -7,7 +7,7 @@
 
 namespace clsn::draw
 {
-    enum class text_vertical_alignment
+    enum class TextVerticalAlignment
     {
         top,
         middle,

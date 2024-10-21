@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <clsn/draw/region.h>
+#include <clsn/draw/Region.h>
 #include <vector>
 
 namespace clsn::ui::layouts
@@ -20,17 +20,17 @@ namespace clsn::ui::layouts
         /// @brief Information about a layout element.
         class layout_element_info final
         {
-            draw::region m_output_region;
-            const draw::region m_input_region;
+            draw::Region m_output_region;
+            const draw::Region m_input_region;
             Constraint m_constraint;
             bool m_visible;
 
         public:
             /// @brief Constructs a layout_element_info object.
-            /// @param input_region The input region of the element.
+            /// @param input_region The input Region of the element.
             /// @param constraint The constraint associated with the element.
             /// @param visible The visibility status of the element.
-            layout_element_info(const draw::region& input_region, const Constraint& constraint, bool visible)
+            layout_element_info(const draw::Region& input_region, const Constraint& constraint, bool visible)
             : m_output_region{0, 0, 0, 0}
             , m_input_region{input_region}
             , m_constraint{constraint}
@@ -38,17 +38,17 @@ namespace clsn::ui::layouts
             {
             }
 
-            /// @brief Gets the output region of the element.
-            /// @return A constant reference to the output region.
-            auto get_output_region() const -> const draw::region& { return m_output_region; }
+            /// @brief Gets the output Region of the element.
+            /// @return A constant reference to the output Region.
+            auto get_output_region() const -> const draw::Region& { return m_output_region; }
 
-            /// @brief Sets the output region of the element.
-            /// @param output_region The new output region to set.
-            void set_output_region(const draw::region& output_region) { m_output_region = output_region; }
+            /// @brief Sets the output Region of the element.
+            /// @param output_region The new output Region to set.
+            void set_output_region(const draw::Region& output_region) { m_output_region = output_region; }
 
-            /// @brief Gets the input region of the element.
-            /// @return A constant reference to the input region.
-            auto get_input_region() const -> const draw::region& { return m_input_region; }
+            /// @brief Gets the input Region of the element.
+            /// @return A constant reference to the input Region.
+            auto get_input_region() const -> const draw::Region& { return m_input_region; }
 
             /// @brief Gets the constraint of the element.
             /// @return A constant reference to the constraint.
@@ -65,9 +65,9 @@ namespace clsn::ui::layouts
         /// @brief Virtual destructor.
         virtual ~layout() = default;
 
-        /// @brief Performs layout in the specified region using the provided element info vector.
-        /// @param rgn The region in which to perform the layout.
+        /// @brief Performs layout in the specified Region using the provided element info vector.
+        /// @param rgn The Region in which to perform the layout.
         /// @param layout_element_info_vec The vector of layout element info.
-        virtual void do_layout(const draw::region& rgn, layout_element_info_vector& layout_element_info_vec) const = 0;
+        virtual void do_layout(const draw::Region& rgn, layout_element_info_vector& layout_element_info_vec) const = 0;
     };
 }

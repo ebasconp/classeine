@@ -7,7 +7,7 @@
 
 #include <clsn/ui/layouts/layout.h>
 
-#include <clsn/draw/forward.h>
+#include <clsn/draw/Forward.h>
 
 namespace clsn::ui::layouts
 {
@@ -35,6 +35,6 @@ namespace clsn::ui::layouts
         [[nodiscard]] auto get_orientation() const -> dual_layout_orientation;
         void set_orientation(dual_layout_orientation orientation);
 
-        void do_layout(const draw::region& rgn, layout_element_info_vector&) const override;
+        void do_layout(const draw::Region& rgn, layout_element_info_vector&) const override;
     };
 }

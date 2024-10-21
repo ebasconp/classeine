@@ -11,7 +11,7 @@ namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void hbox_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
+    void hbox_layout::do_layout(const draw::Region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
         const auto visible_count = static_cast<int>(
@@ -21,17 +21,17 @@ namespace clsn::ui::layouts
             return;
 
         const auto& actual_size = rgn.getSize();
-        const auto width = actual_size.get_width() / visible_count;
-        const auto height = actual_size.get_height();
+        const auto width = actual_size.getWidth() / visible_count;
+        const auto height = actual_size.getHeight();
 
-        const auto position = rgn.get_position();
+        const auto position = rgn.getPosition();
 
         int last_x = 0;
         for (int i = 0; i < count; i++)
         {
-            const auto actual_width = i < count - 1 ? width : actual_size.get_width() - last_x;
+            const auto actual_width = i < count - 1 ? width : actual_size.getWidth() - last_x;
 
-            elems[i].set_output_region({ {last_x + position.get_x(), position.get_y()}, {actual_width, height} });
+            elems[i].set_output_region({ {last_x + position.getX(), position.getY()}, {actual_width, height} });
 
             last_x += width;
         }

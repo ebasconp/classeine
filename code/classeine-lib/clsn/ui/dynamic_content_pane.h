@@ -6,7 +6,7 @@
 #pragma once
 
 #include <clsn/ui/content_pane.h>
-#include <clsn/draw/forward.h>
+#include <clsn/draw/Forward.h>
 #include <memory>
 
 namespace clsn::ui

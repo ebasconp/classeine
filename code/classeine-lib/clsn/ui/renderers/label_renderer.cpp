@@ -16,7 +16,7 @@ namespace clsn::ui::renderers
     using namespace clsn::draw;
 
     void label_renderer::paint(graphics& gfx,
-                              const region& rgn,
+                              const Region& rgn,
                               const control& ctrl) const
     {
         const auto sectionName = ctrl.get_default_section_name();
@@ -25,7 +25,7 @@ namespace clsn::ui::renderers
 
         const auto bc = _label.getBackgroundColor().has_value()
                 ? _label.getBackgroundColor().value()
-                : ui_manager::get_instance().get_color(sectionName, "container_background_color");
+                : ui_manager::get_instance().getColor(sectionName, "container_background_color");
 
         painters::background_painter::paint_background(gfx, rgn, bc);
 

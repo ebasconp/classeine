@@ -37,7 +37,7 @@ namespace clsn::ui
         m_singleton.reset();
     }
 
-    void ui_manager::add_font_mapping(const font_info& fontInfo,
+    void ui_manager::add_font_mapping(const FontInfo& fontInfo,
                                    std::string_view path)
     {
         m_paths_by_font_info.insert(std::make_pair(fontInfo, std::string{path}));
@@ -54,16 +54,16 @@ namespace clsn::ui
     void ui_manager::populate_font_mappings()
     {
         add_font_mapping(
-            font_info{"default", font_style::regular}, _CLSN_DEFAULT_FONT_PATH_);
+            FontInfo{"default", FontStyle::regular}, _CLSN_DEFAULT_FONT_PATH_);
 
         add_font_mapping(
-            font_info{"bold", font_style::bold}, _CLSN_DEFAULT_BOLD_FONT_PATH_);
+            FontInfo{"bold", FontStyle::bold}, _CLSN_DEFAULT_BOLD_FONT_PATH_);
 
         add_font_mapping(
-            font_info{"italic", font_style::italic}, _CLSN_DEFAULT_ITALIC_FONT_PATH_);
+            FontInfo{"italic", FontStyle::italic}, _CLSN_DEFAULT_ITALIC_FONT_PATH_);
 
         add_font_mapping(
-            font_info{"bold_italic", font_style::bold_italic}, _CLSN_DEFAULT_BOLD_ITALIC_FONT_PATH_);
+            FontInfo{"bold_italic", FontStyle::bold_italic}, _CLSN_DEFAULT_BOLD_ITALIC_FONT_PATH_);
     }
 
     void ui_manager::populate_defaults()
@@ -73,7 +73,7 @@ namespace clsn::ui
         make_and_load_skin<amatista_ui_skin>();
     }
 
-    auto ui_manager::get_path_by_font_info(const font_info& fontInfo) const noexcept -> std::string_view
+    auto ui_manager::get_path_by_font_info(const FontInfo& fontInfo) const noexcept -> std::string_view
     {
         auto it = m_paths_by_font_info.find(fontInfo);
         if (it == m_paths_by_font_info.end())
@@ -82,17 +82,17 @@ namespace clsn::ui
         return it->second;
     }
 
-    auto ui_manager::get_color(std::string_view sectionName, std::string_view name) const -> const color&
+    auto ui_manager::getColor(std::string_view sectionName, std::string_view name) const -> const Color&
     {
-        return m_skin->get_color(sectionName, name);
+        return m_skin->getColor(sectionName, name);
     }
 
-    auto ui_manager::get_dimension(std::string_view sectionName, std::string_view name) const -> const dimension&
+    auto ui_manager::get_dimension(std::string_view sectionName, std::string_view name) const -> const Dimension&
     {
         return m_skin->get_dimension(sectionName, name);
     }
 
-    auto ui_manager::getFont(std::string_view sectionName, std::string_view name) const -> const font&
+    auto ui_manager::getFont(std::string_view sectionName, std::string_view name) const -> const Font&
     {
         return m_skin->getFont(sectionName, name);
     }

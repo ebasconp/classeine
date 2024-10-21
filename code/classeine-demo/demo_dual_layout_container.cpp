@@ -12,7 +12,7 @@ namespace clsn::demo
         this->add(_label, ui::layouts::dual_layout_constraint::use_all_available_space);
 
         m_button = this->add(control::make<ui::button>(), ui::layouts::dual_layout_constraint::use_preferred_size);
-        m_button->setPreferredSize(draw::dimension{200, 0});
+        m_button->setPreferredSize(draw::Dimension{200, 0});
         m_button->setCaption("Using preferred size");
     }
 }

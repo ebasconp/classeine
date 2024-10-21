@@ -56,10 +56,10 @@ namespace clsn::ui
             m_control.notify_mouse_moved_event(e);
         }
 
-        auto get_control_by_position(const draw::point& point) const ->
+        auto get_control_by_position(const draw::Point& Point) const ->
             core::constOptionalReference<control> override
         {
-            return m_control.get_control_by_position(point);
+            return m_control.get_control_by_position(Point);
         }
 
     private:
@@ -96,11 +96,11 @@ namespace clsn::ui
 
         void init_size()
         {
-            //auto& dimension = ui_manager::get_instance().getDefault(
-            //                "main_window", "size", dimension{300, 200});
+            //auto& Dimension = ui_manager::get_instance().getDefault(
+            //                "main_window", "size", Dimension{300, 200});
             //ETOTODO: MOVE THIS TO THE THEME
 
-            m_control.setActualSize(draw::dimension{800, 600});
+            m_control.setActualSize(draw::Dimension{800, 600});
 
             addSizeChangedListener([this](auto& e)
             {

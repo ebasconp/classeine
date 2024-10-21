@@ -7,23 +7,23 @@
 
 #include <clsn/ui/captionable_control.h>
 
-#include <clsn/draw/forward.h>
+#include <clsn/draw/Forward.h>
 
 namespace clsn::ui
 {
     class label : public captionable_control
     {
-        clsn::draw::text_horizontal_alignment m_horizontal_alignment;
-        clsn::draw::text_vertical_alignment m_vertical_alignment;
+        clsn::draw::TextHorizontalAlignment m_horizontal_alignment;
+        clsn::draw::TextVerticalAlignment m_vertical_alignment;
 
     public:
         label();
 
-        auto get_horizontal_alignment() const -> clsn::draw::text_horizontal_alignment;
-        auto get_vertical_alignment() const -> clsn::draw::text_vertical_alignment;
+        auto get_horizontal_alignment() const -> clsn::draw::TextHorizontalAlignment;
+        auto get_vertical_alignment() const -> clsn::draw::TextVerticalAlignment;
 
-        void set_horizontal_alignment(clsn::draw::text_horizontal_alignment horizontal_alignment);
-        void set_vertical_alignment(clsn::draw::text_vertical_alignment vertical_alignment);
+        void set_horizontal_alignment(clsn::draw::TextHorizontalAlignment horizontal_alignment);
+        void set_vertical_alignment(clsn::draw::TextVerticalAlignment vertical_alignment);
 
     protected:
         auto make_default_renderer() const -> std::unique_ptr<renderer_base> override;

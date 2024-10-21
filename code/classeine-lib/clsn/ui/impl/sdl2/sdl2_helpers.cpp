@@ -5,31 +5,31 @@
 
 #include "sdl2_helpers.h"
 
-#include "clsn/draw/color.h"
-#include "clsn/draw/region.h"
+#include "clsn/draw/Color.h"
+#include "clsn/draw/Region.h"
 
 namespace clsn::ui::impl::sdl2::sdl2_helpers
 {
     using namespace clsn::draw;
 
-    SDL_Rect to_sdl(const region& region)
+    SDL_Rect to_sdl(const Region& Region)
     {
         SDL_Rect rect;
-        rect.x = region.get_x();
-        rect.y = region.get_y();
-        rect.w = region.get_width();
-        rect.h = region.get_height();
+        rect.x = Region.getX();
+        rect.y = Region.getY();
+        rect.w = Region.getWidth();
+        rect.h = Region.getHeight();
 
         return rect;
     }
 
-    SDL_Color to_sdl(const color& color)
+    SDL_Color to_sdl(const Color& Color)
     {
         SDL_Color c;
-        c.a = static_cast<Uint8>(color.get_alpha());
-        c.r = static_cast<Uint8>(color.get_red());
-        c.g = static_cast<Uint8>(color.get_green());
-        c.b = static_cast<Uint8>(color.get_blue());
+        c.a = static_cast<Uint8>(Color.getAlpha());
+        c.r = static_cast<Uint8>(Color.getRed());
+        c.g = static_cast<Uint8>(Color.getGreen());
+        c.b = static_cast<Uint8>(Color.getBlue());
 
         return c;
     }

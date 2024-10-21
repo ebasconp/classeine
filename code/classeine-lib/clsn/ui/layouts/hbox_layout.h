@@ -16,6 +16,6 @@ namespace clsn::ui::layouts
     public:
         using constraint_type = std::monostate;
 
-        void do_layout(const draw::region& rgn, layout_element_info_vector&) const override;
+        void do_layout(const draw::Region& rgn, layout_element_info_vector&) const override;
     };
 }

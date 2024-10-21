@@ -13,7 +13,7 @@ namespace clsn::ui::renderers
     {
     public:
         void paint(graphics& gfx,
-                   const draw::region& rgn,
+                   const draw::Region& rgn,
                    const control& ctrl) const override;
     };
 }

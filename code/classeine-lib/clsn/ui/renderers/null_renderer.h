@@ -12,7 +12,7 @@ namespace clsn::ui::renderers
     class null_renderer : public renderer_base
     {
     public:
-        void paint(graphics&, const draw::region&, const control&) const override
+        void paint(graphics&, const draw::Region&, const control&) const override
         {
             // Nothing to do here
         }

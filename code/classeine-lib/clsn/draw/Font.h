@@ -5,24 +5,24 @@
 
 #pragma once
 
-#include "font_style.h"
+#include "FontStyle.h"
 
 #include <string>
 #include <utility>
 
 namespace clsn::draw
 {
-    class font
+    class Font
     {
         std::string m_name;
-        font_style m_style;
+        FontStyle m_style;
         int m_size;
 
     public:
-        font();
+        Font();
 
         template <typename StringType>
-        font(StringType&& name, font_style style, int size)
+        Font(StringType&& name, FontStyle style, int size)
         : m_name{std::forward<StringType>(name)}
         , m_style{style}
         , m_size{size}
@@ -31,20 +31,20 @@ namespace clsn::draw
 
         [[nodiscard]] auto getName() const noexcept -> const std::string&;
         [[nodiscard]] auto getSize() const noexcept -> int;
-        [[nodiscard]] auto get_style() const noexcept -> font_style;
+        [[nodiscard]] auto getStyle() const noexcept -> FontStyle;
 
-        [[nodiscard]] auto add_size(int size) const noexcept -> font;
+        [[nodiscard]] auto addSize(int size) const noexcept -> Font;
 
-        bool operator==(const font& font) const noexcept;
+        bool operator==(const Font& Font) const noexcept;
     };
 }
 
 template <>
-struct std::hash<clsn::draw::font>
+struct std::hash<clsn::draw::Font>
 {
-    auto operator()(const clsn::draw::font& font) const noexcept -> int
+    auto operator()(const clsn::draw::Font& Font) const noexcept -> int
     {
-        return static_cast<int>(std::hash<std::string>{}(font.getName()) * 31 +
-               static_cast<int>(font.get_style()) * 31 + font.getSize());
+        return static_cast<int>(std::hash<std::string>{}(Font.getName()) * 31 +
+               static_cast<int>(Font.getStyle()) * 31 + Font.getSize());
     }
 };

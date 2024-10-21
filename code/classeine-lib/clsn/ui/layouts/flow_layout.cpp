@@ -9,19 +9,19 @@ namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void flow_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
+    void flow_layout::do_layout(const draw::Region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
         if (count == 0)
             return;
 
         const auto& size = rgn.getSize();
-        const auto& position = rgn.get_position();
+        const auto& position = rgn.getPosition();
 
-        const auto width = size.get_width();
+        const auto width = size.getWidth();
 
-        int currentx = position.get_x();
-        int currenty = position.get_y();
+        int currentx = position.getX();
+        int currenty = position.getY();
 
         const int maxx = currentx + width;
         int maxy = 0;
@@ -33,24 +33,24 @@ namespace clsn::ui::layouts
 
             auto& r = e.get_input_region();
 
-            const auto control_width = r.getSize().get_width();
+            const auto control_width = r.getSize().getWidth();
 
             if (currentx + control_width < maxx)
             {
                 const auto& preferred_size = r.getSize();
-                if (maxy < preferred_size.get_height())
-                    maxy = preferred_size.get_height();
+                if (maxy < preferred_size.getHeight())
+                    maxy = preferred_size.getHeight();
 
                 e.set_output_region({ {currentx, currenty}, preferred_size });
             }
             else
             {
-                currentx = position.get_x();
+                currentx = position.getX();
                 currenty += maxy;
 
                 const auto& preferred_size = r.getSize();
-                if (maxy < preferred_size.get_height())
-                    maxy = preferred_size.get_height();
+                if (maxy < preferred_size.getHeight())
+                    maxy = preferred_size.getHeight();
 
                 e.set_output_region({ {currentx, currenty}, preferred_size });
             }

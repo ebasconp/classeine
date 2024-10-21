@@ -5,8 +5,8 @@
 
 #include <clsn/ui/painters/label_painter.h>
 
-#include <clsn/draw/color.h>
-#include <clsn/draw/region.h>
+#include <clsn/draw/Color.h>
+#include <clsn/draw/Region.h>
 
 #include <clsn/ui/captionable_control.h>
 #include <clsn/ui/ui_manager.h>
@@ -16,14 +16,14 @@ namespace clsn::ui::painters
     using namespace clsn::draw;
 
     void label_painter::paint_label(graphics& gfx,
-                     const region& rgn,
+                     const Region& rgn,
                      const captionable_control& ctrl,
                      const painting_info& info)
     {
         if (!ctrl.isEnabled())
         {
             gfx.set_draw_color({192, 192, 192});
-            gfx.draw_text(rgn + region{1, 1, 0, 0},
+            gfx.draw_text(rgn + Region{1, 1, 0, 0},
                           ctrl.get_actual_font(),
                           ctrl.getCaption(),
                           info.horizontal_alignment,
@@ -32,7 +32,7 @@ namespace clsn::ui::painters
 
         gfx.set_draw_color(ctrl.isEnabled()
                                ? ctrl.get_actual_foreground_color()
-                               : ui_manager::get_instance().get_color(
+                               : ui_manager::get_instance().getColor(
                                      "Theme", "disabledForegroundColor"));
 
         gfx.draw_text(rgn,

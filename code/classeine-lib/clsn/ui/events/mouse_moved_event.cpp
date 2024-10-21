@@ -9,12 +9,12 @@ namespace clsn::ui::events
 {
     using namespace clsn::draw;
 
-    mouse_moved_event::mouse_moved_event(const point& position)
+    mouse_moved_event::mouse_moved_event(const Point& position)
     : m_position(position)
     {
     }
 
-    auto mouse_moved_event::get_position() const noexcept -> const point&
+    auto mouse_moved_event::getPosition() const noexcept -> const Point&
     {
         return m_position;
     }

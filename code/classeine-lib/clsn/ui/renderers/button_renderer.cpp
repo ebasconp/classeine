@@ -9,7 +9,7 @@
 #include "clsn/ui/graphics.h"
 #include "clsn/ui/ui_manager.h"
 
-#include "clsn/draw/region.h"
+#include "clsn/draw/Region.h"
 
 #include "clsn/ui/painters/background_painter.h"
 #include "clsn/ui/painters/border_painter.h"
@@ -22,12 +22,12 @@ namespace
     using namespace clsn::draw;
     using namespace clsn::ui;
 
-    color get_ultimate_background_color(const button& btn, bool is_hovered)
+    Color get_ultimate_background_color(const button& btn, bool is_hovered)
     {
         if (is_hovered)
         {
             return ui_manager::get_instance()
-                    .get_color(btn.get_default_section_name(), "controlHoveredBackgroundColor");
+                    .getColor(btn.get_default_section_name(), "controlHoveredBackgroundColor");
         }
 
         return btn.get_actual_background_color();
@@ -45,7 +45,7 @@ namespace clsn::ui::renderers
     }
 
     void button_renderer::paint(graphics& gfx,
-               const region& rgn,
+               const Region& rgn,
                const control& ctrl) const
     {
         using namespace clsn::ui::painters;
@@ -60,7 +60,7 @@ namespace clsn::ui::renderers
         const bool pressed = paint_as_pressed(btn);
 
         const auto& btn_clr = pressed
-             ? ui_manager::get_instance().get_color("button", "pressedBackgroundColor")
+             ? ui_manager::get_instance().getColor("button", "pressedBackgroundColor")
              : get_ultimate_background_color(btn, is_hovered);
 
         background_painter::paint_background(gfx, rgn, btn_clr);
@@ -69,11 +69,11 @@ namespace clsn::ui::renderers
         const auto sectionName = btn.get_default_section_name();
 
         auto& unhovered_clr =
-             ui_manager::get_instance().get_color(
+             ui_manager::get_instance().getColor(
                 btn.get_default_section_name(), "control_background_color");
 
         const auto& clr = is_hovered
-                 ? ui_manager::get_instance().get_color(sectionName, "bevelUpColor")
+                 ? ui_manager::get_instance().getColor(sectionName, "bevelUpColor")
                  : unhovered_clr;
 
         constexpr int depth = 2;
@@ -81,14 +81,14 @@ namespace clsn::ui::renderers
 
         constexpr int depth2 = depth * 2;
 
-        const region inner_rect = rgn + region{depth, depth, -depth2, -depth2};
+        const Region inner_rect = rgn + Region{depth, depth, -depth2, -depth2};
 
         using namespace clsn::ui::painters;
-        painting_info info{text_horizontal_alignment::center, text_vertical_alignment::middle};
+        painting_info info{TextHorizontalAlignment::center, TextVerticalAlignment::middle};
 
         if (pressed)
         {
-            const region inner_rect_shifted = inner_rect + region{depth, depth, -depth, -depth};
+            const Region inner_rect_shifted = inner_rect + Region{depth, depth, -depth, -depth};
             label_painter::paint_label(gfx, inner_rect_shifted, btn, info);
         }
         else

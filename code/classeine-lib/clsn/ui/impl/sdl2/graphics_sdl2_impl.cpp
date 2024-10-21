@@ -7,9 +7,9 @@
 
 #include "sdl2_helpers.h"
 
-#include "clsn/draw/font.h"
-#include "clsn/draw/point.h"
-#include "clsn/draw/region.h"
+#include "clsn/draw/Font.h"
+#include "clsn/draw/Point.h"
+#include "clsn/draw/Region.h"
 
 #include "clsn/core/System.h"
 
@@ -18,19 +18,19 @@
 #include <SDL2_gfxPrimitives.h>
 
 #include <SDL_ttf.h>
-#include <clsn/draw/text_horizontal_alignment.h>
-#include <clsn/draw/text_vertical_alignment.h>
+#include <clsn/draw/TextHorizontalAlignment.h>
+#include <clsn/draw/TextVerticalAlignment.h>
 
 namespace
 {
-    auto getFontFromCache(const clsn::draw::font& font,
+    auto getFontFromCache(const clsn::draw::Font& Font,
                           const clsn::ui::impl::sdl2::sdl2_font_cache& fontCache)
         -> TTF_Font*
     {
-        auto optionalRefFont = fontCache.getFont(font);
+        auto optionalRefFont = fontCache.getFont(Font);
         if (!optionalRefFont.has_value())
         {
-            clsn::core::System::panic("Font not found: [{}]", font.getName());
+            clsn::core::System::panic("Font not found: [{}]", Font.getName());
             return nullptr;
         }
 
@@ -38,7 +38,7 @@ namespace
     }
 
     auto getTextSizeImpl(TTF_Font* ttfFont, std::string_view text)
-        -> clsn::draw::dimension
+        -> clsn::draw::Dimension
     {
         int actualTextWidth, actualTextHeight;
         TTF_SizeText(ttfFont, text.data(), &actualTextWidth, &actualTextHeight);
@@ -53,7 +53,7 @@ namespace clsn::ui::impl::sdl2
 
     graphics_sdl2_impl::graphics_sdl2_impl(
             SDL_Renderer& renderer,
-            const dimension& size)
+            const Dimension& size)
     : m_renderer{renderer}
     , m_draw_color{255, 255, 255}
     , m_needs_to_apply{false}
@@ -76,7 +76,7 @@ namespace clsn::ui::impl::sdl2
         return m_font_cache;
     }
 
-    void graphics_sdl2_impl::resize(const dimension& newSize)
+    void graphics_sdl2_impl::resize(const Dimension& newSize)
     {
         destroy_texture();
         create_texture(newSize);
@@ -90,7 +90,7 @@ namespace clsn::ui::impl::sdl2
         }
     }
 
-    void graphics_sdl2_impl::create_texture(const dimension& newSize)
+    void graphics_sdl2_impl::create_texture(const Dimension& newSize)
     {
         using namespace clsn::core;
 
@@ -100,8 +100,8 @@ namespace clsn::ui::impl::sdl2
             &m_renderer,
             SDL_PIXELFORMAT_RGBA8888,
             SDL_TEXTUREACCESS_TARGET,
-            newSize.get_width(),
-            newSize.get_height());
+            newSize.getWidth(),
+            newSize.getHeight());
 
         if (m_texture == nullptr)
         {
@@ -114,16 +114,16 @@ namespace clsn::ui::impl::sdl2
         SDL_SetRenderTarget(&m_renderer, m_texture);
     }
 
-    void graphics_sdl2_impl::set_draw_color(const color& c) const
+    void graphics_sdl2_impl::set_draw_color(const Color& c) const
     {
         m_draw_color = c;
 
         SDL_SetRenderDrawColor(
             &m_renderer,
-            static_cast<Uint8>(c.get_red()),
-            static_cast<Uint8>(c.get_green()),
-            static_cast<Uint8>(c.get_blue()),
-            static_cast<Uint8>(c.get_alpha()));
+            static_cast<Uint8>(c.getRed()),
+            static_cast<Uint8>(c.getGreen()),
+            static_cast<Uint8>(c.getBlue()),
+            static_cast<Uint8>(c.getAlpha()));
     }
 
     void graphics_sdl2_impl::clear() const
@@ -146,15 +146,15 @@ namespace clsn::ui::impl::sdl2
         }
     }
 
-    void graphics_sdl2_impl::draw_line(const point& p1, const point& p2) const
+    void graphics_sdl2_impl::draw_line(const Point& p1, const Point& p2) const
     {
         SDL_RenderDrawLine(
-            &m_renderer, p1.get_x(), p1.get_y(), p2.get_x(), p2.get_y());
+            &m_renderer, p1.getX(), p1.getY(), p2.getX(), p2.getY());
 
         m_needs_to_apply = true;
     }
 
-    void graphics_sdl2_impl::draw_rectangle(const region& r) const
+    void graphics_sdl2_impl::draw_rectangle(const Region& r) const
     {
         SDL_Rect rect = sdl2_helpers::to_sdl(r);
         SDL_RenderDrawRect(&m_renderer, &rect);
@@ -162,17 +162,17 @@ namespace clsn::ui::impl::sdl2
         m_needs_to_apply = true;
     }
 
-    void graphics_sdl2_impl::draw_fill_circle(const region& r) const
+    void graphics_sdl2_impl::draw_fill_circle(const Region& r) const
     {
-        const auto cx = static_cast<short>(r.get_x() + r.get_width() / 2);
-        const auto cy = static_cast<short>(r.get_y() + r.get_height() / 2);
-        const auto rx = static_cast<short>(r.get_width() / 2);
-        const auto ry = static_cast<short>(r.get_height() / 2);
+        const auto cx = static_cast<short>(r.getX() + r.getWidth() / 2);
+        const auto cy = static_cast<short>(r.getY() + r.getHeight() / 2);
+        const auto rx = static_cast<short>(r.getWidth() / 2);
+        const auto ry = static_cast<short>(r.getHeight() / 2);
 
         const auto rs = filledEllipseRGBA(&m_renderer, cx, cy, rx, ry,
-            static_cast<Uint8>(m_draw_color.get_red()),
-            static_cast<Uint8>(m_draw_color.get_green()),
-            static_cast<Uint8>(m_draw_color.get_blue()),
+            static_cast<Uint8>(m_draw_color.getRed()),
+            static_cast<Uint8>(m_draw_color.getGreen()),
+            static_cast<Uint8>(m_draw_color.getBlue()),
             255);
 
         if (rs == -1)
@@ -185,7 +185,7 @@ namespace clsn::ui::impl::sdl2
         m_needs_to_apply = true;
     }
 
-    void graphics_sdl2_impl::draw_fill_rectangle(const region& r) const
+    void graphics_sdl2_impl::draw_fill_rectangle(const Region& r) const
     {
         SDL_Rect rect = sdl2_helpers::to_sdl(r);
         SDL_RenderFillRect(&m_renderer, &rect);
@@ -193,13 +193,13 @@ namespace clsn::ui::impl::sdl2
         m_needs_to_apply = true;
     }
 
-    void graphics_sdl2_impl::draw_text(const region& r,
-                                    const font& font,
+    void graphics_sdl2_impl::draw_text(const Region& r,
+                                    const Font& Font,
                                     std::string_view text,
-                                    [[maybe_unused]] text_horizontal_alignment horizontal_alignment,
-                                    [[maybe_unused]] text_vertical_alignment vertical_alignment) const
+                                    [[maybe_unused]] TextHorizontalAlignment horizontal_alignment,
+                                    [[maybe_unused]] TextVerticalAlignment vertical_alignment) const
     {
-        auto ttfFont = getFontFromCache(font, m_font_cache);
+        auto ttfFont = getFontFromCache(Font, m_font_cache);
         SDL_Color textColor = sdl2_helpers::to_sdl(m_draw_color);
 
         SDL_Surface* surface =
@@ -212,26 +212,26 @@ namespace clsn::ui::impl::sdl2
 
         auto text_size = getTextSizeImpl(ttfFont, text);
 
-        int x = r.get_x();
-        int y = r.get_y();
+        int x = r.getX();
+        int y = r.getY();
 
         switch (horizontal_alignment)
         {
-            case text_horizontal_alignment::left:   break;
-            case text_horizontal_alignment::center:  x += (r.get_width() - text_size.get_width()) / 2; break;
-            case text_horizontal_alignment::right: x += r.get_width() - text_size.get_width(); break;
+            case TextHorizontalAlignment::left:   break;
+            case TextHorizontalAlignment::center:  x += (r.getWidth() - text_size.getWidth()) / 2; break;
+            case TextHorizontalAlignment::right: x += r.getWidth() - text_size.getWidth(); break;
         }
 
         switch (vertical_alignment)
         {
-            case text_vertical_alignment::top:   break;
-            case text_vertical_alignment::middle:  y += (r.get_height() - text_size.get_height()) / 2; break;
-            case text_vertical_alignment::bottom: y += r.get_height() - text_size.get_height(); break;
+            case TextVerticalAlignment::top:   break;
+            case TextVerticalAlignment::middle:  y += (r.getHeight() - text_size.getHeight()) / 2; break;
+            case TextVerticalAlignment::bottom: y += r.getHeight() - text_size.getHeight(); break;
         }
 
         SDL_Rect textRect;
-        textRect.w = text_size.get_width();
-        textRect.h = text_size.get_height();
+        textRect.w = text_size.getWidth();
+        textRect.h = text_size.getHeight();
         textRect.x = x;
         textRect.y = y;
 
@@ -247,8 +247,8 @@ namespace clsn::ui::impl::sdl2
         m_needs_to_apply = true;
     }
 
-    auto graphics_sdl2_impl::get_text_size(const font& f,
-                                       std::string_view text) const -> dimension
+    auto graphics_sdl2_impl::get_text_size(const Font& f,
+                                       std::string_view text) const -> Dimension
     {
         auto ttfFont = getFontFromCache(f, m_font_cache);
         return getTextSizeImpl(ttfFont, text);

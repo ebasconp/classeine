@@ -14,22 +14,22 @@
 #include "clsn/ui/painters/check_box_painter.h"
 #include "clsn/ui/painters/label_painter.h"
 
-#include "clsn/draw/region.h"
+#include "clsn/draw/Region.h"
 
 namespace clsn::ui::renderers
 {
     using namespace clsn::draw;
 
     void check_box_renderer::paint(graphics& gfx,
-                   const region& rgn,
+                   const Region& rgn,
                    const control& ctrl) const
     {
         const auto& chk_box = static_cast<const check_box&>(ctrl);
         const auto sectionName = chk_box.get_default_section_name();
 
         const auto btn_clr = chk_box.is_pressed()
-            ? color{192, 192, 192}
-            : ui_manager::get_instance().get_color(sectionName, "control_background_color");
+            ? Color{192, 192, 192}
+            : ui_manager::get_instance().getColor(sectionName, "control_background_color");
 
         using namespace clsn::ui::painters;
 
@@ -37,22 +37,22 @@ namespace clsn::ui::renderers
 
         const auto text_size = gfx.get_text_size(chk_box.get_actual_font(), chk_box.getCaption());
 
-        const auto size = text_size.get_height();
+        const auto size = text_size.getHeight();
 
         using namespace clsn::ui::layouts;
         dual_layout layout;
 
         dual_layout::layout_element_info_vector infos;
 
-        infos.emplace_back(draw::region{0, 0, size, size}, dual_layout_constraint::use_preferred_size, true);
-        infos.emplace_back(draw::region{0, 0, 0, 0}, dual_layout_constraint::use_all_available_space, true);
+        infos.emplace_back(draw::Region{0, 0, size, size}, dual_layout_constraint::use_preferred_size, true);
+        infos.emplace_back(draw::Region{0, 0, 0, 0}, dual_layout_constraint::use_all_available_space, true);
 
         layout.do_layout(rgn, infos);
 
         check_box_painter::paint_check_box(gfx, infos[0].get_output_region(), chk_box, size);
 
         using namespace clsn::ui::painters;
-        painting_info info{text_horizontal_alignment::left, text_vertical_alignment::middle};
+        painting_info info{TextHorizontalAlignment::left, TextVerticalAlignment::middle};
 
         label_painter::paint_label(gfx, infos[1].get_output_region(), chk_box, info);
     }

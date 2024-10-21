@@ -11,8 +11,8 @@ namespace clsn::ui
 {
     label::label()
     : captionable_control{"label"}
-    , m_horizontal_alignment{clsn::draw::text_horizontal_alignment::left}
-    , m_vertical_alignment{clsn::draw::text_vertical_alignment::middle}
+    , m_horizontal_alignment{clsn::draw::TextHorizontalAlignment::left}
+    , m_vertical_alignment{clsn::draw::TextVerticalAlignment::middle}
     {
     }
 
@@ -21,22 +21,22 @@ namespace clsn::ui
         return std::make_unique<renderers::label_renderer>();
     }
 
-    auto label::get_horizontal_alignment() const -> clsn::draw::text_horizontal_alignment
+    auto label::get_horizontal_alignment() const -> clsn::draw::TextHorizontalAlignment
     {
         return m_horizontal_alignment;
     }
 
-    auto label::get_vertical_alignment() const -> clsn::draw::text_vertical_alignment
+    auto label::get_vertical_alignment() const -> clsn::draw::TextVerticalAlignment
     {
         return m_vertical_alignment;
     }
 
-    void label::set_horizontal_alignment(clsn::draw::text_horizontal_alignment horizontal_alignment)
+    void label::set_horizontal_alignment(clsn::draw::TextHorizontalAlignment horizontal_alignment)
     {
         m_horizontal_alignment = horizontal_alignment;
     }
 
-    void label::set_vertical_alignment(clsn::draw::text_vertical_alignment vertical_alignment)
+    void label::set_vertical_alignment(clsn::draw::TextVerticalAlignment vertical_alignment)
     {
         m_vertical_alignment = vertical_alignment;
     }

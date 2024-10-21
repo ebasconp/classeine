@@ -11,7 +11,7 @@
 
 #include <clsn/ui/renderers/customizable_renderer.h>
 
-#include <clsn/draw/colors.h>
+#include <clsn/draw/Colors.h>
 
 namespace clsn::demo
 {
@@ -27,8 +27,8 @@ namespace clsn::demo
         {
             m_button  = this->add(control::make<button>());
             m_button->setCaption("Click me to toggle UI theme");
-            m_button->setBackgroundColor(draw::colors::make_red());
-            m_button->setForegroundColor(draw::colors::make_white());
+            m_button->setBackgroundColor(draw::Colors::makeRed());
+            m_button->setForegroundColor(draw::Colors::makeWhite());
             m_button->add_action_listener([](auto&)
             {
                 auto& _ui_mgr = ui::ui_manager::get_instance();
@@ -39,14 +39,14 @@ namespace clsn::demo
             m_control = this->add(control::make<empty_control>());
             m_control->set_renderer(std::make_unique<renderers::customizable_renderer>([](auto& gfx, auto& rgn, auto&)
             {
-                gfx.set_draw_color(draw::colors::make_yellow());
+                gfx.set_draw_color(draw::Colors::makeYellow());
                 gfx.draw_fill_rectangle(rgn);
             }));
 
             m_label = this->add(control::make<label>());
             m_label->setCaption("This is a label");
-            m_label->setBackgroundColor(draw::colors::make_blue());
-            m_label->setForegroundColor(draw::colors::make_white());
+            m_label->setBackgroundColor(draw::Colors::makeBlue());
+            m_label->setForegroundColor(draw::Colors::makeWhite());
         }
     };
 }

@@ -3,37 +3,37 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include <clsn/draw/font.h>
+#include <clsn/draw/Font.h>
 
 #include <tuple>
 
 namespace clsn::draw
 {
-    font::font() : font{"", font_style::regular, 0}
+    Font::Font() : Font{"", FontStyle::regular, 0}
     {
     }
 
-    auto font::getName() const noexcept -> const std::string&
+    auto Font::getName() const noexcept -> const std::string&
     {
         return m_name;
     }
 
-    auto font::getSize() const noexcept -> int
+    auto Font::getSize() const noexcept -> int
     {
         return m_size;
     }
 
-    auto font::get_style() const noexcept -> font_style
+    auto Font::getStyle() const noexcept -> FontStyle
     {
         return m_style;
     }
 
-    auto font::add_size(int size) const noexcept -> font
+    auto Font::addSize(int size) const noexcept -> Font
     {
         return {m_name, m_style, m_size + size};
     }
 
-    auto font::operator==(const font& other) const noexcept -> bool
+    auto Font::operator==(const Font& other) const noexcept -> bool
     {
         return std::tie(m_name, m_style, m_size) ==
                std::tie(other.m_name, other.m_style, other.m_size);

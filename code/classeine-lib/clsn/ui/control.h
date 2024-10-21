@@ -11,7 +11,7 @@
 #include <clsn/ui/events/mouse_click_event.h>
 #include <clsn/ui/events/mouse_moved_event.h>
 
-#include <clsn/draw/dimension.h>
+#include <clsn/draw/Dimension.h>
 
 #include <clsn/core/Entity.h>
 #include <clsn/core/EntityWrapper.h>
@@ -90,10 +90,10 @@ namespace clsn::ui
         auto get_parent_window() const -> core::constOptionalReference<window>;
 
         /// Property for the actual position of the control.
-        CLSN_HEADER_PROPERTY(ActualPosition, draw::point, true)
+        CLSN_HEADER_PROPERTY(ActualPosition, draw::Point, true)
 
         /// Property for the actual size of the control.
-        CLSN_HEADER_PROPERTY(ActualSize, draw::dimension, true)
+        CLSN_HEADER_PROPERTY(ActualSize, draw::Dimension, true)
 
         /// Boolean Property indicating whether the control is enabled.
         CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(Enabled, true, true)
@@ -102,15 +102,15 @@ namespace clsn::ui
         CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(Visible, true, true)
 
         /// Property for the preferred size of the control.
-        CLSN_HEADER_PROPERTY(PreferredSize, std::optional<clsn::draw::dimension>, true)
+        CLSN_HEADER_PROPERTY(PreferredSize, std::optional<clsn::draw::Dimension>, true)
 
         /// Gets the actual preferred size of the control.
         /// @return The preferred size.
-        auto get_actual_preferred_size() const -> const clsn::draw::dimension&;
+        auto get_actual_preferred_size() const -> const clsn::draw::Dimension&;
 
         /// Gets the actual bounds of the control.
         /// @return The bounds of the control.
-        auto get_actual_bounds() const -> clsn::draw::region;
+        auto get_actual_bounds() const -> clsn::draw::Region;
 
         /// Equality operator.
         /// @param rhs The other control to compare.
@@ -138,10 +138,10 @@ namespace clsn::ui
         /// @param e The mouse moved Event to notify.
         void notify_mouse_moved_event(events::mouse_moved_event& e);
 
-        /// Paints the control within a given region.
+        /// Paints the control within a given Region.
         /// @param gfx The graphics context.
-        /// @param rgn The region to paint.
-        void paint(graphics& gfx, const clsn::draw::region& rgn) const;
+        /// @param rgn The Region to paint.
+        void paint(graphics& gfx, const clsn::draw::Region& rgn) const;
 
         /// Gets the default section name for the control.
         /// @return The default section name.
@@ -206,15 +206,15 @@ namespace clsn::ui
         /// @return True if the control is hovered.
         auto is_hovered() const -> bool;
 
-        /// Checks if the control contains a point.
-        /// @param point The point to check.
-        /// @return True if the point is within the control's bounds.
-        auto contains_point(const clsn::draw::point& point) const -> bool;
+        /// Checks if the control contains a Point.
+        /// @param Point The Point to check.
+        /// @return True if the Point is within the control's bounds.
+        auto containsPoint(const clsn::draw::Point& Point) const -> bool;
 
         /// Gets the control at a specific position.
-        /// @param point The position to check.
+        /// @param Point The position to check.
         /// @return The control at the position, or a null reference if none exists.
-        virtual auto get_control_by_position(const clsn::draw::point& point) const ->
+        virtual auto get_control_by_position(const clsn::draw::Point& Point) const ->
                 core::constOptionalReference<control>;
 
         /// Invokes a procedure in the context of the parent window.

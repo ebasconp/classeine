@@ -31,28 +31,28 @@ namespace clsn::ui::amatista
         add("button", "preferredSize", get_button_preferred_size());
     }
 
-    auto amatista_ui_theme::get_default_regular_font() const -> font
+    auto amatista_ui_theme::get_default_regular_font() const -> Font
     {
-        return font{"default", font_style::regular, 14};
+        return Font{"default", FontStyle::regular, 14};
     }
 
-    auto amatista_ui_theme::get_default_bold_font() const -> font
+    auto amatista_ui_theme::get_default_bold_font() const -> Font
     {
-        return font{"bold", font_style::bold, 14};
+        return Font{"bold", FontStyle::bold, 14};
     }
 
-    auto amatista_ui_theme::get_default_italic_font() const -> font
+    auto amatista_ui_theme::get_default_italic_font() const -> Font
     {
-        return font{"italic", font_style::italic, 14};
+        return Font{"italic", FontStyle::italic, 14};
     }
 
-    auto amatista_ui_theme::get_default_bold_italic_font() const -> font
+    auto amatista_ui_theme::get_default_bold_italic_font() const -> Font
     {
-        return font{"bold_italic", font_style::bold_italic, 14};
+        return Font{"bold_italic", FontStyle::bold_italic, 14};
     }
 
-    auto amatista_ui_theme::get_button_preferred_size() const -> dimension
+    auto amatista_ui_theme::get_button_preferred_size() const -> Dimension
     {
-        return dimension{96, 32};
+        return Dimension{96, 32};
     }
 }

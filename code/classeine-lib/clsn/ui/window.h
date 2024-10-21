@@ -7,7 +7,7 @@
 
 #include <clsn/ui/captionable_control.h>
 
-#include <clsn/draw/forward.h>
+#include <clsn/draw/Forward.h>
 
 #include <clsn/core/Property.h>
 
@@ -22,9 +22,9 @@ namespace clsn::ui
     public:
         explicit window(std::string_view sectionName);
 
-        CLSN_HEADER_PROPERTY(Position, clsn::draw::point, true)
-        CLSN_HEADER_PROPERTY(MinimumSize, clsn::draw::dimension, true)
-        CLSN_HEADER_PROPERTY(Size, clsn::draw::dimension, true)
+        CLSN_HEADER_PROPERTY(Position, clsn::draw::Point, true)
+        CLSN_HEADER_PROPERTY(MinimumSize, clsn::draw::Dimension, true)
+        CLSN_HEADER_PROPERTY(Size, clsn::draw::Dimension, true)
         CLSN_HEADER_BOOL_PROPERTY_WITH_DEFAULT_VALUE(Resizable, true, true)
 
         void grab_mouse(control& control);
@@ -32,7 +32,7 @@ namespace clsn::ui
 
         auto is_hovered(const control& control) const -> bool;
 
-        virtual auto get_control_by_position(const clsn::draw::point& point) const ->
+        virtual auto get_control_by_position(const clsn::draw::Point& Point) const ->
                             core::constOptionalReference<control> = 0;
 
     protected:

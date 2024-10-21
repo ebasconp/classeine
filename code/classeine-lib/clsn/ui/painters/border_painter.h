@@ -7,7 +7,7 @@
 
 #include <clsn/ui/graphics.h>
 
-#include <clsn/draw/forward.h>
+#include <clsn/draw/Forward.h>
 
 #include <clsn/core/NonInstantiable.h>
 
@@ -17,8 +17,8 @@ namespace clsn::ui::painters
     {
     public:
         static void paint_flat_border(graphics& gfx,
-                     const clsn::draw::region& rgn,
-                     const clsn::draw::color& c,
+                     const clsn::draw::Region& rgn,
+                     const clsn::draw::Color& c,
                      int depth);
     };
 }

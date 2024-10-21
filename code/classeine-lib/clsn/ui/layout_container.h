@@ -54,7 +54,7 @@ namespace clsn::ui
 
                 auto& rgn = infos[i].get_output_region();
 
-                ctrl.setActualPosition(rgn.get_position());
+                ctrl.setActualPosition(rgn.getPosition());
                 ctrl.setActualSize(rgn.getSize());
 
                 j++;

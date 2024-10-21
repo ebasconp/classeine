@@ -39,9 +39,9 @@ namespace clsn::ui
 
         auto install_theme_by_name(const std::string& name) -> bool;
 
-        auto get_color(std::string_view sectionName, std::string_view name) -> const clsn::draw::color&;
-        auto get_dimension(std::string_view sectionName, std::string_view name) -> const clsn::draw::dimension&;
-        auto getFont(std::string_view sectionName, std::string_view name) -> const clsn::draw::font&;
+        auto getColor(std::string_view sectionName, std::string_view name) -> const clsn::draw::Color&;
+        auto get_dimension(std::string_view sectionName, std::string_view name) -> const clsn::draw::Dimension&;
+        auto getFont(std::string_view sectionName, std::string_view name) -> const clsn::draw::Font&;
 
         auto add_theme_changed_listener(clsn::core::EventListener<clsn::core::EmptyEvent> listener) -> int;
         auto get_current_theme_name() const -> const std::string&;

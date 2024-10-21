@@ -13,7 +13,7 @@ namespace clsn::ui::renderers
     {
     public:
         void paint(graphics& graphics,
-                   const clsn::draw::region& region,
+                   const clsn::draw::Region& Region,
                    const control& baseControl) const override;
     };
 }

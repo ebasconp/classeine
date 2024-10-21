@@ -8,7 +8,7 @@
 #include <clsn/ui/forward.h>
 #include <clsn/ui/graphics.h>
 
-#include <clsn/draw/forward.h>
+#include <clsn/draw/Forward.h>
 
 #include <clsn/core/NonInstantiable.h>
 
@@ -18,7 +18,7 @@ namespace clsn::ui::painters
     {
     public:
         static void paint_radio_button(graphics& gfx,
-                          const clsn::draw::region& rgn,
+                          const clsn::draw::Region& rgn,
                           const radio_button& rb,
                           int size);
     };

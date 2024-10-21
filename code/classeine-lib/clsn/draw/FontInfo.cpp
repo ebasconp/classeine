@@ -3,24 +3,24 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include <clsn/draw/font_info.h>
+#include <clsn/draw/FontInfo.h>
 
 namespace clsn::draw
 {
-    font_info::font_info(std::string_view name, clsn::draw::font_style style)
+    FontInfo::FontInfo(std::string_view name, clsn::draw::FontStyle style)
     : m_name{name}
     , m_style{style}
     {
     }
 
-    auto font_info::getName() const noexcept -> const std::string&
+    auto FontInfo::getName() const noexcept -> const std::string&
     {
         return m_name;
     }
 
-    auto font_info::get_style() const noexcept -> font_style { return m_style; }
+    auto FontInfo::getStyle() const noexcept -> FontStyle { return m_style; }
 
-    auto font_info::operator==(const clsn::draw::font_info& oth) const -> bool
+    auto FontInfo::operator==(const clsn::draw::FontInfo& oth) const -> bool
     {
         if (this == &oth)
             return true;

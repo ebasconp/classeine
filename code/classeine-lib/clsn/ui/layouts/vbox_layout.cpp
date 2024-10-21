@@ -11,7 +11,7 @@ namespace clsn::ui::layouts
 {
     using namespace clsn::draw;
 
-    void vbox_layout::do_layout(const draw::region& rgn, layout_element_info_vector& elems) const
+    void vbox_layout::do_layout(const draw::Region& rgn, layout_element_info_vector& elems) const
     {
         const auto count = static_cast<int>(elems.size());
 
@@ -24,10 +24,10 @@ namespace clsn::ui::layouts
             return;
 
         const auto& actual_size = rgn.getSize();
-        const auto width = actual_size.get_width();
-        const auto height = actual_size.get_height() / visible_count;
+        const auto width = actual_size.getWidth();
+        const auto height = actual_size.getHeight() / visible_count;
 
-        const auto position = rgn.get_position();
+        const auto position = rgn.getPosition();
 
         int last_y = 0;
         for (int i = 0; i < count; i++)
@@ -35,9 +35,9 @@ namespace clsn::ui::layouts
             if (!elems[i].isVisible())
                 continue;
 
-            const auto actual_height = i < count - 1 ? height : actual_size.get_height() - last_y;
+            const auto actual_height = i < count - 1 ? height : actual_size.getHeight() - last_y;
 
-            elems[i].set_output_region({ {position.get_x(), last_y + position.get_y()}, {width, actual_height} });
+            elems[i].set_output_region({ {position.getX(), last_y + position.getY()}, {width, actual_height} });
 
             last_y += height;
         }

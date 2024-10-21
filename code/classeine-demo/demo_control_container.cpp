@@ -47,22 +47,22 @@ namespace clsn::demo
 
         auto label1 = m_buttons->add(control::make<ui::label>());
         label1->setCaption("Top left");
-        label1->set_horizontal_alignment(draw::text_horizontal_alignment::left);
-        label1->set_vertical_alignment(draw::text_vertical_alignment::top);
-        label1->setBackgroundColor(draw::color{255, 128, 0});
+        label1->set_horizontal_alignment(draw::TextHorizontalAlignment::left);
+        label1->set_vertical_alignment(draw::TextVerticalAlignment::top);
+        label1->setBackgroundColor(draw::Color{255, 128, 0});
 
         auto label2 = m_buttons->add(control::make<ui::label>());
         label2->setCaption("Middle center");
-        label2->set_horizontal_alignment(draw::text_horizontal_alignment::center);
-        label2->set_vertical_alignment(draw::text_vertical_alignment::middle);
-        label2->setBackgroundColor(draw::color{230, 150, 0});
+        label2->set_horizontal_alignment(draw::TextHorizontalAlignment::center);
+        label2->set_vertical_alignment(draw::TextVerticalAlignment::middle);
+        label2->setBackgroundColor(draw::Color{230, 150, 0});
 
 
         auto label3 = m_buttons->add(control::make<ui::label>());
         label3->setCaption("Bottom right");
-        label3->set_horizontal_alignment(draw::text_horizontal_alignment::right);
-        label3->set_vertical_alignment(draw::text_vertical_alignment::bottom);
-        label3->setBackgroundColor(draw::color{200, 180, 0});
+        label3->set_horizontal_alignment(draw::TextHorizontalAlignment::right);
+        label3->set_vertical_alignment(draw::TextVerticalAlignment::bottom);
+        label3->setBackgroundColor(draw::Color{200, 180, 0});
         label3->setEnabled(false);
     }
 
@@ -107,18 +107,18 @@ namespace clsn::demo
         m_check_boxes = this->add(control::make<ui::hbox_layout_container>());
 
         auto padding = m_check_boxes->add(control::make<ui::padding_control<ui::empty_control>>());
-        padding->setForegroundColor(draw::color{0, 240, 180});
+        padding->setForegroundColor(draw::Color{0, 240, 180});
         padding->setSize(8);
 
         auto& empty = padding->get_inner_control();
         empty.set_renderer(std::make_unique<ui::renderers::customizable_renderer>(
-            [](ui::graphics& gfx, const draw::region& rgn, auto& )
+            [](ui::graphics& gfx, const draw::Region& rgn, auto& )
             {
-                gfx.set_draw_color(draw::color{0, 80, 160});
+                gfx.set_draw_color(draw::Color{0, 80, 160});
                 gfx.draw_fill_rectangle(rgn);
 
-                gfx.set_draw_color(draw::color{128, 150, 255});
-                gfx.draw_fill_circle(rgn + draw::region{ 10, 10, -20, -20 });
+                gfx.set_draw_color(draw::Color{128, 150, 255});
+                gfx.draw_fill_circle(rgn + draw::Region{ 10, 10, -20, -20 });
             }
         ));
 

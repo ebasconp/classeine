@@ -10,7 +10,7 @@ namespace clsn::ui::renderers
     using namespace clsn::draw;
 
     void customizable_renderer::paint(graphics& gfx,
-                              const region& rgn,
+                              const Region& rgn,
                               const control& ctrl) const
     {
         if (m_painter)

@@ -24,17 +24,17 @@ namespace clsn::ui
         return true;
     }
 
-    auto ui_skin::get_color(std::string_view sectionName, std::string_view name) -> const color&
+    auto ui_skin::getColor(std::string_view sectionName, std::string_view name) -> const Color&
     {
-        return m_current_theme.second->get_color(sectionName, name);
+        return m_current_theme.second->getColor(sectionName, name);
     }
 
-    auto ui_skin::get_dimension(std::string_view sectionName, std::string_view name) -> const dimension&
+    auto ui_skin::get_dimension(std::string_view sectionName, std::string_view name) -> const Dimension&
     {
         return m_current_theme.second->get_dimension(sectionName, name);
     }
 
-    auto ui_skin::getFont(std::string_view sectionName, std::string_view name) -> const font&
+    auto ui_skin::getFont(std::string_view sectionName, std::string_view name) -> const Font&
     {
         return m_current_theme.second->getFont(sectionName, name);
     }

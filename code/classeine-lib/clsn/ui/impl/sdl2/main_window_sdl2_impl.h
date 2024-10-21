@@ -11,9 +11,9 @@
 #include "clsn/ui/events/mouse_click_event.h"
 #include "clsn/ui/events/mouse_moved_event.h"
 
-#include "clsn/draw/dimension.h"
-#include "clsn/draw/point.h"
-#include "clsn/draw/region.h"
+#include "clsn/draw/Dimension.h"
+#include "clsn/draw/Point.h"
+#include "clsn/draw/Region.h"
 
 #include "clsn/core/System.h"
 
@@ -76,8 +76,8 @@ namespace clsn::ui::impl::sdl2
             m_window = SDL_CreateWindow(m_parent_window.getCaption().c_str(),
                                         SDL_WINDOWPOS_CENTERED,
                                         SDL_WINDOWPOS_CENTERED,
-                                        m_parent_window.getSize().get_width(),
-                                        m_parent_window.getSize().get_height(),
+                                        m_parent_window.getSize().getWidth(),
+                                        m_parent_window.getSize().getHeight(),
                                         SDL_WINDOW_SHOWN | resizable);
             if (m_window == nullptr)
             {
@@ -104,7 +104,7 @@ namespace clsn::ui::impl::sdl2
 
             auto& minimumSize = m_parent_window.getMinimumSize();
             SDL_SetWindowMinimumSize(
-                m_window, minimumSize.get_width(), minimumSize.get_height());
+                m_window, minimumSize.getWidth(), minimumSize.getHeight());
 
             run_event_loop();
         }
@@ -132,14 +132,14 @@ namespace clsn::ui::impl::sdl2
         }
 
     private:
-        void resizeGraphics(graphics_sdl2_impl& graphics, const draw::dimension& new_size)
+        void resizeGraphics(graphics_sdl2_impl& graphics, const draw::Dimension& new_size)
         {
             graphics.resize(new_size);
         }
 
         void repaintAll(graphics_sdl2_impl& graphics)
         {
-            const draw::region rgn{{0, 0}, m_parent_window.getActualSize()};
+            const draw::Region rgn{{0, 0}, m_parent_window.getActualSize()};
             m_parent_window().paint(graphics, rgn);
             graphics.apply();
         }
@@ -161,7 +161,7 @@ namespace clsn::ui::impl::sdl2
                     case SDL_WINDOWEVENT:
                         if (Event.window.event == SDL_WINDOWEVENT_RESIZED)
                         {
-                            const draw::dimension newSize{Event.window.data1, Event.window.data2};
+                            const draw::Dimension newSize{Event.window.data1, Event.window.data2};
 
                             resizeGraphics(graphics, newSize);
                             process_control_resized_event(newSize);
@@ -183,7 +183,7 @@ namespace clsn::ui::impl::sdl2
                         break;
                 }
 
-                const draw::region rgn{{0, 0}, m_parent_window.getActualSize()};
+                const draw::Region rgn{{0, 0}, m_parent_window.getActualSize()};
                 m_parent_window().paint(graphics, rgn);
                 graphics.apply();
             }
@@ -197,7 +197,7 @@ namespace clsn::ui::impl::sdl2
                     : clsn::ui::events::mouse_click_status::released;
 
             clsn::ui::events::mouse_click_event mouseClickEvent{
-                status, draw::point{e.button.x, e.button.y}};
+                status, draw::Point{e.button.x, e.button.y}};
 
             m_parent_window.process_mouse_click_event(mouseClickEvent);
         }
@@ -208,7 +208,7 @@ namespace clsn::ui::impl::sdl2
             m_parent_window.process_mouse_moved_event(_mouse_moved_event);
         }
 
-        void process_control_resized_event(const draw::dimension& newSize)
+        void process_control_resized_event(const draw::Dimension& newSize)
         {
             m_parent_window.setActualSize(newSize);
         }

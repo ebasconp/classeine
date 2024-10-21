@@ -10,8 +10,8 @@ namespace
     using namespace clsn::draw;
     using namespace clsn::ui::layouts;
 
-    void layout_vertical(const point& position,
-                                      const dimension& size, dual_layout::layout_element_info_vector& elems)
+    void layout_vertical(const Point& position,
+                                      const Dimension& size, dual_layout::layout_element_info_vector& elems)
     {
         const auto count = static_cast<int>(elems.size());
         if (count == 1)
@@ -20,10 +20,10 @@ namespace
 
             auto ch = cc.get_constraint() ==
                               dual_layout_constraint::use_all_available_space
-                          ? size.get_height()
-                          : cc.get_input_region().getSize().get_height();
+                          ? size.getHeight()
+                          : cc.get_input_region().getSize().getHeight();
 
-            cc.set_output_region({position, {size.get_width(), ch}});
+            cc.set_output_region({position, {size.getWidth(), ch}});
         }
 
         if (count == 2)
@@ -33,19 +33,19 @@ namespace
 
             auto c0h = cc0.get_constraint() ==
                                dual_layout_constraint::use_all_available_space
-                           ? size.get_height() - cc1.get_input_region().get_height()
-                           : cc0.get_input_region().get_height();
+                           ? size.getHeight() - cc1.get_input_region().getHeight()
+                           : cc0.get_input_region().getHeight();
 
-            auto c1h = size.get_height() - c0h;
+            auto c1h = size.getHeight() - c0h;
 
-            cc0.set_output_region({position, {size.get_width(), c0h}});
-            cc1.set_output_region({{position.get_x(), position.get_y() + c0h},
-                            {size.get_width(), c1h}});
+            cc0.set_output_region({position, {size.getWidth(), c0h}});
+            cc1.set_output_region({{position.getX(), position.getY() + c0h},
+                            {size.getWidth(), c1h}});
         }
     }
 
-    void layout_horizontal(const point& position,
-                                        const dimension& size,
+    void layout_horizontal(const Point& position,
+                                        const Dimension& size,
                                         dual_layout::layout_element_info_vector& elems)
     {
         const auto count = static_cast<int>(elems.size());
@@ -55,10 +55,10 @@ namespace
 
             auto cw = cc.get_constraint() ==
                               dual_layout_constraint::use_all_available_space
-                          ? size.get_width()
-                          : cc.get_input_region().get_width();
+                          ? size.getWidth()
+                          : cc.get_input_region().getWidth();
 
-            cc.set_output_region({position, {cw, size.get_height()}});
+            cc.set_output_region({position, {cw, size.getHeight()}});
         }
 
         if (count == 2)
@@ -68,14 +68,14 @@ namespace
 
             auto c0w = cc0.get_constraint() ==
                                dual_layout_constraint::use_all_available_space
-                           ? size.get_width() - cc1.get_input_region().get_width()
-                           : cc0.get_input_region().get_width();
+                           ? size.getWidth() - cc1.get_input_region().getWidth()
+                           : cc0.get_input_region().getWidth();
 
-            auto c1w = size.get_width() - c0w;
+            auto c1w = size.getWidth() - c0w;
 
-            cc0.set_output_region({position, {c0w, size.get_height()}});
-            cc1.set_output_region({{position.get_x() + c0w, position.get_y()},
-                            {c1w, size.get_height()}});
+            cc0.set_output_region({position, {c0w, size.getHeight()}});
+            cc1.set_output_region({{position.getX() + c0w, position.getY()},
+                            {c1w, size.getHeight()}});
         }
     }
 }
@@ -99,12 +99,12 @@ namespace clsn::ui::layouts
         m_orientation = orientation;
     }
 
-    void dual_layout::do_layout(const region& rgn, layout_element_info_vector& elems) const
+    void dual_layout::do_layout(const Region& rgn, layout_element_info_vector& elems) const
     {
         if (elems.empty())
             return;
 
-        const auto& position = rgn.get_position();
+        const auto& position = rgn.getPosition();
         const auto& size = rgn.getSize();
 
         switch (m_orientation)

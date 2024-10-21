@@ -14,17 +14,17 @@
 
 #include <clsn/ui/renderers/null_renderer.h>
 
-#include <clsn/draw/region.h>
+#include <clsn/draw/Region.h>
 
 namespace clsn::ui
 {
-    CLSN_CPP_PROPERTY(control, ActualPosition, draw::point)
-    CLSN_CPP_PROPERTY(control, ActualSize, draw::dimension)
+    CLSN_CPP_PROPERTY(control, ActualPosition, draw::Point)
+    CLSN_CPP_PROPERTY(control, ActualSize, draw::Dimension)
 
     CLSN_CPP_BOOL_PROPERTY(control, Enabled)
     CLSN_CPP_BOOL_PROPERTY(control, Visible)
 
-    CLSN_CPP_PROPERTY(control, PreferredSize, std::optional<clsn::draw::dimension>)
+    CLSN_CPP_PROPERTY(control, PreferredSize, std::optional<clsn::draw::Dimension>)
 
     control::control(std::string_view sectionName)
     : m_default_section_name{sectionName}
@@ -35,14 +35,14 @@ namespace clsn::ui
 
     control::~control() = default;
 
-    void control::paint(graphics& graphics, const draw::region& region) const
+    void control::paint(graphics& graphics, const draw::Region& Region) const
     {
         debugCount("paint");
 
         if (!is_invalidated())
             return;
 
-        get_renderer().paint(graphics, region, *this);
+        get_renderer().paint(graphics, Region, *this);
     }
 
     void control::notify_mouse_click_event(events::mouse_click_event& e)
@@ -150,15 +150,15 @@ namespace clsn::ui
         return m_parent_window.to_const();
     }
 
-    auto control::contains_point(const draw::point& point) const -> bool
+    auto control::containsPoint(const draw::Point& Point) const -> bool
     {
-        return draw::region{m_propertyActualPosition.get(), m_propertyActualSize.get()}.contains_point(point);
+        return draw::Region{m_propertyActualPosition.get(), m_propertyActualSize.get()}.containsPoint(Point);
     }
 
-    auto control::get_control_by_position(const draw::point& point) const
+    auto control::get_control_by_position(const draw::Point& Point) const
         -> core::constOptionalReference<control>
     {
-        if (this->contains_point(point))
+        if (this->containsPoint(Point))
             return *this;
 
         return std::nullopt;
@@ -199,7 +199,7 @@ namespace clsn::ui
         // Do nothing here
     }
 
-    auto control::get_actual_preferred_size() const -> const draw::dimension&
+    auto control::get_actual_preferred_size() const -> const draw::Dimension&
     {
         const auto& size = getPreferredSize();
         if (size.has_value())
@@ -208,7 +208,7 @@ namespace clsn::ui
         return ui_manager::get_instance().get_dimension(m_default_section_name, "preferredSize");
     }
 
-    auto control::get_actual_bounds() const -> draw::region
+    auto control::get_actual_bounds() const -> draw::Region
     {
         return { getActualPosition(), getActualSize() };
     }

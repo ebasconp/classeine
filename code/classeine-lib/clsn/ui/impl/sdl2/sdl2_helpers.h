@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/draw/forward.h"
+#include "clsn/draw/Forward.h"
 
 #include <SDL.h>
 
@@ -13,6 +13,6 @@
 
 namespace clsn::ui::impl::sdl2::sdl2_helpers
 {
-    SDL_Rect to_sdl(const clsn::draw::region&);
-    SDL_Color to_sdl(const clsn::draw::color&);
+    SDL_Rect to_sdl(const clsn::draw::Region&);
+    SDL_Color to_sdl(const clsn::draw::Color&);
 }

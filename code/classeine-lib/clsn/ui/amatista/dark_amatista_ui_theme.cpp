@@ -5,59 +5,59 @@
 
 #include "dark_amatista_ui_theme.h"
 
-#include "clsn/draw/colors.h"
+#include "clsn/draw/Colors.h"
 
 namespace clsn::ui::amatista
 {
     using namespace clsn::draw;
     
-    auto dark_amatista_ui_theme::get_bevel_up_color() const -> color
+    auto dark_amatista_ui_theme::get_bevel_up_color() const -> Color
     {
-        return color{0, 92, 155 };
+        return Color{0, 92, 155 };
     }
 
-    auto dark_amatista_ui_theme::get_bevel_down_color() const -> color
+    auto dark_amatista_ui_theme::get_bevel_down_color() const -> Color
     {
-        return color{0, 49, 83 };
+        return Color{0, 49, 83 };
     }
 
-    auto dark_amatista_ui_theme::get_container_background_color() const -> color
+    auto dark_amatista_ui_theme::get_container_background_color() const -> Color
     {
-        return color{0, 25, 42};
+        return Color{0, 25, 42};
     }
 
-    auto dark_amatista_ui_theme::get_container_foreground_color() const -> color
+    auto dark_amatista_ui_theme::get_container_foreground_color() const -> Color
     {
-        return colors::make_white();
+        return Colors::makeWhite();
     }
 
-    auto dark_amatista_ui_theme::get_control_background_color() const -> color
+    auto dark_amatista_ui_theme::get_control_background_color() const -> Color
     {
-        return color{0, 49, 83};
+        return Color{0, 49, 83};
     }
 
-    auto dark_amatista_ui_theme::get_control_foreground_color() const -> color
+    auto dark_amatista_ui_theme::get_control_foreground_color() const -> Color
     {
-        return color{240, 240, 250};
+        return Color{240, 240, 250};
     }
 
-    auto dark_amatista_ui_theme::get_control_hovered_background_color() const -> color
+    auto dark_amatista_ui_theme::get_control_hovered_background_color() const -> Color
     {
-        return color{0, 30, 60};
+        return Color{0, 30, 60};
     }
 
-    auto dark_amatista_ui_theme::get_disabled_background_color() const -> color
+    auto dark_amatista_ui_theme::get_disabled_background_color() const -> Color
     {
-        return color{0x60, 0x60, 0x60};
+        return Color{0x60, 0x60, 0x60};
     }
 
-    auto dark_amatista_ui_theme::get_disabled_foreground_color() const -> color
+    auto dark_amatista_ui_theme::get_disabled_foreground_color() const -> Color
     {
-        return color{0, 25, 42};
+        return Color{0, 25, 42};
     }
 
-    auto dark_amatista_ui_theme::get_button_pressed_background_color() const -> color
+    auto dark_amatista_ui_theme::get_button_pressed_background_color() const -> Color
     {
-        return color{0, 35, 60};
+        return Color{0, 35, 60};
     }
 }

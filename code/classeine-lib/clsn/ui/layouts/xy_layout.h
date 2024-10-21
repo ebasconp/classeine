@@ -8,7 +8,7 @@
 #include <clsn/ui/layouts/layout.h>
 #include <clsn/ui/layouts/xy_layout_constraint.h>
 
-#include <clsn/draw/forward.h>
+#include <clsn/draw/Forward.h>
 
 namespace clsn::ui::layouts
 {
@@ -17,6 +17,6 @@ namespace clsn::ui::layouts
     public:
         using constraint_type = xy_layout_constraint;
 
-        void do_layout(const draw::region& rgn, layout_element_info_vector&) const override;
+        void do_layout(const draw::Region& rgn, layout_element_info_vector&) const override;
     };
 }

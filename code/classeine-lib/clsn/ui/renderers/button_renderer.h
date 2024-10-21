@@ -16,7 +16,7 @@ namespace clsn::ui::renderers
         [[nodiscard]] virtual auto paint_as_pressed(const clickable_control& btn) const -> bool;
 
         void paint(graphics& gfx,
-                   const clsn::draw::region& rgn,
+                   const clsn::draw::Region& rgn,
                    const control& ctrl) const override;
     };
 }

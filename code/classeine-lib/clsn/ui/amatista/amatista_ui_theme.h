@@ -17,24 +17,24 @@ namespace clsn::ui::amatista
         void populate_defaults() final;
         
     protected:
-        virtual auto get_default_regular_font() const -> draw::font;
-        virtual auto get_default_bold_font() const -> draw::font;
-        virtual auto get_default_italic_font() const -> draw::font;
-        virtual auto get_default_bold_italic_font() const -> draw::font;
+        virtual auto get_default_regular_font() const -> draw::Font;
+        virtual auto get_default_bold_font() const -> draw::Font;
+        virtual auto get_default_italic_font() const -> draw::Font;
+        virtual auto get_default_bold_italic_font() const -> draw::Font;
 
-        virtual auto get_button_preferred_size() const -> draw::dimension;
+        virtual auto get_button_preferred_size() const -> draw::Dimension;
 
-        virtual auto get_bevel_up_color() const -> draw::color = 0;
-        virtual auto get_bevel_down_color() const -> draw::color = 0;
-        virtual auto get_container_background_color() const -> draw::color = 0;
-        virtual auto get_container_foreground_color() const -> draw::color = 0;
-        virtual auto get_control_background_color() const -> draw::color = 0;
-        virtual auto get_control_foreground_color() const -> draw::color = 0;
-        virtual auto get_control_hovered_background_color() const -> draw::color = 0;
-        virtual auto get_disabled_background_color() const -> draw::color = 0;
-        virtual auto get_disabled_foreground_color() const -> draw::color = 0;
+        virtual auto get_bevel_up_color() const -> draw::Color = 0;
+        virtual auto get_bevel_down_color() const -> draw::Color = 0;
+        virtual auto get_container_background_color() const -> draw::Color = 0;
+        virtual auto get_container_foreground_color() const -> draw::Color = 0;
+        virtual auto get_control_background_color() const -> draw::Color = 0;
+        virtual auto get_control_foreground_color() const -> draw::Color = 0;
+        virtual auto get_control_hovered_background_color() const -> draw::Color = 0;
+        virtual auto get_disabled_background_color() const -> draw::Color = 0;
+        virtual auto get_disabled_foreground_color() const -> draw::Color = 0;
 
-        virtual auto get_button_pressed_background_color() const -> draw::color = 0;
+        virtual auto get_button_pressed_background_color() const -> draw::Color = 0;
 
     };
 }

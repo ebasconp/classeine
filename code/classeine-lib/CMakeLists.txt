@@ -39,13 +39,13 @@ add_library(classeine_lib
         clsn/core/Event.cpp
         clsn/core/Strings.cpp
 
-        clsn/draw/color.cpp
-        clsn/draw/colors.cpp
-        clsn/draw/dimension.cpp
-        clsn/draw/font.cpp
-        clsn/draw/font_info.cpp
-        clsn/draw/point.cpp
-        clsn/draw/region.cpp
+        clsn/draw/Color.cpp
+        clsn/draw/Colors.cpp
+        clsn/draw/Dimension.cpp
+        clsn/draw/Font.cpp
+        clsn/draw/FontInfo.cpp
+        clsn/draw/Point.cpp
+        clsn/draw/Region.cpp
 
         clsn/ui/button.cpp
         clsn/ui/check_box.cpp

@@ -17,7 +17,7 @@ namespace clsn::core
     /// This class uses std::optional and std::reference_wrapper to manage
     /// optional references to objects.
     ///
-    /// @tparam T The type of the object the reference will point to.
+    /// @tparam T The type of the object the reference will Point to.
     template <typename T>
     class OptionalReference
     {
@@ -169,7 +169,7 @@ namespace clsn::core
 
     /// An alias for OptionalReference with a const reference.
     ///
-    /// @tparam T The type of the object the reference will point to.
+    /// @tparam T The type of the object the reference will Point to.
     template <typename T>
     using constOptionalReference = OptionalReference<const T>;
 }

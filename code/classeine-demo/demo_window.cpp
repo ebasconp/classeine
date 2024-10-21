@@ -5,8 +5,8 @@
 
 #include "demo_window.h"
 
-#include "clsn/draw/colors.h"
-#include "clsn/draw/dimension.h"
+#include "clsn/draw/Colors.h"
+#include "clsn/draw/Dimension.h"
 
 #include "clsn/ui/dual_layout_container.h"
 #include "clsn/ui/dynamic_content_pane.h"
@@ -43,14 +43,14 @@ namespace clsn::demo
         right_container->set_orientation(dual_layout_orientation::vertical);
 
         m_label = right_container->add(control::make<label>(), dual_layout_constraint::use_preferred_size);
-        m_label->setPreferredSize(dimension{0, 40});
-        m_label->setFont(ui_manager::get_instance().getFont("", "default_bold_font").add_size(5));
-        m_label->setBackgroundColor(colors::make_white());
-        m_label->set_horizontal_alignment(text_horizontal_alignment::center);
+        m_label->setPreferredSize(Dimension{0, 40});
+        m_label->setFont(ui_manager::get_instance().getFont("", "default_bold_font").addSize(5));
+        m_label->setBackgroundColor(Colors::makeWhite());
+        m_label->set_horizontal_alignment(TextHorizontalAlignment::center);
         set_title("Classeine Demo");
 
         m_content_pane = right_container->add(control::make<dynamic_content_pane>(), dual_layout_constraint::use_all_available_space);
-        m_content_pane->setBackgroundColor(clsn::draw::color{128, 0, 64});
+        m_content_pane->setBackgroundColor(clsn::draw::Color{128, 0, 64});
     }
 
     void demo_window::set_title(const std::string& title)

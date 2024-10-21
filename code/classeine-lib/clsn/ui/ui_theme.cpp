@@ -28,18 +28,18 @@ namespace clsn::ui
 {
     using namespace clsn::draw;
 
-    auto ui_theme::get_color(std::string_view sectionName, std::string_view name, const color& error_value) const -> const color&
+    auto ui_theme::getColor(std::string_view sectionName, std::string_view name, const Color& error_value) const -> const Color&
     {
-        return get_from_defaults<color>(m_defaults_by_name, sectionName, name, error_value);
+        return get_from_defaults<Color>(m_defaults_by_name, sectionName, name, error_value);
     }
 
-    auto ui_theme::get_dimension(std::string_view sectionName, std::string_view name, const dimension& error_value) const -> const dimension&
+    auto ui_theme::get_dimension(std::string_view sectionName, std::string_view name, const Dimension& error_value) const -> const Dimension&
     {
-        return get_from_defaults<dimension>(m_defaults_by_name, sectionName, name, error_value);
+        return get_from_defaults<Dimension>(m_defaults_by_name, sectionName, name, error_value);
     }
 
-    auto ui_theme::getFont(std::string_view sectionName, std::string_view name, const font& error_value) const -> const font&
+    auto ui_theme::getFont(std::string_view sectionName, std::string_view name, const Font& error_value) const -> const Font&
     {
-        return get_from_defaults<font>(m_defaults_by_name, sectionName, name, error_value);
+        return get_from_defaults<Font>(m_defaults_by_name, sectionName, name, error_value);
     }
 }

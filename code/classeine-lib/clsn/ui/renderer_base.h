@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/draw/forward.h"
+#include "clsn/draw/Forward.h"
 
 #include "clsn/ui/forward.h"
 #include "clsn/ui/graphics.h"
@@ -18,7 +18,7 @@ namespace clsn::ui
         ~renderer_base() override = default;
 
         virtual void paint(graphics& gfx,
-                           const clsn::draw::region& rgn,
+                           const clsn::draw::Region& rgn,
                            const clsn::ui::control& ctrl) const = 0;
     };
 }

@@ -16,11 +16,11 @@ namespace clsn::ui::renderers
     using namespace clsn::ui;
 
     void empty_control_renderer::paint(graphics& gfx,
-                              const region& rgn,
+                              const Region& rgn,
                               const control& ctrl) const
     {
         const auto& bc = ui_manager::get_instance()
-                        .get_color(ctrl.get_default_section_name(), "container_background_color");
+                        .getColor(ctrl.get_default_section_name(), "container_background_color");
 
         painters::background_painter::paint_background(gfx, rgn, bc);
     }

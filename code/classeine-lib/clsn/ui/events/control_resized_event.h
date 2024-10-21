@@ -17,7 +17,7 @@ namespace clsn::ui::events
     public:
         control_resized_event(control&, int width, int height);
 
-        auto get_width() const noexcept -> int;
-        auto get_height() const noexcept -> int;
+        auto getWidth() const noexcept -> int;
+        auto getHeight() const noexcept -> int;
     };
 }

@@ -23,7 +23,7 @@ namespace clsn::ui::renderers
     {
     public:
         void paint(graphics& gfx,
-               const clsn::draw::region& rgn,
+               const clsn::draw::Region& rgn,
                const control& base_ctrl) const override
         {
             auto& ctrl = static_cast<const padding_control<InnerControlType>&>(base_ctrl);

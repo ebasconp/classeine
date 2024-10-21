@@ -27,8 +27,8 @@ namespace clsn::ui
             const auto size = m_propertySize.get();
 
             auto& ctrl = this->get_inner_control();
-            ctrl.setActualPosition(this->getActualPosition() + draw::point{size, size});
-            ctrl.setActualSize(this->getActualSize() + draw::dimension(-size * 2, -size * 2));
+            ctrl.setActualPosition(this->getActualPosition() + draw::Point{size, size});
+            ctrl.setActualSize(this->getActualSize() + draw::Dimension(-size * 2, -size * 2));
 
             ctrl.do_layout();
         }

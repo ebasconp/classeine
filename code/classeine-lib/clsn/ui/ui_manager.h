@@ -8,7 +8,7 @@
 #include "ui_manager_defaults.h"
 #include "ui_skin.h"
 
-#include "clsn/draw/font_info.h"
+#include "clsn/draw/FontInfo.h"
 
 #include "clsn/core/Entity.h"
 
@@ -23,7 +23,7 @@ namespace clsn::ui
         std::unique_ptr<ui_skin> m_skin;
 
         ui_manager_defaults m_defaults;
-        std::unordered_map<draw::font_info, std::string> m_paths_by_font_info;
+        std::unordered_map<draw::FontInfo, std::string> m_paths_by_font_info;
 
         static std::unique_ptr<ui_manager> m_singleton;
 
@@ -50,12 +50,12 @@ namespace clsn::ui
 
         auto get_renderer_by_control(const control& ctrl) const -> std::shared_ptr<clsn::ui::renderer_base>;
 
-        auto get_color(std::string_view sectionName, std::string_view name) const -> const draw::color&;
-        auto get_dimension(std::string_view sectionName, std::string_view name) const -> const draw::dimension&;
-        auto getFont(std::string_view sectionName, std::string_view name) const -> const draw::font&;
+        auto getColor(std::string_view sectionName, std::string_view name) const -> const draw::Color&;
+        auto get_dimension(std::string_view sectionName, std::string_view name) const -> const draw::Dimension&;
+        auto getFont(std::string_view sectionName, std::string_view name) const -> const draw::Font&;
 
-        void add_font_mapping(const draw::font_info& fontInfo, std::string_view path);
-        auto get_path_by_font_info(const draw::font_info&) const noexcept -> std::string_view;
+        void add_font_mapping(const draw::FontInfo& fontInfo, std::string_view path);
+        auto get_path_by_font_info(const draw::FontInfo&) const noexcept -> std::string_view;
 
         auto install_theme(const std::string& themeName) -> bool;
         auto add_theme_changed_listener(core::EventListener<core::EmptyEvent> listener) -> int;

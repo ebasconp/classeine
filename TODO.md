@@ -1,7 +1,7 @@
 # TODO #
 
 * Create amatista_ui_theme interface
-* Replace default colors to 4 default tones
+* Replace default Colors to 4 default tones
 * XY anchors
 * Add support for padding in label
 * Add support for icons in label

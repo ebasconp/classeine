@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/draw/region.h"
+#include "clsn/draw/Region.h"
 
 #include "clsn/ui/renderer_base.h"
 
@@ -16,7 +16,7 @@ namespace clsn::ui::renderers
     {
     public:
         void paint(graphics& gfx,
-                   const clsn::draw::region& rgn,
+                   const clsn::draw::Region& rgn,
                    const control& base_ctrl) const override
         {
             const auto& container =
@@ -37,7 +37,7 @@ namespace clsn::ui::renderers
             }
 
             const auto margin = container.getMargin();
-            const clsn::draw::region shift_rgn{
+            const clsn::draw::Region shift_rgn{
                 margin, margin, -(margin * 2), -(margin * 2)};
 
             const auto count = container.get_count();
@@ -47,7 +47,7 @@ namespace clsn::ui::renderers
                 if (!control.isVisible() || !control.is_invalidated())
                     continue;
 
-                const draw::region ctrl_rgn{
+                const draw::Region ctrl_rgn{
                     control.getActualPosition(),
                     control.getActualSize()}; // ETOTODOcontrol.getBounds();
 

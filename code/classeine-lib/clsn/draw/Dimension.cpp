@@ -3,38 +3,38 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "dimension.h"
+#include "Dimension.h"
 
 #include "clsn/core/Strings.h"
 
 namespace clsn::draw
 {
-    dimension::dimension()
-    : dimension(0, 0)
+    Dimension::Dimension()
+    : Dimension(0, 0)
     {
     }
 
-    dimension::dimension(int width, int height)
+    Dimension::Dimension(int width, int height)
     : m_width{width}
     , m_height{height}
     {
     }
 
-    auto dimension::get_width() const noexcept -> int { return m_width; }
+    auto Dimension::getWidth() const noexcept -> int { return m_width; }
 
-    auto dimension::get_height() const noexcept -> int { return m_height; }
+    auto Dimension::getHeight() const noexcept -> int { return m_height; }
 
-    auto dimension::operator==(const dimension& other) const noexcept -> bool
+    auto Dimension::operator==(const Dimension& other) const noexcept -> bool
     {
         return m_width == other.m_width && m_height == other.m_height;
     }
 
-    auto dimension::operator+(const dimension& other) const noexcept -> dimension
+    auto Dimension::operator+(const Dimension& other) const noexcept -> Dimension
     {
         return { m_width + other.m_width, m_height + other.m_height };
     }
 
-    auto dimension::toString() const -> std::string
+    auto Dimension::toString() const -> std::string
     {
         return clsn::core::Strings::format(
             "Dimension: [W: {}, H: {}]", m_width, m_height);

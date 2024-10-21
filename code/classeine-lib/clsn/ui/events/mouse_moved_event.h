@@ -7,17 +7,17 @@
 
 #include "clsn/core/Event.h"
 
-#include "clsn/draw/point.h"
+#include "clsn/draw/Point.h"
 
 namespace clsn::ui::events
 {
     class mouse_moved_event : public core::Event
     {
-        clsn::draw::point m_position;
+        clsn::draw::Point m_position;
 
     public:
-        explicit mouse_moved_event(const clsn::draw::point& position);
+        explicit mouse_moved_event(const clsn::draw::Point& position);
 
-        auto get_position() const noexcept -> const clsn::draw::point&;
+        auto getPosition() const noexcept -> const clsn::draw::Point&;
     };
 }

@@ -7,13 +7,13 @@
 
 #include "clsn/core/Configuration.h"
 
-#include "clsn/draw/forward.h"
+#include "clsn/draw/Forward.h"
 
 #include <memory>
 
 namespace clsn::ui
 {
-    using ui_manager_defaults = clsn::core::Configuration<clsn::draw::color,
-                                                        clsn::draw::dimension,
-                                                        clsn::draw::font>;
+    using ui_manager_defaults = clsn::core::Configuration<clsn::draw::Color,
+                                                        clsn::draw::Dimension,
+                                                        clsn::draw::Font>;
 }

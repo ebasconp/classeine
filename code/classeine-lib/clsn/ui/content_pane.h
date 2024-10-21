@@ -39,9 +39,9 @@ namespace clsn::ui
 
         /// @brief Get the control at a specific position.
         ///
-        /// @param point The position to check for a control.
+        /// @param Point The position to check for a control.
         /// @return An optional reference to the control at the specified position.
-        auto get_control_by_position(const clsn::draw::point& point) const
+        auto get_control_by_position(const clsn::draw::Point& Point) const
             -> core::constOptionalReference<control> override;
 
     protected:

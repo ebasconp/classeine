@@ -14,7 +14,7 @@ namespace clsn::ui::renderers
     using namespace clsn::draw;
 
     void content_pane_renderer::paint(graphics& gfx,
-                              const region& rgn,
+                              const Region& rgn,
                               const control& ctrl) const
     {
         const auto& con_pane = static_cast<const content_pane&>(ctrl);

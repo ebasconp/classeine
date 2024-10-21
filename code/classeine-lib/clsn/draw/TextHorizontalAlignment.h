@@ -7,11 +7,10 @@
 
 namespace clsn::draw
 {
-    enum class font_style
+    enum class TextHorizontalAlignment
     {
-        regular,
-        bold,
-        italic,
-        bold_italic
+        left,
+        center,
+        right
     };
 }

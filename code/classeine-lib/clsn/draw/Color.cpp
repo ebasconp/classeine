@@ -3,24 +3,24 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "color.h"
+#include "Color.h"
 
 #include <tuple>
 
 namespace clsn::draw
 {
-    color::color()
-    : color(0x000000)
+    Color::Color()
+    : Color(0x000000)
     {
 
     }
 
-    color::color(int r, int g, int b)
-    : color(r, g, b, 0xFF)
+    Color::Color(int r, int g, int b)
+    : Color(r, g, b, 0xFF)
     {
     }
 
-    color::color(int r, int g, int b, int a)
+    Color::Color(int r, int g, int b, int a)
     : r{static_cast<unsigned char>(r)}
     , g{static_cast<unsigned char>(g)}
     , b{static_cast<unsigned char>(b)}
@@ -28,33 +28,33 @@ namespace clsn::draw
     {
     }
 
-    color::color(int hexaCode)
-    : color((hexaCode & 0x00FF0000) >> 16,
+    Color::Color(int hexaCode)
+    : Color((hexaCode & 0x00FF0000) >> 16,
             (hexaCode & 0x0000FF00) >> 8,
             (hexaCode & 0x000000FF),
             (hexaCode & 0xFF000000) >> 24)
     {
     }
 
-    auto color::get_color() const noexcept -> int
+    auto Color::getColor() const noexcept -> int
     {
         return a << 24 | r << 16 | g << 8 | b;
     }
 
-    auto color::get_red() const noexcept -> int { return r; }
+    auto Color::getRed() const noexcept -> int { return r; }
 
-    auto color::get_green() const noexcept -> int { return g; }
+    auto Color::getGreen() const noexcept -> int { return g; }
 
-    auto color::get_blue() const noexcept -> int { return b; }
+    auto Color::getBlue() const noexcept -> int { return b; }
 
-    int color::get_alpha() const noexcept { return a; }
+    int Color::getAlpha() const noexcept { return a; }
 
-    auto color::operator==(const color& p) const noexcept -> bool
+    auto Color::operator==(const Color& p) const noexcept -> bool
     {
         return std::tie(r, g, b, a) == std::tie(p.r, p.g, p.b, p.a);
     }
 
-    auto color::to_gray() const noexcept -> color
+    auto Color::toGray() const noexcept -> Color
     {
         const auto gray =
             static_cast<int>((r * 0.299) + (g * 0.587) + (b * 0.114));
@@ -62,8 +62,8 @@ namespace clsn::draw
         return {gray, gray, gray};
     }
 
-    auto color::to_gray_if(bool convert) const noexcept -> color
+    auto Color::toGrayIf(bool convert) const noexcept -> Color
     {
-        return convert ? to_gray() : *this;
+        return convert ? toGray() : *this;
     }
 }

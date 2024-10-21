@@ -6,7 +6,7 @@
 #include "demo_option_container.h"
 #include "demo_window.h"
 
-#include "clsn/draw/dimension.h"
+#include "clsn/draw/Dimension.h"
 
 #include "clsn/ui/button.h"
 #include "clsn/ui/dynamic_content_pane.h"
@@ -28,7 +28,7 @@ namespace clsn::demo
     demo_option_container::demo_option_container(demo_window& demo_window)
     : m_demo_window{demo_window}
     {
-        setPreferredSize(dimension{175, 0});
+        setPreferredSize(Dimension{175, 0});
 
         init_options();
     }

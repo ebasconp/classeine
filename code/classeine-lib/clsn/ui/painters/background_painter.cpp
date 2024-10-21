@@ -9,7 +9,7 @@ namespace clsn::ui::painters
 {
     using namespace clsn::draw;
 
-    void background_painter::paint_background(graphics& gfx, const region& rgn, const color& clr)
+    void background_painter::paint_background(graphics& gfx, const Region& rgn, const Color& clr)
     {
         gfx.set_draw_color(clr);
         gfx.draw_fill_rectangle(rgn);

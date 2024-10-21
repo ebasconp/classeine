@@ -6,7 +6,7 @@ namespace clsn::demo
 {
     demo_flow_layout_container::demo_flow_layout_container()
     {
-        setBackgroundColor(draw::color{128, 0, 192});
+        setBackgroundColor(draw::Color{128, 0, 192});
 
         m_file = this->add(control::make<ui::button>());
         m_file->setCaption("File");
@@ -25,6 +25,6 @@ namespace clsn::demo
 
         m_help = this->add(control::make<ui::button>());
         m_help->setCaption("Help");
-        m_help->setBackgroundColor(draw::color{255, 128, 64});
+        m_help->setBackgroundColor(draw::Color{255, 128, 64});
     }
 }

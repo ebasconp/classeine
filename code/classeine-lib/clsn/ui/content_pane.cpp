@@ -74,7 +74,7 @@ namespace clsn::ui
         if (!inner_control.isVisible() || !inner_control.isEnabled())
             return;
 
-        if (inner_control.contains_point(e.get_point()))
+        if (inner_control.containsPoint(e.get_point()))
         {
             inner_control.notify_mouse_click_event(e);
         }
@@ -94,13 +94,13 @@ namespace clsn::ui
         if (!inner_control.isVisible() || !inner_control.isEnabled())
             return;
 
-        if (inner_control.contains_point(e.get_position()))
+        if (inner_control.containsPoint(e.getPosition()))
         {
             inner_control.notify_mouse_moved_event(e);
         }
     }
 
-    auto content_pane::get_control_by_position(const point &point) const
+    auto content_pane::get_control_by_position(const Point &Point) const
             -> constOptionalReference<control>
     {
         auto control_optional_ref = get_actual_inner_control();
@@ -112,6 +112,6 @@ namespace clsn::ui
         if (!inner_control.isVisible() || !inner_control.isEnabled())
             return {};
 
-        return inner_control.get_control_by_position(point);
+        return inner_control.get_control_by_position(Point);
     }
 }

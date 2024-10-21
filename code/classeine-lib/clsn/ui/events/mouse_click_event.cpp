@@ -9,9 +9,9 @@ namespace clsn::ui::events
 {
     using namespace clsn::draw;
 
-    mouse_click_event::mouse_click_event(mouse_click_status status, const point& point)
+    mouse_click_event::mouse_click_event(mouse_click_status status, const Point& Point)
     : m_status{status}
-    , m_point{point}
+    , m_point{Point}
     {
     }
 
@@ -20,7 +20,7 @@ namespace clsn::ui::events
         return m_status;
     }
 
-    auto mouse_click_event::get_point() const noexcept -> const point&
+    auto mouse_click_event::get_point() const noexcept -> const Point&
     {
         return m_point;
     }

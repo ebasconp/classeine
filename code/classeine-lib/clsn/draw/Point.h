@@ -9,21 +9,21 @@
 
 namespace clsn::draw
 {
-    class point final
+    class Point final
     {
         int m_x;
         int m_y;
 
     public:
-        point();
-        point(int x, int y);
+        Point();
+        Point(int x, int y);
 
-        [[nodiscard]] auto get_x() const noexcept -> int;
-        [[nodiscard]] auto get_y() const noexcept -> int;
+        [[nodiscard]] auto getX() const noexcept -> int;
+        [[nodiscard]] auto getY() const noexcept -> int;
 
-        auto operator==(const point& other) const noexcept -> bool;
+        auto operator==(const Point& other) const noexcept -> bool;
 
-        auto operator+(const point& other) const noexcept -> point;
+        auto operator+(const Point& other) const noexcept -> Point;
 
         [[nodiscard]] auto toString() const -> std::string;
     };
