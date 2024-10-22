@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['has_5fvalue_0',['has_value',['../dc/d1a/classclsn_1_1core_1_1optional__reference.html#a56e068e6365cb387a6a5ce0376c6a8f7',1,'clsn::core::optional_reference']]],
-  ['hbox_5flayout_5fcontainer_1',['hbox_layout_container',['../d4/def/classclsn_1_1ui_1_1hbox__layout__container.html#aceb26e260038365f57b87f26c119d72c',1,'clsn::ui::hbox_layout_container']]],
-  ['hide_2',['hide',['../db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html#a595a278b6d14f9396f7aa7c02ba3f352',1,'clsn::ui::impl::sdl2::main_window_sdl2_impl']]]
+  ['hasvalue_0',['hasValue',['../dc/d45/classclsn_1_1core_1_1OptionalReference.html#a6002c435e7ce2eda16aa78960692e6e3',1,'clsn::core::OptionalReference']]],
+  ['hboxlayoutcontainer_1',['HBoxLayoutContainer',['../d5/d74/classclsn_1_1ui_1_1HBoxLayoutContainer.html#a379ed5210062d50117e641fc3046f3a7',1,'clsn::ui::HBoxLayoutContainer']]],
+  ['hide_2',['hide',['../d3/d20/classclsn_1_1ui_1_1impl_1_1sdl2_1_1MainWindowSDL2Impl.html#a0951cdabbf1097c411a94fcf6aa489d1',1,'clsn::ui::impl::sdl2::MainWindowSDL2Impl']]]
 ];

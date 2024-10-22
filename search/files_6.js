@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['graphics_2eh_0',['graphics.h',['../d7/d04/graphics_8h.html',1,'']]],
-  ['graphics_5fimpl_2eh_1',['graphics_impl.h',['../de/da8/graphics__impl_8h.html',1,'']]],
-  ['graphics_5fsdl2_5fimpl_2ecpp_2',['graphics_sdl2_impl.cpp',['../d0/d5c/graphics__sdl2__impl_8cpp.html',1,'']]],
-  ['graphics_5fsdl2_5fimpl_2eh_3',['graphics_sdl2_impl.h',['../d1/d19/graphics__sdl2__impl_8h.html',1,'']]]
+  ['graphics_2eh_0',['Graphics.h',['../d2/dd1/Graphics_8h.html',1,'']]],
+  ['graphicsimpl_2eh_1',['GraphicsImpl.h',['../d5/dee/GraphicsImpl_8h.html',1,'']]],
+  ['graphicssdl2impl_2ecpp_2',['GraphicsSDL2Impl.cpp',['../db/de7/GraphicsSDL2Impl_8cpp.html',1,'']]],
+  ['graphicssdl2impl_2eh_3',['GraphicsSDL2Impl.h',['../d1/d7e/GraphicsSDL2Impl_8h.html',1,'']]]
 ];

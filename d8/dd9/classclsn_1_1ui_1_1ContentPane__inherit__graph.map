@@ -1,0 +1,17 @@
+<map id="clsn::ui::ContentPane" name="clsn::ui::ContentPane">
+<area shape="rect" id="Node000001" title="A base class representing a content pane with Layout and Event handling capabilities." alt="" coords="585,70,744,95"/>
+<area shape="rect" id="Node000005" href="$dc/dea/classclsn_1_1ui_1_1StaticContentPane.html" title=" " alt="" coords="803,5,997,45"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="730,64,817,43,818,48,731,69"/>
+<area shape="rect" id="Node000007" href="$db/ddb/classclsn_1_1ui_1_1DynamicContentPane.html" title="A class representing a dynamic content pane that can hold a Control." alt="" coords="792,70,1008,95"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="758,80,792,80,792,85,758,85"/>
+<area shape="rect" id="Node000008" href="$dc/dea/classclsn_1_1ui_1_1StaticContentPane.html" title="A class representing a static content pane that holds a Control of a specific type." alt="" coords="803,120,997,160"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="731,96,818,117,817,123,730,101"/>
+<area shape="rect" id="Node000002" href="$d3/d50/classclsn_1_1ui_1_1PaintableControl.html" title=" " alt="" coords="355,70,537,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="551,80,585,80,585,85,551,85"/>
+<area shape="rect" id="Node000003" href="$d3/d63/classclsn_1_1ui_1_1Control.html" title=" " alt="" coords="184,70,307,95"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="321,80,355,80,355,85,321,85"/>
+<area shape="rect" id="Node000004" href="$d0/dfb/classclsn_1_1core_1_1Entity.html" title=" " alt="" coords="5,70,136,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="149,80,184,80,184,85,149,85"/>
+<area shape="rect" id="Node000006" href="$d1/dfa/classclsn_1_1ui_1_1PaddingControl.html" title=" " alt="" coords="1056,5,1231,45"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1011,23,1056,23,1056,28,1011,28"/>
+</map>

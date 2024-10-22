@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['radio_5fbutton_0',['radio_button',['../d5/df8/classclsn_1_1ui_1_1radio__button.html#ad54535cadfe81fd0f7527eda150b05d4',1,'clsn::ui::radio_button']]],
-  ['region_1',['region',['../de/d04/classclsn_1_1draw_1_1region.html#a1ea01fcc71504522926db97c64df8d41',1,'clsn::draw::region::region(int x, int y, int width, int height)'],['../de/d04/classclsn_1_1draw_1_1region.html#a36e6ebb069a99788326ccd07ebddb952',1,'clsn::draw::region::region(const point &amp;position, const dimension &amp;size)']]],
-  ['release_5fmouse_2',['release_mouse',['../d9/df3/classclsn_1_1ui_1_1clickable__control.html#a70c1605f008cddf673f3daf6cd604585',1,'clsn::ui::clickable_control::release_mouse()'],['../d7/d66/classclsn_1_1ui_1_1control.html#aecf7b195d7162e483b11695ddfb595a2',1,'clsn::ui::control::release_mouse()'],['../d0/dfd/classclsn_1_1ui_1_1window.html#a3b6af6af4a1c1882346ba27859ae9f04',1,'clsn::ui::window::release_mouse()']]],
-  ['repaint_3',['repaint',['../db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html#a646cfbae7d997c91a0c8898bb864ce58',1,'clsn::ui::impl::sdl2::main_window_sdl2_impl']]],
-  ['resize_4',['resize',['../d3/d67/classclsn_1_1ui_1_1impl_1_1sdl2_1_1graphics__sdl2__impl.html#aead029d86603193aab8cdb7dc8fee9bd',1,'clsn::ui::impl::sdl2::graphics_sdl2_impl']]],
-  ['run_5',['run',['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a2ce15806b776a3dcd91b679d424347db',1,'clsn::ui::ui_manager']]]
+  ['radiobutton_0',['RadioButton',['../d8/de3/classclsn_1_1ui_1_1RadioButton.html#a251bf7cc849f01d1414e43b0b3e40daa',1,'clsn::ui::RadioButton']]],
+  ['region_1',['region',['../d3/daa/classclsn_1_1draw_1_1Region.html#a2a7fc8168d2c00b29ae2dd4ebe1144a8',1,'clsn::draw::Region::Region(int x, int y, int width, int height)'],['../d3/daa/classclsn_1_1draw_1_1Region.html#a368e655e4e0991191c274a53c8eb4dbb',1,'clsn::draw::Region::Region(const Point &amp;position, const Dimension &amp;size)']]],
+  ['releasemouse_2',['releasemouse',['../d3/d71/classclsn_1_1ui_1_1ClickableControl.html#aa6de661f12daea0b7995fea21abdf84f',1,'clsn::ui::ClickableControl::releaseMouse()'],['../d3/d63/classclsn_1_1ui_1_1Control.html#acc743df01701eae299823f2fe93db245',1,'clsn::ui::Control::releaseMouse()'],['../d9/dbc/classclsn_1_1ui_1_1Window.html#a4db4a69d89e0325b1e6d7577fbc718a1',1,'clsn::ui::Window::releaseMouse()']]],
+  ['repaint_3',['repaint',['../d3/d20/classclsn_1_1ui_1_1impl_1_1sdl2_1_1MainWindowSDL2Impl.html#af1a5fd180979fe6fb2e90bbc97b9d878',1,'clsn::ui::impl::sdl2::MainWindowSDL2Impl']]],
+  ['resize_4',['resize',['../d4/d0b/classclsn_1_1ui_1_1impl_1_1sdl2_1_1GraphicsSDL2Impl.html#a0b07e89db557f20ad6de3ae45f9f13fb',1,'clsn::ui::impl::sdl2::GraphicsSDL2Impl']]],
+  ['run_5',['run',['../d8/d74/classclsn_1_1ui_1_1UIManager.html#a7a10e5514f0becc104ee81eaa43b269c',1,'clsn::ui::UIManager']]]
 ];

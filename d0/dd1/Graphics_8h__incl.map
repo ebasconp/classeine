@@ -1,0 +1,41 @@
+<map id="code/classeine&#45;lib/clsn/ui/Graphics.h" name="code/classeine&#45;lib/clsn/ui/Graphics.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="231,5,373,45"/>
+<area shape="rect" id="Node000002" href="$d5/dee/GraphicsImpl_8h.html" title=" " alt="" coords="203,93,401,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="305,46,305,79,299,79,299,46"/>
+<area shape="rect" id="Node000003" href="$d1/d7e/GraphicsSDL2Impl_8h.html" title=" " alt="" coords="207,167,397,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="305,119,305,153,299,153,299,119"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,335,103,361"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="208,193,170,201,132,213,97,231,68,256,59,271,54,287,53,321,48,321,49,287,54,269,64,253,94,226,130,208,169,195,207,188"/>
+<area shape="rect" id="Node000005" href="$d4/da0/Entity_8h.html" title=" " alt="" coords="79,255,211,280"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="265,209,181,251,179,246,263,204"/>
+<area shape="rect" id="Node000006" href="$dd/dac/Color_8h.html" title="Defines the Color class for the Classeine project, providing Color manipulation utilities...." alt="" coords="235,255,369,280"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="305,207,305,241,299,241,299,207"/>
+<area shape="rect" id="Node000007" href="$db/dbf/draw_2Forward_8h.html" title=" " alt="" coords="393,255,545,280"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="343,204,433,246,431,251,341,209"/>
+<area shape="rect" id="Node000010" href="$dc/dde/SDL2FontCache_8h.html" title=" " alt="" coords="787,255,921,280"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="397,199,773,252,772,257,397,204"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="133,282,79,328,76,324,130,278"/>
+<area shape="rect" id="Node000008" href="$dd/d7c/TextHorizontalAlignment_8h.html" title=" " alt="" coords="140,328,323,368"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="435,283,302,326,301,321,433,277"/>
+<area shape="rect" id="Node000009" href="$db/d90/TextVerticalAlignment_8h.html" title=" " alt="" coords="347,335,590,361"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="471,280,471,321,466,321,466,280"/>
+<area shape="rect" id="Node000011" href="$de/d78/SDL2FontWrapper_8h.html" title=" " alt="" coords="665,328,859,368"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="842,282,796,321,793,317,839,278"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="603,416,683,441"/>
+<area shape="poly" id="edge18_Node000010_Node000012" title=" " alt="" coords="787,273,752,278,716,289,682,305,655,330,645,346,641,365,641,403,636,403,636,364,640,344,651,326,679,301,714,284,751,273,786,267"/>
+<area shape="rect" id="Node000014" href="$d8/dd1/Font_8h.html" title=" " alt="" coords="883,335,1011,361"/>
+<area shape="poly" id="edge14_Node000010_Node000014" title=" " alt="" coords="869,278,925,324,921,328,866,282"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1035,335,1110,361"/>
+<area shape="poly" id="edge19_Node000010_Node000018" title=" " alt="" coords="888,278,1024,325,1031,328,1029,333,1022,331,886,283"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="1135,335,1259,361"/>
+<area shape="poly" id="edge20_Node000010_Node000019" title=" " alt="" coords="908,277,1123,325,1140,329,1138,335,1121,331,907,283"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="735,370,674,411,671,406,732,366"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="710,416,787,441"/>
+<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="761,369,756,403,750,402,756,368"/>
+<area shape="rect" id="Node000015" href="$de/d59/FontStyle_8h.html" title=" " alt="" coords="812,416,907,441"/>
+<area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="936,363,884,409,881,405,933,359"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="931,416,990,441"/>
+<area shape="poly" id="edge16_Node000014_Node000016" title=" " alt="" coords="952,360,959,402,954,403,947,361"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1015,416,1075,441"/>
+<area shape="poly" id="edge17_Node000014_Node000017" title=" " alt="" coords="963,359,1021,405,1018,409,960,363"/>
+</map>

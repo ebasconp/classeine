@@ -31,7 +31,6 @@ var NAVTREE =
     [ "GitHub", "index.html#autotoc_md4", null ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
-      [ "Functions", "namespacemembers_func.html", null ],
       [ "Typedefs", "namespacemembers_type.html", null ],
       [ "Enumerations", "namespacemembers_enum.html", null ]
     ] ],
@@ -59,9 +58,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/df1/window_8h_source.html",
-"d8/dfb/classclsn_1_1core_1_1configuration.html#a1e1c24056bde1cf26a316485112660b3",
-"de/d04/classclsn_1_1draw_1_1region.html#a1ea01fcc71504522926db97c64df8d41"
+"d3/ded/Window_8h.html",
+"d8/dd7/BorderPainter_8h.html",
+"de/d3f/structstd_1_1hash_3_01clsn_1_1draw_1_1FontInfo_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

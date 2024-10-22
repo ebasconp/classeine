@@ -1,9 +1,0 @@
-<map id="clsn::ui::events::action_event" name="clsn::ui::events::action_event">
-<area shape="rect" id="Node000001" title=" " alt="" coords="8,240,176,280"/>
-<area shape="rect" id="Node000002" href="$db/d71/classclsn_1_1ui_1_1events_1_1control__event.html" title=" " alt="" coords="5,152,179,192"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,206,95,240,89,240,89,206"/>
-<area shape="rect" id="Node000003" href="$d3/dff/classclsn_1_1core_1_1event.html" title=" " alt="" coords="27,79,157,104"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,118,95,152,89,152,89,118"/>
-<area shape="rect" id="Node000004" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="27,5,157,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,44,95,79,89,79,89,44"/>
-</map>

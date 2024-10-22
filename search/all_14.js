@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['xy_5flayout_0',['xy_layout',['../d4/d45/classclsn_1_1ui_1_1layouts_1_1xy__layout.html',1,'clsn::ui::layouts']]],
-  ['xy_5flayout_2ecpp_1',['xy_layout.cpp',['../d1/da2/xy__layout_8cpp.html',1,'']]],
-  ['xy_5flayout_2eh_2',['xy_layout.h',['../d5/d58/xy__layout_8h.html',1,'']]],
-  ['xy_5flayout_5fconstraint_3',['xy_layout_constraint',['../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html',1,'clsn::ui::layouts::xy_layout_constraint'],['../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html#aa8ffa5a0c3e1b874cfe5a86449c9bdb6',1,'clsn::ui::layouts::xy_layout_constraint::xy_layout_constraint()']]],
-  ['xy_5flayout_5fconstraint_2ecpp_4',['xy_layout_constraint.cpp',['../d1/d8e/xy__layout__constraint_8cpp.html',1,'']]],
-  ['xy_5flayout_5fconstraint_2eh_5',['xy_layout_constraint.h',['../d6/d84/xy__layout__constraint_8h.html',1,'']]],
-  ['xy_5flayout_5fcontainer_6',['xy_layout_container',['../df/dcf/classclsn_1_1ui_1_1xy__layout__container.html',1,'clsn::ui::xy_layout_container'],['../df/dcf/classclsn_1_1ui_1_1xy__layout__container.html#af58d2e6f2246babdbb833d0dcf16c26b',1,'clsn::ui::xy_layout_container::xy_layout_container()']]],
-  ['xy_5flayout_5fcontainer_2ecpp_7',['xy_layout_container.cpp',['../df/d52/xy__layout__container_8cpp.html',1,'']]],
-  ['xy_5flayout_5fcontainer_2eh_8',['xy_layout_container.h',['../d6/d81/xy__layout__container_8h.html',1,'']]]
+  ['xylayout_0',['XYLayout',['../d5/dd1/classclsn_1_1ui_1_1layouts_1_1XYLayout.html',1,'clsn::ui::layouts']]],
+  ['xylayout_2ecpp_1',['XYLayout.cpp',['../d1/d5b/XYLayout_8cpp.html',1,'']]],
+  ['xylayout_2eh_2',['XYLayout.h',['../d7/d95/XYLayout_8h.html',1,'']]],
+  ['xylayoutconstraint_3',['xylayoutconstraint',['../d3/d2f/classclsn_1_1ui_1_1layouts_1_1XYLayoutConstraint.html',1,'clsn::ui::layouts::XYLayoutConstraint'],['../d3/d2f/classclsn_1_1ui_1_1layouts_1_1XYLayoutConstraint.html#af9964941aef8fecb64a349e9452ac651',1,'clsn::ui::layouts::XYLayoutConstraint::XYLayoutConstraint()']]],
+  ['xylayoutconstraint_2ecpp_4',['XYLayoutConstraint.cpp',['../dc/df1/XYLayoutConstraint_8cpp.html',1,'']]],
+  ['xylayoutconstraint_2eh_5',['XYLayoutConstraint.h',['../d0/db1/XYLayoutConstraint_8h.html',1,'']]],
+  ['xylayoutcontainer_6',['xylayoutcontainer',['../d6/d63/classclsn_1_1ui_1_1XYLayoutContainer.html',1,'clsn::ui::XYLayoutContainer'],['../d6/d63/classclsn_1_1ui_1_1XYLayoutContainer.html#ad3c811931ab6737f7a1f11df353c674c',1,'clsn::ui::XYLayoutContainer::XYLayoutContainer()']]],
+  ['xylayoutcontainer_2ecpp_7',['XYLayoutContainer.cpp',['../d4/d1a/XYLayoutContainer_8cpp.html',1,'']]],
+  ['xylayoutcontainer_2eh_8',['XYLayoutContainer.h',['../d2/db1/XYLayoutContainer_8h.html',1,'']]]
 ];

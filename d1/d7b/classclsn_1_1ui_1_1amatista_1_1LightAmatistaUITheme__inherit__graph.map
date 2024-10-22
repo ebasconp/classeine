@@ -1,0 +1,9 @@
+<map id="clsn::ui::amatista::LightAmatistaUITheme" name="clsn::ui::amatista::LightAmatistaUITheme">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,240,185,280"/>
+<area shape="rect" id="Node000002" href="$d6/d68/classclsn_1_1ui_1_1amatista_1_1AmatistaUITheme.html" title=" " alt="" coords="21,152,169,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,206,98,240,93,240,93,206"/>
+<area shape="rect" id="Node000003" href="$d3/d2d/classclsn_1_1ui_1_1UITheme.html" title=" " alt="" coords="28,79,163,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,118,98,152,93,152,93,118"/>
+<area shape="rect" id="Node000004" href="$d0/dfb/classclsn_1_1core_1_1Entity.html" title=" " alt="" coords="30,5,161,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,44,98,79,93,79,93,44"/>
+</map>

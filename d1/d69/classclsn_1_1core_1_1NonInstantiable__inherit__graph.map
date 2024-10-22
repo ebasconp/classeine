@@ -1,0 +1,25 @@
+<map id="clsn::core::NonInstantiable" name="clsn::core::NonInstantiable">
+<area shape="rect" id="Node000001" title="Base class to prevent instantiation of derived classes." alt="" coords="5,275,200,300"/>
+<area shape="rect" id="Node000002" href="$d3/d53/classclsn_1_1core_1_1Console.html" title="Console class with static methods for Console services." alt="" coords="253,5,397,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,261,128,214,156,154,195,93,219,65,246,40,266,28,269,33,250,44,223,68,200,96,161,157,132,216,115,262"/>
+<area shape="rect" id="Node000003" href="$da/d8f/classclsn_1_1core_1_1Strings.html" title=" " alt="" coords="257,55,394,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,261,134,223,163,177,201,130,246,89,268,78,270,82,250,94,205,133,168,180,139,226,118,263"/>
+<area shape="rect" id="Node000004" href="$d1/d92/classclsn_1_1core_1_1System.html" title=" " alt="" coords="255,104,396,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="119,261,172,200,207,167,247,138,271,127,273,132,249,143,211,171,176,204,124,265"/>
+<area shape="rect" id="Node000005" href="$de/d56/classclsn_1_1draw_1_1Colors.html" title=" " alt="" coords="257,153,393,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="129,264,182,227,247,189,278,176,280,181,249,194,185,231,132,268"/>
+<area shape="rect" id="Node000006" href="$d8/d0b/classclsn_1_1ui_1_1impl_1_1sdl2_1_1SDL2Helpers.html" title=" " alt="" coords="255,203,395,243"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="160,268,254,241,256,246,162,273"/>
+<area shape="rect" id="Node000007" href="$d5/dc7/classclsn_1_1ui_1_1layouts_1_1LayoutUtils.html" title="Utility class for managing UI Layout information." alt="" coords="259,267,391,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="214,285,259,285,259,290,214,290"/>
+<area shape="rect" id="Node000008" href="$d9/dc3/classclsn_1_1ui_1_1painters_1_1BackgroundPainter.html" title=" " alt="" coords="249,331,401,371"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="162,301,256,329,254,334,160,307"/>
+<area shape="rect" id="Node000009" href="$d8/d6c/classclsn_1_1ui_1_1painters_1_1BorderPainter.html" title=" " alt="" coords="261,395,390,435"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="134,306,186,343,249,381,274,393,272,398,247,386,183,347,131,311"/>
+<area shape="rect" id="Node000010" href="$d8/d7e/classclsn_1_1ui_1_1painters_1_1CheckBoxPainter.html" title=" " alt="" coords="255,459,395,499"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="123,310,175,376,210,413,250,445,269,457,267,461,246,450,207,417,171,379,118,313"/>
+<area shape="rect" id="Node000011" href="$d5/d04/classclsn_1_1ui_1_1painters_1_1LabelPainter.html" title=" " alt="" coords="261,523,390,563"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="117,312,136,354,165,407,204,461,250,509,267,521,264,525,246,513,199,465,161,409,132,356,112,314"/>
+<area shape="rect" id="Node000012" href="$d5/def/classclsn_1_1ui_1_1painters_1_1RadioButtonPainter.html" title=" " alt="" coords="248,587,403,627"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="113,312,129,366,157,435,197,509,222,543,250,573,266,585,263,589,246,577,217,546,192,512,152,438,124,368,108,314"/>
+</map>

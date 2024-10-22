@@ -1,0 +1,19 @@
+<map id="clsn::ui::ToggleControl" name="clsn::ui::ToggleControl">
+<area shape="rect" id="Node000001" title=" " alt="" coords="167,372,332,397"/>
+<area shape="rect" id="Node000007" href="$d6/de9/classclsn_1_1ui_1_1CheckBox.html" title=" " alt="" coords="5,445,147,471"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="210,405,105,448,103,443,208,400"/>
+<area shape="rect" id="Node000008" href="$d8/de3/classclsn_1_1ui_1_1RadioButton.html" title=" " alt="" coords="171,445,327,471"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="252,411,252,445,247,445,247,411"/>
+<area shape="rect" id="Node000009" href="$de/d6a/classclsn_1_1ui_1_1ToggleButton.html" title=" " alt="" coords="351,445,513,471"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="292,400,403,443,401,448,290,405"/>
+<area shape="rect" id="Node000002" href="$d3/d71/classclsn_1_1ui_1_1ClickableControl.html" title=" " alt="" coords="158,299,341,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,338,252,372,247,372,247,338"/>
+<area shape="rect" id="Node000003" href="$d1/d51/classclsn_1_1ui_1_1CaptionableControl.html" title="This class represents a UI Control that has a caption Property." alt="" coords="149,225,350,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,264,252,299,247,299,247,264"/>
+<area shape="rect" id="Node000004" href="$d3/d50/classclsn_1_1ui_1_1PaintableControl.html" title=" " alt="" coords="158,152,341,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="252,191,252,225,247,225,247,191"/>
+<area shape="rect" id="Node000005" href="$d3/d63/classclsn_1_1ui_1_1Control.html" title=" " alt="" coords="188,79,311,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="252,118,252,152,247,152,247,118"/>
+<area shape="rect" id="Node000006" href="$d0/dfb/classclsn_1_1core_1_1Entity.html" title=" " alt="" coords="184,5,315,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="252,44,252,79,247,79,247,44"/>
+</map>

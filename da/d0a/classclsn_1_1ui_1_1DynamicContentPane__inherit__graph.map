@@ -1,0 +1,11 @@
+<map id="clsn::ui::DynamicContentPane" name="clsn::ui::DynamicContentPane">
+<area shape="rect" id="Node000001" title="A class representing a dynamic content pane that can hold a Control." alt="" coords="5,299,221,324"/>
+<area shape="rect" id="Node000002" href="$db/d72/classclsn_1_1ui_1_1ContentPane.html" title="A base class representing a content pane with Layout and Event handling capabilities." alt="" coords="34,225,193,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,264,116,299,111,299,111,264"/>
+<area shape="rect" id="Node000003" href="$d3/d50/classclsn_1_1ui_1_1PaintableControl.html" title=" " alt="" coords="22,152,205,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,191,116,225,111,225,111,191"/>
+<area shape="rect" id="Node000004" href="$d3/d63/classclsn_1_1ui_1_1Control.html" title=" " alt="" coords="52,79,175,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="116,118,116,152,111,152,111,118"/>
+<area shape="rect" id="Node000005" href="$d0/dfb/classclsn_1_1core_1_1Entity.html" title=" " alt="" coords="48,5,179,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="116,44,116,79,111,79,111,44"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="clsn::ui::amatista::AmatistaUISkin" name="clsn::ui::amatista::AmatistaUISkin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,152,140,192"/>
+<area shape="rect" id="Node000002" href="$d2/d6c/classclsn_1_1ui_1_1UISkin.html" title=" " alt="" coords="13,79,132,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,118,75,152,70,152,70,118"/>
+<area shape="rect" id="Node000003" href="$d0/dfb/classclsn_1_1core_1_1Entity.html" title=" " alt="" coords="7,5,138,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,44,75,79,70,79,70,44"/>
+</map>

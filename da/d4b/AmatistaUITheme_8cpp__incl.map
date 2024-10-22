@@ -1,0 +1,36 @@
+<map id="code/classeine&#45;lib/clsn/ui/amatista/AmatistaUITheme.cpp" name="code/classeine&#45;lib/clsn/ui/amatista/AmatistaUITheme.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="348,5,541,60"/>
+<area shape="rect" id="Node000002" href="$d9/d53/AmatistaUITheme_8h.html" title=" " alt="" coords="369,108,521,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="447,60,447,94,442,94,442,60"/>
+<area shape="rect" id="Node000003" href="$d2/d4e/UITheme_8h.html" title=" " alt="" coords="375,181,514,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="447,134,447,168,442,168,442,134"/>
+<area shape="rect" id="Node000004" href="$d3/d59/Configuration_8h.html" title=" " alt="" coords="171,255,353,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="416,209,306,252,304,247,414,204"/>
+<area shape="rect" id="Node000011" href="$d4/da0/Entity_8h.html" title=" " alt="" coords="8,255,140,280"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="386,209,148,255,147,249,385,204"/>
+<area shape="rect" id="Node000012" href="$dd/dac/Color_8h.html" title="Defines the Color class for the Classeine project, providing Color manipulation utilities...." alt="" coords="378,255,511,280"/>
+<area shape="poly" id="edge12_Node000003_Node000012" title=" " alt="" coords="447,207,447,241,442,241,442,207"/>
+<area shape="rect" id="Node000013" href="$dd/d9c/Dimension_8h.html" title=" " alt="" coords="535,255,706,280"/>
+<area shape="poly" id="edge13_Node000003_Node000013" title=" " alt="" coords="474,204,580,247,578,252,472,209"/>
+<area shape="rect" id="Node000014" href="$d8/dd1/Font_8h.html" title=" " alt="" coords="730,255,858,280"/>
+<area shape="poly" id="edge15_Node000003_Node000014" title=" " alt="" coords="501,204,725,249,724,255,500,209"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="127,328,213,353"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="249,282,197,322,194,317,246,278"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="238,328,313,353"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="267,280,273,314,268,315,262,281"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="591,328,650,353"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="321,277,565,325,578,328,577,333,564,331,320,283"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,328,103,353"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="229,283,102,326,100,321,228,277"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="337,328,461,353"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="285,278,366,319,364,324,283,282"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="485,328,553,353"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="304,277,473,324,471,329,303,283"/>
+<area shape="poly" id="edge11_Node000011_Node000008" title=" " alt="" coords="73,281,63,316,58,314,68,280"/>
+<area shape="poly" id="edge14_Node000013_Node000007" title=" " alt="" coords="623,280,623,314,618,314,618,280"/>
+<area shape="poly" id="edge17_Node000014_Node000007" title=" " alt="" coords="767,282,663,325,661,320,765,278"/>
+<area shape="rect" id="Node000015" href="$de/d59/FontStyle_8h.html" title=" " alt="" coords="711,328,805,353"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="790,282,772,317,768,314,786,279"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="829,328,889,353"/>
+<area shape="poly" id="edge18_Node000014_Node000016" title=" " alt="" coords="807,279,841,316,838,320,803,282"/>
+</map>

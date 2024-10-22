@@ -1,0 +1,21 @@
+<map id="clsn::ui::ClickableControl" name="clsn::ui::ClickableControl">
+<area shape="rect" id="Node000001" title=" " alt="" coords="75,299,258,324"/>
+<area shape="rect" id="Node000006" href="$d4/db6/classclsn_1_1ui_1_1Button.html" title=" " alt="" coords="25,372,143,397"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="145,335,99,374,96,370,141,331"/>
+<area shape="rect" id="Node000007" href="$d4/d37/classclsn_1_1ui_1_1ToggleControl.html" title=" " alt="" coords="167,372,332,397"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="192,331,238,370,234,374,189,335"/>
+<area shape="rect" id="Node000002" href="$d1/d51/classclsn_1_1ui_1_1CaptionableControl.html" title="This class represents a UI Control that has a caption Property." alt="" coords="66,225,267,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,264,169,299,164,299,164,264"/>
+<area shape="rect" id="Node000003" href="$d3/d50/classclsn_1_1ui_1_1PaintableControl.html" title=" " alt="" coords="75,152,258,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="169,191,169,225,164,225,164,191"/>
+<area shape="rect" id="Node000004" href="$d3/d63/classclsn_1_1ui_1_1Control.html" title=" " alt="" coords="105,79,228,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="169,118,169,152,164,152,164,118"/>
+<area shape="rect" id="Node000005" href="$d0/dfb/classclsn_1_1core_1_1Entity.html" title=" " alt="" coords="101,5,232,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="169,44,169,79,164,79,164,44"/>
+<area shape="rect" id="Node000008" href="$d6/de9/classclsn_1_1ui_1_1CheckBox.html" title=" " alt="" coords="5,445,147,471"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="210,405,105,448,103,443,208,400"/>
+<area shape="rect" id="Node000009" href="$d8/de3/classclsn_1_1ui_1_1RadioButton.html" title=" " alt="" coords="171,445,327,471"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="252,411,252,445,247,445,247,411"/>
+<area shape="rect" id="Node000010" href="$de/d6a/classclsn_1_1ui_1_1ToggleButton.html" title=" " alt="" coords="351,445,513,471"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="292,400,403,443,401,448,290,405"/>
+</map>

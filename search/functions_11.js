@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ui_5fmanager_0',['ui_manager',['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a31ed617d79359bd574081298e718e664',1,'clsn::ui::ui_manager::ui_manager(const ui_manager &amp;)=delete'],['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a27bdb6e6750634377e10f1439bcc0aa5',1,'clsn::ui::ui_manager::ui_manager(ui_manager &amp;&amp;)=delete']]]
+  ['uimanager_0',['uimanager',['../d8/d74/classclsn_1_1ui_1_1UIManager.html#a04b0d7757eb5f26ef30d1d658b8e1849',1,'clsn::ui::UIManager::UIManager(const UIManager &amp;)=delete'],['../d8/d74/classclsn_1_1ui_1_1UIManager.html#a477e68463f05ca3063962b15bc245ccb',1,'clsn::ui::UIManager::UIManager(UIManager &amp;&amp;)=delete']]]
 ];

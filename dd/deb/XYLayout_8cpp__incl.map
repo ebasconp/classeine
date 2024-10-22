@@ -1,0 +1,28 @@
+<map id="code/classeine&#45;lib/clsn/ui/layouts/XYLayout.cpp" name="code/classeine&#45;lib/clsn/ui/layouts/XYLayout.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="190,5,402,45"/>
+<area shape="rect" id="Node000002" href="$d7/d95/XYLayout_8h.html" title=" " alt="" coords="199,93,393,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,46,299,79,293,79,293,46"/>
+<area shape="rect" id="Node000003" href="$d5/d2a/Layout_8h.html" title="Base class for UI layouts in the Classeine project. This file belongs to the Classeine project." alt="" coords="5,174,181,199"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="267,121,136,172,134,167,266,116"/>
+<area shape="rect" id="Node000009" href="$d0/db1/XYLayoutConstraint_8h.html" title=" " alt="" coords="205,167,387,207"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="299,119,299,153,293,153,293,119"/>
+<area shape="rect" id="Node000010" href="$db/dbf/draw_2Forward_8h.html" title=" " alt="" coords="339,255,491,280"/>
+<area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="333,116,369,135,386,149,401,165,410,183,416,203,419,240,414,241,411,204,405,185,396,168,383,153,366,140,330,121"/>
+<area shape="rect" id="Node000004" href="$d7/dd3/Region_8h.html" title=" " alt="" coords="21,255,166,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="96,200,96,241,91,241,91,200"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="190,255,253,280"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="114,197,192,245,189,250,111,202"/>
+<area shape="rect" id="Node000005" href="$dd/d9c/Dimension_8h.html" title=" " alt="" coords="41,335,145,361"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="96,280,96,321,91,321,91,280"/>
+<area shape="rect" id="Node000007" href="$d4/de5/Point_8h.html" title=" " alt="" coords="169,335,236,361"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="111,278,177,325,174,329,108,282"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="119,416,177,441"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="104,359,134,403,130,406,99,362"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="197,362,166,406,162,403,192,359"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="294,208,284,243,266,281,248,306,228,328,224,324,244,303,262,279,279,241,289,206"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="326,205,387,245,384,249,323,209"/>
+<area shape="rect" id="Node000011" href="$dd/d7c/TextHorizontalAlignment_8h.html" title=" " alt="" coords="291,328,474,368"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="412,281,398,317,393,314,407,279"/>
+<area shape="rect" id="Node000012" href="$db/d90/TextVerticalAlignment_8h.html" title=" " alt="" coords="499,335,741,361"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="445,278,578,328,576,333,444,283"/>
+</map>

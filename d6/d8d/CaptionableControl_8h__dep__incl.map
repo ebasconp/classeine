@@ -1,0 +1,87 @@
+<map id="code/classeine&#45;lib/clsn/ui/CaptionableControl.h" name="code/classeine&#45;lib/clsn/ui/CaptionableControl.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2364,5,2573,45"/>
+<area shape="rect" id="Node000002" href="$dd/d19/CaptionableControl_8cpp.html" title=" " alt="" coords="1789,93,2013,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2351,47,2025,96,2013,98,2012,92,2024,91,2350,42"/>
+<area shape="rect" id="Node000003" href="$d4/d3f/ClickableControl_8h.html" title=" " alt="" coords="2037,93,2228,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="2382,51,2207,96,2206,91,2381,46"/>
+<area shape="rect" id="Node000022" href="$d3/dc8/Label_8h.html" title=" " alt="" coords="2833,93,2971,133"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="2577,45,2833,96,2832,101,2576,51"/>
+<area shape="rect" id="Node000025" href="$d3/ded/Window_8h.html" title=" " alt="" coords="2399,93,2538,133"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="2471,59,2471,93,2466,93,2466,59"/>
+<area shape="rect" id="Node000042" href="$df/d69/LabelPainter_8cpp.html" title=" " alt="" coords="2995,93,3230,133"/>
+<area shape="poly" id="edge43_Node000001_Node000042" title=" " alt="" coords="2588,39,2984,91,2996,92,2995,98,2983,96,2587,44"/>
+<area shape="rect" id="Node000004" href="$d0/d79/Button_8h.html" title=" " alt="" coords="1867,181,2006,221"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="2078,141,1981,184,1979,179,2076,136"/>
+<area shape="rect" id="Node000007" href="$d2/d6f/ClickableControl_8cpp.html" title=" " alt="" coords="2030,181,2235,221"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="2135,147,2135,181,2130,181,2130,147"/>
+<area shape="rect" id="Node000008" href="$d7/dca/ToggleControl_8h.html" title=" " alt="" coords="1458,181,1631,221"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="2024,136,1632,191,1631,186,2024,131"/>
+<area shape="rect" id="Node000005" href="$de/dd1/Button_8cpp.html" title=" " alt="" coords="1865,269,2008,309"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1939,235,1939,269,1934,269,1934,235"/>
+<area shape="rect" id="Node000006" href="$de/d7a/ButtonRenderer_8cpp.html" title=" " alt="" coords="2033,269,2299,309"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="2000,224,2117,267,2115,272,1999,229"/>
+<area shape="rect" id="Node000009" href="$d9/d36/CheckBox_8h.html" title=" " alt="" coords="329,269,478,309"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1445,213,478,285,478,280,1444,207"/>
+<area shape="rect" id="Node000013" href="$d1/d27/RadioButton_8h.html" title=" " alt="" coords="1144,269,1308,309"/>
+<area shape="poly" id="edge12_Node000008_Node000013" title=" " alt="" coords="1462,228,1296,272,1295,267,1461,222"/>
+<area shape="rect" id="Node000018" href="$df/dc1/ToggleButton_8h.html" title=" " alt="" coords="1460,269,1629,309"/>
+<area shape="poly" id="edge17_Node000008_Node000018" title=" " alt="" coords="1547,235,1547,269,1542,269,1542,235"/>
+<area shape="rect" id="Node000021" href="$d7/da3/ToggleControl_8cpp.html" title=" " alt="" coords="1653,269,1841,309"/>
+<area shape="poly" id="edge20_Node000008_Node000021" title=" " alt="" coords="1603,224,1704,267,1702,272,1600,229"/>
+<area shape="rect" id="Node000010" href="$db/d75/CheckBox_8cpp.html" title=" " alt="" coords="5,365,169,405"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="327,316,152,367,150,362,326,311"/>
+<area shape="rect" id="Node000011" href="$da/d96/CheckBoxPainter_8cpp.html" title=" " alt="" coords="194,357,389,412"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="372,320,325,359,321,355,369,316"/>
+<area shape="rect" id="Node000012" href="$d0/d31/CheckBoxRenderer_8cpp.html" title=" " alt="" coords="413,357,615,412"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="438,316,485,355,481,359,434,320"/>
+<area shape="rect" id="Node000014" href="$dc/d1f/RadioButton_8cpp.html" title=" " alt="" coords="1359,365,1538,405"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="1285,312,1405,362,1403,367,1283,317"/>
+<area shape="rect" id="Node000015" href="$d4/d8f/RadioButtonGroup_8cpp.html" title=" " alt="" coords="639,365,858,405"/>
+<area shape="poly" id="edge14_Node000013_Node000015" title=" " alt="" coords="1131,310,871,360,835,367,834,362,869,355,1130,305"/>
+<area shape="rect" id="Node000016" href="$d4/dd8/RadioButtonPainter_8cpp.html" title=" " alt="" coords="883,357,1092,412"/>
+<area shape="poly" id="edge15_Node000013_Node000016" title=" " alt="" coords="1166,317,1056,360,1054,355,1164,312"/>
+<area shape="rect" id="Node000017" href="$db/d00/RadioButtonRenderer_8cpp.html" title=" " alt="" coords="1117,357,1335,412"/>
+<area shape="poly" id="edge16_Node000013_Node000017" title=" " alt="" coords="1229,323,1229,357,1223,357,1223,323"/>
+<area shape="rect" id="Node000019" href="$da/d14/ToggleButton_8cpp.html" title=" " alt="" coords="1810,365,1994,405"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="1631,310,1830,362,1829,367,1629,315"/>
+<area shape="rect" id="Node000020" href="$d4/da4/ToggleButtonRenderer_8cpp.html" title=" " alt="" coords="1563,357,1785,412"/>
+<area shape="poly" id="edge19_Node000018_Node000020" title=" " alt="" coords="1583,315,1639,355,1636,359,1580,319"/>
+<area shape="rect" id="Node000023" href="$db/d8a/Label_8cpp.html" title=" " alt="" coords="3018,181,3157,221"/>
+<area shape="poly" id="edge22_Node000022_Node000023" title=" " alt="" coords="2956,137,3048,179,3046,184,2954,142"/>
+<area shape="rect" id="Node000024" href="$de/d63/LabelRenderer_8cpp.html" title=" " alt="" coords="3181,181,3439,221"/>
+<area shape="poly" id="edge23_Node000022_Node000024" title=" " alt="" coords="2985,131,3216,179,3215,184,2984,136"/>
+<area shape="poly" id="edge42_Node000025_Node000006" title=" " alt="" coords="2396,140,2347,160,2299,184,2191,271,2187,267,2297,179,2345,155,2394,135"/>
+<area shape="poly" id="edge25_Node000025_Node000007" title=" " alt="" coords="2386,138,2207,184,2206,179,2385,133"/>
+<area shape="rect" id="Node000026" href="$db/d65/Container_8h.html" title=" " alt="" coords="2310,181,2457,221"/>
+<area shape="poly" id="edge26_Node000025_Node000026" title=" " alt="" coords="2442,145,2404,183,2400,179,2438,141"/>
+<area shape="rect" id="Node000039" href="$da/dfd/Control_8cpp.html" title=" " alt="" coords="2481,181,2627,221"/>
+<area shape="poly" id="edge39_Node000025_Node000039" title=" " alt="" coords="2499,141,2537,179,2533,183,2495,145"/>
+<area shape="rect" id="Node000040" href="$da/d9c/MainWindow_8h.html" title=" " alt="" coords="2652,181,2819,221"/>
+<area shape="poly" id="edge40_Node000025_Node000040" title=" " alt="" coords="2541,135,2678,179,2676,184,2539,140"/>
+<area shape="rect" id="Node000041" href="$d2/d84/Window_8cpp.html" title=" " alt="" coords="2843,181,2993,221"/>
+<area shape="poly" id="edge41_Node000025_Node000041" title=" " alt="" coords="2552,127,2831,179,2843,181,2842,186,2829,184,2551,132"/>
+<area shape="rect" id="Node000027" href="$d4/dca/ConstrainedContainer_8h.html" title=" " alt="" coords="2323,269,2547,309"/>
+<area shape="poly" id="edge27_Node000026_Node000027" title=" " alt="" coords="2404,232,2426,268,2422,271,2400,234"/>
+<area shape="rect" id="Node000028" href="$de/d83/LayoutContainer_8h.html" title=" " alt="" coords="2340,365,2531,405"/>
+<area shape="poly" id="edge28_Node000027_Node000028" title=" " alt="" coords="2438,323,2438,365,2433,365,2433,323"/>
+<area shape="rect" id="Node000029" href="$d5/dfe/DualLayoutContainer_8h.html" title=" " alt="" coords="1817,460,2037,500"/>
+<area shape="poly" id="edge29_Node000028_Node000029" title=" " alt="" coords="2327,408,2030,463,2029,457,2326,403"/>
+<area shape="rect" id="Node000031" href="$de/d14/FlowLayoutContainer_8h.html" title=" " alt="" coords="2069,460,2290,500"/>
+<area shape="poly" id="edge31_Node000028_Node000031" title=" " alt="" coords="2371,412,2232,462,2230,457,2370,407"/>
+<area shape="rect" id="Node000033" href="$d3/dd0/HBoxLayoutContainer_8h.html" title=" " alt="" coords="2323,460,2548,500"/>
+<area shape="poly" id="edge33_Node000028_Node000033" title=" " alt="" coords="2438,418,2438,460,2433,460,2433,418"/>
+<area shape="rect" id="Node000035" href="$d9/df5/VBoxLayoutContainer_8h.html" title=" " alt="" coords="2579,460,2803,500"/>
+<area shape="poly" id="edge35_Node000028_Node000035" title=" " alt="" coords="2501,407,2641,457,2639,462,2499,412"/>
+<area shape="rect" id="Node000037" href="$d2/db1/XYLayoutContainer_8h.html" title=" " alt="" coords="2839,460,3045,500"/>
+<area shape="poly" id="edge37_Node000028_Node000037" title=" " alt="" coords="2545,403,2840,457,2839,463,2544,409"/>
+<area shape="rect" id="Node000030" href="$db/dbc/DualLayoutContainer_8cpp.html" title=" " alt="" coords="1797,548,2031,588"/>
+<area shape="poly" id="edge30_Node000029_Node000030" title=" " alt="" coords="1925,514,1920,548,1914,547,1920,513"/>
+<area shape="rect" id="Node000032" href="$d4/d03/FlowLayoutContainer_8cpp.html" title=" " alt="" coords="2055,548,2291,588"/>
+<area shape="poly" id="edge32_Node000031_Node000032" title=" " alt="" coords="2179,514,2177,548,2171,548,2174,513"/>
+<area shape="rect" id="Node000034" href="$d0/dbc/HBoxLayoutContainer_8cpp.html" title=" " alt="" coords="2315,548,2555,588"/>
+<area shape="poly" id="edge34_Node000033_Node000034" title=" " alt="" coords="2438,514,2438,548,2433,548,2433,514"/>
+<area shape="rect" id="Node000036" href="$dc/da8/VBoxLayoutContainer_8cpp.html" title=" " alt="" coords="2580,548,2819,588"/>
+<area shape="poly" id="edge36_Node000035_Node000036" title=" " alt="" coords="2697,513,2700,548,2695,548,2692,514"/>
+<area shape="rect" id="Node000038" href="$d4/d1a/XYLayoutContainer_8cpp.html" title=" " alt="" coords="2843,548,3065,588"/>
+<area shape="poly" id="edge38_Node000037_Node000038" title=" " alt="" coords="2949,513,2954,547,2949,548,2944,514"/>
+</map>
