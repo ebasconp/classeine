@@ -39,7 +39,7 @@ add_library(classeine_lib
         clsn/core/Event.cpp
         clsn/core/Strings.cpp
 
-        clsn/draw/Color.cpp
+        clsn/draw/color.cpp
         clsn/draw/Colors.cpp
         clsn/draw/Dimension.cpp
         clsn/draw/Font.cpp
@@ -47,64 +47,64 @@ add_library(classeine_lib
         clsn/draw/Point.cpp
         clsn/draw/Region.cpp
 
-        clsn/ui/button.cpp
-        clsn/ui/check_box.cpp
-        clsn/ui/captionable_control.cpp
-        clsn/ui/clickable_control.cpp
-        clsn/ui/content_pane.cpp
-        clsn/ui/control.cpp
-        clsn/ui/dual_layout_container.cpp
-        clsn/ui/dynamic_content_pane.cpp
-        clsn/ui/empty_control.cpp
-        clsn/ui/flow_layout_container.cpp
-        clsn/ui/hbox_layout_container.cpp
-        clsn/ui/label.cpp
-        clsn/ui/paintable_control.cpp
-        clsn/ui/radio_button.cpp
-        clsn/ui/radio_button_group.cpp
-        clsn/ui/toggle_button.cpp
-        clsn/ui/toggle_control.cpp
-        clsn/ui/ui_manager.cpp
-        clsn/ui/ui_skin.cpp
-        clsn/ui/ui_theme.cpp
-        clsn/ui/vbox_layout_container.cpp
-        clsn/ui/window.cpp
-        clsn/ui/xy_layout_container.cpp
+        clsn/ui/Button.cpp
+        clsn/ui/CheckBox.cpp
+        clsn/ui/CaptionableControl.cpp
+        clsn/ui/ClickableControl.cpp
+        clsn/ui/ContentPane.cpp
+        clsn/ui/Control.cpp
+        clsn/ui/DualLayoutContainer.cpp
+        clsn/ui/DynamicContentPane.cpp
+        clsn/ui/EmptyControl.cpp
+        clsn/ui/FlowLayoutContainer.cpp
+        clsn/ui/HBoxLayoutContainer.cpp
+        clsn/ui/Label.cpp
+        clsn/ui/PaintableControl.cpp
+        clsn/ui/RadioButton.cpp
+        clsn/ui/RadioButtonGroup.cpp
+        clsn/ui/ToggleButton.cpp
+        clsn/ui/ToggleControl.cpp
+        clsn/ui/UIManager.cpp
+        clsn/ui/UISkin.cpp
+        clsn/ui/UITheme.cpp
+        clsn/ui/VBoxLayoutContainer.cpp
+        clsn/ui/Window.cpp
+        clsn/ui/XYLayoutContainer.cpp
 
-        clsn/ui/amatista/dark_amatista_ui_theme.cpp
-        clsn/ui/amatista/light_amatista_ui_theme.cpp
-        clsn/ui/amatista/amatista_ui_skin.cpp
-        clsn/ui/amatista/amatista_ui_theme.cpp
+        clsn/ui/amatista/DarkAmatistaUITheme.cpp
+        clsn/ui/amatista/LightAmatistaUITheme.cpp
+        clsn/ui/amatista/AmatistaUISkin.cpp
+        clsn/ui/amatista/AmatistaUITheme.cpp
 
-        clsn/ui/events/action_event.cpp
-        clsn/ui/events/control_event.cpp
-        clsn/ui/events/control_resized_event.cpp
-        clsn/ui/events/mouse_click_event.cpp
-        clsn/ui/events/mouse_moved_event.cpp
+        clsn/ui/events/ActionEvent.cpp
+        clsn/ui/events/ControlEvent.cpp
+        clsn/ui/events/ControlResizedEvent.cpp
+        clsn/ui/events/MouseClickEvent.cpp
+        clsn/ui/events/MouseMovedEvent.cpp
 
-        clsn/ui/impl/sdl2/graphics_sdl2_impl.cpp
-        clsn/ui/impl/sdl2/sdl2_font_cache.cpp
-        clsn/ui/impl/sdl2/sdl2_helpers.cpp
+        clsn/ui/impl/sdl2/GraphicsSDL2Impl.cpp
+        clsn/ui/impl/sdl2/SDL2FontCache.cpp
+        clsn/ui/impl/sdl2/SDL2Helpers.cpp
 
-        clsn/ui/layouts/dual_layout.cpp
-        clsn/ui/layouts/flow_layout.cpp
-        clsn/ui/layouts/hbox_layout.cpp
-        clsn/ui/layouts/vbox_layout.cpp
-        clsn/ui/layouts/xy_layout.cpp
-        clsn/ui/layouts/xy_layout_constraint.cpp
+        clsn/ui/layouts/DualLayout.cpp
+        clsn/ui/layouts/FlowLayout.cpp
+        clsn/ui/layouts/HBoxLayout.cpp
+        clsn/ui/layouts/VBoxLayout.cpp
+        clsn/ui/layouts/XYLayout.cpp
+        clsn/ui/layouts/XYLayoutConstraint.cpp
 
-        clsn/ui/painters/background_painter.cpp
-        clsn/ui/painters/check_box_painter.cpp
-        clsn/ui/painters/border_painter.cpp
-        clsn/ui/painters/label_painter.cpp
-        clsn/ui/painters/radio_button_painter.cpp
+        clsn/ui/painters/BackgroundPainter.cpp
+        clsn/ui/painters/CheckBoxPainter.cpp
+        clsn/ui/painters/BorderPainter.cpp
+        clsn/ui/painters/LabelPainter.cpp
+        clsn/ui/painters/RadioButtonPainter.cpp
 
-        clsn/ui/renderers/button_renderer.cpp
-        clsn/ui/renderers/check_box_renderer.cpp
-        clsn/ui/renderers/content_pane_renderer.cpp
-        clsn/ui/renderers/customizable_renderer.cpp
-        clsn/ui/renderers/empty_control_renderer.cpp
-        clsn/ui/renderers/label_renderer.cpp
-        clsn/ui/renderers/radio_button_renderer.cpp
-        clsn/ui/renderers/toggle_button_renderer.cpp
+        clsn/ui/renderers/ButtonRenderer.cpp
+        clsn/ui/renderers/CheckBoxRenderer.cpp
+        clsn/ui/renderers/ContentPaneRenderer.cpp
+        clsn/ui/renderers/CustomizableRenderer.cpp
+        clsn/ui/renderers/EmptyControlRenderer.cpp
+        clsn/ui/renderers/LabelRenderer.cpp
+        clsn/ui/renderers/RadioButtonRenderer.cpp
+        clsn/ui/renderers/ToggleButtonRenderer.cpp
 )

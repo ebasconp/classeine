@@ -5,9 +5,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include <clsn/ui/forward.h>
-#include <clsn/ui/dual_layout_container.h>
-#include <clsn/ui/main_window.h>
+#include <clsn/ui/Forward.h>
+#include <clsn/ui/DualLayoutContainer.h>
+#include <clsn/ui/MainWindow.h>
 
 #include <string>
 
@@ -17,18 +17,18 @@ namespace clsn::demo
 
   class demo_option_container;
 
-  class demo_window : public main_window<dual_layout_container>
+  class demo_window : public MainWindow<DualLayoutContainer>
   {
     std::shared_ptr<demo_option_container> m_option_container;
-    std::shared_ptr<label> m_label;
-    std::shared_ptr<dynamic_content_pane> m_content_pane;
+    std::shared_ptr<Label> m_label;
+    std::shared_ptr<DynamicContentPane> m_content_pane;
 
   public:
     demo_window();
 
     void set_title(const std::string& title);
 
-    auto get_content_pane() -> dynamic_content_pane&;
+    auto get_content_pane() -> DynamicContentPane&;
 
   private:
     void init_container();

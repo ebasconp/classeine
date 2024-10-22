@@ -14,7 +14,7 @@ void test()
 
 int main()
 {
-    clsn::ui::ui_manager::run(test);
+    clsn::ui::UIManager::run(test);
 
     return 0;
 }

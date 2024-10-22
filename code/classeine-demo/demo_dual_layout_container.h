@@ -1,17 +1,17 @@
 #pragma once
 
-#include <clsn/ui/dual_layout_container.h>
+#include <clsn/ui/DualLayoutContainer.h>
 
-#include <clsn/ui/forward.h>
+#include <clsn/ui/Forward.h>
 
 namespace clsn::demo
 {
-    class demo_dual_layout_container : public ui::dual_layout_container
+    class demo_dual_layout_container : public ui::DualLayoutContainer
     {
     public:
         demo_dual_layout_container();
 
     private:
-        std::shared_ptr<ui::button> m_button;
+        std::shared_ptr<ui::Button> m_button;
     };
 }

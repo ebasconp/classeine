@@ -1,22 +1,22 @@
 #pragma once
 
-#include <clsn/ui/flow_layout_container.h>
+#include <clsn/ui/FlowLayoutContainer.h>
 
-#include <clsn/ui/forward.h>
+#include <clsn/ui/Forward.h>
 
 namespace clsn::demo
 {
-    class demo_flow_layout_container : public ui::flow_layout_container
+    class demo_flow_layout_container : public ui::FlowLayoutContainer
     {
     public:
         demo_flow_layout_container();
 
     private:
-        std::shared_ptr<ui::button> m_file;
-        std::shared_ptr<ui::button> m_edit;
-        std::shared_ptr<ui::button> m_view;
-        std::shared_ptr<ui::button> m_tools;
-        std::shared_ptr<ui::button> m_window;
-        std::shared_ptr<ui::button> m_help;
+        std::shared_ptr<ui::Button> m_file;
+        std::shared_ptr<ui::Button> m_edit;
+        std::shared_ptr<ui::Button> m_view;
+        std::shared_ptr<ui::Button> m_tools;
+        std::shared_ptr<ui::Button> m_window;
+        std::shared_ptr<ui::Button> m_help;
     };
 }

@@ -8,10 +8,10 @@
 
 #include "clsn/draw/Dimension.h"
 
-#include "clsn/ui/button.h"
-#include "clsn/ui/dynamic_content_pane.h"
-#include "clsn/ui/hbox_layout_container.h"
-#include "clsn/ui/vbox_layout_container.h"
+#include "clsn/ui/Button.h"
+#include "clsn/ui/DynamicContentPane.h"
+#include "clsn/ui/HBoxLayoutContainer.h"
+#include "clsn/ui/VBoxLayoutContainer.h"
 
 #include "demo_box_layout_container.h"
 #include "demo_control_container.h"
@@ -33,65 +33,65 @@ namespace clsn::demo
         init_options();
     }
 
-    auto demo_option_container::init_option(const std::string& name) -> std::shared_ptr<button>
+    auto demo_option_container::init_option(const std::string& name) -> std::shared_ptr<Button>
     {
-        auto btn = add(control::make<button>());
+        auto btn = add(Control::make<Button>());
         btn->setCaption(name);
         btn->setActionName(name);
-        btn->add_action_listener([this](auto& e) { this->process_action(e); });
+        btn->addActionListener([this](auto& e) { this->process_action(e); });
 
         return btn;
     }
 
     void demo_option_container::init_options()
     {
-        m_hbox_demo = init_option("hbox_layout_container");
-        m_vbox_demo = init_option("vbox_layout_container");
-        m_dual_demo = init_option("dual_layout_container");
-        m_flow_demo = init_option("flow_layout_container");
-        m_xy_demo = init_option("xy_layout_container");
+        m_hbox_demo = init_option("HBoxLayoutContainer");
+        m_vbox_demo = init_option("VBoxLayoutContainer");
+        m_dual_demo = init_option("DualLayoutContainer");
+        m_flow_demo = init_option("FlowLayoutContainer");
+        m_xy_demo = init_option("XYLayoutContainer");
         m_controls = init_option("Controls");
     }
 
-    void demo_option_container::process_action(const action_event& e)
+    void demo_option_container::process_action(const ActionEvent& e)
     {
-        const auto& action_name = e.getActionName();
+        const auto& actionName = e.getActionName();
 
-        m_demo_window.set_title(action_name + " demo");
+        m_demo_window.set_title(actionName + " demo");
 
-        if (action_name == "hbox_layout_container")
+        if (actionName == "HBoxLayoutContainer")
         {
-            m_demo_window.get_content_pane().set_inner_control(control::make<demo_box_layout_container<hbox_layout_container>>());
+            m_demo_window.get_content_pane().setInnerControl(Control::make<demo_box_layout_container<HBoxLayoutContainer>>());
             return;
         }
 
-        if (action_name == "vbox_layout_container")
+        if (actionName == "VBoxLayoutContainer")
         {
-            m_demo_window.get_content_pane().set_inner_control(control::make<demo_box_layout_container<vbox_layout_container>>());
+            m_demo_window.get_content_pane().setInnerControl(Control::make<demo_box_layout_container<VBoxLayoutContainer>>());
             return;
         }
 
-        if (action_name == "dual_layout_container")
+        if (actionName == "DualLayoutContainer")
         {
-            m_demo_window.get_content_pane().set_inner_control(control::make<demo_dual_layout_container>());
+            m_demo_window.get_content_pane().setInnerControl(Control::make<demo_dual_layout_container>());
             return;
         }
 
-        if (action_name == "flow_layout_container")
+        if (actionName == "FlowLayoutContainer")
         {
-            m_demo_window.get_content_pane().set_inner_control(control::make<demo_flow_layout_container>());
+            m_demo_window.get_content_pane().setInnerControl(Control::make<demo_flow_layout_container>());
             return;
         }
 
-        if (action_name == "xy_layout_container")
+        if (actionName == "XYLayoutContainer")
         {
-            m_demo_window.get_content_pane().set_inner_control(control::make<demo_xy_layout_container>());
+            m_demo_window.get_content_pane().setInnerControl(Control::make<demo_xy_layout_container>());
             return;
         }
 
-        if (action_name == "Controls")
+        if (actionName == "Controls")
         {
-            m_demo_window.get_content_pane().set_inner_control(control::make<demo_control_container>());
+            m_demo_window.get_content_pane().setInnerControl(Control::make<demo_control_container>());
         }
     }
 }

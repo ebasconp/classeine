@@ -5,27 +5,27 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include <clsn/ui/forward.h>
+#include <clsn/ui/Forward.h>
 
-#include <clsn/ui/vbox_layout_container.h>
+#include <clsn/ui/VBoxLayoutContainer.h>
 
 namespace clsn::ui::events
 {
-    class action_event;
+    class ActionEvent;
 }
 
 namespace clsn::demo
 {
     class demo_window;
 
-    class demo_option_container : public ui::vbox_layout_container
+    class demo_option_container : public ui::VBoxLayoutContainer
     {
-        std::shared_ptr<ui::button> m_hbox_demo;
-        std::shared_ptr<ui::button> m_vbox_demo;
-        std::shared_ptr<ui::button> m_dual_demo;
-        std::shared_ptr<ui::button> m_flow_demo;
-        std::shared_ptr<ui::button> m_xy_demo;
-        std::shared_ptr<ui::button> m_controls;
+        std::shared_ptr<ui::Button> m_hbox_demo;
+        std::shared_ptr<ui::Button> m_vbox_demo;
+        std::shared_ptr<ui::Button> m_dual_demo;
+        std::shared_ptr<ui::Button> m_flow_demo;
+        std::shared_ptr<ui::Button> m_xy_demo;
+        std::shared_ptr<ui::Button> m_controls;
 
         demo_window& m_demo_window;
 
@@ -34,8 +34,8 @@ namespace clsn::demo
 
     private:
         void init_options();
-        auto init_option(const std::string& name) -> std::shared_ptr<ui::button>;
+        auto init_option(const std::string& name) -> std::shared_ptr<ui::Button>;
 
-        void process_action(const ui::events::action_event& e);
+        void process_action(const ui::events::ActionEvent& e);
     };
 }
