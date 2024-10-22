@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "font_style.h"
+#include <clsn/draw/font_style.h>
 
 #include <string>
 #include <utility>

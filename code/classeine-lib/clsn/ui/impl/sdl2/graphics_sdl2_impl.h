@@ -7,12 +7,12 @@
 
 #include <string_view>
 
-#include "clsn/core/entity.h"
+#include <clsn/core/entity.h>
 
-#include "clsn/draw/color.h"
-#include "clsn/draw/forward.h"
+#include <clsn/draw/color.h>
+#include <clsn/draw/forward.h>
 
-#include "sdl2_font_cache.h"
+#include <clsn/ui/impl/sdl2/sdl2_font_cache.h>
 
 struct SDL_Renderer;
 

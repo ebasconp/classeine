@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "control.h"
+#include <clsn/ui/control.h>
 
 namespace clsn::ui
 {

@@ -5,9 +5,9 @@
 
 #pragma once
 
-#include "clsn/core/configuration.h"
+#include <clsn/core/configuration.h>
 
-#include "clsn/draw/forward.h"
+#include <clsn/draw/forward.h>
 
 #include <memory>
 

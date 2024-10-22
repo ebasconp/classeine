@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "light_amatista_ui_theme.h"
+#include <clsn/ui/amatista/light_amatista_ui_theme.h>
 
-#include "clsn/draw/colors.h"
+#include <clsn/draw/colors.h>
 
 namespace clsn::ui::amatista
 {

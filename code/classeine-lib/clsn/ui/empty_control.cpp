@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "empty_control.h"
+#include <clsn/ui/empty_control.h>
 
-#include "renderers/empty_control_renderer.h"
+#include <clsn/ui/renderers/empty_control_renderer.h>
 
 namespace clsn::ui
 {

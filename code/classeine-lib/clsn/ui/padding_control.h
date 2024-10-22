@@ -7,7 +7,7 @@
 
 #include <clsn/ui/static_content_pane.h>
 
-#include "renderers/padding_control_renderer.h"
+#include <clsn/ui/renderers/padding_control_renderer.h>
 
 namespace clsn::ui
 {

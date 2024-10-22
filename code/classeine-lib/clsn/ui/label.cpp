@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "label.h"
+#include <clsn/ui/label.h>
 
-#include "renderers/label_renderer.h"
+#include <clsn/ui/renderers/label_renderer.h>
 
 namespace clsn::ui
 {

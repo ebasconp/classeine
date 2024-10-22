@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "content_pane_renderer.h"
+#include <clsn/ui/renderers/content_pane_renderer.h>
 
-#include "clsn/ui/dynamic_content_pane.h"
+#include <clsn/ui/dynamic_content_pane.h>
 
-#include "clsn/ui/painters/background_painter.h"
+#include <clsn/ui/painters/background_painter.h>
 
 namespace clsn::ui::renderers
 {

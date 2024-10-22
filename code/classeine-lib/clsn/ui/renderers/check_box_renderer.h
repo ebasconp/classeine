@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/ui/renderers/label_renderer.h"
+#include <clsn/ui/renderers/label_renderer.h>
 
 namespace clsn::ui::renderers
 {

@@ -3,12 +3,12 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "ui_manager.h"
+#include <clsn/ui/ui_manager.h>
 
-#include "clsn/core/console.h"
-#include "clsn/core/system.h"
+#include <clsn/core/console.h>
+#include <clsn/core/system.h>
 
-#include "amatista/amatista_ui_skin.h"
+#include <clsn/ui/amatista/amatista_ui_skin.h>
 
 
 namespace clsn::ui

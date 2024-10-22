@@ -5,12 +5,12 @@
 
 #pragma once
 
-#include "ui_manager_defaults.h"
-#include "ui_skin.h"
+#include <clsn/ui/ui_manager_defaults.h>
+#include <clsn/ui/ui_skin.h>
 
-#include "clsn/draw/font_info.h"
+#include <clsn/draw/font_info.h>
 
-#include "clsn/core/entity.h"
+#include <clsn/core/entity.h>
 
 #include <memory>
 #include <string>

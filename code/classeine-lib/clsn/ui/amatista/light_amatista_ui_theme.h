@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/ui/amatista/amatista_ui_theme.h"
+#include <clsn/ui/amatista/amatista_ui_theme.h>
 
 namespace clsn::ui::amatista
 {

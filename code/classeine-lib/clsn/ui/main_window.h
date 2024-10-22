@@ -5,9 +5,9 @@
 
 #pragma once
 
-#include "window.h"
+#include <clsn/ui/window.h>
 
-#include "impl/main_window_impl.h"
+#include <clsn/ui/impl/main_window_impl.h>
 
 namespace clsn::ui
 {

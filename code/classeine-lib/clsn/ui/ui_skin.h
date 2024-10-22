@@ -5,13 +5,13 @@
 
 #pragma once
 
-#include "clsn/core/empty_event.h"
-#include "clsn/core/entity.h"
-#include "clsn/core/event_listener_list.h"
-#include "clsn/core/factory.h"
+#include <clsn/core/empty_event.h>
+#include <clsn/core/entity.h>
+#include <clsn/core/event_listener_list.h>
+#include <clsn/core/factory.h>
 
-#include "clsn/ui/forward.h"
-#include "clsn/ui/ui_theme.h"
+#include <clsn/ui/forward.h>
+#include <clsn/ui/ui_theme.h>
 
 #include <unordered_map>
 

@@ -5,9 +5,9 @@
 
 #pragma once
 
-#include "layout_container.h"
+#include <clsn/ui/layout_container.h>
 
-#include "layouts/hbox_layout.h"
+#include <clsn/ui/layouts/hbox_layout.h>
 
 namespace clsn::ui
 {

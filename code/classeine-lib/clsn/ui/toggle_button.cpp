@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "toggle_button.h"
+#include <clsn/ui/toggle_button.h>
 
-#include "renderers/toggle_button_renderer.h"
+#include <clsn/ui/renderers/toggle_button_renderer.h>
 
 namespace clsn::ui
 {

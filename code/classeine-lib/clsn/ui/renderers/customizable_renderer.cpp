@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "customizable_renderer.h"
+#include <clsn/ui/renderers/customizable_renderer.h>
 
 namespace clsn::ui::renderers
 {

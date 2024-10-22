@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "window.h"
+#include <clsn/ui/window.h>
 
-#include "ui_manager.h"
+#include <clsn/ui/ui_manager.h>
 
 #include <clsn/core/console.h>
 

@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "toggle_control.h"
+#include <clsn/ui/toggle_control.h>
 
 namespace clsn::ui
 {

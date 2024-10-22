@@ -5,9 +5,9 @@
 
 #pragma once
 
-#include "clsn/core/event.h"
+#include <clsn/core/event.h>
 
-#include "clsn/draw/point.h"
+#include <clsn/draw/point.h>
 
 namespace clsn::ui::events
 {

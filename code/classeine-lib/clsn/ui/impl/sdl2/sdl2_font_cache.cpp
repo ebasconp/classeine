@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "sdl2_font_cache.h"
+#include <clsn/ui/impl/sdl2/sdl2_font_cache.h>
 
-#include "clsn/ui/ui_manager.h"
+#include <clsn/ui/ui_manager.h>
 
-#include "clsn/draw/font_info.h"
+#include <clsn/draw/font_info.h>
 
 namespace clsn::ui::impl::sdl2
 {

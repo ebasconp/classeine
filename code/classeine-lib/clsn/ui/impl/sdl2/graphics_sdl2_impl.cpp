@@ -3,15 +3,15 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "graphics_sdl2_impl.h"
+#include <clsn/ui/impl/sdl2/graphics_sdl2_impl.h>
 
-#include "sdl2_helpers.h"
+#include <clsn/ui/impl/sdl2/sdl2_helpers.h>
 
-#include "clsn/draw/font.h"
-#include "clsn/draw/point.h"
-#include "clsn/draw/region.h"
+#include <clsn/draw/font.h>
+#include <clsn/draw/point.h>
+#include <clsn/draw/region.h>
 
-#include "clsn/core/system.h"
+#include <clsn/core/system.h>
 
 #include <SDL.h>
 #undef main

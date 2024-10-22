@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clickable_control.h"
+#include <clsn/ui/clickable_control.h>
 
 namespace clsn::ui
 {

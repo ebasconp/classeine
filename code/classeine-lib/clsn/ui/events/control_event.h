@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "clsn/core/event.h"
+#include <clsn/core/event.h>
 
 namespace clsn::ui
 {

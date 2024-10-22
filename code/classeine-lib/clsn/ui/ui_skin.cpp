@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "clsn/ui/ui_skin.h"
+#include <clsn/ui/ui_skin.h>
 
 namespace clsn::ui
 {

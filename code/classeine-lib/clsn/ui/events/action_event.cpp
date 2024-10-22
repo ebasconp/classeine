@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "action_event.h"
+#include <clsn/ui/events/action_event.h>
 
 namespace clsn::ui::events
 {

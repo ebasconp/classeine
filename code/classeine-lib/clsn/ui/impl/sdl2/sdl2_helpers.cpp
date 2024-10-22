@@ -3,10 +3,10 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "sdl2_helpers.h"
+#include <clsn/ui/impl/sdl2/sdl2_helpers.h>
 
-#include "clsn/draw/color.h"
-#include "clsn/draw/region.h"
+#include <clsn/draw/color.h>
+#include <clsn/draw/region.h>
 
 namespace clsn::ui::impl::sdl2::sdl2_helpers
 {

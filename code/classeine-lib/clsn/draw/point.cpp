@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "point.h"
+#include <clsn/draw/point.h>
 
 #include <string>
 
-#include "clsn/core/strings.h"
+#include <clsn/core/strings.h>
 
 namespace clsn::draw
 {

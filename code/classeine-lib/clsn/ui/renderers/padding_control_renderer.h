@@ -5,10 +5,10 @@
 
 #pragma once
 
-#include "clsn/ui/graphics.h"
-#include "clsn/ui/renderer_base.h"
+#include <clsn/ui/graphics.h>
+#include <clsn/ui/renderer_base.h>
 
-#include "clsn/ui/painters/border_painter.h"
+#include <clsn/ui/painters/border_painter.h>
 
 namespace clsn::ui
 {

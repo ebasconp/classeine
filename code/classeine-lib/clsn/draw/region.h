@@ -5,8 +5,8 @@
 
 #pragma once
 
-#include "dimension.h"
-#include "point.h"
+#include <clsn/draw/dimension.h>
+#include <clsn/draw/point.h>
 
 namespace clsn::draw
 {

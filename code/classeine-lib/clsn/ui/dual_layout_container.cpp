@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "dual_layout_container.h"
+#include <clsn/ui/dual_layout_container.h>
 
-#include "renderers/container_renderer.h"
+#include <clsn/ui/renderers/container_renderer.h>
 
-#include "clsn/core/system.h"
+#include <clsn/core/system.h>
 
 namespace clsn::ui
 {

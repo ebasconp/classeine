@@ -5,17 +5,17 @@
 
 #pragma once
 
-#include "graphics_sdl2_impl.h"
+#include <clsn/ui/impl/sdl2/graphics_sdl2_impl.h>
 
-#include "clsn/ui/events/control_resized_event.h"
-#include "clsn/ui/events/mouse_click_event.h"
-#include "clsn/ui/events/mouse_moved_event.h"
+#include <clsn/ui/events/control_resized_event.h>
+#include <clsn/ui/events/mouse_click_event.h>
+#include <clsn/ui/events/mouse_moved_event.h>
 
-#include "clsn/draw/dimension.h"
-#include "clsn/draw/point.h"
-#include "clsn/draw/region.h"
+#include <clsn/draw/dimension.h>
+#include <clsn/draw/point.h>
+#include <clsn/draw/region.h>
 
-#include "clsn/core/system.h"
+#include <clsn/core/system.h>
 
 #include <SDL.h>
 #undef main

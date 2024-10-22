@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "region.h"
+#include <clsn/draw/region.h>
 
-#include "clsn/core/strings.h"
+#include <clsn/core/strings.h>
 
 namespace clsn::draw
 {

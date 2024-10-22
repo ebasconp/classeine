@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "button_renderer.h"
+#include <clsn/ui/renderers/button_renderer.h>
 
 namespace  clsn::ui
 {
@@ -17,6 +17,6 @@ namespace clsn::ui::renderers
     class toggle_button_renderer : public button_renderer
     {
     public:
-        [[nodiscard]] virtual auto paint_as_pressed(const clickable_control& button) const -> bool;
+        [[nodiscard]] auto paint_as_pressed(const clickable_control& button) const -> bool override;
     };
 }

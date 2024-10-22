@@ -5,9 +5,9 @@
 
 #pragma once
 
-#include "sdl2_font_wrapper.h"
+#include <clsn/ui/impl/sdl2/sdl2_font_wrapper.h>
 
-#include "clsn/draw/font.h"
+#include <clsn/draw/font.h>
 
 #include <SDL_ttf.h>
 

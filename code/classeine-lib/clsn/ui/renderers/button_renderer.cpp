@@ -3,17 +3,17 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "button_renderer.h"
+#include <clsn/ui/renderers/button_renderer.h>
 
-#include "clsn/ui/button.h"
-#include "clsn/ui/graphics.h"
-#include "clsn/ui/ui_manager.h"
+#include <clsn/ui/button.h>
+#include <clsn/ui/graphics.h>
+#include <clsn/ui/ui_manager.h>
 
-#include "clsn/draw/region.h"
+#include <clsn/draw/region.h>
 
-#include "clsn/ui/painters/background_painter.h"
-#include "clsn/ui/painters/border_painter.h"
-#include "clsn/ui/painters/label_painter.h"
+#include <clsn/ui/painters/background_painter.h>
+#include <clsn/ui/painters/border_painter.h>
+#include <clsn/ui/painters/label_painter.h>
 
 #include <clsn/ui/window.h>
 

@@ -5,7 +5,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "clsn/ui/renderer_base.h"
+#include <clsn/ui/renderer_base.h>
 
 namespace clsn::ui::renderers
 {

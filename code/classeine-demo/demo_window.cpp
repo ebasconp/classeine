@@ -5,12 +5,12 @@
 
 #include "demo_window.h"
 
-#include "clsn/draw/colors.h"
-#include "clsn/draw/dimension.h"
+#include <clsn/draw/colors.h>
+#include <clsn/draw/dimension.h>
 
-#include "clsn/ui/dual_layout_container.h"
-#include "clsn/ui/dynamic_content_pane.h"
-#include "clsn/ui/label.h"
+#include <clsn/ui/dual_layout_container.h>
+#include <clsn/ui/dynamic_content_pane.h>
+#include <clsn/ui/label.h>
 
 #include "demo_option_container.h"
 

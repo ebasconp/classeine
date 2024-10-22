@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "toggle_control.h"
+#include <clsn/ui/toggle_control.h>
 
 namespace clsn::ui
 {

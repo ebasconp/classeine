@@ -3,18 +3,18 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "check_box_renderer.h"
+#include <clsn/ui/renderers/check_box_renderer.h>
 
-#include "clsn/ui/check_box.h"
-#include "clsn/ui/ui_manager.h"
+#include <clsn/ui/check_box.h>
+#include <clsn/ui/ui_manager.h>
 
-#include "clsn/ui/layouts/dual_layout.h"
+#include <clsn/ui/layouts/dual_layout.h>
 
-#include "clsn/ui/painters/background_painter.h"
-#include "clsn/ui/painters/check_box_painter.h"
-#include "clsn/ui/painters/label_painter.h"
+#include <clsn/ui/painters/background_painter.h>
+#include <clsn/ui/painters/check_box_painter.h>
+#include <clsn/ui/painters/label_painter.h>
 
-#include "clsn/draw/region.h"
+#include <clsn/draw/region.h>
 
 namespace clsn::ui::renderers
 {

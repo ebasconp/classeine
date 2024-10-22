@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "check_box.h"
+#include <clsn/ui/check_box.h>
 
-#include "renderers/check_box_renderer.h"
+#include <clsn/ui/renderers/check_box_renderer.h>
 
 namespace clsn::ui
 {

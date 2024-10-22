@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "radio_button.h"
+#include <clsn/ui/radio_button.h>
 
-#include "renderers/radio_button_renderer.h"
+#include <clsn/ui/renderers/radio_button_renderer.h>
 
 namespace clsn::ui
 {

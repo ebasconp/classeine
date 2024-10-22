@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "ui_theme.h"
+#include <clsn/ui/ui_theme.h>
 
 namespace
 {

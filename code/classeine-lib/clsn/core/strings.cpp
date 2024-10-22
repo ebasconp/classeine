@@ -4,7 +4,7 @@
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
 #include <clsn/core/strings.h>
-#include "clsn/core/system.h"
+#include <clsn/core/system.h>
 
 #include <charconv>
 

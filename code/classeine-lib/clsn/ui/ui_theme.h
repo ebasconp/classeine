@@ -5,12 +5,12 @@
 
 #pragma once
 
-#include "clsn/core/configuration.h"
-#include "clsn/core/entity.h"
+#include <clsn/core/configuration.h>
+#include <clsn/core/entity.h>
 
-#include "clsn/draw/color.h"
-#include "clsn/draw/dimension.h"
-#include "clsn/draw/font.h"
+#include <clsn/draw/color.h>
+#include <clsn/draw/dimension.h>
+#include <clsn/draw/font.h>
 
 
 namespace clsn::ui

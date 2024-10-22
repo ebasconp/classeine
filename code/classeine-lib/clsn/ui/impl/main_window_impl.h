@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "sdl2/main_window_sdl2_impl.h"
+#include <clsn/ui/impl/sdl2/main_window_sdl2_impl.h>
 
 namespace clsn::ui::impl
 {

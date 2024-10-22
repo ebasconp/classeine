@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "dynamic_content_pane.h"
+#include <clsn/ui/dynamic_content_pane.h>
 
 namespace clsn::ui
 {

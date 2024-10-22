@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 // SPDX-FileCopyrightText: © 2024 Ernesto Bascón Pantoja
 
-#include "button.h"
+#include <clsn/ui/button.h>
 
-#include "renderers/button_renderer.h"
+#include <clsn/ui/renderers/button_renderer.h>
 
 namespace clsn::ui
 {
