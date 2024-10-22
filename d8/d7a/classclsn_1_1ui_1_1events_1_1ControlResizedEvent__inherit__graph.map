@@ -1,9 +1,0 @@
-<map id="clsn::ui::events::ControlResizedEvent" name="clsn::ui::events::ControlResizedEvent">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,240,180,280"/>
-<area shape="rect" id="Node000002" href="$df/dd9/classclsn_1_1ui_1_1events_1_1ControlEvent.html" title=" " alt="" coords="5,152,180,192"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,206,95,240,90,240,90,206"/>
-<area shape="rect" id="Node000003" href="$da/d90/classclsn_1_1core_1_1Event.html" title=" " alt="" coords="28,79,157,104"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,118,95,152,90,152,90,118"/>
-<area shape="rect" id="Node000004" href="$d0/dfb/classclsn_1_1core_1_1Entity.html" title=" " alt="" coords="27,5,158,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,44,95,79,90,79,90,44"/>
-</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['graphics_0',['Graphics',['../de/dd9/namespaceclsn_1_1ui.html#a13f920c420291dc2d9a804f5f24dd0d2',1,'clsn::ui']]],
-  ['graphicsimpl_1',['GraphicsImpl',['../df/dd6/namespaceclsn_1_1ui_1_1impl.html#ab502780cb5e812b506b061826c19ee99',1,'clsn::ui::impl']]]
+  ['graphics_0',['graphics',['../de/dd9/namespaceclsn_1_1ui.html#a27d54c0da73e8df7a2a8f2f684c5cb54',1,'clsn::ui']]],
+  ['graphics_5fimpl_1',['graphics_impl',['../df/dd6/namespaceclsn_1_1ui_1_1impl.html#a6346414a4dba047c8d7192bac238e856',1,'clsn::ui::impl']]]
 ];

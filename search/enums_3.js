@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['texthorizontalalignment_0',['TextHorizontalAlignment',['../db/dde/namespaceclsn_1_1draw.html#a30d4a3868bfb3d29017e76ffb763fe09',1,'clsn::draw']]],
-  ['textverticalalignment_1',['TextVerticalAlignment',['../db/dde/namespaceclsn_1_1draw.html#a7daf807cc2f9d93364fbd856e415226f',1,'clsn::draw']]]
+  ['text_5fhorizontal_5falignment_0',['text_horizontal_alignment',['../db/dde/namespaceclsn_1_1draw.html#afd84e988ff2de6514aba027f2101bc16',1,'clsn::draw']]],
+  ['text_5fvertical_5falignment_1',['text_vertical_alignment',['../db/dde/namespaceclsn_1_1draw.html#a0771317a7cda03a4caacd75913569cd9',1,'clsn::draw']]]
 ];

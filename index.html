@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 Features</h1>
 <ul>
 <li>Written in modern C++</li>
-<li>UI Control renderers pluggable with multi-theme support</li>
+<li>UI control renderers pluggable with multi-theme support</li>
 <li>Built on top of the standard library and:<ul>
 <li>SDL2</li>
 <li>SDL2_ttf</li>
@@ -117,78 +117,78 @@ Libraries implemented</h1>
 <li>Event management</li>
 <li>Properties</li>
 <li>configuration by sections</li>
-<li><code>Entity</code> polymorphic base class: Adds some memory profiling tools<ul>
-<li><code>EntityWrapper&lt;T&gt;</code>: Wrapper for any <code>T</code>, inheriting from <code>Entity</code></li>
+<li><code>entity</code> polymorphic base class: Adds some memory profiling tools<ul>
+<li><code>entity_wrapper&lt;T&gt;</code>: Wrapper for any <code>T</code>, inheriting from <code>entity</code></li>
 </ul>
 </li>
-<li><code>Factory&lt;T&gt;</code>: Factory that returns an instance of a base class T when invoked.</li>
-<li><code>Lazy&lt;T&gt;</code>: Object T is constructed the first time this instance is accessed.</li>
+<li><code>factory&lt;T&gt;</code>: Factory that returns an instance of a base class T when invoked.</li>
+<li><code>lazy&lt;T&gt;</code>: Object T is constructed the first time this instance is accessed.</li>
 <li>Simple and tiny string builder</li>
 </ul>
 </li>
 <li><b><a class="el" href="db/dde/namespaceclsn_1_1draw.html">clsn::draw</a></b> - library providing drawing primitives<ul>
-<li><code>Color</code></li>
-<li><code>Dimension</code></li>
-<li><code>Font</code></li>
-<li><code>Point</code></li>
-<li><code>Region</code></li>
+<li><code>color</code></li>
+<li><code>dimension</code></li>
+<li><code>font</code></li>
+<li><code>point</code></li>
+<li><code>region</code></li>
 </ul>
 </li>
 <li><b><a class="el" href="de/dd9/namespaceclsn_1_1ui.html">clsn::ui</a></b> - library providing componentable UI controls<ul>
-<li><code>Control</code><ul>
-<li><code>EmptyControl</code> - Control that does nothing. Useful to have a custom renderer.</li>
-<li><code>PaintableControl</code> - Control with background, foreground and Font<ul>
-<li><code>CaptionableControl</code><ul>
-<li><code>ClickableControl</code><ul>
-<li><code>Button</code></li>
-<li><code>ToggleControl</code><ul>
-<li><code>CheckBox</code></li>
-<li><code>RadioButton</code></li>
-<li><code>ToggleButton</code></li>
+<li><code>control</code><ul>
+<li><code>empty_control</code> - Control that does nothing. Useful to have a custom renderer.</li>
+<li><code>paintable_control</code> - Control with background, foreground and font<ul>
+<li><code>captionable_control</code><ul>
+<li><code>clickable_control</code><ul>
+<li><code>button</code></li>
+<li><code>toggle_control</code><ul>
+<li><code>check_box</code></li>
+<li><code>radio_button</code></li>
+<li><code>toggle_button</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code>Label</code></li>
-<li><code>Window</code><ul>
-<li><code>MainWindow</code></li>
+<li><code>label</code></li>
+<li><code>window</code><ul>
+<li><code>main_window</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code>Container</code><ul>
-<li><code>ConstrainedContainer&lt;Constraint&gt;</code> - Container that stores controls with its constraints<ul>
-<li><code>LayoutContainer&lt;Layout&gt;</code><ul>
-<li><code>DualLayoutContainer</code> - Container that stores only two elements, one occupying only its preferred size and the other one occupying the remaining space</li>
-<li><code>FlowLayoutContainer</code> - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering</li>
-<li><code>HBoxLayoutContainer</code> - Container where the controls are rendered horizontally</li>
-<li><code>VBoxLayoutContainer</code> - Container where the controls are rendered vertically</li>
-<li><code>XYLayoutContainer</code> - Container where the controls are placed in specific coordinates in the given Region.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>ContentPane</code> - Abstract class that handles Layout and events for specific Control containers<ul>
-<li><code>DynamicContentPane</code> - Content pane able to load and unload dynamically any Control</li>
-<li><code>StaticContentPane</code> - Content pane with its child content already bound in compile time<ul>
-<li><code>PaddingControl</code> - Control with a border with variable size</li>
+<li><code>container</code><ul>
+<li><code>constrained_container&lt;Constraint&gt;</code> - Container that stores controls with its constraints<ul>
+<li><code>layout_container&lt;Layout&gt;</code><ul>
+<li><code>dual_layout_container</code> - Container that stores only two elements, one occupying only its preferred size and the other one occupying the remaining space</li>
+<li><code>flow_layout_container</code> - Container where controls are positioned one next to the other according to a left-right-top-bottom ordering</li>
+<li><code>hbox_layout_container</code> - Container where the controls are rendered horizontally</li>
+<li><code>vbox_layout_container</code> - Container where the controls are rendered vertically</li>
+<li><code>xy_layout_container</code> - Container where the controls are placed in specific coordinates in the given region.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+<li><code>content_pane</code> - Abstract class that handles layout and events for specific control containers<ul>
+<li><code>dynamic_content_pane</code> - Content pane able to load and unload dynamically any control</li>
+<li><code>static_content_pane</code> - Content pane with its child content already bound in compile time<ul>
+<li><code>padding_control</code> - Control with a border with variable size</li>
 </ul>
 </li>
-<li><code>Graphics</code> - abstraction to rendering backend</li>
-<li><code>UIManager</code></li>
-<li><code>UISkin</code> - Loadable set of renderers, themes and defaults for the UI controls.</li>
-<li><code>UITheme</code> - Set of Colors and defaults given a theme. A Skin can have registered several themes but only one current.<ul>
-<li><code>AmatistaUITheme</code> - Set of specific set of Colors<ul>
-<li><code>LightAmatistaUITheme</code> - Light theme</li>
-<li><code>DarkAmatistaUITheme</code> - Dark theme</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>graphics</code> - abstraction to rendering backend</li>
+<li><code>ui_manager</code></li>
+<li><code>ui_skin</code> - Loadable set of renderers, themes and defaults for the UI controls.</li>
+<li><code>ui_theme</code> - Set of colors and defaults given a theme. A Skin can have registered several themes but only one current.<ul>
+<li><code>amatista_ui_theme</code> - Set of specific set of colors<ul>
+<li><code>light_amatista_ui_theme</code> - Light theme</li>
+<li><code>dark_amatista_ui_theme</code> - Dark theme</li>
 </ul>
 </li>
 </ul>
@@ -211,7 +211,7 @@ GitHub</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 22 2024 00:37:58 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 22 2024 19:04:43 for Classeine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

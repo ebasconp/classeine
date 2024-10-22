@@ -1,0 +1,13 @@
+<map id="clsn::ui::padding_control&lt; InnerControlType &gt;" name="clsn::ui::padding_control&lt; InnerControlType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="16,401,196,441"/>
+<area shape="rect" id="Node000002" href="$da/d24/classclsn_1_1ui_1_1static__content__pane.html" title=" " alt="" coords="5,313,207,353"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,367,109,401,103,401,103,367"/>
+<area shape="rect" id="Node000003" href="$d6/d4f/classclsn_1_1ui_1_1content__pane.html" title="A base class representing a content pane with layout and event handling capabilities." alt="" coords="24,240,188,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,279,109,313,103,313,103,279"/>
+<area shape="rect" id="Node000004" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="37,152,175,192"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="109,206,109,240,103,240,103,206"/>
+<area shape="rect" id="Node000005" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="45,79,167,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="109,118,109,152,103,152,103,118"/>
+<area shape="rect" id="Node000006" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="41,5,171,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="109,44,109,79,103,79,103,44"/>
+</map>

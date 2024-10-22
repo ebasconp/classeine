@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['layoutelementinfovector_0',['LayoutElementInfoVector',['../d4/d97/classclsn_1_1ui_1_1layouts_1_1Layout.html#ae9e1cd42904d2f996288ac43ddba6d5d',1,'clsn::ui::layouts::Layout']]]
+  ['layout_5felement_5finfo_5fvector_0',['layout_element_info_vector',['../df/de3/classclsn_1_1ui_1_1layouts_1_1layout.html#af0c0a5f0c88c5714884e1c4afda94431',1,'clsn::ui::layouts::layout']]]
 ];

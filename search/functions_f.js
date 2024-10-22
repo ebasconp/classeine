@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['safeinvoke_0',['safeInvoke',['../dc/d45/classclsn_1_1core_1_1OptionalReference.html#a52f897b05f5d11a7ef43bdf057470ad9',1,'clsn::core::OptionalReference']]],
-  ['set_1',['set',['../d7/d37/classclsn_1_1core_1_1Configuration.html#aa2c37328a22be82f115f716f4636065e',1,'clsn::core::Configuration::set()'],['../da/de1/classclsn_1_1core_1_1Factory.html#a31bfb4ea0a8eea2c2240fb9683b7a2d5',1,'clsn::core::Factory::set()'],['../da/d57/classclsn_1_1core_1_1Property.html#a19081e3d2ee6da94a3bbea0284a0a0db',1,'clsn::core::Property::set()']]],
-  ['setdrawcolor_2',['setDrawColor',['../d4/d0b/classclsn_1_1ui_1_1impl_1_1sdl2_1_1GraphicsSDL2Impl.html#afc833bca3413e970a27fb0802c70d7d6',1,'clsn::ui::impl::sdl2::GraphicsSDL2Impl']]],
-  ['setenabled_3',['setEnabled',['../d4/ded/classclsn_1_1core_1_1EventListenerList.html#adb094eea4d4f4c4ca31fb915c2553af2',1,'clsn::core::EventListenerList']]],
-  ['sethorizontalalignment_4',['setHorizontalAlignment',['../da/d81/classclsn_1_1ui_1_1Label.html#aa12ddc4c986fcff5325763188b961c02',1,'clsn::ui::Label']]],
-  ['setinnercontrol_5',['setInnerControl',['../db/ddb/classclsn_1_1ui_1_1DynamicContentPane.html#a8d3958f120eaf5346a96d6df99623771',1,'clsn::ui::DynamicContentPane']]],
-  ['setorientation_6',['setorientation',['../df/d24/classclsn_1_1ui_1_1DualLayoutContainer.html#af8d34684d4799c071de92907b5fbb56e',1,'clsn::ui::DualLayoutContainer::setOrientation()'],['../da/d3c/classclsn_1_1ui_1_1layouts_1_1DualLayout.html#a3b20e12283c6778f70345a4f73ae97e2',1,'clsn::ui::layouts::DualLayout::setOrientation()']]],
-  ['setoutputregion_7',['setOutputRegion',['../d4/d6f/classclsn_1_1ui_1_1layouts_1_1Layout_1_1LayoutElementInfo.html#ac3c0e491c93629670781139277006bfa',1,'clsn::ui::layouts::Layout::LayoutElementInfo']]],
-  ['setparentcontrol_8',['setparentcontrol',['../d1/dfb/classclsn_1_1ui_1_1Container.html#ac96125b3ff54fb95e8ff40a94ffec69a',1,'clsn::ui::Container::setParentControl()'],['../d3/d63/classclsn_1_1ui_1_1Control.html#aa77b2d23cea3f62ffe80eb0efb898454',1,'clsn::ui::Control::setParentControl()']]],
-  ['setparentwindow_9',['setparentwindow',['../d1/dfb/classclsn_1_1ui_1_1Container.html#a7f7ab12129fe61a649427965e2c37061',1,'clsn::ui::Container::setParentWindow()'],['../d3/d63/classclsn_1_1ui_1_1Control.html#a752522764b0a56039d9d39d0f52bbd74',1,'clsn::ui::Control::setParentWindow()']]],
-  ['setposition_10',['setPosition',['../d3/d2f/classclsn_1_1ui_1_1layouts_1_1XYLayoutConstraint.html#adcc1d2b7be6864deac8dd0aabc506e12',1,'clsn::ui::layouts::XYLayoutConstraint']]],
-  ['setrenderer_11',['setRenderer',['../d3/d63/classclsn_1_1ui_1_1Control.html#a022f0a5d53fab6e583306d2dff5e67eb',1,'clsn::ui::Control']]],
-  ['setverticalalignment_12',['setVerticalAlignment',['../da/d81/classclsn_1_1ui_1_1Label.html#a5fb6064fe1eb3af91e679f05b819093b',1,'clsn::ui::Label']]],
-  ['show_13',['show',['../d3/d20/classclsn_1_1ui_1_1impl_1_1sdl2_1_1MainWindowSDL2Impl.html#ad6c1019a1096c58fc75c073322e06897',1,'clsn::ui::impl::sdl2::MainWindowSDL2Impl']]],
-  ['staticcontentpane_14',['StaticContentPane',['../dc/dea/classclsn_1_1ui_1_1StaticContentPane.html#ab2012eec48bfb114494979da4a2ee457',1,'clsn::ui::StaticContentPane']]]
+  ['safe_5finvoke_0',['safe_invoke',['../dc/d1a/classclsn_1_1core_1_1optional__reference.html#ab7cc6df5fccbc2413a91124b6410598c',1,'clsn::core::optional_reference']]],
+  ['set_1',['set',['../d8/dfb/classclsn_1_1core_1_1configuration.html#a9506d26113bd772371ddf0f078b735f8',1,'clsn::core::configuration::set()'],['../df/dce/classclsn_1_1core_1_1factory.html#a57da74cb97ed76b1e34ee0cfd464cee8',1,'clsn::core::factory::set()'],['../df/d29/classclsn_1_1core_1_1property.html#a3300a37c99fe991c5be579b79f2e1d43',1,'clsn::core::property::set()']]],
+  ['set_5fdraw_5fcolor_2',['set_draw_color',['../d3/d67/classclsn_1_1ui_1_1impl_1_1sdl2_1_1graphics__sdl2__impl.html#a8c0cda09f83e7a881a84471b3dad1fab',1,'clsn::ui::impl::sdl2::graphics_sdl2_impl']]],
+  ['set_5fenabled_3',['set_enabled',['../d0/d37/classclsn_1_1core_1_1event__listener__list.html#a03f6823b23650489e631b9ebae18918b',1,'clsn::core::event_listener_list']]],
+  ['set_5fhorizontal_5falignment_4',['set_horizontal_alignment',['../dc/de8/classclsn_1_1ui_1_1label.html#a6969e402679991ce6a6f4a465e68c032',1,'clsn::ui::label']]],
+  ['set_5finner_5fcontrol_5',['set_inner_control',['../d1/d0a/classclsn_1_1ui_1_1dynamic__content__pane.html#a6aeb1e7c22b96d421154b29949b41625',1,'clsn::ui::dynamic_content_pane']]],
+  ['set_5forientation_6',['set_orientation',['../d2/d46/classclsn_1_1ui_1_1dual__layout__container.html#a5592134051cfa470481d5be0972bcdcd',1,'clsn::ui::dual_layout_container::set_orientation()'],['../dc/da4/classclsn_1_1ui_1_1layouts_1_1dual__layout.html#a532d3fdb9b4fbc9edea99a6d89bc99c9',1,'clsn::ui::layouts::dual_layout::set_orientation()']]],
+  ['set_5foutput_5fregion_7',['set_output_region',['../da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html#a70b5b86d91547c4bd312f56f69c89078',1,'clsn::ui::layouts::layout::layout_element_info']]],
+  ['set_5fparent_5fcontrol_8',['set_parent_control',['../d2/d50/classclsn_1_1ui_1_1container.html#a251462a0654769b8dde2468b32acdb8c',1,'clsn::ui::container::set_parent_control()'],['../d7/d66/classclsn_1_1ui_1_1control.html#a1a8150c3f64b045632e1c98cea86c82a',1,'clsn::ui::control::set_parent_control()']]],
+  ['set_5fparent_5fwindow_9',['set_parent_window',['../d2/d50/classclsn_1_1ui_1_1container.html#a718ff666809a6633056554ba8fa4fbf9',1,'clsn::ui::container::set_parent_window()'],['../d7/d66/classclsn_1_1ui_1_1control.html#a07dbc86af49b6f197b665d33afae7def',1,'clsn::ui::control::set_parent_window()']]],
+  ['set_5fposition_10',['set_position',['../d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html#ac2b13e9490aff75c869ba5ef913065e9',1,'clsn::ui::layouts::xy_layout_constraint']]],
+  ['set_5frenderer_11',['set_renderer',['../d7/d66/classclsn_1_1ui_1_1control.html#ae2d255666e481dce1ea8727646d7bb72',1,'clsn::ui::control']]],
+  ['set_5fvertical_5falignment_12',['set_vertical_alignment',['../dc/de8/classclsn_1_1ui_1_1label.html#a825c239d0a5af8ab2c778ed4982273c4',1,'clsn::ui::label']]],
+  ['show_13',['show',['../db/d0f/classclsn_1_1ui_1_1impl_1_1sdl2_1_1main__window__sdl2__impl.html#a1a0b6709255f561e785e6f8d67155727',1,'clsn::ui::impl::sdl2::main_window_sdl2_impl']]],
+  ['static_5fcontent_5fpane_14',['static_content_pane',['../da/d24/classclsn_1_1ui_1_1static__content__pane.html#a8fbe814cd028e68d867c82735190a6a2',1,'clsn::ui::static_content_pane']]]
 ];

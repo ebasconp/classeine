@@ -1,19 +1,17 @@
 var searchData=
 [
   ['implemented_0',['Libraries implemented',['../index.html#autotoc_md2',1,'']]],
-  ['init_1',['init',['../d8/d74/classclsn_1_1ui_1_1UIManager.html#a4ddfc3586b9b31adbc4ee85038422708',1,'clsn::ui::UIManager']]],
-  ['initnewcontrol_2',['initNewControl',['../d1/dfb/classclsn_1_1ui_1_1Container.html#a2657b58a6f9683cad123acfc618c5df4',1,'clsn::ui::Container']]],
-  ['installtheme_3',['installTheme',['../d8/d74/classclsn_1_1ui_1_1UIManager.html#a64efe8a6d0c10d939fd650a9c6b0a53d',1,'clsn::ui::UIManager']]],
-  ['installthemebyname_4',['installThemeByName',['../d2/d6c/classclsn_1_1ui_1_1UISkin.html#a45e270e362a795641daa91298564f8ed',1,'clsn::ui::UISkin']]],
-  ['invalidate_5',['invalidate',['../d1/dfb/classclsn_1_1ui_1_1Container.html#a13cafebe0c05061a0447ae125c37e88a',1,'clsn::ui::Container::invalidate()'],['../db/d72/classclsn_1_1ui_1_1ContentPane.html#ab690216370daabb0a3f1a88077bc0cf7',1,'clsn::ui::ContentPane::invalidate()'],['../d3/d63/classclsn_1_1ui_1_1Control.html#a3209430152beb834a3666fa534929874',1,'clsn::ui::Control::invalidate() const noexcept']]],
-  ['invokeinparentwindow_6',['invokeInParentWindow',['../d3/d63/classclsn_1_1ui_1_1Control.html#a29fe11f69a0108137ce1d63a22a358ec',1,'clsn::ui::Control']]],
-  ['irenderer_7',['IRenderer',['../d0/dac/classclsn_1_1ui_1_1IRenderer.html',1,'clsn::ui']]],
-  ['irenderer_2eh_8',['IRenderer.h',['../d7/d1e/IRenderer_8h.html',1,'']]],
-  ['isconsumed_9',['isConsumed',['../da/d90/classclsn_1_1core_1_1Event.html#af9452b9aea29f608caa4a570f5a0b080',1,'clsn::core::Event']]],
-  ['isempty_10',['isEmpty',['../d1/dfb/classclsn_1_1ui_1_1Container.html#a797f91272d2d63eac08295f0b596f1a0',1,'clsn::ui::Container']]],
-  ['ishovered_11',['ishovered',['../d3/d63/classclsn_1_1ui_1_1Control.html#a09e29e71d609b9e9328d82ac11c1b50f',1,'clsn::ui::Control::isHovered()'],['../d9/dbc/classclsn_1_1ui_1_1Window.html#afba75a29251401dfb70c1aded42d8721',1,'clsn::ui::Window::isHovered()']]],
-  ['isinvalidated_12',['isinvalidated',['../d1/dfb/classclsn_1_1ui_1_1Container.html#a683a26a3bdf601c1b39c066c9785a5e1',1,'clsn::ui::Container::isInvalidated()'],['../db/d72/classclsn_1_1ui_1_1ContentPane.html#a04fdb4ab1799e07e1c2e5e88f5c4d7af',1,'clsn::ui::ContentPane::isInvalidated()'],['../d3/d63/classclsn_1_1ui_1_1Control.html#a46c51ac87f3f4e8c0b8a027a6a6d02b5',1,'clsn::ui::Control::isInvalidated()']]],
-  ['ispressed_13',['isPressed',['../d3/d71/classclsn_1_1ui_1_1ClickableControl.html#a12d2df4a62e899659c5285e671891193',1,'clsn::ui::ClickableControl']]],
-  ['isvisible_14',['isVisible',['../d4/d6f/classclsn_1_1ui_1_1layouts_1_1Layout_1_1LayoutElementInfo.html#a8d98f24429f091e5b35dc8f6c1cf3d72',1,'clsn::ui::layouts::Layout::LayoutElementInfo']]],
-  ['italic_15',['italic',['../db/dde/namespaceclsn_1_1draw.html#a98141c191d8a1b58f0f1f6c89ef6563aa030c5b6d1e5715105943ac111d9671bf',1,'clsn::draw']]]
+  ['init_1',['init',['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a9631d0d43a0760d29144596cbddb4ef6',1,'clsn::ui::ui_manager']]],
+  ['init_5fnew_5fcontrol_2',['init_new_control',['../d2/d50/classclsn_1_1ui_1_1container.html#abe36255c6d621f76556e88d7921e589e',1,'clsn::ui::container']]],
+  ['install_5ftheme_3',['install_theme',['../d3/dda/classclsn_1_1ui_1_1ui__manager.html#a13d44c37f5c5015ef9161849fde3e1d3',1,'clsn::ui::ui_manager']]],
+  ['install_5ftheme_5fby_5fname_4',['install_theme_by_name',['../d6/dab/classclsn_1_1ui_1_1ui__skin.html#a657ffc6e8f054f751a8a7f33f4fae175',1,'clsn::ui::ui_skin']]],
+  ['invalidate_5',['invalidate',['../d2/d50/classclsn_1_1ui_1_1container.html#a15bdfea2f8d12c34b3a2e4fec71fa19f',1,'clsn::ui::container::invalidate()'],['../d6/d4f/classclsn_1_1ui_1_1content__pane.html#ae48cc8032ffdb685663b5663bd30b1c4',1,'clsn::ui::content_pane::invalidate()'],['../d7/d66/classclsn_1_1ui_1_1control.html#ad5598413da0d4aa1f03c64872c639b57',1,'clsn::ui::control::invalidate() const noexcept']]],
+  ['invoke_5fin_5fparent_5fwindow_6',['invoke_in_parent_window',['../d7/d66/classclsn_1_1ui_1_1control.html#afdbb814a5afddc99ce06bf46962e4b1b',1,'clsn::ui::control']]],
+  ['is_5fconsumed_7',['is_consumed',['../d3/dff/classclsn_1_1core_1_1event.html#a3eaf86ea5fff019d16f560cbc8358218',1,'clsn::core::event']]],
+  ['is_5fempty_8',['is_empty',['../d2/d50/classclsn_1_1ui_1_1container.html#a717cb5c516f45f121e1cba9e9aed7f6a',1,'clsn::ui::container']]],
+  ['is_5fhovered_9',['is_hovered',['../d7/d66/classclsn_1_1ui_1_1control.html#aeef0b56d8927101124e787491df46532',1,'clsn::ui::control::is_hovered()'],['../d0/dfd/classclsn_1_1ui_1_1window.html#a9950d39ee021c04c77d78aec82947553',1,'clsn::ui::window::is_hovered()']]],
+  ['is_5finvalidated_10',['is_invalidated',['../d2/d50/classclsn_1_1ui_1_1container.html#a6bf53e300c9f60a3b9f601c627766ba3',1,'clsn::ui::container::is_invalidated()'],['../d6/d4f/classclsn_1_1ui_1_1content__pane.html#ae1fb64185ea7c837fbcf1442a1e908f2',1,'clsn::ui::content_pane::is_invalidated()'],['../d7/d66/classclsn_1_1ui_1_1control.html#aae82f6cf859d474c0f976f18e06854e2',1,'clsn::ui::control::is_invalidated()']]],
+  ['is_5fpressed_11',['is_pressed',['../d9/df3/classclsn_1_1ui_1_1clickable__control.html#a53b04e15841d1482740142a9083b0e8e',1,'clsn::ui::clickable_control']]],
+  ['is_5fvisible_12',['is_visible',['../da/d54/classclsn_1_1ui_1_1layouts_1_1layout_1_1layout__element__info.html#a2920647bdd42622438b6126ac6f24f38',1,'clsn::ui::layouts::layout::layout_element_info']]],
+  ['italic_13',['italic',['../db/dde/namespaceclsn_1_1draw.html#aad7b3e6a7c71db2da8ecddd68b31fff9a030c5b6d1e5715105943ac111d9671bf',1,'clsn::draw']]]
 ];

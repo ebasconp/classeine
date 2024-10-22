@@ -1,0 +1,28 @@
+<map id="code/classeine&#45;lib/clsn/ui/layouts/vbox_layout.cpp" name="code/classeine&#45;lib/clsn/ui/layouts/vbox_layout.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="408,5,564,60"/>
+<area shape="rect" id="Node000002" href="$d5/dd7/vbox__layout_8h.html" title=" " alt="" coords="339,108,491,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="468,62,440,99,436,96,464,59"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="515,115,601,141"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="509,59,543,103,539,106,504,62"/>
+<area shape="rect" id="Node000003" href="$db/d51/layout_8h.html" title="Base class for UI layouts in the Classeine project. This file belongs to the Classeine project." alt="" coords="142,196,315,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,150,270,193,268,188,370,146"/>
+<area shape="rect" id="Node000009" href="$d7/d82/draw_2forward_8h.html" title=" " alt="" coords="340,196,491,221"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="418,148,418,182,413,182,413,148"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="515,196,583,221"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="449,146,519,187,516,191,446,150"/>
+<area shape="rect" id="Node000004" href="$df/d07/region_8h.html" title=" " alt="" coords="41,277,182,302"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,224,142,271,139,267,210,219"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="207,277,269,302"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="233,221,238,263,232,263,227,222"/>
+<area shape="rect" id="Node000005" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="5,357,108,383"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="105,304,75,348,70,345,101,301"/>
+<area shape="rect" id="Node000007" href="$d2/d91/point_8h.html" title=" " alt="" coords="133,357,199,383"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="122,301,152,345,148,348,117,304"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="82,431,141,456"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="68,381,96,418,92,421,64,385"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="159,385,131,421,126,418,155,381"/>
+<area shape="rect" id="Node000010" href="$d0/d6a/text__horizontal__alignment_8h.html" title=" " alt="" coords="313,269,499,309"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="417,222,413,256,407,255,411,221"/>
+<area shape="rect" id="Node000011" href="$d6/dd3/text__vertical__alignment_8h.html" title=" " alt="" coords="523,269,694,309"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="444,219,551,262,549,267,442,224"/>
+</map>

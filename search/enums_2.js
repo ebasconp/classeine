@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mouseclickstatus_0',['MouseClickStatus',['../d6/dbe/namespaceclsn_1_1ui_1_1events.html#aa1c09e112c1f8496e5f5858c3756ca6d',1,'clsn::ui::events']]]
+  ['mouse_5fclick_5fstatus_0',['mouse_click_status',['../d6/dbe/namespaceclsn_1_1ui_1_1events.html#a8bce6b066775e7135f4175a129368ae0',1,'clsn::ui::events']]]
 ];

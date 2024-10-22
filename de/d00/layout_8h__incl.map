@@ -1,0 +1,14 @@
+<map id="code/classeine&#45;lib/clsn/ui/layouts/layout.h" name="code/classeine&#45;lib/clsn/ui/layouts/layout.h">
+<area shape="rect" id="Node000001" title="Base class for UI layouts in the Classeine project. This file belongs to the Classeine project." alt="" coords="85,5,263,45"/>
+<area shape="rect" id="Node000002" href="$df/d07/region_8h.html" title=" " alt="" coords="41,93,182,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,47,131,84,127,81,157,44"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="207,93,269,119"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="192,44,222,81,218,84,187,47"/>
+<area shape="rect" id="Node000003" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="5,167,108,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,121,76,157,72,154,100,117"/>
+<area shape="rect" id="Node000005" href="$d2/d91/point_8h.html" title=" " alt="" coords="133,167,199,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="122,117,151,154,147,157,118,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="82,240,141,265"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="68,191,96,228,92,231,64,194"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="159,194,131,231,126,228,155,191"/>
+</map>

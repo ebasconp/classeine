@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fontstyle_0',['FontStyle',['../db/dde/namespaceclsn_1_1draw.html#a98141c191d8a1b58f0f1f6c89ef6563a',1,'clsn::draw']]]
+  ['font_5fstyle_0',['font_style',['../db/dde/namespaceclsn_1_1draw.html#aad7b3e6a7c71db2da8ecddd68b31fff9',1,'clsn::draw']]]
 ];
