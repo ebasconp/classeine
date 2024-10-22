@@ -1,11 +1,11 @@
 <map id="code/classeine&#45;lib/clsn/draw/dimension.cpp" name="code/classeine&#45;lib/clsn/draw/dimension.cpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="101,5,288,45"/>
-<area shape="rect" id="Node000002" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="71,93,174,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,47,145,85,141,81,175,44"/>
+<area shape="rect" id="Node000002" href="$d0/db1/dimension_8h.html" title=" " alt="" coords="21,93,189,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,48,131,86,127,82,171,44"/>
 <area shape="rect" id="Node000004" href="$d6/d90/strings_8h.html" title=" " alt="" coords="285,93,425,119"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="234,43,320,85,318,90,232,48"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,167,64,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="110,121,61,160,58,156,107,117"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,121,58,159,54,155,92,117"/>
 <area shape="poly" id="edge7_Node000004_Node000003" title=" " alt="" coords="297,121,78,169,77,164,296,116"/>
 <area shape="rect" id="Node000005" href="$d3/d8b/non__instantiable_8h.html" title=" " alt="" coords="89,167,293,192"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="329,121,231,164,229,159,327,116"/>
