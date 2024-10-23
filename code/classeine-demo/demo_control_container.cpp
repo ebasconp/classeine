@@ -8,8 +8,8 @@
 #include <clsn/ui/label.h>
 #include <clsn/ui/padding_control.h>
 #include <clsn/ui/radio_button.h>
-#include <clsn/ui/radio_button_group.h>
 #include <clsn/ui/toggle_button.h>
+#include <clsn/ui/toggle_control_group.h>
 
 #include <clsn/ui/renderers/customizable_renderer.h>
 
@@ -81,9 +81,9 @@ namespace clsn::demo
         auto rb3 = enabled_ones->add(control::make<ui::radio_button>());
         rb3->set_caption("Option 3");
 
-        m_radio_button_group.add(rb1);
-        m_radio_button_group.add(rb2);
-        m_radio_button_group.add(rb3);
+        m_toggle_control_group.add(rb1);
+        m_toggle_control_group.add(rb2);
+        m_toggle_control_group.add(rb3);
 
         auto disabled_ones = m_radio_buttons->add(control::make<ui::vbox_layout_container>());
 
