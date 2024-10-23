@@ -61,8 +61,8 @@ add_library(classeine_lib
         clsn/ui/label.cpp
         clsn/ui/paintable_control.cpp
         clsn/ui/radio_button.cpp
-        clsn/ui/radio_button_group.cpp
         clsn/ui/toggle_button.cpp
+        clsn/ui/toggle_control_group.cpp
         clsn/ui/toggle_control.cpp
         clsn/ui/ui_manager.cpp
         clsn/ui/ui_skin.cpp

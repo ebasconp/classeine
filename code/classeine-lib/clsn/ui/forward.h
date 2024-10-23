@@ -20,10 +20,10 @@ namespace clsn::ui
   class label;
   class paintable_control;
   class radio_button;
-  class radio_button_group;
   class renderer_base;
   class toggle_button;
   class toggle_control;
+  class toggle_control_group;
   class vbox_layout_container;
   class window;
 }
