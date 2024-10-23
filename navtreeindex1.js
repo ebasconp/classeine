@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"d3/df1/window_8h.html":[6,0,0,0,0,2,59],
 "d3/df1/window_8h_source.html":[6,0,0,0,0,2,59],
 "d3/dff/classclsn_1_1core_1_1event.html":[5,0,0,0,5],
 "d3/dff/classclsn_1_1core_1_1event.html#a3d0f197bc6817105ffb63fefac0fdd92":[5,0,0,0,5,0],
@@ -84,8 +85,8 @@ var NAVTREEINDEX1 =
 "d6/d13/font__style_8h.html#aad7b3e6a7c71db2da8ecddd68b31fff9aaf37d08ae228a87dc6b265fd1019c97d":[6,0,0,0,0,1,10,0,0],
 "d6/d13/font__style_8h.html#aad7b3e6a7c71db2da8ecddd68b31fff9ac1160e64e05e4049103ea7fc238b7cec":[6,0,0,0,0,1,10,0,3],
 "d6/d13/font__style_8h_source.html":[6,0,0,0,0,1,10],
-"d6/d1b/static__content__pane_8h.html":[6,0,0,0,0,2,44],
-"d6/d1b/static__content__pane_8h_source.html":[6,0,0,0,0,2,44],
+"d6/d1b/static__content__pane_8h.html":[6,0,0,0,0,2,42],
+"d6/d1b/static__content__pane_8h_source.html":[6,0,0,0,0,2,42],
 "d6/d49/classclsn_1_1ui_1_1layouts_1_1layout__utils.html":[5,0,0,2,3,4],
 "d6/d4f/classclsn_1_1ui_1_1content__pane.html":[5,0,0,2,13],
 "d6/d4f/classclsn_1_1ui_1_1content__pane.html#a13aaccf9fe69c59d755bd44c5ccc0bc7":[5,0,0,2,13,0],
@@ -103,9 +104,9 @@ var NAVTREEINDEX1 =
 "d6/d50/radio__button__painter_8h_source.html":[6,0,0,0,0,2,4,9],
 "d6/d76/classclsn_1_1ui_1_1renderers_1_1null__renderer.html":[5,0,0,2,5,7],
 "d6/d76/classclsn_1_1ui_1_1renderers_1_1null__renderer.html#ac6a24d983a3caefa38cdf4a684148491":[5,0,0,2,5,7,0],
-"d6/d77/classclsn_1_1ui_1_1toggle__control.html":[5,0,0,2,30],
-"d6/d77/classclsn_1_1ui_1_1toggle__control.html#a095a1c26fcdb7abf87d7a73d11b397f0":[5,0,0,2,30,1],
-"d6/d77/classclsn_1_1ui_1_1toggle__control.html#ac7fa4827eeee840083f496cb9ac839fc":[5,0,0,2,30,0],
+"d6/d77/classclsn_1_1ui_1_1toggle__control.html":[5,0,0,2,29],
+"d6/d77/classclsn_1_1ui_1_1toggle__control.html#a095a1c26fcdb7abf87d7a73d11b397f0":[5,0,0,2,29,1],
+"d6/d77/classclsn_1_1ui_1_1toggle__control.html#ac7fa4827eeee840083f496cb9ac839fc":[5,0,0,2,29,0],
 "d6/d81/xy__layout__container_8h.html":[6,0,0,0,0,2,61],
 "d6/d81/xy__layout__container_8h_source.html":[6,0,0,0,0,2,61],
 "d6/d84/xy__layout__constraint_8h.html":[6,0,0,0,0,2,3,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "d8/df8/classclsn_1_1draw_1_1font.html#aa9e172a2a875c56a3a12652fe66805a3":[5,0,0,1,3,2],
 "d8/df8/classclsn_1_1draw_1_1font.html#ac66d8ab7ce9273c431ca9474cafb0620":[5,0,0,1,3,3],
 "d8/df8/classclsn_1_1draw_1_1font.html#ad3ba18e196b7a84be269638495189deb":[5,0,0,1,3,4],
-"d8/df8/classclsn_1_1draw_1_1font.html#adb25f2d74425a09c07c51ed92236510b":[5,0,0,1,3,6],
-"d8/dfb/classclsn_1_1core_1_1configuration.html":[5,0,0,0,0]
+"d8/df8/classclsn_1_1draw_1_1font.html#adb25f2d74425a09c07c51ed92236510b":[5,0,0,1,3,6]
 };

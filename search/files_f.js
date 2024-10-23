@@ -7,5 +7,7 @@ var searchData=
   ['toggle_5fbutton_5frenderer_2ecpp_4',['toggle_button_renderer.cpp',['../d4/d79/toggle__button__renderer_8cpp.html',1,'']]],
   ['toggle_5fbutton_5frenderer_2eh_5',['toggle_button_renderer.h',['../de/d81/toggle__button__renderer_8h.html',1,'']]],
   ['toggle_5fcontrol_2ecpp_6',['toggle_control.cpp',['../d2/dfb/toggle__control_8cpp.html',1,'']]],
-  ['toggle_5fcontrol_2eh_7',['toggle_control.h',['../d1/d08/toggle__control_8h.html',1,'']]]
+  ['toggle_5fcontrol_2eh_7',['toggle_control.h',['../d1/d08/toggle__control_8h.html',1,'']]],
+  ['toggle_5fcontrol_5fgroup_2ecpp_8',['toggle_control_group.cpp',['../db/d7d/toggle__control__group_8cpp.html',1,'']]],
+  ['toggle_5fcontrol_5fgroup_2eh_9',['toggle_control_group.h',['../d1/d97/toggle__control__group_8h.html',1,'']]]
 ];

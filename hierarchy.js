@@ -138,9 +138,9 @@ var hierarchy =
     [ "clsn::ui::painters::painting_info", "d2/d5d/structclsn_1_1ui_1_1painters_1_1painting__info.html", null ],
     [ "clsn::draw::point", "d8/d50/classclsn_1_1draw_1_1point.html", null ],
     [ "clsn::core::property< T, HasValueChangedEventListener >", "df/d29/classclsn_1_1core_1_1property.html", null ],
-    [ "clsn::ui::radio_button_group", "da/da9/classclsn_1_1ui_1_1radio__button__group.html", null ],
     [ "clsn::draw::region", "de/d04/classclsn_1_1draw_1_1region.html", null ],
     [ "clsn::ui::impl::sdl2::sdl2_font_cache", "dd/da0/classclsn_1_1ui_1_1impl_1_1sdl2_1_1sdl2__font__cache.html", null ],
+    [ "clsn::ui::toggle_control_group", "db/d1f/classclsn_1_1ui_1_1toggle__control__group.html", null ],
     [ "clsn::ui::impl::sdl2::ttf_font_deleter", "dd/d3e/structclsn_1_1ui_1_1impl_1_1sdl2_1_1ttf__font__deleter.html", null ],
     [ "clsn::ui::layouts::xy_layout_constraint", "d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html", null ]
 ];
