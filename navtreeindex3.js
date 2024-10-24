@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"dd/d21/main__window__sdl2__impl_8h.html":[6,0,0,0,0,2,2,0,2],
+"dd/d21/main__window__sdl2__impl_8h_source.html":[6,0,0,0,0,2,2,0,2],
+"dd/d3e/structclsn_1_1ui_1_1impl_1_1sdl2_1_1ttf__font__deleter.html":[5,0,0,2,2,0,3],
+"dd/d3e/structclsn_1_1ui_1_1impl_1_1sdl2_1_1ttf__font__deleter.html#ad65820ebdbd9f9da906cf674c295922f":[5,0,0,2,2,0,3,0],
 "dd/d53/font_8cpp.html":[6,0,0,0,0,1,6],
 "dd/d58/classclsn_1_1ui_1_1renderers_1_1customizable__renderer.html":[5,0,0,2,5,4],
 "dd/d58/classclsn_1_1ui_1_1renderers_1_1customizable__renderer.html#a8691611dc6141cbd5bb40b8a8f8470ed":[5,0,0,2,5,4,0],
@@ -62,7 +66,9 @@ var NAVTREEINDEX3 =
 "de/db6/sdl2__font__wrapper_8h_source.html":[6,0,0,0,0,2,2,0,5],
 "de/dbb/mouse__moved__event_8cpp.html":[6,0,0,0,0,2,1,8],
 "de/dd8/classclsn_1_1ui_1_1tab__control.html":[5,0,0,2,28],
-"de/dd8/classclsn_1_1ui_1_1tab__control.html#ae6e0ed178834aaa3be06469218fed9db":[5,0,0,2,28,1],
+"de/dd8/classclsn_1_1ui_1_1tab__control.html#a346657cb45c285e461f188fe2e2a48cc":[5,0,0,2,28,1],
+"de/dd8/classclsn_1_1ui_1_1tab__control.html#ac48e3fe038f7b475a33cba219e4f3384":[5,0,0,2,28,3],
+"de/dd8/classclsn_1_1ui_1_1tab__control.html#ae6e0ed178834aaa3be06469218fed9db":[5,0,0,2,28,2],
 "de/dd8/classclsn_1_1ui_1_1tab__control.html#aef16919075c1d98af5a055f478805c03":[5,0,0,2,28,0],
 "de/ded/label__renderer_8h.html":[6,0,0,0,0,2,5,12],
 "de/ded/label__renderer_8h_source.html":[6,0,0,0,0,2,5,12],
