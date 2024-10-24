@@ -10,5 +10,7 @@ var classclsn_1_1ui_1_1content__pane =
     [ "make_default_renderer", "d6/d4f/classclsn_1_1ui_1_1content__pane.html#adc9cbc3d6a7c79aef0cc90fcbab4d202", null ],
     [ "process_mouse_click_event", "d6/d4f/classclsn_1_1ui_1_1content__pane.html#a1a070cdf14d8da4677aa1bd51e07831c", null ],
     [ "process_mouse_moved_event", "d6/d4f/classclsn_1_1ui_1_1content__pane.html#ab5f1610a4618852b21102dfccca75581", null ],
+    [ "set_parent_control", "d6/d4f/classclsn_1_1ui_1_1content__pane.html#a2e33ecaa3b65dc2e653de5003a5a9403", null ],
+    [ "set_parent_window", "d6/d4f/classclsn_1_1ui_1_1content__pane.html#ae08f059e2daeec4b7094476d0a40c1d7", null ],
     [ "validate", "d6/d4f/classclsn_1_1ui_1_1content__pane.html#ab9dd2d9727023866353e32fdb4d025f3", null ]
 ];

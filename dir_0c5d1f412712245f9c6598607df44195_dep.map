@@ -1,13 +1,13 @@
 <map id="code/classeine&#45;lib/clsn/ui/impl/sdl2" name="code/classeine&#45;lib/clsn/ui/impl/sdl2">
 <area shape="rect" id="node1" href="dir_0c5d1f412712245f9c6598607df44195.html" title="sdl2" alt="" coords="83,52,133,77"/>
 <area shape="rect" id="node2" href="dir_600407ede49e9ce41cdcd29c2ea2a1d0.html" title="core" alt="" coords="5,125,56,151"/>
-<area shape="poly" id="edge1" href="dir_000011_000004.html" alt="" coords="97,79,55,118,52,114,94,75"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000011_000004.html" title="3" alt="" coords="58,112,67,126"/>
+<area shape="poly" id="edge1" href="dir_000012_000005.html" alt="" coords="97,79,55,118,52,114,94,75"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000012_000005.html" title="3" alt="" coords="58,112,67,126"/>
 <area shape="rect" id="node3" href="dir_cd7027cb88abb99c65bc8c785ac38b77.html" title="draw" alt="" coords="81,125,135,151"/>
-<area shape="poly" id="edge2" href="dir_000011_000005.html" alt="" coords="111,78,111,112,105,112,105,78"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000011_000005.html" title="15" alt="" coords="108,100,125,114"/>
+<area shape="poly" id="edge2" href="dir_000012_000006.html" alt="" coords="111,78,111,112,105,112,105,78"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000012_000006.html" title="15" alt="" coords="108,100,125,114"/>
 <area shape="rect" id="node4" href="dir_f34cc02d0118f4f8541432998ed57ea7.html" title="events" alt="" coords="160,125,227,151"/>
-<area shape="poly" id="edge3" href="dir_000011_000006.html" alt="" coords="123,75,171,114,167,119,120,79"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000011_000006.html" title="3" alt="" coords="166,100,175,114"/>
+<area shape="poly" id="edge3" href="dir_000012_000007.html" alt="" coords="123,75,171,114,167,119,120,79"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000012_000007.html" title="3" alt="" coords="166,100,175,114"/>
 <area shape="rect" id="clust1" href="dir_25d00920e568fbe3284b1c2b3071d0b0.html" title="impl" alt="" coords="72,16,144,88"/>
 </map>

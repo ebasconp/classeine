@@ -1,0 +1,15 @@
+<map id="clsn::ui::_private::tab_control_view_header_button" name="clsn::ui::_private::tab_control_view_header_button">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,489,199,544"/>
+<area shape="rect" id="Node000002" href="$d6/d77/classclsn_1_1ui_1_1toggle__control.html" title=" " alt="" coords="17,416,187,441"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,455,105,489,99,489,99,455"/>
+<area shape="rect" id="Node000003" href="$d9/df3/classclsn_1_1ui_1_1clickable__control.html" title=" " alt="" coords="35,328,169,368"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,382,105,416,99,416,99,382"/>
+<area shape="rect" id="Node000004" href="$d2/d41/classclsn_1_1ui_1_1captionable__control.html" title="This class represents a UI control that has a caption property." alt="" coords="26,240,178,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="105,294,105,328,99,328,99,294"/>
+<area shape="rect" id="Node000005" href="$db/deb/classclsn_1_1ui_1_1paintable__control.html" title=" " alt="" coords="33,152,171,192"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="105,206,105,240,99,240,99,206"/>
+<area shape="rect" id="Node000006" href="$d7/d66/classclsn_1_1ui_1_1control.html" title=" " alt="" coords="41,79,163,104"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="105,118,105,152,99,152,99,118"/>
+<area shape="rect" id="Node000007" href="$d3/dd1/classclsn_1_1core_1_1entity.html" title=" " alt="" coords="37,5,167,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="105,44,105,79,99,79,99,44"/>
+</map>

@@ -1,7 +1,14 @@
 <map id="code/classeine&#45;lib/clsn/ui/renderers/toggle_button_renderer.h" name="code/classeine&#45;lib/clsn/ui/renderers/toggle_button_renderer.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="109,5,288,60"/>
-<area shape="rect" id="Node000002" href="$d4/d79/toggle__button__renderer_8cpp.html" title=" " alt="" coords="5,108,184,163"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,72,124,110,120,106,160,68"/>
-<area shape="rect" id="Node000003" href="$d9/d3f/toggle__button_8cpp.html" title=" " alt="" coords="208,115,397,155"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,68,285,113,281,117,234,72"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="289,5,468,60"/>
+<area shape="rect" id="Node000002" href="$d1/dbf/tab__control__view__header__button_8cpp.html" title=" " alt="" coords="5,233,245,287"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,46,243,55,209,68,179,86,153,110,136,138,127,171,124,204,125,232,119,232,119,204,122,170,131,136,149,106,176,82,207,63,241,50,275,41"/>
+<area shape="rect" id="Node000003" href="$d2/d39/tab__control__view__header__button__renderer_8h.html" title=" " alt="" coords="163,108,376,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="344,72,305,110,302,106,340,68"/>
+<area shape="rect" id="Node000005" href="$d4/d79/toggle__button__renderer_8cpp.html" title=" " alt="" coords="400,115,579,170"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="418,68,464,113,460,117,414,72"/>
+<area shape="rect" id="Node000006" href="$d9/d3f/toggle__button_8cpp.html" title=" " alt="" coords="603,123,792,163"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="470,62,642,120,641,125,468,67"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="218,188,160,235,156,231,215,184"/>
+<area shape="rect" id="Node000004" href="$d7/dff/tab__control__view__header__button__renderer_8cpp.html" title=" " alt="" coords="269,225,483,295"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="312,186,347,223,343,227,308,190"/>
 </map>

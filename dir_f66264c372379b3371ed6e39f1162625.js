@@ -1,5 +1,6 @@
 var dir_f66264c372379b3371ed6e39f1162625 =
 [
+    [ "_private", "dir_54225f60b3f445e1902313b48b4a326e.html", "dir_54225f60b3f445e1902313b48b4a326e" ],
     [ "amatista", "dir_acfd34a997b032ec5479a67608d83d5e.html", "dir_acfd34a997b032ec5479a67608d83d5e" ],
     [ "events", "dir_f34cc02d0118f4f8541432998ed57ea7.html", "dir_f34cc02d0118f4f8541432998ed57ea7" ],
     [ "impl", "dir_25d00920e568fbe3284b1c2b3071d0b0.html", "dir_25d00920e568fbe3284b1c2b3071d0b0" ],
@@ -43,6 +44,10 @@ var dir_f66264c372379b3371ed6e39f1162625 =
     [ "radio_button.h", "d7/d92/radio__button_8h.html", "d7/d92/radio__button_8h" ],
     [ "renderer_base.h", "d3/da8/renderer__base_8h.html", "d3/da8/renderer__base_8h" ],
     [ "static_content_pane.h", "d6/d1b/static__content__pane_8h.html", "d6/d1b/static__content__pane_8h" ],
+    [ "tab_control.cpp", "d1/db5/tab__control_8cpp.html", null ],
+    [ "tab_control.h", "da/d2d/tab__control_8h.html", "da/d2d/tab__control_8h" ],
+    [ "tab_page.cpp", "d3/d68/tab__page_8cpp.html", null ],
+    [ "tab_page.h", "d5/dd0/tab__page_8h.html", "d5/dd0/tab__page_8h" ],
     [ "toggle_button.cpp", "d9/d3f/toggle__button_8cpp.html", null ],
     [ "toggle_button.h", "d3/d81/toggle__button_8h.html", "d3/d81/toggle__button_8h" ],
     [ "toggle_control.cpp", "d2/dfb/toggle__control_8cpp.html", null ],

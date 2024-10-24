@@ -6,8 +6,15 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="264,74,264,108,259,108,259,74"/>
 <area shape="rect" id="Node000004" href="$de/d81/toggle__button__renderer_8h.html" title=" " alt="" coords="376,108,555,163"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="328,63,413,106,411,110,325,68"/>
-<area shape="rect" id="Node000005" href="$d4/d79/toggle__button__renderer_8cpp.html" title=" " alt="" coords="272,211,451,265"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="430,174,390,212,387,209,426,170"/>
-<area shape="rect" id="Node000006" href="$d9/d3f/toggle__button_8cpp.html" title=" " alt="" coords="475,218,664,258"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="505,171,551,216,548,219,501,174"/>
+<area shape="rect" id="Node000005" href="$d1/dbf/tab__control__view__header__button_8cpp.html" title=" " alt="" coords="91,335,331,390"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="363,167,282,192,253,204,238,213,221,241,212,274,209,307,210,335,205,335,204,306,207,273,216,239,234,209,250,199,281,187,362,162"/>
+<area shape="rect" id="Node000006" href="$d2/d39/tab__control__view__header__button__renderer_8h.html" title=" " alt="" coords="248,211,461,280"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="430,175,391,212,387,209,426,171"/>
+<area shape="rect" id="Node000008" href="$d4/d79/toggle__button__renderer_8cpp.html" title=" " alt="" coords="485,218,664,273"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="504,171,550,216,546,220,500,174"/>
+<area shape="rect" id="Node000009" href="$d9/d3f/toggle__button_8cpp.html" title=" " alt="" coords="688,225,877,265"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="556,165,728,223,726,228,554,170"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="304,291,245,337,242,333,300,287"/>
+<area shape="rect" id="Node000007" href="$d7/dff/tab__control__view__header__button__renderer_8cpp.html" title=" " alt="" coords="355,328,568,397"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="397,289,432,326,428,330,394,292"/>
 </map>
