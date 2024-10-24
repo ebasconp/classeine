@@ -74,6 +74,7 @@ add_library(classeine_lib
         clsn/ui/xy_layout_container.cpp
 
         clsn/ui/_private/tab_control_view_header_button.cpp
+        clsn/ui/_private/tab_control_view_header_button_renderer.cpp
         clsn/ui/_private/tab_control_view_header.cpp
         clsn/ui/_private/tab_control_view.cpp
 
