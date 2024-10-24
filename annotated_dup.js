@@ -28,12 +28,6 @@ var annotated_dup =
         [ "region", "de/d04/classclsn_1_1draw_1_1region.html", "de/d04/classclsn_1_1draw_1_1region" ]
       ] ],
       [ "ui", "de/dd9/namespaceclsn_1_1ui.html", [
-        [ "_private", "d5/d4a/namespaceclsn_1_1ui_1_1__private.html", [
-          [ "tab_control_view", "dd/d3f/classclsn_1_1ui_1_1__private_1_1tab__control__view.html", "dd/d3f/classclsn_1_1ui_1_1__private_1_1tab__control__view" ],
-          [ "tab_control_view_header", "da/d79/classclsn_1_1ui_1_1__private_1_1tab__control__view__header.html", "da/d79/classclsn_1_1ui_1_1__private_1_1tab__control__view__header" ],
-          [ "tab_control_view_header_button", "d7/d5c/classclsn_1_1ui_1_1__private_1_1tab__control__view__header__button.html", "d7/d5c/classclsn_1_1ui_1_1__private_1_1tab__control__view__header__button" ],
-          [ "tab_control_view_header_button_renderer", "dd/dd1/classclsn_1_1ui_1_1__private_1_1tab__control__view__header__button__renderer.html", "dd/dd1/classclsn_1_1ui_1_1__private_1_1tab__control__view__header__button__renderer" ]
-        ] ],
         [ "amatista", "d8/d43/namespaceclsn_1_1ui_1_1amatista.html", [
           [ "amatista_ui_skin", "d2/db3/classclsn_1_1ui_1_1amatista_1_1amatista__ui__skin.html", "d2/db3/classclsn_1_1ui_1_1amatista_1_1amatista__ui__skin" ],
           [ "amatista_ui_theme", "dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme.html", "dc/df2/classclsn_1_1ui_1_1amatista_1_1amatista__ui__theme" ],

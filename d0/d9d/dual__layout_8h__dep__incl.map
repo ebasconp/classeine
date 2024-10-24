@@ -1,23 +1,13 @@
 <map id="code/classeine&#45;lib/clsn/ui/layouts/dual_layout.h" name="code/classeine&#45;lib/clsn/ui/layouts/dual_layout.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="554,5,706,60"/>
-<area shape="rect" id="Node000002" href="$dc/dbe/dual__layout__container_8h.html" title=" " alt="" coords="288,108,436,163"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="548,67,433,110,431,105,547,62"/>
-<area shape="rect" id="Node000009" href="$df/dbc/dual__layout_8cpp.html" title=" " alt="" coords="461,108,613,163"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="598,72,563,110,559,106,594,69"/>
-<area shape="rect" id="Node000010" href="$d7/d14/check__box__renderer_8cpp.html" title=" " alt="" coords="637,108,813,163"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="666,68,702,106,698,110,662,72"/>
-<area shape="rect" id="Node000011" href="$d8/d8f/radio__button__renderer_8cpp.html" title=" " alt="" coords="837,108,1007,163"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="720,62,847,105,845,110,718,67"/>
-<area shape="rect" id="Node000003" href="$dc/de2/tab__control__view_8h.html" title=" " alt="" coords="200,211,351,265"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="333,175,300,212,296,209,328,171"/>
-<area shape="rect" id="Node000008" href="$db/d7d/dual__layout__container_8cpp.html" title=" " alt="" coords="375,211,523,265"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="396,171,428,209,424,212,391,175"/>
-<area shape="rect" id="Node000004" href="$d4/d1e/tab__control__view_8cpp.html" title=" " alt="" coords="5,313,156,368"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="214,274,133,316,130,311,211,269"/>
-<area shape="rect" id="Node000005" href="$de/de3/tab__control__view__header_8cpp.html" title=" " alt="" coords="180,313,371,368"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="278,279,278,313,273,313,273,279"/>
-<area shape="rect" id="Node000006" href="$da/d2d/tab__control_8h.html" title=" " alt="" coords="395,321,553,361"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="340,269,438,318,435,323,338,274"/>
-<area shape="rect" id="Node000007" href="$d1/db5/tab__control_8cpp.html" title=" " alt="" coords="388,416,560,456"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="477,374,477,416,471,416,471,374"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="271,5,423,60"/>
+<area shape="rect" id="Node000002" href="$dc/dbe/dual__layout__container_8h.html" title=" " alt="" coords="5,108,153,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,67,150,110,148,105,264,62"/>
+<area shape="rect" id="Node000004" href="$df/dbc/dual__layout_8cpp.html" title=" " alt="" coords="178,108,330,163"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="315,72,280,110,276,106,311,69"/>
+<area shape="rect" id="Node000005" href="$d7/d14/check__box__renderer_8cpp.html" title=" " alt="" coords="354,108,530,163"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="383,68,419,106,415,110,379,72"/>
+<area shape="rect" id="Node000006" href="$d8/d8f/radio__button__renderer_8cpp.html" title=" " alt="" coords="554,108,725,163"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="437,62,564,105,562,110,435,67"/>
+<area shape="rect" id="Node000003" href="$db/d7d/dual__layout__container_8cpp.html" title=" " alt="" coords="5,211,153,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,176,82,211,77,211,77,176"/>
 </map>

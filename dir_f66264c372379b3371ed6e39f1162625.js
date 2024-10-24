@@ -1,6 +1,5 @@
 var dir_f66264c372379b3371ed6e39f1162625 =
 [
-    [ "_private", "dir_54225f60b3f445e1902313b48b4a326e.html", "dir_54225f60b3f445e1902313b48b4a326e" ],
     [ "amatista", "dir_acfd34a997b032ec5479a67608d83d5e.html", "dir_acfd34a997b032ec5479a67608d83d5e" ],
     [ "events", "dir_f34cc02d0118f4f8541432998ed57ea7.html", "dir_f34cc02d0118f4f8541432998ed57ea7" ],
     [ "impl", "dir_25d00920e568fbe3284b1c2b3071d0b0.html", "dir_25d00920e568fbe3284b1c2b3071d0b0" ],

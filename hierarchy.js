@@ -29,7 +29,6 @@ var hierarchy =
             [ "clsn::ui::clickable_control", "d9/df3/classclsn_1_1ui_1_1clickable__control.html", [
               [ "clsn::ui::button", "d7/d35/classclsn_1_1ui_1_1button.html", null ],
               [ "clsn::ui::toggle_control", "d6/d77/classclsn_1_1ui_1_1toggle__control.html", [
-                [ "clsn::ui::_private::tab_control_view_header_button", "d7/d5c/classclsn_1_1ui_1_1__private_1_1tab__control__view__header__button.html", null ],
                 [ "clsn::ui::check_box", "d6/d05/classclsn_1_1ui_1_1check__box.html", null ],
                 [ "clsn::ui::radio_button", "d5/df8/classclsn_1_1ui_1_1radio__button.html", null ],
                 [ "clsn::ui::toggle_button", "de/d99/classclsn_1_1ui_1_1toggle__button.html", null ]
@@ -43,14 +42,10 @@ var hierarchy =
           [ "clsn::ui::container< ElementType >", "d2/d50/classclsn_1_1ui_1_1container.html", [
             [ "clsn::ui::constrained_container< Layout::constraint_type >", "d4/d34/classclsn_1_1ui_1_1constrained__container.html", [
               [ "clsn::ui::layout_container< layouts::dual_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
-                [ "clsn::ui::dual_layout_container", "d2/d46/classclsn_1_1ui_1_1dual__layout__container.html", [
-                  [ "clsn::ui::_private::tab_control_view", "dd/d3f/classclsn_1_1ui_1_1__private_1_1tab__control__view.html", null ]
-                ] ]
+                [ "clsn::ui::dual_layout_container", "d2/d46/classclsn_1_1ui_1_1dual__layout__container.html", null ]
               ] ],
               [ "clsn::ui::layout_container< layouts::flow_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
-                [ "clsn::ui::flow_layout_container", "d8/d3d/classclsn_1_1ui_1_1flow__layout__container.html", [
-                  [ "clsn::ui::_private::tab_control_view_header", "da/d79/classclsn_1_1ui_1_1__private_1_1tab__control__view__header.html", null ]
-                ] ]
+                [ "clsn::ui::flow_layout_container", "d8/d3d/classclsn_1_1ui_1_1flow__layout__container.html", null ]
               ] ],
               [ "clsn::ui::layout_container< layouts::hbox_layout >", "d1/d65/classclsn_1_1ui_1_1layout__container.html", [
                 [ "clsn::ui::hbox_layout_container", "d4/def/classclsn_1_1ui_1_1hbox__layout__container.html", null ]
@@ -79,9 +74,7 @@ var hierarchy =
       [ "clsn::ui::impl::sdl2::graphics_sdl2_impl", "d3/d67/classclsn_1_1ui_1_1impl_1_1sdl2_1_1graphics__sdl2__impl.html", null ],
       [ "clsn::ui::renderer_base", "d3/dae/classclsn_1_1ui_1_1renderer__base.html", [
         [ "clsn::ui::renderers::button_renderer", "d1/dd0/classclsn_1_1ui_1_1renderers_1_1button__renderer.html", [
-          [ "clsn::ui::renderers::toggle_button_renderer", "db/d90/classclsn_1_1ui_1_1renderers_1_1toggle__button__renderer.html", [
-            [ "clsn::ui::_private::tab_control_view_header_button_renderer", "dd/dd1/classclsn_1_1ui_1_1__private_1_1tab__control__view__header__button__renderer.html", null ]
-          ] ]
+          [ "clsn::ui::renderers::toggle_button_renderer", "db/d90/classclsn_1_1ui_1_1renderers_1_1toggle__button__renderer.html", null ]
         ] ],
         [ "clsn::ui::renderers::check_box_renderer", "db/d12/classclsn_1_1ui_1_1renderers_1_1check__box__renderer.html", null ],
         [ "clsn::ui::renderers::container_renderer< ContainerType >", "dd/de5/classclsn_1_1ui_1_1renderers_1_1container__renderer.html", null ],
@@ -143,9 +136,7 @@ var hierarchy =
       [ "clsn::ui::painters::radio_button_painter", "dd/db4/classclsn_1_1ui_1_1painters_1_1radio__button__painter.html", null ]
     ] ],
     [ "clsn::core::optional_reference< T >", "dc/d1a/classclsn_1_1core_1_1optional__reference.html", null ],
-    [ "clsn::core::optional_reference< clsn::ui::_private::tab_control_view >", "dc/d1a/classclsn_1_1core_1_1optional__reference.html", null ],
     [ "clsn::core::optional_reference< clsn::ui::control >", "dc/d1a/classclsn_1_1core_1_1optional__reference.html", null ],
-    [ "clsn::core::optional_reference< clsn::ui::tab_page >", "dc/d1a/classclsn_1_1core_1_1optional__reference.html", null ],
     [ "clsn::core::optional_reference< clsn::ui::window >", "dc/d1a/classclsn_1_1core_1_1optional__reference.html", null ],
     [ "clsn::ui::painters::painting_info", "d2/d5d/structclsn_1_1ui_1_1painters_1_1painting__info.html", null ],
     [ "clsn::draw::point", "d8/d50/classclsn_1_1draw_1_1point.html", null ],

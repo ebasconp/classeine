@@ -1,19 +1,5 @@
 <map id="code/classeine&#45;lib/clsn/ui/flow_layout_container.h" name="code/classeine&#45;lib/clsn/ui/flow_layout_container.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="278,5,425,60"/>
-<area shape="rect" id="Node000002" href="$d3/df9/tab__control__view__header_8h.html" title=" " alt="" coords="172,108,347,163"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,72,285,110,281,106,316,69"/>
-<area shape="rect" id="Node000008" href="$d5/da6/flow__layout__container_8cpp.html" title=" " alt="" coords="371,108,518,163"/>
-<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="387,69,422,106,418,110,383,72"/>
-<area shape="rect" id="Node000003" href="$d4/d1e/tab__control__view_8cpp.html" title=" " alt="" coords="5,313,156,368"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,173,173,212,131,266,98,315,94,312,127,262,169,209,212,169"/>
-<area shape="rect" id="Node000004" href="$dc/de2/tab__control__view_8h.html" title=" " alt="" coords="184,211,335,265"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="262,176,262,211,257,211,257,176"/>
-<area shape="rect" id="Node000005" href="$de/de3/tab__control__view__header_8cpp.html" title=" " alt="" coords="363,313,553,368"/>
-<area shape="poly" id="edge8_Node000002_Node000005" title=" " alt="" coords="305,170,349,209,399,263,440,311,435,315,395,266,345,213,302,174"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="202,274,129,315,126,311,199,270"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="324,269,407,311,405,316,322,274"/>
-<area shape="rect" id="Node000006" href="$da/d2d/tab__control_8h.html" title=" " alt="" coords="181,321,338,361"/>
-<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="262,279,262,320,257,320,257,279"/>
-<area shape="rect" id="Node000007" href="$d1/db5/tab__control_8cpp.html" title=" " alt="" coords="173,416,345,456"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="262,374,262,416,257,416,257,374"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,152,60"/>
+<area shape="rect" id="Node000002" href="$d5/da6/flow__layout__container_8cpp.html" title=" " alt="" coords="5,108,152,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,74,81,108,76,108,76,74"/>
 </map>

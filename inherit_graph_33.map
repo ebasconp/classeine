@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$d3/dac/classclsn_1_1ui_1_1layouts_1_1xy__layout__constraint.html" title="Represents the constraints for placing UI controls arbitrarily within an xy_layout." alt="" coords="5,5,164,45"/>
+<area shape="rect" id="Node000000" href="$dc/dff/classclsn_1_1ui_1_1tab__page__base.html" title=" " alt="" coords="5,35,180,60"/>
+<area shape="rect" id="Node000001" href="$da/d47/classclsn_1_1ui_1_1tab__page.html" title=" " alt="" coords="253,5,389,31"/>
+<area shape="poly" id="edge82_Node000000_Node000001" title=" " alt="" coords="194,32,253,24,253,29,194,37"/>
+<area shape="rect" id="Node000002" href="$da/d10/classclsn_1_1ui_1_1tab__page__adapter.html" title=" " alt="" coords="228,55,415,95"/>
+<area shape="poly" id="edge83_Node000000_Node000002" title=" " alt="" coords="194,57,228,61,227,67,193,62"/>
 </map>
