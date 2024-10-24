@@ -26,5 +26,7 @@ namespace clsn::ui::_private
 
         void add(tab_page&);
         void set_active_control(const std::shared_ptr<control>& ctrl);
+
+        void set_active_index(std::optional<int> index);
     };
 }

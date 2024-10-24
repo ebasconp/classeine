@@ -42,6 +42,16 @@ namespace clsn::ui
         add_caption_changed_listener([this](auto&) { invalidate(); });
     }
 
+    void clickable_control::perform_click()
+    {
+        const auto& point = get_actual_position();
+        events::mouse_click_event e1{events::mouse_click_status::pressed, point};
+        notify_mouse_click_event(e1);
+
+        events::mouse_click_event e2{events::mouse_click_status::released, point};
+        notify_mouse_click_event(e2);
+    }
+
     void clickable_control::process_mouse_click_event(events::mouse_click_event& e)
     {
         auto pressed_now = e.get_status() == clsn::ui::events::mouse_click_status::pressed;

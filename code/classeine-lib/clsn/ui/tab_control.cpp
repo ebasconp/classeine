@@ -15,4 +15,17 @@ namespace clsn::ui
         //m_header = this->get_inner_control().make_and_add<_private::tab_pane_header>();
     }
 
+    void tab_control::set_active_index(std::optional<int> index)
+    {
+        m_active_index = index;
+
+        m_view.set_active_index(index);
+    }
+
+    auto tab_control::get_active_index() const -> std::optional<int>
+    {
+        return m_active_index;
+    }
+
+
 }

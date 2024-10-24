@@ -18,6 +18,7 @@ namespace clsn::ui
 
         [[nodiscard]] virtual auto get_name() const -> const std::string& = 0;
         [[nodiscard]] virtual auto is_visible() const -> bool = 0;
+        [[nodiscard]] virtual auto get_index() const -> int = 0;
     };
 
     class tab_page final : public tab_page_base
@@ -25,15 +26,18 @@ namespace clsn::ui
         std::string m_name;
         bool m_visible;
         std::shared_ptr<control> m_control_ptr;
+        int m_index;
 
     public:
-        explicit tab_page(std::string_view name, std::shared_ptr<control> control_ptr);
+        explicit tab_page(std::string_view name, std::shared_ptr<control> control_ptr, int active_index);
 
         [[nodiscard]] auto get_control_ptr() -> std::shared_ptr<control>;
         [[nodiscard]] auto get_control_ptr() const -> const std::shared_ptr<control>;
 
         [[nodiscard]] auto get_name() const -> const std::string& override;
         [[nodiscard]] auto is_visible() const -> bool override;
+
+        [[nodiscard]] auto get_index() const -> int override;
     };
 
     template <typename ControlType>
@@ -65,6 +69,11 @@ namespace clsn::ui
         [[nodiscard]] auto is_visible() const -> bool override
         {
             return m_tab_page.is_visible();
+        }
+
+        [[nodiscard]] auto get_index() const -> int override
+        {
+            return m_tab_page.get_index();
         }
     };
 }

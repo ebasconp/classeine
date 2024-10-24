@@ -34,4 +34,15 @@ namespace clsn::ui::_private
             m_view_ref.get_ref().set_active_control(src.get_page().get_control_ptr());
         });
     }
+
+    void tab_control_view_header::set_active_index(std::optional<int> index)
+    {
+        if (!index.has_value())
+        {
+            m_view_ref.get_ref().set_active_control(nullptr);
+            return;
+        }
+
+        m_buttons[index.value()]->perform_click();
+    }
 }

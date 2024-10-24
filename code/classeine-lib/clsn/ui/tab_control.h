@@ -20,6 +20,7 @@ namespace clsn::ui
 
         _private::tab_control_view& m_view;
         std::vector<std::shared_ptr<tab_page_base>> m_pages;
+        std::optional<int> m_active_index;
 
     public:
         explicit tab_control();
@@ -29,12 +30,20 @@ namespace clsn::ui
         {
             auto ctrl = control::make<ControlType>(std::forward<Args>(args)...);
 
-            auto new_ptr = std::make_shared<tab_page>(name, ctrl);
+            auto new_ptr = std::make_shared<tab_page>(name, ctrl, m_pages.size());
             m_pages.push_back(new_ptr);
 
             m_view.add(*new_ptr);
 
+            if (!m_active_index.has_value())
+            {
+                set_active_index(0);
+            }
+
             return std::make_shared<tab_page_adapter<ControlType>>(*new_ptr);
         }
+
+        void set_active_index(std::optional<int> index);
+        auto get_active_index() const -> std::optional<int>;
     };
 }
