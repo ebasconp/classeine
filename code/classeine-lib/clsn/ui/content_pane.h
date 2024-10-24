@@ -44,6 +44,22 @@ namespace clsn::ui
         auto get_control_by_position(const clsn::draw::point& point) const
             -> core::const_optional_reference<control> override;
 
+        /// @brief Set the parent control for the content pane.
+        ///
+        /// This method sets the parent control for the content pane,
+        /// which defines the context within which the content pane operates.
+        ///
+        /// @param parent_control An optional reference to the parent control.
+        void set_parent_control(core::optional_reference<control>) override;
+
+        /// @brief Set the parent window for the content pane.
+        ///
+        /// This method sets the parent window for the content pane,
+        /// which defines the window context within which the content pane operates.
+        ///
+        /// @param parent_window An optional reference to the parent window.
+        void set_parent_window(core::optional_reference<window>) override;
+
     protected:
         /// @brief Process a mouse click event.
         ///

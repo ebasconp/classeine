@@ -42,6 +42,7 @@ add_executable(classeine_demo
         demo_flow_layout_container.cpp
         demo_xy_layout_container.cpp
         demo_option_container.cpp
+        demo_tab_control.cpp
         demo_window.cpp
 )
 

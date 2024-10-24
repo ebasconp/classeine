@@ -61,6 +61,8 @@ add_library(classeine_lib
         clsn/ui/label.cpp
         clsn/ui/paintable_control.cpp
         clsn/ui/radio_button.cpp
+        clsn/ui/tab_page.cpp
+        clsn/ui/tab_control.cpp
         clsn/ui/toggle_button.cpp
         clsn/ui/toggle_control_group.cpp
         clsn/ui/toggle_control.cpp
@@ -70,6 +72,11 @@ add_library(classeine_lib
         clsn/ui/vbox_layout_container.cpp
         clsn/ui/window.cpp
         clsn/ui/xy_layout_container.cpp
+
+        clsn/ui/_private/tab_control_view_header_button.cpp
+        clsn/ui/_private/tab_control_view_header_button_renderer.cpp
+        clsn/ui/_private/tab_control_view_header.cpp
+        clsn/ui/_private/tab_control_view.cpp
 
         clsn/ui/amatista/dark_amatista_ui_theme.cpp
         clsn/ui/amatista/light_amatista_ui_theme.cpp
