@@ -34,6 +34,8 @@ namespace clsn::ui
 
         void release_mouse() override;
 
+        void perform_click();
+
     protected:
         void process_mouse_click_event(events::mouse_click_event& e) override;
 

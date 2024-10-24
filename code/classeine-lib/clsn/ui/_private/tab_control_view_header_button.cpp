@@ -11,7 +11,6 @@
 namespace clsn::ui::_private
 {
     tab_control_view_header_button::tab_control_view_header_button()
-    : toggle_control{"tab_control_view_header_button"}
     {
         set_preferred_size(draw::dimension{80, 32});
     }

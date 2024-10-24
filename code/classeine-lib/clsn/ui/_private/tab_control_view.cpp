@@ -30,4 +30,9 @@ namespace clsn::ui::_private
     {
         m_content_pane->set_inner_control(ctrl);
     }
+
+    void tab_control_view::set_active_index(std::optional<int> index)
+    {
+        m_header->set_active_index(index);
+    }
 }

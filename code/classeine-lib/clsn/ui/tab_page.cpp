@@ -7,10 +7,11 @@
 
 namespace clsn::ui
 {
-    tab_page::tab_page(std::string_view name, std::shared_ptr<control> control_ptr)
+    tab_page::tab_page(std::string_view name, std::shared_ptr<control> control_ptr, int index)
     : m_name{name}
     , m_visible{true}
     , m_control_ptr{control_ptr}
+    , m_index{index}
     {
     }
 
@@ -25,6 +26,11 @@ namespace clsn::ui
     auto tab_page::get_control_ptr() const -> const std::shared_ptr<control>
     {
         return m_control_ptr;
+    }
+
+    auto tab_page::get_index() const -> int
+    {
+        return m_index;
     }
 
 }

@@ -27,5 +27,7 @@ namespace clsn::ui::_private
 
         void add(tab_page& page);
         void set_view(tab_control_view& view);
+
+        void set_active_index(std::optional<int> index);
     };
 }
